@@ -99,4 +99,3 @@ jobs:
           port: ${{ secrets.PORT }}
           source: "${{ matrix.project }}/dist/*"
           target: "/var/www/${{ matrix.domain }}"
-          strip_components: 1
