@@ -1,0 +1,39 @@
+---
+interface Props {
+  title: string;
+  image: string;
+  imageAlt: string;
+  slug: string;
+}
+
+const { title, image, imageAlt, slug } = Astro.props;
+---
+
+<a class="project-card" href={`/project/${slug}`}>
+  <div class="pt-2 pb-2">
+    <div class="relative">
+      <img
+        class="object-center aspect-[7/4] rounded-3xl"
+        src={image}
+        alt={imageAlt}
+      />
+      <h3
+        class="bg-primary rounded-2xl p-3 absolute text-2xl text-white top-5 left-5"
+      >
+        {title}
+      </h3>
+    </div>
+  </div>
+</a>
+
+<style>
+  .project-card {
+    transition: all;
+    transition-duration: 75ms;
+    @apply text-white text-4xl;
+  }
+
+  .project-card:hover {
+    transform: scale(1.025);
+  }
+</style>

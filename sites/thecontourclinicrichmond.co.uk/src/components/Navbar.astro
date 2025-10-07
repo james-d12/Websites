@@ -1,0 +1,19 @@
+---
+const navLinks = [
+    {name: "Home", href: ""},
+    {name: "About", href: "#about"},
+    {name: "Gallery", href: "#gallery"},
+    {name: "Contact", href: "#contact"},
+];
+---
+<nav class="fixed top-0 left-0 w-full bg-gray-50 shadow-md z-50 border-b-2 border-black">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-center">
+        <ul class="flex gap-4 text-lg">
+            {navLinks.map(link => (
+                    <li>
+                        <a href={link.href} class="hover:text-pink-600 transition-colors">{link.name}</a>
+                    </li>
+            ))}
+        </ul>
+    </div>
+</nav>
