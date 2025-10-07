@@ -41,6 +41,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
+        working-directory: ${{ matrix.project }}
         run: pnpm install
 
       - name: Build project
