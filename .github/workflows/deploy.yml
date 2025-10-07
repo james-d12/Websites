@@ -4,18 +4,17 @@ on:
   push:
     branches: [main]
     paths:
-      - "sites/**"   # Only trigger when something in sites/ changes
+      - "sites/**"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        include:
-          - project: sites/jamesdurban.com
-            domain: jamesdurban.com
-          - project: sites/thecontourclinicrichmond.co.uk
-            domain: thecontourclinicrichmond.co.uk
+        - project: sites/jamesdurban.com
+          domain: jamesdurban.com
+        - project: sites/thecontourclinicrichmond.co.uk
+          domain: thecontourclinicrichmond.co.uk
 
     name: Deploy ${{ matrix.project }}
     if: contains(github.event.head_commit.message, matrix.project) || hashFiles(format('{0}/**', matrix.project)) != hashFiles(format('{0}/**', matrix.project), 'refs/heads/main')
@@ -72,6 +71,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.changes.outputs.changed == 'true'
+        working-directory: ${{ matrix.project }}
         run: pnpm install
 
       - name: Build project
