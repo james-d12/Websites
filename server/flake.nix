@@ -1,8 +1,8 @@
 {
-  description = "My NixOS configuration for VPS";
+  description = "NixOS Configuration for my VPS";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
   };
 
   outputs = { self, nixpkgs, ... }:
@@ -10,16 +10,12 @@
       system = "x86_64-linux";
     in
     {
-      nixosConfigurations.myhost = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.vps = nixpkgs.lib.nixosSystem {
         inherit system;
 
         modules = [
           ./configuration.nix
         ];
-      };
-
-      devShells.default = nixpkgs.mkShell {
-        buildInputs = [ nixpkgs.git nixpkgs.curl nixpkgs.alejandra ];
       };
     };
 }
