@@ -1,10 +1,10 @@
 name: Deploy
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "sites/**"
+  workflow_run:
+    workflows: [ Build ]
+    types:
+      - completed
 
 jobs:
   deploy:
