@@ -6,11 +6,9 @@
     ./modules/web-server.nix
   ];
 
-  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # Locale & time
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_US.UTF-8";
 
@@ -28,5 +26,6 @@
   ];
 
   system.stateVersion = "25.05";
-  # nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
