@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Alice';
-    src: url('/fonts/Alice-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Alice";
+  src: url("/fonts/Alice-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Brittany';
-    src: url('/fonts/BrittanySignatureScript.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Brittany";
+  src: url("/fonts/BrittanySignatureScript.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 .font-brittany {
-    font-family: 'Brittany', cursive;
+  font-family: "Brittany", cursive;
 }
 
 * {
-    font-family: 'Alice', sans-serif;
+  font-family: "Alice", sans-serif;
 }
