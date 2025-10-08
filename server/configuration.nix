@@ -13,13 +13,29 @@
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  users.users.yourname = {
+  users.users.user = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
   };
 
   security.sudo.enable = true;
-  services.openssh.enable = true;
+
+  services.openssh = {
+    enable = true;
+    ports = [ 51196 ];
+    settings = {
+        KbdInteractiveAuthentication = false;
+        PermitRootLogin = "no";
+        AllowUsers = [ "user" ];
+    };
+  };
+
+  security.apparmor = {
+    enable = true;
+    killUnconfinedConfinables = true;
+  };
+
+  services.fail2ban.enable = true;
 
   environment.systemPackages = with pkgs; [
     git
