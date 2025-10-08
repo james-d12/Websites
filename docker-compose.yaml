@@ -1,0 +1,14 @@
+name: websites
+
+services:
+  nix:
+    image: nixos/nix
+    container_name: nix-flake-dev
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    working_dir: /flake
+    volumes:
+      - ./server:/flake:rw,Z
+    environment:
+      NIX_CONFIG: "experimental-features = nix-command flakes"
