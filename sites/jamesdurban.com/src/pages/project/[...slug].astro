@@ -1,46 +1,45 @@
 ---
-import "../../styles/content.css";
-import { type CollectionEntry, getCollection } from "astro:content";
+import {type CollectionEntry, getCollection} from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import ProjectSkillList from "../../components/ProjectSkillList.astro";
 
 interface Props {
-  entry: CollectionEntry<"project">;
+    entry: CollectionEntry<"project">;
 }
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-  const project = await getCollection("project");
-  return project.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }));
+    const project = await getCollection("project");
+    return project.map((entry) => ({
+        params: {slug: entry.slug},
+        props: {entry},
+    }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const {entry} = Astro.props;
+const {Content} = await entry.render();
 ---
 
 <ProjectLayout>
-  <section class="section">
-    <div class="content-container">
-      <a class="hover:text-secondary underline text-lg pr-2" href="/"> Home</a>
-      {">"}
-      <a class="hover:text-secondary underline text-lg pl-2" href="/project/"
-        >Projects
-      </a>
-      <h2 class="mt-2 text-6xl font-bold">{entry.data.title}</h2>
-      <ProjectSkillList skills={entry.data.skills} />
-      <div class="content">
-        {
-          entry.data.img && (
-            <img src={entry.data.img} alt={entry.data.img_alt || ""} />
-          )
-        }
-        <Content />
-      </div>
-    </div>
-  </section>
+    <section class="section">
+        <div class="content-container">
+            <a class="hover:text-secondary underline text-lg pr-2" href="/"> Home</a>
+            {">"}
+            <a class="hover:text-secondary underline text-lg pl-2" href="/project/"
+            >Projects
+            </a>
+            <h2 class="mt-2 text-6xl font-bold">{entry.data.title}</h2>
+            <ProjectSkillList skills={entry.data.skills}/>
+            <div class="content">
+                {
+                    entry.data.img && (
+                                <img src={entry.data.img} alt={entry.data.img_alt || ""}/>
+                    )
+                }
+                <Content/>
+            </div>
+        </div>
+    </section>
 </ProjectLayout>
