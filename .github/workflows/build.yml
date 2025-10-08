@@ -60,3 +60,7 @@ jobs:
       - name: Build project
         working-directory: ${{ matrix.project }}
         run: pnpm build
+
+      - name: Audit Packages
+        working-directory: ${{ matrix.project }}
+        run: pnpm audit
