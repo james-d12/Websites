@@ -1,7 +1,6 @@
 ---
 title: Push Notifications
 publishDate: 2025-10-04 00:00:00
-img: /assets/push-notifications.jpg
 img_alt: Push Notifications
 description:
 skills:

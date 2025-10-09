@@ -1,22 +1,21 @@
 ---
+import {Image} from "astro:assets";
+import {projectImages} from '../data/ProjectImages';
 interface Props {
     title: string;
-    image: string;
     imageAlt: string;
     slug: string;
 }
 
-const {title, image, imageAlt, slug} = Astro.props;
+const {title, imageAlt, slug} = Astro.props;
+const imageSrc = projectImages[slug];
 ---
 
 <a class="project-card" href={`/project/${slug}`}>
     <div class="pt-2 pb-2">
         <div class="relative">
-            <img
-                    class="object-center aspect-[7/4] rounded-3xl"
-                    src={image}
-                    alt={imageAlt}
-            />
+            <Image inferSize={true} src={imageSrc} alt={imageAlt} layout="constrained"
+                   class="w-full h-full object-center aspect-[7/4] rounded-3xl"/>
             <h3
                     class="bg-primary rounded-2xl p-3 absolute text-2xl text-white top-5 left-5"
             >

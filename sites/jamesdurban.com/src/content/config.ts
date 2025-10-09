@@ -7,7 +7,6 @@ export const collections = {
       github: z.string().optional(),
       publishDate: z.coerce.date(),
       skills: z.array(z.string()),
-      img: z.string(),
       img_alt: z.string(),
     }),
   }),

@@ -1,7 +1,9 @@
 ---
+import {Image} from "astro:assets";
 import {type CollectionEntry, getCollection} from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import ProjectSkillList from "../../components/ProjectSkillList.astro";
+import {projectImages} from '../../data/ProjectImages';
 
 interface Props {
     entry: CollectionEntry<"project">;
@@ -20,6 +22,7 @@ export async function getStaticPaths() {
 
 const {entry} = Astro.props;
 const {Content} = await entry.render();
+const imageSrc = projectImages[entry.slug];
 ---
 
 <ProjectLayout>
@@ -33,11 +36,7 @@ const {Content} = await entry.render();
             <h2 class="mt-2 text-6xl font-bold">{entry.data.title}</h2>
             <ProjectSkillList skills={entry.data.skills}/>
             <div class="content">
-                {
-                    entry.data.img && (
-                                <img src={entry.data.img} alt={entry.data.img_alt || ""}/>
-                    )
-                }
+                <Image src={imageSrc} alt={entry.data.img_alt}/>
                 <Content/>
             </div>
         </div>
