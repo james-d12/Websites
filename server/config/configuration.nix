@@ -37,12 +37,19 @@
     settings = {
         KbdInteractiveAuthentication = false;
         PermitRootLogin = "no";
+        UsePAM = false;
+        PasswordAuthentication = false;
         AllowUsers = [ "james" ];
     };
+    extraConfig = [
+        "MaxSessions 2\n"
+        "ClientAliveInterval 300\n"
+        "ClientAliveCountMax 0\n"
+    ];
   };
 
-  users.users.root.openssh.authorizedKeys.keys = [
-
+  users.users.james.openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO6MxYCqtmUbTMYzHsvQAnmPmWYHFRn4r77oQOEX+iEJ james@USER-PC"
   ];
 
   security.apparmor = {
@@ -53,9 +60,7 @@
   services.fail2ban.enable = true;
 
   environment.systemPackages = with pkgs; [
-    git
     apacheHttpd
-    nixfmt-rfc-style
   ];
 
   system.stateVersion = "25.05";
@@ -71,13 +76,11 @@
         name = "jamesdurban.com";
         documentRoot = "/var/www/jamesdurban.com";
         serverAliases = [ "www.jamesdurban.com" "*.jamesdurban.com" ];
-        acmeGroup = "wwwrun";
       }
       {
         name = "thecontourclinicrichmond.co.uk";
         documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
         serverAliases = [ "www.thecontourclinicrichmond.co.uk" "*.thecontourclinicrichmond.co.uk" ];
-        acmeGroup = "wwwrun";
       }
     ];
   };
