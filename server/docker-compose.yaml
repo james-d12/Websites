@@ -13,9 +13,9 @@ services:
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
 
-  nixos-anywhere:
+  nixos-fts:
     image: nixos/nix
-    container_name: nixos-anywhere
+    container_name: nixos-fts
     working_dir: /flake
     tty: true
     stdin_open: true
@@ -25,3 +25,16 @@ services:
       NIX_CONFIG: "experimental-features = nix-command flakes"
     env_file: ".env"
     command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix root@$TARGET_HOST
+
+  nixos-rebuild:
+    image: nixos/nix
+    container_name: nixos-rebuild
+    working_dir: /flake
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./config:/flake:rw,Z
+    environment:
+      NIX_CONFIG: "experimental-features = nix-command flakes"
+    env_file: ".env"
+    command: nixos-rebuild switch --flake ./config --target-host "$USER@$TARGET_HOST"
