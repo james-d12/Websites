@@ -8,6 +8,9 @@
     ./modules/disk-config.nix
   ];
 
+  hardware.cpu.intel.updateMicrocode = true;
+  hardware.cpu.amd.updateMicrocode = true;
+
   boot.loader.grub = {
     enable = true;
     efiSupport = true;

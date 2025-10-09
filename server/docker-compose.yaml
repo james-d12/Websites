@@ -12,3 +12,16 @@ services:
       - ./config:/flake:rw,Z
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
+
+  nixos-anywhere:
+    image: nixos/nix
+    container_name: nixos-anywhere
+    working_dir: /flake
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./config:/flake:rw,Z
+    environment:
+      NIX_CONFIG: "experimental-features = nix-command flakes"
+    env_file: ".env"
+    command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix root@$TARGET_HOST

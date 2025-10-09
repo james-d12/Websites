@@ -3,6 +3,8 @@ dist/
 .vscode/
 .idea/
 
+*.env
+
 # generated types
 .astro/
 
