@@ -5,12 +5,13 @@
     ./modules/hardware.nix
     ./modules/networking.nix
     ./modules/website.nix
+    ./modules/disk-config.nix
   ];
 
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
 
-  users.users.user = {
+  users.users.james = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
   };
@@ -23,9 +24,13 @@
     settings = {
         KbdInteractiveAuthentication = false;
         PermitRootLogin = "no";
-        AllowUsers = [ "user" ];
+        AllowUsers = [ "james" ];
     };
   };
+
+  users.users.root.openssh.authorizedKeys.keys = [
+
+  ];
 
   security.apparmor = {
     enable = true;
