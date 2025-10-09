@@ -23,6 +23,7 @@
   users = {
     mutableUsers = true;
     users.james = {
+        initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
         home = "/home/james";
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
