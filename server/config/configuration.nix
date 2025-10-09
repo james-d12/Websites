@@ -38,7 +38,7 @@
         KbdInteractiveAuthentication = false;
         PermitRootLogin = "no";
         UsePAM = false;
-        PasswordAuthentication = false;
+        PasswordAuthentication = true;
         AllowUsers = [ "james" ];
     };
     extraConfig = "MaxSessions 2\nClientAliveInterval 300\nClientAliveCountMax 0\n";
