@@ -14,10 +14,10 @@ jobs:
       - uses: DeterminateSystems/determinate-nix-action@v3
 
       - run: nix flake check
-        working-directory: ./server
+        working-directory: ./server/config
 
       - run: nix build .#nixosConfigurations.vps.config.system.build.toplevel
-        working-directory: ./server
+        working-directory: ./server/config
 
   build-site:
     runs-on: ubuntu-latest
