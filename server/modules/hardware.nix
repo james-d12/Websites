@@ -12,14 +12,9 @@
     options = ["fmask=0077" "dmask=0077"];
   };
 
-  swapDevices = {
-    device = "/dev/disk/by-uuid/e4ba3b52-43af-4775-bc3b-4776aef62f49";
-  };
-
   swapDevices = [
     {
-      device = "/swapfile";
-      size = 4 * 1024;
+      device = "/dev/disk/by-uuid/e4ba3b52-43af-4775-bc3b-4776aef62f49";
     }
   ];
 
