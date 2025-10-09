@@ -35,10 +35,8 @@ in
   };
 
   config = lib.mkIf config.websites.enable {
-
+    users.users.wwwrun.extraGroups = [ "acme" ];
     services.httpd.enable = true;
-    services.httpd.enablePerl = false;
-    services.httpd.enablePHP = false;
     services.httpd.sslProtocols = "All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1";
     services.httpd.sslCiphers = "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS";
 
@@ -47,7 +45,7 @@ in
         "${site.name}" = {
           forceSSL = true;
           documentRoot = site.documentRoot;
-          serverAliases = site.serverAliases or [ ];
+          serverAliases = site.serverAliases;
           useACMEHost = site.name;
           extraConfig = lib.concatStringsSep "\n" [
             defaultHeaders
@@ -63,6 +61,15 @@ in
             ''
           ];
         };
+        "acmechallenge.${site.name}" = {
+          serverAliases = site.serverAliases;
+          documentRoot = "/var/lib/acme/.challenges";
+          extraConfig = ''
+            RewriteEngine On
+            RewriteCond %{HTTPS} off
+            RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge [NC]
+            RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301]'';
+        };
       }) config.websites.sites
     );
 
@@ -74,7 +81,7 @@ in
         map (site: {
           name = site.name;
           value = {
-            webroot = site.documentRoot;
+            dnsProvider = site.provider;
             group = "wwwrun";
           };
         }) config.websites.sites

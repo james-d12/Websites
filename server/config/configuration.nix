@@ -70,11 +70,13 @@
     sites = [
       {
         name = "jamesdurban.com";
+        provider = "ionos";
         documentRoot = "/var/www/jamesdurban.com";
         serverAliases = [ "www.jamesdurban.com" "*.jamesdurban.com" ];
       }
       {
         name = "thecontourclinicrichmond.co.uk";
+        provider = "ionos";
         documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
         serverAliases = [ "www.thecontourclinicrichmond.co.uk" "*.thecontourclinicrichmond.co.uk" ];
       }
