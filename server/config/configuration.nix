@@ -41,11 +41,7 @@
         PasswordAuthentication = false;
         AllowUsers = [ "james" ];
     };
-    extraConfig = [
-        "MaxSessions 2\n"
-        "ClientAliveInterval 300\n"
-        "ClientAliveCountMax 0\n"
-    ];
+    extraConfig = "MaxSessions 2\nClientAliveInterval 300\nClientAliveCountMax 0\n";
   };
 
   users.users.james.openssh.authorizedKeys.keys = [

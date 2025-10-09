@@ -83,12 +83,13 @@ in
 
     systemd.tmpfiles.settings = lib.listToAttrs (
       map (site: {
-        "" = {
-          site.documentRoot = {
+        name = site.name;
+        value = {
+          ${site.documentRoot} = {
             d = {
+              user = "wwwrun";
               group = "wwwrun";
               mode = "0755";
-              user = "wwwrun";
             };
           };
         };
