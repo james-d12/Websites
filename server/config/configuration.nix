@@ -8,6 +8,12 @@
     ./modules/disk-config.nix
   ];
 
+  boot.loader.grub = {
+    enable = true;
+    efiSupport = true;
+    efiInstallAsRemovable = true;
+  };
+
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
 
