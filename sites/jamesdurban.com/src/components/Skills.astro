@@ -1,5 +1,11 @@
 ---
 import SkillIcon from "./SkillIcon.astro";
+import AzureIcon from "../assets/icons/azure.svg";
+import CsharpIcon from "../assets/icons/csharp.svg";
+import TerraformIcon from "../assets/icons/terraform.svg";
+import KubernetesIcon from "../assets/icons/kubernetes.svg";
+import DockerIcon from "../assets/icons/docker.svg";
+import TypescriptIcon from "../assets/icons/typescript.svg";
 ---
 
 <section id="skills" class="section justify-between">
@@ -11,12 +17,12 @@ import SkillIcon from "./SkillIcon.astro";
 
         <div class="grid grid-rows-1 gap-8 mt-6 border border-gray-800 rounded-3xl p-4 pt-12 pb-12">
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-8">
-                <SkillIcon title="Azure" src="/assets/icons/azure.svg"/>
-                <SkillIcon title="C#" src="/assets/icons/csharp.svg"/>
-                <SkillIcon title="Terraform" src="/assets/icons/terraform.svg"/>
-                <SkillIcon title="Kubernetes" src="/assets/icons/kubernetes.svg"/>
-                <SkillIcon title="Docker" src="/assets/icons/docker.svg"/>
-                <SkillIcon title="TypeScript" src="/assets/icons/typescript.svg"/>
+                <SkillIcon title="Azure" src={AzureIcon}/>
+                <SkillIcon title="C#" src={CsharpIcon}/>
+                <SkillIcon title="Terraform" src={TerraformIcon}/>
+                <SkillIcon title="Kubernetes" src={KubernetesIcon}/>
+                <SkillIcon title="Docker" src={DockerIcon}/>
+                <SkillIcon title="TypeScript" src={TypescriptIcon}/>
             </div>
         </div>
     </section>
