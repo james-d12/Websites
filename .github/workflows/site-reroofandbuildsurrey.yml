@@ -1,0 +1,31 @@
+name: Build & Deploy Re-roof and Build Surrey Website
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'sites/reroofandbuildsurrey.co.uk/**'
+      - '.github/workflows/site-reroofandbuildsurrey.yml'
+      - '.github/workflows/site-template.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'sites/reroofandbuildsurrey.co.uk/**'
+      - '.github/workflows/site-reroofandbuildsurrey.yml'
+      - '.github/workflows/site-template.yml'
+
+jobs:
+  jamesdurban:
+    name: "Build & Deploy reroof and build surrey"
+    uses: james-d12/Websites/.github/workflows/site-template.yml@main
+    with:
+      site: reroofandbuildsurrey.co.uk
+    secrets:
+      server_host: ${{ secrets.HOST }}
+      server_username: ${{ secrets.USERNAME }}
+      server_password: ${{ secrets.PASSWORD }}
+      server_ssh_port: ${{ secrets.PORT }}
