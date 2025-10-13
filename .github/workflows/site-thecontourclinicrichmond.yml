@@ -1,4 +1,4 @@
-name: jamesdurban.com
+name: thecontourclinicrichmond
 permissions:
   contents: read
 
@@ -7,21 +7,21 @@ on:
     branches:
       - main
     paths:
-      - 'sites/jamesdurban.com/**'
-      - '.github/workflows/sites/jamesdurban.com.yml'
+      - 'sites/thecontourclinicrichmond.co.uk/**'
+      - '.github/workflows/sites/site-thecontourclinicrichmond.yml'
   pull_request:
     branches:
       - main
     paths:
-      - 'sites/jamesdurban.com/**'
-      - '.github/workflows/sites/jamesdurban.com.yml'
+      - 'sites/thecontourclinicrichmond.co.uk/**'
+      - '.github/workflows/sites/site-thecontourclinicrichmond.yml'
 
 jobs:
-  jamesdurban.com:
-    name: "Build & Deploy jamesdurban.com"
+  thecontourclinicrichmond:
+    name: "Build & Deploy thecontourclinicrichmond.co.uk"
     uses: ./site-template.yml
     with:
-      site: jamesdurban.com
+      site: thecontourclinicrichmond.co.uk
     secrets:
       server_host: ${{ secrets.SERVER_HOST }}
       server_username: ${{ secrets.SERVER_USERNAME }}
