@@ -1,0 +1,30 @@
+---
+import {Image} from "astro:assets";
+import logo from "../assets/images/logo.webp";
+
+const navLinks = [
+    {name: "Home", href: ""},
+    {name: "About", href: "#about"},
+    {name: "Work", href: "#work"},
+    {name: "Contact", href: "#contact"},
+];
+---
+<nav class="fixed top-0 left-0 w-full shadow-md z-50 border-b-2 border-black bg-black text-white">
+    <div class="max-w-full mx-auto px-10 py-4 flex items-center justify-between">
+        <div class="flex items-center">
+            <Image src={logo} alt="Logo" width={64} height={64} class="mr-6"/>
+            <span class="text-2xl font-bold hidden md:inline">Re-Roof & Build Surrey</span>
+        </div>
+
+        <ul class="flex gap-8 text-xl md:text-2xl items-center">
+            {navLinks.map(link => (
+                    <li>
+                        <a href={link.href} class="relative group text-white hover:text-amber-400 transition-colors">
+                            {link.name}
+                            <span class="absolute left-0 -bottom-1 w-0 h-1 bg-amber-400 group-hover:w-full transition-all"></span>
+                        </a>
+                    </li>
+            ))}
+        </ul>
+    </div>
+</nav>
