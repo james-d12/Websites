@@ -1,4 +1,4 @@
-name: Build and Deploy James Durban Website
+name: Build & Deploy James Durban Website
 permissions:
   contents: read
 
@@ -21,11 +21,11 @@ on:
 jobs:
   jamesdurban:
     name: "Build & Deploy jamesdurban.com"
-    uses: james-d12/Websites/.github/workflows/site-template.yml@main
+    uses: james-d12/Websites/.github/workflows/template/site-template.yml@main
     with:
       site: jamesdurban.com
     secrets:
-      server_host: ${{ secrets.SERVER_HOST }}
-      server_username: ${{ secrets.SERVER_USERNAME }}
-      server_password: ${{ secrets.SERVER_PASSWORD }}
-      server_ssh_port: ${{ secrets.SERVER_SSH_PORT }}
+      server_host: ${{ secrets.HOST }}
+      server_username: ${{ secrets.USERNAME }}
+      server_password: ${{ secrets.PASSWORD }}
+      server_ssh_port: ${{ secrets.PORT }}
