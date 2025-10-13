@@ -7,16 +7,12 @@ on:
       secrets:
         server_host:
           required: true
-          type: string
         server_username:
           required: true
-          type: string
         server_password:
           required: true
-          type: string
         server_ssh_port:
           required: true
-          type: number
 
 env:
   SITE_FULL_PATH: sites/${{ inputs.site }}
