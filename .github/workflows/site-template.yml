@@ -22,10 +22,10 @@ jobs:
       site_full_path: sites/${{ inputs.site }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Install Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 22
 
@@ -74,7 +74,7 @@ jobs:
     if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
@@ -95,6 +95,6 @@ jobs:
           username: ${{ secrets.server_username }}
           password: ${{ secrets.server_password }}
           port: ${{ secrets.server_ssh_port }}
-          source: "${{ inputs.site }}/dist/*"
+          source: ./deploy
           target: "/var/www/${{ inputs.site }}"
           strip_components: 3
