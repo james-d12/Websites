@@ -4,23 +4,22 @@ on:
       site:
         required: true
         type: string
-      secrets:
-        server_host:
-          required: true
-        server_username:
-          required: true
-        server_password:
-          required: true
-        server_ssh_port:
-          required: true
-
-env:
-  SITE_FULL_PATH: sites/${{ inputs.site }}
+    secrets:
+      server_host:
+        required: true
+      server_username:
+        required: true
+      server_password:
+        required: true
+      server_ssh_port:
+        required: true
 
 jobs:
   build-site:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
+    env:
+      SITE_FULL_PATH: sites/${{ inputs.site }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -70,8 +69,10 @@ jobs:
 
   deploy-site:
     runs-on: ubuntu-latest
-    name: Deploy ${{ site }}
+    name: Deploy ${{ inputs.site }}
     needs: build-site
+    env:
+      SITE_FULL_PATH: sites/${{ inputs.site }}
     if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
