@@ -1,4 +1,4 @@
-name: jamesdurban
+name: Build and Deploy James Durban Website
 permissions:
   contents: read
 
@@ -8,13 +8,13 @@ on:
       - main
     paths:
       - 'sites/jamesdurban.com/**'
-      - '.github/workflows/sites/site-jamesdurban.yml'
+      - '.github/workflows/site-jamesdurban.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'sites/jamesdurban.com/**'
-      - '.github/workflows/sites/site-jamesdurban.yml'
+      - '.github/workflows/site-jamesdurban.yml'
 
 jobs:
   jamesdurban:

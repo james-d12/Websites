@@ -1,4 +1,4 @@
-name: thecontourclinicrichmond
+name: Build and Deploy The Contour Clinic Richmond Website
 permissions:
   contents: read
 
@@ -8,13 +8,13 @@ on:
       - main
     paths:
       - 'sites/thecontourclinicrichmond.co.uk/**'
-      - '.github/workflows/sites/site-thecontourclinicrichmond.yml'
+      - '.github/workflows/site-thecontourclinicrichmond.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'sites/thecontourclinicrichmond.co.uk/**'
-      - '.github/workflows/sites/site-thecontourclinicrichmond.yml'
+      - '.github/workflows/site-thecontourclinicrichmond.yml'
 
 jobs:
   thecontourclinicrichmond:
