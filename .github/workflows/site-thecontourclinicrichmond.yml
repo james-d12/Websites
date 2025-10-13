@@ -1,0 +1,29 @@
+name: jamesdurban.com
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'sites/jamesdurban.com/**'
+      - '.github/workflows/sites/jamesdurban.com.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'sites/jamesdurban.com/**'
+      - '.github/workflows/sites/jamesdurban.com.yml'
+
+jobs:
+  jamesdurban.com:
+    name: "Build & Deploy jamesdurban.com"
+    uses: ./site-template.yml
+    with:
+      site: jamesdurban.com
+    secrets:
+      server_host: ${{ secrets.SERVER_HOST }}
+      server_username: ${{ secrets.SERVER_USERNAME }}
+      server_password: ${{ secrets.SERVER_PASSWORD }}
+      server_ssh_port: ${{ secrets.SERVER_SSH_PORT }}
