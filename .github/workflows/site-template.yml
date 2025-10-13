@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
     env:
-      SITE_FULL_PATH: sites/${{ inputs.site }}
+      site_full_path: sites/${{ inputs.site }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -50,29 +50,29 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        working-directory: ${{ SITE_FULL_PATH }}
+        working-directory: ${{ env.site_full_path }}
         run: pnpm install
 
       - name: Build project
-        working-directory: ${{ SITE_FULL_PATH }}
+        working-directory: ${{ env.site_full_path }}
         run: pnpm build
 
       - name: Audit Packages
-        working-directory: ${{ SITE_FULL_PATH }}
+        working-directory: ${{ env.site_full_path }}
         run: pnpm audit
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: site-dist-${{ inputs.site }}
-          path: ${{ SITE_FULL_PATH }}/dist
+          path: ${{ env.site_full_path }}/dist
 
   deploy-site:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }}
     needs: build-site
     env:
-      SITE_FULL_PATH: sites/${{ inputs.site }}
+      site_full_path: sites/${{ inputs.site }}
     if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
@@ -88,7 +88,7 @@ jobs:
           username: ${{ secrets.server_username }}
           password: ${{ secrets.server_password }}
           port: ${{ secrets.server_ssh_port }}
-          script: cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ SITE_FULL_PATH }}-$(date +%F%H%M%S)
+          script: cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ env.site_full_path }}-$(date +%F%H%M%S)
 
       - uses: appleboy/scp-action@master
         name: Deploy site via SCP
@@ -97,6 +97,6 @@ jobs:
           username: ${{ secrets.server_username }}
           password: ${{ secrets.server_password }}
           port: ${{ secrets.server_ssh_port }}
-          source: "${{ SITE_FULL_PATH }}/dist/*"
+          source: "${{ env.site_full_path }}/dist/*"
           target: "/var/www/${{ inputs.site }}"
           strip_components: 3
