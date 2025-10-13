@@ -19,7 +19,7 @@ on:
 jobs:
   thecontourclinicrichmond:
     name: "Build & Deploy thecontourclinicrichmond.co.uk"
-    uses: ./site-template.yml
+    uses: james-d12/Websites/.github/workflows/site-template.yml@main
     with:
       site: thecontourclinicrichmond.co.uk
     secrets:

@@ -17,9 +17,9 @@ on:
       - '.github/workflows/sites/site-jamesdurban.yml'
 
 jobs:
-  jamesdurban.com:
+  jamesdurban:
     name: "Build & Deploy jamesdurban.com"
-    uses: ./site-template.yml
+    uses: james-d12/Websites/.github/workflows/site-template.yml@main
     with:
       site: jamesdurban.com
     secrets:
