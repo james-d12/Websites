@@ -1,11 +1,14 @@
-[![Build & Deploy James Durban Website](https://github.com/james-d12/Websites/actions/workflows/site-jamesdurban.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-jamesdurban.yml)
-[![Build & Deploy The Contour Clinic Richmond Website](https://github.com/james-d12/Websites/actions/workflows/site-thecontourclinicrichmond.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-thecontourclinicrichmond.yml)
-[![Build Server](https://github.com/james-d12/Websites/actions/workflows/server.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/server.yml)
-
 # Overview
 
 This repository contains the source code for websites managed by myself. It also includes my NixOS configuration that
 I use for my VPS that hosts my sites.
+
+# CI Status
+
+[![James Durban Website](https://github.com/james-d12/Websites/actions/workflows/site-jamesdurban.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-jamesdurban.yml)
+[![The Contour Clinic Richmond Website](https://github.com/james-d12/Websites/actions/workflows/site-thecontourclinicrichmond.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-thecontourclinicrichmond.yml)
+[![Re-roof and Build Surrey Website](https://github.com/james-d12/Websites/actions/workflows/site-reroofandbuildsurrey.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-reroofandbuildsurrey.yml)
+[![Server Configuration](https://github.com/james-d12/Websites/actions/workflows/server.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/server.yml)
 
 # Getting Started
 
