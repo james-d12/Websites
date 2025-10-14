@@ -3,9 +3,10 @@ import {Image} from "astro:assets";
 import logo from "../assets/images/logo.webp";
 
 const navLinks = [
-    {name: "Home", href: ""},
     {name: "About", href: "#about"},
+    {name: "Services", href: "#services"},
     {name: "Work", href: "#work"},
+    {name: "Awards", href: "#awards"},
     {name: "Contact", href: "#contact"},
 ];
 ---
@@ -13,7 +14,11 @@ const navLinks = [
     <div class="max-w-full mx-auto px-10 py-4 flex items-center justify-between">
         <div class="flex items-center">
             <Image src={logo} alt="Logo" width={64} height={64} class="mr-6"/>
-            <span class="text-2xl font-bold hidden md:inline">Re-Roof & Build Surrey</span>
+
+            <a href="#" class="relative group text-xl md:text-2xl text-white hover:text-amber-200 transition-colors">
+                Re-Roof & Build Surrey
+                <span class="absolute left-0 -bottom-1 w-0 h-1 bg-amber-200 group-hover:w-full transition-all"></span>
+            </a>
         </div>
 
         <ul class="flex gap-8 text-xl md:text-2xl items-center">
