@@ -13,10 +13,10 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@tailwindcss/vite": "^4.1.14",
+    "@astrojs/check": "^0.9.5",
+    "@tailwindcss/vite": "^4.1.15",
     "astro": "^5.14.8",
-    "tailwindcss": "^4.1.14",
+    "tailwindcss": "^4.1.15",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
