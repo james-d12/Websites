@@ -1,11 +1,13 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/sites/jamesdurban.com"
+    directory: "/sites"
     schedule:
       interval: "daily"
-
-  - package-ecosystem: "npm"
-    directory: "/sites/thecontourclinicrichmond.co.uk"
-    schedule:
-      interval: "daily"
+    groups:
+      patch-updates:
+        update-types: [ "patch" ]
+      minor-updates:
+        update-types: [ "minor" ]
+      major-updates:
+        update-types: [ "major" ]
