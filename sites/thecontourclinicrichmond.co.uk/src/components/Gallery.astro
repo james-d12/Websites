@@ -1,12 +1,14 @@
 ---
 import Carousel from "./Carousel"; // adjust path if needed
 
-const images = [
-    {src: "/images/Contour-01.png", alt: "Body contouring treatment 1", text: "Smooth and defined results"},
-    {src: "/images/Contour-02.png", alt: "Body contouring treatment 2", text: "Precision body shaping"},
-    {src: "/images/Contour-03.png", alt: "Body contouring treatment 3", text: "Contour with confidence"},
-    {src: "/images/Contour-04.png", alt: "Body contouring treatment 4", text: "Advanced sculpting methods"},
-    {src: "/images/Contour-05.png", alt: "Body contouring treatment 5", text: "Natural enhancement process"},
+const slides = [
+    {
+        before: "/images/Contour-01-Before.png",
+        after: "/images/Contour-01-After.png",
+        beforeText: "Before",
+        afterText: "After",
+        text: "Body contouring treatment 1",
+    },
 ];
 ---
 
@@ -14,7 +16,7 @@ const images = [
     <div class="max-w-5xl mx-auto">
         <div class="max-w-4xl mx-auto text-center mb-6">
             <h3 class="text-5xl font-semibold mb-10">Gallery</h3>
-            <Carousel images={images} client:load/>
+            <Carousel slides={slides} client:load/>
         </div>
     </div>
 </section>
