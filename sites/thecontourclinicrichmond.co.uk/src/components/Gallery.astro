@@ -1,31 +1,20 @@
 ---
-import {Image} from "astro:assets";
-import contour1 from "../assets/images/Contour-01.png";
-import contour2 from "../assets/images/Contour-02.png";
-import contour3 from "../assets/images/Contour-03.png";
-import contour4 from "../assets/images/Contour-04.png";
-import contour5 from "../assets/images/Contour-05.png";
+import Carousel from "./Carousel"; // adjust path if needed
 
 const images = [
-    {src: contour1, alt: "Body contouring treatment"},
-    {src: contour2, alt: "Body contouring treatment"},
-    {src: contour3, alt: "Body contouring treatment"},
-    {src: contour4, alt: "Body contouring treatment"},
-    {src: contour5, alt: "Body contouring treatment"},
+    {src: "/images/Contour-01.png", alt: "Body contouring treatment 1", text: "Smooth and defined results"},
+    {src: "/images/Contour-02.png", alt: "Body contouring treatment 2", text: "Precision body shaping"},
+    {src: "/images/Contour-03.png", alt: "Body contouring treatment 3", text: "Contour with confidence"},
+    {src: "/images/Contour-04.png", alt: "Body contouring treatment 4", text: "Advanced sculpting methods"},
+    {src: "/images/Contour-05.png", alt: "Body contouring treatment 5", text: "Natural enhancement process"},
 ];
 ---
+
 <section id="gallery" class="px-6 py-20 bg-white">
     <div class="max-w-5xl mx-auto">
         <div class="max-w-4xl mx-auto text-center mb-6">
-            <h3 class="text-5xl font-semibold mb-6">Gallery</h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {images.map(image => (
-                        <div class="h-64 overflow-hidden rounded-xl shadow-lg">
-                            <Image src={image.src} alt={image.alt} layout="constrained"
-                                   class="w-full h-full object-cover transition-transform duration-300 hover:scale-105"/>
-                        </div>
-                ))}
-            </div>
+            <h3 class="text-5xl font-semibold mb-10">Gallery</h3>
+            <Carousel images={images} client:load/>
         </div>
     </div>
 </section>
