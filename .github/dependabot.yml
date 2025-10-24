@@ -1,7 +1,7 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/sites"
+    directory: "/sites/*"
     schedule:
       interval: "daily"
     groups:
