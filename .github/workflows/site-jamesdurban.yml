@@ -8,6 +8,7 @@ on:
       - main
     paths:
       - 'web/sites/jamesdurban.com/**'
+      - 'web/libs/shared-ui/**'
       - '.github/workflows/site-jamesdurban.yml'
       - '.github/workflows/site-template.yml'
   pull_request:

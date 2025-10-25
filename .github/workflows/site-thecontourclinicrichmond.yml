@@ -7,14 +7,15 @@ on:
     branches:
       - main
     paths:
-      - 'sites/thecontourclinicrichmond.co.uk/**'
+      - 'web/sites/thecontourclinicrichmond.co.uk/**'
+      - 'web/libs/shared-ui/**'
       - '.github/workflows/site-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
   pull_request:
     branches:
       - main
     paths:
-      - 'sites/thecontourclinicrichmond.co.uk/**'
+      - 'web/sites/thecontourclinicrichmond.co.uk/**'
       - '.github/workflows/site-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
 

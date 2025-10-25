@@ -50,12 +50,12 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        working-directory: ${{ env.site_full_path }}
+        working-directory: ./web
         run: pnpm install
 
       - name: Build project
-        working-directory: ${{ env.site_full_path }}
-        run: pnpm build
+        working-directory: ./web
+        run: pnpm --filter "sites/${{ inputs.site }}" run build
 
       - name: Audit Packages
         working-directory: ${{ env.site_full_path }}
