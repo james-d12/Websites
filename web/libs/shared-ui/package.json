@@ -1,0 +1,13 @@
+{
+  "name": "@shared-ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Collection of shared UI components for client web sites.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "James Durban",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {}
+}

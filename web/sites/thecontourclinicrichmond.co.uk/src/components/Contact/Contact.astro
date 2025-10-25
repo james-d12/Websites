@@ -1,0 +1,37 @@
+---
+import InstagramIcon from "../../assets/icons/instagram.svg";
+import LocationIcon from "../../assets/icons/location.svg";
+import PhoneIcon from "../../assets/icons/phone.svg";
+import EmailIcon from "../../assets/icons/email.svg";
+
+import ContactSection from "./ContactSection.astro";
+---
+<section id="contact" class="px-6 py-20 bg-gray-50">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-5xl font-semibold mb-6">Contact Us</h2>
+        <p class="mb-12 text-lg">
+            Have questions or want to book a consultation? Reach out to us via phone or email.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 font-medium text-gray-700">
+            <ContactSection title="Phone"
+                            value="+020 3432 1124"
+                            href="tel:+442034321124"
+                            icon={PhoneIcon}/>
+
+            <ContactSection title="Email"
+                            value="thecontourclinicrichmond@gmail.com"
+                            href="mailto:thecontourclinicrichmond@gmail.com"
+                            icon={EmailIcon}/>
+
+            <ContactSection title="Instagram"
+                            value="@the_contour_clinic_richmond"
+                            href="https://www.instagram.com/the_contour_clinic_richmond"
+                            icon={InstagramIcon}/>
+
+            <ContactSection title="Location"
+                            value="Unit 10, St George's Industrial Estate, KT2 5BQ"
+                            icon={LocationIcon}/>
+        </div>
+    </div>
+</section>

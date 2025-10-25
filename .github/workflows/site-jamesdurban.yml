@@ -7,14 +7,15 @@ on:
     branches:
       - main
     paths:
-      - 'sites/jamesdurban.com/**'
+      - 'web/sites/jamesdurban.com/**'
+      - 'web/libs/shared-ui/**'
       - '.github/workflows/site-jamesdurban.yml'
       - '.github/workflows/site-template.yml'
   pull_request:
     branches:
       - main
     paths:
-      - 'sites/jamesdurban.com/**'
+      - 'web/sites/jamesdurban.com/**'
       - '.github/workflows/site-jamesdurban.yml'
       - '.github/workflows/site-template.yml'
 

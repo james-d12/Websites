@@ -1,0 +1,32 @@
+{
+  "name": "web-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "libs/*",
+    "sites/*"
+  ],
+  "packageManager": "pnpm@10.19.0",
+  "scripts": {
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2"
+  },
+  "dependencies": {
+    "astro": "^5.15.1",
+    "@astrojs/react": "^4.4.0",
+    "@astrojs/check": "^0.9.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@tailwindcss/vite": "^4.1.16",
+    "tailwindcss": "^4.1.16"
+  }
+}

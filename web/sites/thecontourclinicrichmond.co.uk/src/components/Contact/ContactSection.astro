@@ -1,0 +1,37 @@
+---
+import {Image} from "astro:assets";
+import type {SvgComponent} from "astro/types";
+
+interface Props {
+    title: string;
+    value: string;
+    href?: string;
+    icon: SvgComponent;
+}
+
+const {title, value, href, icon} = Astro.props;
+---
+<div class="p-6 rounded-xl shadow-md bg-white">
+    <div class="grid grid-cols-4 p-2">
+        <div class="col-span-1">
+            <Image title={title} alt={title} width="32" height="32" src={icon}/>
+        </div>
+        <div class="col-span-3">
+            <span class="block mb-2 text-pink-600 font-semibold text-xl">{title}</span>
+        </div>
+    </div>
+
+    {href ? (
+            <a
+                    href={href}
+                    target="_blank"
+                    class="text-xl break-words hover:text-pink-400 transition-colors"
+            >
+                {value}
+            </a>
+    ) : (
+            <p class="text-xl leading-relaxed">
+                {value}
+            </p>
+    )}
+</div>
