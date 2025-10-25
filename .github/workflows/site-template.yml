@@ -70,6 +70,7 @@ jobs:
         with:
           name: site-dist-${{ inputs.site }}
           path: ${{ env.site_full_path }}/dist
+          if-no-files-found: error
 
   deploy-site:
     runs-on: ubuntu-latest
