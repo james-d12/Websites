@@ -59,7 +59,7 @@ jobs:
 
       - name: Build project
         working-directory: web
-        run: pnpm --filter "sites/${{ inputs.site }}" run build
+        run: pnpm --filter "${{ inputs.site }}" run build
 
       - name: Audit Packages
         working-directory: ${{ env.site_full_path }}
