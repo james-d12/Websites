@@ -6,16 +6,8 @@
   "scripts": {
     "build": "tsc"
   },
-  "keywords": [],
   "author": "James Durban",
   "license": "ISC",
-  "packageManager": "pnpm@10.19.0",
-  "devDependencies": {
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "react": "^19.2.0"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
