@@ -1,0 +1,36 @@
+---
+import Carousel from "./Carousel";
+
+const slides = [
+    {
+        before: "/images/Contour-01-Before.png",
+        after: "/images/Contour-01-After.png",
+        beforeText: "Before",
+        afterText: "After",
+        text: "Face Treatment After 1 Session",
+    },
+    {
+        before: "/images/Contour-02-Before.png",
+        after: "/images/Contour-02-After.png",
+        beforeText: "Before",
+        afterText: "After",
+        text: "Face Treatment After 1 Session",
+    },
+    {
+        before: "/images/Contour-03-Before.png",
+        after: "/images/Contour-03-After.png",
+        beforeText: "Before",
+        afterText: "After",
+        text: "Booty Treatment After 1 Session",
+    }
+];
+---
+
+<section id="gallery" class="px-6 py-20 bg-white">
+    <div class="max-w-10xl mx-auto">
+        <div class="max-w-2xl mx-auto text-center mb-6">
+            <h3 class="text-5xl font-semibold mb-10">Gallery</h3>
+            <Carousel slides={slides} client:load/>
+        </div>
+    </div>
+</section>

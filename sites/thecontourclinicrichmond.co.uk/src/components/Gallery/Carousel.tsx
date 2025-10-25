@@ -27,8 +27,8 @@ export default function Carousel({ slides }: { slides: SlideData[] }) {
     return (
         <>
             {/* Normal Carousel */}
-            <div className="max-w-6xl mx-auto text-center relative">
-                <div className="relative overflow-hidden rounded-2xl shadow-lg h-96">
+            <div className="max-w-7xl mx-auto text-center relative">
+                <div className="relative overflow-hidden rounded-2xl shadow-lg h-128">
                     <div
                         className="flex transition-transform duration-700 ease-in-out h-full"
                         style={{ transform: `translateX(-${current * 100}%)` }}
