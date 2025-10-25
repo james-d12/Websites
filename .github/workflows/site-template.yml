@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
     env:
-      site_full_path: sites/${{ inputs.site }}
+      site_full_path: web/sites/${{ inputs.site }}
     steps:
       - name: Checkout
         uses: actions/checkout@v5
