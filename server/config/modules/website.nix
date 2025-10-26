@@ -44,10 +44,9 @@ in
       map (site: {
         "${site.name}" = {
           forceSSL = true;
-          enableACME = true;
           documentRoot = site.documentRoot;
           serverAliases = site.serverAliases;
-          # useACMEHost = site.name;
+          useACMEHost = site.name;
           extraConfig = lib.concatStringsSep "\n" [
             defaultHeaders
             ''
