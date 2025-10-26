@@ -9,7 +9,9 @@ I use for my VPS that hosts my sites.
 
 # Getting Started
 
-## NixOS Server Config
+<details>
+
+<summary>Server Config</summary>
 
 ### Bootstrapping a new VPS
 
@@ -30,19 +32,29 @@ I use for my VPS that hosts my sites.
 3. Run ```docker compose run --rm nixos-rebuild```.
 4. Changes should have been applied.
 
+</details>
+
+<details>
+
+<summary>Website Config</summary>
+
 ## Websites
 
 Inside the web folder, is where all the client websites are stored. It is currently split into two sub folders; lib and
 sites. Lib contains any shared libraries, whilst sites contain the actual websites.
 
 ### Getting Started
+
 1. Ensure you have pnpm installed and Node.js on your machine.
 2. Navigate to the ```web``` folder.
 3. Run ```pnpm install``` to install all the dependencies.
 4. Run ```pnpm --filter <site_name> run dev``` to start the site.
 
 ### List of Sites
+
 - [jamesdurban.com](https://jamesdurban.com)
 - [thecontourclinicrichmond.co.uk](https://thecontourclinicrichmond.co.uk)
 - [blackcattattoos.co.uk](https://blackcattattoos.co.uk)
 - [stcatherinesgroup.com](https://stcatherinesgroup.com)
+
+</details>
