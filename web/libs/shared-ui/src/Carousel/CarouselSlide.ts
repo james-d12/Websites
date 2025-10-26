@@ -1,7 +1,7 @@
 export type CarouselSlide = {
-    before: string;
-    after: string;
-    beforeText?: string;
-    afterText?: string;
-    text?: string;
+  before: string;
+  after: string;
+  beforeText?: string;
+  afterText?: string;
+  text?: string;
 };
