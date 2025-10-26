@@ -83,16 +83,30 @@ in
           value = {
             dnsProvider = site.provider;
             group = "wwwrun";
+            environmentFile = "/var/lib/acme/acme.env";
           };
         }) config.websites.sites
       );
     };
 
-    systemd.tmpfiles.settings = lib.listToAttrs (
-      map (site: {
-        name = site.name;
-        value = {
-          ${site.documentRoot} = {
+    systemd.tmpfiles.settings = lib.mkMerge [
+      (lib.listToAttrs (
+        map (site: {
+          name = site.name;
+          value = {
+            ${site.documentRoot} = {
+              d = {
+                user = "wwwrun";
+                group = "wwwrun";
+                mode = "0755";
+              };
+            };
+          };
+        }) config.websites.sites
+      ))
+      {
+        "acme-challenges" = {
+          "/var/lib/acme/.challenges" = {
             d = {
               user = "wwwrun";
               group = "wwwrun";
@@ -100,8 +114,8 @@ in
             };
           };
         };
-      }) config.websites.sites
-    );
+      }
+    ];
   };
 }
 

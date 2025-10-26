@@ -4,6 +4,9 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'web/**'
+      - '.github/workflows/web.yml'
 
 jobs:
   build-web:
