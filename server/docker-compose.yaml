@@ -13,7 +13,7 @@ services:
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
 
-  nixos-fts:
+  vps-bootstrap:
     image: nixos/nix
     container_name: nixos-fts
     working_dir: /flake
@@ -26,7 +26,7 @@ services:
     env_file: ".env"
     command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix root@$TARGET_HOST
 
-  nixos-rebuild:
+  vps-update:
     image: nixos/nix
     container_name: nixos-rebuild
     working_dir: /flake
@@ -34,7 +34,9 @@ services:
     stdin_open: true
     volumes:
       - ./config:/flake:rw,Z
+      - $SSH_AUTH_SOCK:/ssh-agent:ro
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
+      SSH_AUTH_SOCK: /ssh-agent
     env_file: ".env"
-    command: nixos-rebuild switch --flake ./config --target-host "$USER@$TARGET_HOST"
+    command: nix run github:nix-community/nixos-anywhere -- --flake .#vps $USER@$TARGET_HOST -p $PORT
