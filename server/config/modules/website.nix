@@ -83,6 +83,7 @@ in
           value = {
             dnsProvider = site.provider;
             group = "wwwrun";
+            environmentFile = "/var/lib/acme/acme.env";
           };
         }) config.websites.sites
       );
