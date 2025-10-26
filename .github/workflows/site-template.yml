@@ -76,6 +76,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }}
     needs: build-site
+    environment: Production
     if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact

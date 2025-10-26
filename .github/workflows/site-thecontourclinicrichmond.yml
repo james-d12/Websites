@@ -8,21 +8,14 @@ on:
       - main
     paths:
       - 'web/sites/thecontourclinicrichmond.co.uk/**'
-      - 'web/libs/shared-ui/**'
-      - '.github/workflows/site-thecontourclinicrichmond.yml'
-      - '.github/workflows/site-template.yml'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'web/sites/thecontourclinicrichmond.co.uk/**'
+      - 'web/libs/**'
       - '.github/workflows/site-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
 
 jobs:
   thecontourclinicrichmond:
     name: "Build & Deploy thecontourclinicrichmond.co.uk"
-    uses: james-d12/Websites/.github/workflows/site-template.yml@main
+    uses: ./.github/workflows/site-template.yml
     with:
       site: thecontourclinicrichmond.co.uk
     secrets:

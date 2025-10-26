@@ -1,13 +1,15 @@
 {
-  "name": "@shared-ui",
+  "name": "shared-ui",
   "version": "1.0.0",
   "private": true,
   "description": "Collection of shared UI components for client web sites.",
   "scripts": {
     "build": "tsc"
   },
+  "main": "dist/index.js",
   "author": "James Durban",
   "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "solid-js": "^1.9.9"
+  }
 }

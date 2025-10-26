@@ -8,21 +8,14 @@ on:
       - main
     paths:
       - 'web/sites/jamesdurban.com/**'
-      - 'web/libs/shared-ui/**'
-      - '.github/workflows/site-jamesdurban.yml'
-      - '.github/workflows/site-template.yml'
-  pull_request:
-    branches:
-      - main
-    paths:
-      - 'web/sites/jamesdurban.com/**'
+      - 'web/libs/**'
       - '.github/workflows/site-jamesdurban.yml'
       - '.github/workflows/site-template.yml'
 
 jobs:
   jamesdurban:
     name: "Build & Deploy jamesdurban.com"
-    uses: james-d12/Websites/.github/workflows/site-template.yml@main
+    uses: ./.github/workflows/site-template.yml
     with:
       site: jamesdurban.com
     secrets:
