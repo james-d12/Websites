@@ -24,11 +24,11 @@ services:
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
     env_file: ".env"
-    command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix root@$TARGET_HOST
+    command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix $USER@$TARGET_HOST -p $PORT
 
-  vps-update:
+  vps-build:
     image: nixos/nix
-    container_name: nixos-rebuild
+    container_name: nixos-build
     working_dir: /flake
     tty: true
     stdin_open: true
@@ -39,4 +39,11 @@ services:
       NIX_CONFIG: "experimental-features = nix-command flakes"
       SSH_AUTH_SOCK: /ssh-agent
     env_file: ".env"
-    command: nix run github:nix-community/nixos-anywhere -- --flake .#vps $USER@$TARGET_HOST -p $PORT
+    command: >
+      bash -c "
+        echo 'Building system...';
+        nix build .#nixosConfigurations.vps.config.system.build.toplevel;
+        echo 'Copying Nix store to VPS...';
+        nix copy --no-check-sigs --to ssh://$USER@$TARGET_HOST:$PORT ./result;
+        echo 'Activating system on VPS...';
+        ssh $USER@$TARGET_HOST -p $PORT 'sudo nixos-rebuild switch --flake /etc/nixos#vps'"
