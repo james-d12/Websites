@@ -8,6 +8,9 @@ on:
       - main
     paths:
       - 'web/sites/thecontourclinicrichmond.co.uk/**'
+      - 'web/package.json'
+      - 'web/pnpm-lock.yaml'
+      - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
       - '.github/workflows/site-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
