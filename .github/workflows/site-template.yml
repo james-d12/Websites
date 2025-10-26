@@ -57,6 +57,10 @@ jobs:
         working-directory: web
         run: pnpm run format:check
 
+      - name: Build Libs
+        working-directory: web
+        run: pnpm run build:libs
+
       - name: Build project
         working-directory: web
         run: pnpm --filter "${{ inputs.site }}" run build
