@@ -109,7 +109,7 @@ in
           "/var/lib/acme/.challenges" = {
             d = {
               user = "wwwrun";
-              group = "acme";
+              group = "wwwrun";
               mode = "0755";
             };
           };
