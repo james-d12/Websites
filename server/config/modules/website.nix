@@ -44,6 +44,7 @@ in
       map (site: {
         "${site.name}" = {
           forceSSL = true;
+          enableACME = true;
           documentRoot = site.documentRoot;
           serverAliases = site.serverAliases;
           useACMEHost = site.name;
@@ -89,20 +90,33 @@ in
       );
     };
 
-    systemd.tmpfiles.settings = lib.listToAttrs (
-      map (site: {
-        name = site.name;
-        value = {
-          ${site.documentRoot} = {
+    systemd.tmpfiles.settings = lib.mkMerge [
+      (lib.listToAttrs (
+        map (site: {
+          name = site.name;
+          value = {
+            ${site.documentRoot} = {
+              d = {
+                user = "wwwrun";
+                group = "wwwrun";
+                mode = "0755";
+              };
+            };
+          };
+        }) config.websites.sites
+      ))
+      {
+        "acme-challenges" = {
+          "/var/lib/acme/.challenges" = {
             d = {
               user = "wwwrun";
-              group = "wwwrun";
+              group = "acme";
               mode = "0755";
             };
           };
         };
-      }) config.websites.sites
-    );
+      }
+    ];
   };
 }
 
