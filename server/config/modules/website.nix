@@ -75,7 +75,7 @@ in
 
     security.acme = {
       acceptTerms = true;
-      defaults.email = config.websites.email or "webmaster@example.com";
+      defaults.email = config.websites.email;
 
       certs = lib.listToAttrs (
         map (site: {

@@ -66,20 +66,14 @@
 
   websites = {
     enable = true;
-    email = "webmaster@jamesdurban.com";
+    email = "james_d02@protonmail.com";
 
     sites = [
       {
-        name = "jamesdurban.com";
+        name = "blackcattattoos.co.uk";
         provider = "ionos";
-        documentRoot = "/var/www/jamesdurban.com";
-        serverAliases = [ "www.jamesdurban.com" "*.jamesdurban.com" ];
-      }
-      {
-        name = "thecontourclinicrichmond.co.uk";
-        provider = "ionos";
-        documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
-        serverAliases = [ "www.thecontourclinicrichmond.co.uk" "*.thecontourclinicrichmond.co.uk" ];
+        documentRoot = "/var/www/blackcattattoos.co.uk";
+        serverAliases = [ "www.blackcattattoos.co.uk" "*.blackcattattoos.co.uk" ];
       }
     ];
   };
