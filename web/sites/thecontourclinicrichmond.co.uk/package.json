@@ -9,5 +9,9 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@astrojs/solid-js": "^5.1.1",
+    "shared-ui": "workspace:*",
+    "solid-js": "^1.9.9"
+  }
 }
