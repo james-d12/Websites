@@ -28,12 +28,11 @@ export function Carousel(props: { slides: CarouselSlide[] }) {
                         style={{transform: `translateX(-${current() * 100}%)`}}
                     >
                         <For each={slides()}>
-                            {(slide, idx) => (
+                            {(slide) => (
                                 <div
                                     class="w-full flex-shrink-0 flex h-full cursor-pointer"
                                     onClick={() => setIsFullscreen(true)}
                                 >
-                                    {/* Before Image */}
                                     <div class="w-1/2 h-full relative">
                                         <img
                                             src={slide.before}
@@ -48,7 +47,6 @@ export function Carousel(props: { slides: CarouselSlide[] }) {
                                         </Show>
                                     </div>
 
-                                    {/* After Image */}
                                     <div class="w-1/2 h-full relative">
                                         <img
                                             src={slide.after}
@@ -67,7 +65,6 @@ export function Carousel(props: { slides: CarouselSlide[] }) {
                         </For>
                     </div>
 
-                    {/* Controls */}
                     <button
                         onClick={prevSlide}
                         class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
@@ -81,7 +78,6 @@ export function Carousel(props: { slides: CarouselSlide[] }) {
                         ›
                     </button>
 
-                    {/* Dots */}
                     <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-2">
                         <For each={slides()}>
                             {(_, idx) => (
@@ -106,7 +102,6 @@ export function Carousel(props: { slides: CarouselSlide[] }) {
                 </Show>
             </div>
 
-            {/* Fullscreen Lightbox */}
             <Show when={isFullscreen()}>
                 <div
                     class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50 p-4"
