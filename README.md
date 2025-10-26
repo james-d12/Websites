@@ -21,7 +21,7 @@ I use for my VPS that hosts my sites.
 2. Navigate to the ```server``` folder.
 3. Create an .env file and populate based on the ```.env.template```.
 4. Reset the Root Password on Hetzner and save the new password to be used in next step.
-5. Run ```docker compose run --rm nixos-fts``` for bootstrapping a new VPS, you will be prompted for a root password.
+5. Run ```docker compose run --rm vps-bootstrap``` for bootstrapping a new VPS, you will be prompted for a root password.
 6. You will be prompted for the root password, put in the one you saved in step 4.
 7. You can then ssh onto the vps: ```ssh <user>@<vps-ip-address> -p <ssh_port>```
 
@@ -29,7 +29,7 @@ I use for my VPS that hosts my sites.
 
 1. Install Docker on your system.
 2. Navigate to the ```server``` folder.
-3. Run ```docker compose run --rm nixos-rebuild```.
+3. Run ```docker compose run --rm vps-update```.
 4. Changes should have been applied.
 
 </details>
