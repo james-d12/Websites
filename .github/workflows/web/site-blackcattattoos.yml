@@ -1,0 +1,28 @@
+name: Build & Deploy Black Cat Tattoos Website
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'web/sites/blackcattattoos.co.uk/**'
+      - 'web/package.json'
+      - 'web/pnpm-lock.yaml'
+      - 'web/pnpm-workspace.yaml'
+      - 'web/libs/**'
+      - '.github/workflows/web/site-blackcattattoos.yml'
+      - '.github/workflows/site-template.yml'
+
+jobs:
+  jamesdurban:
+    name: "Build & Deploy blackcattatoos.co.uk"
+    uses: ./.github/workflows/site-template.yml
+    with:
+      site: blackcattattoos.co.uk
+    secrets:
+      server_host: ${{ secrets.HOST }}
+      server_username: ${{ secrets.USERNAME }}
+      server_password: ${{ secrets.PASSWORD }}
+      server_ssh_port: ${{ secrets.PORT }}

@@ -12,7 +12,7 @@ on:
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
-      - '.github/workflows/site-jamesdurban.yml'
+      - '.github/workflows/web/site-jamesdurban.yml'
       - '.github/workflows/site-template.yml'
 
 jobs:
