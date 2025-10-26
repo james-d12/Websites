@@ -1,0 +1,55 @@
+name: Build Web
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-web:
+    runs-on: ubuntu-latest
+    name: Build Web
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 10
+          run_install: false
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@v4
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        working-directory: web
+        run: pnpm install
+
+      - name: Check code formatting
+        working-directory: web
+        run: pnpm run format:check
+
+      - name: Build project
+        working-directory: web
+        run: pnpm build
+
+      - name: Audit Packages
+        working-directory: web
+        run: pnpm audit
