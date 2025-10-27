@@ -1,4 +1,4 @@
-name: Build & Deploy Black Cat Tattoos Website
+name: Build & Deploy The Contour Clinic Richmond Website
 permissions:
   contents: read
 
@@ -7,20 +7,20 @@ on:
     branches:
       - main
     paths:
-      - 'web/sites/blackcattattoos.co.uk/**'
+      - 'web/sites/thecontourclinicrichmond.co.uk/**'
       - 'web/package.json'
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
-      - '.github/workflows/web/site-blackcattattoos.yml'
+      - '.github/workflows/web-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
 
 jobs:
-  jamesdurban:
-    name: "Build & Deploy blackcattatoos.co.uk"
+  thecontourclinicrichmond:
+    name: "Build & Deploy thecontourclinicrichmond.co.uk"
     uses: ./.github/workflows/site-template.yml
     with:
-      site: blackcattattoos.co.uk
+      site: thecontourclinicrichmond.co.uk
     secrets:
       server_host: ${{ secrets.HOST }}
       server_username: ${{ secrets.USERNAME }}
