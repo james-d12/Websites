@@ -46,7 +46,7 @@
   };
 
   users.users.james.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO6MxYCqtmUbTMYzHsvQAnmPmWYHFRn4r77oQOEX+iEJ james@USER-PC"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgiJiaS9ydBTHyc7YBei0hEyH4rspbWWFJxy73JWfVI james@USER-PC"
   ];
 
   security.apparmor = {
