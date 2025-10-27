@@ -1,11 +1,17 @@
-[![Build & Deploy James Durban Website](https://github.com/james-d12/Websites/actions/workflows/site-jamesdurban.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-jamesdurban.yml)
-[![Build & Deploy The Contour Clinic Richmond Website](https://github.com/james-d12/Websites/actions/workflows/site-thecontourclinicrichmond.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/site-thecontourclinicrichmond.yml)
-[![Build Server](https://github.com/james-d12/Websites/actions/workflows/server.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/server.yml)
+[![Build Server](https://github.com/james-d12/Websites/actions/workflows/server-build.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/server-build.yml)
+[![Build Web](https://github.com/james-d12/Websites/actions/workflows/web-build.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-build.yml)
 
 # Overview
 
 This repository contains the source code for websites managed by myself. It also includes my NixOS configuration that
 I use for my VPS that hosts my sites.
+
+# Website Status
+
+- [![Build & Deploy James Durban Website](https://github.com/james-d12/Websites/actions/workflows/web-jamesdurban.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-jamesdurban.yml)
+- [![Build & Deploy The Contour Clinic Richmond Website](https://github.com/james-d12/Websites/actions/workflows/web-thecontourclinicrichmond.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-thecontourclinicrichmond.yml)
+- [![Build & Deploy Black Cat Tattoos Website](https://github.com/james-d12/Websites/actions/workflows/web-blackcattattoos.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-blackcattattoos.yml)
+- [![Build & Deploy St Catherine's Group Website](https://github.com/james-d12/Websites/actions/workflows/web-stcatherinesgroup.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-stcatherinesgroup.yml)
 
 # Getting Started
 
@@ -57,6 +63,12 @@ sites. Lib contains any shared libraries, whilst sites contain the actual websit
 2. Navigate to the ```web``` folder.
 3. Run ```pnpm install``` to install all the dependencies.
 4. Run ```pnpm --filter <site_name> run dev``` to start the site.
+
+### Creating a New Site
+
+1. Navigate to the ```web``` folder.
+2. Run ```pnpm create astro@latest``` to create a new site.
+3. Follow the prompts.
 
 ### List of Sites
 
