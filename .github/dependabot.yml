@@ -1,7 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directories: "/web/*"
+    directories:
+      - "/web/*"
     schedule:
       interval: "daily"
     groups:
