@@ -1,7 +1,8 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "/web/sites/"
+    directories:
+      - "/web/*"
     schedule:
       interval: "daily"
     groups:
@@ -11,3 +12,5 @@ updates:
         update-types: [ "minor" ]
       major-updates:
         update-types: [ "major" ]
+    assignees:
+      - "james-d12"

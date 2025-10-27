@@ -37,7 +37,11 @@ importers:
         specifier: ^1.9.9
         version: 1.9.9
 
+  sites/blackcattattoos.co.uk: {}
+
   sites/jamesdurban.com: {}
+
+  sites/stcatherinesgroup.com: {}
 
   sites/thecontourclinicrichmond.co.uk:
     dependencies:

@@ -12,7 +12,7 @@ on:
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
-      - '.github/workflows/site-thecontourclinicrichmond.yml'
+      - '.github/workflows/web-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
 
 jobs:
