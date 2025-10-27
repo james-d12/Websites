@@ -108,3 +108,23 @@ jobs:
           source: ./deploy
           target: "/var/www/${{ inputs.site }}"
           strip_components: 2
+
+      - name: Wait for 1 minute before verifying
+        run: sleep 60
+
+      - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
+        run: |
+          HTTPS_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" https://${{ inputs.site }})
+          HTTP_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" http://${{ inputs.site }})
+          
+          if [ "$HTTPS_STATUS" -ne 200 ]; then
+            echo "❌ HTTPS check failed — expected 200, got $HTTPS_STATUS"
+            exit 1
+          fi
+          
+          if [ "$HTTP_STATUS" -ne 301 ]; then
+            echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
+            exit 1
+          fi
+          
+          echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
