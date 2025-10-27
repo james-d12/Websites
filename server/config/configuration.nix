@@ -6,6 +6,7 @@
     ./modules/networking.nix
     ./modules/website.nix
     ./modules/disk-config.nix
+    ./modules/ssh.nix
   ];
 
   hardware.cpu.intel.updateMicrocode = true;
@@ -31,23 +32,7 @@
   };
 
   security.sudo.enable = true;
-
-  services.openssh = {
-    enable = true;
-    ports = [ 51196 ];
-    settings = {
-        KbdInteractiveAuthentication = false;
-        PermitRootLogin = "no";
-        UsePAM = false;
-        PasswordAuthentication = true;
-        AllowUsers = [ "james" ];
-    };
-    extraConfig = "MaxSessions 2\nClientAliveInterval 300\nClientAliveCountMax 0\n";
-  };
-
-  users.users.james.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgiJiaS9ydBTHyc7YBei0hEyH4rspbWWFJxy73JWfVI james@USER-PC"
-  ];
+  security.sudo.execWheelOnly = true;
 
   security.apparmor = {
     enable = true;
@@ -73,7 +58,13 @@
         name = "blackcattattoos.co.uk";
         provider = "ionos";
         documentRoot = "/var/www/blackcattattoos.co.uk";
-        serverAliases = [ "www.blackcattattoos.co.uk" "*.blackcattattoos.co.uk" ];
+        serverAliases = [ "www.blackcattattoos.co.uk" "blackcattattoos.co.uk" ];
+      }
+      {
+        name = "staging.blackcattattoos.co.uk";
+        provider = "ionos";
+        documentRoot = "/var/www/staging.blackcattattoos.co.uk";
+        serverAliases = [ "www.staging.blackcattattoos.co.uk" "staging.blackcattattoos.co.uk" ];
       }
     ];
   };
