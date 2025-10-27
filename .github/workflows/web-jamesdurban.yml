@@ -1,0 +1,28 @@
+name: Build & Deploy James Durban Website
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'web/sites/jamesdurban.com/**'
+      - 'web/package.json'
+      - 'web/pnpm-lock.yaml'
+      - 'web/pnpm-workspace.yaml'
+      - 'web/libs/**'
+      - '.github/workflows/web-jamesdurban.yml'
+      - '.github/workflows/site-template.yml'
+
+jobs:
+  jamesdurban:
+    name: "Build & Deploy jamesdurban.com"
+    uses: ./.github/workflows/site-template.yml
+    with:
+      site: jamesdurban.com
+    secrets:
+      server_host: ${{ secrets.HOST }}
+      server_username: ${{ secrets.USERNAME }}
+      server_password: ${{ secrets.PASSWORD }}
+      server_ssh_port: ${{ secrets.PORT }}

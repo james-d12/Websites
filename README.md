@@ -58,6 +58,12 @@ sites. Lib contains any shared libraries, whilst sites contain the actual websit
 3. Run ```pnpm install``` to install all the dependencies.
 4. Run ```pnpm --filter <site_name> run dev``` to start the site.
 
+### Creating a New Site
+
+1. Navigate to the ```web``` folder.
+2. Run ```pnpm create astro@latest``` to create a new site.
+3. Follow the prompts.
+
 ### List of Sites
 
 - [jamesdurban.com](https://jamesdurban.com)
