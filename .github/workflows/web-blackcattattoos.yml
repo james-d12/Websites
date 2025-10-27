@@ -16,7 +16,7 @@ on:
       - '.github/workflows/site-template.yml'
 
 jobs:
-  jamesdurban:
+  blackcattattoos:
     name: "Build & Deploy blackcattatoos.co.uk"
     uses: ./.github/workflows/site-template.yml
     with:

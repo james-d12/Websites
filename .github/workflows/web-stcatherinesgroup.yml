@@ -16,7 +16,7 @@ on:
       - '.github/workflows/site-template.yml'
 
 jobs:
-  jamesdurban:
+  stcatherinesgroup:
     name: "Build & Deploy stcatherinesgroup.com"
     uses: ./.github/workflows/site-template.yml
     with:
