@@ -3,10 +3,8 @@ let
   users = [ user];
 in
 {
-  "secret1.age".publicKeys = [ user1 system1 ];
-  "secret2.age".publicKeys = users ++ systems;
-  "armored-secret.age" = {
-    publicKeys = [ user1 ];
+  "ionos.age" = {
+    publicKeys = [ user ];
     armor = true;
   };
 }

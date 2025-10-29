@@ -58,6 +58,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  age.secrets.ionos.file = ../secrets/ionos.age;
+
   websites = {
     enable = true;
     email = "james_d02@protonmail.com";

@@ -48,8 +48,12 @@ I use for my VPS that hosts my sites.
 
 ### Updating Secret with Agenix
 
-1. Same steps as Updating Flake to run Docker
-2. Now execute: ```nix run github:ryantm/agenix -- <command>``` inside the docker container.
+1. Install Docker on your system.
+2. Navigate to the ```server``` folder.
+3. Run ```docker compose run --rm nix```.
+4. Run ``cd secrets``
+5. Run any relevant agenix commands.
+6. Commit the changes.
 
 </details>
 
