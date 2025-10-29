@@ -107,6 +107,7 @@ jobs:
           port: ${{ secrets.server_ssh_port }}
           source: ./deploy
           target: "/var/www/${{ inputs.site }}"
+          tar_tmp_path: "/var/www/temp"
           strip_components: 2
 
       - name: Wait for 1 minute before verifying
