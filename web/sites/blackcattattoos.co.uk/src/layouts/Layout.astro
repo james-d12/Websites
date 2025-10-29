@@ -1,13 +1,36 @@
+---
+import '../styles/global.css'
+---
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="en" class="scroll-smooth">
+<head>
+    <title>Black Cat Tattoos</title>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta name="description"
+          content="Black Cat Tattoos is a tattoting shop in Hamworth, England."/>
+    <meta property="og:title" content="Black Cat Tattoos"/>
+    <meta property="og:description" content="Black Cat Tattoos in Hamworth"/>
+    <meta property="og:image" content="https://blackcattattoos.co.uk/Logo.png"/>
+    <meta property="og:url" content="https://blackcattattoos.co.uk/"/>
+
+    <meta name="twitter:title" content="Black Cat Tattoos"/>
+    <meta name="twitter:description" content="Tattoting shop in Hamworth"/>
+    <meta name="twitter:url" content="https://blackcattattoos.co.uk/logo.png"/>
+    <meta name="twitter:card" content="summary"/>
+</head>
+<body>
+<slot/>
+</body>
 </html>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
