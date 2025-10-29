@@ -6,19 +6,18 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
-    sops-nix.url = "github:Mic92/sops-nix";
-    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+    agenix.url = "github:ryantm/agenix";
   };
 
-  outputs = { self, nixpkgs, disko, nixos-facter-modules, sops-nix, ... }:
+  outputs = { self, nixpkgs, disko, nixos-facter-modules, agenix, ... }:
     {
         nixosConfigurations = {
             vps = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
                 modules = [
                     disko.nixosModules.disko
-                    sops-nix.nixosModules.sops
                     ./configuration.nix
+                    agenix.nixosModules.default
                 ];
             };
         };

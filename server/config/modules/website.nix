@@ -115,6 +115,17 @@ in
           };
         };
       }
+      {
+        "acme-env" = {
+          "/var/lib/acme/acme.env" = {
+            d = {
+              user = "wwwrun";
+              group = "wwwrun";
+              mode = "0755";
+            };
+          };
+        };
+      }
     ];
   };
 }

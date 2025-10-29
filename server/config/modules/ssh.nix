@@ -28,10 +28,10 @@
 
   users.users = {
     james.openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgiJiaS9ydBTHyc7YBei0hEyH4rspbWWFJxy73JWfVI james@USER-PC"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgiJiaS9ydBTHyc7YBei0hEyH4rspbWWFJxy73JWfVI"
     ];
     ci.openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIxSfuVkLwOIIwyJHkIry+fNXDBtJICHnZc0ej6l6kX3 james@USER-PC"
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpS5ydDxVgVzQQ+584z6DeEILc2gVxUMWfUAxt/xK5z"
     ];
   };
 }

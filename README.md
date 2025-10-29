@@ -41,10 +41,15 @@ I use for my VPS that hosts my sites.
 
 ### Updating Flake
 
-1. Instlal Docker on your system.
+1. Install Docker on your system.
 2. Navigate to the ```server``` folder.
-3. Run ```docker compose run --rm nixos-update```.
+3. Run ```docker compose run --rm nix```.
 4. Then run ```nix flake update``` and commit the changes.
+
+### Updating Secret with Agenix
+
+1. Same steps as Updating Flake to run Docker
+2. Now execute: ```nix run github:ryantm/agenix -- <command>``` inside the docker container.
 
 </details>
 
