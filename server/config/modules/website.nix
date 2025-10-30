@@ -120,7 +120,7 @@ in
       {
         "acme-env" = {
           "/var/lib/acme/acme.env" = {
-            d = {
+            f = {
               user = "wwwrun";
               group = "wwwrun";
               mode = "0755";
