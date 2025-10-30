@@ -58,7 +58,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  age.secrets.ionos.file = ../secrets/ionos.age;
+  age.secrets.ionos.file = ./secrets/ionos.age;
 
   websites = {
     enable = true;
