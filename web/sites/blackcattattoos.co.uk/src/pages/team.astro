@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+
+const artists = [
+    {
+        name: "Fred Flintstone",
+        type: "Tattoo Artist",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+    },
+    {
+        name: "Charlie White",
+        type: "Tattoo Artist",
+        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+    },
+    {
+        name: "Daisy Winston",
+        type: "Piercing Artist",
+        image: "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+    },
+    {
+        name: "Julie Bell",
+        type: "Tattoo Artist",
+        image: "https://images.unsplash.com/photo-1720546557227-fd02d4803825?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1548",
+    },
+    {
+        name: "Jessica Jones",
+        type: "Piercing Artist",
+        image: "https://plus.unsplash.com/premium_photo-1683133689225-be508b065377?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774",
+    },
+];
+---
+<Layout>
+    <Navbar/>
+
+    <section class="pt-24 px-6 pb-20 text-gray-900">
+        <h1 class="text-7xl font-semibold text-center mb-12">Team</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-6xl mx-auto">
+            {artists.map((artist) => (
+                    <div class="flex flex-col items-center text-center">
+                        <img
+                                src={artist.image}
+                                alt={artist.name}
+                                class="w-96 h-96 md:w-56 md:h-56 lg:w-full lg:h-96 rounded-2xl object-cover"
+                        />
+                        <h2 class="mt-4 text-3xl font-medium ">{artist.name}</h2>
+                        <h3 class="mt-2 text-md bg-red text-white px-4 py-2 rounded-full">
+                            {artist.type}
+                        </h3>
+                    </div>
+            ))}
+        </div>
+    </section>
+</Layout>
+
+<style>
+    body {
+        background-color: var(--bg-gray-50);
+    }
+</style>
