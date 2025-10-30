@@ -2,7 +2,9 @@ name: websites
 
 services:
   nix:
-    image: nixos/nix
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     container_name: nix
     restart: unless-stopped
     tty: true
@@ -10,8 +12,10 @@ services:
     working_dir: /flake
     volumes:
       - ./config:/flake:rw,Z
+      - $SSH_AUTH_SOCK:/ssh-agent:ro
+      - ~/.ssh/id_ed25519_agenix:/root/.ssh/id_ed25519_agenix:ro
     environment:
-      NIX_CONFIG: "experimental-features = nix-command flakes"
+      SSH_AUTH_SOCK: /ssh-agent
 
   vps-bootstrap:
     image: nixos/nix

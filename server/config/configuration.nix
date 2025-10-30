@@ -29,6 +29,15 @@
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
     };
+    users.ci = {
+        name = "ci";
+        home = "/home/ci";
+        description = "Account used for CI operations";
+        createHome = true;
+        isNormalUser = true;
+        initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
+        extraGroups = [ "wwwrun" ];
+    };
   };
 
   security.sudo.enable = true;
@@ -49,6 +58,8 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  age.secrets.ionos.file = ./secrets/ionos.age;
+
   websites = {
     enable = true;
     email = "james_d02@protonmail.com";
@@ -65,6 +76,18 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.blackcattattoos.co.uk";
         serverAliases = [ "www.staging.blackcattattoos.co.uk" "staging.blackcattattoos.co.uk" ];
+      }
+      {
+        name = "stcatherinesgroup.com";
+        provider = "ionos";
+        documentRoot = "/var/www/stcatherinesgroup.com";
+        serverAliases = [ "www.stcatherinesgroup.com" "stcatherinesgroup.com" ];
+      }
+      {
+        name = "staging.stcatherinesgroup.com";
+        provider = "ionos";
+        documentRoot = "/var/www/staging.stcatherinesgroup.com";
+        serverAliases = [ "www.staging.stcatherinesgroup.com" "staging.stcatherinesgroup.com" ];
       }
     ];
   };

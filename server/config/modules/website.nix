@@ -12,6 +12,8 @@ let
     Header always set Cross-Origin-Embedder-Policy "require-corp"
     Header always set Cross-Origin-Resource-Policy "same-origin"
   '';
+
+  ionos-env = config.age.secrets.ionos.path;
 in
 
 {
@@ -83,7 +85,7 @@ in
           value = {
             dnsProvider = site.provider;
             group = "wwwrun";
-            environmentFile = "/var/lib/acme/acme.env";
+            environmentFile = ionos-env;
           };
         }) config.websites.sites
       );
@@ -107,6 +109,17 @@ in
       {
         "acme-challenges" = {
           "/var/lib/acme/.challenges" = {
+            d = {
+              user = "wwwrun";
+              group = "wwwrun";
+              mode = "0755";
+            };
+          };
+        };
+      }
+      {
+        "acme-env" = {
+          "/var/lib/acme/acme.env" = {
             d = {
               user = "wwwrun";
               group = "wwwrun";
