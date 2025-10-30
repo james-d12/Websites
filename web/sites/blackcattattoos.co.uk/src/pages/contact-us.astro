@@ -5,10 +5,10 @@ import Navbar from '../components/Navbar.astro';
 <Layout>
     <Navbar/>
 
-    <section class="pt-24 px-6 md:px-12 lg:px-20 text-gray-900">
+    <section class="pt-24 px-6 md:px-12 lg:px-20 pb-20 text-gray-900">
         <h1 class="text-7xl font-semibold text-center mb-12">Contact Us</h1>
 
-        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
             <section class="bg-white p-8 rounded-2xl shadow-md">
                 <form
                         action="#"
@@ -38,6 +38,17 @@ import Navbar from '../components/Navbar.astro';
                     </div>
 
                     <div>
+                        <label for="phone" class="block text-lg font-medium mb-2">Phone Number</label>
+                        <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red focus:outline-none"
+                        />
+                    </div>
+
+                    <div>
                         <label for="message" class="block text-lg font-medium mb-2">Message</label>
                         <textarea
                                 id="message"
@@ -57,24 +68,8 @@ import Navbar from '../components/Navbar.astro';
                 </form>
             </section>
 
-            <section class="bg-white p-8 rounded-2xl shadow-md space-y-4">
+            <section class="bg-white p-8 rounded-2xl shadow-md space-y-3">
                 <h2 class="text-3xl font-semibold mb-4">Our Studio</h2>
-
-                <div>
-                    <p class="text-lg font-bold">Address</p>
-                    <p>123 Ink Street<br/>Tattoo City, TX 75000</p>
-                </div>
-
-                <div>
-                    <p class="text-lg font-bold">Phone</p>
-                    <a href="tel:+1234567890" class="text-red hover:underline">+1 (234) 567-890</a>
-                </div>
-
-                <div>
-                    <p class="text-lg font-bold">Email</p>
-                    <a href="mailto:info@blackcattattoo.com"
-                       class="text-red hover:underline">info@blackcattattoo.com</a>
-                </div>
 
                 <div class="pt-4">
                     <iframe
@@ -87,6 +82,10 @@ import Navbar from '../components/Navbar.astro';
                             referrerpolicy="no-referrer-when-downgrade"
                             class="rounded-lg shadow-sm"
                     ></iframe>
+
+                    <div>
+                        <p class="text-left pt-2 text-lg font-medium">123 Ink Street, Tattoo City, TX 75000</p>
+                    </div>
                 </div>
 
                 <div>
@@ -127,9 +126,3 @@ import Navbar from '../components/Navbar.astro';
         </div>
     </section>
 </Layout>
-
-<style>
-    body {
-        background-color: #f5f5f5;
-    }
-</style>
