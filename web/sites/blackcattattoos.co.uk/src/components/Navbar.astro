@@ -23,7 +23,7 @@ const currentPath = Astro.url.pathname;
             </a>
             <a
                     href="/"
-                    title="Go to Home"
+                    title="Go Home"
                     class="hidden md:inline-block relative group text-xl md:text-2xl text-white hover:text-red transition-colors"
             >
                 Black Cat Tattoo & Piercing Parlour
@@ -58,7 +58,7 @@ const currentPath = Astro.url.pathname;
                     onclick="window.location.href='/cart'"
                     id="cart-button"
                     class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-red border border-2 border-grey"
-                    title="Open menu"
+                    title="Open Cart"
             >
                 <Image src={Cart} alt="Cart" width={24} height={24} class="w-6 h-6 fill-white"/>
             </button>
@@ -71,7 +71,7 @@ const currentPath = Astro.url.pathname;
                     onclick="window.location.href='/cart'"
                     id="cart-button"
                     class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-red border border-2 border-grey"
-                    title="Open menu"
+                    title="Open Cart"
             >
                 <Image src={Cart} alt="Cart" width={24} height={24} class="w-6 h-6 fill-white"/>
             </button>
@@ -91,7 +91,7 @@ const currentPath = Astro.url.pathname;
 
             <div
                     id="dropdown-menu"
-                    class="hidden absolute right-0 mt-2 w-48 bg-black text-white rounded-md shadow-lg flex-col divide-y divide-gray-800 max-h-60 overflow-auto p-1 z-50"
+                    class="hidden absolute right-0 mt-2 w-48 bg-black text-white rounded-md shadow-lg flex-col divide-y divide-grey max-h-60 overflow-auto p-1 z-50"
                     role="menu"
                     aria-labelledby="menu-button"
             >
@@ -101,8 +101,7 @@ const currentPath = Astro.url.pathname;
                                 href={link.href}
                                 class={`text-lg block w-full text-left px-4 py-3 rounded-md transition-colors ${
                                     currentPath === link.href
-                                        ? "bg-red text-black"
-                                        : "hover:bg-amber-500 hover:text-black"
+                                    && "bg-red text-white"
                                 }`}
                         >
                             {link.name}

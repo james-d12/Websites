@@ -1,6 +1,18 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Domine";
+    src: url("/fonts/Domine-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 @theme {
-  --color-grey: #1a1d21;
-  --color-red: #970d12;
+    --color-red: #970d12;
+}
+
+* {
+    font-family: "Domine", sans-serif;
 }
