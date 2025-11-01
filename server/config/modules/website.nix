@@ -122,7 +122,7 @@ in
           "/var/www/backup" = {
             d = {
               user = "ci";
-              group = "ci";
+              group = "wwwrun";
               mode = "0755";
             };
           };
