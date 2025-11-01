@@ -6,32 +6,32 @@ const filters = ["All", "T-shirts", "Hats", "Accessories"];
 const products = [
     {
         name: "Black Cat Tee",
-        image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjB0c2hpcnR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
+        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
         price: "25"
     },
     {
         name: "Tattoo Snapback",
-        image: "https://images.unsplash.com/photo-1668959813575-8e68053e2fcc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c25hcGJhY2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
+        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
         price: "30"
     },
     {
         name: "Ink Mug",
-        image: "https://images.unsplash.com/photo-1616241673111-508b4662c707?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bXVnfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
         price: "15"
     },
     {
         name: "Sticker Pack",
-        image: "https://images.unsplash.com/photo-1761276297637-4418549ead2d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RpY2tlciUyMHBhY2t8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
+        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
         price: "8"
     },
     {
         name: "Tattoo Hoodie",
-        image: "https://images.unsplash.com/photo-1620799140188-3b2a02fd9a77?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9vZGllfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
         price: "50"
     },
     {
         name: "Cap",
-        image: "https://plus.unsplash.com/premium_photo-1680859126205-1c593bb4f9e8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FwfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
         price: "20"
     },
 ];
@@ -40,12 +40,12 @@ const products = [
 <Layout>
     <Navbar/>
 
-    <section class="pt-24 pb-20 px-6 md:px-12 lg:px-20 text-gray-900">
+    <section class="pt-24 pb-20 px-6 md:px-12 lg:px-20 text-white">
         <h1 class="text-7xl font-semibold text-center mb-8">Shop</h1>
 
         <div class="flex flex-wrap justify-center gap-4 mb-8">
             {filters.map((filter) => (
-                    <button class="px-4 py-2 rounded-full border border-gray-400 hover:bg-red hover:text-white transition-colors">
+                    <button class="bg-white text-black py-2 px-4 rounded-full hover:text-white hover:bg-red transition-colors">
                         {filter}
                     </button>
             ))}
@@ -53,12 +53,12 @@ const products = [
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {products.map((product) => (
-                    <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col">
+                    <div class="bg-black rounded-lg shadow-md overflow-hidden flex flex-col">
                         <img src={product.image} alt={product.name} class="w-full h-64 object-cover"/>
-                        <div class="p-4 flex flex-col flex-1 gap-2">
-                            <h2 class="text-2xl font-semibold">{product.name}</h2>
-                            <p class="text-xl font-bold text-red">£{product.price}</p>
-                            <button class="mt-auto bg-black text-white py-2 px-4 rounded-lg hover:bg-red transition-colors">
+                        <div class="p-4 flex flex-col flex-1 gap-2 border border-red">
+                            <h2 class="text-2xl">{product.name}</h2>
+                            <p class="text-xl">£{product.price}</p>
+                            <button class="mt-auto bg-white text-black py-2 px-4 rounded-lg hover:text-white hover:bg-red transition-colors">
                                 Add to Cart
                             </button>
                         </div>
