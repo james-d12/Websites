@@ -76,10 +76,64 @@ jobs:
           path: ${{ env.site_full_path }}/dist
           if-no-files-found: error
 
-  deploy-site:
+  deploy-staging:
     runs-on: ubuntu-latest
-    name: Deploy ${{ inputs.site }}
+    name: Deploy ${{ inputs.site }} To Staging
     needs: build-site
+    environment: Staging
+    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: site-dist-${{ inputs.site }}
+          path: ./deploy
+
+      - uses: appleboy/ssh-action@master
+        name: Backup previous deployment
+        with:
+          host: ${{ secrets.server_host }}
+          username: ${{ secrets.server_username }}
+          password: ${{ secrets.server_password }}
+          port: ${{ secrets.server_ssh_port }}
+          script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
+
+      - uses: appleboy/scp-action@master
+        name: Deploy site via SCP
+        with:
+          host: ${{ secrets.server_host }}
+          username: ${{ secrets.server_username }}
+          password: ${{ secrets.server_password }}
+          port: ${{ secrets.server_ssh_port }}
+          source: ./deploy
+          target: "/var/www/staging.${{ inputs.site }}"
+          tar_tmp_path: "/var/www/temp"
+          strip_components: 2
+
+      - name: Wait for 1 minute before verifying
+        run: sleep 60
+
+      - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
+        run: |
+          HTTPS_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" https://staging.${{ inputs.site }})
+          HTTP_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" http://staging.${{ inputs.site }})
+
+          if [ "$HTTPS_STATUS" -ne 200 ]; then
+            echo "❌ HTTPS check failed — expected 200, got $HTTPS_STATUS"
+            exit 1
+          fi
+
+          if [ "$HTTP_STATUS" -ne 301 ]; then
+            echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
+            exit 1
+          fi
+
+          echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
+
+  deploy-live:
+    runs-on: ubuntu-latest
+    name: Deploy ${{ inputs.site }} To Live
+    needs: deploy-staging
     environment: Production
     if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
