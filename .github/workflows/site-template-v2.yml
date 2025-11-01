@@ -98,17 +98,8 @@ jobs:
           key: ${{ secrets.server_key }}
           script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
 
-      - uses: appleboy/scp-action@master
-        name: Deploy site via SCP
-        with:
-          host: ${{ secrets.server_host }}
-          port: ${{ secrets.server_ssh_port }}
-          username: ci
-          key: ${{ secrets.server_key }}
-          source: ./deploy
-          target: "/var/www/staging.${{ inputs.site }}"
-          tar_tmp_path: "/home/ci/temp/"
-          strip_components: 2
+      - name: Deploy site via SCP
+        run: scp -v -i <( echo ${{ secrets.server_key }}) -P ${{ secrets.server_ssh_port }} ./deploy ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
       - name: Wait for 1 minute before verifying
         run: sleep 60
