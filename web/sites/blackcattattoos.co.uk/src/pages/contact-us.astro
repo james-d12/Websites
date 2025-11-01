@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+<Layout>
+    <Navbar/>
+
+    <section class="pt-24 px-6 md:px-12 lg:px-20 pb-20 text-white">
+        <h1 class="text-7xl font-semibold text-center mb-12 text-white">Contact Us</h1>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <section class="bg-neutral-900 p-8 rounded-2xl shadow-md">
+                <form
+                        action="#"
+                        method="POST"
+                        class="flex flex-col space-y-6"
+                >
+                    <div>
+                        <label for="name" class="block text-lg font-medium mb-2">Name</label>
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red focus:outline-none"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="email" class="block text-lg font-medium mb-2">Email</label>
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red focus:outline-none"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-lg font-medium mb-2">Phone Number</label>
+                        <input
+                                type="tel"
+                                id="phone"
+                                name="phone"
+                                required
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-red focus:outline-none"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="message" class="block text-lg font-medium mb-2">Message</label>
+                        <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                required
+                                class="w-full border border-gray-300 rounded-lg px-4 py-3 resize-none focus:ring-2 focus:ring-red focus:outline-none"
+                        ></textarea>
+                    </div>
+
+                    <button
+                            type="submit"
+                            class="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-red transition-colors"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </section>
+
+            <section class="bg-neutral-900 p-8 rounded-2xl shadow-md space-y-3">
+                <h2 class="text-3xl font-semibold mb-4">Our Studio</h2>
+
+                <div class="pt-4">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.4698544169833!2d-0.37949519497790096!3d51.44984148223648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876734a60cfe82f%3A0x953d30ee4c12fc3e!2s668a%20Hanworth%20Rd%2C%20Hounslow%20TW4%205NP!5e0!3m2!1sen!2suk!4v1761862040687!5m2!1sen!2suk"
+                            width="100%"
+                            height="250"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="rounded-lg shadow-sm"
+                    ></iframe>
+
+                    <div>
+                        <p class="text-left pt-2 text-lg font-medium">123 Ink Street, Tattoo City, TX 75000</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p class="text-lg font-bold mb-2">Opening Times</p>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span>Monday</span>
+                            <span>Closed</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Tuesday</span>
+                            <span>11:00am – 6:00pm</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Wednesday</span>
+                            <span>11:00am – 6:00pm</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Thursday</span>
+                            <span>11:00am – 6:00pm</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Friday</span>
+                            <span>11:00am – 6:00pm</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Saturday</span>
+                            <span>11:00am – 6:00pm</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </section>
+    <Footer/>
+</Layout>

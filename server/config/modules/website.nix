@@ -85,7 +85,7 @@ in
           value = {
             dnsProvider = site.provider;
             group = "wwwrun";
-            environmentFile = ionos-env;
+            environmentFile = "/var/lib/acme/acme.env";
           };
         }) config.websites.sites
       );
