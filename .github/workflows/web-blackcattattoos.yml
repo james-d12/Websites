@@ -1,6 +1,6 @@
 name: Build & Deploy Black Cat Tattoos Website
 permissions:
-  contents: read
+  contents: read 
 
 on:
   push:
