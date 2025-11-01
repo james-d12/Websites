@@ -18,11 +18,11 @@ on:
 jobs:
   stcatherinesgroup:
     name: "Build & Deploy stcatherinesgroup.com"
-    uses: ./.github/workflows/site-template.yml
+    uses: ./.github/workflows/site-template-v2.yml
     with:
       site: stcatherinesgroup.com
     secrets:
-      server_host: ${{ secrets.HOST }}
-      server_username: ${{ secrets.USERNAME }}
-      server_password: ${{ secrets.PASSWORD }}
-      server_ssh_port: ${{ secrets.PORT }}
+      server_host: ${{ secrets.VPS_HOST }}
+      server_ssh_port: ${{ secrets.VPS_PORT }}
+      server_key: ${{ secrets.VPS_CI_KEY }}
+      server_key_password: ${{ secrets.VPS_CI_KEY_PASSWORD }}
