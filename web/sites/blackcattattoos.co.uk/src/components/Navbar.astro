@@ -1,6 +1,7 @@
 ---
 import {Image} from "astro:assets";
 import logo from "../assets/images/Logo.png";
+import Cart from "../assets/images/Cart-White.svg";
 
 const navLinks = [
     {name: "Team", href: "/team"},
@@ -52,14 +53,34 @@ const currentPath = Astro.url.pathname;
                         </a>
                     </li>
             ))}
+            <button
+                    type="button"
+                    onclick="window.location.href='/cart'"
+                    id="cart-button"
+                    class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-red border border-2 border-grey"
+                    title="Open menu"
+            >
+                <Image src={Cart} alt="Cart" width={24} height={24} class="w-6 h-6 fill-white"/>
+            </button>
         </ul>
 
-        <div class="md:hidden relative">
+
+        <div class="md:hidden relative flex gap-4">
+            <button
+                    type="button"
+                    onclick="window.location.href='/cart'"
+                    id="cart-button"
+                    class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-red border border-2 border-grey"
+                    title="Open menu"
+            >
+                <Image src={Cart} alt="Cart" width={24} height={24} class="w-6 h-6 fill-white"/>
+            </button>
+
             <button
                     id="menu-button"
                     aria-expanded="false"
                     aria-controls="dropdown-menu"
-                    class="flex items-center justify-center w-10 h-10 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-red"
+                    class="flex items-center justify-center w-10 h-10 border border-2 border-grey rounded-md focus:outline-none focus:ring-2 focus:ring-red"
                     title="Open menu"
             >
                 <span class="sr-only">Open menu</span>
