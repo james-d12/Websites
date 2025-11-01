@@ -98,6 +98,9 @@ jobs:
           key: ${{ secrets.server_key }}
           script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
 
+      - name: Generate Verification Key
+        run: ssh-keygen -R ${{ secrets.server_host }}
+
       - name: Deploy site via SCP
         run: scp -v -i <( echo ${{ secrets.server_key }}) -P ${{ secrets.server_ssh_port }} ./deploy ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
