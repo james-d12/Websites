@@ -118,6 +118,17 @@ in
         };
       }
       {
+        "backup" = {
+          "/var/www/backup" = {
+            d = {
+              user = "ci";
+              group = "ci";
+              mode = "0755";
+            };
+          };
+        };
+      }
+      {
         "acme-env" = {
           "/var/lib/acme/acme.env" = {
             f = {
