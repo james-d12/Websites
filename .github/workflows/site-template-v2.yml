@@ -107,7 +107,7 @@ jobs:
           key: ${{ secrets.server_key }}
           source: ./deploy
           target: "/var/www/staging.${{ inputs.site }}"
-          tar_tmp_path: "/var/www/temp"
+          tar_tmp_path: "/home/ci"
           strip_components: 2
 
       - name: Wait for 1 minute before verifying
@@ -161,7 +161,7 @@ jobs:
           key: ${{ secrets.server_key }}
           source: ./deploy
           target: "/var/www/${{ inputs.site }}"
-          tar_tmp_path: "/var/www/temp"
+          tar_tmp_path: "/home/ci"
           strip_components: 2
 
       - name: Wait for 1 minute before verifying
