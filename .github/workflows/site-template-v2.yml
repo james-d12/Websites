@@ -102,7 +102,7 @@ jobs:
         run: mkdir ~/.ssh && touch ~/.ssh/id_ed25519_vps_ci && echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci && chmod 600 ~/.ssh/id_ed25519_vps_ci
 
       - name: Deploy site via SCP
-        run: scp -r -o StrictHostKeyChecking=no -v -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} ./deploy/ ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
+        run: scp -r -o StrictHostKeyChecking=no -v -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
       - name: Wait for 1 minute before verifying
         run: sleep 60

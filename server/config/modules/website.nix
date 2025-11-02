@@ -91,6 +91,10 @@ in
       );
     };
 
+    systemd.tmpfiles.rules = [
+        "d ${site.documentRoot} 0775 wwwrun wwwrun -"
+    ];
+
     systemd.tmpfiles.settings = lib.mkMerge [
       (lib.listToAttrs (
         map (site: {
