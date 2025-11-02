@@ -98,6 +98,12 @@ jobs:
           key: ${{ secrets.server_key }}
           script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
 
+      - name: Check known hosts
+        run: cat ~/.ssh/known_hosts
+
+      - name: Check Perms
+        run: ls -la ~/.ssh
+
       - name: Generate Verification Key
         run: ssh-keygen -R ${{ secrets.server_host }}
 
