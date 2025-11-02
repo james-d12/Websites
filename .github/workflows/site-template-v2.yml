@@ -81,7 +81,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Staging
     needs: build-site
     environment: Staging
-    #if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
@@ -89,20 +89,26 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
-      - uses: appleboy/ssh-action@master
-        name: Backup previous deployment
-        with:
-          host: ${{ secrets.server_host }}
-          username: ci
-          port: ${{ secrets.server_ssh_port }}
-          key: ${{ secrets.server_key }}
-          script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
-
       - name: Create SSH Key
-        run: mkdir ~/.ssh && touch ~/.ssh/id_ed25519_vps_ci && echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci && chmod 600 ~/.ssh/id_ed25519_vps_ci
+        run: |
+          mkdir ~/.ssh && \
+          touch ~/.ssh/id_ed25519_vps_ci && \ 
+          echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci && \
+          chmod 600 ~/.ssh/id_ed25519_vps_ci
+
+      - name: Backup previous deployment
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.server_ssh_port }} \
+              ci@${{ secrets.server_host }} \
+              "cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)"
 
       - name: Deploy site via SCP
-        run: scp -r -o StrictHostKeyChecking=no -v -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
+        run: |
+          scp -r -o StrictHostKeyChecking=no -v \
+          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
+          ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
       - name: Wait for 1 minute before verifying
         run: sleep 60
@@ -120,7 +126,7 @@ jobs:
           if [ "$HTTP_STATUS" -ne 301 ]; then
             echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
             exit 1
-          fi
+          f
 
           echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
 
@@ -129,7 +135,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Live
     needs: deploy-staging
     environment: Production
-    #if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
