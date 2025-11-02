@@ -98,7 +98,10 @@ jobs:
           key: ${{ secrets.server_key }}
           script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
 
-      - name: Create Known Hosts
+      - name: Check Files in Deploy
+        run: ls -la ./deploy
+
+      - name: Create SSH Key
         run: mkdir ~/.ssh && touch ~/.ssh/id_ed25519_vps_ci && echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci && chmod 600 ~/.ssh/id_ed25519_vps_ci
 
       - name: Deploy site via SCP
