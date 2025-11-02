@@ -2,7 +2,7 @@
   services.openssh = {
     enable = true;
     ports = [ 51196 ];
-    allowSFTP = false;
+    allowSFTP = true;
     settings = {
         KbdInteractiveAuthentication = false;
         PermitRootLogin = "no";
