@@ -81,7 +81,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Staging
     needs: build-site
     environment: Staging
-    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    #if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
