@@ -87,6 +87,42 @@
         documentRoot = "/var/www/staging.stcatherinesgroup.com";
         serverAliases = [ "www.staging.stcatherinesgroup.com" "staging.stcatherinesgroup.com" ];
       }
+      {
+        name = "reroofandbuildsurrey.com";
+        provider = "ionos";
+        documentRoot = "/var/www/reroofandbuildsurrey.com";
+        serverAliases = [ "www.reroofandbuildsurrey.com" "reroofandbuildsurrey.com" ];
+      }
+      {
+        name = "staging.reroofandbuildsurrey.com";
+        provider = "ionos";
+        documentRoot = "/var/www/staging.reroofandbuildsurrey.com";
+        serverAliases = [ "www.staging.reroofandbuildsurrey.com" "staging.reroofandbuildsurrey.com" ];
+      }
+      {
+        name = "thecontourclinicrichmond.co.uk";
+        provider = "ionos";
+        documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
+        serverAliases = [ "www.thecontourclinicrichmond.co.uk" "thecontourclinicrichmond.co.uk" ];
+      }
+      {
+        name = "staging.thecontourclinicrichmond.co.uk";
+        provider = "ionos";
+        documentRoot = "/var/www/staging.thecontourclinicrichmond.co.uk";
+        serverAliases = [ "www.staging.thecontourclinicrichmond.co.uk" "staging.thecontourclinicrichmond.co.uk" ];
+      }
+      {
+        name = "jamesdurban.com";
+        provider = "ionos";
+        documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
+        serverAliases = [ "www.thecontourclinicrichmond.co.uk" "thecontourclinicrichmond.co.uk" ];
+      }
+      {
+        name = "staging.jamesdurban.com";
+        provider = "ionos";
+        documentRoot = "/var/www/staging.jamesdurban.com";
+        serverAliases = [ "www.staging.jamesdurban.com" "staging.jamesdurban.com" ];
+      }
     ];
   };
 }
