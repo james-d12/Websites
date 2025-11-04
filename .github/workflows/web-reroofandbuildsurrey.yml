@@ -10,7 +10,7 @@ on:
     branches:
       - main
     paths:
-      - 'web/sites/reroofandbuildsurrey.co.uk/**'
+      - 'web/sites/reroofandbuildsurrey.com/**'
       - 'web/package.json'
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
