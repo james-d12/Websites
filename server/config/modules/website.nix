@@ -13,7 +13,6 @@ let
     Header always set Cross-Origin-Resource-Policy "same-origin"
   '';
 in
-
 {
   options.websites = {
     enable = lib.mkOption {
@@ -56,19 +55,16 @@ in
                 Require all granted
               </Directory>
 
+              # Redirect HTTP to HTTPS (except ACME challenge)
+              RewriteEngine On
+              RewriteCond %{HTTPS} off
+              RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
+              RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
               SSLEngine on
               SSLHonorCipherOrder on
             ''
           ];
-        };
-        "acmechallenge.${site.name}" = {
-          serverAliases = site.serverAliases;
-          documentRoot = "/var/lib/acme/.challenges";
-          extraConfig = ''
-            RewriteEngine On
-            RewriteCond %{HTTPS} off
-            RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge [NC]
-            RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301]'';
         };
       }) config.websites.sites
     );
@@ -90,8 +86,7 @@ in
     };
 
     systemd.tmpfiles.rules =
-          map (site: "d ${site.documentRoot} 0775 wwwrun wwwrun -")
-            config.websites.sites;
+      map (site: "d ${site.documentRoot} 0775 wwwrun wwwrun -") config.websites.sites;
 
     systemd.tmpfiles.settings = lib.mkMerge [
       (lib.listToAttrs (
@@ -144,4 +139,3 @@ in
     ];
   };
 }
-
