@@ -4,9 +4,15 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - web/**
+      - .github/workflows/web-build.yml
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - web/**
+      - .github/workflows/web-build.yml
 
 jobs:
   build-server:
