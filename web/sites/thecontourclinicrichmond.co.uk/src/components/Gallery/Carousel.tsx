@@ -1,13 +1,12 @@
 import { createSignal, createEffect, For, Show } from "solid-js";
 
 export type CarouselSlide = {
-    before: string;
-    after: string;
-    beforeText?: string;
-    afterText?: string;
-    text?: string;
+  before: string;
+  after: string;
+  beforeText?: string;
+  afterText?: string;
+  text?: string;
 };
-
 
 export function Carousel(props: { slides: CarouselSlide[] }) {
   const [current, setCurrent] = createSignal(0);
