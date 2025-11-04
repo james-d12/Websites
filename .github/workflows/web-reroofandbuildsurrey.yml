@@ -19,7 +19,7 @@ on:
       - '.github/workflows/site-template-v2.yml'
 
 jobs:
-  blackcattattoos:
+  reroofandbuildsurrey:
     name: "Build & Deploy Reroof and Build Surrey"
     uses: ./.github/workflows/site-template-v2.yml
     with:
