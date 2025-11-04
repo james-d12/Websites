@@ -17,7 +17,7 @@ on:
 
 jobs:
   jamesdurban:
-    name: "Build & Deploy jamesdurban.com"
+    name: "Build & Deploy James Durban Portfolio"
     uses: ./.github/workflows/site-template.yml
     with:
       site: jamesdurban.com

@@ -3,7 +3,7 @@
 let
   defaultHeaders = ''
     Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains;"
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
+    Header set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
     Header set X-Frame-Options "DENY"
     Header set X-Content-Type-Options nosniff
     Header always set X-XSS-Protection "1; mode=block"
@@ -12,10 +12,7 @@ let
     Header always set Cross-Origin-Embedder-Policy "require-corp"
     Header always set Cross-Origin-Resource-Policy "same-origin"
   '';
-
-  ionos-env = config.age.secrets.ionos.path;
 in
-
 {
   options.websites = {
     enable = lib.mkOption {
@@ -58,19 +55,16 @@ in
                 Require all granted
               </Directory>
 
+              # Redirect HTTP to HTTPS (except ACME challenge)
+              RewriteEngine On
+              RewriteCond %{HTTPS} off
+              RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
+              RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
               SSLEngine on
               SSLHonorCipherOrder on
             ''
           ];
-        };
-        "acmechallenge.${site.name}" = {
-          serverAliases = site.serverAliases;
-          documentRoot = "/var/lib/acme/.challenges";
-          extraConfig = ''
-            RewriteEngine On
-            RewriteCond %{HTTPS} off
-            RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge [NC]
-            RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301]'';
         };
       }) config.websites.sites
     );
@@ -90,6 +84,9 @@ in
         }) config.websites.sites
       );
     };
+
+    systemd.tmpfiles.rules =
+      map (site: "d ${site.documentRoot} 0775 wwwrun wwwrun -") config.websites.sites;
 
     systemd.tmpfiles.settings = lib.mkMerge [
       (lib.listToAttrs (
@@ -142,4 +139,3 @@ in
     ];
   };
 }
-

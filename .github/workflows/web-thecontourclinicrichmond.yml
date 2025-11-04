@@ -17,7 +17,7 @@ on:
 
 jobs:
   thecontourclinicrichmond:
-    name: "Build & Deploy thecontourclinicrichmond.co.uk"
+    name: "Build & Deploy The Contour Clinic Richmond"
     uses: ./.github/workflows/site-template.yml
     with:
       site: thecontourclinicrichmond.co.uk

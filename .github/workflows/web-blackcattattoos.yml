@@ -1,6 +1,6 @@
 name: Build & Deploy Black Cat Tattoos Website
 permissions:
-  contents: read 
+  contents: read
 
 on:
   push:
@@ -17,7 +17,7 @@ on:
 
 jobs:
   blackcattattoos:
-    name: "Build & Deploy blackcattatoos.co.uk"
+    name: "Build & Deploy Black Cat Tattoos"
     uses: ./.github/workflows/site-template-v2.yml
     with:
       site: blackcattattoos.co.uk

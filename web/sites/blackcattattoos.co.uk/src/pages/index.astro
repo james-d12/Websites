@@ -1,8 +1,12 @@
 ---
+import {Image} from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
+
+import TattooSessionPicture from '../assets/images/Tattoo-Session.jpg';
+import PiercingSessionPicture from '../assets/images/Piercing-Session.jpg';
 ---
 
 <Layout>
@@ -10,15 +14,15 @@ import Footer from '../components/Footer.astro';
     <Hero/>
     <section id="offer" class="bg-neutral-950 text-gray-200 py-24 px-6">
         <div class="max-w-6xl mx-auto">
-            <h2 class="text-7xl font-semibold text-center mb-16">What We Offer</h2>
+            <h2 class="text-6xl font-semibold text-center mb-16">What We Offer</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 mb-24">
-                <img
-                        src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+                <Image
+                        src={TattooSessionPicture}
                         alt="Tattooing Session"
-                        class="rounded-2xl shadow-lg w-full object-cover h-96"
+                        class="rounded-2xl shadow-lg w-full object-cover h-96 order-2 md:order-1"
                 />
-                <div>
+                <div class="order-1 md:order-2">
                     <h3 class="text-5xl font-semibold mb-4">Tattooing</h3>
                     <p class="text-gray-400 leading-relaxed text-xl">
                         Our skilled tattoo artists bring your ideas to life with precision and creativity. Whether you
@@ -31,26 +35,25 @@ import Footer from '../components/Footer.astro';
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-                <div>
+                <Image
+                        src={PiercingSessionPicture}
+                        alt="Piercing Session"
+                        class="rounded-2xl shadow-lg w-full object-cover h-96 order-2 md:order-2"
+                />
+                <div class="order-1 md:order-1">
                     <h3 class="text-5xl font-semibold mb-4">Piercing</h3>
                     <p class="text-gray-400 leading-relaxed text-xl">
                         Our piercing specialists offer a wide range of professional body piercings in a clean, safe, and
-                        welcoming environment.
-                        From classic ear piercings to custom placements, we use only high-quality, hypoallergenic
-                        jewelry and follow the strictest
-                        hygiene standards. Each session includes a detailed consultation and personalized aftercare
-                        guidance to ensure a smooth healing process.
+                        welcoming environment. From classic ear piercings to custom placements, we use only
+                        high-quality,
+                        hypoallergenic jewelry and follow the strictest hygiene standards. Each session includes a
+                        detailed
+                        consultation and personalized aftercare guidance to ensure a smooth healing process.
                     </p>
                 </div>
-                <img
-                        src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/05/teenager-ear-tattoo-artist-piercing-earings-1296x728-header.jpg?w=1155&h=1528"
-                        alt="Tattoo Consultation"
-                        class="rounded-2xl shadow-lg w-full object-cover h-96"
-                />
             </div>
         </div>
     </section>
-
 
     <Footer/>
 </Layout>
