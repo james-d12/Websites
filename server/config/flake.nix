@@ -6,10 +6,9 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
-    agenix.url = "github:ryantm/agenix";
   };
 
-  outputs = { self, nixpkgs, disko, nixos-facter-modules, agenix, ... }:
+  outputs = { self, nixpkgs, disko, nixos-facter-modules, ... }:
     {
         nixosConfigurations = {
             vps = nixpkgs.lib.nixosSystem {
@@ -17,7 +16,6 @@
                 modules = [
                     disko.nixosModules.disko
                     ./configuration.nix
-                    agenix.nixosModules.default
                 ];
             };
         };

@@ -83,7 +83,7 @@ in
           value = {
             dnsProvider = site.provider;
             group = "wwwrun";
-            environmentFile = config.age.secrets.ionos.path;
+            environmentFile = "/var/lib/acme/acme.env";
           };
         }) config.websites.sites
       );
