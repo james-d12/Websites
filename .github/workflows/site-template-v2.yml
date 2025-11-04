@@ -143,27 +143,32 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
-      - uses: appleboy/ssh-action@master
-        name: Backup previous deployment
+      - name: Download build artifact
+        uses: actions/download-artifact@v5
         with:
-          host: ${{ secrets.server_host }}
-          port: ${{ secrets.server_ssh_port }}
-          username: ci
-          key: ${{ secrets.server_key }}
-          script: cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ inputs.site }}-$(date +%F%H%M%S)
+          name: site-dist-${{ inputs.site }}
+          path: ./deploy
 
-      - uses: appleboy/scp-action@master
-        name: Deploy site via SCP
-        with:
-          host: ${{ secrets.server_host }}
-          port: ${{ secrets.server_ssh_port }}
-          username: ci
-          key: ${{ secrets.server_key }}
-          source: ./deploy
-          target: "/var/www/${{ inputs.site }}"
-          tar_tmp_path: "/home/ci"
-          capture_stdout: true
-          strip_components: 2
+      - name: Create SSH Key
+        run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/id_ed25519_vps_ci 
+          echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
+          chmod 600 ~/.ssh/id_ed25519_vps_ci
+
+      - name: Backup previous deployment
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.server_ssh_port }} \
+              ci@${{ secrets.server_host }} \
+              "cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ inputs.site }}-$(date +%F%H%M%S)"
+
+      - name: Deploy site via SCP
+        run: |
+          scp -r -o StrictHostKeyChecking=no -v \
+          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
+          ./deploy/. ci@${{ secrets.server_host }}:/var/www/${{ inputs.site }}
 
       - name: Wait for 1 minute before verifying
         run: sleep 60
@@ -172,34 +177,29 @@ jobs:
         run: |
           HTTPS_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" https://${{ inputs.site }})
           HTTP_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" http://${{ inputs.site }})
-          
+
           if [ "$HTTPS_STATUS" -ne 200 ]; then
             echo "❌ HTTPS check failed — expected 200, got $HTTPS_STATUS"
             exit 1
           fi
-          
+
           if [ "$HTTP_STATUS" -ne 301 ]; then
             echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
             exit 1
-          fi
-          
+          f
+
           echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
 
       - name: Rollback to previous deployment if verification failed
         if: failure()
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.server_host }}
-          port: ${{ secrets.server_ssh_port }}
-          username: ci
-          key: ${{ secrets.server_key }}
-          passphrase: ${{ secrets.server_key_password }}
-          script: |
+        run: |
+          ssh -o StrictHostKeyChecking=no -p "${{ secrets.server_ssh_port }}" ci@"${{ secrets.server_host }}" <<'SSH_EOF'
             echo "🚨 Rolling back to previous deployment..."
-            LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* | head -n 1)
+            LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* 2>/dev/null | head -n 1)
             if [ -d "$LATEST_BACKUP" ]; then
               rsync -a --delete "$LATEST_BACKUP"/ /var/www/${{ inputs.site }}/
               echo "✅ Rollback complete: restored from $LATEST_BACKUP"
             else
               echo "⚠️ No backup found to restore from."
             fi
+          SSH_EOF

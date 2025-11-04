@@ -12,8 +12,6 @@ let
     Header always set Cross-Origin-Embedder-Policy "require-corp"
     Header always set Cross-Origin-Resource-Policy "same-origin"
   '';
-
-  ionos-env = config.age.secrets.ionos.path;
 in
 
 {
@@ -85,15 +83,15 @@ in
           value = {
             dnsProvider = site.provider;
             group = "wwwrun";
-            environmentFile = "/var/lib/acme/acme.env";
+            environmentFile = config.age.secrets.ionos.path;
           };
         }) config.websites.sites
       );
     };
 
-    systemd.tmpfiles.rules = [
-        "d ${site.documentRoot} 0775 wwwrun wwwrun -"
-    ];
+    systemd.tmpfiles.rules =
+          map (site: "d ${site.documentRoot} 0775 wwwrun wwwrun -")
+            config.websites.sites;
 
     systemd.tmpfiles.settings = lib.mkMerge [
       (lib.listToAttrs (
