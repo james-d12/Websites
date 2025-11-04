@@ -1,26 +1,29 @@
-name: Build & Deploy St Catherine's Group Website
+name: Build & Deploy Reroof and Build Surrey Website
 permissions:
   contents: read
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
     paths:
-      - 'web/sites/stcatherinesgroup.com/**'
+      - 'web/sites/reroofandbuildsurrey.co.uk/**'
       - 'web/package.json'
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
-      - '.github/workflows/web-stcatherinesgroup.yml'
+      - '.github/workflows/web-reroofandbuildsurrey.yml'
       - '.github/workflows/site-template-v2.yml'
 
 jobs:
-  stcatherinesgroup:
-    name: "Build & Deploy St Catherine's Group"
+  blackcattattoos:
+    name: "Build & Deploy Reroof and Build Surrey"
     uses: ./.github/workflows/site-template-v2.yml
     with:
-      site: stcatherinesgroup.com
+      site: reroofandbuildsurrey.com
     secrets:
       server_host: ${{ secrets.VPS_HOST }}
       server_ssh_port: ${{ secrets.VPS_PORT }}
