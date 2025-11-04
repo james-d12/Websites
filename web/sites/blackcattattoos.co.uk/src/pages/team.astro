@@ -1,33 +1,36 @@
 ---
+import {Image} from "astro:assets";
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
+
+import PlaceholderImage from "../assets/images/Placeholder.png";
 
 const artists = [
     {
         name: "Fred Flintstone",
         type: "Tattoo Artist",
-        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
+        image: PlaceholderImage
     },
     {
         name: "Charlie Barker",
         type: "Tattoo Artist",
-        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
+        image: PlaceholderImage
     },
     {
         name: "Daisy Winston",
         type: "Piercing Artist",
-        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
+        image: PlaceholderImage
     },
     {
         name: "Julie Bell",
         type: "Tattoo Artist",
-        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
+        image: PlaceholderImage
     },
     {
         name: "Jessica Jones",
         type: "Piercing Artist",
-        image: "https://review.boldfocus.com/wp-content/plugins/elementor/assets/images/placeholder.png",
+        image: PlaceholderImage
     },
 ];
 ---
@@ -40,7 +43,7 @@ const artists = [
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {artists.map((artist) => (
                     <div class="flex flex-col items-start pb-8 bg-neutral-900 rounded-b-md">
-                        <img
+                        <Image
                                 src={artist.image}
                                 alt={artist.name}
                                 class="w-96 h-96 md:w-56 md:h-56 lg:w-full lg:h-96 rounded-t-md object-cover"

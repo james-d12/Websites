@@ -17,7 +17,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
   return (
     <>
       {/* Grid view */}
-      <div class="flex flex-wrap justify-center items-start gap-2">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <For each={props.slides}>
           {(slide, idx) => (
             <div
@@ -30,7 +30,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
               <img
                 src={slide.image}
                 alt="Gallery image"
-                class="object-contain max-h-60 w-auto"
+                class="object-contain w-full h-60"
               />
               <Show when={slide.text}>
                 <div class="absolute bottom-1 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-2 py-1 rounded text-sm">
@@ -70,7 +70,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
               e.stopPropagation();
               prevSlide();
             }}
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
+            class="absolute left-4 top-1/2 -translate-y-1/2 bg-red bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
           >
             ‹
           </button>
@@ -79,7 +79,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
               e.stopPropagation();
               nextSlide();
             }}
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
+            class="absolute right-4 top-1/2 -translate-y-1/2 bg-red bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
           >
             ›
           </button>
@@ -90,7 +90,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
               e.stopPropagation();
               setIsFullscreen(false);
             }}
-            class="absolute top-6 right-6 text-white text-4xl font-bold"
+            class="absolute top-6 right-6 hover:text-red text-white text-4xl font-bold"
           >
             ✕
           </button>

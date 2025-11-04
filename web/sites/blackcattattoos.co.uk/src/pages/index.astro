@@ -1,8 +1,12 @@
 ---
+import {Image} from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
+
+import TattooSessionPicture from '../assets/images/Tattoo-Session.jpg';
+import PiercingSessionPicture from '../assets/images/Piercing-Session.jpg';
 ---
 
 <Layout>
@@ -13,8 +17,8 @@ import Footer from '../components/Footer.astro';
             <h2 class="text-7xl font-semibold text-center mb-16">What We Offer</h2>
 
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 mb-24">
-                <img
-                        src="https://images.unsplash.com/photo-1565058379802-bbe93b2f703a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740"
+                <Image
+                        src={TattooSessionPicture}
                         alt="Tattooing Session"
                         class="rounded-2xl shadow-lg w-full object-cover h-96"
                 />
@@ -42,9 +46,9 @@ import Footer from '../components/Footer.astro';
                         guidance to ensure a smooth healing process.
                     </p>
                 </div>
-                <img
-                        src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/05/teenager-ear-tattoo-artist-piercing-earings-1296x728-header.jpg?w=1155&h=1528"
-                        alt="Tattoo Consultation"
+                <Image
+                        src={PiercingSessionPicture}
+                        alt="Tattooing Session"
                         class="rounded-2xl shadow-lg w-full object-cover h-96"
                 />
             </div>
