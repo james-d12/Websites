@@ -27,6 +27,6 @@ jobs:
         name: Build Server
         working-directory: ./server/config
 
-      - run: nix-env -i vulnix && vulnix ./result
+      - run: nix-env -iA nixos.vulnix && vulnix ./result
         name: Vulnix Check
         working-directory: ./server/config
