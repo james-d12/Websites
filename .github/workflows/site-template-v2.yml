@@ -126,8 +126,7 @@ jobs:
           if [ "$HTTP_STATUS" -ne 301 ]; then
             echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
             exit 1
-          f
-
+          fi
           echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
 
   deploy-live:
@@ -186,7 +185,7 @@ jobs:
           if [ "$HTTP_STATUS" -ne 301 ]; then
             echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
             exit 1
-          f
+          fi
 
           echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
 
