@@ -20,7 +20,7 @@ jobs:
       - uses: DeterminateSystems/determinate-nix-action@v3
 
       - name: Install Syft
-        run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -b /usr/local/bin
+        run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -dd -b /usr/local/bin
 
       - name: Check Flake
         run: nix flake check
@@ -30,9 +30,6 @@ jobs:
         run: nix build .#nixosConfigurations.vps.config.system.build.toplevel
         working-directory: ./server/config
 
-      - name: List files
-        run: ls -la ./server/config
-
       - name: Run Syft Scan
-        run: syft ./result
+        run: syft scan dir:./result -v -o json
         working-directory: ./server/config
