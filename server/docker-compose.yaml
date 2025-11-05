@@ -44,12 +44,8 @@ services:
     env_file: ".env"
     command: >
       bash -c "
-        echo 'Installing Syft';
-        curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -b /usr/local/bin;
         echo 'Building system...';
         nix build .#nixosConfigurations.vps.config.system.build.toplevel;
-        echo 'Checking for vulnerabilities...';
-        syft ./result;
         echo 'Copying Nix store to VPS...';
         nix copy --no-check-sigs --to ssh://$USER@$TARGET_HOST:$PORT ./result;
         ssh $USER@$TARGET_HOST -p $PORT 'sudo nixos-rebuild switch --flake /etc/nixos#vps'"
