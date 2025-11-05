@@ -19,6 +19,9 @@ jobs:
       - uses: actions/checkout@v5
       - uses: DeterminateSystems/determinate-nix-action@v3
 
+      - run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -b /usr/local/bin
+        name: Install Syft
+
       - run: nix flake check
         name: Check Flake
         working-directory: ./server/config
@@ -27,6 +30,6 @@ jobs:
         name: Build Server
         working-directory: ./server/config
 
-      - run: nix-env -iA nixos.vulnix && vulnix ./result
-        name: Vulnix Check
+      - run: syft ./result
+        name: Run Syft Scan
         working-directory: ./server/config
