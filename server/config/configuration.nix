@@ -114,8 +114,8 @@
       {
         name = "jamesdurban.com";
         provider = "ionos";
-        documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
-        serverAliases = [ "www.thecontourclinicrichmond.co.uk" "thecontourclinicrichmond.co.uk" ];
+        documentRoot = "/var/www/jamesdurban.com";
+        serverAliases = [ "www.jamesdurban.com" "jamesdurban.com" ];
       }
       {
         name = "staging.jamesdurban.com";
