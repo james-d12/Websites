@@ -6,9 +6,10 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
     nixos-facter-modules.url = "github:numtide/nixos-facter-modules";
+    deploy-rs.url = "github:serokell/deploy-rs";
   };
 
-  outputs = { self, nixpkgs, disko, nixos-facter-modules, ... }:
+  outputs = { self, nixpkgs, disko, nixos-facter-modules, deploy-rs, ... }:
     {
         nixosConfigurations = {
             vps = nixpkgs.lib.nixosSystem {
@@ -19,5 +20,17 @@
                 ];
             };
         };
+
+        deploy.nodes.vps = {
+            hostname = "vps";
+            interactiveSudo = true;
+            profiles.system = {
+                sshUser = "james";
+                user = "root";
+                path = deploy-rs.lib.x86_64-linux.activate.nixos self.nixosConfigurations.vps;
+            };
+        };
+
+        checks = builtins.mapAttrs (system: deployLib: deployLib.deployChecks self.deploy) deploy-rs.lib;
     };
 }

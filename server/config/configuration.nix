@@ -56,7 +56,12 @@
 
   system.stateVersion = "25.05";
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    trusted-public-keys = [
+        cache.vps-1:0B8t1aU6u7uabuiApQzUa0AcKwvn0nbq3lzoc2lCE50=
+    ];
+    experimental-features = [ "nix-command" "flakes" ];
+  };
 
   websites = {
     enable = true;
@@ -114,8 +119,8 @@
       {
         name = "jamesdurban.com";
         provider = "ionos";
-        documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
-        serverAliases = [ "www.thecontourclinicrichmond.co.uk" "thecontourclinicrichmond.co.uk" ];
+        documentRoot = "/var/www/jamesdurban.com";
+        serverAliases = [ "www.jamesdurban.com" "jamesdurban.com" ];
       }
       {
         name = "staging.jamesdurban.com";

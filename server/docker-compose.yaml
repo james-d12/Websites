@@ -53,6 +53,4 @@ services:
         User $USER
         Port $PORT
       EOF
-        chmod 600 /root/.ssh/config;
-        echo 'Building and deploying current server config...';
-        nix run nixpkgs#nixos-rebuild -- dry-activate --flake .#vps --target-host vps --verbose --use-remote-sudo"
+        nix run github:serokell/deploy-rs --  .#vps"
