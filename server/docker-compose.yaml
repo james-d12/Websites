@@ -40,9 +40,19 @@ services:
       - $SSH_AUTH_SOCK:/ssh-agent:ro
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
+      NIX_SSHOPTS: "-o RequestTTY=force"
       SSH_AUTH_SOCK: /ssh-agent
     env_file: ".env"
     command: >
       bash -c "
+        echo 'Setting up SSH...';
+        mkdir -p /root/.ssh && chmod 700 /root/.ssh;
+        cat <<EOF > /root/.ssh/config
+      Host vps
+        HostName $TARGET_HOST
+        User $USER
+        Port $PORT
+      EOF
+        chmod 600 /root/.ssh/config;
         echo 'Building and deploying current server config...';
-        nix run nixpkgs#nixos-rebuild -- dry-activate --flake .#vps --target-host ssh://$USER@$TARGET_HOST:$PORT --verbose --use-remote-sudo"
+        nix run nixpkgs#nixos-rebuild -- dry-activate --flake .#vps --target-host vps --verbose --use-remote-sudo"
