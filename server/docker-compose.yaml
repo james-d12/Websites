@@ -55,4 +55,4 @@ services:
       EOF
         chmod 600 /root/.ssh/config;
         echo 'Building and deploying current server config...';
-        nix run nixpkgs#nixos-rebuild -- dry-activate --flake .#vps --target-host vps --verbose --use-remote-sudo"
+        nix run nixpkgs#nixos-rebuild -- switch --flake .#vps --target-host vps --verbose --use-remote-sudo"
