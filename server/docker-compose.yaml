@@ -13,7 +13,6 @@ services:
     volumes:
       - ./config:/flake:rw,Z
       - $SSH_AUTH_SOCK:/ssh-agent:ro
-      - ~/.ssh/id_ed25519_agenix:/root/.ssh/id_ed25519_agenix:ro
     environment:
       SSH_AUTH_SOCK: /ssh-agent
 
@@ -41,13 +40,19 @@ services:
       - $SSH_AUTH_SOCK:/ssh-agent:ro
     environment:
       NIX_CONFIG: "experimental-features = nix-command flakes"
+      NIX_SSHOPTS: "-o RequestTTY=force"
       SSH_AUTH_SOCK: /ssh-agent
     env_file: ".env"
     command: >
       bash -c "
-        echo 'Building system...';
-        nix build .#nixosConfigurations.vps.config.system.build.toplevel;
-        echo 'Copying Nix store to VPS...';
-        nix copy --no-check-sigs --to ssh://$USER@$TARGET_HOST:$PORT ./result;
-        echo 'Activating system on VPS...';
-        ssh $USER@$TARGET_HOST -p $PORT 'sudo nixos-rebuild switch --flake /etc/nixos#vps'"
+        echo 'Setting up SSH...';
+        mkdir -p /root/.ssh && chmod 700 /root/.ssh;
+        cat <<EOF > /root/.ssh/config
+      Host vps
+        HostName $TARGET_HOST
+        User $USER
+        Port $PORT
+      EOF
+        chmod 600 /root/.ssh/config;
+        echo 'Building and deploying current server config...';
+        nix run nixpkgs#nixos-rebuild -- dry-activate --flake .#vps --target-host vps --verbose --use-remote-sudo"

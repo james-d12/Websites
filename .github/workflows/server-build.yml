@@ -1,4 +1,4 @@
-name: Build Server
+name: Build and Scan NixOS Server Config
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-server:
-    name: Build Server
+    name: Build and Scan NixOS Server Config
     runs-on: ubuntu-latest
     permissions:
       id-token: "write"
@@ -19,8 +19,27 @@ jobs:
       - uses: actions/checkout@v5
       - uses: DeterminateSystems/determinate-nix-action@v3
 
-      - run: nix flake check
+      - name: Install Syft
+        run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -dd -b /usr/local/bin
+
+      - name: Check Flake
+        run: nix flake check
         working-directory: ./server/config
 
-      - run: nix build .#nixosConfigurations.vps.config.system.build.toplevel
+      - name: Build Server
+        id: build
+        run: nix build .#nixosConfigurations.vps.config.system.build.toplevel --print-out-paths
         working-directory: ./server/config
+
+      - name: Run Syft Scan
+        run: |
+          RESULT_PATH=$(readlink -f result)
+          echo "Scanning resolved store path: $RESULT_PATH"
+          syft scan dir:$RESULT_PATH -v -o json > syft-output.json
+        working-directory: ./server/config
+
+      - name: Upload SBOM
+        uses: actions/upload-artifact@v4
+        with:
+          name: syft-sbom
+          path: ./server/config/syft-output.json
