@@ -22,7 +22,7 @@ jobs:
     with:
       site: thecontourclinicrichmond.co.uk
     secrets:
-      server_host: ${{ secrets.HOST }}
-      server_username: ${{ secrets.USERNAME }}
-      server_password: ${{ secrets.PASSWORD }}
-      server_ssh_port: ${{ secrets.PORT }}
+      server_host: ${{ secrets.VPS_HOST }}
+      server_ssh_port: ${{ secrets.VPS_PORT }}
+      server_key: ${{ secrets.VPS_CI_KEY }}
+      server_key_password: ${{ secrets.VPS_CI_KEY_PASSWORD }}
