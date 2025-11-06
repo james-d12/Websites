@@ -36,9 +36,10 @@ I use for my VPS that hosts my sites.
 ### Making Changes to existing VPS
 
 1. Install Docker on your system.
-2. Navigate to the ```server``` folder.
-3. Run ```docker compose run --rm vps-update```.
-4. Changes should have been applied.
+2. Copy the Signing Key from the Password Manager to the server/config folder.
+3. Navigate to the ```server``` folder.
+4. Run ```docker compose run --rm vps-build```.
+5. Changes should have been applied.
 
 ### Updating Flake
 

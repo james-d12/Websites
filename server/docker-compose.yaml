@@ -42,6 +42,7 @@ services:
       NIX_CONFIG: "experimental-features = nix-command flakes"
       NIX_SSHOPTS: "-o RequestTTY=force"
       SSH_AUTH_SOCK: /ssh-agent
+      LOCAL_KEY: "vps-nix-signing-key"
     env_file: ".env"
     command: >
       bash -c "
