@@ -44,8 +44,5 @@ services:
     env_file: ".env"
     command: >
       bash -c "
-        echo 'Building system...';
-        nix build .#nixosConfigurations.vps.config.system.build.toplevel;
-        echo 'Copying Nix store to VPS...';
-        nix copy --no-check-sigs --to ssh://$USER@$TARGET_HOST:$PORT ./result;
-        ssh $USER@$TARGET_HOST -p $PORT 'sudo nixos-rebuild switch --flake /etc/nixos#vps'"
+        echo 'Building and deploying current server config...';
+        nix run nixpkgs#nixos-rebuild -- dry-activate --flake .#vps --target-host ssh://$USER@$TARGET_HOST:$PORT --verbose --use-remote-sudo"
