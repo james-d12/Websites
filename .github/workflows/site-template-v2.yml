@@ -81,7 +81,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Staging
     needs: build
     environment: Staging
-    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
@@ -126,7 +126,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Live
     needs: deploy-staging
     environment: Production
-    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
