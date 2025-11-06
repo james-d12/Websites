@@ -15,7 +15,7 @@ on:
         required: true
 
 jobs:
-  build-site:
+  build:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
     env:
@@ -79,7 +79,7 @@ jobs:
   deploy-staging:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Staging
-    needs: build-site
+    needs: build
     environment: Staging
     if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
     steps:
