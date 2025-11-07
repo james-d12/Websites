@@ -7,15 +7,15 @@ on:
     secrets:
       server_host:
         required: true
-      server_username:
-        required: true
-      server_password:
-        required: true
       server_ssh_port:
+        required: true
+      server_key:
+        required: true
+      server_key_password:
         required: true
 
 jobs:
-  build-site:
+  build:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
     env:
@@ -79,9 +79,9 @@ jobs:
   deploy-staging:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Staging
-    needs: build-site
+    needs: build
     environment: Staging
-    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
@@ -89,29 +89,21 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
-      - uses: appleboy/ssh-action@master
-        name: Backup previous deployment
-        with:
-          host: ${{ secrets.server_host }}
-          username: ${{ secrets.server_username }}
-          password: ${{ secrets.server_password }}
-          port: ${{ secrets.server_ssh_port }}
-          script: cp -r /var/www/staging.${{ inputs.site }} /var/www/backup/staging.${{ inputs.site }}-$(date +%F%H%M%S)
+      - name: Create SSH Key
+        run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/id_ed25519_vps_ci 
+          echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
+          chmod 600 ~/.ssh/id_ed25519_vps_ci
 
-      - uses: appleboy/scp-action@master
-        name: Deploy site via SCP
-        with:
-          host: ${{ secrets.server_host }}
-          username: ${{ secrets.server_username }}
-          password: ${{ secrets.server_password }}
-          port: ${{ secrets.server_ssh_port }}
-          source: ./deploy
-          target: "/var/www/staging.${{ inputs.site }}"
-          tar_tmp_path: "/var/www/temp"
-          strip_components: 2
+      - name: Deploy site via SCP
+        run: |
+          scp -r -o StrictHostKeyChecking=no -v \
+          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
+          ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
-      - name: Wait for 1 minute before verifying
-        run: sleep 60
+      - name: Wait for 30 seconds before verifying
+        run: sleep 30
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
@@ -127,7 +119,6 @@ jobs:
             echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
             exit 1
           fi
-
           echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
 
   deploy-live:
@@ -135,7 +126,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Live
     needs: deploy-staging
     environment: Production
-    if: needs.build-site.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v5
@@ -143,61 +134,57 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
-      - uses: appleboy/ssh-action@master
-        name: Backup previous deployment
-        with:
-          host: ${{ secrets.server_host }}
-          username: ${{ secrets.server_username }}
-          password: ${{ secrets.server_password }}
-          port: ${{ secrets.server_ssh_port }}
-          script: cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ inputs.site }}-$(date +%F%H%M%S)
+      - name: Create SSH Key
+        run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/id_ed25519_vps_ci 
+          echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
+          chmod 600 ~/.ssh/id_ed25519_vps_ci
 
-      - uses: appleboy/scp-action@master
-        name: Deploy site via SCP
-        with:
-          host: ${{ secrets.server_host }}
-          username: ${{ secrets.server_username }}
-          password: ${{ secrets.server_password }}
-          port: ${{ secrets.server_ssh_port }}
-          source: ./deploy
-          target: "/var/www/${{ inputs.site }}"
-          tar_tmp_path: "/var/www/temp"
-          strip_components: 2
+      - name: Backup previous deployment
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.server_ssh_port }} \
+              ci@${{ secrets.server_host }} \
+              "cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ inputs.site }}-$(date +%F%H%M%S)"
 
-      - name: Wait for 1 minute before verifying
-        run: sleep 60
+      - name: Deploy site via SCP
+        run: |
+          scp -r -o StrictHostKeyChecking=no -v \
+          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
+          ./deploy/. ci@${{ secrets.server_host }}:/var/www/${{ inputs.site }}
+
+      - name: Wait for 30 seconds before verifying
+        run: sleep 30
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
           HTTPS_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" https://${{ inputs.site }})
           HTTP_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" http://${{ inputs.site }})
-          
+
           if [ "$HTTPS_STATUS" -ne 200 ]; then
             echo "❌ HTTPS check failed — expected 200, got $HTTPS_STATUS"
             exit 1
           fi
-          
+
           if [ "$HTTP_STATUS" -ne 301 ]; then
             echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
             exit 1
           fi
-          
+
           echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
 
       - name: Rollback to previous deployment if verification failed
         if: failure()
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.server_host }}
-          username: ${{ secrets.server_username }}
-          password: ${{ secrets.server_password }}
-          port: ${{ secrets.server_ssh_port }}
-          script: |
+        run: |
+          ssh -o StrictHostKeyChecking=no -p "${{ secrets.server_ssh_port }}" ci@"${{ secrets.server_host }}" <<'SSH_EOF'
             echo "🚨 Rolling back to previous deployment..."
-            LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* | head -n 1)
+            LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* 2>/dev/null | head -n 1)
             if [ -d "$LATEST_BACKUP" ]; then
               rsync -a --delete "$LATEST_BACKUP"/ /var/www/${{ inputs.site }}/
               echo "✅ Rollback complete: restored from $LATEST_BACKUP"
             else
               echo "⚠️ No backup found to restore from."
             fi
+          SSH_EOF

@@ -13,12 +13,12 @@ on:
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
       - '.github/workflows/web-reroofandbuildsurrey.yml'
-      - '.github/workflows/site-template-v2.yml'
+      - '.github/workflows/site-template.yml'
 
 jobs:
   reroofandbuildsurrey:
     name: "Build & Deploy Reroof and Build Surrey"
-    uses: ./.github/workflows/site-template-v2.yml
+    uses: ./.github/workflows/site-template.yml
     with:
       site: reroofandbuildsurrey.com
     secrets:
