@@ -1,4 +1,4 @@
-name: Build & Deploy James Durban Website
+name: Build & Deploy Sites
 permissions:
   contents: read
 
@@ -7,18 +7,14 @@ on:
     branches:
       - main
     paths:
-      - 'web/sites/jamesdurban.com/**'
-      - 'web/package.json'
-      - 'web/pnpm-lock.yaml'
-      - 'web/pnpm-workspace.yaml'
-      - 'web/libs/**'
-      - '.github/workflows/web-jamesdurban.yml'
-      - '.github/workflows/site-template.yml'
+      - 'web/**'
+      - '.github/workflows/web-*'
+      - 'site-template.yml'
 
 jobs:
   jamesdurban:
     name: "Build & Deploy James Durban Portfolio"
-    uses: ./.github/workflows/site-template.yml
+    uses: site-template.yml
     with:
       site: jamesdurban.com
     secrets:

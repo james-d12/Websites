@@ -13,12 +13,12 @@ on:
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
       - '.github/workflows/web-stcatherinesgroup.yml'
-      - '.github/workflows/site-template-v2.yml'
+      - '.github/workflows/site-template.yml'
 
 jobs:
   stcatherinesgroup:
     name: "Build & Deploy St Catherine's Group"
-    uses: ./.github/workflows/site-template-v2.yml
+    uses: ./.github/workflows/site-template.yml
     with:
       site: stcatherinesgroup.com
     secrets:

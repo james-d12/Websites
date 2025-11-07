@@ -13,12 +13,12 @@ on:
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
       - '.github/workflows/web-blackcattattoos.yml'
-      - '.github/workflows/site-template-v2.yml'
+      - '.github/workflows/site-template.yml'
 
 jobs:
   blackcattattoos:
     name: "Build & Deploy Black Cat Tattoos"
-    uses: ./.github/workflows/site-template-v2.yml
+    uses: ./.github/workflows/site-template.yml
     with:
       site: blackcattattoos.co.uk
     secrets:
