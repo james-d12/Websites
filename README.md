@@ -89,3 +89,9 @@ sites. Lib contains any shared libraries, whilst sites contain the actual websit
 - [stcatherinesgroup.com](https://stcatherinesgroup.com)
 
 </details>
+
+# Useful Links
+Just some links to useful things I used to help get this working: 
+
+- https://crystalwobsite.gay/posts/2025-02-09-deploying_nixos
+- https://www.youtube.com/watch?v=Tbc1KB0wIWg
