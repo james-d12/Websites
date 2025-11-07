@@ -1,4 +1,4 @@
-name: Build & Deploy Sites
+name: Build & Deploy Websites
 permissions:
   contents: read
 
@@ -8,15 +8,34 @@ on:
       - main
     paths:
       - 'web/**'
-      - '.github/workflows/web-*'
-      - 'site-template.yml'
+      - '.github/workflows/site-template.yml'
+      - '.github/workflows/web-deploy.yml'
 
 jobs:
-  jamesdurban:
-    name: "Build & Deploy James Durban Portfolio"
-    uses: site-template.yml
+  detect-sites:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.changed-sites.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - id: changed-sites
+        run: |
+          # Find changed site directories
+          CHANGED=$(git diff --name-only HEAD^ HEAD | grep '^web/sites/' | cut -d'/' -f3 | sort -u | tr '\n' ',' | sed 's/,$//')
+          echo "Changed sites: $CHANGED"
+          echo "changed=$CHANGED" >> "$GITHUB_OUTPUT"
+
+  deploy:
+    needs: detect-sites
+    if: ${{ needs.detect-sites.outputs.changed != '' }}
+    strategy:
+      matrix:
+        site: ${{ fromJson('["' + join(needs.detect-sites.outputs.changed, '","') + '"]') }}
+    name: "Build & Deploy: ${{ matrix.site }}"
+    uses: ./.github/workflows/site-template.yml
     with:
-      site: jamesdurban.com
+      site: ${{ matrix.site }}
     secrets:
       server_host: ${{ secrets.VPS_HOST }}
       server_ssh_port: ${{ secrets.VPS_PORT }}
