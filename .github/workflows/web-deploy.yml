@@ -6,10 +6,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'web/**'
-      - '.github/workflows/site-template.yml'
-      - '.github/workflows/web-deploy.yml'
 
 jobs:
   detect-sites:
