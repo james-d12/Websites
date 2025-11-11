@@ -1,10 +1,8 @@
 ---
 import {Image} from "astro:assets";
 import logo from "../assets/images/Logo.png";
-import Cart from "../assets/images/Cart-White.svg";
 
 const navLinks = [
-    {name: "Team", href: "/team"},
     {name: "Gallery", href: "/gallery"},
     {name: "Piercing Parlour", href: "/piercing-parlour"},
     {name: "Shop", href: "/shop"},
@@ -51,29 +49,10 @@ const currentPath = Astro.url.pathname;
                         </a>
                     </li>
             ))}
-            <button
-                    type="button"
-                    onclick="window.location.href='/cart'"
-                    id="cart-button"
-                    class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-red border border-2 border-grey"
-                    title="Open Cart"
-            >
-                <Image src={Cart} alt="Cart" width={24} height={24} class="w-6 h-6 fill-white"/>
-            </button>
         </ul>
 
 
         <div class="md:hidden relative flex gap-4">
-            <button
-                    type="button"
-                    onclick="window.location.href='/cart'"
-                    id="cart-button"
-                    class="flex items-center justify-center w-10 h-10 rounded-md hover:bg-red border border-2 border-grey"
-                    title="Open Cart"
-            >
-                <Image src={Cart} alt="Cart" width={24} height={24} class="w-6 h-6 fill-white"/>
-            </button>
-
             <button
                     id="menu-button"
                     aria-expanded="false"
