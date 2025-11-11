@@ -1,6 +1,7 @@
 ---
 import {Image} from "astro:assets";
 import backgroundImage from "../assets/images/Background.jpg";
+import Button from "./Button.astro";
 ---
 <section
         class="relative flex flex-col items-center justify-center text-center px-6 min-h-screen pt-20 sm:pt-20 overflow-hidden"
@@ -11,18 +12,14 @@ import backgroundImage from "../assets/images/Background.jpg";
             class="absolute inset-0 w-full h-full object-cover z-0 blur-xs"
             aria-hidden="true"
     />
-    <div class="relative z-10 flex flex-col items-center justify-center space-y-4">
-        <h1 class="text-7xl lg:text-8xl lg:max-w-3/5 font-extrabold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+    <div class="relative z-10 flex flex-col items-center justify-center space-y-10">
+        <h1 class="text-7xl lg:text-9xl lg:max-w-3/5 font-extrabold text-white drop-shadow-[0_4px_14px_rgba(0,0,0,2.0)]">
             Black Cat Tattoo & Piercing Parlour
         </h1>
-        <h2 class="text-2xl lg:text-2xl lg:max-w-3/5 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.7)]">
+        <h2 class=" text-3xl lg:text-4xl lg:max-w-3/5 text-white drop-shadow-[0_4px_14px_rgba(0,0,0,2.0)]">
             An easy going, modern studio offering custom designs from international artists and body piercings
         </h2>
-        <a
-                href="#offer"
-                class="mt-6 inline-block bg-red text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-red-950 transition"
-        >
-            View Our Work
-        </a>
+
+        <Button text="View Our Work" href="#offer"/>
     </div>
 </section>
