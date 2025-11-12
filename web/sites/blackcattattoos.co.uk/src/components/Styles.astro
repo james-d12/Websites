@@ -1,0 +1,65 @@
+---
+import {Image} from 'astro:assets';
+
+// Replace these imports with your actual image files
+import SleevesImg from '../assets/images/styles/sleeves.jpg';
+import FlashImg from '../assets/images/styles/flash.jpg';
+import AmericanTraditionalImg from '../assets/images/styles/american-traditional.jpg';
+import RealismImg from '../assets/images/styles/realism.jpg';
+import PortraitsImg from '../assets/images/styles/portraits.jpg';
+import CoverupsImg from '../assets/images/styles/coverups.jpg';
+import ChicanoImg from '../assets/images/styles/chicano.jpg';
+import MondalaImg from '../assets/images/styles/mondala.jpg';
+import LetteringImg from '../assets/images/styles/lettering.jpg';
+import FineLineImg from '../assets/images/styles/fine-line.jpg';
+import NeoTradImg from '../assets/images/styles/neo-trad.jpg';
+import JapaneseImg from '../assets/images/styles/japanese.jpg';
+import TribalImg from '../assets/images/styles/tribal.jpg';
+import DotWorkImg from '../assets/images/styles/dot-work.jpg';
+import GeometricImg from '../assets/images/styles/geometric.jpg';
+import Button from "./Button.astro";
+
+const tattooStyles = [
+    {name: "Sleeves", img: SleevesImg},
+    {name: "Flash Tattoos", img: FlashImg},
+    {name: "American Traditional", img: AmericanTraditionalImg},
+    {name: "Realism - Colour, Black & Grey", img: RealismImg},
+    {name: "Portraits", img: PortraitsImg},
+    {name: "Coverups", img: CoverupsImg},
+    {name: "Chicano", img: ChicanoImg},
+    {name: "Mondala", img: MondalaImg},
+    {name: "Lettering", img: LetteringImg},
+    {name: "Fine Line", img: FineLineImg},
+    {name: "Neo Trad", img: SleevesImg},
+    {name: "Japanese", img: JapaneseImg},
+    {name: "Tribal", img: TribalImg},
+    {name: "Dot Work", img: DotWorkImg},
+    {name: "Geometric", img: GeometricImg},
+];
+---
+
+<section id="styles" class="bg-dark-grey text-white py-24 px-6">
+    <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-8xl font-semibold mb-16">Our Styles</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            {tattooStyles.map((style) => (
+                    <div class="bg-neutral-800 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+                        <Image
+                                loading="lazy"
+                                src={style.img}
+                                alt={style.name}
+                                class="w-full h-64 object-cover transition-transform duration-300 transform hover:scale-105"
+                        />
+                        <div class="p-4">
+                            <span class="text-3xl font-medium">{style.name}</span>
+                        </div>
+                    </div>
+            ))}
+        </div>
+    </div>
+
+    <div class="p-10 items-center justify-center text-center">
+        <Button text="Contact Us!" href="/contact-us"/>
+    </div>
+</section>
