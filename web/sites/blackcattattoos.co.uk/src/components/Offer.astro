@@ -1,0 +1,47 @@
+---
+import {Image} from 'astro:assets';
+import TattooSessionPicture from '../assets/images/Tattoo-Session.jpg';
+import PiercingSessionPicture from '../assets/images/Piercing-Session.jpg';
+---
+<section id="offer" class="bg-neutral-950 text-gray-200 py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-7xl font-semibold text-center mb-16">What We Offer</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 mb-24">
+            <Image
+                    src={TattooSessionPicture}
+                    alt="Tattooing Session"
+                    class="rounded-2xl shadow-lg w-full object-cover h-96 order-2 md:order-1"
+            />
+            <div class="order-1 md:order-2">
+                <h3 class="text-5xl font-semibold mb-4">Tattooing</h3>
+                <p class="text-gray-400 leading-relaxed text-xl">
+                    Our skilled tattoo artists bring your ideas to life with precision and creativity. Whether you
+                    want a
+                    traditional piece, a fine-line design, or a large custom project, we ensure each tattoo is
+                    crafted to
+                    perfection with the highest standards of hygiene and artistry.
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+            <Image
+                    src={PiercingSessionPicture}
+                    alt="Piercing Session"
+                    class="rounded-2xl shadow-lg w-full object-cover h-96 order-2 md:order-2"
+            />
+            <div class="order-1 md:order-1">
+                <h3 class="text-5xl font-semibold mb-4">Piercing</h3>
+                <p class="text-gray-400 leading-relaxed text-xl">
+                    Our piercing specialists offer a wide range of professional body piercings in a clean, safe, and
+                    welcoming environment. From classic ear piercings to custom placements, we use only
+                    high-quality,
+                    hypoallergenic jewelry and follow the strictest hygiene standards. Each session includes a
+                    detailed
+                    consultation and personalized aftercare guidance to ensure a smooth healing process.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

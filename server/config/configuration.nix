@@ -79,6 +79,7 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.blackcattattoos.co.uk";
         serverAliases = [ "www.staging.blackcattattoos.co.uk" "staging.blackcattattoos.co.uk" ];
+        isStaging = true;
       }
       {
         name = "stcatherinesgroup.com";
@@ -91,6 +92,7 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.stcatherinesgroup.com";
         serverAliases = [ "www.staging.stcatherinesgroup.com" "staging.stcatherinesgroup.com" ];
+        isStaging = true;
       }
       {
         name = "reroofandbuildsurrey.com";
@@ -103,6 +105,7 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.reroofandbuildsurrey.com";
         serverAliases = [ "www.staging.reroofandbuildsurrey.com" "staging.reroofandbuildsurrey.com" ];
+        isStaging = true;
       }
       {
         name = "thecontourclinicrichmond.co.uk";
@@ -115,6 +118,7 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.thecontourclinicrichmond.co.uk";
         serverAliases = [ "www.staging.thecontourclinicrichmond.co.uk" "staging.thecontourclinicrichmond.co.uk" ];
+        isStaging = true;
       }
       {
         name = "jamesdurban.com";
@@ -127,6 +131,7 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.jamesdurban.com";
         serverAliases = [ "www.staging.jamesdurban.com" "staging.jamesdurban.com" ];
+        isStaging = true;
       }
     ];
   };

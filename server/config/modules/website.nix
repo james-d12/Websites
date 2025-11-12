@@ -31,6 +31,7 @@ in
       default = [ ];
       description = "List of sites to configure";
     };
+
   };
 
   config = lib.mkIf config.websites.enable {
@@ -40,7 +41,14 @@ in
     services.httpd.sslCiphers = "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS";
 
     services.httpd.virtualHosts = lib.mkMerge (
-      map (site: {
+      map (site:
+        let
+          siteWithDefaults = site // { isStaging = false; };
+          stagingHeader = if siteWithDefaults.isStaging then
+            ''Header always set X-Robots-Tag "noindex, nofollow"''
+          else "";
+        in
+        {
         "${site.name}" = {
           forceSSL = true;
           documentRoot = site.documentRoot;
@@ -48,6 +56,7 @@ in
           useACMEHost = site.name;
           extraConfig = lib.concatStringsSep "\n" [
             defaultHeaders
+            stagingHeader
             ''
               <Directory "${site.documentRoot}">
                 Options -Indexes
