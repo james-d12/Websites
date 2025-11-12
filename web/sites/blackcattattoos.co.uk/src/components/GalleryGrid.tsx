@@ -16,8 +16,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
 
   return (
     <>
-      {/* Grid view */}
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
         <For each={props.slides}>
           {(slide, idx) => (
             <div
@@ -30,7 +29,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
               <img
                 src={slide.image}
                 alt="Gallery image"
-                class="object-contain w-full h-60"
+                class="object-cover w-full h-96 rounded-lg"
               />
               <Show when={slide.text}>
                 <div class="absolute bottom-1 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-2 py-1 rounded text-sm">
@@ -42,7 +41,6 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
         </For>
       </div>
 
-      {/* Fullscreen overlay */}
       <Show when={isFullscreen()}>
         <div
           class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
@@ -55,7 +53,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
             <img
               src={props.slides[current()].image}
               alt="Fullscreen image"
-              class="object-contain max-h-[90vh] w-auto"
+              class="object-contain max-h-[90vh] w-auto rounded-lg"
             />
             <Show when={props.slides[current()].text}>
               <div class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
@@ -64,35 +62,45 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
             </Show>
           </div>
 
-          {/* Navigation buttons */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               prevSlide();
             }}
-            class="absolute left-4 top-1/2 -translate-y-1/2 bg-red bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
+            class="absolute left-4 top-1/2 -translate-y-1/2 p-3"
           >
-            ‹
+            <img src="/images/PrevArrow.svg" alt="Previous" class="w-28 h-28" />
           </button>
+
           <button
             onClick={(e) => {
               e.stopPropagation();
               nextSlide();
             }}
-            class="absolute right-4 top-1/2 -translate-y-1/2 bg-red bg-opacity-70 hover:bg-opacity-100 rounded-full p-3 shadow-md"
+            class="absolute right-4 top-1/2 -translate-y-1/2 p-3"
           >
-            ›
+            <img src="/images/NextArrow.svg" alt="Next" class="w-28 h-28" />
           </button>
 
-          {/* Close button */}
           <button
             onClick={(e) => {
               e.stopPropagation();
               setIsFullscreen(false);
             }}
-            class="absolute top-6 right-6 hover:text-red text-white text-4xl font-bold"
+            class="absolute top-6 right-6 text-white hover:text-red transition-colors w-28 h-28"
           >
-            ✕
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="w-full h-full"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"
+              />
+            </svg>
           </button>
         </div>
       </Show>
