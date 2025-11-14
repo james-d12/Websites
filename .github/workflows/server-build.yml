@@ -42,7 +42,7 @@ jobs:
         working-directory: ./server/config
 
       - name: Upload SBOM
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: syft-sbom
           path: ./server/config/syft-output.json

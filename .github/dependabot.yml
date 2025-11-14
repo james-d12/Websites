@@ -19,5 +19,9 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      actions-deps:
+        patterns:
+          - "*"
     assignees:
       - "james-d12"
