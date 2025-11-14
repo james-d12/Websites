@@ -9,8 +9,8 @@ let
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Cross-Origin-Opener-Policy "same-origin"
-    Header always set Cross-Origin-Embedder-Policy "require-corp"
-    Header always set Cross-Origin-Resource-Policy "same-origin"
+    Header always set Cross-Origin-Embedder-Policy "unsafe-none"
+    Header always set Cross-Origin-Resource-Policy "cross-origin"
   '';
 in
 {
