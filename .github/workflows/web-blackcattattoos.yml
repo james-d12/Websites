@@ -15,6 +15,10 @@ on:
       - '.github/workflows/web-blackcattattoos.yml'
       - '.github/workflows/site-template.yml'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   blackcattattoos:
     name: "Build & Deploy Black Cat Tattoos"

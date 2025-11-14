@@ -15,6 +15,10 @@ on:
       - '.github/workflows/web-stcatherinesgroup.yml'
       - '.github/workflows/site-template.yml'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   stcatherinesgroup:
     name: "Build & Deploy St Catherine's Group"
