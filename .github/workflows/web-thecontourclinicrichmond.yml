@@ -15,6 +15,10 @@ on:
       - '.github/workflows/web-thecontourclinicrichmond.yml'
       - '.github/workflows/site-template.yml'
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   thecontourclinicrichmond:
     name: "Build & Deploy The Contour Clinic Richmond"

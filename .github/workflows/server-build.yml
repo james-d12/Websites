@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-server:
     name: Build and Scan NixOS Server Config
@@ -38,7 +42,7 @@ jobs:
         working-directory: ./server/config
 
       - name: Upload SBOM
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: syft-sbom
           path: ./server/config/syft-output.json

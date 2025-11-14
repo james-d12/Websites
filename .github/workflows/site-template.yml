@@ -28,7 +28,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Install Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 22
 
@@ -73,7 +73,7 @@ jobs:
         run: pnpm audit
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: site-dist-${{ inputs.site }}
           path: ${{ env.site_full_path }}/dist
@@ -87,7 +87,7 @@ jobs:
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
@@ -132,7 +132,7 @@ jobs:
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
