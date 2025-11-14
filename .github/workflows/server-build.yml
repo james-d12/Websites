@@ -1,4 +1,6 @@
 name: Build and Scan NixOS Server Config
+permissions:
+  contents: read
 
 on:
   pull_request:

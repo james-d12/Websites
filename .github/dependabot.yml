@@ -14,3 +14,10 @@ updates:
         update-types: [ "major" ]
     assignees:
       - "james-d12"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "james-d12"
