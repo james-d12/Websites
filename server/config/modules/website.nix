@@ -3,14 +3,15 @@
 let
   defaultHeaders = ''
     Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains;"
-    Header set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
-    Header set X-Frame-Options "DENY"
-    Header set X-Content-Type-Options nosniff
+    Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-Content-Type-Options nosniff
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Cross-Origin-Opener-Policy "same-origin"
     Header always set Cross-Origin-Embedder-Policy "unsafe-none"
     Header always set Cross-Origin-Resource-Policy "cross-origin"
+    Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), screen-wake-lock=(), ambient-light-sensor=(), bluetooth=(), vr=(), xr-spatial-tracking=()"
   '';
 in
 {
@@ -43,8 +44,7 @@ in
     services.httpd.virtualHosts = lib.mkMerge (
       map (site:
         let
-          siteWithDefaults = site // { isStaging = false; };
-          stagingHeader = if siteWithDefaults.isStaging then
+          stagingHeader = if site.isStaging then
             ''Header always set X-Robots-Tag "noindex, nofollow"''
           else "";
         in
