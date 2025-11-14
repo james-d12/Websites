@@ -56,6 +56,7 @@ in
           useACMEHost = site.name;
           extraConfig = lib.concatStringsSep "\n" [
             defaultHeaders
+            (site.extraHeaders or "")
             stagingHeader
             ''
               <Directory "${site.documentRoot}">
