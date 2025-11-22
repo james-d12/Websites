@@ -4,16 +4,17 @@ import {getImage} from "astro:assets";
 export async function getGalleryImages(): Promise<GallerySlide[]> {
     const galleryImages = import.meta.glob(
         "/src/assets/images/Gallery/**/*.{jpg,png,jpeg}",
-        {eager: true, as: "url"}
+        {eager: true, query: "?url", import: "default"}
     );
 
     const optimizedImages: GallerySlide[] = [];
 
     for (const [path, url] of Object.entries(galleryImages)) {
+        const urlAsString = url as string;
         const match = path.match(/Gallery\/([^/]+)\//i);
         const text = match ? match[1].replace(/[-_]/g, " ") : "Gallery Image";
 
-        const imagePath = url.replace(/^.*\/public\//, "/");
+        const imagePath = urlAsString.replace(/^.*\/public\//, "/");
 
         const optimized = await getImage({
             src: imagePath,
