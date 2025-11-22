@@ -3,10 +3,10 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Button from "../components/Button.astro";
-import {GalleryGrid} from "../components/GalleryGrid.tsx";
-import {getGalleryImages} from "../utils/GetGalleryImages.ts";
+import {GalleryGrid} from "../components/solid-js/GalleryGrid.tsx";
+import {getGalleryImages} from "../utils/Images.ts";
 
-const slides = getGalleryImages();
+const slides = await getGalleryImages();
 ---
 <Layout title="Gallery | Black Cat Tattoo & Piercing Parlour">
     <Navbar/>
