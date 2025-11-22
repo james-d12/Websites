@@ -22,8 +22,6 @@ export async function getGalleryImages(): Promise<GallerySlide[]> {
             height: 800
         });
 
-        console.log(`Optimized image for ${text}: ${optimized}`);
-
         optimizedImages.push({
             image: optimized.src,
             text,

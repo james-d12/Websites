@@ -1,4 +1,4 @@
-import { createSignal, For, Show, createMemo, onMount } from "solid-js";
+import {createSignal, For, Show, createMemo, onMount} from "solid-js";
 
 export type GallerySlide = {
     image: string;
@@ -11,12 +11,37 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
     const [current, setCurrent] = createSignal(0);
     const [selectedCategory, setSelectedCategory] = createSignal<string | null>(null);
 
-    // Preload all images once
+    const [visibleCount, setVisibleCount] = createSignal(6);
+
+    const filteredSlides = createMemo(() =>
+        props.slides.filter(
+            (slide) =>
+                !selectedCategory() || (slide.category ?? "Uncategorized") === selectedCategory()
+        )
+    );
+
+    const visibleSlides = createMemo(() =>
+        filteredSlides().slice(0, visibleCount())
+    );
+
+    const loadMore = () => {
+        if (visibleCount() < filteredSlides().length) {
+            setVisibleCount((prev) => Math.min(prev + 6, filteredSlides().length));
+        }
+    };
+
     onMount(() => {
-        props.slides.forEach((slide) => {
-            const img = new Image();
-            img.src = slide.image;
-        });
+        const onScroll = () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const bottomPosition = document.documentElement.scrollHeight;
+
+            if (scrollPosition + 300 >= bottomPosition) {
+                loadMore();
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
     });
 
     const prevSlide = () =>
@@ -26,14 +51,6 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
 
     const uniqueCategories = Array.from(
         new Set(props.slides.map((slide) => slide.category ?? "Uncategorized"))
-    );
-
-    // Memoized filtered slides
-    const filteredSlides = createMemo(() =>
-        props.slides.filter(
-            (slide) =>
-                !selectedCategory() || (slide.category ?? "Uncategorized") === selectedCategory()
-        )
     );
 
     return (
@@ -64,7 +81,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
 
             {/* Gallery */}
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
-                <For each={filteredSlides()}>
+                <For each={visibleSlides()}>
                     {(slide, idx) => (
                         <div
                             class="relative cursor-pointer"
@@ -80,7 +97,8 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                                 class="object-cover w-full h-96 rounded-lg"
                             />
                             <Show when={slide.text}>
-                                <div class="absolute bottom-1 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-2 py-1 rounded text-sm">
+                                <div
+                                    class="absolute bottom-1 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-2 py-1 rounded text-sm">
                                     {slide.text}
                                 </div>
                             </Show>
@@ -102,7 +120,8 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                             class="object-contain max-h-[90vh] w-auto rounded-lg"
                         />
                         <Show when={filteredSlides()[current()].text}>
-                            <div class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
+                            <div
+                                class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-2xl">
                                 {filteredSlides()[current()].text}
                             </div>
                         </Show>
@@ -115,7 +134,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                         }}
                         class="absolute left-4 top-1/2 -translate-y-1/2 p-3"
                     >
-                        <img src="/images/PrevArrow.svg" alt="Previous" class="w-28 h-28" />
+                        <img src="/images/PrevArrow.svg" alt="Previous" class="w-28 h-28"/>
                     </button>
 
                     <button
@@ -125,7 +144,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                         }}
                         class="absolute right-4 top-1/2 -translate-y-1/2 p-3"
                     >
-                        <img src="/images/NextArrow.svg" alt="Next" class="w-28 h-28" />
+                        <img src="/images/NextArrow.svg" alt="Next" class="w-28 h-28"/>
                     </button>
 
                     <button
