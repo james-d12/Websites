@@ -31,6 +31,15 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
     };
 
     onMount(() => {
+        const params = new URLSearchParams(window.location.search);
+        const styleParam = params.get("style")?.toString().toLowerCase() ?? "";
+
+        const isStyleInCategories = uniqueCategories.includes(styleParam ?? "");
+
+        if (styleParam !== "" && isStyleInCategories) {
+            setSelectedCategory(styleParam)
+        }
+
         const onScroll = () => {
             const scrollPosition = window.scrollY + window.innerHeight;
             const bottomPosition = document.documentElement.scrollHeight;
@@ -50,37 +59,41 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
         setCurrent((prev) => (prev === filteredSlides().length - 1 ? 0 : prev + 1));
 
     const uniqueCategories = Array.from(
-        new Set(props.slides.map((slide) => slide.category ?? "Uncategorized"))
+        new Set(props.slides.filter(s => s.category !== "").map((slide) => slide.category ?? "Uncategorized"))
     ).sort() as string[];
+
+    console.log(uniqueCategories);
 
     return (
         <>
             {/* Category buttons */}
-            <div class="items-center justify-center text-center p-4 gap-2 flex flex-wrap">
-                <button
-                    class={`mt-4 inline-block font-bold px-6 py-4 text-lg rounded-full shadow-2xl transition ${
-                        selectedCategory() === null ? "bg-red text-white" : "bg-gray-500 text-white"
-                    }`}
-                    onClick={() => setSelectedCategory(null)}
-                >
-                    All
-                </button>
-                <For each={uniqueCategories}>
-                    {(category) => (
-                        <button
-                            class={`mt-4 inline-block font-bold px-6 py-4 text-lg rounded-full shadow-2xl transition ${
-                                selectedCategory() === category ? "bg-red text-white" : "bg-gray-500 text-white"
-                            }`}
-                            onClick={() => setSelectedCategory(category)}
-                        >
-                            {category}
-                        </button>
-                    )}
-                </For>
-            </div>
+            <Show when={uniqueCategories.length > 0}>
+                <div class="items-center justify-center text-center p-4 gap-2 flex flex-wrap">
+                    <button
+                        class={`mt-4 inline-block font-bold px-6 py-4 text-lg rounded-full shadow-2xl transition ${
+                            selectedCategory() === null ? "bg-red text-white" : "bg-gray-500 text-white"
+                        }`}
+                        onClick={() => setSelectedCategory(null)}
+                    >
+                        All
+                    </button>
+                    <For each={uniqueCategories}>
+                        {(category) => (
+                            <button
+                                class={`mt-4 inline-block font-bold px-6 py-4 text-lg rounded-full shadow-2xl transition ${
+                                    selectedCategory() === category ? "bg-red text-white" : "bg-gray-500 text-white"
+                                }`}
+                                onClick={() => setSelectedCategory(category)}
+                            >
+                                {category}
+                            </button>
+                        )}
+                    </For>
+                </div>
+            </Show>
 
             {/* Gallery */}
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <For each={visibleSlides()}>
                     {(slide, idx) => (
                         <div
@@ -94,7 +107,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                                 src={slide.image}
                                 alt="Gallery image"
                                 loading="lazy"
-                                class="object-cover w-full h-96 rounded-lg"
+                                class="w-full h-96 object-cover rounded transition-transform duration-300 transform hover:scale-105"
                             />
                             <Show when={slide.text}>
                                 <div
@@ -108,10 +121,9 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
             </div>
 
             {/* Fullscreen modal */}
-            {/* Fullscreen modal */}
             <Show when={isFullscreen()}>
                 <div
-                    class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50 p-4"
+                    class="fixed inset-0 bg-black bg-opacity-70 flex flex-col items-center justify-center z-50 p-4"
                     onClick={() => setIsFullscreen(false)}
                 >
                     {/* Image container */}
@@ -124,7 +136,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                             alt="Fullscreen image"
                             class="object-contain max-h-[70vh] w-auto rounded-lg"
                         />
-                        <Show when={filteredSlides()[current()].text}>
+                        <Show when={filteredSlides()[current()].text != ""}>
                             <div
                                 class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
                                 {filteredSlides()[current()].text}

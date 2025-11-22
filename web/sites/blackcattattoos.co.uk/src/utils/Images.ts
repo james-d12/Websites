@@ -3,7 +3,7 @@ import {getImage} from "astro:assets";
 
 export async function getGalleryImages(): Promise<GallerySlide[]> {
     const galleryImages = import.meta.glob(
-        "/src/assets/images/Gallery/**/*.{jpg,png,jpeg}",
+        "/src/assets/images/gallery/**/*.{jpg,png,jpeg}",
         {eager: true, query: "?url", import: "default"}
     );
 
@@ -11,8 +11,41 @@ export async function getGalleryImages(): Promise<GallerySlide[]> {
 
     for (const [path, url] of Object.entries(galleryImages)) {
         const urlAsString = url as string;
-        const match = path.match(/Gallery\/([^/]+)\//i);
+        const match = path.match(/gallery\/([^/]+)\//i);
         const text = match ? match[1].replace(/[-_]/g, " ") : "Gallery Image";
+
+        const imagePath = urlAsString.replace(/^.*\/public\//, "/");
+
+        const optimized = await getImage({
+            src: imagePath,
+            format: "webp",
+            width: 600,
+            height: 800
+        });
+
+        optimizedImages.push({
+            image: optimized.src,
+            text,
+            category: text
+        });
+    }
+
+    shuffle(optimizedImages);
+    return optimizedImages;
+}
+
+export async function getPiercingImages(): Promise<GallerySlide[]> {
+    const galleryImages = import.meta.glob(
+        "/src/assets/images/piercing/**/*.{jpg,png,jpeg}",
+        {eager: true, query: "?url", import: "default"}
+    );
+
+    const optimizedImages: GallerySlide[] = [];
+
+    for (const [path, url] of Object.entries(galleryImages)) {
+        const urlAsString = url as string;
+        const match = path.match(/piercing\/([^/]+)\//i);
+        const text = match ? match[1].replace(/[-_]/g, " ") : "";
 
         const imagePath = urlAsString.replace(/^.*\/public\//, "/");
 
