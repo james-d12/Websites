@@ -10,6 +10,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
     const [isFullscreen, setIsFullscreen] = createSignal(false);
     const [current, setCurrent] = createSignal(0);
     const [selectedCategory, setSelectedCategory] = createSignal<string | null>(null);
+    const [dropdownOpen, setDropdownOpen] = createSignal(false);
 
     const [visibleCount, setVisibleCount] = createSignal(6);
 
@@ -62,35 +63,54 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
         new Set(props.slides.filter(s => s.category !== "").map((slide) => slide.category ?? "Uncategorized"))
     ).sort() as string[];
 
-    console.log(uniqueCategories);
-
     return (
         <>
             {/* Category buttons */}
-            <Show when={uniqueCategories.length > 0}>
-                <div class="items-center justify-center text-center p-4 gap-2 flex flex-wrap">
+            <div class="flex justify-center pb-10 relative">
+                <div class="w-3/4 relative md:w-1/2 lg:w-1/3">
                     <button
-                        class={`mt-4 inline-block font-bold px-6 py-4 text-lg rounded-full shadow-2xl transition ${
-                            selectedCategory() === null ? "bg-red text-white" : "bg-gray-500 text-white"
-                        }`}
-                        onClick={() => setSelectedCategory(null)}
+                        class="text-2xl w-full bg-black text-white rounded-full px-6 py-3 text-center shadow-md flex justify-between items-center"
+                        onClick={() => setDropdownOpen(prev => !prev)}
                     >
-                        All
+                        {selectedCategory() ?? "All"}
+                        <svg class="w-5 h-5 ml-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
                     </button>
-                    <For each={uniqueCategories}>
-                        {(category) => (
-                            <button
-                                class={`mt-4 inline-block font-bold px-6 py-4 text-lg rounded-full shadow-2xl transition ${
-                                    selectedCategory() === category ? "bg-red text-white" : "bg-gray-500 text-white"
+
+                    <Show when={dropdownOpen()}>
+                        <ul class="text-xl absolute z-50 mt-1 w-full bg-black rounded-xl shadow-lg max-h-60 overflow-y-auto">
+                            <li
+                                class={`px-4 py-3 cursor-pointer hover:bg-red transition ${
+                                    selectedCategory() === null ? "bg-red text-white" : "text-white"
                                 }`}
-                                onClick={() => setSelectedCategory(category)}
+                                onClick={() => {
+                                    setSelectedCategory(null);
+                                    setDropdownOpen(false);
+                                }}
                             >
-                                {category}
-                            </button>
-                        )}
-                    </For>
+                                All
+                            </li>
+                            <For each={uniqueCategories}>
+                                {(category) => (
+                                    <li
+                                        class={`px-4 py-3 cursor-pointer hover:bg-red transition ${
+                                            selectedCategory() === category ? "bg-red text-white" : "text-white"
+                                        }`}
+                                        onClick={() => {
+                                            setSelectedCategory(category);
+                                            setDropdownOpen(false);
+                                        }}
+                                    >
+                                        {category}
+                                    </li>
+                                )}
+                            </For>
+                        </ul>
+                    </Show>
                 </div>
-            </Show>
+            </div>
+
 
             {/* Gallery */}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

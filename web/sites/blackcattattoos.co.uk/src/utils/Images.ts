@@ -1,5 +1,6 @@
 import type {GallerySlide} from "../components/solid-js/GalleryGrid";
 import {getImage} from "astro:assets";
+import {capitalizeWords} from "./string.ts";
 
 export async function getGalleryImages(): Promise<GallerySlide[]> {
     const galleryImages = import.meta.glob(
@@ -46,6 +47,7 @@ export async function getPiercingImages(): Promise<GallerySlide[]> {
         const urlAsString = url as string;
         const match = path.match(/piercing\/([^/]+)\//i);
         const text = match ? match[1].replace(/[-_]/g, " ") : "";
+        const category = capitalizeWords(text)
 
         const imagePath = urlAsString.replace(/^.*\/public\//, "/");
 
@@ -59,7 +61,7 @@ export async function getPiercingImages(): Promise<GallerySlide[]> {
         optimizedImages.push({
             image: optimized.src,
             text,
-            category: text
+            category: category
         });
     }
 
