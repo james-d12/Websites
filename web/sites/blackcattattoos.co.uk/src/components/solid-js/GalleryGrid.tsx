@@ -51,7 +51,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
 
     const uniqueCategories = Array.from(
         new Set(props.slides.map((slide) => slide.category ?? "Uncategorized"))
-    );
+    ).sort() as string[];
 
     return (
         <>
@@ -108,51 +108,61 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
             </div>
 
             {/* Fullscreen modal */}
+            {/* Fullscreen modal */}
             <Show when={isFullscreen()}>
                 <div
-                    class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 p-4"
+                    class="fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center z-50 p-4"
                     onClick={() => setIsFullscreen(false)}
                 >
-                    <div class="relative max-h-[90vh] max-w-[90vw]" onClick={(e) => e.stopPropagation()}>
+                    {/* Image container */}
+                    <div
+                        class="relative max-h-[70vh] max-w-[90vw] flex justify-center"
+                        onClick={(e) => e.stopPropagation()}
+                    >
                         <img
                             src={filteredSlides()[current()].image}
                             alt="Fullscreen image"
-                            class="object-contain max-h-[90vh] w-auto rounded-lg"
+                            class="object-contain max-h-[70vh] w-auto rounded-lg"
                         />
                         <Show when={filteredSlides()[current()].text}>
                             <div
-                                class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-2xl">
+                                class="absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-60 text-white px-3 py-1 rounded text-sm">
                                 {filteredSlides()[current()].text}
                             </div>
                         </Show>
                     </div>
 
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            prevSlide();
-                        }}
-                        class="absolute left-4 top-1/2 -translate-y-1/2 p-3"
-                    >
-                        <img src="/images/PrevArrow.svg" alt="Previous" class="w-28 h-28"/>
-                    </button>
+                    {/* Navigation controls */}
+                    <div
+                        class="flex justify-between w-full max-w-[90vw] mt-4 md:absolute md:top-1/2 md:left-0 md:right-0 md:mt-0 md:justify-between md:px-4">
+                        <button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                prevSlide();
+                            }}
+                            class="p-3"
+                        >
+                            <img src="/images/PrevArrow.svg" alt="Previous" class="w-16 h-16 md:w-28 md:h-28"/>
+                        </button>
 
-                    <button
-                        onClick={(e) => {
-                            e.stopPropagation();
-                            nextSlide();
-                        }}
-                        class="absolute right-4 top-1/2 -translate-y-1/2 p-3"
-                    >
-                        <img src="/images/NextArrow.svg" alt="Next" class="w-28 h-28"/>
-                    </button>
+                        <button
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                nextSlide();
+                            }}
+                            class="p-3"
+                        >
+                            <img src="/images/NextArrow.svg" alt="Next" class="w-16 h-16 md:w-28 md:h-28"/>
+                        </button>
+                    </div>
 
+                    {/* Close button */}
                     <button
                         onClick={(e) => {
                             e.stopPropagation();
                             setIsFullscreen(false);
                         }}
-                        class="absolute top-6 right-6 text-white hover:text-red transition-colors w-28 h-28"
+                        class="absolute top-6 right-6 text-white hover:text-red transition-colors w-12 h-12 md:w-28 md:h-28"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -169,6 +179,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
                     </button>
                 </div>
             </Show>
+
         </>
     );
 }
