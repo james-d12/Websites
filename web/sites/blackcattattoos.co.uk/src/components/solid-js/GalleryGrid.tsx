@@ -66,51 +66,54 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
     return (
         <>
             {/* Category buttons */}
-            <div class="flex justify-center pb-10 relative">
-                <div class="w-3/4 relative md:w-1/2 lg:w-1/3">
-                    <button
-                        class="text-2xl w-full bg-black text-white rounded-full px-6 py-3 text-center shadow-md flex justify-between items-center"
-                        onClick={() => setDropdownOpen(prev => !prev)}
-                    >
-                        {selectedCategory() ?? "All"}
-                        <svg class="w-5 h-5 ml-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                        </svg>
-                    </button>
+            <Show when={uniqueCategories.length > 0}>
+                <div class="flex justify-center pb-10 relative">
+                    <div class="w-3/4 relative md:w-1/2 lg:w-1/3">
+                        <button
+                            class="text-2xl w-full bg-black text-white rounded-full px-6 py-3 text-center shadow-md flex justify-between items-center"
+                            onClick={() => setDropdownOpen(prev => !prev)}
+                        >
+                            {selectedCategory() ?? "All"}
+                            <svg class="w-5 h-5 ml-2 text-white" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </button>
 
-                    <Show when={dropdownOpen()}>
-                        <ul class="text-xl absolute z-50 mt-1 w-full bg-black rounded-xl shadow-lg max-h-60 overflow-y-auto">
-                            <li
-                                class={`px-4 py-3 cursor-pointer hover:bg-red transition ${
-                                    selectedCategory() === null ? "bg-red text-white" : "text-white"
-                                }`}
-                                onClick={() => {
-                                    setSelectedCategory(null);
-                                    setDropdownOpen(false);
-                                }}
-                            >
-                                All
-                            </li>
-                            <For each={uniqueCategories}>
-                                {(category) => (
-                                    <li
-                                        class={`px-4 py-3 cursor-pointer hover:bg-red transition ${
-                                            selectedCategory() === category ? "bg-red text-white" : "text-white"
-                                        }`}
-                                        onClick={() => {
-                                            setSelectedCategory(category);
-                                            setDropdownOpen(false);
-                                        }}
-                                    >
-                                        {category}
-                                    </li>
-                                )}
-                            </For>
-                        </ul>
-                    </Show>
+                        <Show when={dropdownOpen()}>
+                            <ul class="text-xl absolute z-50 mt-1 w-full bg-black rounded-xl shadow-lg max-h-60 overflow-y-auto">
+                                <li
+                                    class={`px-4 py-3 cursor-pointer hover:bg-red transition ${
+                                        selectedCategory() === null ? "bg-red text-white" : "text-white"
+                                    }`}
+                                    onClick={() => {
+                                        setSelectedCategory(null);
+                                        setDropdownOpen(false);
+                                    }}
+                                >
+                                    All
+                                </li>
+                                <For each={uniqueCategories}>
+                                    {(category) => (
+                                        <li
+                                            class={`px-4 py-3 cursor-pointer hover:bg-red transition ${
+                                                selectedCategory() === category ? "bg-red text-white" : "text-white"
+                                            }`}
+                                            onClick={() => {
+                                                setSelectedCategory(category);
+                                                setDropdownOpen(false);
+                                            }}
+                                        >
+                                            {category}
+                                        </li>
+                                    )}
+                                </For>
+                            </ul>
+                        </Show>
+                    </div>
                 </div>
-            </div>
-
+            </Show>
 
             {/* Gallery */}
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
