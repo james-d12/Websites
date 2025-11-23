@@ -1,7 +1,7 @@
 ---
 import {Image} from 'astro:assets';
-import TattooSessionPicture from '../assets/images/Tattoo-Session.jpg';
-import PiercingSessionPicture from '../assets/images/Piercing-Session.jpg';
+import TattooSessionPicture from '../assets/images/tattoo-session.jpg';
+import PiercingSessionPicture from '../assets/images/piercing-session.jpg';
 ---
 <section id="offer" class="bg-neutral-950 text-gray-200 py-24 px-6">
     <div class="max-w-6xl mx-auto">
@@ -9,6 +9,7 @@ import PiercingSessionPicture from '../assets/images/Piercing-Session.jpg';
 
         <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-12 mb-24">
             <Image
+                    format="avif"
                     src={TattooSessionPicture}
                     alt="Tattooing Session"
                     class="rounded-2xl shadow-lg w-full object-cover h-96 order-2 md:order-1"

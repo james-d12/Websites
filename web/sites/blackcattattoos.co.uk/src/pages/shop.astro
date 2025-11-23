@@ -4,22 +4,19 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Button from "../components/Button.astro";
-import ShopImage from '../assets/images/shop.jpg'
+import ShopImage from '../assets/images/shop/7ea9ea26-1e6f-406a-b313-6b3fbb447852.jpg'
 ---
 <Layout title="Shop | Black Cat Tattoo & Piercing Parlour">
     <Navbar/>
     <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white max-w-6xl mx-auto">
         <h1 class="text-7xl lg:text-9xl font-semibold text-center mb-8">Shop</h1>
 
-        <div
-                class="relative max-h-[90vh] max-w-[90vw]"
-        >
-            <Image
-                    src={ShopImage}
-                    alt="Fullscreen image"
-                    class="object-contain max-h-[90vh] w-auto rounded-lg"
-            />
-        </div>
+        <Image
+                format="avif"
+                src={ShopImage}
+                alt="Fullscreen image"
+                class="object-contain relative max-h-[90vh] max-w-[90vw] w-auto rounded-lg"
+        />
 
         <div class="p-10 items-center justify-center text-center">
             <Button text="Contact Us!" href="/contact-us"/>

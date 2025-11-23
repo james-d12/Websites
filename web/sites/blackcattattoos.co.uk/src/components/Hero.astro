@@ -1,23 +1,24 @@
 ---
 import {Image} from "astro:assets";
-import backgroundImage from "../assets/images/Background.jpg";
+import HeroImage from "../assets/images/hero.jpg"
 import Button from "./Button.astro";
 ---
 <section
         class="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 min-h-screen pt-24 sm:pt-28 md:pt-32 lg:pt-40 overflow-hidden"
 >
     <Image
-            src={backgroundImage}
+            format="avif"
+            src={HeroImage}
             alt="Background"
             class="absolute inset-0 w-full h-full object-cover z-0 blur-xs"
             aria-hidden="true"
     />
-    <div class="relative z-10 flex flex-col items-center justify-center space-y-6 sm:space-y-8 lg:space-y-10 pb-10">
+    <div class="p-8 relative z-10 flex flex-col items-center justify-center space-y-6 sm:space-y-8 lg:space-y-8 pb-10">
         <div class="flex flex-col items-center justify-center space-y-2 sm:space-y-3">
-            <h1 class="text-7xl md:text-8xl lg:text-8xl font-extrabold text-white drop-shadow-[0_4px_14px_rgba(0,0,0,2.0)] max-w-full">
+            <h1 class="tattoo-font text-[4.75rem] md:pr-0 md:text-[12rem] lg:text-[12rem] xl:text-[14rem] text-white drop-shadow-[0_4px_14px_rgba(255,0,0,2.0)] m-0">
                 Black Cat
             </h1>
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-[0_4px_14px_rgba(0,0,0,2.0)] max-w-full">
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white drop-shadow-[0_4px_14px_rgba(0,0,0,2.0)] max-w-full">
                 Tattoo & Piercing Parlour
             </h2>
         </div>
@@ -25,6 +26,9 @@ import Button from "./Button.astro";
             An easy going, modern studio offering custom designs from international artists and body piercings
         </p>
 
-        <Button text="What We Offer" href="#offer"/>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <Button text="What We Offer" href="#offer"/>
+            <Button text="Call Us Now" href="tel:02036454508"/>
+        </div>
     </div>
 </section>

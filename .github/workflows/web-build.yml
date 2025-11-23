@@ -6,6 +6,10 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - 'web/**'
+      - '.github/workflows/web-*.yml'
+      - '.github/workflows/site-template.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -51,6 +55,10 @@ jobs:
       - name: Check code formatting
         working-directory: web
         run: pnpm run format:check
+
+      - name: Run ESLint
+        working-directory: web
+        run: pnpm run lint
 
       - name: Build project
         working-directory: web

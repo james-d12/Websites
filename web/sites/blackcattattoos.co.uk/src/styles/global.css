@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 @font-face {
+  font-family: "Angilla Tattoo";
+  src: url("/fonts/Angilla-Tattoo.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Domine";
   src: url("/fonts/Domine-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -15,4 +23,8 @@
 
 * {
   font-family: "Domine", sans-serif;
+}
+
+.tattoo-font {
+  font-family: "Angilla Tattoo";
 }
