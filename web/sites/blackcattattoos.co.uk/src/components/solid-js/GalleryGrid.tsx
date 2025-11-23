@@ -67,13 +67,15 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
             props.slides
                 .filter((s) => s.category !== null)
                 .filter((s) => s.category !== "")
-                .map((slide) => slide.category ?? "Uncategorized"),
+                .map((slide) => slide.category),
         ),
     ).sort() as string[];
 
+    const shouldShowCategoryDropdown = uniqueCategories.length > 1;
+
     return (
         <>
-            <Show when={uniqueCategories.length > 0}>
+            <Show when={shouldShowCategoryDropdown}>
                 <div class="flex justify-center pb-10 relative">
                     <div class="w-3/4 relative md:w-1/2 lg:w-1/3">
                         <button
