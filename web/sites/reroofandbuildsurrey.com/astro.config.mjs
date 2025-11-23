@@ -1,4 +1,4 @@
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 
 import tailwindcss from "@tailwindcss/vite";
 
@@ -7,6 +7,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   image: {
-    service: passthroughImageService(),
+    service: sharpImageService(),
   },
 });

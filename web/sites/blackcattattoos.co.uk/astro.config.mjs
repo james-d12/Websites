@@ -1,4 +1,4 @@
-import { defineConfig, passthroughImageService } from "astro/config";
+import { defineConfig, sharpImageService } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import solidJs from "@astrojs/solid-js";
 
@@ -10,7 +10,7 @@ export default defineConfig({
   },
   site: "https://blackcattattoos.co.uk",
   image: {
-    service: passthroughImageService(),
+    service: sharpImageService(),
   },
 
   integrations: [solidJs(), sitemap()],
