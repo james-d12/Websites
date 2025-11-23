@@ -92,6 +92,12 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
+      - name: Add staging robots.txt
+        run: |
+          echo "User-agent: *" > ./deploy/robots.txt
+          echo "Disallow: /" >> ./deploy/robots.txt
+          echo "✅ robots.txt added to deploy folder"
+
       - name: Create SSH Key
         run: |
           mkdir ~/.ssh
