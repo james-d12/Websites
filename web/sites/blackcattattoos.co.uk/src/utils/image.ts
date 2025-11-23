@@ -1,52 +1,72 @@
 import type {
-  GetImageResult,
-  ImageMetadata,
-  UnresolvedImageTransform,
+    GetImageResult,
+    ImageMetadata,
+    UnresolvedImageTransform,
 } from "astro";
-import { getImage } from "astro:assets";
-import type { GallerySlide } from "../components/solid-js/GalleryGrid.tsx";
+import {getImage} from "astro:assets";
+import type {GallerySlide} from "../components/solid-js/GalleryGrid.tsx";
 
 async function getCustomImage(
-  options: UnresolvedImageTransform,
+    options: UnresolvedImageTransform,
 ): Promise<GetImageResult> {
-  return getImage({
-    format: "webp",
-    ...options,
-  });
+    return getImage({
+        format: "avif",
+        ...options,
+    });
 }
 
 export async function getGalleryImages(): Promise<GallerySlide[]> {
-  const imageModules = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/images/gallery/**/*.{jpg,png,jpeg}",
-    { eager: true },
-  );
+    const imageModules = import.meta.glob<{ default: ImageMetadata }>(
+        "/src/assets/images/gallery/**/*.{jpg,png,jpeg}",
+        {eager: true},
+    );
 
-  const metadata = Object.values(imageModules).map((m) => m.default);
+    const metadata = Object.entries(imageModules).map(([path, m]) => ({
+        path,
+        src: m.default,
+    }));
 
-  const images = await Promise.all(
-    metadata.map((src) => getCustomImage({ src })),
-  );
+    const images = await Promise.all(
+        metadata.map(({src}) => getCustomImage({src}))
+    );
 
-  return images.map((img, i) => ({
-    image: img.src,
-    text: `Gallery Image ${i + 1}`,
-  }));
+    return images.map((img, i) => {
+        const path = metadata[i].path;
+        const match = path.match(/gallery\/([^/]+)\//i);
+        const category = match ? match[1].replace(/[-_]/g, " ") : "Gallery";
+
+        return {
+            image: img.src,
+            text: category,
+            category,
+        };
+    });
 }
 
+
 export async function getPiercingImages(): Promise<GallerySlide[]> {
-  const imageModules = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/images/piercing/**/*.{jpg,png,jpeg}",
-    { eager: true },
-  );
+    const imageModules = import.meta.glob<{ default: ImageMetadata }>(
+        "/src/assets/images/piercing/**/*.{jpg,png,jpeg}",
+        {eager: true},
+    );
 
-  const metadata = Object.values(imageModules).map((m) => m.default);
+    const metadata = Object.entries(imageModules).map(([path, m]) => ({
+        path,
+        src: m.default,
+    }));
 
-  const images = await Promise.all(
-    metadata.map((src) => getCustomImage({ src })),
-  );
+    const images = await Promise.all(
+        metadata.map(({src}) => getCustomImage({src}))
+    );
 
-  return images.map((img, i) => ({
-    image: img.src,
-    text: `Piercing Image ${i + 1}`,
-  }));
+    return images.map((img, i) => {
+        const path = metadata[i].path;
+        const match = path.match(/piercing\/([^/]+)\//i);
+        const category = match ? match[1].replace(/[-_]/g, " ") : "Piercing";
+
+        return {
+            image: img.src,
+            text: category,
+        };
+    });
 }
