@@ -94,6 +94,8 @@ const currentPath = Astro.url.pathname;
         const btn = document.getElementById("menu-button");
         const menu = document.getElementById("dropdown-menu");
 
+        if(btn === null || menu === null) return;
+
         const openMenu = () => {
             menu.classList.remove("hidden");
             btn.setAttribute("aria-expanded", "true");

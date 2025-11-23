@@ -12,14 +12,20 @@
     "build:libs": "pnpm --filter shared-ui run build",
     "preview": "pnpm -r run preview",
     "dev": "pnpm -r run dev",
+    "check": "pnpm -r run check",
+    "lint": "eslint sites/**",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.9.3",
-    "sharp": "^0.34.5"
+    "typescript-eslint": "^8.47.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",
