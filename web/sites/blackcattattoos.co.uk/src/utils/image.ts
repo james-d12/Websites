@@ -15,32 +15,42 @@ async function getCustomImage(
   });
 }
 
-export async function getGalleryImages(): Promise<GallerySlide[]> {
-  const imageModules = import.meta.glob<{ default: ImageMetadata }>(
-    "/src/assets/images/gallery/**/*.{jpg,png,jpeg}",
-    { eager: true },
-  );
+export async function getGalleryImages(style?: string): Promise<GallerySlide[]> {
+    const imageModules = import.meta.glob<{ default: ImageMetadata }>(
+        "/src/assets/images/gallery/**/*.{jpg,png,jpeg}",
+        { eager: true },
+    );
 
-  const metadata = Object.entries(imageModules).map(([path, m]) => ({
-    path,
-    src: m.default,
-  }));
+    console.log(style)
 
-  const images = await Promise.all(
-    metadata.map(({ src }) => getCustomImage({ src })),
-  );
+    // Convert style to lowercase once for comparison (if provided)
+    const styleFilter = style?.toLowerCase();
 
-  return images.map((img, i) => {
-    const path = metadata[i].path;
-    const match = path.match(/gallery\/([^/]+)\//i);
-    const category = match ? match[1].replace(/[-_]/g, " ") : "Gallery";
+    const metadata = Object.entries(imageModules)
+        .map(([path, m]) => ({
+            path,
+            src: m.default,
+        }))
+        .filter(({ path }) => {
+            if (!styleFilter) return true; // no style → return all
+            return path.toLowerCase().includes(styleFilter); // filter by path match
+        });
 
-    return {
-      image: img.src,
-      text: category,
-      category,
-    };
-  });
+    const images = await Promise.all(
+        metadata.map(({ src }) => getCustomImage({ src })),
+    );
+
+    return images.map((img, i) => {
+        const path = metadata[i].path;
+        const match = path.match(/gallery\/([^/]+)\//i);
+        const category = match ? match[1].replace(/[-_]/g, " ") : "Gallery";
+
+        return {
+            image: img.src,
+            text: category,
+            category,
+        };
+    });
 }
 
 export async function getPiercingImages(): Promise<GallerySlide[]> {
