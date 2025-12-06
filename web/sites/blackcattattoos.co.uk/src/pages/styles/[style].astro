@@ -1,10 +1,11 @@
 ---
 import Footer from "../../components/Footer.astro";
 import Layout from "../../layouts/Layout.astro";
-import Button from "../../components/Button.astro";
+import ContactUs from "../../components/ContactUs.astro";
 import Navbar from "../../components/Navbar.astro";
 import {GalleryGrid} from "../../components/solid-js/GalleryGrid.tsx";
 import {getGalleryImages} from "../../utils/image.ts";
+
 export function getStaticPaths() {
     return [
         {params: {style: "sleeve"}},
@@ -27,17 +28,37 @@ export function getStaticPaths() {
 
 const {style} = Astro.params;
 
+// Format style name: capitalize first letter and handle multi-word styles
+function formatStyleName(styleName: string): string {
+    // Handle hyphenated words (e.g., "fine-line" -> "Fine Line")
+    const words = styleName.split('-').map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1)
+    );
+
+    // Handle compound words (e.g., "neotraditional" -> "Neo Traditional")
+    const formatted = words.map(word => {
+        if (word.toLowerCase() === 'neotraditional') return 'Neo Traditional';
+        if (word.toLowerCase() === 'coverup') return 'Cover Up';
+        if (word.toLowerCase() === 'dotwork') return 'Dot Work';
+        return word;
+    });
+
+    return formatted.join(' ');
+}
+
+const formattedStyleName = formatStyleName(style || '');
 const slides = await getGalleryImages(style);
 ---
-<Layout title={{style} + " Style | Black Cat Tattoo & Piercing Parlour"}>
+<Layout title={formattedStyleName + " Gallery | Black Cat Tattoo & Piercing Parlour"}>
     <Navbar/>
-    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white md:max-w-10/12 mx-auto">
-        <h1 class="text-7xl lg:text-9xl font-semibold text-center mb-8">{style} Style</h1>
-        <GalleryGrid client:only="solid-js" slides={slides}/>
 
-        <div class="p-10 items-center justify-center text-center">
-            <Button text="Contact Us!" href="/contact-us"/>
-        </div>
+    <!-- Gallery Section -->
+    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white max-w-6xl mx-auto">
+        <h1 class="text-6xl md:text-7xl lg:text-9xl font-semibold text-center mb-12">{formattedStyleName} Style</h1>
+        <GalleryGrid client:only="solid-js" slides={slides}/>
     </section>
+
+    <ContactUs/>
+
     <Footer/>
 </Layout>

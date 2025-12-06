@@ -3,25 +3,107 @@ import {Image} from "astro:assets";
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import Button from "../components/Button.astro";
-import ShopImage from '../assets/images/shop/7ea9ea26-1e6f-406a-b313-6b3fbb447852.jpg'
+import ContactUs from '../components/ContactUs.astro';
+
+// Import all shop images
+import ShopInterior1 from '../assets/images/shop/105456f2-0abc-4b35-83da-2ebc05d82ebb.jpg';
+import ShopArtistWork from '../assets/images/shop/13cedda7-a75b-439c-a1aa-48658124a803.jpg';
+import ShopStorefront from '../assets/images/shop/b4b189c4-c562-4275-b443-e9b77b49d77b.jpg';
+import ShopArtist from '../assets/images/shop/ced4f8ed-812a-451a-bb18-3a9ffaed23a5.jpg';
+import ShopFeatured from '../assets/images/shop/7ea9ea26-1e6f-406a-b313-6b3fbb447852.jpg';
+import ShopPhoto from '../assets/images/shop/f48c6e60-e28b-43bf-946e-7adc3cb32d56.jpg';
+import ShopExtra from '../assets/images/shop/PHOTO-2025-11-15-15-40-37 8.jpg';
 ---
 <Layout title="Shop | Black Cat Tattoo & Piercing Parlour">
     <Navbar/>
-    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white max-w-6xl mx-auto">
-        <h1 class="text-7xl lg:text-9xl font-semibold text-center mb-8">Shop</h1>
 
-        <Image
-                format="avif"
-                src={ShopImage}
-                alt="Fullscreen image"
-                class="object-contain relative max-h-[90vh] max-w-[90vw] w-auto rounded-lg"
-        />
+    <!-- Hero Section -->
+    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white max-w-6xl mx-auto bg-neutral-950">
+        <h1 class="text-6xl md:text-7xl lg:text-9xl font-semibold text-center mb-8">Our Shop</h1>
 
-        <div class="p-10 items-center justify-center text-center">
-            <Button text="Contact Us!" href="/contact-us"/>
+        <div class="text-center max-w-3xl mx-auto space-y-6">
+            <p class="text-xl md:text-2xl text-gray-300 leading-relaxed">
+                A modern, welcoming studio in the heart of Hounslow.
+            </p>
+            <p class="text-lg md:text-xl text-gray-400 leading-relaxed">
+                Our talented international artists bring your vision to life with custom designs in a clean, comfortable space. Quality work, friendly atmosphere.
+            </p>
         </div>
     </section>
+
+    <!-- Gallery Section -->
+    <section class="bg-dark-grey px-6 md:px-12 lg:px-20 py-20">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-5xl md:text-7xl font-bold text-white text-center mb-12">Inside Our Studio</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopInterior1}
+                            alt="Studio interior with professional equipment"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopArtistWork}
+                            alt="Artist at work creating a custom tattoo"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopStorefront}
+                            alt="Black Cat Tattoo & Piercing Parlour storefront"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopArtist}
+                            alt="Our talented artists in the studio"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopFeatured}
+                            alt="Black Cat Tattoo & Piercing Parlour interior"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopPhoto}
+                            alt="Professional tattoo workspace"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+
+                <div class="overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                            format="avif"
+                            src={ShopExtra}
+                            alt="Clean and modern studio space"
+                            class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactUs/>
 
     <Footer/>
 </Layout>

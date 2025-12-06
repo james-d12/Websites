@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
-import Button from "../components/Button.astro";
+import ContactUs from '../components/ContactUs.astro';
 import {GalleryGrid} from "../components/solid-js/GalleryGrid";
 import {getGalleryImages} from "../utils/image.ts";
 
@@ -13,10 +13,9 @@ const slides = await getGalleryImages();
     <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white md:max-w-10/12 mx-auto">
         <h1 class="text-7xl lg:text-9xl font-semibold text-center mb-8">Gallery</h1>
         <GalleryGrid client:only="solid-js" slides={slides}/>
-
-        <div class="p-10 items-center justify-center text-center">
-            <Button text="Contact Us!" href="/contact-us"/>
-        </div>
     </section>
+
+    <ContactUs/>
+
     <Footer/>
 </Layout>
