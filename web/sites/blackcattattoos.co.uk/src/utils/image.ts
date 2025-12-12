@@ -15,16 +15,28 @@ async function getCustomImage(
   });
 }
 
-export async function getGalleryImages(): Promise<GallerySlide[]> {
+export async function getGalleryImages(
+  style?: string,
+): Promise<GallerySlide[]> {
   const imageModules = import.meta.glob<{ default: ImageMetadata }>(
     "/src/assets/images/gallery/**/*.{jpg,png,jpeg}",
     { eager: true },
   );
 
-  const metadata = Object.entries(imageModules).map(([path, m]) => ({
-    path,
-    src: m.default,
-  }));
+  console.log(style);
+
+  // Convert style to lowercase once for comparison (if provided)
+  const styleFilter = style?.toLowerCase();
+
+  const metadata = Object.entries(imageModules)
+    .map(([path, m]) => ({
+      path,
+      src: m.default,
+    }))
+    .filter(({ path }) => {
+      if (!styleFilter) return true; // no style → return all
+      return path.toLowerCase().includes(styleFilter); // filter by path match
+    });
 
   const images = await Promise.all(
     metadata.map(({ src }) => getCustomImage({ src })),

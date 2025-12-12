@@ -1,0 +1,43 @@
+---
+import Footer from "../../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import Button from "../../components/Button.astro";
+import Navbar from "../../components/Navbar.astro";
+import {GalleryGrid} from "../../components/solid-js/GalleryGrid.tsx";
+import {getGalleryImages} from "../../utils/image.ts";
+export function getStaticPaths() {
+    return [
+        {params: {style: "sleeve"}},
+        {params: {style: "flash"}},
+        {params: {style: "traditional"}},
+        {params: {style: "realism"}},
+        {params: {style: "portrait"}},
+        {params: {style: "coverup"}},
+        {params: {style: "chicano"}},
+        {params: {style: "mondala"}},
+        {params: {style: "lettering"}},
+        {params: {style: "fine-line"}},
+        {params: {style: "neotraditional"}},
+        {params: {style: "japanese"}},
+        {params: {style: "tribal"}},
+        {params: {style: "dotwork"}},
+        {params: {style: "geometric"}},
+    ];
+}
+
+const {style} = Astro.params;
+
+const slides = await getGalleryImages(style);
+---
+<Layout title={{style} + " Style | Black Cat Tattoo & Piercing Parlour"}>
+    <Navbar/>
+    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white md:max-w-10/12 mx-auto">
+        <h1 class="text-7xl lg:text-9xl font-semibold text-center mb-8">{style} Style</h1>
+        <GalleryGrid client:only="solid-js" slides={slides}/>
+
+        <div class="p-10 items-center justify-center text-center">
+            <Button text="Contact Us!" href="/contact-us"/>
+        </div>
+    </section>
+    <Footer/>
+</Layout>
