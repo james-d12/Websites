@@ -48,7 +48,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
       const scrollPosition = window.scrollY + window.innerHeight;
       const bottomPosition = document.documentElement.scrollHeight;
 
-      if (scrollPosition + 300 >= bottomPosition) {
+      if (scrollPosition + 800 >= bottomPosition) {
         loadMore();
       }
     };

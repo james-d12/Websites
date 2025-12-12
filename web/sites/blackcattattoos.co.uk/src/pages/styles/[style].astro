@@ -52,9 +52,8 @@ const slides = await getGalleryImages(style);
 <Layout title={formattedStyleName + " Gallery | Black Cat Tattoo & Piercing Parlour"}>
     <Navbar/>
 
-    <!-- Gallery Section -->
-    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white max-w-6xl mx-auto">
-        <h1 class="text-6xl md:text-7xl lg:text-9xl font-semibold text-center mb-12">{formattedStyleName} Style</h1>
+    <section class="pt-36 pb-20 px-6 md:px-12 lg:px-20 text-white md:max-w-10/12 mx-auto">
+        <h1 class="text-7xl lg:text-9xl font-semibold text-center mb-8 text-white">{formattedStyleName} Style</h1>
         <GalleryGrid client:only="solid-js" slides={slides}/>
     </section>
 

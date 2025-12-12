@@ -1,0 +1,73 @@
+---
+import {Image} from 'astro:assets';
+import Button from "./Button.astro";
+
+// Import featured images showcasing different styles
+import RealismImg from '../assets/images/gallery/realism/5d7a7771-b063-4a56-b760-64965020fdf6.jpg';
+import PortraitsImg from '../assets/images/gallery/portrait/8dd90987-9b4a-4ab2-b851-31504a281795.jpg';
+import JapaneseImg from '../assets/images/gallery/japanese/a580caa2-eb47-4122-8227-67b2ebb5c082.jpg';
+import FineLineImg from '../assets/images/gallery/fine-line/7fe7d7f4-6b41-464b-b6ea-b5787e3aea81.jpg';
+import SleeveImg from '../assets/images/gallery/sleeve/90ac9e8d-b173-47c0-a095-c66384a5d865.jpg';
+import GeometricImg from '../assets/images/gallery/geometric/4c97350f-7023-44fd-ac96-b79764f2eb97.jpg';
+
+const featuredWork = [
+    {img: RealismImg, style: "Realism", link: "/styles/realism"},
+    {img: PortraitsImg, style: "Portraits", link: "/styles/portrait"},
+    {img: JapaneseImg, style: "Japanese", link: "/styles/japanese"},
+    {img: FineLineImg, style: "Fine Line", link: "/styles/fine-line"},
+    {img: SleeveImg, style: "Sleeves", link: "/styles/sleeve"},
+    {img: GeometricImg, style: "Geometric", link: "/styles/geometric"},
+];
+---
+<section class="bg-dark-grey text-white py-20 md:py-32 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+        <!-- Heading -->
+        <div class="text-center mb-16">
+            <h2 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 text-white animate-pulse">
+                Our Work
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
+                From bold traditional to intricate fine line. Explore the artistry that sets us apart
+            </p>
+        </div>
+
+        <!-- Featured Work Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-16">
+            {featuredWork.map((work) => (
+                <a
+                    href={work.link}
+                    class="group relative overflow-hidden rounded-lg aspect-square shadow-2xl transition-all duration-500 transform hover:scale-105"
+                >
+                    <Image
+                        format="avif"
+                        src={work.img}
+                        alt={work.style}
+                        class="w-full h-full object-cover"
+                    />
+                    <!-- Overlay on hover -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-100 flex items-end justify-center pb-6">
+                        <span class="text-3xl md:text-4xl font-bold text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-100">
+                            {work.style}
+                        </span>
+                    </div>
+                </a>
+            ))}
+        </div>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <Button text="View All Styles" href="/styles"/>
+            <Button text="Full Gallery" href="/gallery"/>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    .animate-pulse {
+        animation: pulse 3s ease-in-out infinite;
+    }
+</style>
