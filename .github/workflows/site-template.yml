@@ -44,7 +44,7 @@ jobs:
         run: |
           echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v4
+      - uses: actions/cache@v5
         name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
@@ -73,7 +73,7 @@ jobs:
         run: pnpm audit
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: site-dist-${{ inputs.site }}
           path: ${{ env.site_full_path }}/dist
@@ -87,7 +87,7 @@ jobs:
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
@@ -138,7 +138,7 @@ jobs:
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v6
+        uses: actions/download-artifact@v7
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
