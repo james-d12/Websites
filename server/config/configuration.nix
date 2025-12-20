@@ -7,6 +7,7 @@
     ./modules/website.nix
     ./modules/disk-config.nix
     ./modules/ssh.nix
+    ./modules/docker
   ];
 
   hardware.cpu.intel.updateMicrocode = true;
