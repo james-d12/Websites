@@ -35,7 +35,8 @@
         group = "docker-strapi";
         home = "/var/lib/docker-strapi";
         createHome = true;
-        description = "Rootless Docker user for Strapi";
+        description = "Docker user for Strapi";
+        extraGroups = [ "docker" ];
     };
     users.ci = {
         name = "ci";
