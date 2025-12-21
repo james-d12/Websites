@@ -4,10 +4,10 @@
   imports = [
     ./modules/hardware.nix
     ./modules/networking.nix
-    ./modules/website.nix
     ./modules/disk-config.nix
     ./modules/ssh.nix
     ./modules/docker
+    ./modules/web
   ];
 
   hardware.cpu.intel.updateMicrocode = true;
@@ -30,6 +30,13 @@
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
     };
+    users.docker-strapi = {
+        isSystemUser = true;
+        group = "docker-strapi";
+        home = "/var/lib/docker-strapi";
+        createHome = true;
+        description = "Rootless Docker user for Strapi";
+    };
     users.ci = {
         name = "ci";
         home = "/home/ci";
@@ -39,6 +46,7 @@
         initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
         extraGroups = [ "wwwrun" ];
     };
+    groups.docker-strapi = {};
   };
 
   security.sudo.enable = true;
@@ -62,83 +70,5 @@
         cache.vps-1:0B8t1aU6u7uabuiApQzUa0AcKwvn0nbq3lzoc2lCE50=
     ];
     experimental-features = [ "nix-command" "flakes" ];
-  };
-
-  websites = {
-    enable = true;
-    email = "james_d02@protonmail.com";
-
-    sites = [
-      {
-        name = "blackcattattoos.co.uk";
-        provider = "ionos";
-        documentRoot = "/var/www/blackcattattoos.co.uk";
-        serverAliases = [ "www.blackcattattoos.co.uk" "blackcattattoos.co.uk" ];
-        isStaging = false;
-      }
-      {
-        name = "staging.blackcattattoos.co.uk";
-        provider = "ionos";
-        documentRoot = "/var/www/staging.blackcattattoos.co.uk";
-        serverAliases = [ "www.staging.blackcattattoos.co.uk" "staging.blackcattattoos.co.uk" ];
-        isStaging = true;
-      }
-      {
-        name = "stcatherinesgroup.com";
-        provider = "ionos";
-        documentRoot = "/var/www/stcatherinesgroup.com";
-        serverAliases = [ "www.stcatherinesgroup.com" "stcatherinesgroup.com" ];
-        isStaging = false;
-      }
-      {
-        name = "staging.stcatherinesgroup.com";
-        provider = "ionos";
-        documentRoot = "/var/www/staging.stcatherinesgroup.com";
-        serverAliases = [ "www.staging.stcatherinesgroup.com" "staging.stcatherinesgroup.com" ];
-        isStaging = true;
-      }
-      {
-        name = "reroofandbuildsurrey.com";
-        provider = "ionos";
-        documentRoot = "/var/www/reroofandbuildsurrey.com";
-        serverAliases = [ "www.reroofandbuildsurrey.com" "reroofandbuildsurrey.com" ];
-        isStaging = false;
-      }
-      {
-        name = "staging.reroofandbuildsurrey.com";
-        provider = "ionos";
-        documentRoot = "/var/www/staging.reroofandbuildsurrey.com";
-        serverAliases = [ "www.staging.reroofandbuildsurrey.com" "staging.reroofandbuildsurrey.com" ];
-        isStaging = true;
-      }
-      {
-        name = "thecontourclinicrichmond.co.uk";
-        provider = "ionos";
-        documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
-        serverAliases = [ "www.thecontourclinicrichmond.co.uk" "thecontourclinicrichmond.co.uk" ];
-        isStaging = false;
-      }
-      {
-        name = "staging.thecontourclinicrichmond.co.uk";
-        provider = "ionos";
-        documentRoot = "/var/www/staging.thecontourclinicrichmond.co.uk";
-        serverAliases = [ "www.staging.thecontourclinicrichmond.co.uk" "staging.thecontourclinicrichmond.co.uk" ];
-        isStaging = true;
-      }
-      {
-        name = "jamesdurban.com";
-        provider = "ionos";
-        documentRoot = "/var/www/jamesdurban.com";
-        serverAliases = [ "www.jamesdurban.com" "jamesdurban.com" ];
-        isStaging = false;
-      }
-      {
-        name = "staging.jamesdurban.com";
-        provider = "ionos";
-        documentRoot = "/var/www/staging.jamesdurban.com";
-        serverAliases = [ "www.staging.jamesdurban.com" "staging.jamesdurban.com" ];
-        isStaging = true;
-      }
-    ];
   };
 }
