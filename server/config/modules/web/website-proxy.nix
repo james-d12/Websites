@@ -1,5 +1,24 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
+let
+  defaultHeaders = ''
+    Header always set Strict-Transport-Security "max-age=63072000; includeSubdomains;"
+    Header always set Content-Security-Policy-Report-Only "default-src 'self'; script-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self';"
+    Header always set X-Frame-Options "DENY"
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Cross-Origin-Opener-Policy "same-origin"
+    Header always set Cross-Origin-Embedder-Policy "unsafe-none"
+    Header always set Cross-Origin-Resource-Policy "cross-origin"
+    Header always set Permissions-Policy "accelerometer=(), autoplay=(), camera=(), clipboard-read=(), clipboard-write=(), display-capture=(), encrypted-media=(), fullscreen=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), midi=(), payment=(), usb=(), screen-wake-lock=(), ambient-light-sensor=(), bluetooth=(), vr=(), xr-spatial-tracking=()"
+  '';
+in
 {
   options.websitesProxy = {
     enable = lib.mkEnableOption "Reverse-proxied websites";
@@ -11,7 +30,7 @@
 
     sites = lib.mkOption {
       type = lib.types.listOf lib.types.attrs;
-      default = [];
+      default = [ ];
       description = "Proxy sites";
     };
   };
@@ -38,32 +57,36 @@
         "${site.name}" = {
           forceSSL = true;
           documentRoot = "/var/empty";
-          serverAliases = site.serverAliases or [];
+          serverAliases = site.serverAliases or [ ];
           useACMEHost = site.name;
 
-          extraConfig = ''
-            ProxyPreserveHost On
-            ProxyRequests Off
+          extraConfig = lib.concatStringsSep "\n" [
+            defaultHeaders
+            (site.extraHeaders or "")
+            ''
+              ProxyPreserveHost On
+              ProxyRequests Off
 
-            <Proxy *>
-              Require all granted
-            </Proxy>
+              <Proxy *>
+                Require all granted
+              </Proxy>
 
-            ProxyPass        / ${site.proxyTo}/ retry=0 timeout=300
-            ProxyPassReverse / ${site.proxyTo}/
+              ProxyPass        / ${site.proxyTo}/ retry=0 timeout=300
+              ProxyPassReverse / ${site.proxyTo}/
 
-            RewriteEngine On
-            RewriteCond %{HTTP:Upgrade} =websocket [NC]
-            RewriteRule /(.*) ws://${lib.removePrefix "http://" site.proxyTo}/$1 [P,L]
-            RewriteCond %{HTTP:Upgrade} !=websocket [NC]
-            RewriteRule /(.*) ${site.proxyTo}/$1 [P,L]
+              RewriteEngine On
+              RewriteCond %{HTTP:Upgrade} =websocket [NC]
+              RewriteRule /(.*) ws://${lib.removePrefix "http://" site.proxyTo}/$1 [P,L]
+              RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+              RewriteRule /(.*) ${site.proxyTo}/$1 [P,L]
 
-            RequestHeader set X-Forwarded-Proto "https"
-            RequestHeader set X-Forwarded-Ssl on
+              RequestHeader set X-Forwarded-Proto "https"
+              RequestHeader set X-Forwarded-Ssl on
 
-            SSLEngine on
-            SSLHonorCipherOrder on
-          '';
+              SSLEngine on
+              SSLHonorCipherOrder on
+            ''
+          ];
         };
       }) config.websitesProxy.sites
     );

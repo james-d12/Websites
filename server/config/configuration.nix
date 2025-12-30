@@ -25,19 +25,22 @@
   users = {
     mutableUsers = true;
     users.james = {
-        initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
-        home = "/home/james";
-        isNormalUser = true;
-        extraGroups = [ "wheel" "networkmanager" ];
+      initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
+      home = "/home/james";
+      isNormalUser = true;
+      extraGroups = [
+        "wheel"
+        "networkmanager"
+      ];
     };
     users.ci = {
-        name = "ci";
-        home = "/home/ci";
-        description = "Account used for CI operations";
-        createHome = true;
-        isNormalUser = true;
-        initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
-        extraGroups = [ "wwwrun" ];
+      name = "ci";
+      home = "/home/ci";
+      description = "Account used for CI operations";
+      createHome = true;
+      isNormalUser = true;
+      initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
+      extraGroups = [ "wwwrun" ];
     };
   };
 
@@ -59,8 +62,11 @@
 
   nix.settings = {
     trusted-public-keys = [
-        cache.vps-1:0B8t1aU6u7uabuiApQzUa0AcKwvn0nbq3lzoc2lCE50=
+      "cache.vps-1:0B8t1aU6u7uabuiApQzUa0AcKwvn0nbq3lzoc2lCE50="
     ];
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
   };
 }

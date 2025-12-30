@@ -33,5 +33,4 @@ services:
       DB_DATABASE: "directus"
       DB_USER: "directus"
       DB_PASSWORD: "directus"
-      PUBLIC_URL: "cms.blackcattattoos.co.uk"
       TELEMETRY: "false"
