@@ -1,16 +1,16 @@
 { pkgs, ... }:
 
 {
-users.users.docker-strapi = {
-        isSystemUser = true;
-        group = "docker-strapi";
-        home = "/var/lib/docker-strapi";
-        createHome = true;
-        description = "Docker user for Strapi";
-        extraGroups = [ "docker" ];
-    };
+  users.users.docker-strapi = {
+    isSystemUser = true;
+    group = "docker-strapi";
+    home = "/var/lib/docker-strapi";
+    createHome = true;
+    description = "Docker user for Strapi";
+    extraGroups = [ "docker" ];
+  };
 
-    users.groups.docker-strapi = {};
+  users.groups.docker-strapi = { };
   systemd.services.strapi = {
     description = "Strapi CMS (Docker as root)";
     after = [
@@ -23,7 +23,7 @@ users.users.docker-strapi = {
       Type = "simple";
       WorkingDirectory = "/var/lib/strapi/app";
       ExecStart = "${pkgs.docker}/bin/docker compose -f docker-compose.yml up --force-recreate";
-      ExecStop  = "${pkgs.docker}/bin/docker compose -f docker-compose.yml down";
+      ExecStop = "${pkgs.docker}/bin/docker compose -f docker-compose.yml down";
       Restart = "always";
       RestartSec = 5;
     };
@@ -35,9 +35,9 @@ users.users.docker-strapi = {
     "strapi-app" = {
       "/var/lib/strapi/app" = {
         d = {
-            user = "docker-strapi";
-            group = "docker-strapi";
-            mode = "0755";
+          user = "docker-strapi";
+          group = "docker-strapi";
+          mode = "0755";
         };
       };
     };
@@ -45,9 +45,9 @@ users.users.docker-strapi = {
     "strapi-data" = {
       "/var/lib/strapi/data" = {
         d = {
-            user = "docker-strapi";
-            group = "docker-strapi";
-            mode = "0755";
+          user = "docker-strapi";
+          group = "docker-strapi";
+          mode = "0755";
         };
       };
     };

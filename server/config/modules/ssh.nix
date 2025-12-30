@@ -4,34 +4,37 @@
     ports = [ 51196 ];
     allowSFTP = true;
     settings = {
-        KbdInteractiveAuthentication = false;
-        PermitRootLogin = "no";
-        UsePAM = false;
-        StrictModes = true;
-        PasswordAuthentication = false;
-        AllowUsers = [ "james" "ci" ];
-        X11Forwarding = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+      UsePAM = false;
+      StrictModes = true;
+      PasswordAuthentication = false;
+      AllowUsers = [
+        "james"
+        "ci"
+      ];
+      X11Forwarding = false;
     };
     extraConfig = ''
-          MaxSessions 3
-          MaxAuthTries 6
-          LoginGraceTime 20
-          ClientAliveInterval 300
-          ClientAliveCountMax 0
-          AllowTcpForwarding no
-          AllowAgentForwarding no
-          AllowStreamLocalForwarding no
-          AuthenticationMethods publickey
-          PermitEmptyPasswords no
+      MaxSessions 3
+      MaxAuthTries 6
+      LoginGraceTime 20
+      ClientAliveInterval 300
+      ClientAliveCountMax 0
+      AllowTcpForwarding no
+      AllowAgentForwarding no
+      AllowStreamLocalForwarding no
+      AuthenticationMethods publickey
+      PermitEmptyPasswords no
     '';
   };
 
   users.users = {
     james.openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgiJiaS9ydBTHyc7YBei0hEyH4rspbWWFJxy73JWfVI"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPgiJiaS9ydBTHyc7YBei0hEyH4rspbWWFJxy73JWfVI"
     ];
     ci.openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpS5ydDxVgVzQQ+584z6DeEILc2gVxUMWfUAxt/xK5z"
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpS5ydDxVgVzQQ+584z6DeEILc2gVxUMWfUAxt/xK5z"
     ];
   };
 }
