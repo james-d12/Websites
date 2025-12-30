@@ -45,14 +45,14 @@
         d = {
             user = "docker-directus";
             group = "docker-directus";
-            mode = "0755";
+            mode = "0777";
         };
       };
       "/var/lib/directus/extensions" = {
         d = {
             user = "docker-directus";
             group = "docker-directus";
-            mode = "0755";
+            mode = "0777";
         };
       };
       "/var/lib/directus/database" = {
