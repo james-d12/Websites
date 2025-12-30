@@ -26,7 +26,7 @@ services:
       database:
         condition: service_healthy
     environment:
-      SECRET: "1234"
+      SECRET: "gh4zYPpCsbistqW2BFOWcHeqUkNpF9jw"
       DB_CLIENT: "pg"
       DB_HOST: "database"
       DB_PORT: "5432"
@@ -34,3 +34,6 @@ services:
       DB_USER: "directus"
       DB_PASSWORD: "directus"
       TELEMETRY: "false"
+      PUBLIC_URL: "https://cms.blackcattattoos.co.uk"
+      ACCEPT_TERMS: "true"
+      PROJECT_OWNER: "James Durban"

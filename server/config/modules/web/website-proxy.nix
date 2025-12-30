@@ -71,8 +71,8 @@ in
                 Require all granted
               </Proxy>
 
-              ProxyPass        / ${site.proxyTo}/ retry=0 timeout=300
-              ProxyPassReverse / ${site.proxyTo}/
+              ProxyPass        / ${site.proxyTo} retry=0 timeout=300
+              ProxyPassReverse / ${site.proxyTo}
 
               RewriteEngine On
               RewriteCond %{HTTP:Upgrade} =websocket [NC]
