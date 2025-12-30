@@ -1,6 +1,16 @@
 { pkgs, ... }:
 
 {
+users.users.docker-strapi = {
+        isSystemUser = true;
+        group = "docker-strapi";
+        home = "/var/lib/docker-strapi";
+        createHome = true;
+        description = "Docker user for Strapi";
+        extraGroups = [ "docker" ];
+    };
+
+    users.groups.docker-strapi = {};
   systemd.services.strapi = {
     description = "Strapi CMS (Docker as root)";
     after = [

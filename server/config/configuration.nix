@@ -30,14 +30,6 @@
         isNormalUser = true;
         extraGroups = [ "wheel" "networkmanager" ];
     };
-    users.docker-strapi = {
-        isSystemUser = true;
-        group = "docker-strapi";
-        home = "/var/lib/docker-strapi";
-        createHome = true;
-        description = "Docker user for Strapi";
-        extraGroups = [ "docker" ];
-    };
     users.ci = {
         name = "ci";
         home = "/home/ci";
@@ -47,7 +39,6 @@
         initialHashedPassword = "$y$j9T$mf3VWdk5RdB4Ix.q2JuTa0$rhnRoL4yzYGCOlaSePTW6cpq79T.LecCTC3EC6DqaS3";
         extraGroups = [ "wwwrun" ];
     };
-    groups.docker-strapi = {};
   };
 
   security.sudo.enable = true;

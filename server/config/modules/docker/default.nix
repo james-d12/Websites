@@ -2,14 +2,10 @@
 
 {
   imports = [
-    ./strapi
+    ./directus
   ];
 
   virtualisation.docker = {
     enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
   };
 }
