@@ -25,3 +25,10 @@ updates:
           - "*"
     assignees:
       - "james-d12"
+
+  - package-ecosystem: "docker-compose"
+    directory: "/server/modules/docker/*"
+    schedule:
+      interval: "weekly"
+    assignees:
+      - "james-d12"
