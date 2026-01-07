@@ -27,7 +27,8 @@ updates:
       - "james-d12"
 
   - package-ecosystem: "docker-compose"
-    directory: "/server/modules/docker/*"
+    directories:
+      - "/server/modules/docker/*"
     schedule:
       interval: "weekly"
     assignees:
