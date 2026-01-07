@@ -1,8 +1,8 @@
 services:
   database:
-    image: postgis/postgis:13-master
+    image: postgis/postgis:18-3.6
     volumes:
-      - ./database:/var/lib/postgresql/data
+      - ./database:/var/lib/postgresql
     environment:
       POSTGRES_USER: "directus"
       POSTGRES_PASSWORD: "directus"
