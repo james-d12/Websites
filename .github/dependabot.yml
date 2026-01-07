@@ -16,7 +16,8 @@ updates:
       - "james-d12"
 
   - package-ecosystem: "github-actions"
-    directory: "/"
+    directories:
+      - "/.github/workflows"
     schedule:
       interval: "weekly"
     groups:
