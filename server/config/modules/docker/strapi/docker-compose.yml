@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  strapi:
+    image: strapi/strapi:latest
+    container_name: blackcattattoos-strapi
+    working_dir: /srv/app
+    volumes:
+      - /var/lib/strapi/app:/srv/app
+      - /var/lib/strapi/data:/srv/app/.tmp
+    ports:
+      - "1337:1337"
+    restart: unless-stopped

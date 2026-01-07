@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   defaultHeaders = ''
@@ -42,41 +47,42 @@ in
     services.httpd.sslCiphers = "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS";
 
     services.httpd.virtualHosts = lib.mkMerge (
-      map (site:
+      map (
+        site:
         let
-          stagingHeader = if site.isStaging then
-            ''Header always set X-Robots-Tag "noindex, nofollow"''
-          else "";
+          stagingHeader =
+            if site.isStaging then ''Header always set X-Robots-Tag "noindex, nofollow"'' else "";
         in
         {
-        "${site.name}" = {
-          forceSSL = true;
-          documentRoot = site.documentRoot;
-          serverAliases = site.serverAliases;
-          useACMEHost = site.name;
-          extraConfig = lib.concatStringsSep "\n" [
-            defaultHeaders
-            (site.extraHeaders or "")
-            stagingHeader
-            ''
-              <Directory "${site.documentRoot}">
-                Options -Indexes
-                AllowOverride None
-                Require all granted
-              </Directory>
+          "${site.name}" = {
+            forceSSL = true;
+            documentRoot = site.documentRoot;
+            serverAliases = site.serverAliases;
+            useACMEHost = site.name;
+            extraConfig = lib.concatStringsSep "\n" [
+              defaultHeaders
+              (site.extraHeaders or "")
+              stagingHeader
+              ''
+                <Directory "${site.documentRoot}">
+                  Options -Indexes
+                  AllowOverride None
+                  Require all granted
+                </Directory>
 
-              # Redirect HTTP to HTTPS (except ACME challenge)
-              RewriteEngine On
-              RewriteCond %{HTTPS} off
-              RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
-              RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+                # Redirect HTTP to HTTPS (except ACME challenge)
+                RewriteEngine On
+                RewriteCond %{HTTPS} off
+                RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
+                RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-              SSLEngine on
-              SSLHonorCipherOrder on
-            ''
-          ];
-        };
-      }) config.websites.sites
+                SSLEngine on
+                SSLHonorCipherOrder on
+              ''
+            ];
+          };
+        }
+      ) config.websites.sites
     );
 
     security.acme = {
@@ -95,8 +101,9 @@ in
       );
     };
 
-    systemd.tmpfiles.rules =
-      map (site: "d ${site.documentRoot} 0775 wwwrun wwwrun -") config.websites.sites;
+    systemd.tmpfiles.rules = map (
+      site: "d ${site.documentRoot} 0775 wwwrun wwwrun -"
+    ) config.websites.sites;
 
     systemd.tmpfiles.settings = lib.mkMerge [
       (lib.listToAttrs (

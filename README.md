@@ -48,6 +48,13 @@ I use for my VPS that hosts my sites.
 3. Run ```docker compose run --rm nix```.
 4. Then run ```nix flake update``` and commit the changes.
 
+### Formatting Nix Files
+
+1. Install Docker on your system.
+2. Navigate to the ```server``` folder.
+3. Run ```docker compose run --rm nix```.
+4. Within the docker container, now run ```nix fmt .```.
+
 ### Updating Secret with Agenix
 
 1. Install Docker on your system.

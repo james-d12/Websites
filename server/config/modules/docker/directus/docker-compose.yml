@@ -1,0 +1,39 @@
+services:
+  database:
+    image: postgis/postgis:18-3.6
+    volumes:
+      - ./database:/var/lib/postgresql
+    environment:
+      POSTGRES_USER: "directus"
+      POSTGRES_PASSWORD: "directus"
+      POSTGRES_DB: "directus"
+    healthcheck:
+      test: ["CMD", "pg_isready", "--host=localhost", "--username=directus"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_interval: 5s
+      start_period: 30s
+
+  directus:
+    image: directus/directus:11
+    ports:
+      - 8055:8055
+    volumes:
+      - ./uploads:/directus/uploads
+      - ./extensions:/directus/extensions
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      SECRET: "gh4zYPpCsbistqW2BFOWcHeqUkNpF9jw"
+      DB_CLIENT: "pg"
+      DB_HOST: "database"
+      DB_PORT: "5432"
+      DB_DATABASE: "directus"
+      DB_USER: "directus"
+      DB_PASSWORD: "directus"
+      TELEMETRY: "false"
+      PUBLIC_URL: "https://cms.blackcattattoos.co.uk"
+      ACCEPT_TERMS: "true"
+      PROJECT_OWNER: "James Durban"
