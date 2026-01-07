@@ -50,6 +50,9 @@ in
         "rewrite"
         "ssl"
       ];
+
+      sslProtocols = "All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1";
+      sslCiphers = "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS";
     };
 
     services.httpd.virtualHosts = lib.mkMerge (
@@ -67,24 +70,13 @@ in
               ProxyPreserveHost On
               ProxyRequests Off
 
-              <Proxy *>
-                Require all granted
-              </Proxy>
-
               ProxyPass        / ${site.proxyTo} retry=0 timeout=300
               ProxyPassReverse / ${site.proxyTo}
 
-              RewriteEngine On
-              RewriteCond %{HTTP:Upgrade} =websocket [NC]
-              RewriteRule /(.*) ws://${lib.removePrefix "http://" site.proxyTo}/$1 [P,L]
-              RewriteCond %{HTTP:Upgrade} !=websocket [NC]
-              RewriteRule /(.*) ${site.proxyTo}/$1 [P,L]
-
               RequestHeader set X-Forwarded-Proto "https"
+              RequestHeader set X-Forwarded-Host "%{HTTP_HOST}s"
+              RequestHeader set X-Forwarded-Port "443"
               RequestHeader set X-Forwarded-Ssl on
-
-              SSLEngine on
-              SSLHonorCipherOrder on
             ''
           ];
         };

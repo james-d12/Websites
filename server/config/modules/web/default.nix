@@ -120,7 +120,7 @@
       {
         name = "cms.blackcattattoos.co.uk";
         provider = "ionos";
-        proxyTo = "http://0.0.0.0:8055";
+        proxyTo = "http://127.0.0.1:8055/";
       }
     ];
   };
