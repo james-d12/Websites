@@ -11,7 +11,7 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
   );
 
   return cmsTattoos.map((tattoo) => ({
-    text: tattoo.Title,
+    text: tattoo.Style,
     category: tattoo.Style,
     image: getTattooImageUrl(tattoo.Image),
   }));
