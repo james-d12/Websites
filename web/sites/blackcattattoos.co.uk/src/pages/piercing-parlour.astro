@@ -5,8 +5,9 @@ import Footer from '../components/Footer.astro';
 import {getPiercingImages} from "../utils/image.ts";
 import {GalleryGrid} from "../components/solid-js/GalleryGrid.tsx";
 import Button from "../components/Button.astro";
+import {getPiercingsAsync} from "../utils/cms.ts";
 
-const slides = await getPiercingImages();
+const slides = await getPiercingsAsync();
 ---
 <Layout title="Piercing Parlour | Black Cat Tattoo & <Pierci></Pierci>ng Parlour">
     <Navbar/>

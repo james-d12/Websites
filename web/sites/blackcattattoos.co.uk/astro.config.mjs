@@ -10,6 +10,8 @@ export default defineConfig({
   },
   site: "https://blackcattattoos.co.uk",
   image: {
+    domains: import.meta.env.DIRECTUS_URL,
+    remotePatterns: [{ protocol: "https" }],
     service: sharpImageService(),
   },
 

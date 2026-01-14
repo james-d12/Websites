@@ -1,40 +1,14 @@
 ---
 import {Image} from 'astro:assets';
+import Button from './Button.astro';
 
-// Replace these imports with your actual image files
-import SleevesImg from '../assets/images/gallery/sleeve/90ac9e8d-b173-47c0-a095-c66384a5d865.jpg';
-import FlashImg from '../assets/images/styles/flash.jpg';
-import AmericanTraditionalImg from '../assets/images/styles/american-traditional.jpg';
-import RealismImg from '../assets/images/gallery/realism/5d7a7771-b063-4a56-b760-64965020fdf6.jpg';
-import PortraitsImg from '../assets/images/gallery/portrait/8dd90987-9b4a-4ab2-b851-31504a281795.jpg';
-import CoverupsImg from '../assets/images/gallery/coverup/7f58d5d6-9888-4609-9eb8-0ec75aabd432.jpg';
-import ChicanoImg from '../assets/images/styles/chicano.jpg';
-import MondalaImg from '../assets/images/styles/mondala.jpg';
-import LetteringImg from '../assets/images/gallery/lettering/d85f1d65-a5fa-42b8-8495-128a05afece8.jpg';
-import FineLineImg from '../assets/images/gallery/fine-line/7fe7d7f4-6b41-464b-b6ea-b5787e3aea81.jpg';
-import NeoTradImg from '../assets/images/gallery/neo-traditional/7b05bb6a-e9d6-4c10-aa7d-d759abdaebbd.jpg';
-import JapaneseImg from '../assets/images/gallery/japanese/a580caa2-eb47-4122-8227-67b2ebb5c082.jpg';
-import TribalImg from '../assets/images/gallery/tribal/98a25456-84fb-49a3-9100-87b53ae29358.jpg';
-import DotWorkImg from '../assets/images/styles/dot-work.jpg';
-import GeometricImg from '../assets/images/gallery/geometric/4c97350f-7023-44fd-ac96-b79764f2eb97.jpg';
-import Button from "./Button.astro";
+type TattooStyle = {
+    name: string,
+    img: string,
+    link: string
+}
 
 const tattooStyles = [
-    {name: "Sleeves", img: SleevesImg, link: "sleeve"},
-    {name: "Flash Tattoos", img: FlashImg, link: "flash"},
-    {name: "American Traditional", img: AmericanTraditionalImg, link: "traditional"},
-    {name: "Realism - Colour, Black & Grey", img: RealismImg, link: "realism"},
-    {name: "Portraits", img: PortraitsImg, link: "portrait"},
-    {name: "Coverups", img: CoverupsImg, link: "coverup"},
-    {name: "Chicano", img: ChicanoImg, link: "chicano"},
-    {name: "Mondala", img: MondalaImg, link: "mondala"},
-    {name: "Lettering", img: LetteringImg, link: "lettering"},
-    {name: "Fine Line", img: FineLineImg, link: "fine line"},
-    {name: "Neo Trad", img: NeoTradImg, link: "neo traditional"},
-    {name: "Japanese", img: JapaneseImg, link: "japanese"},
-    {name: "Tribal", img: TribalImg, link: "tribal"},
-    {name: "Dot Work", img: DotWorkImg, link: "dotwork"},
-    {name: "Geometric", img: GeometricImg, link: "geometric"},
 ];
 ---
 <section id="styles" class="bg-dark-grey text-white py-24 px-6">
