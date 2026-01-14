@@ -1,7 +1,7 @@
 interface ImportMetaEnv {
-    readonly DIRECTUS_URL: string;
+  readonly DIRECTUS_URL: string;
 }
 
 interface ImportMeta {
-    readonly env: ImportMetaEnv;
+  readonly env: ImportMetaEnv;
 }

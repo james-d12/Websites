@@ -1,15 +1,9 @@
 ---
 import {Image} from 'astro:assets';
 import Button from './Button.astro';
+import {getTattooStylesAsync} from "../utils/cms.ts";
 
-type TattooStyle = {
-    name: string,
-    img: string,
-    link: string
-}
-
-const tattooStyles = [
-];
+const tattooStyles = await getTattooStylesAsync();
 ---
 <section id="styles" class="bg-dark-grey text-white py-24 px-6">
     <div class="max-w-6xl mx-auto text-center">
@@ -18,15 +12,14 @@ const tattooStyles = [
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-10">
             {tattooStyles.map((style) => (
                     <div class="bg-neutral-800 rounded-xl overflow-hidden duration-300">
-                        <a href={"/gallery?style=" + style.link}>
-                            <Image
-                                    format="avif"
-                                    src={style.img}
-                                    alt={style.name}
+                        <a href={"/gallery?style=" + style.Style}>
+                            <img
+                                    src={style.Image}
+                                    alt={style.Style}
                                     class="w-full h-64 object-cover transition-transform duration-300 transform hover:scale-105"
                             />
                             <div class="p-4">
-                                <span class="text-2xl">{style.name}</span>
+                                <span class="text-2xl">{style.Style}</span>
                             </div>
                         </a>
                     </div>
