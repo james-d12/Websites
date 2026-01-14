@@ -65,7 +65,7 @@ export async function getTattooStylesAsync(): Promise<{ Style: string; Image: st
 }
 
 export async function getPiercingsAsync(): Promise<GallerySlide[]> {
-    const cmsTattoos = await directus.request(
+    const piercings = await directus.request(
         readItems("Piercings", {
             fields: [
                 "Title",
@@ -76,9 +76,12 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
         })
     );
 
-    return cmsTattoos.map(piercing => ({
+    piercings.map(p => console.log(p.Image))
+
+    return piercings.map(piercing => ({
         title: piercing.Title,
         style: piercing.Style,
+        category: piercing.Style,
         image: getTattooImageUrl(piercing.Image)
     }));
 }
