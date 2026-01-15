@@ -1,6 +1,19 @@
 import directus from "./directus";
 import { readItems } from "@directus/sdk";
+import { getImage } from "astro:assets";
 import type { GallerySlide } from "../components/solid-js/GalleryGrid.tsx";
+
+async function getOptimizedImage(imageId: string): Promise<string> {
+  const imageUrl = `${import.meta.env.DIRECTUS_URL}/assets/${imageId}`;
+
+  const optimizedImage = await getImage({
+    src: imageUrl,
+    format: "avif",
+    inferSize: true,
+  });
+
+  return optimizedImage.src;
+}
 
 export async function getTattoosAsync(): Promise<GallerySlide[]> {
   const cmsTattoos = await directus.request(
@@ -10,11 +23,13 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
     }),
   );
 
-  return cmsTattoos.map((tattoo) => ({
-    text: tattoo.Style,
-    category: tattoo.Style,
-    image: getTattooImageUrl(tattoo.Image),
-  }));
+  return await Promise.all(
+    cmsTattoos.map(async (tattoo) => ({
+      text: tattoo.Style,
+      category: tattoo.Style,
+      image: await getOptimizedImage(tattoo.Image),
+    })),
+  );
 }
 
 export async function getTattoosByStyleAsync(
@@ -32,11 +47,13 @@ export async function getTattoosByStyleAsync(
     }),
   );
 
-  return cmsTattoos.map((tattoo) => ({
-    text: tattoo.Title,
-    category: tattoo.Style,
-    image: getTattooImageUrl(tattoo.Image),
-  }));
+  return await Promise.all(
+    cmsTattoos.map(async (tattoo) => ({
+      text: tattoo.Title,
+      category: tattoo.Style,
+      image: await getOptimizedImage(tattoo.Image),
+    })),
+  );
 }
 
 export async function getTattooStylesAsync(): Promise<
@@ -49,10 +66,12 @@ export async function getTattooStylesAsync(): Promise<
     }),
   );
 
-  return tattooStyles.map((tattooStyles) => ({
-    Style: tattooStyles.Style,
-    Image: getTattooImageUrl(tattooStyles.Image),
-  }));
+  return await Promise.all(
+    tattooStyles.map(async (tattooStyle) => ({
+      Style: tattooStyle.Style,
+      Image: await getOptimizedImage(tattooStyle.Image),
+    })),
+  );
 }
 
 export async function getPiercingsAsync(): Promise<GallerySlide[]> {
@@ -63,16 +82,12 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
     }),
   );
 
-  piercings.map((p) => console.log(p.Image));
-
-  return piercings.map((piercing) => ({
-    title: piercing.Title,
-    style: piercing.Style,
-    category: piercing.Style,
-    image: getTattooImageUrl(piercing.Image),
-  }));
-}
-
-export function getTattooImageUrl(image: string): string {
-  return `${import.meta.env.DIRECTUS_URL}/assets/${image}?format=avif`;
+  return await Promise.all(
+    piercings.map(async (piercing) => ({
+      title: piercing.Title,
+      style: piercing.Style,
+      category: piercing.Style,
+      image: await getOptimizedImage(piercing.Image),
+    })),
+  );
 }
