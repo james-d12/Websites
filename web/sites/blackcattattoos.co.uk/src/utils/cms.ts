@@ -8,7 +8,7 @@ async function getOptimizedImage(imageId: string): Promise<string> {
 
   const optimizedImage = await getImage({
     src: imageUrl,
-    format: "avif",
+    format: "webp",
     inferSize: true,
   });
 
