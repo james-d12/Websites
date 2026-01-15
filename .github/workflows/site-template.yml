@@ -16,6 +16,8 @@ on:
         required: true
       server_key_password:
         required: true
+      directus_url:
+        required: false
 
 jobs:
   build:
@@ -23,6 +25,7 @@ jobs:
     name: Build ${{ inputs.site }}
     env:
       site_full_path: web/sites/${{ inputs.site }}
+      DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
