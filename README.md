@@ -12,7 +12,6 @@ I use for my VPS that hosts my sites.
 - [![Build & Deploy The Contour Clinic Richmond Website](https://github.com/james-d12/Websites/actions/workflows/web-thecontourclinicrichmond.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-thecontourclinicrichmond.yml)
 - [![Build & Deploy Black Cat Tattoos Website](https://github.com/james-d12/Websites/actions/workflows/web-blackcattattoos.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-blackcattattoos.yml)
 - [![Build & Deploy St Catherine's Group Website](https://github.com/james-d12/Websites/actions/workflows/web-stcatherinesgroup.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-stcatherinesgroup.yml)
-- [![Build & Deploy Reroof and Build Surrey Website](https://github.com/james-d12/Websites/actions/workflows/web-reroofandbuildsurrey.yml/badge.svg)](https://github.com/james-d12/Websites/actions/workflows/web-reroofandbuildsurrey.yml)
 
 # Getting Started
 

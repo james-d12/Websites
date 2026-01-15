@@ -50,26 +50,6 @@
         isStaging = true;
       }
       {
-        name = "reroofandbuildsurrey.com";
-        provider = "ionos";
-        documentRoot = "/var/www/reroofandbuildsurrey.com";
-        serverAliases = [
-          "www.reroofandbuildsurrey.com"
-          "reroofandbuildsurrey.com"
-        ];
-        isStaging = false;
-      }
-      {
-        name = "staging.reroofandbuildsurrey.com";
-        provider = "ionos";
-        documentRoot = "/var/www/staging.reroofandbuildsurrey.com";
-        serverAliases = [
-          "www.staging.reroofandbuildsurrey.com"
-          "staging.reroofandbuildsurrey.com"
-        ];
-        isStaging = true;
-      }
-      {
         name = "thecontourclinicrichmond.co.uk";
         provider = "ionos";
         documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
