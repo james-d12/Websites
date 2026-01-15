@@ -41,3 +41,5 @@ services:
       USERS_ADMIN_ACCESS_LIMIT: "1"
       USERS_APP_ACCESS_LIMIT: "3"
       USERS_API_ACCESS_LIMIT: "3"
+      CORS_ENABLED: "true"
+      CORS_ORIGIN: "https://blackcattattoos.co.uk,https://staging.blackcattattoos.co.uk,http://localhost:4321"
