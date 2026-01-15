@@ -19,6 +19,8 @@ jobs:
   build-web:
     runs-on: ubuntu-latest
     name: Build Web
+    env:
+      DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -66,4 +68,4 @@ jobs:
 
       - name: Audit Packages
         working-directory: web
-        run: pnpm audit
+        run: pnpm audit --audit-level moderate

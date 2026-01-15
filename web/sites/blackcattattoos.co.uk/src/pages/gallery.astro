@@ -4,9 +4,9 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Button from "../components/Button.astro";
 import {GalleryGrid} from "../components/solid-js/GalleryGrid";
-import {getGalleryImages} from "../utils/image.ts";
+import {getTattoosAsync} from "../utils/cms.ts";
 
-const slides = await getGalleryImages();
+const slides = await getTattoosAsync();
 ---
 <Layout title="Gallery | Black Cat Tattoo & Piercing Parlour">
     <Navbar/>

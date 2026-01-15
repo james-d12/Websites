@@ -30,3 +30,4 @@ jobs:
       server_ssh_port: ${{ secrets.VPS_PORT }}
       server_key: ${{ secrets.VPS_CI_KEY }}
       server_key_password: ${{ secrets.VPS_CI_KEY_PASSWORD }}
+      directus_url: ${{ secrets.DIRECTUS_URL }}
