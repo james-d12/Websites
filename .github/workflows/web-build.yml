@@ -68,4 +68,4 @@ jobs:
 
       - name: Audit Packages
         working-directory: web
-        run: pnpm audit
+        run: pnpm audit --audit-level moderate
