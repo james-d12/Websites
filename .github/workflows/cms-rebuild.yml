@@ -1,0 +1,25 @@
+name: CMS Rebuild Trigger
+permissions:
+  contents: read
+
+on:
+  repository_dispatch:
+    types: [cms-rebuild]
+
+concurrency:
+  group: cms-rebuild-${{ github.event.client_payload.site }}
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    name: "CMS Triggered Rebuild"
+    uses: ./.github/workflows/site-template.yml
+    with:
+      site: ${{ github.event.client_payload.site }}
+      skip_environment_gates: false
+    secrets:
+      server_host: ${{ secrets.VPS_HOST }}
+      server_ssh_port: ${{ secrets.VPS_PORT }}
+      server_key: ${{ secrets.VPS_CI_KEY }}
+      server_key_password: ${{ secrets.VPS_CI_KEY_PASSWORD }}
+      directus_url: ${{ secrets.DIRECTUS_URL }}
