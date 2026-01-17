@@ -16,7 +16,7 @@ jobs:
     uses: ./.github/workflows/site-template.yml
     with:
       site: ${{ github.event.client_payload.site }}
-      skip_environment_gates: true
+      cms_deployment: true
     secrets:
       server_host: ${{ secrets.VPS_HOST }}
       server_ssh_port: ${{ secrets.VPS_PORT }}
