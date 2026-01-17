@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import Button from "../../components/Button.astro";
 import Navbar from "../../components/Navbar.astro";
 import {GalleryGrid} from "../../components/solid-js/GalleryGrid.tsx";
-import {getTattoosAsync, getTattoosByStyleAsync, getTattooStylesAsync} from "../../utils/cms.ts";
+import {getTattoosAsync, getTattoosByStyleAsync} from "../../utils/cms.ts";
 
 export async function getStaticPaths() {
     const allTattoos = await getTattoosAsync();
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
     console.log(tattooStyles)
 
     return tattooStyles.map(style => ({
-        params: { style }
+        params: {style}
     }));
 }
 

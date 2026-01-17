@@ -91,3 +91,19 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
     })),
   );
 }
+
+export async function getShopImagesAsync(): Promise<GallerySlide[]> {
+  const piercings = await directus.request(
+    readItems("Shop", {
+      fields: ["Title", "Image", "Caption"],
+      sort: ["Title"],
+    }),
+  );
+
+  return await Promise.all(
+    piercings.map(async (piercing) => ({
+      text: piercing.Title,
+      image: await getOptimizedImage(piercing.Image),
+    })),
+  );
+}
