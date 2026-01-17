@@ -1,3 +1,5 @@
 packages:
   - libs/*
   - sites/*
+
+minimumReleaseAge: 1440

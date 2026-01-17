@@ -2,6 +2,7 @@ import { createSignal, For, Show, createMemo, onMount } from "solid-js";
 
 export type GallerySlide = {
   image: string;
+  caption: string;
   text?: string;
   category?: string;
 };
@@ -150,7 +151,7 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
             >
               <img
                 src={slide.image}
-                alt="Gallery image"
+                alt={slide.caption}
                 loading="lazy"
                 class="w-full h-96 object-cover rounded transition-transform duration-300 transform hover:scale-105"
               />

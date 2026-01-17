@@ -16,17 +16,18 @@ async function getOptimizedImage(imageId: string): Promise<string> {
 }
 
 export async function getTattoosAsync(): Promise<GallerySlide[]> {
-  const cmsTattoos = await directus.request(
+  const tattoos = await directus.request(
     readItems("Tattoos", {
-      fields: ["Title", "Style", "Image", "Caption"],
+      fields: ["Title", "Style", "Image"],
       sort: ["Title"],
     }),
   );
 
   return await Promise.all(
-    cmsTattoos.map(async (tattoo) => ({
+    tattoos.map(async (tattoo) => ({
       text: tattoo.Style,
       category: tattoo.Style,
+      caption: tattoo.Title,
       image: await getOptimizedImage(tattoo.Image),
     })),
   );
@@ -35,22 +36,23 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
 export async function getTattoosByStyleAsync(
   style: string,
 ): Promise<GallerySlide[]> {
-  const cmsTattoos = await directus.request(
+  const tattoos = await directus.request(
     readItems("Tattoos", {
       filter: {
         Style: {
           _eq: style,
         },
       },
-      fields: ["Title", "Style", "Image", "Caption"],
+      fields: ["Title", "Style", "Image"],
       sort: ["Title"],
     }),
   );
 
   return await Promise.all(
-    cmsTattoos.map(async (tattoo) => ({
+    tattoos.map(async (tattoo) => ({
       text: tattoo.Title,
       category: tattoo.Style,
+      caption: tattoo.Title,
       image: await getOptimizedImage(tattoo.Image),
     })),
   );
@@ -84,10 +86,27 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
 
   return await Promise.all(
     piercings.map(async (piercing) => ({
-      title: piercing.Title,
-      style: piercing.Style,
+      text: piercing.Title,
       category: piercing.Style,
+      caption: piercing.Title,
       image: await getOptimizedImage(piercing.Image),
+    })),
+  );
+}
+
+export async function getShopImagesAsync(): Promise<GallerySlide[]> {
+  const shopImages = await directus.request(
+    readItems("Shop", {
+      fields: ["Title", "Image"],
+      sort: ["Title"],
+    }),
+  );
+
+  return await Promise.all(
+    shopImages.map(async (shopImage) => ({
+      text: shopImage.Title,
+      caption: shopImage.Title,
+      image: await getOptimizedImage(shopImage.Image),
     })),
   );
 }

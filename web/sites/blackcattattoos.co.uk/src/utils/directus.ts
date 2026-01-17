@@ -4,7 +4,6 @@ export type Tattoo = {
   Title: string;
   Style: string;
   Image: string;
-  Caption?: string | null;
 };
 
 export type TattooStyle = {
@@ -18,10 +17,16 @@ export type Piercing = {
   Image: string;
 };
 
+export type Shop = {
+  Title: string;
+  Image: string;
+};
+
 type Schema = {
   Tattoos: Tattoo[];
   TattooStyles: TattooStyle[];
   Piercings: Piercing[];
+  Shop: Shop[];
 };
 
 const directus = createDirectus<Schema>(import.meta.env.DIRECTUS_URL).with(

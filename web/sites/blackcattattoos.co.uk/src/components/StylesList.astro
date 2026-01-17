@@ -1,5 +1,4 @@
 ---
-import {Image} from 'astro:assets';
 import Button from './Button.astro';
 import {getTattooStylesAsync} from "../utils/cms.ts";
 
@@ -7,7 +6,7 @@ const tattooStyles = await getTattooStylesAsync();
 ---
 <section id="styles" class="bg-dark-grey text-white py-24 px-6">
     <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-7xl font-semibold mb-16">Our Styles</h2>
+        <h2 class="text-7xl lg:text-9xl font-semibold mb-16">Our Styles</h2>
 
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-10">
             {tattooStyles.map((style) => (
