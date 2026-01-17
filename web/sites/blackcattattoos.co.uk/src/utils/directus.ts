@@ -4,7 +4,6 @@ export type Tattoo = {
   Title: string;
   Style: string;
   Image: string;
-  Caption?: string | null;
 };
 
 export type TattooStyle = {
@@ -21,7 +20,6 @@ export type Piercing = {
 export type Shop = {
   Title: string;
   Image: string;
-  Caption?: string | null;
 };
 
 type Schema = {
