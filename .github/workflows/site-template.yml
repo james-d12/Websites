@@ -7,7 +7,7 @@ on:
       site:
         required: true
         type: string
-      skip_environment_gates:
+      cms_deployment:
         required: false
         type: boolean
         default: false
@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Staging
     needs: build
-    environment: ${{ inputs.skip_environment_gates && '' || 'Staging' }}
+    environment: 'Staging'
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
@@ -141,7 +141,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Live
     needs: deploy-staging
-    environment: ${{ inputs.skip_environment_gates && '' || 'Production' }}
+    environment: ${{ inputs.cms_deployment && 'Production_CMS' || 'Production' }}
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
