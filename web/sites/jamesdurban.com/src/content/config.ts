@@ -8,6 +8,7 @@ export const collections = {
       publishDate: z.coerce.date(),
       skills: z.array(z.string()),
       img_alt: z.string(),
+      type: z.enum(["hobbyist", "professional"]),
     }),
   }),
 };

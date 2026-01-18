@@ -23,6 +23,8 @@ export async function getStaticPaths() {
 const {entry} = Astro.props;
 const {Content} = await entry.render();
 const imageSrc = projectImages[entry.slug];
+const typeLabel = entry.data.type === "professional" ? "Professional" : "Hobbyist";
+const typeClass = entry.data.type === "professional" ? "bg-green-600" : "bg-blue-600";
 ---
 
 <ProjectLayout>
@@ -33,7 +35,12 @@ const imageSrc = projectImages[entry.slug];
             <a class="hover:text-secondary underline text-lg pl-2" href="/project/"
             >Projects
             </a>
-            <h2 class="mt-2 text-6xl font-bold">{entry.data.title}</h2>
+            <div class="flex items-center gap-4 mt-2">
+                <h2 class="text-6xl font-bold">{entry.data.title}</h2>
+                <span class={`${typeClass} rounded-xl px-3 py-1 text-sm text-white`}>
+                    {typeLabel}
+                </span>
+            </div>
             <ProjectSkillList skills={entry.data.skills}/>
             <div class="content">
                 <Image src={imageSrc} alt={entry.data.img_alt}/>

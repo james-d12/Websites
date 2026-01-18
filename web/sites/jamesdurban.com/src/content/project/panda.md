@@ -8,6 +8,7 @@ skills:
   - Database
   - REST API
 github: private
+type: professional
 ---
 
 # Overview

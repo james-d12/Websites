@@ -9,6 +9,7 @@ skills:
   - .NET / C#
   - Service Bus Messaging
 github: private
+type: professional
 ---
 
 # Overview
@@ -31,7 +32,7 @@ I was responsible for building the backend services that would be used by the mo
 
 ## Frontend
 
-The frontend was not built by me, instead we had a separate mobile app developer that built and maintained the app. 
+The frontend was not built by me, instead we had a separate mobile app developer that built and maintained the app.
 I worked with them to integrate the push notifications into the app.
 
 - **React Native** The main framework that the mobile app was built with.

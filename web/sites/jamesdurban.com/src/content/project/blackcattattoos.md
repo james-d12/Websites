@@ -9,6 +9,7 @@ skills:
   - NixOS
   - GitHub Actions
 github: https://github.com/Websites/web/sites/blackcattattoos.co.uk
+type: professional
 ---
 
 # Overview
@@ -28,4 +29,3 @@ and GitHub Actions for CI/CD. The Code is available
 on <a href="https://github.com/james-d12/Websites/tree/main/web/sites/blackcattattoos.co.uk" target="_blank" rel="noopener noreferrer">
 GitHub
 </a>
-

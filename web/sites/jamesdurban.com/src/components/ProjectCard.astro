@@ -5,10 +5,13 @@ interface Props {
     title: string;
     imageAlt: string;
     slug: string;
+    type: "hobbyist" | "professional";
 }
 
-const {title, imageAlt, slug} = Astro.props;
+const {title, imageAlt, slug, type} = Astro.props;
 const imageSrc = projectImages[slug];
+const typeLabel = type === "professional" ? "Professional" : "Hobbyist";
+const typeClass = type === "professional" ? "bg-green-600" : "bg-blue-600";
 ---
 
 <a class="project-card" href={`/project/${slug}`}>
@@ -21,6 +24,9 @@ const imageSrc = projectImages[slug];
             >
                 {title}
             </h3>
+            <span class={`${typeClass} rounded-xl px-3 py-1 absolute text-sm text-white bottom-5 right-5`}>
+                {typeLabel}
+            </span>
         </div>
     </div>
 </a>

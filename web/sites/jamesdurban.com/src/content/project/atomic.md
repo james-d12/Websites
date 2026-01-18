@@ -9,6 +9,7 @@ skills:
   - Clang Tools
   - GitHub Actions
 github: https://github.com/james-d12/Atomic
+type: hobbyist
 ---
 
 # Overview
