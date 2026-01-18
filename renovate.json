@@ -1,0 +1,32 @@
+{
+  "npm": {
+    "enabled": true,
+    "rangeStrategy": "bump",
+    "packageRules": [
+      {
+        "matchUpdateTypes": [
+          "minor",
+          "patch"
+        ],
+        "automerge": true
+      }
+    ]
+  },
+  "docker": {
+    "enabled": true,
+    "fileMatch": [
+      "(^|/)docker-compose\\.ya?ml$"
+    ],
+    "automerge": false,
+    "pinDigests": true,
+    "packageRules": [
+      {
+        "matchPackagePatterns": [
+          ".*"
+        ],
+        "groupName": "docker-compose updates",
+        "automerge": false
+      }
+    ]
+  }
+}
