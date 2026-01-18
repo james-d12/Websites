@@ -39,7 +39,6 @@ export function GalleryGrid(props: { slides: GallerySlide[] }) {
     const params = new URLSearchParams(window.location.search);
     const styleParam = params.get("style")?.toString() ?? "";
 
-    uniqueCategories.map((category) => console.log(category));
     const isStyleInCategories = uniqueCategories.includes(styleParam ?? "");
 
     if (styleParam !== "" && isStyleInCategories) {
