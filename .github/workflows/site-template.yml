@@ -114,7 +114,7 @@ jobs:
 
       - name: Deploy site via SCP
         run: |
-          scp -r -o StrictHostKeyChecking=no -v \
+          scp -r -C -o StrictHostKeyChecking=no \
           -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
           ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
@@ -167,7 +167,7 @@ jobs:
 
       - name: Deploy site via SCP
         run: |
-          scp -r -o StrictHostKeyChecking=no -v \
+          scp -r -C -o StrictHostKeyChecking=no  \
           -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
           ./deploy/. ci@${{ secrets.server_host }}:/var/www/${{ inputs.site }}
 
