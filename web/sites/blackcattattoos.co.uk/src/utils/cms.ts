@@ -2,16 +2,25 @@ import directus from "./directus";
 import { readItems } from "@directus/sdk";
 import { getImage } from "astro:assets";
 import type { GallerySlide } from "../components/solid-js/GalleryGrid.tsx";
+import { promiseAllWithLimit } from "./helpers";
+
+const imageCache = new Map<string, string>();
 
 async function getOptimizedImage(imageId: string): Promise<string> {
-  const imageUrl = `${import.meta.env.DIRECTUS_URL}/assets/${imageId}`;
+  if (imageCache.has(imageId)) {
+    console.log(`[Cache HIT] ${imageId}`);
+    return imageCache.get(imageId)!;
+  }
 
+  console.log(`[Cache MISS] ${imageId}`);
+  const imageUrl = `${import.meta.env.DIRECTUS_URL}/assets/${imageId}`;
   const optimizedImage = await getImage({
     src: imageUrl,
     format: "webp",
     inferSize: true,
   });
 
+  imageCache.set(imageId, optimizedImage.src);
   return optimizedImage.src;
 }
 
@@ -23,14 +32,12 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
     }),
   );
 
-  return await Promise.all(
-    tattoos.map(async (tattoo) => ({
-      text: tattoo.Style,
-      category: tattoo.Style,
-      caption: tattoo.Title,
-      image: await getOptimizedImage(tattoo.Image),
-    })),
-  );
+  return await promiseAllWithLimit(tattoos, async (tattoo) => ({
+    text: tattoo.Style,
+    category: tattoo.Style,
+    caption: tattoo.Title,
+    image: await getOptimizedImage(tattoo.Image),
+  }));
 }
 
 export async function getTattoosByStyleAsync(
@@ -48,14 +55,12 @@ export async function getTattoosByStyleAsync(
     }),
   );
 
-  return await Promise.all(
-    tattoos.map(async (tattoo) => ({
-      text: tattoo.Title,
-      category: tattoo.Style,
-      caption: tattoo.Title,
-      image: await getOptimizedImage(tattoo.Image),
-    })),
-  );
+  return await promiseAllWithLimit(tattoos, async (tattoo) => ({
+    text: tattoo.Title,
+    category: tattoo.Style,
+    caption: tattoo.Title,
+    image: await getOptimizedImage(tattoo.Image),
+  }));
 }
 
 export async function getTattooStylesAsync(): Promise<
@@ -68,12 +73,10 @@ export async function getTattooStylesAsync(): Promise<
     }),
   );
 
-  return await Promise.all(
-    tattooStyles.map(async (tattooStyle) => ({
-      Style: tattooStyle.Style,
-      Image: await getOptimizedImage(tattooStyle.Image),
-    })),
-  );
+  return await promiseAllWithLimit(tattooStyles, async (tattooStyle) => ({
+    Style: tattooStyle.Style,
+    Image: await getOptimizedImage(tattooStyle.Image),
+  }));
 }
 
 export async function getPiercingsAsync(): Promise<GallerySlide[]> {
@@ -84,14 +87,12 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
     }),
   );
 
-  return await Promise.all(
-    piercings.map(async (piercing) => ({
-      text: piercing.Title,
-      category: piercing.Style,
-      caption: piercing.Title,
-      image: await getOptimizedImage(piercing.Image),
-    })),
-  );
+  return await promiseAllWithLimit(piercings, async (piercing) => ({
+    text: piercing.Title,
+    category: piercing.Style,
+    caption: piercing.Title,
+    image: await getOptimizedImage(piercing.Image),
+  }));
 }
 
 export async function getShopImagesAsync(): Promise<GallerySlide[]> {
@@ -102,11 +103,9 @@ export async function getShopImagesAsync(): Promise<GallerySlide[]> {
     }),
   );
 
-  return await Promise.all(
-    shopImages.map(async (shopImage) => ({
-      text: shopImage.Title,
-      caption: shopImage.Title,
-      image: await getOptimizedImage(shopImage.Image),
-    })),
-  );
+  return await promiseAllWithLimit(shopImages, async (shopImage) => ({
+    text: shopImage.Title,
+    caption: shopImage.Title,
+    image: await getOptimizedImage(shopImage.Image),
+  }));
 }
