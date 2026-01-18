@@ -4,15 +4,23 @@ import {getImage} from "astro:assets";
 import type {GallerySlide} from "../components/solid-js/GalleryGrid.tsx";
 import {promiseAllWithLimit} from "./helpers";
 
-async function getOptimizedImage(imageId: string): Promise<string> {
-    const imageUrl = `${import.meta.env.DIRECTUS_URL}/assets/${imageId}`;
+const imageCache = new Map<string, string>();
 
+async function getOptimizedImage(imageId: string): Promise<string> {
+    if (imageCache.has(imageId)) {
+        console.log(`[Cache HIT] ${imageId}`);
+        return imageCache.get(imageId)!;
+    }
+
+    console.log(`[Cache MISS] ${imageId}`);
+    const imageUrl = `${import.meta.env.DIRECTUS_URL}/assets/${imageId}`;
     const optimizedImage = await getImage({
         src: imageUrl,
         format: "webp",
         inferSize: true,
     });
 
+    imageCache.set(imageId, optimizedImage.src);
     return optimizedImage.src;
 }
 
