@@ -27,6 +27,7 @@ async function getOptimizedImage(imageId: string): Promise<string> {
 export async function getTattoosAsync(): Promise<GallerySlide[]> {
   const tattoos = await directus.request(
     readItems("Tattoos", {
+      limit: 500,
       fields: ["Title", "Style", "Image"],
       sort: ["Title"],
     }),
@@ -50,6 +51,7 @@ export async function getTattoosByStyleAsync(
           _eq: style,
         },
       },
+      limit: 500,
       fields: ["Title", "Style", "Image"],
       sort: ["Title"],
     }),
@@ -68,6 +70,7 @@ export async function getTattooStylesAsync(): Promise<
 > {
   const tattooStyles = await directus.request(
     readItems("TattooStyles", {
+      limit: 500,
       fields: ["Style", "Image"],
       sort: ["Style"],
     }),
@@ -82,6 +85,7 @@ export async function getTattooStylesAsync(): Promise<
 export async function getPiercingsAsync(): Promise<GallerySlide[]> {
   const piercings = await directus.request(
     readItems("Piercings", {
+      limit: 500,
       fields: ["Title", "Style", "Image"],
       sort: ["Title"],
     }),
@@ -98,6 +102,7 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
 export async function getShopImagesAsync(): Promise<GallerySlide[]> {
   const shopImages = await directus.request(
     readItems("Shop", {
+      limit: 500,
       fields: ["Title", "Image"],
       sort: ["Title"],
     }),
