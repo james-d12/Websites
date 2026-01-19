@@ -6,10 +6,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'web/**'
-      - '.github/workflows/web-*.yml'
-      - '.github/workflows/site-template.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
