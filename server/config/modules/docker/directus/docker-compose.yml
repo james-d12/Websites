@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgis/postgis:18-3.6
+    image: postgis/postgis:18-3.6@sha256:9d0c4aaab2bf31e84b9bac9709e7d4384a3fdf5b4755dad41b25b4548f804662
     volumes:
       - ./database:/var/lib/postgresql
     environment:
@@ -16,7 +16,7 @@ services:
       start_period: 30s
 
   directus:
-    image: directus/directus:11
+    image: directus/directus:11@sha256:ed77e528106e51433ecf513755b13c1be1697daa5c63a264345e778f5f141285
     ports:
       - 8055:8055
     volumes:
