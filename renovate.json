@@ -1,7 +1,9 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["helpers:pinGitHubActionDigests"],
   "npm": {
     "enabled": true,
+    "automerge": false,
     "rangeStrategy": "bump",
     "packageRules": [
       {
@@ -10,13 +12,22 @@
           "minor",
           "patch"
         ],
-        "automerge": false
+        "groupName": "NPM Minor and Patch Updates"
       }
     ]
   },
   "github-actions": {
     "enabled": true,
-    "automerge": false
+    "automerge": false,
+    "packageRules": [
+      {
+        "matchUpdateTypes": [
+          "minor",
+          "patch"
+        ],
+        "groupName": "NPM Minor and Patch Updates"
+      }
+    ]
   },
   "docker": {
     "enabled": true,
@@ -31,8 +42,7 @@
         "matchPackagePatterns": [
           ".*"
         ],
-        "groupName": "docker-compose updates",
-        "automerge": false
+        "groupName": "Docker Compose Updates"
       }
     ]
   }
