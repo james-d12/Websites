@@ -1,9 +1,11 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "npm": {
     "enabled": true,
     "rangeStrategy": "bump",
     "packageRules": [
       {
+        "minimumReleaseAge": "2 days",
         "matchUpdateTypes": [
           "minor",
           "patch"
@@ -25,6 +27,7 @@
     "pinDigests": true,
     "packageRules": [
       {
+        "minimumReleaseAge": "7 days",
         "matchPackagePatterns": [
           ".*"
         ],
