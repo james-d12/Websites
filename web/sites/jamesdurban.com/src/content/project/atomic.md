@@ -9,6 +9,7 @@ skills:
   - Clang Tools
   - GitHub Actions
 github: https://github.com/james-d12/Atomic
+type: hobbyist
 ---
 
 # Overview
@@ -17,4 +18,4 @@ Atomic is a mathematical library that focuses on providing generic matrix and ve
 
 # How was it built?
 
-It was built using C++ and CMake as the main build tool system.
+It was built using C++ and CMake as the main build tool system. I setup various GitHub Actions to run the tests and build the project on different operating systems and C++ standards.

@@ -22,6 +22,7 @@ const projects = (await getCollection("project"))
                                 title={project.data.title}
                                 imageAlt={project.data.img_alt}
                                 slug={project.slug}
+                                type={project.data.type}
                         />
                 ))
             }

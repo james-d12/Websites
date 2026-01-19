@@ -1,14 +1,31 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["helpers:pinGitHubActionDigests"],
   "npm": {
     "enabled": true,
+    "automerge": false,
     "rangeStrategy": "bump",
+    "packageRules": [
+      {
+        "minimumReleaseAge": "2 days",
+        "matchUpdateTypes": [
+          "minor",
+          "patch"
+        ],
+        "groupName": "NPM Minor and Patch Updates"
+      }
+    ]
+  },
+  "github-actions": {
+    "enabled": true,
+    "automerge": false,
     "packageRules": [
       {
         "matchUpdateTypes": [
           "minor",
           "patch"
         ],
-        "automerge": true
+        "groupName": "NPM Minor and Patch Updates"
       }
     ]
   },
@@ -21,11 +38,11 @@
     "pinDigests": true,
     "packageRules": [
       {
+        "minimumReleaseAge": "7 days",
         "matchPackagePatterns": [
           ".*"
         ],
-        "groupName": "docker-compose updates",
-        "automerge": false
+        "groupName": "Docker Compose Updates"
       }
     ]
   }

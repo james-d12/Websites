@@ -6,9 +6,6 @@ on:
   pull_request:
     branches:
       - main
-    paths:
-      - 'server/**'
-      - '.github/workflows/server-build.yml'
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}

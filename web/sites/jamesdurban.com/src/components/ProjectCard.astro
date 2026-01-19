@@ -5,22 +5,28 @@ interface Props {
     title: string;
     imageAlt: string;
     slug: string;
+    type: "hobbyist" | "professional";
 }
 
-const {title, imageAlt, slug} = Astro.props;
+const {title, imageAlt, slug, type} = Astro.props;
 const imageSrc = projectImages[slug];
+const typeLabel = type === "professional" ? "Professional" : "Hobbyist";
+const typeClass = type === "professional" ? "bg-green-600" : "bg-blue-600";
 ---
 
 <a class="project-card" href={`/project/${slug}`}>
     <div class="pt-2 pb-2">
         <div class="relative">
             <Image inferSize={true} src={imageSrc} alt={imageAlt} layout="constrained"
-                   class="w-full h-full object-center aspect-[7/4] rounded-3xl"/>
+                   class="w-full h-full object-center aspect-7/4 rounded-3xl"/>
             <h3
                     class="bg-primary rounded-2xl p-3 absolute text-2xl text-white top-5 left-5"
             >
                 {title}
             </h3>
+            <span class={`${typeClass} rounded-xl px-3 py-1 absolute text-sm text-white bottom-5 right-5`}>
+                {typeLabel}
+            </span>
         </div>
     </div>
 </a>
