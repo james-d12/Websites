@@ -90,7 +90,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Staging
     needs: build
-    environment: 'Staging'
+    environment: ${{ inputs.cms_deployment && 'Staging_CMS' || 'Staging' }}
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
