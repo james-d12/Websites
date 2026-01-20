@@ -32,14 +32,14 @@ jobs:
       DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
 
       - name: Install Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6
         with:
           node-version: 22
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@41ff72655975bd51cab0327fa583b6e92b6d3061 # v4
         name: Install pnpm
         id: pnpm-install
         with:
@@ -51,7 +51,7 @@ jobs:
         run: |
           echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v5
+      - uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5
         name: Setup pnpm cache
         with:
           path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
@@ -80,7 +80,7 @@ jobs:
         run: pnpm audit --audit-level moderate
 
       - name: Upload build artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: site-dist-${{ inputs.site }}
           path: ${{ env.site_full_path }}/dist
@@ -94,7 +94,7 @@ jobs:
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
@@ -145,7 +145,7 @@ jobs:
     if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
-        uses: actions/download-artifact@v7
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
         with:
           name: site-dist-${{ inputs.site }}
           path: ./deploy

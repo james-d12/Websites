@@ -19,8 +19,8 @@ jobs:
       id-token: "write"
       contents: "read"
     steps:
-      - uses: actions/checkout@v6
-      - uses: DeterminateSystems/determinate-nix-action@v3
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - uses: DeterminateSystems/determinate-nix-action@1d699fc25db3f9e079cd2f168ca007a4183389be # v3
 
       - name: Install Syft
         run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -dd -b /usr/local/bin
@@ -42,7 +42,7 @@ jobs:
         working-directory: ./server/config
 
       - name: Upload SBOM
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:
           name: syft-sbom
           path: ./server/config/syft-output.json
