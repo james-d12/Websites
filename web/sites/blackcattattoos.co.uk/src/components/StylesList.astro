@@ -1,29 +1,11 @@
 ---
 import Button from './Button.astro';
-import {getTattooStylesAsync} from "../utils/cms.ts";
-
-const tattooStyles = await getTattooStylesAsync();
+import StylesGallery from "./StylesGallery.astro";
 ---
 <section id="styles" class="bg-dark-grey text-white py-24 px-6">
     <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-7xl lg:text-9xl font-semibold mb-16">Our Styles</h2>
-
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-10">
-            {tattooStyles.map((style) => (
-                    <div class="bg-neutral-800 rounded-xl overflow-hidden duration-300">
-                        <a href={"/gallery?style=" + style.Style}>
-                            <img
-                                    src={style.Image}
-                                    alt={style.Style}
-                                    class="w-full h-64 object-cover transition-transform duration-300 transform hover:scale-105"
-                            />
-                            <div class="p-4">
-                                <span class="text-2xl">{style.Style}</span>
-                            </div>
-                        </a>
-                    </div>
-            ))}
-        </div>
+        <StylesGallery/>
     </div>
 
     <div class="pt-10 items-center justify-center text-center">
