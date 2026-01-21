@@ -70,61 +70,65 @@ in
               (site.extraHeaders or "")
               stagingHeader
               ''
-                                <Directory "${site.documentRoot}">
-                                  Options -Indexes
-                                  AllowOverride None
-                                  Require all granted
-                                </Directory>
+                    <Directory "${site.documentRoot}">
+                      Options -Indexes
+                      AllowOverride None
+                      Require all granted
+                    </Directory>
 
-                                ErrorDocument 404 ${site.errorDocument or "/404.html"}
+                    ErrorDocument 404 ${site.errorDocument or "/404.html"}
 
-                                # Redirect HTTP to HTTPS (except ACME challenge)
-                                RewriteEngine On
-                                RewriteCond %{HTTPS} off
-                                RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
-                                RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+                    # Redirect HTTP to HTTPS (except ACME challenge)
+                    RewriteEngine On
+                    RewriteCond %{HTTPS} off
+                    RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
+                    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-                                SSLEngine on
-                                SSLHonorCipherOrder on
+                  # Redirect www to non-www for all sites
+                    RewriteCond %{HTTP_HOST} ^www\.${site.name}$ [NC]
+                    RewriteRule ^(.*)$ https://${site.name}/$1 [R=301,L]
 
-                <IfModule mod_deflate.c>
-                    AddOutputFilterByType DEFLATE text/html
-                    AddOutputFilterByType DEFLATE text/plain
-                    AddOutputFilterByType DEFLATE text/xml
-                    AddOutputFilterByType DEFLATE text/css
-                    AddOutputFilterByType DEFLATE text/javascript
-                    AddOutputFilterByType DEFLATE application/javascript
-                    AddOutputFilterByType DEFLATE application/json
-                    AddOutputFilterByType DEFLATE application/xml
-                    AddOutputFilterByType DEFLATE application/xhtml+xml
-                    AddOutputFilterByType DEFLATE application/rss+xml
-                    AddOutputFilterByType DEFLATE application/atom+xml
-                    AddOutputFilterByType DEFLATE application/font-woff
-                    AddOutputFilterByType DEFLATE application/font-woff2
-                    AddOutputFilterByType DEFLATE font/woff
-                    AddOutputFilterByType DEFLATE font/woff2
-                    AddOutputFilterByType DEFLATE font/ttf
-                    AddOutputFilterByType DEFLATE image/svg+xml
-                </IfModule>
+                  SSLEngine on
+                  SSLHonorCipherOrder on
 
-                <IfModule mod_expires.c>
-                    ExpiresActive on
+                  <IfModule mod_deflate.c>
+                      AddOutputFilterByType DEFLATE text/html
+                      AddOutputFilterByType DEFLATE text/plain
+                      AddOutputFilterByType DEFLATE text/xml
+                      AddOutputFilterByType DEFLATE text/css
+                      AddOutputFilterByType DEFLATE text/javascript
+                      AddOutputFilterByType DEFLATE application/javascript
+                      AddOutputFilterByType DEFLATE application/json
+                      AddOutputFilterByType DEFLATE application/xml
+                      AddOutputFilterByType DEFLATE application/xhtml+xml
+                      AddOutputFilterByType DEFLATE application/rss+xml
+                      AddOutputFilterByType DEFLATE application/atom+xml
+                      AddOutputFilterByType DEFLATE application/font-woff
+                      AddOutputFilterByType DEFLATE application/font-woff2
+                      AddOutputFilterByType DEFLATE font/woff
+                      AddOutputFilterByType DEFLATE font/woff2
+                      AddOutputFilterByType DEFLATE font/ttf
+                      AddOutputFilterByType DEFLATE image/svg+xml
+                  </IfModule>
 
-                    ExpiresByType image/jpg "access plus 1 month"
-                    ExpiresByType image/jpeg "access plus 1 month"
-                    ExpiresByType image/gif "access plus 1 month"
-                    ExpiresByType image/png "access plus 1 month"
-                    ExpiresByType image/webp "access plus 1 month"
-                    ExpiresByType image/avif "access plus 1 month"
+                  <IfModule mod_expires.c>
+                      ExpiresActive on
 
-                    ExpiresByType font/ttf "access plus 1 month"
-                    ExpiresByType application/font-woff "access plus 1 month"
-                    ExpiresByType application/font-woff2 "access plus 1 month"
+                      ExpiresByType image/jpg "access plus 1 month"
+                      ExpiresByType image/jpeg "access plus 1 month"
+                      ExpiresByType image/gif "access plus 1 month"
+                      ExpiresByType image/png "access plus 1 month"
+                      ExpiresByType image/webp "access plus 1 month"
+                      ExpiresByType image/avif "access plus 1 month"
 
-                    ExpiresByType text/css "access plus 1 month"
-                    ExpiresByType application/javascript "access plus 1 month"
-                    ExpiresByType text/javascript "access plus 1 month"
-                </IfModule>
+                      ExpiresByType font/ttf "access plus 1 month"
+                      ExpiresByType application/font-woff "access plus 1 month"
+                      ExpiresByType application/font-woff2 "access plus 1 month"
+
+                      ExpiresByType text/css "access plus 1 month"
+                      ExpiresByType application/javascript "access plus 1 month"
+                      ExpiresByType text/javascript "access plus 1 month"
+                  </IfModule>
               ''
             ];
           };
