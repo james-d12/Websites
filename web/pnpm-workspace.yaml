@@ -2,4 +2,6 @@ packages:
   - libs/*
   - sites/*
 
+auditConfig: {}
+
 minimumReleaseAge: 1440
