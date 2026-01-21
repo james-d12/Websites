@@ -63,6 +63,12 @@ I use for my VPS that hosts my sites.
 5. Run any relevant agenix commands.
 6. Commit the changes.
 
+### Common Nix OS Commands To Resolve Issues
+
+- Check Integrity of Nix Store: ```sudo nix store verify --all```
+- Check and Repair Nix Store: ```sudo nix-store --repair --verify --check-contents --verbose```
+- Check Generations: ```sudo nix-env --list-generations --profile /nix/var/nix/profiles/system```
+
 </details>
 
 <details>
