@@ -18,7 +18,7 @@
           "blackcattattoos.co.uk"
         ];
         isStaging = false;
-        errorDocument = "404.html";
+        errorDocument = "/404.html";
       }
       {
         name = "staging.blackcattattoos.co.uk";
@@ -29,7 +29,7 @@
           "staging.blackcattattoos.co.uk"
         ];
         isStaging = true;
-        errorDocument = "404.html";
+        errorDocument = "/404.html";
       }
       {
         name = "stcatherinesgroup.com";

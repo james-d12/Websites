@@ -30,7 +30,7 @@ services:
     command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix root@$TARGET_HOST
 
   vps-build:
-    image: nixos/nix@sha256:d5cce2440bda1f966357732c06d86cb92368069fb52dfb6b2bae8725eea488a5
+    image: nixos/nix
     container_name: nixos-build
     working_dir: /flake
     tty: true
@@ -54,4 +54,4 @@ services:
         User $USER
         Port $PORT
       EOF
-        nix run github:serokell/deploy-rs --  .#vps"
+        nix run github:serokell/deploy-rs --  .#vps --debug-logs"

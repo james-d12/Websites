@@ -68,6 +68,7 @@ I use for my VPS that hosts my sites.
 - Check Integrity of Nix Store: ```sudo nix store verify --all```
 - Check and Repair Nix Store: ```sudo nix-store --repair --verify --check-contents --verbose```
 - Check Generations: ```sudo nix-env --list-generations --profile /nix/var/nix/profiles/system```
+- Delete Generation (8 for example)" ```sudo nix-env --profile /nix/var/nix/profiles/system --delete-generations 8```
 
 </details>
 
