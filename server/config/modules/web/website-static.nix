@@ -103,8 +103,6 @@ in
                     AddOutputFilterByType DEFLATE application/xhtml+xml
                     AddOutputFilterByType DEFLATE application/rss+xml
                     AddOutputFilterByType DEFLATE application/atom+xml
-                    AddOutputFilterByType DEFLATE application/font-woff
-                    AddOutputFilterByType DEFLATE application/font-woff2
                     AddOutputFilterByType DEFLATE font/woff
                     AddOutputFilterByType DEFLATE font/woff2
                     AddOutputFilterByType DEFLATE font/ttf
@@ -114,7 +112,6 @@ in
                 <IfModule mod_expires.c>
                     ExpiresActive on
 
-                    ExpiresByType image/jpg "access plus 1 month"
                     ExpiresByType image/jpeg "access plus 1 month"
                     ExpiresByType image/gif "access plus 1 month"
                     ExpiresByType image/png "access plus 1 month"
@@ -122,8 +119,8 @@ in
                     ExpiresByType image/avif "access plus 1 month"
 
                     ExpiresByType font/ttf "access plus 1 month"
-                    ExpiresByType application/font-woff "access plus 1 month"
-                    ExpiresByType application/font-woff2 "access plus 1 month"
+                    ExpiresByType font/woff "access plus 1 month"
+                    ExpiresByType font/woff2 "access plus 1 month"
 
                     ExpiresByType text/css "access plus 1 month"
                     ExpiresByType application/javascript "access plus 1 month"
