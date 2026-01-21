@@ -103,6 +103,7 @@ in
                     AddOutputFilterByType DEFLATE application/font-woff2
                     AddOutputFilterByType DEFLATE font/woff
                     AddOutputFilterByType DEFLATE font/woff2
+                    AddOutputFilterByType DEFLATE font/ttf
                     AddOutputFilterByType DEFLATE image/svg+xml
                 </IfModule>
 
