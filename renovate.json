@@ -35,7 +35,7 @@
       "(^|/)docker-compose\\.ya?ml$"
     ],
     "automerge": false,
-    "pinDigests": true,
+    "pinDigests": false,
     "packageRules": [
       {
         "matchPackagePatterns": [

@@ -22,6 +22,15 @@
   time.timeZone = "Europe/London";
   i18n.defaultLocale = "en_GB.UTF-8";
 
+  nix.optimise.automatic = true;
+  nix.optimise.dates = [ "03:45" ]; # Optional; allows customizing optimisation schedule
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
   users = {
     mutableUsers = true;
     users.james = {
