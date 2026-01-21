@@ -92,7 +92,7 @@ in
                 SSLHonorCipherOrder on
 
                 <IfModule mod_deflate.c>
-                    SetOutputFilter
+                    SetOutputFilter DEFLATE
                 </IfModule>
 
                 <IfModule mod_expires.c>
