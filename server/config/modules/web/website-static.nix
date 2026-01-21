@@ -70,6 +70,8 @@ in
                   Require all granted
                 </Directory>
 
+                ErrorDocument 404 ${site.errorDocument or "/404.html"}
+
                 # Redirect HTTP to HTTPS (except ACME challenge)
                 RewriteEngine On
                 RewriteCond %{HTTPS} off
