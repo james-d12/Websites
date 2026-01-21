@@ -43,6 +43,12 @@ in
   config = lib.mkIf config.websites.enable {
     users.users.wwwrun.extraGroups = [ "acme" ];
     services.httpd.enable = true;
+    services.httpd.extraModules = [
+      "deflate"
+      "headers"
+      "rewrite"
+      "mod_expires"
+    ];
     services.httpd.sslProtocols = "All -SSLv2 -SSLv3 -TLSv1 -TLSv1.1";
     services.httpd.sslCiphers = "ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:!aNULL:!eNULL:!LOW:!3DES:!MD5:!EXP:!PSK:!SRP:!DSS";
 
@@ -64,22 +70,60 @@ in
               (site.extraHeaders or "")
               stagingHeader
               ''
-                <Directory "${site.documentRoot}">
-                  Options -Indexes
-                  AllowOverride None
-                  Require all granted
-                </Directory>
+                                <Directory "${site.documentRoot}">
+                                  Options -Indexes
+                                  AllowOverride None
+                                  Require all granted
+                                </Directory>
 
-                ErrorDocument 404 ${site.errorDocument or "/404.html"}
+                                ErrorDocument 404 ${site.errorDocument or "/404.html"}
 
-                # Redirect HTTP to HTTPS (except ACME challenge)
-                RewriteEngine On
-                RewriteCond %{HTTPS} off
-                RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
-                RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+                                # Redirect HTTP to HTTPS (except ACME challenge)
+                                RewriteEngine On
+                                RewriteCond %{HTTPS} off
+                                RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
+                                RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
-                SSLEngine on
-                SSLHonorCipherOrder on
+                                SSLEngine on
+                                SSLHonorCipherOrder on
+
+                <IfModule mod_deflate.c>
+                    AddOutputFilterByType DEFLATE text/html
+                    AddOutputFilterByType DEFLATE text/plain
+                    AddOutputFilterByType DEFLATE text/xml
+                    AddOutputFilterByType DEFLATE text/css
+                    AddOutputFilterByType DEFLATE text/javascript
+                    AddOutputFilterByType DEFLATE application/javascript
+                    AddOutputFilterByType DEFLATE application/json
+                    AddOutputFilterByType DEFLATE application/xml
+                    AddOutputFilterByType DEFLATE application/xhtml+xml
+                    AddOutputFilterByType DEFLATE application/rss+xml
+                    AddOutputFilterByType DEFLATE application/atom+xml
+                    AddOutputFilterByType DEFLATE application/font-woff
+                    AddOutputFilterByType DEFLATE application/font-woff2
+                    AddOutputFilterByType DEFLATE font/woff
+                    AddOutputFilterByType DEFLATE font/woff2
+                    AddOutputFilterByType DEFLATE image/svg+xml
+                </IfModule>
+
+                <IfModule mod_expires.c>
+                    ExpiresActive on
+
+                    ExpiresByType image/jpg "access plus 1 month"
+                    ExpiresByType image/jpeg "access plus 1 month"
+                    ExpiresByType image/gif "access plus 1 month"
+                    ExpiresByType image/png "access plus 1 month"
+                    ExpiresByType image/webp "access plus 1 month"
+                    ExpiresByType image/avif "access plus 1 month"
+
+                    ExpiresByType font/ttf "access plus 1 month"
+                    ExpiresByType application/font-woff "access plus 1 month"
+                    ExpiresByType application/font-woff2 "access plus 1 month"
+
+                    ExpiresByType text/css "access plus 1 month"
+                    ExpiresByType application/javascript "access plus 1 month"
+                    ExpiresByType text/javascript "access plus 1 month"
+                </IfModule>
               ''
             ];
           };
