@@ -78,40 +78,42 @@ in
 
                   ErrorDocument 404 ${site.errorDocument or "/404.html"}
 
-                  # Redirect HTTP to HTTPS (except ACME challenge)
                   RewriteEngine On
+
+                  # Redirect HTTP directly to HTTPS non-www
                   RewriteCond %{HTTPS} off
                   RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
-                  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+                  RewriteRule ^ https://${site.name}%{REQUEST_URI} [R=301,L]
 
-                # Redirect www to non-www for all sites
+                  # Redirect HTTPS www → HTTPS non-www
+                  RewriteCond %{HTTPS} on
                   RewriteCond %{HTTP_HOST} ^www\.${site.name}$ [NC]
-                  RewriteRule ^(.*)$ https://${site.name}/$1 [R=301,L]
+                  RewriteRule ^ https://${site.name}%{REQUEST_URI} [R=301,L]
 
-                SSLEngine on
-                SSLHonorCipherOrder on
+                  SSLEngine on
+                  SSLHonorCipherOrder on
 
-                <IfModule mod_deflate.c>
-                    SetOutputFilter DEFLATE
-                </IfModule>
+                  <IfModule mod_deflate.c>
+                     SetOutputFilter DEFLATE
+                  </IfModule>
 
-                <IfModule mod_expires.c>
-                    ExpiresActive on
+                  <IfModule mod_expires.c>
+                      ExpiresActive on
 
-                    ExpiresByType image/jpeg "access plus 1 month"
-                    ExpiresByType image/gif "access plus 1 month"
-                    ExpiresByType image/png "access plus 1 month"
-                    ExpiresByType image/webp "access plus 1 month"
-                    ExpiresByType image/avif "access plus 1 month"
+                      ExpiresByType image/jpeg "access plus 1 month"
+                      ExpiresByType image/gif "access plus 1 month"
+                      ExpiresByType image/png "access plus 1 month"
+                      ExpiresByType image/webp "access plus 1 month"
+                      ExpiresByType image/avif "access plus 1 month"
 
-                    ExpiresByType font/ttf "access plus 1 month"
-                    ExpiresByType font/woff "access plus 1 month"
-                    ExpiresByType font/woff2 "access plus 1 month"
+                      ExpiresByType font/ttf "access plus 1 month"
+                      ExpiresByType font/woff "access plus 1 month"
+                      ExpiresByType font/woff2 "access plus 1 month"
 
-                    ExpiresByType text/css "access plus 1 month"
-                    ExpiresByType application/javascript "access plus 1 month"
-                    ExpiresByType text/javascript "access plus 1 month"
-                </IfModule>
+                      ExpiresByType text/css "access plus 1 month"
+                      ExpiresByType application/javascript "access plus 1 month"
+                      ExpiresByType text/javascript "access plus 1 month"
+                  </IfModule>
               ''
             ];
           };
@@ -130,6 +132,7 @@ in
             dnsProvider = site.provider;
             group = "wwwrun";
             environmentFile = "/var/lib/acme/acme.env";
+            extraDomainNames = lib.optionals (!site.isStaging) [ "www.${site.name}" ];
           };
         }) config.websites.sites
       );
