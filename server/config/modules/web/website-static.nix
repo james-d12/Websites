@@ -61,7 +61,7 @@ in
         in
         {
           "${site.name}" = {
-            forceSSL = false;
+            forceSSL = true;
             documentRoot = site.documentRoot;
             serverAliases = site.serverAliases;
             useACMEHost = site.name;
@@ -132,6 +132,7 @@ in
             dnsProvider = site.provider;
             group = "wwwrun";
             environmentFile = "/var/lib/acme/acme.env";
+            extraDomainNames = lib.optionals (!site.isStaging) [ "www.${site.name}" ];
           };
         }) config.websites.sites
       );
