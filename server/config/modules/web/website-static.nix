@@ -61,7 +61,7 @@ in
         in
         {
           "${site.name}" = {
-            forceSSL = true;
+            forceSSL = false;
             documentRoot = site.documentRoot;
             serverAliases = site.serverAliases;
             useACMEHost = site.name;
