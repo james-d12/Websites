@@ -31,6 +31,7 @@ I use for my VPS that hosts my sites.
    password.
 6. You will be prompted for the root password, put in the one you saved in step 4.
 7. You can then ssh onto the vps: ```ssh <user>@<vps-ip-address> -p <ssh_port>```
+8. Populate IONOS API Key from password manager in the ```/var/lib/acme/acme.env file.``` file.
 
 ### Making Changes to existing VPS
 
