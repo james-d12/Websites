@@ -78,6 +78,8 @@ in
 
                   ErrorDocument 404 ${site.errorDocument or "/404.html"}
 
+                  RewriteEngine On
+
                   # Redirect HTTP directly to HTTPS non-www
                   RewriteCond %{HTTPS} off
                   RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge
