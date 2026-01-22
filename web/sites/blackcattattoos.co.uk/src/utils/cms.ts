@@ -41,30 +41,6 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
   }));
 }
 
-export async function getTattoosByStyleAsync(
-  style: string,
-): Promise<GallerySlide[]> {
-  const tattoos = await directus.request(
-    readItems("Tattoos", {
-      filter: {
-        Style: {
-          _eq: style,
-        },
-      },
-      limit: 500,
-      fields: ["Title", "Style", "Image"],
-      sort: ["Title"],
-    }),
-  );
-
-  return await promiseAllWithLimit(tattoos, async (tattoo) => ({
-    text: tattoo.Title,
-    category: tattoo.Style,
-    caption: tattoo.Title,
-    image: await getOptimizedImage(tattoo.Image),
-  }));
-}
-
 export async function getTattooStylesAsync(): Promise<
   { Style: string; Image: string }[]
 > {
