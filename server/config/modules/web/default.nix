@@ -25,7 +25,6 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.blackcattattoos.co.uk";
         serverAliases = [
-          "www.staging.blackcattattoos.co.uk"
           "staging.blackcattattoos.co.uk"
         ];
         isStaging = true;
@@ -46,7 +45,6 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.stcatherinesgroup.com";
         serverAliases = [
-          "www.staging.stcatherinesgroup.com"
           "staging.stcatherinesgroup.com"
         ];
         isStaging = true;
@@ -66,7 +64,6 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.thecontourclinicrichmond.co.uk";
         serverAliases = [
-          "www.staging.thecontourclinicrichmond.co.uk"
           "staging.thecontourclinicrichmond.co.uk"
         ];
         isStaging = true;
@@ -86,7 +83,6 @@
         provider = "ionos";
         documentRoot = "/var/www/staging.jamesdurban.com";
         serverAliases = [
-          "www.staging.jamesdurban.com"
           "staging.jamesdurban.com"
         ];
         isStaging = true;
