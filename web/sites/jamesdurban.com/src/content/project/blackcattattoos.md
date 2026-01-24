@@ -14,7 +14,7 @@ type: professional
 
 # Overview
 
-<a href="https://staging.blackcattattoos.co.uk" target="_blank" rel="noopener noreferrer">
+<a href="https://blackcattattoos.co.uk" target="_blank" rel="noopener noreferrer">
   Black Cat Tattoo & Piercing Parlour
 </a> is a website that I made for a client
 needing a website to showcase their work and
