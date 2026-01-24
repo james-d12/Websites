@@ -1,4 +1,4 @@
-name: Build Web
+name: Build and Scan Web & Server
 permissions:
   contents: read
 
@@ -65,3 +65,38 @@ jobs:
       - name: Audit Packages
         working-directory: web
         run: pnpm audit --audit-level moderate --ignore-unfixable
+
+  build-server:
+    name: Build and Scan NixOS Server Config
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+      - uses: DeterminateSystems/determinate-nix-action@89ab342bd48ff7318caf8d39d6a330c7b1df8f2f # v3
+
+      - name: Install Syft
+        run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -dd -b /usr/local/bin
+
+      - name: Check Flake
+        run: nix flake check
+        working-directory: ./server/config
+
+      - name: Build Server
+        id: build
+        run: nix build .#nixosConfigurations.vps.config.system.build.toplevel --print-out-paths
+        working-directory: ./server/config
+
+      - name: Run Syft Scan
+        run: |
+          RESULT_PATH=$(readlink -f result)
+          echo "Scanning resolved store path: $RESULT_PATH"
+          syft scan dir:$RESULT_PATH -v -o json > syft-output.json
+        working-directory: ./server/config
+
+      - name: Upload SBOM
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: syft-sbom
+          path: ./server/config/syft-output.json

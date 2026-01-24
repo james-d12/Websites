@@ -31,6 +31,7 @@ I use for my VPS that hosts my sites.
    password.
 6. You will be prompted for the root password, put in the one you saved in step 4.
 7. You can then ssh onto the vps: ```ssh <user>@<vps-ip-address> -p <ssh_port>```
+8. Populate IONOS API Key from password manager in the ```/var/lib/acme/acme.env file.``` file.
 
 ### Making Changes to existing VPS
 
@@ -103,8 +104,14 @@ sites. Lib contains any shared libraries, whilst sites contain the actual websit
 
 </details>
 
+# Health Checks
+
+Run the script in ```server/scripts/check-domains,sh``` to check the health of each provided url, it will check SSL,
+http and https redirects as well as www is also having a correct certificate.
+
 # Useful Links
-Just some links to useful things I used to help get this working: 
+
+Just some links to useful things I used to help get this working:
 
 - https://crystalwobsite.gay/posts/2025-02-09-deploying_nixos
 - https://www.youtube.com/watch?v=Tbc1KB0wIWg
