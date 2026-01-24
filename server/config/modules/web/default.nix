@@ -32,7 +32,7 @@
       }
       {
         name = "stcatherinesgroup.com";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/stcatherinesgroup.com";
         serverAliases = [
           "www.stcatherinesgroup.com"
@@ -42,7 +42,7 @@
       }
       {
         name = "staging.stcatherinesgroup.com";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/staging.stcatherinesgroup.com";
         serverAliases = [
           "staging.stcatherinesgroup.com"
