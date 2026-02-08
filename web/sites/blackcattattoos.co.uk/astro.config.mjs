@@ -14,6 +14,5 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }],
     service: sharpImageService(),
   },
-
   integrations: [solidJs(), sitemap()],
 });

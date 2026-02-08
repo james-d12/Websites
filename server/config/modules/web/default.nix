@@ -11,7 +11,7 @@
     sites = [
       {
         name = "blackcattattoos.co.uk";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/blackcattattoos.co.uk";
         serverAliases = [
           "www.blackcattattoos.co.uk"
@@ -22,7 +22,7 @@
       }
       {
         name = "staging.blackcattattoos.co.uk";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/staging.blackcattattoos.co.uk";
         serverAliases = [
           "staging.blackcattattoos.co.uk"
@@ -51,7 +51,7 @@
       }
       {
         name = "thecontourclinicrichmond.co.uk";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/thecontourclinicrichmond.co.uk";
         serverAliases = [
           "www.thecontourclinicrichmond.co.uk"
@@ -61,7 +61,7 @@
       }
       {
         name = "staging.thecontourclinicrichmond.co.uk";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/staging.thecontourclinicrichmond.co.uk";
         serverAliases = [
           "staging.thecontourclinicrichmond.co.uk"
@@ -70,7 +70,7 @@
       }
       {
         name = "jamesdurban.com";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/jamesdurban.com";
         serverAliases = [
           "www.jamesdurban.com"
@@ -80,10 +80,29 @@
       }
       {
         name = "staging.jamesdurban.com";
-        provider = "ionos";
+        provider = "cloudflare";
         documentRoot = "/var/www/staging.jamesdurban.com";
         serverAliases = [
           "staging.jamesdurban.com"
+        ];
+        isStaging = true;
+      }
+      {
+        name = "orchitect.net";
+        provider = "cloudflare";
+        documentRoot = "/var/www/orchitect.com";
+        serverAliases = [
+          "www.orchitect.com"
+          "orchitect.com"
+        ];
+        isStaging = false;
+      }
+      {
+        name = "staging.orchitect.net";
+        provider = "cloudflare";
+        documentRoot = "/var/www/staging.orchitect.net";
+        serverAliases = [
+          "staging.orchitect.net"
         ];
         isStaging = true;
       }
@@ -97,7 +116,7 @@
     sites = [
       {
         name = "cms.blackcattattoos.co.uk";
-        provider = "ionos";
+        provider = "cloudflare";
         proxyTo = "http://127.0.0.1:8055/";
       }
     ];

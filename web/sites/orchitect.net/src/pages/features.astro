@@ -1,0 +1,156 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="Features" description="Explore the features that make Orchitect your go-to internal developer platform.">
+	<Navbar />
+
+	<!-- Features Hero -->
+	<section class="features-hero">
+		<h1>Features</h1>
+		<p>
+			A comprehensive set of tools to help platform teams and developers manage infrastructure
+			and gain insights into their codebases.
+		</p>
+	</section>
+
+	<!-- Infrastructure Provisioning -->
+	<section class="section">
+		<div class="feature-detail">
+			<div class="feature-detail-content">
+				<div class="section-label">Provisioning</div>
+				<h3>Infrastructure Provisioning</h3>
+				<p>
+					Define, standardize, and automate infrastructure provisioning across your
+					organization. Create reusable templates that encode best practices and let
+					developers self-serve with guardrails in place.
+				</p>
+				<ul>
+					<li>Reusable infrastructure templates</li>
+					<li>Multi-cloud and multi-environment support</li>
+					<li>Approval workflows and policy enforcement</li>
+					<li>Drift detection and reconciliation</li>
+				</ul>
+			</div>
+			<div class="feature-detail-visual">
+				<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+					<rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+					<rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+					<line x1="6" y1="6" x2="6.01" y2="6"></line>
+					<line x1="6" y1="18" x2="6.01" y2="18"></line>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<!-- Infrastructure Insights -->
+	<section class="section">
+		<div class="feature-detail reverse">
+			<div class="feature-detail-content">
+				<div class="section-label">Insights</div>
+				<h3>Infrastructure Insights</h3>
+				<p>
+					Get a unified view of all your infrastructure across providers, regions, and
+					environments. Understand resource relationships, costs, and utilization at a glance.
+				</p>
+				<ul>
+					<li>Unified inventory across clouds</li>
+					<li>Resource dependency mapping</li>
+					<li>Cost tracking and optimization hints</li>
+					<li>Health monitoring and status overview</li>
+				</ul>
+			</div>
+			<div class="feature-detail-visual">
+				<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+					<circle cx="12" cy="12" r="3"></circle>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<!-- Repository Analytics -->
+	<section class="section">
+		<div class="feature-detail">
+			<div class="feature-detail-content">
+				<div class="section-label">Analytics</div>
+				<h3>Repository Analytics</h3>
+				<p>
+					Deep analytics on your repositories and codebases. Track contributions,
+					dependencies, code quality trends, and more to make informed engineering decisions.
+				</p>
+				<ul>
+					<li>Contribution and activity analytics</li>
+					<li>Dependency tracking and vulnerability scanning</li>
+					<li>Code quality metrics over time</li>
+					<li>Cross-repository search and discovery</li>
+				</ul>
+			</div>
+			<div class="feature-detail-visual">
+				<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="18" y1="20" x2="18" y2="10"></line>
+					<line x1="12" y1="20" x2="12" y2="4"></line>
+					<line x1="6" y1="20" x2="6" y2="14"></line>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<!-- Developer Self-Service -->
+	<section class="section">
+		<div class="feature-detail reverse">
+			<div class="feature-detail-content">
+				<div class="section-label">Self-Service</div>
+				<h3>Developer Self-Service</h3>
+				<p>
+					Reduce operational overhead by giving developers a clean interface to provision
+					and manage their own resources. Platform teams define the guardrails, developers
+					move fast within them.
+				</p>
+				<ul>
+					<li>Service catalog with curated templates</li>
+					<li>One-click environment provisioning</li>
+					<li>Built-in RBAC and permissions</li>
+					<li>Audit trail for all actions</li>
+				</ul>
+			</div>
+			<div class="feature-detail-visual">
+				<svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+					<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+					<circle cx="9" cy="7" r="4"></circle>
+					<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+					<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+				</svg>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider" />
+
+	<!-- CTA -->
+	<section class="cta-section">
+		<h2>Start building your platform today</h2>
+		<p>Orchitect is free, open source, and ready to deploy on your infrastructure.</p>
+		<div class="cta-actions">
+			<a href="/docs/" class="btn btn-primary">Get Started</a>
+			<a
+				href="https://github.com/james-d12/Orchitect"
+				class="btn btn-secondary"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				View on GitHub
+			</a>
+		</div>
+	</section>
+
+	<Footer />
+</Base>

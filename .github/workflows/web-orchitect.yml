@@ -1,0 +1,32 @@
+name: Build & Deploy Orchitect Website
+permissions:
+  contents: read
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'web/sites/orchitect.net/**'
+      - 'web/package.json'
+      - 'web/pnpm-lock.yaml'
+      - 'web/pnpm-workspace.yaml'
+      - 'web/libs/**'
+      - '.github/workflows/web-orchitect.yml'
+      - '.github/workflows/site-template.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  jamesdurban:
+    name: "Build & Deploy Orchitect"
+    uses: ./.github/workflows/site-template.yml
+    with:
+      site: orchitect.net
+    secrets:
+      server_host: ${{ secrets.VPS_HOST }}
+      server_ssh_port: ${{ secrets.VPS_PORT }}
+      server_key: ${{ secrets.VPS_CI_KEY }}
+      server_key_password: ${{ secrets.VPS_CI_KEY_PASSWORD }}

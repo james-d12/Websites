@@ -11,9 +11,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/sitemap": "^3.7.0",
     "@astrojs/solid-js": "^5.1.3",
-    "@directus/sdk": "^21.0.0",
+    "@directus/sdk": "^21.1.0",
     "shared-ui": "workspace:*",
     "solid-js": "^1.9.11"
   }
