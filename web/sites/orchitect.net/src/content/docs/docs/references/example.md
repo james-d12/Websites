@@ -11,11 +11,11 @@ Orchitect uses a configuration file to define project settings, provider connect
 
 ## Environment Variables
 
-| Variable | Description | Default |
-| --- | --- | --- |
-| `ORCHITECT_PORT` | Port the server listens on | `8080` |
-| `ORCHITECT_LOG_LEVEL` | Logging verbosity | `info` |
-| `ORCHITECT_DATA_DIR` | Data storage directory | `./data` |
+| Variable              | Description                | Default  |
+| --------------------- | -------------------------- | -------- |
+| `ORCHITECT_PORT`      | Port the server listens on | `8080`   |
+| `ORCHITECT_LOG_LEVEL` | Logging verbosity          | `info`   |
+| `ORCHITECT_DATA_DIR`  | Data storage directory     | `./data` |
 
 ## Further Reading
 
