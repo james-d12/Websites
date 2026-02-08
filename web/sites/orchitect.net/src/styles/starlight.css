@@ -1,0 +1,100 @@
+/* Orchitect Starlight Theme Overrides */
+
+/* Force light mode */
+:root[data-theme='dark'] {
+	color-scheme: light;
+}
+
+:root,
+:root[data-theme='light'],
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #e8e8f5;
+	--sl-color-accent: #5c5c99;
+	--sl-color-accent-high: #292966;
+	--sl-color-white: #1a1a2e;
+	--sl-color-gray-1: #3a3a5c;
+	--sl-color-gray-2: #5c5c7a;
+	--sl-color-gray-3: #8e8ea8;
+	--sl-color-gray-4: #c4c4d9;
+	--sl-color-gray-5: #e8e8f0;
+	--sl-color-gray-6: #f4f4f9;
+	--sl-color-black: #ffffff;
+	--sl-font:
+		-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, sans-serif;
+	--sl-color-bg: #ffffff;
+	--sl-color-bg-nav: #292966;
+	--sl-color-bg-sidebar: #f9f9fd;
+	--sl-color-hairline-light: rgba(41, 41, 102, 0.08);
+	--sl-color-hairline: rgba(41, 41, 102, 0.12);
+}
+
+/* Dark indigo header to match main site navbar */
+starlight-header,
+header.header {
+	background: #292966 !important;
+	border-bottom: 1px solid rgba(204, 204, 255, 0.1) !important;
+}
+
+/* Header text and icons in white/light on dark bg */
+starlight-header a,
+header.header a,
+starlight-header button,
+header.header button {
+	color: #a3a3cc !important;
+}
+
+starlight-header a:hover,
+header.header a:hover,
+starlight-header button:hover,
+header.header button:hover {
+	color: #fff !important;
+}
+
+/* Site title in header */
+.site-title .title-name,
+header.header .site-title {
+	color: #fff !important;
+}
+
+starlight-header .site-title a {
+	color: #fff !important;
+}
+
+/* Search button on dark header */
+site-search button,
+starlight-header site-search button {
+	color: #a3a3cc !important;
+	border-color: rgba(204, 204, 255, 0.25) !important;
+	background: rgba(204, 204, 255, 0.08) !important;
+}
+
+site-search button:hover,
+starlight-header site-search button:hover {
+	color: #fff !important;
+	border-color: rgba(204, 204, 255, 0.4) !important;
+}
+
+/* Social icons in header */
+.social-icons a {
+	color: #a3a3cc !important;
+}
+
+.social-icons a:hover {
+	color: #fff !important;
+}
+
+/* Theme toggle - hide since we force light mode */
+starlight-theme-select,
+starlight-header starlight-theme-select {
+	display: none !important;
+}
+
+/* Mobile menu button on dark header */
+starlight-menu-button button {
+	color: #a3a3cc !important;
+}
+
+starlight-menu-button button:hover {
+	color: #fff !important;
+}

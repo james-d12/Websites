@@ -1,0 +1,282 @@
+---
+import Base from '../layouts/Base.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Base title="">
+    <Navbar/>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-badge">Open Source &middot; Self-Hosted &middot; Developer Platform</div>
+            <h1>
+                Build, Provision &<br/>
+                <span class="gradient">Understand Your Infrastructure</span>
+            </h1>
+            <p>
+                Orchitect is an open source, self-hosted internal developer platform that streamlines
+                infrastructure provisioning, surfaces insights into existing infrastructure, and delivers
+                detailed analytics on your repositories and codebases.
+            </p>
+            <div class="hero-actions">
+                <a href="/docs/" class="btn btn-primary">Get Started</a>
+                <a
+                        href="https://github.com/james-d12/Orchitect"
+                        class="btn btn-secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                >
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"
+                        ></path>
+                    </svg>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider"/>
+
+    <!-- Key Capabilities -->
+    <section class="section section-centered">
+        <div class="section-label">Capabilities</div>
+        <h2>Everything you need to manage your platform</h2>
+        <p>
+            From provisioning new resources to understanding what you already have, Orchitect gives
+            platform teams and developers the tools they need.
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                    </svg>
+                </div>
+                <h3>Infrastructure Provisioning</h3>
+                <p>
+                    Standardize and automate how your teams provision infrastructure. Define reusable
+                    templates and let developers self-serve without bottlenecks.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </div>
+                <h3>Infrastructure Insights</h3>
+                <p>
+                    Get full visibility into your existing infrastructure across clouds and environments.
+                    Understand what's running, where, and how it's connected.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <line x1="18" y1="20" x2="18" y2="10"></line>
+                        <line x1="12" y1="20" x2="12" y2="4"></line>
+                        <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                </div>
+                <h3>Repository Analytics</h3>
+                <p>
+                    Detailed analytics on your codebases, dependencies, and code health. Track
+                    contributions, identify patterns, and make data-driven decisions.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-card-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                </div>
+                <h3>Developer Self-Service</h3>
+                <p>
+                    Empower developers to provision and manage their own resources through a simple
+                    interface, reducing wait times and operational overhead.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider"/>
+
+    <!-- Why Orchitect -->
+    <section class="section section-centered">
+        <div class="section-label">Why Orchitect</div>
+        <h2>Built different, on purpose</h2>
+        <p>
+            No vendor lock-in, no black boxes. Orchitect is built by the community, for the community.
+        </p>
+
+        <div class="values-grid">
+            <div class="value-item">
+                <div class="value-item-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path
+                                d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                                fill="none"
+                                stroke="currentColor"></path>
+                        <path d="M18 9v3a6 6 0 0 1-12 0V9"></path>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="8" y1="23" x2="16" y2="23"></line>
+                    </svg>
+                </div>
+                <h3>Open Source</h3>
+                <p>
+                    Fully open source and transparent. Inspect the code, contribute features, and shape
+                    the roadmap.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-item-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <rect x="2" y="2" width="20" height="20" rx="2"></rect>
+                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                    </svg>
+                </div>
+                <h3>Self-Hosted</h3>
+                <p>
+                    Run on your own infrastructure. Keep full control over your data, security, and
+                    compliance requirements.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-item-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                        <polyline points="2 17 12 22 22 17"></polyline>
+                        <polyline points="2 12 12 17 22 12"></polyline>
+                    </svg>
+                </div>
+                <h3>Extensible</h3>
+                <p>
+                    Plugin-based architecture that adapts to your stack. Integrate with the tools you
+                    already use.
+                </p>
+            </div>
+
+            <div class="value-item">
+                <div class="value-item-icon">
+                    <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                    >
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </div>
+                <h3>No Vendor Lock-In</h3>
+                <p>
+                    Your platform, your rules. No proprietary formats or dependencies on external
+                    services.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider"/>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Ready to take control of your platform?</h2>
+        <p>Get started with Orchitect today. It's free, open source, and ready to deploy.</p>
+        <div class="cta-actions">
+            <a href="/docs/" class="btn btn-primary">Read the Docs</a>
+            <a
+                    href="https://github.com/james-d12/Orchitect"
+                    class="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer">Star on GitHub</a
+            >
+        </div>
+    </section>
+
+    <Footer/>
+</Base>
