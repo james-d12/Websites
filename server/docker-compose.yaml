@@ -17,7 +17,7 @@ services:
       SSH_AUTH_SOCK: /ssh-agent
 
   vps-bootstrap:
-    image: nixos/nix@sha256:d5cce2440bda1f966357732c06d86cb92368069fb52dfb6b2bae8725eea488a5
+    image: nixos/nix@sha256:c6ebd12d96b3374ee15e3986c15aa43f5e49310634f17afcaaf4dafe4f6732b2
     container_name: nixos-fts
     working_dir: /flake
     tty: true
