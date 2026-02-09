@@ -2,6 +2,8 @@ name: CMS Rebuild Trigger
 permissions:
   contents: read
 
+run-name: CMS rebuild – ${{ github.event.client_payload.site || 'unknown site' }}
+
 on:
   repository_dispatch:
     types: [cms-rebuild]
