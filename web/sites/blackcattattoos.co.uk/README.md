@@ -17,11 +17,11 @@ Copy `.env.template` to `.env` and fill in the values.
 
 By default, the site uses placeholder data instead of calling the Directus API. This keeps local development and CI builds fast and independent of the CMS.
 
-To fetch real data from Directus, set `ENABLE_CMS=true` in your `.env`:
+To fetch real data from Directus, set `PUBLIC_ENABLE_CMS=true` in your `.env`:
 
 ```
 DIRECTUS_URL=<cms_url>
-ENABLE_CMS=true
+PUBLIC_ENABLE_CMS=true
 ```
 
-When `ENABLE_CMS` is not set or set to `false`, all gallery, piercing, tattoo style, and shop data is replaced with placeholder content.
+When `PUBLIC_ENABLE_CMS` is not set or set to `false`, all gallery, piercing, tattoo style, and shop data is replaced with placeholder content.

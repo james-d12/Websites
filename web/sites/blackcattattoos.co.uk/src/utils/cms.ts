@@ -4,7 +4,7 @@ import { getImage } from "astro:assets";
 import type { GallerySlide } from "../components/solid-js/GalleryGrid.tsx";
 import { promiseAllWithLimit } from "./helpers";
 
-const useCms = import.meta.env.ENABLE_CMS === "true";
+const useCms = import.meta.env.PUBLIC_ENABLE_CMS === "true";
 
 const PLACEHOLDER_IMAGE =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Crect width='400' height='400' fill='%23262626'/%3E%3C/svg%3E";
