@@ -4,12 +4,13 @@ This folder contains the source code for the websites. Most if not all are built
 to help manage shared dependencies across all sites.
 
 <!-- TOC -->
-* [Web](#web)
-  * [Website Status](#website-status)
-  * [Getting Started](#getting-started)
-    * [Creating a New Site](#creating-a-new-site)
-    * [List of Sites](#list-of-sites)
-<!-- TOC -->
+
+- [Web](#web)
+  - [Website Status](#website-status)
+  - [Getting Started](#getting-started)
+  _ [Creating a New Site](#creating-a-new-site)
+  _ [List of Sites](#list-of-sites)
+  <!-- TOC -->
 
 ## Website Status
 
@@ -25,14 +26,14 @@ Inside the web folder is where all the client websites are stored. It is current
 sites. Lib contains any shared libraries, whilst sites contain the actual websites.
 
 1. Ensure you have pnpm installed and Node.js on your machine.
-2. Navigate to the ```web``` folder.
-3. Run ```pnpm install``` to install all the dependencies.
-4. Run ```pnpm --filter <site_name> run dev``` to start the site.
+2. Navigate to the `web` folder.
+3. Run `pnpm install` to install all the dependencies.
+4. Run `pnpm --filter <site_name> run dev` to start the site.
 
 ### Creating a New Site
 
-1. Navigate to the ```web``` folder.
-2. Run ```pnpm create astro@latest``` to create a new site.
+1. Navigate to the `web` folder.
+2. Run `pnpm create astro@latest` to create a new site.
 3. Follow the prompts.
 
 ### List of Sites
