@@ -11,6 +11,10 @@ on:
         required: false
         type: boolean
         default: false
+      enable_cms:
+        required: false
+        type: boolean
+        default: false
     secrets:
       server_host:
         required: true
@@ -30,7 +34,7 @@ jobs:
     env:
       site_full_path: web/sites/${{ inputs.site }}
       DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
-      ENABLE_CMS: "true"
+      ENABLE_CMS: ${{ inputs.enable_cms }}
     steps:
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6

@@ -25,6 +25,7 @@ jobs:
     uses: ./.github/workflows/site-template.yml
     with:
       site: blackcattattoos.co.uk
+      enable_cms: true
     secrets:
       server_host: ${{ secrets.VPS_HOST }}
       server_ssh_port: ${{ secrets.VPS_PORT }}
