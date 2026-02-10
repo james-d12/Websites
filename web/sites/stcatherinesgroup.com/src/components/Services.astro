@@ -1,0 +1,73 @@
+---
+const services = [
+    {
+        title: "Companionship",
+        description: "Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life.",
+        href: "/services/companionship",
+    },
+    {
+        title: "Chaperone",
+        description: "Reliable, discreet support for appointments, outings, and events — so you never have to go alone.",
+        href: "/services/chaperone",
+    },
+    {
+        title: "Dementia",
+        description: "Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual.",
+        href: "/services/dementia",
+    },
+    {
+        title: "1-1 Safety",
+        description: "Dedicated safety support tailored to individual needs, providing reassurance and peace of mind.",
+        href: "/services/1-1-safety",
+    },
+    {
+        title: "Personal Assistant",
+        description: "Practical, day-to-day assistance to help you manage life on your own terms with confidence.",
+        href: "/services/personal-assistant",
+    },
+];
+---
+
+<section id="services" class="py-20 md:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">What We Offer</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+                Our 1-1 Services
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Each of our services is delivered on a one-to-one basis, giving you
+                the dedicated time and attention that makes the difference.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+            {services.map((service, i) => (
+                <a
+                    href={service.href}
+                    class="group block p-8 md:p-10 rounded-2xl border border-gray-100 bg-warm-50 hover:border-green-light/40 hover:shadow-lg transition-all duration-300"
+                >
+                    <div class="flex items-start gap-4">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-green-dark to-green-light flex items-center justify-center text-white font-semibold text-sm">
+                            {String(i + 1).padStart(2, '0')}
+                        </span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-green-dark transition-colors">
+                                {service.title}
+                            </h3>
+                            <p class="text-gray-500 leading-relaxed">
+                                {service.description}
+                            </p>
+                            <span class="inline-flex items-center mt-4 text-sm font-medium text-green-dark opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                Learn more
+                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            ))}
+        </div>
+    </div>
+</section>
