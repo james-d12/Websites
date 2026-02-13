@@ -6,7 +6,7 @@
     "libs/*",
     "sites/*"
   ],
-  "packageManager": "pnpm@10.29.2",
+  "packageManager": "pnpm@10.29.3",
   "scripts": {
     "build": "pnpm -r run build",
     "build:libs": "pnpm --filter shared-ui run build",
@@ -31,7 +31,7 @@
     "@astrojs/sitemap": "^3.7.0",
     "@astrojs/check": "^0.9.6",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.1",
+    "astro": "^5.17.2",
     "tailwindcss": "^4.1.18"
   }
 }
