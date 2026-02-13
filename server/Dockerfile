@@ -1,4 +1,4 @@
-FROM nixos/nix:latest@sha256:d5cce2440bda1f966357732c06d86cb92368069fb52dfb6b2bae8725eea488a5
+FROM nixos/nix:latest@sha256:37eafc36261a1efaf9b17f3e0cfb450be00893087e3797bd1e3be4df68dfe6fe
 
 ENV NIX_CONFIG="experimental-features = nix-command flakes"
 ENV EDITOR="nano"
