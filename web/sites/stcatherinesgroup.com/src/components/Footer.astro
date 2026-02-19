@@ -16,58 +16,28 @@ const quickLinks = [
 ];
 ---
 
-<footer class="bg-green-dark text-green-100/70">
-    <div class="max-w-6xl mx-auto px-6 py-16">
-        <div class="grid md:grid-cols-3 gap-12 md:gap-8">
-            <!-- Brand -->
-            <div>
-                <h2 class="text-xl font-semibold text-white mb-4" style="font-family: 'Lora', Georgia, serif;">
-                    St Catherine's Group
-                </h2>
-                <p class="text-green-100/60 leading-relaxed text-sm">
-                    Exceptional one-to-one healthcare services,
-                    delivered with warmth and dedication.
-                </p>
+<footer class="bg-green-dark text-white">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+            <h2 class="text-lg font-semibold text-white" style="font-family: 'Lora', Georgia, serif;">
+                St Catherine's Group
+            </h2>
+            <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-white">
+                {serviceLinks.map(link => (
+                    <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                ))}
             </div>
-
-            <!-- Services -->
-            <div>
-                <h3 class="text-sm font-medium tracking-[0.15em] uppercase text-white mb-4">Services</h3>
-                <ul class="space-y-2.5">
-                    {serviceLinks.map(link => (
-                        <li>
-                            <a href={link.href} class="text-sm text-green-100/60 hover:text-white transition-colors">
-                                {link.name}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-
-            <!-- Quick Links -->
-            <div>
-                <h3 class="text-sm font-medium tracking-[0.15em] uppercase text-white mb-4">Quick Links</h3>
-                <ul class="space-y-2.5">
-                    {quickLinks.map(link => (
-                        <li>
-                            <a href={link.href} class="text-sm text-green-100/60 hover:text-white transition-colors">
-                                {link.name}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
+            <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-white">
+                {quickLinks.map(link => (
+                    <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                ))}
             </div>
         </div>
     </div>
-
     <div class="border-t border-white/10">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-2">
-            <p class="text-xs text-green-100/40">
-                &copy; {year} St Catherine's Group. All rights reserved.
-            </p>
-            <p class="text-xs text-green-100/40">
-                Dedicated to exceptional care.
-            </p>
+        <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col sm:flex-row justify-between items-center gap-1">
+            <p class="text-xs text-white">&copy; {year} St Catherine's Group. All rights reserved.</p>
+            <p class="text-xs text-white">Dedicated to exceptional care.</p>
         </div>
     </div>
 </footer>

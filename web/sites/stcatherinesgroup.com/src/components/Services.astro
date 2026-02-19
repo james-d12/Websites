@@ -45,20 +45,20 @@ const services = [
             {services.map((service, i) => (
                 <a
                     href={service.href}
-                    class="group block p-8 md:p-10 rounded-2xl border border-gray-100 bg-warm-50 hover:border-green-light/40 hover:shadow-lg transition-all duration-300"
+                    class="group block p-8 md:p-10 rounded-2xl bg-green-dark hover:shadow-lg transition-all duration-300"
                 >
                     <div class="flex items-start gap-4">
-                        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-green-dark to-green-light flex items-center justify-center text-white font-semibold text-sm">
+                        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center text-white font-semibold text-sm">
                             {String(i + 1).padStart(2, '0')}
                         </span>
                         <div>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-green-dark transition-colors">
+                            <h3 class="text-xl font-semibold text-white mb-2">
                                 {service.title}
                             </h3>
-                            <p class="text-gray-500 leading-relaxed">
+                            <p class="text-white/80 leading-relaxed">
                                 {service.description}
                             </p>
-                            <span class="inline-flex items-center mt-4 text-sm font-medium text-green-dark opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <span class="inline-flex items-center mt-4 text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                                 Learn more
                                 <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

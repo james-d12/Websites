@@ -17,10 +17,10 @@ const navLinks = [
 const currentPath = Astro.url.pathname;
 ---
 
-<nav class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+<nav class="absolute top-0 left-0 w-full bg-transparent z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 group" title="Home">
-            <span class="text-xl md:text-2xl font-semibold text-green-dark tracking-tight" style="font-family: 'Lora', Georgia, serif;">
+            <span class="text-xl md:text-2xl font-semibold text-white tracking-tight" style="font-family: 'Lora', Georgia, serif;">
                 St Catherine's Group
             </span>
         </a>
@@ -33,8 +33,8 @@ const currentPath = Astro.url.pathname;
                         href={link.href}
                         class={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 ${
                             currentPath === link.href
-                                ? "text-green-dark"
-                                : "text-gray-600 hover:text-green-dark"
+                                ? "text-white"
+                                : "text-white/80 hover:text-white"
                         } ${link.dropdown ? "flex items-center gap-1" : ""}`}
                     >
                         {link.name}
@@ -46,11 +46,11 @@ const currentPath = Astro.url.pathname;
                     </a>
                     {link.dropdown && (
                         <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <div class="bg-white rounded-lg shadow-lg border border-gray-100 py-2 min-w-[220px]">
+                            <div class="bg-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-[220px]">
                                 {link.dropdown.map(item => (
                                     <a
                                         href={item.href}
-                                        class="block px-5 py-2.5 text-sm text-gray-600 hover:text-green-dark hover:bg-green-50 transition-colors"
+                                        class="block px-5 py-2.5 text-sm text-white/70 hover:text-white hover:bg-white/10 transition-colors"
                                     >
                                         {item.name}
                                     </a>
@@ -65,7 +65,7 @@ const currentPath = Astro.url.pathname;
         <!-- Mobile Menu Button -->
         <button
             id="mobile-menu-btn"
-            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-gray-600 hover:text-green-dark hover:bg-green-50 transition-colors"
+            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
             aria-expanded="false"
             aria-controls="mobile-menu"
             title="Open menu"
@@ -81,7 +81,7 @@ const currentPath = Astro.url.pathname;
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-gray-100 bg-white">
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-green-dark">
         <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
             {navLinks.map(link => (
                 <div>
@@ -89,8 +89,8 @@ const currentPath = Astro.url.pathname;
                         href={link.href}
                         class={`block py-2.5 text-sm font-medium tracking-wide uppercase transition-colors ${
                             currentPath === link.href
-                                ? "text-green-dark"
-                                : "text-gray-600 hover:text-green-dark"
+                                ? "text-white"
+                                : "text-white/80 hover:text-white"
                         }`}
                     >
                         {link.name}
@@ -100,7 +100,7 @@ const currentPath = Astro.url.pathname;
                             {link.dropdown.map(item => (
                                 <a
                                     href={item.href}
-                                    class="block py-2 text-sm text-gray-500 hover:text-green-dark transition-colors"
+                                    class="block py-2 text-sm text-white/60 hover:text-white transition-colors"
                                 >
                                     {item.name}
                                 </a>
