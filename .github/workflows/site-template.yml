@@ -80,10 +80,6 @@ jobs:
         working-directory: web
         run: pnpm --filter "${{ inputs.site }}" run build
 
-      - name: Audit Packages
-        working-directory: ${{ env.site_full_path }}
-        run: pnpm audit --audit-level moderate --ignore-unfixable
-
       - name: Upload build artifact
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
         with:

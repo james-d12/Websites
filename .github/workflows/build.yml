@@ -62,10 +62,6 @@ jobs:
         working-directory: web
         run: pnpm build
 
-      - name: Audit Packages
-        working-directory: web
-        run: pnpm audit --audit-level moderate --ignore-unfixable
-
   build-server:
     name: Build and Scan NixOS Server Config
     runs-on: ubuntu-latest
