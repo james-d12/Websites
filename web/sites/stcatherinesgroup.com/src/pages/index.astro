@@ -1,8 +1,69 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-    <Welcome/>
+    <div class="under-construction">
+        <div class="container">
+            <div class="construction-icon">🚧</div>
+            <h1>Under Construction</h1>
+            <p>We're working hard to bring you something amazing.</p>
+            <p class="subtitle">Please check back soon!</p>
+        </div>
+    </div>
 </Layout>
+
+<style>
+    .under-construction {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 90vh;
+        text-align: center;
+        padding: 2rem;
+        background: transparent;
+    }
+
+    .container {
+        max-width: 600px;
+    }
+
+    .construction-icon {
+        font-size: 120px;
+        margin: 0 auto 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    p {
+        font-size: 1.25rem;
+        margin: 0.5rem 0;
+        color: #666;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        color: #888;
+        margin-top: 1.5rem;
+    }
+
+    @media (max-width: 640px) {
+        .construction-icon {
+            width: 100px;
+            height: 100px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+</style>
