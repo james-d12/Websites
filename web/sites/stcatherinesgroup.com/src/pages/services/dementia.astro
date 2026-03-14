@@ -1,0 +1,190 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import {Image} from "astro:assets";
+import dementiaImage from "../../assets/centre-for-ageing-better-lNTbuoYMSro-unsplash.jpg";
+---
+
+<Layout title="Dementia Care Services - St Catherine's Group" description="Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual.">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                            Our Services
+                        </p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                            Dementia Care
+                        </h1>
+                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
+                            Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual. Our trained team members work with compassion and skill to provide person-centred care that honours dignity, maintains independence, and creates moments of joy and connection throughout the day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
+                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
+                        <Image
+                            src={dementiaImage}
+                            alt="Dementia care services"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Approach Section -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Philosophy</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    See the Person, Not the Diagnosis
+                </h2>
+                <p class="text-gray-600 text-xl leading-relaxed max-w-3xl mx-auto">
+                    Living with dementia doesn't define who someone is. Our specialist care focuses on preserving identity, celebrating individuality, and creating moments of connection and joy.
+                </p>
+            </div>
+
+            <div class="bg-warm-50 rounded-3xl p-8 md:p-12 mb-12">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-green-dark mb-3">Patience</div>
+                        <p class="text-gray-600">Taking time to understand, never rushing, always listening</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-green-dark mb-3">Dignity</div>
+                        <p class="text-gray-600">Honouring choice, respecting autonomy, maintaining pride</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold text-green-dark mb-3">Joy</div>
+                        <p class="text-gray-600">Finding moments of happiness in everyday interactions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-gradient-to-r from-warm-50 to-white rounded-2xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">We Learn Your Story</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Understanding your life history, interests, preferences, and routines helps us provide care that feels familiar and meaningful. We take time to learn what matters to you.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-r from-white to-warm-50 rounded-2xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">We Maintain Familiar Routines</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Consistency and familiarity provide comfort and security. We work to maintain the daily rhythms and rituals that bring structure and reassurance to your day.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-r from-warm-50 to-white rounded-2xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">We Create Meaningful Moments</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Through reminiscence, music, gentle activities, and simple conversation, we focus on engagement that brings connection and joy rather than frustration.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-r from-white to-warm-50 rounded-2xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">We Support Your Family</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Caring for someone with dementia affects the whole family. We provide respite, share insights, and work collaboratively to ensure the best possible support for everyone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Understanding Behaviours Section -->
+    <section class="py-20 md:py-28 bg-warm-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Expertise</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Understanding What You Need
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Our team is trained to recognize, understand, and respond compassionately to the challenges that dementia can bring.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">When Communication Changes</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We use gentle communication techniques, visual cues, and patient listening to understand and be understood.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Managing Confusion</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We provide reassurance, maintain calm environments, and use validation techniques to reduce distress.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Responding to Agitation</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We identify triggers, de-escalate with empathy, and create calm through familiar routines and gentle redirection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-sm">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Supporting Independence</h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                We encourage participation in daily activities, offering assistance only where needed, preserving dignity and choice.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CallToAction />
+    <Footer />
+</Layout>

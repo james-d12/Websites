@@ -1,0 +1,292 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import {Image} from "astro:assets";
+import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
+---
+
+<Layout title="Vaccination Services - St Catherine's Group" description="Professional vaccination services delivered in the comfort of your home by our qualified nursing team.">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                            Our Services
+                        </p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                            Vaccinations
+                        </h1>
+                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
+                            Professional vaccination services delivered in the comfort of your home by our qualified nursing team. From seasonal flu jabs to travel vaccinations and routine immunisations, we provide safe, convenient healthcare that fits around your schedule with care and expertise you can trust.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
+                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
+                        <Image
+                            src={vaccinationsImage}
+                            alt="Vaccination services"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vaccines We Offer -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Available Vaccines</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Comprehensive Immunisation Service
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    We offer a full range of vaccinations administered by qualified nurses in the comfort and convenience of your own home.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Seasonal Vaccinations</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Flu Vaccine</strong> - Annual protection against seasonal influenza</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>COVID-19</strong> - Primary doses and booster vaccinations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Pneumonia</strong> - Pneumococcal vaccine for at-risk individuals</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Shingles</strong> - Protection for eligible age groups</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Travel Vaccinations</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Hepatitis A & B</strong> - Essential travel protection</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Typhoid</strong> - Protection for high-risk destinations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Yellow Fever</strong> - Required for certain countries</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Other travel vaccines</strong> - Tailored to your destination</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Routine Immunisations</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Tetanus</strong> - Boosters and catch-up doses</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>MMR</strong> - Measles, Mumps, and Rubella protection</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Whooping Cough</strong> - Especially for pregnant women</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>HPV</strong> - Human papillomavirus vaccination</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Specialist Vaccines</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Chickenpox</strong> - For those who haven't had the illness</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Meningitis</strong> - Multiple strain protection available</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Rabies</strong> - For at-risk occupations or travel</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>TB</strong> - BCG vaccination where indicated</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-20 md:py-28 bg-warm-50">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Simple Process</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    How Our Service Works
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-dark text-white flex items-center justify-center text-2xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Contact Us</h3>
+                    <p class="text-gray-600">
+                        Get in touch to discuss which vaccinations you need
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-dark text-white flex items-center justify-center text-2xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Book Appointment</h3>
+                    <p class="text-gray-600">
+                        Schedule a convenient time at your home
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-dark text-white flex items-center justify-center text-2xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Nurse Visit</h3>
+                    <p class="text-gray-600">
+                        Our qualified nurse administers your vaccination safely
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-dark text-white flex items-center justify-center text-2xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Documentation</h3>
+                    <p class="text-gray-600">
+                        Receive your vaccination certificate and records
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Why Choose Us</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Home Vaccination Benefits
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Convenience</h3>
+                    <p class="text-gray-600">
+                        No need to travel - we come to you at a time that suits your schedule
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Safety First</h3>
+                    <p class="text-gray-600">
+                        All vaccinations administered by qualified, registered nurses with full certification
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Full Documentation</h3>
+                    <p class="text-gray-600">
+                        Complete vaccination records and certificates for your personal health files
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Flexible Scheduling</h3>
+                    <p class="text-gray-600">
+                        Appointments available to fit around your work, family, and personal commitments
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Family Service</h3>
+                    <p class="text-gray-600">
+                        Multiple family members can be vaccinated in one convenient visit
+                    </p>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="w-16 h-16 mx-auto mb-4 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                        <svg class="w-8 h-8 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Expert Advice</h3>
+                    <p class="text-gray-600">
+                        Professional guidance on which vaccinations you need for your health and travel plans
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CallToAction />
+    <Footer />
+</Layout>
