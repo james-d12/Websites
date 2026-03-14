@@ -1,0 +1,164 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CallToAction from '../components/CallToAction.astro';
+---
+
+<Layout title="About Us - St Catherine's Group" description="Learn about our story, our values, and our commitment to exceptional one-to-one healthcare.">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                Our Story
+            </p>
+            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                About St Catherine's Group
+            </h1>
+            <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
+                Built on compassion, driven by excellence, and dedicated to making a real difference in people's lives.
+            </p>
+        </div>
+    </section>
+
+    <!-- Personal Story Section -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="prose prose-lg max-w-none">
+                <!-- Intro paragraph with larger text -->
+                <div class="mb-12">
+                    <p class="text-2xl md:text-3xl leading-relaxed text-gray-800 font-light">
+                        [Opening paragraph - set the scene, introduce the founder/story, establish the emotional tone]
+                    </p>
+                </div>
+
+                <!-- Main story content -->
+                <div class="space-y-6 text-lg leading-relaxed text-gray-700">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+
+                    <p>
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                    </p>
+
+                    <!-- Pull quote / highlight -->
+                    <div class="my-12 pl-8 border-l-4 border-green-dark">
+                        <p class="text-2xl md:text-3xl font-light italic text-gray-800 leading-relaxed">
+                            "A powerful quote from the personal story that captures the essence of why St Catherine's Group was founded."
+                        </p>
+                    </div>
+
+                    <p>
+                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                    </p>
+
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+                    </p>
+
+                    <p>
+                        Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                    </p>
+
+                    <!-- Closing paragraph with emphasis -->
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <p class="text-xl text-gray-800 leading-relaxed">
+                            [Closing paragraph - bring it back to the present, connect to the services offered today, end with the mission/commitment]
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 md:py-28 bg-warm-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Values</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    What Guides Us
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Compassion</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Every interaction is guided by genuine care, empathy, and a deep commitment to understanding individual needs.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We maintain the highest standards in everything we do, from training our team to delivering exceptional care.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Respect</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        We honour dignity, choice, and independence, ensuring every person feels valued and heard.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">25+</div>
+                    <p class="text-gray-600 text-lg">Years of Experience</p>
+                </div>
+                <div>
+                    <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">5k+</div>
+                    <p class="text-gray-600 text-lg">People Supported</p>
+                </div>
+                <div>
+                    <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">24/7</div>
+                    <p class="text-gray-600 text-lg">Care Available</p>
+                </div>
+                <div>
+                    <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">100%</div>
+                    <p class="text-gray-600 text-lg">Person-Centred</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CallToAction />
+    <Footer />
+</Layout>
+
+<style>
+    /* Enhanced typography for long-form reading */
+    .prose p {
+        margin-bottom: 1.5em;
+    }
+
+    .prose p:first-of-type {
+        margin-top: 0;
+    }
+</style>
