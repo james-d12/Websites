@@ -1,17 +1,17 @@
 ---
 const services = [
-    { name: "Companionship", href: "/services/companionship" },
-    { name: "Chaperone", href: "/services/chaperone" },
-    { name: "Dementia", href: "/services/dementia" },
-    { name: "1-1 Safety", href: "/services/1-1-safety" },
-    { name: "Personal Assistant", href: "/services/personal-assistant" },
+    {name: "Companionship", href: "/services/companionship"},
+    {name: "Chaperone", href: "/services/chaperone"},
+    {name: "Dementia", href: "/services/dementia"},
+    {name: "1-1 Safety", href: "/services/1-1-safety"},
+    {name: "Personal Assistant", href: "/services/personal-assistant"},
 ];
 
 const navLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "1-1 Services", href: "/services", dropdown: services },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Blog", href: "/blog" },
+    {name: "About Us", href: "/about"},
+    {name: "1-1 Services", dropdown: services},
+    {name: "Contact Us", href: "/contact"},
+    {name: "Blog", href: "/blog"}
 ];
 
 const currentPath = Astro.url.pathname;
@@ -20,7 +20,8 @@ const currentPath = Astro.url.pathname;
 <nav class="sticky top-0 left-0 w-full bg-green-dark shadow-md z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 group" title="Home">
-            <span class="text-xl md:text-2xl font-semibold text-white tracking-tight" style="font-family: 'Lora', Georgia, serif;">
+            <span class="text-xl md:text-2xl font-semibold text-white tracking-tight"
+                  style="font-family: 'Lora', Georgia, serif;">
                 St Catherine's Group
             </span>
         </a>
@@ -28,50 +29,58 @@ const currentPath = Astro.url.pathname;
         <!-- Desktop Navigation -->
         <ul class="hidden lg:flex items-center gap-8">
             {navLinks.map(link => (
-                <li class={link.dropdown ? "relative group" : ""}>
-                    <a
-                        href={link.href}
-                        class={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90 ${link.dropdown ? "flex items-center gap-1" : ""}`}
-                    >
-                        {link.name}
-                        {link.dropdown && (
-                            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                            </svg>
+                    <li class={link.dropdown ? "relative group" : ""}>
+                        {link.href ? (
+                                <a
+                                        href={link.href}
+                                        class="text-sm font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
+                                >
+                                    {link.name}
+                                </a>
+                        ) : (
+                                <span class={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}>
+                            {link.name}
+                                    {link.dropdown && (
+                                            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
+                                                 fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                      d="M19 9l-7 7-7-7"/>
+                                            </svg>
+                                    )}
+                        </span>
                         )}
-                    </a>
-                    {link.dropdown && (
-                        <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                            <div class="bg-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-[220px]">
-                                {link.dropdown.map(item => (
-                                    <a
-                                        href={item.href}
-                                        class="block px-5 py-2.5 text-sm text-white hover:bg-white/10 transition-colors"
-                                    >
-                                        {item.name}
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-                </li>
+                        {link.dropdown && (
+                                <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                    <div class="bg-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-[220px]">
+                                        {link.dropdown.map(item => (
+                                                <a
+                                                        href={item.href}
+                                                        class="block px-5 py-2.5 text-sm text-white hover:bg-white/10 transition-colors"
+                                                >
+                                                    {item.name}
+                                                </a>
+                                        ))}
+                                    </div>
+                                </div>
+                        )}
+                    </li>
             ))}
         </ul>
 
         <!-- Mobile Menu Button -->
         <button
-            id="mobile-menu-btn"
-            class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-            title="Open menu"
+                id="mobile-menu-btn"
+                class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
+                aria-expanded="false"
+                aria-controls="mobile-menu"
+                title="Open menu"
         >
             <span class="sr-only">Open menu</span>
             <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
             <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </button>
     </div>
@@ -80,26 +89,32 @@ const currentPath = Astro.url.pathname;
     <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-green-dark">
         <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
             {navLinks.map(link => (
-                <div>
-                    <a
-                        href={link.href}
-                        class="block py-2.5 text-sm font-medium tracking-wide uppercase transition-colors text-white hover:text-white/90"
-                    >
-                        {link.name}
-                    </a>
-                    {link.dropdown && (
-                        <div class="pl-4 space-y-1">
-                            {link.dropdown.map(item => (
+                    <div>
+                        {link.href ? (
                                 <a
-                                    href={item.href}
-                                    class="block py-2 text-sm text-white hover:text-white/90 transition-colors"
+                                        href={link.href}
+                                        class="block py-2.5 text-sm font-medium tracking-wide uppercase transition-colors text-white hover:text-white/90"
                                 >
-                                    {item.name}
+                                    {link.name}
                                 </a>
-                            ))}
-                        </div>
-                    )}
-                </div>
+                        ) : (
+                                <span class="block py-2.5 text-sm font-medium tracking-wide uppercase text-white">
+                            {link.name}
+                        </span>
+                        )}
+                        {link.dropdown && (
+                                <div class="pl-4 space-y-1">
+                                    {link.dropdown.map(item => (
+                                            <a
+                                                    href={item.href}
+                                                    class="block py-2 text-sm text-white hover:text-white/90 transition-colors"
+                                            >
+                                                {item.name}
+                                            </a>
+                                    ))}
+                                </div>
+                        )}
+                    </div>
             ))}
         </div>
     </div>
