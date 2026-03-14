@@ -1,38 +1,50 @@
 ---
+import { Image } from "astro:assets";
+import dementiaImage from "../assets/centre-for-ageing-better-lNTbuoYMSro-unsplash.jpg";
+import safetyImage from "../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
+import companionshipImage from "../assets/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg";
+import chaperoneImage from "../assets/thiago-cerqueira-Wr3HGvx_RSM-unsplash.jpg";
+import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
+
 const services = [
     {
         title: "Companionship",
-        description: "Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life.",
+        description: "Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life. Whether it's sharing stories over a cup of tea, enjoying a walk together, or simply having someone to talk to, our companions are here to brighten your day and provide the human connection that matters most.",
         href: "/services/companionship",
+        image: companionshipImage,
     },
     {
         title: "Chaperone",
-        description: "Reliable, discreet support for appointments, outings, and events — so you never have to go alone.",
+        description: "Reliable, discreet support for appointments, outings, and events so you never have to go alone. From medical appointments to social gatherings, shopping trips to family occasions, we provide the reassuring presence that helps you feel confident and comfortable wherever you need to be.",
         href: "/services/chaperone",
+        image: chaperoneImage,
     },
     {
         title: "Dementia",
-        description: "Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual.",
+        description: "Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual. Our trained team members work with compassion and skill to provide person-centred care that honours dignity, maintains independence, and creates moments of joy and connection throughout the day.",
         href: "/services/dementia",
+        image: dementiaImage,
     },
     {
         title: "1-1 Safety",
-        description: "Dedicated safety support tailored to individual needs, providing reassurance and peace of mind.",
+        description: "Dedicated safety support tailored to individual needs, providing reassurance and peace of mind. Whether you need support with mobility, managing health conditions, or simply require an extra level of care and attention, we're here to ensure you feel safe, secure, and supported at all times.",
         href: "/services/1-1-safety",
+        image: safetyImage,
     },
     {
         title: "Personal Assistant",
-        description: "Practical, day-to-day assistance to help you manage life on your own terms with confidence.",
+        description: "Practical, day-to-day assistance to help you manage life on your own terms with confidence. From organizing appointments and managing correspondence to helping with household tasks and personal admin, we handle the details so you can focus on what matters most to you.",
         href: "/services/personal-assistant",
+        image: personalAssistantImage,
     },
 ];
 ---
 
 <section id="services" class="py-20 md:py-28 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
+    <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
             <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">What We Offer</p>
-            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-800 mb-6">
                 Our 1-1 Services
             </h2>
             <p class="text-gray-600 text-lg leading-relaxed">
@@ -41,30 +53,33 @@ const services = [
             </p>
         </div>
 
-        <div class="grid sm:grid-cols-2 gap-6 md:gap-8">
+        <div class="space-y-16 md:space-y-24">
             {services.map((service, i) => (
                 <a
                     href={service.href}
-                    class="group block p-8 md:p-10 rounded-2xl bg-green-dark hover:shadow-lg transition-all duration-300"
+                    class={`group grid md:grid-cols-2 gap-8 md:gap-12 items-center ${i % 2 === 1 ? 'md:grid-flow-dense' : ''}`}
                 >
-                    <div class="flex items-start gap-4">
-                        <span class="flex-shrink-0 w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center text-white font-semibold text-sm">
-                            {String(i + 1).padStart(2, '0')}
+                    <div class={`relative overflow-hidden rounded-2xl aspect-4/3 shadow-lg ${i % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                        <Image
+                            src={service.image}
+                            alt={service.title}
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                    </div>
+
+                    <div class={i % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}>
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                            {service.title}
+                        </h3>
+                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed mb-8">
+                            {service.description}
+                        </p>
+                        <span class="inline-flex items-center text-green-dark font-medium text-lg group-hover:gap-2 transition-all">
+                            Learn more
+                            <svg class="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                            </svg>
                         </span>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white mb-2">
-                                {service.title}
-                            </h3>
-                            <p class="text-white/80 leading-relaxed">
-                                {service.description}
-                            </p>
-                            <span class="inline-flex items-center mt-4 text-sm font-medium text-white opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                                Learn more
-                                <svg class="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </span>
-                        </div>
                     </div>
                 </a>
             ))}
