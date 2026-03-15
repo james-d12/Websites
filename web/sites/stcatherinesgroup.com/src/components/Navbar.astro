@@ -1,4 +1,6 @@
 ---
+import favicon from "../assets/Favicon Transparent.ico";
+
 const services = [
     {name: "Companionship", href: "/services/companionship"},
     {name: "Chaperone", href: "/services/chaperone"},
@@ -22,6 +24,7 @@ const currentPath = Astro.url.pathname;
 <nav class="sticky top-0 left-0 w-full bg-green-dark shadow-md z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 group" title="Home">
+            <img src={favicon} alt="St Catherine's Group Logo" class="w-8 h-8 md:w-10 md:h-10" />
             <span class="text-xl md:text-2xl font-semibold text-white tracking-tight"
                   style="font-family: 'Lora', Georgia, serif;">
                 St Catherine's Group
