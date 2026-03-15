@@ -1,0 +1,133 @@
+---
+import {Image} from "astro:assets";
+import dementiaImage from "../assets/centre-for-ageing-better-lNTbuoYMSro-unsplash.jpg";
+import safetyImage from "../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
+import companionshipImage from "../assets/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg";
+import chaperoneImage from "../assets/thiago-cerqueira-Wr3HGvx_RSM-unsplash.jpg";
+import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
+import vaccinationsImage from "../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
+import nursesImage from "../assets/medicalert-uk-XjlyFT-ibd0-unsplash.jpg";
+
+const services = [
+    {
+        title: "Companionship",
+        description: "Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life. Whether it's sharing stories over a cup of tea, enjoying a walk together, or simply having someone to talk to, our companions are here to brighten your day and provide the human connection that matters most.",
+        href: "/services/companionship",
+        image: companionshipImage,
+    },
+    {
+        title: "Chaperone",
+        description: "Reliable, discreet support for appointments, outings, and events so you never have to go alone. From medical appointments to social gatherings, shopping trips to family occasions, we provide the reassuring presence that helps you feel confident and comfortable wherever you need to be.",
+        href: "/services/chaperone",
+        image: chaperoneImage,
+    },
+    {
+        title: "Dementia",
+        description: "Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual. Our trained team members work with compassion and skill to provide person-centred care that honours dignity, maintains independence, and creates moments of joy and connection throughout the day.",
+        href: "/services/dementia",
+        image: dementiaImage,
+    },
+    {
+        title: "1-1 Safety",
+        description: "Dedicated safety support tailored to individual needs, providing reassurance and peace of mind. Whether you need support with mobility, managing health conditions, or simply require an extra level of care and attention, we're here to ensure you feel safe, secure, and supported at all times.",
+        href: "/services/1-1-safety",
+        image: safetyImage,
+    },
+    {
+        title: "Personal Assistant",
+        description: "Practical, day-to-day assistance to help you manage life on your own terms with confidence. From organizing appointments and managing correspondence to helping with household tasks and personal admin, we handle the details so you can focus on what matters most to you.",
+        href: "/services/personal-assistant",
+        image: personalAssistantImage,
+    },
+    {
+        title: "Vaccinations",
+        description: "Professional vaccination services delivered in the comfort of your home by our qualified nursing team. From seasonal flu jabs to travel vaccinations and routine immunisations, we provide safe, convenient healthcare that fits around your schedule with care and expertise you can trust.",
+        href: "/services/vaccinations",
+        image: vaccinationsImage,
+    },
+    {
+        title: "Nurses",
+        description: "Expert nursing care in your own home, providing skilled medical support tailored to your individual health needs. Our registered nurses deliver compassionate, professional healthcare from wound care and medication management to chronic condition monitoring and post-operative support.",
+        href: "/services/nurses",
+        image: nursesImage,
+    },
+];
+---
+
+<section id="services" class="py-20 md:py-28 bg-gradient-to-b from-white to-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center mb-20">
+            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">What We Offer</p>
+            <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                Our 1-1 Services
+            </h2>
+            <p class="text-gray-600 text-xl leading-relaxed">
+                Each of our services is delivered on a one-to-one basis, giving you
+                the dedicated time and attention that makes the difference.
+            </p>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto">
+            {services.map((service, i) => (
+                    <div class="relative">
+                        {i < services.length - 1 && (
+                                <div class="hidden md:block absolute left-0 right-0 -bottom-20 h-42 pointer-events-none z-10">
+                                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                        <path
+                                                d={i % 2 === 0
+                                                    ? "M 20 0 C 20 40, 20 60, 50 70 C 65 75, 80 80, 80 100"
+                                                    : "M 80 0 C 80 40, 80 60, 50 70 C 35 75, 20 80, 20 100"}
+                                                stroke="#13705B"
+                                                stroke-width="2.5"
+                                                stroke-linecap="round"
+                                                fill="none"
+                                        />
+                                    </svg>
+                                </div>
+                        )}
+
+                        <a
+                                href={service.href}
+                                class={`group grid md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-20 px-6 md:px-8 ${i % 2 === 1 ? 'md:grid-flow-dense' : ''}`}
+                        >
+                            <div class={`relative ${i % 2 === 1 ? 'md:col-start-2' : ''}`}>
+                                <!-- Number badge on image -->
+                                <div class="hidden md:flex absolute -top-4 -left-4 w-16 h-16 rounded-full bg-green-dark items-center justify-center z-20 shadow-lg ring-4 ring-white">
+                                    <span class="text-white font-bold text-xl">0{i + 1}</span>
+                                </div>
+
+                                <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+                                <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
+                                    <Image
+                                            src={service.image}
+                                            alt={service.title}
+                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                </div>
+                            </div>
+
+                            <div class={`${i % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
+                                <div class="inline-block md:hidden px-4 py-2 bg-green-dark/10 rounded-lg mb-6">
+                                    <span class="text-green-dark font-semibold text-sm">0{i + 1}</span>
+                                </div>
+                                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 group-hover:text-green-dark transition-colors">
+                                    {service.title}
+                                </h3>
+                                <p class="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8">
+                                    {service.description}
+                                </p>
+                                <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
+                                Learn more
+                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                     stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </span>
+                            </div>
+                        </a>
+                    </div>
+            ))}
+        </div>
+    </div>
+</section>

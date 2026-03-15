@@ -1,0 +1,317 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import {Image} from "astro:assets";
+import nursesImage from "../../assets/medicalert-uk-XjlyFT-ibd0-unsplash.jpg";
+---
+
+<Layout title="Nursing Services - St Catherine's Group" description="Expert nursing care in your own home, providing skilled medical support tailored to your individual health needs.">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                            Our Services
+                        </p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                            Nursing Care
+                        </h1>
+                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
+                            Expert nursing care in your own home, providing skilled medical support tailored to your individual health needs. Our registered nurses deliver compassionate, professional healthcare from wound care and medication management to chronic condition monitoring and post-operative support.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
+                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
+                        <Image
+                            src={nursesImage}
+                            alt="Professional nursing services"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nursing Services -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Clinical Excellence</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Comprehensive Nursing Support
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Our registered nurses provide a full spectrum of clinical care, bringing hospital-grade healthcare directly to your home.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Wound Care & Dressing</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Professional wound assessment, cleaning, and dressing changes for surgical wounds, ulcers, pressure sores, and other injuries.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Surgical wound care</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Chronic wound management</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Pressure sore prevention and treatment</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Medication Management</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Expert medication administration, monitoring, and education to ensure safe and effective treatment.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Injections and infusions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Medication reviews and advice</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Complex medication schedules</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Health Monitoring</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Regular observation and monitoring of chronic conditions, vital signs, and overall health status.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Blood pressure monitoring</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Diabetes management and blood glucose checks</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Respiratory assessments</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Post-Operative Care</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Specialized support following surgery to ensure safe recovery and prevent complications.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Post-surgical monitoring</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Pain management support</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Rehabilitation guidance</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Catheter Care</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Professional management of urinary catheters and stoma care with dignity and expertise.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Catheter insertion and removal</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Stoma care and education</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Continence management</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Palliative Care</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Compassionate end-of-life care focused on comfort, dignity, and quality of life.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Symptom management</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Emotional and spiritual support</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Family guidance and respite</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Nurses -->
+    <section class="py-20 md:py-28 bg-warm-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Team</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Qualified, Experienced, Compassionate
+                    </h2>
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <p>
+                            Every nurse in our team is a registered healthcare professional with the Nursing and Midwifery Council (NMC), bringing years of clinical experience across hospital, community, and specialist care settings.
+                        </p>
+                        <p>
+                            We carefully select our nurses not only for their clinical expertise but for their compassion, communication skills, and commitment to person-centred care. They understand that providing healthcare in someone's home requires sensitivity, respect, and a genuine desire to support individuals and their families.
+                        </p>
+                        <p>
+                            All our nurses receive ongoing training and professional development to ensure they deliver the highest standards of evidence-based care while maintaining the warmth and personal touch that makes home nursing so valuable.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Nurses Are:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>NMC Registered</strong> - Fully qualified and regulated professionals</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>DBS Checked</strong> - Enhanced disclosure and barring service clearance</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Fully Insured</strong> - Professional indemnity and liability coverage</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Continuously Trained</strong> - Regular CPD and specialist certifications</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Compassionate</strong> - Selected for their empathy and person-centred approach</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CallToAction />
+    <Footer />
+</Layout>

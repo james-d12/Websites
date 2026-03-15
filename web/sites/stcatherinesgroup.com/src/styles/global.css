@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-green-dark: #13705b;
+  --color-green-light: #29b595;
+  --color-green-50: #f0fdf9;
+  --color-green-100: #d5f5ec;
+  --color-warm-50: #faf9f7;
+  --color-warm-100: #f3f1ed;
+  --color-warm-200: #e8e4dd;
+}
+
+* {
+  font-family:
+    "Inter",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", "Georgia", serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #2d3748;
+  background-color: #faf9f7;
+}
