@@ -12,7 +12,9 @@ on:
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
-      - '.github/workflows/web-blackcattattoos.yml'
+      - '.github/wor
+      directus_url:
+        required: falskflows/web-blackcattattoos.yml'
       - '.github/workflows/site-template.yml'
 
 concurrency:
@@ -30,6 +32,5 @@ jobs:
       server_host: ${{ secrets.VPS_HOST }}
       server_ssh_port: ${{ secrets.VPS_PORT }}
       server_key: ${{ secrets.VPS_CI_KEY }}
-      server_key_password: ${{ secrets.VPS_CI_KEY_PASSWORD }}
       directus_url: ${{ secrets.DIRECTUS_URL }}
       directus_build_secret: ${{ secrets.DIRECTUS_BUILD_SECRET }}

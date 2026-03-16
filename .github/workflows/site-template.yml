@@ -22,8 +22,6 @@ on:
         required: true
       server_key:
         required: true
-      server_key_password:
-        required: true
       directus_url:
         required: false
       directus_build_secret:
@@ -89,6 +87,7 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ${{ env.site_full_path }}/dist
           if-no-files-found: error
+          retention-days: 30
 
   deploy-staging:
     runs-on: ubuntu-latest
@@ -111,7 +110,7 @@ jobs:
 
       - name: Create SSH Key
         run: |
-          mkdir ~/.ssh
+          mkdir -p ~/.ssh
           touch ~/.ssh/id_ed25519_vps_ci 
           echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
@@ -150,7 +149,7 @@ jobs:
     name: Deploy ${{ inputs.site }} To Live
     needs: deploy-staging
     environment: ${{ inputs.cms_deployment && 'Production_CMS' || 'Production' }}
-    if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.deploy-staging.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
@@ -160,8 +159,8 @@ jobs:
 
       - name: Create SSH Key
         run: |
-          mkdir ~/.ssh
-          touch ~/.ssh/id_ed25519_vps_ci 
+          mkdir -p ~/.ssh
+          touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
 
