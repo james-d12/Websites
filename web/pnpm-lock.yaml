@@ -16,7 +16,7 @@ importers:
         version: 3.7.1
       '@tailwindcss/vite':
         specifier: ^4.2.1
-        version: 4.2.1(vite@7.1.12(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))
+        version: 4.2.1(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))
       astro:
         specifier: ^5.18.1
         version: 5.18.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2)
@@ -58,8 +58,8 @@ importers:
   sites/blackcattattoos.co.uk:
     dependencies:
       '@astrojs/solid-js':
-        specifier: ^5.1.3
-        version: 5.1.3(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(solid-js@1.9.11)(yaml@2.8.2)
+        specifier: ^6.0.0
+        version: 6.0.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(solid-js@1.9.11)(yaml@2.8.2)
       '@directus/sdk':
         specifier: ^21.2.0
         version: 21.2.0
@@ -86,8 +86,8 @@ importers:
   sites/thecontourclinicrichmond.co.uk:
     dependencies:
       '@astrojs/solid-js':
-        specifier: ^5.1.3
-        version: 5.1.3(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(solid-js@1.9.11)(yaml@2.8.2)
+        specifier: ^6.0.0
+        version: 6.0.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(solid-js@1.9.11)(yaml@2.8.2)
       solid-js:
         specifier: ^1.9.11
         version: 1.9.11
@@ -134,9 +134,9 @@ packages:
   '@astrojs/sitemap@3.7.1':
     resolution: {integrity: sha512-IzQqdTeskaMX+QDZCzMuJIp8A8C1vgzMBp/NmHNnadepHYNHcxQdGLQZYfkbd2EbRXUfOS+UDIKx8sKg0oWVdw==}
 
-  '@astrojs/solid-js@5.1.3':
-    resolution: {integrity: sha512-KxfYt4y1d7BuSw6EsN1EaPoGYsIES7bEI6AtTbncuabRUUMZs+mOWOeOdmgnwVLj+jbNbhBjUZsqr77eUviZdw==}
-    engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
+  '@astrojs/solid-js@6.0.0':
+    resolution: {integrity: sha512-8FA/pofltLUfgDH1QdqM6aT4QIA5FYS37yHDwgKed3s7z5pG58AtkBky7WwuLrakR1ofAXOwRrS5sORGCqjFGg==}
+    engines: {node: ^20.19.1 || >=22.12.0}
     peerDependencies:
       solid-devtools: ^0.30.1
       solid-js: ^1.8.5
@@ -2964,8 +2964,8 @@ packages:
       yaml:
         optional: true
 
-  vite@7.1.12:
-    resolution: {integrity: sha512-ZWyE8YXEXqJrrSLvYgrRP7p62OziLW7xI5HYGWFzOvupfAlrLvURSzv/FyGyy0eidogEM3ujU+kUG1zuHgb6Ug==}
+  vite@7.3.1:
+    resolution: {integrity: sha512-w+N7Hifpc3gRjZ63vYBXA56dvvRlNWRczTdmCBBa+CotUzAPf5b7YMdMR/8CQoeYE5LX3W4wj6RYTgonm1b9DA==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -3298,11 +3298,11 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 4.3.6
 
-  '@astrojs/solid-js@5.1.3(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(solid-js@1.9.11)(yaml@2.8.2)':
+  '@astrojs/solid-js@6.0.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(solid-js@1.9.11)(yaml@2.8.2)':
     dependencies:
       solid-js: 1.9.11
-      vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
-      vite-plugin-solid: 2.11.10(solid-js@1.9.11)(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
+      vite-plugin-solid: 2.11.10(solid-js@1.9.11)(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))
     transitivePeerDependencies:
       - '@testing-library/jest-dom'
       - '@types/node'
@@ -4099,12 +4099,12 @@ snapshots:
       '@tailwindcss/oxide-win32-arm64-msvc': 4.2.1
       '@tailwindcss/oxide-win32-x64-msvc': 4.2.1
 
-  '@tailwindcss/vite@4.2.1(vite@7.1.12(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))':
+  '@tailwindcss/vite@4.2.1(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))':
     dependencies:
       '@tailwindcss/node': 4.2.1
       '@tailwindcss/oxide': 4.2.1
       tailwindcss: 4.2.1
-      vite: 7.1.12(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
 
   '@types/babel__core@7.20.5':
     dependencies:
@@ -6522,7 +6522,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-plugin-solid@2.11.10(solid-js@1.9.11)(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)):
+  vite-plugin-solid@2.11.10(solid-js@1.9.11)(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)):
     dependencies:
       '@babel/core': 7.29.0
       '@types/babel__core': 7.20.5
@@ -6530,8 +6530,8 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.11
       solid-refresh: 0.6.3(solid-js@1.9.11)
-      vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
-      vitefu: 1.1.2(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
+      vitefu: 1.1.2(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2))
     transitivePeerDependencies:
       - supports-color
 
@@ -6550,9 +6550,9 @@ snapshots:
       lightningcss: 1.31.1
       yaml: 2.8.2
 
-  vite@7.1.12(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2):
+  vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2):
     dependencies:
-      esbuild: 0.25.12
+      esbuild: 0.27.4
       fdir: 6.5.0(picomatch@4.0.3)
       picomatch: 4.0.3
       postcss: 8.5.8
@@ -6568,6 +6568,10 @@ snapshots:
   vitefu@1.1.2(vite@6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)):
     optionalDependencies:
       vite: 6.4.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
+
+  vitefu@1.1.2(vite@7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)):
+    optionalDependencies:
+      vite: 7.3.1(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.31.1)(yaml@2.8.2)
 
   volar-service-css@0.0.68(@volar/language-service@2.4.28):
     dependencies:
