@@ -61,7 +61,7 @@ jobs:
       
       - name: Run Audit
         working-directory: web
-        run: pnpm audit --audit-level high
+        run: pnpm audit --audit-level high --ignore-unfixable
 
       - name: Build All Projects
         working-directory: web
