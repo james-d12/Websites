@@ -30,7 +30,15 @@ type Schema = {
 };
 
 const directus = createDirectus<Schema>(import.meta.env.DIRECTUS_URL).with(
-  rest(),
+  rest({
+    onRequest: (options) => {
+      options.headers = {
+        ...options.headers,
+        "x-cloudflare-build-secret": import.meta.env.DIRECTUS_BUILD_SECRET,
+      };
+      return options;
+    }
+  }),
 );
 
 export default directus;
