@@ -1,28 +1,30 @@
 ---
 import {Image} from "astro:assets";
-import {type CollectionEntry, getCollection} from "astro:content";
+import {type CollectionEntry, getCollection, render} from "astro:content";
 import ProjectLayout from "../../layouts/ProjectLayout.astro";
 import ProjectSkillList from "../../components/ProjectSkillList.astro";
 import {projectImages} from '../../data/ProjectImages';
 
 interface Props {
-    entry: CollectionEntry<"project">;
+    entry: CollectionEntry<"projects">;
 }
 
 // This is a dynamic route that generates a page for every Markdown file in src/content/
 // Read more about dynamic routes and this `getStaticPaths` function in the Astro docs:
 // https://docs.astro.build/en/core-concepts/routing/#dynamic-routes
 export async function getStaticPaths() {
-    const project = await getCollection("project");
-    return project.map((entry) => ({
-        params: {slug: entry.slug},
-        props: {entry},
-    }));
+    const project = await getCollection("projects");
+    return project
+        .filter((entry) => entry.id && entry.id.length > 0)
+        .map((entry) => ({
+            params: {slug: entry.id},
+            props: {entry},
+        }));
 }
 
 const {entry} = Astro.props;
-const {Content} = await entry.render();
-const imageSrc = projectImages[entry.slug];
+const {Content} = await render(entry);
+const imageSrc = projectImages[entry.id];
 const typeLabel = entry.data.type === "professional" ? "Professional" : "Hobbyist";
 const typeClass = entry.data.type === "professional" ? "bg-green-600" : "bg-blue-600";
 ---
