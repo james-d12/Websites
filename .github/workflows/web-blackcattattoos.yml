@@ -12,9 +12,7 @@ on:
       - 'web/pnpm-lock.yaml'
       - 'web/pnpm-workspace.yaml'
       - 'web/libs/**'
-      - '.github/wor
-      directus_url:
-        required: falskflows/web-blackcattattoos.yml'
+      - '.github/workflows/web-blackcattattoos.yml'
       - '.github/workflows/site-template.yml'
 
 concurrency:
