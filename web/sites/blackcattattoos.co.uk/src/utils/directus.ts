@@ -37,7 +37,7 @@ const directus = createDirectus<Schema>(import.meta.env.DIRECTUS_URL).with(
         "x-cloudflare-build-secret": import.meta.env.DIRECTUS_BUILD_SECRET,
       };
       return options;
-    }
+    },
   }),
 );
 
