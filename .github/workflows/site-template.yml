@@ -22,18 +22,19 @@ on:
         required: true
       server_key:
         required: true
-      server_key_password:
-        required: true
       directus_url:
         required: false
-
+      directus_build_secret:
+        required: false
+        
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
     env:
       site_full_path: web/sites/${{ inputs.site }}
-      DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
+      DIRECTUS_URL: ${{ secrets.directus_url }}
+      DIRECTUS_BUILD_SECRET: ${{ secrets.directus_build_secret }}
       PUBLIC_ENABLE_CMS: ${{ inputs.enable_cms }}
     steps:
       - name: Checkout
@@ -86,6 +87,7 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ${{ env.site_full_path }}/dist
           if-no-files-found: error
+          retention-days: 30
 
   deploy-staging:
     runs-on: ubuntu-latest
@@ -108,7 +110,7 @@ jobs:
 
       - name: Create SSH Key
         run: |
-          mkdir ~/.ssh
+          mkdir -p ~/.ssh
           touch ~/.ssh/id_ed25519_vps_ci 
           echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
@@ -119,31 +121,35 @@ jobs:
           -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
           ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
 
-      - name: Wait for 30 seconds before verifying
-        run: sleep 30
-
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
-          HTTPS_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" https://staging.${{ inputs.site }})
-          HTTP_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" http://staging.${{ inputs.site }})
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.server_ssh_port }} \
+              ci@${{ secrets.server_host }} << 'EOF'
+            for i in {1..10}; do
+              HTTPS_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" https://staging.${{ inputs.site }} || echo "000")
+              HTTP_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" http://staging.${{ inputs.site }} || echo "000")
 
-          if [ "$HTTPS_STATUS" -ne 200 ]; then
-            echo "❌ HTTPS check failed — expected 200, got $HTTPS_STATUS"
-            exit 1
-          fi
+              if [ "$HTTPS_STATUS" -eq 200 ] && [ "$HTTP_STATUS" -eq 301 ]; then
+                echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
+                exit 0
+              fi
 
-          if [ "$HTTP_STATUS" -ne 301 ]; then
-            echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
+              echo "Attempt $i: HTTPS=$HTTPS_STATUS HTTP=$HTTP_STATUS — retrying in 10s..."
+              sleep 10
+            done
+
+            echo "❌ Health check failed after 10 attempts"
             exit 1
-          fi
-          echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
+          EOF
 
   deploy-live:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Live
     needs: deploy-staging
     environment: ${{ inputs.cms_deployment && 'Production_CMS' || 'Production' }}
-    if: needs.build.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.deploy-staging.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8
@@ -153,8 +159,8 @@ jobs:
 
       - name: Create SSH Key
         run: |
-          mkdir ~/.ssh
-          touch ~/.ssh/id_ed25519_vps_ci 
+          mkdir -p ~/.ssh
+          touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
 
@@ -172,36 +178,42 @@ jobs:
           -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
           ./deploy/. ci@${{ secrets.server_host }}:/var/www/${{ inputs.site }}
 
-      - name: Wait for 30 seconds before verifying
-        run: sleep 30
+      - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.server_ssh_port }} \
+              ci@${{ secrets.server_host }} << 'EOF'
+            for i in {1..10}; do
+              HTTPS_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" https://${{ inputs.site }} || echo "000")
+              HTTP_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" http://${{ inputs.site }} || echo "000")
 
-      #- name: Verify website returns 200 (HTTPS) and 301 (HTTP)
-      #  run: |
-      #    HTTPS_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" https://${{ inputs.site }})
-      #    HTTP_STATUS=$(curl -Is -o /dev/null -w "%{http_code}" http://${{ inputs.site }})
-#
-      #    if [ "$HTTPS_STATUS" -ne 200 ]; then
-      #      echo "❌ HTTPS check failed — expected 200, got $HTTPS_STATUS"
-      #      exit 1
-      #    fi
-#
-      #    if [ "$HTTP_STATUS" -ne 301 ]; then
-      #      echo "❌ HTTP check failed — expected 301, got $HTTP_STATUS"
-      #      exit 1
-      #    fi
-#
-      #    echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
-#
-      #- name: Rollback to previous deployment if verification failed
-      #  if: failure()
-      #  run: |
-      #    ssh -o StrictHostKeyChecking=no -p "${{ secrets.server_ssh_port }}" ci@"${{ secrets.server_host }}" <<'SSH_EOF'
-      #      echo "🚨 Rolling back to previous deployment..."
-      #      LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* 2>/dev/null | head -n 1)
-      #      if [ -d "$LATEST_BACKUP" ]; then
-      #        rsync -a --delete "$LATEST_BACKUP"/ /var/www/${{ inputs.site }}/
-      #        echo "✅ Rollback complete: restored from $LATEST_BACKUP"
-      #      else
-      #        echo "⚠️ No backup found to restore from."
-      #      fi
-      #    SSH_EOF
+              if [ "$HTTPS_STATUS" -eq 200 ] && [ "$HTTP_STATUS" -eq 301 ]; then
+                echo "✅ Website is up — HTTPS: $HTTPS_STATUS, HTTP: $HTTP_STATUS"
+                exit 0
+              fi
+
+              echo "Attempt $i: HTTPS=$HTTPS_STATUS HTTP=$HTTP_STATUS — retrying in 10s..."
+              sleep 10
+            done
+
+            echo "❌ Health check failed after 10 attempts"
+            exit 1
+          EOF
+
+      - name: Rollback to previous deployment if verification failed
+        if: failure()
+        run: |
+          ssh -o StrictHostKeyChecking=no \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.server_ssh_port }} \
+              ci@${{ secrets.server_host }} << 'EOF'
+            echo "🚨 Rolling back to previous deployment..."
+            LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* 2>/dev/null | head -n 1)
+            if [ -d "$LATEST_BACKUP" ]; then
+              rsync -a --delete "$LATEST_BACKUP"/ /var/www/${{ inputs.site }}/
+              echo "✅ Rollback complete: restored from $LATEST_BACKUP"
+            else
+              echo "⚠️ No backup found to restore from."
+            fi
+          EOF

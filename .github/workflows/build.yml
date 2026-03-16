@@ -17,6 +17,7 @@ jobs:
     name: Build Web
     env:
       DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
+      PUBLIC_ENABLE_CMS: false
     steps:
       - name: Checkout
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
@@ -57,8 +58,12 @@ jobs:
       - name: Run ESLint
         working-directory: web
         run: pnpm run lint
+      
+      - name: Run Audit
+        working-directory: web
+        run: pnpm audit --audit-level high --ignore-unfixable
 
-      - name: Build project
+      - name: Build All Projects
         working-directory: web
         run: pnpm build
 
@@ -72,27 +77,22 @@ jobs:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
       - uses: DeterminateSystems/determinate-nix-action@89ab342bd48ff7318caf8d39d6a330c7b1df8f2f # v3
 
-      - name: Install Syft
-        run: curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -dd -b /usr/local/bin
-
       - name: Check Flake
         run: nix flake check
         working-directory: ./server/config
 
       - name: Build Server
-        id: build
         run: nix build .#nixosConfigurations.vps.config.system.build.toplevel --print-out-paths
         working-directory: ./server/config
 
-      - name: Run Syft Scan
-        run: |
-          RESULT_PATH=$(readlink -f result)
-          echo "Scanning resolved store path: $RESULT_PATH"
-          syft scan dir:$RESULT_PATH -v -o json > syft-output.json
+      - name: Resolve build output path
+        id: nix-result
+        run: echo "path=$(readlink -f result)" >> $GITHUB_OUTPUT
         working-directory: ./server/config
 
-      - name: Upload SBOM
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
+      - name: Generate SBOM
+        uses: anchore/sbom-action@v0
         with:
-          name: syft-sbom
-          path: ./server/config/syft-output.json
+          path: ${{ steps.nix-result.outputs.path }}
+          artifact-name: syft-sbom
+          format: spdx-json
