@@ -16,7 +16,7 @@ const nurses = [
 ]
 
 const navLinks = [
-    {name: "About Us", href: "/about"},
+    {name: "About Us", href: "/about-us"},
     {name: "Personal Assistants", href: "/personal-assistants"},
     {name: "1-1 Care Services", dropdown: services},
     {name: "Nurses", dropdown: nurses},
@@ -24,15 +24,13 @@ const navLinks = [
     {name: "Enquiries", href: "/enquiries"},
     {name: "Testimonials", href: "/testimonials"},
 ];
-
-const currentPath = Astro.url.pathname;
 ---
 
 <nav class="sticky top-0 left-0 w-full bg-green-dark shadow-md z-50">
-    <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-8xl mx-auto px-6 py-2 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 group" title="Home">
-            <img src={favicon} alt="St Catherine's Group Logo" class="w-8 h-8 md:w-10 md:h-10" />
-            <span class="text-xl md:text-2xl font-semibold text-white tracking-tight"
+            <img src={favicon} alt="St Catherine's Group Logo" class="w-16 h-16 md:w-24 md:h-24"/>
+            <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight"
                   style="font-family: 'Lora', Georgia, serif;">
                 St Catherine's Group
             </span>
@@ -45,12 +43,12 @@ const currentPath = Astro.url.pathname;
                         {link.href ? (
                                 <a
                                         href={link.href}
-                                        class="text-sm font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
+                                        class="text-md font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
                                 >
                                     {link.name}
                                 </a>
                         ) : (
-                                <span class={`text-sm font-medium tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}>
+                                <span class={`text-md font-medium tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}>
                             {link.name}
                                     {link.dropdown && (
                                             <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"
@@ -63,11 +61,11 @@ const currentPath = Astro.url.pathname;
                         )}
                         {link.dropdown && (
                                 <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                                    <div class="bg-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-[220px]">
+                                    <div class="bg-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-60">
                                         {link.dropdown.map(item => (
                                                 <a
                                                         href={item.href}
-                                                        class="block px-5 py-2.5 text-sm text-white hover:bg-white/10 transition-colors"
+                                                        class="block px-5 py-2.5 text-md text-white hover:bg-white/10 transition-colors"
                                                 >
                                                     {item.name}
                                                 </a>

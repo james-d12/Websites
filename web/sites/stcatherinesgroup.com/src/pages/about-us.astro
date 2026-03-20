@@ -14,7 +14,7 @@ const {title, description, hero, pullQuote, stats} = entry.data;
     <Navbar/>
 
     <!-- Hero Section -->
-    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-28">
+    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
                 {hero.eyebrow}
@@ -22,30 +22,27 @@ const {title, description, hero, pullQuote, stats} = entry.data;
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
                 {hero.heading}
             </h1>
-            <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                {hero.subheading}
-            </p>
         </div>
     </section>
 
     <!-- Personal Story Section -->
-    <section class="py-20 md:py-28 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="prose prose-lg max-w-none">
-                <!-- Main story content -->
-                <div class="space-y-6 text-lg leading-relaxed text-gray-700">
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Main story content -->
+            <div class="prose prose-2xl max-w-none">
+                <div class="space-y-10 text-2xl md:text-3xl leading-relaxed text-gray-800">
                     <Content/>
-
-                    <!-- Pull quote / highlight -->
-                    {pullQuote && (
-                            <div class="my-12 pl-8 border-l-4 border-green-dark">
-                                <p class="text-2xl md:text-3xl font-light italic text-gray-800 leading-relaxed">
-                                    "{pullQuote}"
-                                </p>
-                            </div>
-                    )}
                 </div>
             </div>
+
+            <!-- Pull quote / highlight -->
+            {pullQuote && (
+                    <div class="mt-20 mb-12 px-10 py-12 bg-warm-50 rounded-2xl border-l-4 border-green-dark">
+                        <p class="text-4xl md:text-5xl font-light italic text-gray-900 leading-relaxed">
+                            "{pullQuote}"
+                        </p>
+                    </div>
+            )}
         </div>
     </section>
 
@@ -127,10 +124,42 @@ const {title, description, hero, pullQuote, stats} = entry.data;
 <style>
     /* Enhanced typography for long-form reading */
     .prose p {
-        margin-bottom: 1.5em;
+        margin-bottom: 2.5em;
+        line-height: 1.7;
     }
 
     .prose p:first-of-type {
         margin-top: 0;
+    }
+
+    .prose p:first-of-type::first-letter {
+        font-size: 4em;
+        font-weight: 700;
+        line-height: 1;
+        float: left;
+        margin-right: 0.15em;
+        margin-top: 0.1em;
+        color: #13705B;
+    }
+
+    .prose strong {
+        color: #111827;
+        font-weight: 600;
+    }
+
+    .prose h2 {
+        font-size: 2.25em;
+        font-weight: 700;
+        color: #111827;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .prose h3 {
+        font-size: 1.75em;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
     }
 </style>
