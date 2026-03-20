@@ -90,10 +90,10 @@
       {
         name = "orchitect.net";
         provider = "cloudflare";
-        documentRoot = "/var/www/orchitect.com";
+        documentRoot = "/var/www/orchitect.net";
         serverAliases = [
-          "www.orchitect.com"
-          "orchitect.com"
+          "www.orchitect.net"
+          "orchitect.net"
         ];
         isStaging = false;
       }
