@@ -1,3 +1,257 @@
 ---
-
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import {Image} from "astro:assets";
+import nursesImage from "../../assets/medicalert-uk-XjlyFT-ibd0-unsplash.jpg";
 ---
+
+<Layout title="Hospital Nurses - St Catherine's Group" description="Experienced hospital-trained nurses providing acute and specialist care in your own home.">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                            Specialist Nurses
+                        </p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                            Hospital Nurses
+                        </h1>
+                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
+                            Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
+                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
+                        <Image
+                            src={nursesImage}
+                            alt="Hospital nursing services"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Acute Care Services</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Hospital-Level Care at Home
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    Our hospital nurses deliver the same high standards of clinical care you'd receive in hospital, in the comfort and familiarity of your own home.
+                </p>
+            </div>
+
+            <div class="space-y-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Post-Operative Care</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Specialist post-surgical nursing including wound management, drain care, pain monitoring, and complication prevention following hospital discharge.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Surgical wound assessment and care</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Post-operative monitoring and observation</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Early complication detection</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">IV Therapy & Infusions</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Expert administration of intravenous medications, fluids, and treatments including antibiotics, chemotherapy, and specialist infusions.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>IV antibiotic therapy</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Chemotherapy administration</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>PICC line and central line care</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Acute Condition Management</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Intensive monitoring and care for acute medical conditions, exacerbations of chronic illness, and complex health needs requiring hospital-level expertise.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Respiratory support and monitoring</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Cardiac observation and care</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Neurological assessments</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-warm-50 rounded-xl p-8">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-3">Complex Wound Management</h3>
+                                <p class="text-gray-600 leading-relaxed mb-3">
+                                    Advanced wound care techniques for surgical wounds, chronic ulcers, and complex skin conditions requiring specialist nursing expertise.
+                                </p>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>VAC therapy and negative pressure dressings</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Diabetic foot ulcer care</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-green-dark">→</span>
+                                        <span>Specialist dressing techniques</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Hospital Nurses -->
+    <section class="py-20 md:py-28 bg-warm-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Team</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Acute Care Specialists
+                    </h2>
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <p>
+                            Our hospital nurses have extensive experience in acute care settings including A&E, intensive care, surgical wards, and specialist units. They bring this high-level expertise to home-based care, ensuring patients receive hospital-standard treatment in familiar surroundings.
+                        </p>
+                        <p>
+                            Each nurse is trained in advanced clinical skills, critical assessment, and emergency response. They work closely with hospital discharge teams, consultants, and GPs to ensure seamless continuity of care from hospital to home.
+                        </p>
+                        <p>
+                            With experience managing complex medical devices, medications, and acute conditions, our hospital nurses provide confidence and peace of mind for patients with serious or specialist healthcare needs.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Hospital Nurses Are:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Hospital Experienced</strong> - Years of acute care ward and specialist unit experience</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Advanced Skills</strong> - IV therapy, catheterisation, and complex procedures</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Emergency Trained</strong> - Life support certification and critical care skills</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Multi-Disciplinary Team Players</strong> - Liaising with consultants, GPs, and therapists</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Specialist Trained</strong> - Additional qualifications in specific clinical areas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CallToAction />
+    <Footer />
+</Layout>
