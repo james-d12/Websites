@@ -25,13 +25,13 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.0"
+    "typescript-eslint": "^8.57.1"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.7",
+    "@astrojs/check": "^0.9.8",
     "@astrojs/sitemap": "^3.7.1",
-    "@tailwindcss/vite": "^4.2.1",
-    "astro": "^6.0.4",
-    "tailwindcss": "^4.2.1"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.0.6",
+    "tailwindcss": "^4.2.2"
   }
 }
