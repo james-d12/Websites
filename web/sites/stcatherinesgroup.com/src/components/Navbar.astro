@@ -2,27 +2,34 @@
 import favicon from "../assets/Favicon Transparent.ico";
 
 const services = [
-    {name: "Companionship", href: "/services/companionship"},
-    {name: "Chaperone", href: "/services/chaperone"},
-    {name: "Dementia", href: "/services/dementia"},
-    {name: "1-1 Safety", href: "/services/1-1-safety"},
-    {name: "Personal Assistant", href: "/services/personal-assistant"},
-    {name: "Vaccinations", href: "/services/vaccinations"},
-    {name: "Nurses", href: "/services/nurses"},
+    {name: "1-1 Chaperone Care", href: "/services/chaperone"},
+    {name: "1-1 Companionship Care", href: "/services/companionship"},
+    {name: "1-1 Dementia Care", href: "/services/dementia"},
+    {name: "1-1 Safety Care", href: "/services/1-1-safety"}
 ];
+
+const nurses = [
+    {name: "Vaccination Nurses", href: "/nurses/vaccination-nurses"},
+    {name: "Care Home Nurses", href: "/nurses/carehome-nurses"},
+    {name: "Hospital Nurses", href: "/nurses/hospital-nurses"},
+    {name: "Practise Nurses", href: "/nurses/practise-nurses"},
+]
 
 const navLinks = [
     {name: "About Us", href: "/about"},
-    {name: "1-1 Services", dropdown: services},
+    {name: "Personal Assistants", href: "/personal-assistants"},
+    {name: "1-1 Care Services", dropdown: services},
+    {name: "Nurses", dropdown: nurses},
     {name: "Contact Us", href: "/contact"},
-    {name: "Blog", href: "/blog"}
+    {name: "Enquiries", href: "/enquiries"},
+    {name: "Testimonials", href: "/testimonials"},
 ];
 
 const currentPath = Astro.url.pathname;
 ---
 
 <nav class="sticky top-0 left-0 w-full bg-green-dark shadow-md z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" class="flex items-center gap-2 group" title="Home">
             <img src={favicon} alt="St Catherine's Group Logo" class="w-8 h-8 md:w-10 md:h-10" />
             <span class="text-xl md:text-2xl font-semibold text-white tracking-tight"
