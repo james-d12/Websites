@@ -1,55 +1,55 @@
 ---
 import {Image} from "astro:assets";
-import dementiaImage from "../assets/centre-for-ageing-better-lNTbuoYMSro-unsplash.jpg";
-import safetyImage from "../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
-import companionshipImage from "../assets/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg";
-import chaperoneImage from "../assets/thiago-cerqueira-Wr3HGvx_RSM-unsplash.jpg";
+import vaccinationsImage from "../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
+import hospitalNursesImage from "../assets/jeshoots-com-l0j0DHVWcIE-unsplash.jpg";
+import careHomeNursesImage from "../assets/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
+import practiceNursesImage from "../assets/cdc-Jusy7vxGPLM-unsplash.jpg";
 
-const services = [
+const nurses = [
     {
-        title: "1-1 Companionship Care",
-        description: "Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life. Whether it's sharing stories over a cup of tea, enjoying a walk together, or simply having someone to talk to, our companions are here to brighten your day and provide the human connection that matters most.",
-        href: "/services/1-1-companionship-care",
-        image: companionshipImage,
+        title: "Vaccination Nurses",
+        description: "Professional vaccination services delivered in the comfort of your home by our qualified nursing team. From seasonal flu jabs to travel vaccinations and routine immunisations, we provide safe, convenient healthcare that fits around your schedule.",
+        href: "/nurses/vaccination-nurses",
+        image: vaccinationsImage,
     },
     {
-        title: "1-1 Chaperone Care",
-        description: "Reliable, discreet support for appointments, outings, and events so you never have to go alone. From medical appointments to social gatherings, shopping trips to family occasions, we provide the reassuring presence that helps you feel confident and comfortable wherever you need to be.",
-        href: "/services/1-1-chaperone-care",
-        image: chaperoneImage,
+        title: "Hospital Nurses",
+        description: "Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments.",
+        href: "/nurses/hospital-nurses",
+        image: hospitalNursesImage,
     },
     {
-        title: "1-1 Dementia Care",
-        description: "Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual. Our trained team members work with compassion and skill to provide person-centred care that honours dignity, maintains independence, and creates moments of joy and connection throughout the day.",
-        href: "/services/1-1-dementia-care",
-        image: dementiaImage,
+        title: "Care Home Nurses",
+        description: "Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team.",
+        href: "/nurses/carehome-nurses",
+        image: careHomeNursesImage,
     },
     {
-        title: "1-1 Safety Care",
-        description: "Dedicated safety support tailored to individual needs, providing reassurance and peace of mind. Whether you need support with mobility, managing health conditions, or simply require an extra level of care and attention, we're here to ensure you feel safe, secure, and supported at all times.",
-        href: "/services/1-1-safety-care",
-        image: safetyImage,
+        title: "Practice Nurses",
+        description: "Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention.",
+        href: "/nurses/practice-nurses",
+        image: practiceNursesImage,
     },
 ];
 ---
 
-<section id="services" class="py-20 md:py-28 bg-linear-to-b from-white to-gray-50">
+<section id="nurses" class="py-20 md:py-28 bg-linear-to-b from-gray-50 to-white">
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-20">
-            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">What We Offer</p>
+            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Professional Healthcare</p>
             <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                Our 1-1 Services
+                Our Nursing Services
             </h2>
             <p class="text-gray-600 text-xl leading-relaxed">
-                Each of our services is delivered on a one-to-one basis, giving you
-                the dedicated time and attention that makes the difference.
+                Registered nurses delivering expert clinical care across specialised healthcare settings,
+                from home visits to care homes and hospital-level support.
             </p>
         </div>
 
         <div class="relative max-w-7xl mx-auto">
-            {services.map((service, i) => (
+            {nurses.map((nurse, i) => (
                     <div class="relative">
-                        {i < services.length - 1 && (
+                        {i < nurses.length - 1 && (
                                 <div class="hidden md:block absolute left-0 right-0 -bottom-20 h-42 pointer-events-none z-10">
                                     <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                                         <path
@@ -66,7 +66,7 @@ const services = [
                         )}
 
                         <a
-                                href={service.href}
+                                href={nurse.href}
                                 class={`group grid md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-20 px-6 md:px-8 ${i % 2 === 1 ? 'md:grid-flow-dense' : ''}`}
                         >
                             <div class={`relative ${i % 2 === 1 ? 'md:col-start-2' : ''}`}>
@@ -78,8 +78,8 @@ const services = [
                                 <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
                                 <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
                                     <Image
-                                            src={service.image}
-                                            alt={service.title}
+                                            src={nurse.image}
+                                            alt={nurse.title}
                                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                 </div>
@@ -90,10 +90,10 @@ const services = [
                                     <span class="text-green-dark font-semibold text-sm">0{i + 1}</span>
                                 </div>
                                 <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 group-hover:text-green-dark transition-colors">
-                                    {service.title}
+                                    {nurse.title}
                                 </h3>
                                 <p class="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8">
-                                    {service.description}
+                                    {nurse.description}
                                 </p>
                                 <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
                                 Learn more

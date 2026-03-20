@@ -1,0 +1,223 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import {Image} from "astro:assets";
+import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
+---
+
+<Layout title="Vaccination Nurses - St Catherine's Group" description="Professional vaccination nurses delivering immunisation services in the comfort of your home.">
+    <Navbar />
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                            Specialist Nurses
+                        </p>
+                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                            Vaccination Nurses
+                        </h1>
+                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
+                            Professional vaccination services delivered in the comfort of your home by our qualified nursing team. From seasonal flu jabs to travel vaccinations and routine immunisations, we provide safe, convenient healthcare that fits around your schedule.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
+                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
+                        <Image
+                            src={vaccinationsImage}
+                            alt="Vaccination nursing services"
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vaccines We Offer -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Available Vaccines</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Comprehensive Immunisation Service
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                    We offer a full range of vaccinations administered by qualified nurses in the comfort and convenience of your own home.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Seasonal Vaccinations</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Flu Vaccine</strong> - Annual protection against seasonal influenza</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>COVID-19</strong> - Primary doses and booster vaccinations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Pneumonia</strong> - Pneumococcal vaccine for at-risk individuals</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Shingles</strong> - Protection for eligible age groups</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Travel Vaccinations</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Hepatitis A & B</strong> - Essential travel protection</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Typhoid</strong> - Protection for high-risk destinations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Yellow Fever</strong> - Required for certain countries</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Other travel vaccines</strong> - Tailored to your destination</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Routine Immunisations</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Tetanus</strong> - Boosters and catch-up doses</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>MMR</strong> - Measles, Mumps, and Rubella protection</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Whooping Cough</strong> - Especially for pregnant women</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>HPV</strong> - Human papillomavirus vaccination</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-warm-50 rounded-xl p-8 border-l-4 border-green-dark">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Specialist Vaccines</h3>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Chickenpox</strong> - For those who haven't had the illness</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Meningitis</strong> - Multiple strain protection available</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>Rabies</strong> - For at-risk occupations or travel</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-dark mt-1">✓</span>
+                            <span><strong>TB</strong> - BCG vaccination where indicated</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Vaccination Nurses -->
+    <section class="py-20 md:py-28 bg-warm-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Team</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Expert Vaccination Specialists
+                    </h2>
+                    <div class="space-y-4 text-gray-700 leading-relaxed">
+                        <p>
+                            Our vaccination nurses are registered healthcare professionals with specialist training in immunisation protocols, vaccine storage, and administration techniques. They stay current with the latest vaccination guidelines and travel health recommendations.
+                        </p>
+                        <p>
+                            Each nurse is certified in anaphylaxis management and carries emergency equipment to ensure your complete safety. They provide expert advice on which vaccines you need, contraindications, and what to expect after vaccination.
+                        </p>
+                        <p>
+                            Whether you need a routine flu jab, comprehensive travel vaccination package, or specialist immunisation, our nurses deliver professional, compassionate care in the comfort of your home.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Vaccination Nurses Provide:</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Pre-vaccination Assessment</strong> - Review of medical history and contraindications</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Safe Administration</strong> - Proper technique with emergency equipment on hand</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Travel Health Advice</strong> - Guidance on destination-specific requirements</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Documentation</strong> - Vaccination certificates and health records</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <span class="text-gray-700"><strong>Post-vaccination Monitoring</strong> - Observation period and aftercare advice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <CallToAction />
+    <Footer />
+</Layout>

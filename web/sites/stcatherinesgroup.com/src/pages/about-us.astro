@@ -1,20 +1,20 @@
 ---
-import { getEntry, render } from 'astro:content';
+import {getEntry, render} from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import CallToAction from '../components/CallToAction.astro';
 
 const entry = await getEntry('pages', 'about');
-const { Content } = await render(entry);
-const { title, description, hero, pullQuote, stats } = entry.data;
+const {Content} = await render(entry);
+const {title, description, hero, pullQuote, stats} = entry.data;
 ---
 
 <Layout title={title} description={description}>
-    <Navbar />
+    <Navbar/>
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
                 {hero.eyebrow}
@@ -22,30 +22,27 @@ const { title, description, hero, pullQuote, stats } = entry.data;
             <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
                 {hero.heading}
             </h1>
-            <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                {hero.subheading}
-            </p>
         </div>
     </section>
 
     <!-- Personal Story Section -->
-    <section class="py-20 md:py-28 bg-white">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="prose prose-lg max-w-none">
-                <!-- Main story content -->
-                <div class="space-y-6 text-lg leading-relaxed text-gray-700">
-                    <Content />
-
-                    <!-- Pull quote / highlight -->
-                    {pullQuote && (
-                        <div class="my-12 pl-8 border-l-4 border-green-dark">
-                            <p class="text-2xl md:text-3xl font-light italic text-gray-800 leading-relaxed">
-                                "{pullQuote}"
-                            </p>
-                        </div>
-                    )}
+    <section class="py-24 md:py-32 bg-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <!-- Main story content -->
+            <div class="prose prose-2xl max-w-none">
+                <div class="space-y-10 text-2xl md:text-3xl leading-relaxed text-gray-800">
+                    <Content/>
                 </div>
             </div>
+
+            <!-- Pull quote / highlight -->
+            {pullQuote && (
+                    <div class="mt-20 mb-12 px-10 py-12 bg-warm-50 rounded-2xl border-l-4 border-green-dark">
+                        <p class="text-4xl md:text-5xl font-light italic text-gray-900 leading-relaxed">
+                            "{pullQuote}"
+                        </p>
+                    </div>
+            )}
         </div>
     </section>
 
@@ -63,31 +60,36 @@ const { title, description, hero, pullQuote, stats } = entry.data;
                 <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Compassion</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        Every interaction is guided by genuine care, empathy, and a deep commitment to understanding individual needs.
+                        Every interaction is guided by genuine care, empathy, and a deep commitment to understanding
+                        individual needs.
                     </p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
                     <p class="text-gray-600 leading-relaxed">
-                        We maintain the highest standards in everything we do, from training our team to delivering exceptional care.
+                        We maintain the highest standards in everything we do, from training our team to delivering
+                        exceptional care.
                     </p>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
                     <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
                         <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                         </svg>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Respect</h3>
@@ -101,31 +103,63 @@ const { title, description, hero, pullQuote, stats } = entry.data;
 
     <!-- Trust Indicators -->
     {stats && stats.length > 0 && (
-        <section class="py-20 md:py-28 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <div class="grid md:grid-cols-4 gap-8 text-center">
-                    {stats.map((stat: { value: string; label: string }) => (
-                        <div>
-                            <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">{stat.value}</div>
-                            <p class="text-gray-600 text-lg">{stat.label}</p>
-                        </div>
-                    ))}
+            <section class="py-20 md:py-28 bg-white">
+                <div class="max-w-6xl mx-auto px-6">
+                    <div class="grid md:grid-cols-4 gap-8 text-center">
+                        {stats.map((stat: { value: string; label: string }) => (
+                                <div>
+                                    <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">{stat.value}</div>
+                                    <p class="text-gray-600 text-lg">{stat.label}</p>
+                                </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
     )}
 
-    <CallToAction />
-    <Footer />
+    <CallToAction/>
+    <Footer/>
 </Layout>
 
 <style>
     /* Enhanced typography for long-form reading */
     .prose p {
-        margin-bottom: 1.5em;
+        margin-bottom: 2.5em;
+        line-height: 1.7;
     }
 
     .prose p:first-of-type {
         margin-top: 0;
+    }
+
+    .prose p:first-of-type::first-letter {
+        font-size: 4em;
+        font-weight: 700;
+        line-height: 1;
+        float: left;
+        margin-right: 0.15em;
+        margin-top: 0.1em;
+        color: #13705B;
+    }
+
+    .prose strong {
+        color: #111827;
+        font-weight: 600;
+    }
+
+    .prose h2 {
+        font-size: 2.25em;
+        font-weight: 700;
+        color: #111827;
+        margin-top: 2em;
+        margin-bottom: 1em;
+    }
+
+    .prose h3 {
+        font-size: 1.75em;
+        font-weight: 600;
+        color: #1f2937;
+        margin-top: 1.5em;
+        margin-bottom: 0.75em;
     }
 </style>
