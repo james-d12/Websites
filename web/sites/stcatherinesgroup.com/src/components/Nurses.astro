@@ -1,36 +1,39 @@
 ---
 import {Image} from "astro:assets";
-import nursesImage from "../assets/medicalert-uk-XjlyFT-ibd0-unsplash.jpg";
+import vaccinationsImage from "../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
+import hospitalNursesImage from "../assets/jeshoots-com-l0j0DHVWcIE-unsplash.jpg";
+import careHomeNursesImage from "../assets/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
+import practiceNursesImage from "../assets/cdc-Jusy7vxGPLM-unsplash.jpg";
 
 const nurses = [
     {
         title: "Vaccination Nurses",
         description: "Professional vaccination services delivered in the comfort of your home by our qualified nursing team. From seasonal flu jabs to travel vaccinations and routine immunisations, we provide safe, convenient healthcare that fits around your schedule.",
         href: "/nurses/vaccination-nurses",
-        image: nursesImage,
+        image: vaccinationsImage,
     },
     {
         title: "Hospital Nurses",
         description: "Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments.",
         href: "/nurses/hospital-nurses",
-        image: nursesImage,
+        image: hospitalNursesImage,
     },
     {
         title: "Care Home Nurses",
         description: "Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team.",
         href: "/nurses/carehome-nurses",
-        image: nursesImage,
+        image: careHomeNursesImage,
     },
     {
         title: "Practice Nurses",
         description: "Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention.",
-        href: "/nurses/practise-nurses",
-        image: nursesImage,
+        href: "/nurses/practice-nurses",
+        image: practiceNursesImage,
     },
 ];
 ---
 
-<section id="nurses" class="py-20 md:py-28 bg-gradient-to-b from-gray-50 to-white">
+<section id="nurses" class="py-20 md:py-28 bg-linear-to-b from-gray-50 to-white">
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-20">
             <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Professional Healthcare</p>
@@ -72,7 +75,7 @@ const nurses = [
                                     <span class="text-white font-bold text-xl">0{i + 1}</span>
                                 </div>
 
-                                <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+                                <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
                                 <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
                                     <Image
                                             src={nurse.image}
