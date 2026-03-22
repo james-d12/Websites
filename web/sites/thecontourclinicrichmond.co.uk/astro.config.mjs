@@ -5,6 +5,9 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://thecontourclinicrichmond.co.uk",
+  server: {
+    port: 35425,
+  },
   vite: {
     plugins: [tailwindcss()],
   },

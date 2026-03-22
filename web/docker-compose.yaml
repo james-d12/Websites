@@ -1,9 +1,40 @@
 services:
-  playwright:
+  sites:
     build:
       context: .
-      dockerfile: Playwright.Dockerfile
+      dockerfile: Site.Dockerfile
     working_dir: /app
     volumes:
       - .:/app
+    ports:
+      - "35421:35421"
+      - "35422:35422"
+      - "35423:35423"
+      - "35424:35424"
+      - "35425:35425"
+    command: [ "pnpm", "--filter", "./sites/*", "dev", "--host" ]
+    healthcheck:
+      test: [ "CMD", "sh", "-c", "wget --quiet --tries=1 --spider http://localhost:35421 && wget --quiet --tries=1 --spider http://localhost:35422 && wget --quiet --tries=1 --spider http://localhost:35423 && wget --quiet --tries=1 --spider http://localhost:35424 && wget --quiet --tries=1 --spider http://localhost:35425" ]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 60s
+
+  playwright:
+    build:
+      context: .
+      dockerfile: Playwright.Dockerfile`
+    working_dir: /app
+    volumes:
+      - .:/app
+    environment:
+      - DOCKER=true
+      - JAMESDURBAN_BASE_URL=http://sites:35421
+      - BLACKCATTATTOOS_BASE_URL=http://sites:35422
+      - ORCHITECT_BASE_URL=http://sites:35423
+      - STCATHERINESGROUP_BASE_URL=http://sites:35424
+      - THECONTOURCLINIC_BASE_URL=http://sites:35425
+    depends_on:
+      sites:
+        condition: service_healthy
     command: [ "pnpm", "exec", "playwright", "test" ]

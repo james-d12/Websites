@@ -30,13 +30,13 @@ export default defineConfig({
             use: {...devices['Desktop Safari']},
         }
     ],
-    /*
-    webServer: [
+    // Only start webServer when NOT in Docker (DOCKER env var not set)
+    webServer: process.env.DOCKER ? undefined : [
         {
             command: 'pnpm --filter jamesdurban.com dev',
             url: 'http://localhost:35421',
             timeout: 120 * 1000,
             reuseExistingServer: !process.env.CI,
         },
-    ]*/
+    ]
 });
