@@ -6,7 +6,7 @@ const services = [
     {name: "1-1 Companionship Care", href: "/services/1-1-companionship-care"},
     {name: "1-1 Dementia Care", href: "/services/1-1-dementia-care"},
     {name: "1-1 Safety Care", href: "/services/1-1-safety-care"},
-    {name: "Personal Assistants", href: "/personal-assistants"},
+    {name: "Personal Assistants", href: "/services/personal-assistants"},
 ];
 
 const nurses = [
@@ -25,25 +25,22 @@ const navLinks = [
 ---
 
 <nav class="sticky top-0 left-0 w-full bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-md z-50">
-    <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="max-w-8xl mx-auto px-8 flex items-center justify-between">
 
         <a href="/" class="flex items-center gap-8 group" title="Home">
-            <img src={favicon} alt="St Catherine's Group Logo" class="w-16 h-16 md:w-32 md:h-32"/>
-
+            <img src={favicon} alt="St Catherine's Group Logo" class="w-24 h-24 md:w-32 md:h-32"/>
 
             <div class="grid grid-rows">
-            <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight"
-                  style="font-family: 'Lora', Georgia, serif;">
+                <span class="text-4xl md:text-5xl font-semibold text-white tracking-tight"
+                      style="font-family: 'Lora', Georgia, serif;">
                 St Catherine's Group
-            </span>
-
+                </span>
                 <span class="text-2xl md:text-3xl  text-white tracking-tight"
                       style="font-family: 'Lora', Georgia, serif;">
                 Healthcare
-            </span>
+                </span>
             </div>
         </a>
-
 
         <!-- Desktop Navigation -->
         <ul class="hidden lg:flex items-center gap-16">
@@ -52,12 +49,12 @@ const navLinks = [
                         {link.href ? (
                                 <a
                                         href={link.href}
-                                        class="text-2xl font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
+                                        class="text-3xl font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
                                 >
                                     {link.name}
                                 </a>
                         ) : (
-                                <span class={`text-2xl font-medium tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}>
+                                <span class={`text-3xl font-medium tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}>
                             {link.name}
                                     {link.dropdown && (
                                             <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180"

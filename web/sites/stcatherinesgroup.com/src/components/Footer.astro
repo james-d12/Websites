@@ -2,37 +2,36 @@
 const year = new Date().getFullYear();
 
 const careServices = [
-    { name: "1-1 Companionship Care", href: "/services/1-1-companionship-care" },
-    { name: "1-1 Chaperone Care", href: "/services/1-1-chaperone-care" },
-    { name: "1-1 Dementia Care", href: "/services/1-1-dementia-care" },
-    { name: "1-1 Safety Care", href: "/services/1-1-safety-care" },
+    {name: "1-1 Companionship Care", href: "/services/1-1-companionship-care"},
+    {name: "1-1 Chaperone Care", href: "/services/1-1-chaperone-care"},
+    {name: "1-1 Dementia Care", href: "/services/1-1-dementia-care"},
+    {name: "1-1 Safety Care", href: "/services/1-1-safety-care"},
+    {name: "Personal Assistant", href: "/services/personal-assistant"},
 ];
 
 const nursingServices = [
-    { name: "Vaccination Nurses", href: "/nurses/vaccination-nurses" },
-    { name: "Hospital Nurses", href: "/nurses/hospital-nurses" },
-    { name: "Care Home Nurses", href: "/nurses/carehome-nurses" },
-    { name: "Practice Nurses", href: "/nurses/practice-nurses" },
+    {name: "Vaccination Nurses", href: "/nurses/vaccination-nurses"},
+    {name: "Hospital Nurses", href: "/nurses/hospital-nurses"},
+    {name: "Care Home Nurses", href: "/nurses/carehome-nurses"},
+    {name: "Practice Nurses", href: "/nurses/practice-nurses"},
 ];
 
 const quickLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "Enquiries", href: "/enquiries" },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Personal Assistant", href: "/services/personal-assistant" },
+    {name: "About Us", href: "/about"},
+    {name: "Contact Us", href: "/contact"},
 ];
 ---
 
 <footer class="bg-linear-to-l from-green-dark via-green-dark to-green-darker text-white">
-    <div class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24">
             <div>
                 <h2 class="text-lg font-semibold text-white mb-4" style="font-family: 'Lora', Georgia, serif;">
                     St Catherine's Group
                 </h2>
                 <p class="text-sm text-white/80 max-w-xs">
-                    Providing exceptional one-to-one care and professional nursing services with compassion and dedication.
+                    Providing exceptional one-to-one care and professional nursing services with compassion and
+                    dedication.
                 </p>
             </div>
 
@@ -40,7 +39,7 @@ const quickLinks = [
                 <h3 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Care Services</h3>
                 <div class="flex flex-col gap-2 text-sm text-white/80">
                     {careServices.map(link => (
-                        <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                            <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
                     ))}
                 </div>
             </div>
@@ -49,7 +48,7 @@ const quickLinks = [
                 <h3 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Nursing Services</h3>
                 <div class="flex flex-col gap-2 text-sm text-white/80">
                     {nursingServices.map(link => (
-                        <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                            <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
                     ))}
                 </div>
             </div>
@@ -58,7 +57,7 @@ const quickLinks = [
                 <h3 class="text-sm font-semibold text-white mb-3 uppercase tracking-wider">Quick Links</h3>
                 <div class="flex flex-col gap-2 text-sm text-white/80">
                     {quickLinks.map(link => (
-                        <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                            <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
                     ))}
                 </div>
             </div>

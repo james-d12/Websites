@@ -1,17 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import CallToAction from '../components/CallToAction.astro';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
 import {Image} from "astro:assets";
-import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
+import personalAssistantImage from "../../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
 ---
 
 <Layout title="Personal Assistant Services - St Catherine's Group"
         description="Practical, day-to-day assistance to help you manage life on your own terms with confidence.">
     <Navbar/>
 
-    <!-- Hero Section -->
     <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -45,7 +44,6 @@ import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash
         </div>
     </section>
 
-    <!-- Tasks We Handle Section -->
     <section class="py-20 md:py-28 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -225,7 +223,6 @@ import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash
         </div>
     </section>
 
-    <!-- Your Time Back Section -->
     <section class="py-20 md:py-28 bg-warm-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid lg:grid-cols-5 gap-12 items-center">
