@@ -3,8 +3,30 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import dementiaImage from "../../assets/centre-for-ageing-better-lNTbuoYMSro-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "The dementia care team understands my husband in a way that brings me such relief. They're patient, kind, and genuinely care about making his days meaningful and joyful.",
+        name: "Margaret L.",
+        relationship: "Wife",
+        service: "Dementia Care"
+    },
+    {
+        quote: "Mum lights up when her carer arrives. They've taken time to learn her history, her preferences, and they connect with her in ways that bring out the person she still is.",
+        name: "Susan D.",
+        relationship: "Daughter",
+        service: "Dementia Care"
+    },
+    {
+        quote: "The consistency and familiarity of having the same carers has made such a difference. Dad feels safe with them, and we finally have the respite we desperately needed.",
+        name: "Michael B.",
+        relationship: "Son",
+        service: "Dementia Care"
+    }
+];
 ---
 
 <Layout title="1-1 Dementia Care - St Catherine's Group" description="Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual.">
@@ -185,6 +207,7 @@ import dementiaImage from "../../assets/centre-for-ageing-better-lNTbuoYMSro-uns
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>

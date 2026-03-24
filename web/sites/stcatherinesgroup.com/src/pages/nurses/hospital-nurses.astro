@@ -3,8 +3,30 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import hospitalNursesImage from "../../assets/jeshoots-com-l0j0DHVWcIE-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "After my surgery, being able to recover at home with hospital-level nursing care made all the difference. The expertise and confidence they brought was exactly what I needed.",
+        name: "Linda S.",
+        relationship: "Client",
+        service: "Hospital Nursing"
+    },
+    {
+        quote: "Dad's palliative care at home wouldn't have been possible without these incredible nurses. They managed his complex needs with skill, compassion, and grace.",
+        name: "Catherine R.",
+        relationship: "Daughter",
+        service: "Hospital Nursing"
+    },
+    {
+        quote: "The IV therapy and wound care I receive is hospital-standard but in the comfort of my own home. The nurses are highly skilled and always professional.",
+        name: "Richard M.",
+        relationship: "Client",
+        service: "Hospital Nursing"
+    }
+];
 ---
 
 <Layout title="Hospital Nurses - St Catherine's Group" description="Experienced hospital-trained nurses providing acute and specialist care in your own home.">
@@ -252,6 +274,7 @@ import hospitalNursesImage from "../../assets/jeshoots-com-l0j0DHVWcIE-unsplash.
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>

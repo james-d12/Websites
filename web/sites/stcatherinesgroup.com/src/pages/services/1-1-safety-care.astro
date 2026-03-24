@@ -3,8 +3,30 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import safetyImage from "../../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "After several falls, I was terrified to be alone. My safety carer has given me back my confidence. I know someone capable is always there, and that makes all the difference.",
+        name: "Elizabeth W.",
+        relationship: "Client",
+        service: "Safety Care"
+    },
+    {
+        quote: "Dad's Parkinson's meant we were constantly worried about his safety. The 1-1 care provides the monitoring he needs while still allowing him to live at home with dignity.",
+        name: "Andrew M.",
+        relationship: "Son",
+        service: "Safety Care"
+    },
+    {
+        quote: "They're vigilant without being overbearing. I feel safe and secure, but never like I'm being watched or restricted. It's exactly the support I needed.",
+        name: "Gerald T.",
+        relationship: "Client",
+        service: "Safety Care"
+    }
+];
 ---
 
 <Layout title="1-1 Safety Care - St Catherine's Group"
@@ -270,6 +292,7 @@ import safetyImage from "../../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction/>
     <Footer/>
 </Layout>

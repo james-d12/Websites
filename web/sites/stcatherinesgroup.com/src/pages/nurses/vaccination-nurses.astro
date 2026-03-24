@@ -3,15 +3,37 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "Getting my flu jab at home was so convenient - no waiting rooms, no queues. The nurse was professional, efficient, and put me completely at ease.",
+        name: "Dorothy H.",
+        relationship: "Client",
+        service: "Vaccination"
+    },
+    {
+        quote: "Vaccinating all our care home residents efficiently and safely was made possible by St Catherine's vaccination team. Their organization and expertise were excellent.",
+        name: "Steven P.",
+        relationship: "Care Home Manager",
+        service: "Vaccination"
+    },
+    {
+        quote: "The travel vaccinations I needed for my trip were all done at home with clear advice and documentation. So much easier than trying to get to a clinic.",
+        name: "Amanda J.",
+        relationship: "Client",
+        service: "Vaccination"
+    }
+];
 ---
 
 <Layout title="Vaccination Nurses - St Catherine's Group" description="Professional vaccination nurses delivering immunisation services in the comfort of your home.">
     <Navbar />
 
     <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
+    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-28">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="space-y-8">
@@ -29,7 +51,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
                 </div>
 
                 <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
+                    <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
                     <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
                         <Image
                             src={vaccinationsImage}
@@ -173,7 +195,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Vaccination Nurses Provide:</h3>
                     <div class="space-y-4">
                         <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
@@ -181,7 +203,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
                             <span class="text-gray-700"><strong>Pre-vaccination Assessment</strong> - Review of medical history and contraindications</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
@@ -189,7 +211,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
                             <span class="text-gray-700"><strong>Safe Administration</strong> - Proper technique with emergency equipment on hand</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
@@ -197,7 +219,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
                             <span class="text-gray-700"><strong>Travel Health Advice</strong> - Guidance on destination-specific requirements</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
@@ -205,7 +227,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
                             <span class="text-gray-700"><strong>Documentation</strong> - Vaccination certificates and health records</span>
                         </div>
                         <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                 <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                                 </svg>
@@ -218,6 +240,7 @@ import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>

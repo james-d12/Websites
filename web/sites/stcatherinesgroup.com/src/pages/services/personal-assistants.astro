@@ -3,8 +3,30 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import personalAssistantImage from "../../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "My personal assistant has transformed how I manage my life. From organizing appointments to handling correspondence, I finally feel in control again instead of overwhelmed.",
+        name: "David P.",
+        relationship: "Client",
+        service: "Personal Assistant"
+    },
+    {
+        quote: "After my stroke, managing paperwork and admin became impossible. Having someone I trust to handle these details has given me back my independence and peace of mind.",
+        name: "Patricia K.",
+        relationship: "Client",
+        service: "Personal Assistant"
+    },
+    {
+        quote: "They don't just do tasks - they genuinely understand what I need and work the way I work. It's like having a partner who keeps my life running smoothly.",
+        name: "James R.",
+        relationship: "Client",
+        service: "Personal Assistant"
+    }
+];
 ---
 
 <Layout title="Personal Assistant Services - St Catherine's Group"
@@ -292,6 +314,7 @@ import personalAssistantImage from "../../assets/tatiana-zanon-MMhazsT2wtM-unspl
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction/>
     <Footer/>
 </Layout>

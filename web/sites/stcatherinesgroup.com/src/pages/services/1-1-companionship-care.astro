@@ -3,8 +3,30 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import companionshipImage from "../../assets/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "The care and attention my mother receives is truly exceptional. Her companion has become like family to us, and we see such a positive change in Mum's wellbeing and happiness.",
+        name: "Sarah M.",
+        relationship: "Daughter",
+        service: "Companionship"
+    },
+    {
+        quote: "I was lonely after losing my wife. My companion visits three times a week and it's made such a difference - someone to talk to, share a cup of tea, go for walks. I look forward to every visit.",
+        name: "Arthur W.",
+        relationship: "Client",
+        service: "Companionship"
+    },
+    {
+        quote: "It's not just about having someone there - it's about having someone who genuinely cares, who listens, who makes my dad smile. That's priceless.",
+        name: "Jennifer H.",
+        relationship: "Daughter",
+        service: "Companionship"
+    }
+];
 ---
 
 <Layout title="1-1 Companionship Care - St Catherine's Group" description="Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life.">
@@ -128,6 +150,7 @@ import companionshipImage from "../../assets/national-cancer-institute-BxXgTQEw1
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>

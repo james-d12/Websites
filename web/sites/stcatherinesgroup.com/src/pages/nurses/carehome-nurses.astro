@@ -3,8 +3,30 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import Testimonials from '../../components/Testimonials.astro';
 import {Image} from "astro:assets";
 import careHomeNursesImage from "../../assets/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "The nursing support St Catherine's provides to our care home has raised our clinical standards significantly. Their expertise and professionalism are outstanding.",
+        name: "Janet W.",
+        relationship: "Care Home Manager",
+        service: "Care Home Nursing"
+    },
+    {
+        quote: "Having reliable specialist nurses we can call on for complex care needs gives us and our residents' families complete peace of mind. They're an extension of our team.",
+        name: "David L.",
+        relationship: "Care Home Director",
+        service: "Care Home Nursing"
+    },
+    {
+        quote: "The medication management support and training they provide has been invaluable. Our residents receive excellent clinical care thanks to their ongoing support.",
+        name: "Mary T.",
+        relationship: "Deputy Manager",
+        service: "Care Home Nursing"
+    }
+];
 ---
 
 <Layout title="Care Home Nurses - St Catherine's Group" description="Specialist nurses providing clinical support and healthcare services to care homes and residential facilities.">
@@ -312,6 +334,7 @@ import careHomeNursesImage from "../../assets/georg-arthur-pflueger-eO_JhqabBY0-
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>
