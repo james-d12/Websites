@@ -3,8 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import Testimonials from '../../components/Testimonials.astro';
-import {Image} from "astro:assets";
+import Hero from '../../components/Services/Hero.astro';
+import Testimonials from '../../components/Services/Testimonials.astro';
 import chaperoneImage from "../../assets/thiago-cerqueira-Wr3HGvx_RSM-unsplash.jpg";
 
 const testimonials = [
@@ -29,40 +29,17 @@ const testimonials = [
 ];
 ---
 
-<Layout title="1-1 Chaperone Care - St Catherine's Group" description="Reliable, discreet support for appointments, outings, and events so you never have to go alone.">
-    <Navbar />
+<Layout title="1-1 Chaperone Care - St Catherine's Group"
+        description="Reliable, discreet support for appointments, outings, and events so you never have to go alone.">
+    <Navbar/>
 
-    <!-- Hero Section -->
-    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
-                            Our Services
-                        </p>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                            1-1 Chaperone Care
-                        </h1>
-                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                            Reliable, discreet support for appointments, outings, and events so you never have to go alone. From medical appointments to social gatherings, shopping trips to family occasions, we provide the reassuring presence that helps you feel confident and comfortable wherever you need to be.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
-                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
-                        <Image
-                            src={chaperoneImage}
-                            alt="Chaperone services"
-                            class="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Hero
+            label="Our Services"
+            title="1-1 Chaperone Care"
+            description="Reliable, discreet support for appointments, outings, and events so you never have to go alone. From medical appointments to social gatherings, shopping trips to family occasions, we provide the reassuring presence that helps you feel confident and comfortable wherever you need to be."
+            image={chaperoneImage}
+            imageAlt="Chaperone services"
+    />
 
     <!-- How It Works Section -->
     <section class="py-20 md:py-28 bg-white">
@@ -73,7 +50,8 @@ const testimonials = [
                     From Start to Finish, We're With You
                 </h2>
                 <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                    Our chaperone service provides seamless support throughout your entire appointment or outing, so you can focus on what matters.
+                    Our chaperone service provides seamless support throughout your entire appointment or outing, so you
+                    can focus on what matters.
                 </p>
             </div>
 
@@ -87,7 +65,8 @@ const testimonials = [
                                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-dark text-white font-bold mb-4">1</span>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Before We Go</h3>
                                 <p class="text-gray-600 leading-relaxed">
-                                    We'll confirm all the details - appointment time, location, what you need help with, and any special requirements. We arrive early, ready to support you.
+                                    We'll confirm all the details - appointment time, location, what you need help with,
+                                    and any special requirements. We arrive early, ready to support you.
                                 </p>
                             </div>
                         </div>
@@ -101,7 +80,8 @@ const testimonials = [
                                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-dark text-white font-bold mb-4">2</span>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Getting There</h3>
                                 <p class="text-gray-600 leading-relaxed">
-                                    Whether driving, taking public transport, or walking, we provide support navigating to your destination safely and comfortably.
+                                    Whether driving, taking public transport, or walking, we provide support navigating
+                                    to your destination safely and comfortably.
                                 </p>
                             </div>
                         </div>
@@ -113,7 +93,8 @@ const testimonials = [
                                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-dark text-white font-bold mb-4">3</span>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">During the Appointment</h3>
                                 <p class="text-gray-600 leading-relaxed">
-                                    We're by your side - helping you ask questions, remember information, take notes, and ensuring you understand everything clearly.
+                                    We're by your side - helping you ask questions, remember information, take notes,
+                                    and ensuring you understand everything clearly.
                                 </p>
                             </div>
                         </div>
@@ -127,7 +108,8 @@ const testimonials = [
                                 <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-green-dark text-white font-bold mb-4">4</span>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-3">Safe Return Home</h3>
                                 <p class="text-gray-600 leading-relaxed">
-                                    We ensure you get home safely and help you process any instructions or next steps from your appointment.
+                                    We ensure you get home safely and help you process any instructions or next steps
+                                    from your appointment.
                                 </p>
                             </div>
                         </div>
@@ -137,7 +119,7 @@ const testimonials = [
         </div>
     </section>
 
-    <Testimonials testimonials={testimonials} />
+    <Testimonials testimonials={testimonials}/>
 
     <!-- Where We Support Section -->
     <section class="py-20 md:py-28 bg-warm-50">
@@ -153,13 +135,16 @@ const testimonials = [
                 <div class="group bg-white rounded-xl p-6 hover:shadow-lg transition-all">
                     <div class="flex items-start gap-4">
                         <div class="shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center group-hover:bg-green-dark group-hover:scale-110 transition-all">
-                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none"
+                                 stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Medical Appointments</h3>
-                            <p class="text-gray-600">GP surgeries, hospitals, specialists, diagnostic tests, treatment sessions</p>
+                            <p class="text-gray-600">GP surgeries, hospitals, specialists, diagnostic tests, treatment
+                                sessions</p>
                         </div>
                     </div>
                 </div>
@@ -167,13 +152,16 @@ const testimonials = [
                 <div class="group bg-white rounded-xl p-6 hover:shadow-lg transition-all">
                     <div class="flex items-start gap-4">
                         <div class="shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center group-hover:bg-green-dark group-hover:scale-110 transition-all">
-                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none"
+                                 stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Professional Meetings</h3>
-                            <p class="text-gray-600">Legal consultations, financial advisors, estate agents, care assessments</p>
+                            <p class="text-gray-600">Legal consultations, financial advisors, estate agents, care
+                                assessments</p>
                         </div>
                     </div>
                 </div>
@@ -181,13 +169,16 @@ const testimonials = [
                 <div class="group bg-white rounded-xl p-6 hover:shadow-lg transition-all">
                     <div class="flex items-start gap-4">
                         <div class="shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center group-hover:bg-green-dark group-hover:scale-110 transition-all">
-                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none"
+                                 stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                             </svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold text-gray-900 mb-2">Social Occasions</h3>
-                            <p class="text-gray-600">Family gatherings, weddings, community events, religious services</p>
+                            <p class="text-gray-600">Family gatherings, weddings, community events, religious
+                                services</p>
                         </div>
                     </div>
                 </div>
@@ -195,8 +186,10 @@ const testimonials = [
                 <div class="group bg-white rounded-xl p-6 hover:shadow-lg transition-all">
                     <div class="flex items-start gap-4">
                         <div class="shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center group-hover:bg-green-dark group-hover:scale-110 transition-all">
-                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                            <svg class="w-6 h-6 text-green-dark group-hover:text-white transition-colors" fill="none"
+                                 stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                             </svg>
                         </div>
                         <div>
@@ -209,6 +202,6 @@ const testimonials = [
         </div>
     </section>
 
-    <CallToAction />
-    <Footer />
+    <CallToAction/>
+    <Footer/>
 </Layout>
