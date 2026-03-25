@@ -10,7 +10,7 @@ on:
 
 concurrency:
   group: cms-rebuild-${{ github.event.client_payload.site }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   rebuild:
