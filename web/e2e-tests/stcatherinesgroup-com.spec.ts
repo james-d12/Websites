@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 const BASE_URL =
-  process.env.STCATHERINESGROUP_BASE_URL ?? "http://localhost:35421";
+  process.env.STCATHERINESGROUP_BASE_URL ?? "http://localhost:35424";
 
 test.describe("Home Page", () => {
   test("has title", async ({ page }) => {
