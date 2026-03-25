@@ -6,15 +6,6 @@ hero:
   heading: "About St Catherine's Group"
   subheading: "Built on compassion, driven by excellence, and dedicated to making a real difference in people's lives."
 pullQuote: "A powerful quote from the personal story that captures the essence of why St Catherine's Group was founded."
-stats:
-  - value: "25+"
-    label: "Years of Experience"
-  - value: "5k+"
-    label: "People Supported"
-  - value: "24/7"
-    label: "Care Available"
-  - value: "100%"
-    label: "Person-Centred"
 ---
 
 Welcome to St Catherine’s Care,

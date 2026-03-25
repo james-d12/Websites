@@ -7,13 +7,12 @@ import CallToAction from '../components/CallToAction.astro';
 
 const entry = await getEntry('pages', 'about');
 const {Content} = await render(entry);
-const {title, description, hero, pullQuote, stats} = entry.data;
+const {title, description, hero, pullQuote} = entry.data;
 ---
 
 <Layout title={title} description={description}>
     <Navbar/>
 
-    <!-- Hero Section -->
     <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
@@ -25,7 +24,6 @@ const {title, description, hero, pullQuote, stats} = entry.data;
         </div>
     </section>
 
-    <!-- Personal Story Section -->
     <section class="py-24 md:py-32 bg-white">
         <div class="max-w-5xl mx-auto px-6">
             <!-- Main story content -->
@@ -101,28 +99,11 @@ const {title, description, hero, pullQuote, stats} = entry.data;
         </div>
     </section>
 
-    <!-- Trust Indicators -->
-    {stats && stats.length > 0 && (
-            <section class="py-20 md:py-28 bg-white">
-                <div class="max-w-6xl mx-auto px-6">
-                    <div class="grid md:grid-cols-4 gap-8 text-center">
-                        {stats.map((stat: { value: string; label: string }) => (
-                                <div>
-                                    <div class="text-5xl md:text-6xl font-bold text-green-dark mb-3">{stat.value}</div>
-                                    <p class="text-gray-600 text-lg">{stat.label}</p>
-                                </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-    )}
-
     <CallToAction/>
     <Footer/>
 </Layout>
 
 <style>
-    /* Enhanced typography for long-form reading */
     .prose p {
         margin-bottom: 2.5em;
         line-height: 1.7;
