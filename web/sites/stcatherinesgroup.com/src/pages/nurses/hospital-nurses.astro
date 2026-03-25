@@ -3,44 +3,42 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import {Image} from "astro:assets";
+import Hero from '../../components/Services/Hero.astro';
+import Testimonials from '../../components/Services/Testimonials.astro';
 import hospitalNursesImage from "../../assets/jeshoots-com-l0j0DHVWcIE-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "After my surgery, being able to recover at home with hospital-level nursing care made all the difference. The expertise and confidence they brought was exactly what I needed.",
+        name: "Linda S.",
+        relationship: "Client",
+        service: "Hospital Nursing"
+    },
+    {
+        quote: "Dad's palliative care at home wouldn't have been possible without these incredible nurses. They managed his complex needs with skill, compassion, and grace.",
+        name: "Catherine R.",
+        relationship: "Daughter",
+        service: "Hospital Nursing"
+    },
+    {
+        quote: "The IV therapy and wound care I receive is hospital-standard but in the comfort of my own home. The nurses are highly skilled and always professional.",
+        name: "Richard M.",
+        relationship: "Client",
+        service: "Hospital Nursing"
+    }
+];
 ---
 
 <Layout title="Hospital Nurses - St Catherine's Group" description="Experienced hospital-trained nurses providing acute and specialist care in your own home.">
     <Navbar />
 
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
-                            Specialist Nurses
-                        </p>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                            Hospital Nurses
-                        </h1>
-                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                            Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
-                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
-                        <Image
-                            src={hospitalNursesImage}
-                            alt="Hospital nursing services"
-                            class="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Hero
+        label="Specialist Nurses"
+        title="Hospital Nurses"
+        description="Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments."
+        image={hospitalNursesImage}
+        imageAlt="Hospital nursing services"
+    />
 
     <!-- Services -->
     <section class="py-20 md:py-28 bg-white">
@@ -252,6 +250,7 @@ import hospitalNursesImage from "../../assets/jeshoots-com-l0j0DHVWcIE-unsplash.
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>

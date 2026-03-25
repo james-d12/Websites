@@ -3,44 +3,42 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import {Image} from "astro:assets";
+import Hero from '../../components/Services/Hero.astro';
+import Testimonials from '../../components/Services/Testimonials.astro';
 import careHomeNursesImage from "../../assets/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "The nursing support St Catherine's provides to our care home has raised our clinical standards significantly. Their expertise and professionalism are outstanding.",
+        name: "Janet W.",
+        relationship: "Care Home Manager",
+        service: "Care Home Nursing"
+    },
+    {
+        quote: "Having reliable specialist nurses we can call on for complex care needs gives us and our residents' families complete peace of mind. They're an extension of our team.",
+        name: "David L.",
+        relationship: "Care Home Director",
+        service: "Care Home Nursing"
+    },
+    {
+        quote: "The medication management support and training they provide has been invaluable. Our residents receive excellent clinical care thanks to their ongoing support.",
+        name: "Mary T.",
+        relationship: "Deputy Manager",
+        service: "Care Home Nursing"
+    }
+];
 ---
 
 <Layout title="Care Home Nurses - St Catherine's Group" description="Specialist nurses providing clinical support and healthcare services to care homes and residential facilities.">
     <Navbar />
 
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
-                            Specialist Nurses
-                        </p>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                            Care Home Nurses
-                        </h1>
-                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                            Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team and ensure the highest standards of resident healthcare.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
-                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
-                        <Image
-                            src={careHomeNursesImage}
-                            alt="Care home nursing services"
-                            class="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Hero
+        label="Specialist Nurses"
+        title="Care Home Nurses"
+        description="Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team and ensure the highest standards of resident healthcare."
+        image={careHomeNursesImage}
+        imageAlt="Care home nursing services"
+    />
 
     <!-- Services -->
     <section class="py-20 md:py-28 bg-white">
@@ -312,6 +310,7 @@ import careHomeNursesImage from "../../assets/georg-arthur-pflueger-eO_JhqabBY0-
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials} />
     <CallToAction />
     <Footer />
 </Layout>

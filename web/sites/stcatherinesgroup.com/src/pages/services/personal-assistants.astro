@@ -1,51 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import CallToAction from '../components/CallToAction.astro';
-import {Image} from "astro:assets";
-import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import CallToAction from '../../components/CallToAction.astro';
+import Hero from '../../components/Services/Hero.astro';
+import Testimonials from '../../components/Services/Testimonials.astro';
+import personalAssistantImage from "../../assets/tatiana-zanon-MMhazsT2wtM-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "My personal assistant has transformed how I manage my life. From organizing appointments to handling correspondence, I finally feel in control again instead of overwhelmed.",
+        name: "David P.",
+        relationship: "Client",
+        service: "Personal Assistant"
+    },
+    {
+        quote: "After my stroke, managing paperwork and admin became impossible. Having someone I trust to handle these details has given me back my independence and peace of mind.",
+        name: "Patricia K.",
+        relationship: "Client",
+        service: "Personal Assistant"
+    },
+    {
+        quote: "They don't just do tasks - they genuinely understand what I need and work the way I work. It's like having a partner who keeps my life running smoothly.",
+        name: "James R.",
+        relationship: "Client",
+        service: "Personal Assistant"
+    }
+];
 ---
 
 <Layout title="Personal Assistant Services - St Catherine's Group"
         description="Practical, day-to-day assistance to help you manage life on your own terms with confidence.">
     <Navbar/>
 
-    <!-- Hero Section -->
-    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
-                            Our Services
-                        </p>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                            Personal Assistant
-                        </h1>
-                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                            Practical, day-to-day assistance to help you manage life on your own terms with confidence.
-                            From organizing appointments and managing correspondence to helping with household tasks and
-                            personal admin, we handle the details so you can focus on what matters most to you.
-                        </p>
-                    </div>
-                </div>
+    <Hero
+            label="Our Services"
+            title="Personal Assistant"
+            description="Practical, day-to-day assistance to help you manage life on your own terms with confidence. From organizing appointments and managing correspondence to helping with household tasks and personal admin, we handle the details so you can focus on what matters most to you."
+            image={personalAssistantImage}
+            imageAlt="Personal assistant services"
+    />
 
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
-                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
-                        <Image
-                                src={personalAssistantImage}
-                                alt="Personal assistant services"
-                                class="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tasks We Handle Section -->
     <section class="py-20 md:py-28 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
@@ -225,7 +220,6 @@ import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash
         </div>
     </section>
 
-    <!-- Your Time Back Section -->
     <section class="py-20 md:py-28 bg-warm-50">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid lg:grid-cols-5 gap-12 items-center">
@@ -295,6 +289,7 @@ import personalAssistantImage from "../assets/tatiana-zanon-MMhazsT2wtM-unsplash
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials}/>
     <CallToAction/>
     <Footer/>
 </Layout>

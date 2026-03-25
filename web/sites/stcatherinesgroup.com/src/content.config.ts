@@ -1,5 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
@@ -12,14 +13,6 @@ const pages = defineCollection({
       subheading: z.string(),
     }),
     pullQuote: z.string().optional(),
-    stats: z
-      .array(
-        z.object({
-          value: z.string(),
-          label: z.string(),
-        }),
-      )
-      .optional(),
   }),
 });
 

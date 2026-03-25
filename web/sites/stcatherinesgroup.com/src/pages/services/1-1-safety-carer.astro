@@ -3,47 +3,43 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import {Image} from "astro:assets";
+import Hero from '../../components/Services/Hero.astro';
+import Testimonials from '../../components/Services/Testimonials.astro';
 import safetyImage from "../../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
+
+const testimonials = [
+    {
+        quote: "After several falls, I was terrified to be alone. My safety carer has given me back my confidence. I know someone capable is always there, and that makes all the difference.",
+        name: "Elizabeth W.",
+        relationship: "Client",
+        service: "Safety Care"
+    },
+    {
+        quote: "Dad's Parkinson's meant we were constantly worried about his safety. The 1-1 care provides the monitoring he needs while still allowing him to live at home with dignity.",
+        name: "Andrew M.",
+        relationship: "Son",
+        service: "Safety Care"
+    },
+    {
+        quote: "They're vigilant without being overbearing. I feel safe and secure, but never like I'm being watched or restricted. It's exactly the support I needed.",
+        name: "Gerald T.",
+        relationship: "Client",
+        service: "Safety Care"
+    }
+];
 ---
 
-<Layout title="1-1 Safety Care - St Catherine's Group"
+<Layout title="1-1 Safety Carer - St Catherine's Group"
         description="Dedicated safety support tailored to individual needs, providing reassurance and peace of mind.">
     <Navbar/>
 
-    <section class="relative bg-gradient-to-b from-white to-warm-50 py-20 md:py-28">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                <div class="space-y-8">
-                    <div>
-                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
-                            Our Services
-                        </p>
-                        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                            1-1 Safety Care
-                        </h1>
-                        <p class="text-gray-600 text-xl md:text-2xl leading-relaxed">
-                            Dedicated safety support tailored to individual needs, providing reassurance and peace of
-                            mind. Whether you need support with mobility, managing health conditions, or simply require
-                            an extra level of care and attention, we're here to ensure you feel safe, secure, and
-                            supported at all times.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="relative">
-                    <div class="absolute -inset-4 bg-gradient-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform rotate-2"></div>
-                    <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-2xl">
-                        <Image
-                                src={safetyImage}
-                                alt="1-1 Safety services"
-                                class="w-full h-full object-cover"
-                        />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <Hero
+            label="Our Services"
+            title="1-1 Safety Carer"
+            description="Dedicated safety support tailored to individual needs, providing reassurance and peace of mind. Whether you need support with mobility, managing health conditions, or simply require an extra level of care and attention, we're here to ensure you feel safe, secure, and supported at all times."
+            image={safetyImage}
+            imageAlt="1-1 Safety services"
+    />
 
     <!-- Comprehensive Protection Section -->
     <section class="py-20 md:py-28 bg-white">
@@ -270,6 +266,7 @@ import safetyImage from "../../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
         </div>
     </section>
 
+    <Testimonials testimonials={testimonials}/>
     <CallToAction/>
     <Footer/>
 </Layout>
