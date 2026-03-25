@@ -12,7 +12,7 @@ services:
       - "35423:35423"
       - "35424:35424"
       - "35425:35425"
-    command: [ "pnpm", "--filter", "./sites/*", "dev", "--host" ]
+    command: ["pnpm", "--filter", "./sites/*", "dev", "--host"]
     healthcheck:
       test: >
         sh -c "curl -f http://localhost:35421 &&
@@ -41,4 +41,4 @@ services:
       - THECONTOURCLINICRICHMOND_BASE_URL=http://sites:35425
     depends_on:
       - sites
-    command: [ "pnpm", "exec", "playwright", "test" ]
+    command: ["pnpm", "exec", "playwright", "test"]
