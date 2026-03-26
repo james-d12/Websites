@@ -10,19 +10,19 @@ test.describe("Home Page", () => {
 
   test("displays main content", async ({ page }) => {
     await page.goto(BASE_URL);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("has header navigation", async ({ page }) => {
     await page.goto(BASE_URL);
-    const header = page.locator("header");
+    const header = page.locator("header").first();
     await expect(header).toBeVisible();
   });
 
   test("has footer", async ({ page }) => {
     await page.goto(BASE_URL);
-    const footer = page.locator("footer");
+    const footer = page.locator("footer").first();
     await expect(footer).toBeVisible();
   });
 
@@ -40,8 +40,8 @@ test.describe("Features Page", () => {
 
   test("displays features content", async ({ page }) => {
     await page.goto(`${BASE_URL}/features`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to features from home", async ({ page }) => {

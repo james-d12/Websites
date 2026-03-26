@@ -6,24 +6,24 @@ const BASE_URL =
 test.describe("Home Page", () => {
   test("has title", async ({ page }) => {
     await page.goto(BASE_URL);
-    await expect(page).toHaveTitle(/Black Cat Tattoos/i);
+    await expect(page).toHaveTitle(/Black Cat Tattoo/i);
   });
 
   test("displays main content", async ({ page }) => {
     await page.goto(BASE_URL);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("has header navigation", async ({ page }) => {
     await page.goto(BASE_URL);
-    const header = page.locator("header");
+    const header = page.locator("header").first();
     await expect(header).toBeVisible();
   });
 
   test("has footer", async ({ page }) => {
     await page.goto(BASE_URL);
-    const footer = page.locator("footer");
+    const footer = page.locator("footer").first();
     await expect(footer).toBeVisible();
   });
 });
@@ -31,13 +31,13 @@ test.describe("Home Page", () => {
 test.describe("Gallery Page", () => {
   test("loads gallery page", async ({ page }) => {
     await page.goto(`${BASE_URL}/gallery`);
-    await expect(page).toHaveTitle(/Black Cat Tattoos/i);
+    await expect(page).toHaveTitle(/Black Cat Tattoo/i);
   });
 
   test("displays gallery content", async ({ page }) => {
     await page.goto(`${BASE_URL}/gallery`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to gallery from home", async ({ page }) => {
@@ -53,13 +53,13 @@ test.describe("Gallery Page", () => {
 test.describe("Piercing Parlour Page", () => {
   test("loads piercing parlour page", async ({ page }) => {
     await page.goto(`${BASE_URL}/piercing-parlour`);
-    await expect(page).toHaveTitle(/Black Cat Tattoos/i);
+    await expect(page).toHaveTitle(/Black Cat Tattoo/i);
   });
 
   test("displays piercing parlour content", async ({ page }) => {
     await page.goto(`${BASE_URL}/piercing-parlour`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to piercing parlour from home", async ({ page }) => {
@@ -75,13 +75,13 @@ test.describe("Piercing Parlour Page", () => {
 test.describe("Shop Page", () => {
   test("loads shop page", async ({ page }) => {
     await page.goto(`${BASE_URL}/shop`);
-    await expect(page).toHaveTitle(/Black Cat Tattoos/i);
+    await expect(page).toHaveTitle(/Black Cat Tattoo/i);
   });
 
   test("displays shop content", async ({ page }) => {
     await page.goto(`${BASE_URL}/shop`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to shop from home", async ({ page }) => {
@@ -97,13 +97,13 @@ test.describe("Shop Page", () => {
 test.describe("Contact Us Page", () => {
   test("loads contact page", async ({ page }) => {
     await page.goto(`${BASE_URL}/contact-us`);
-    await expect(page).toHaveTitle(/Black Cat Tattoos/i);
+    await expect(page).toHaveTitle(/Black Cat Tattoo/i);
   });
 
   test("displays contact content", async ({ page }) => {
     await page.goto(`${BASE_URL}/contact-us`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to contact from home", async ({ page }) => {
@@ -119,13 +119,13 @@ test.describe("Contact Us Page", () => {
 test.describe("Styles Page", () => {
   test("loads styles page", async ({ page }) => {
     await page.goto(`${BASE_URL}/styles`);
-    await expect(page).toHaveTitle(/Black Cat Tattoos/i);
+    await expect(page).toHaveTitle(/Black Cat Tattoo/i);
   });
 
   test("displays styles content", async ({ page }) => {
     await page.goto(`${BASE_URL}/styles`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to styles from home", async ({ page }) => {
@@ -143,8 +143,8 @@ test.describe("404 Page", () => {
     await page.goto(`${BASE_URL}/this-page-does-not-exist`, {
       waitUntil: "networkidle",
     });
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 });
 

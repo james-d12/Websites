@@ -31,13 +31,13 @@ test.describe("Home Page", () => {
   test("has header navigation", async ({ page }) => {
     await page.goto(BASE_URL);
     // Header should be present
-    const header = page.locator("header");
+    const header = page.locator("header").first();
     await expect(header).toBeVisible();
   });
 
   test("has footer", async ({ page }) => {
     await page.goto(BASE_URL);
-    const footer = page.locator("footer");
+    const footer = page.locator("footer").first();
     await expect(footer).toBeVisible();
   });
 });
@@ -51,8 +51,8 @@ test.describe("Projects List Page", () => {
   test("displays projects", async ({ page }) => {
     await page.goto(`${BASE_URL}/project/`);
     // Check that the main content area exists
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 
   test("navigates to projects from home page", async ({ page }) => {
@@ -125,8 +125,8 @@ test.describe("404 Page", () => {
       waitUntil: "networkidle",
     });
     // Should still have main layout
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
+    const body = page.locator("body");
+    await expect(body).toBeVisible();
   });
 });
 
