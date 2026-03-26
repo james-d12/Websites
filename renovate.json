@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["helpers:pinGitHubActionDigests"],
-  "branchName": "main",
+  "extends": [
+    "helpers:pinGitHubActionDigests"
+  ],
+  "baseBranchPatterns": [
+    "main"
+  ],
   "npm": {
     "enabled": true,
     "automerge": false,
@@ -29,20 +33,22 @@
       }
     ]
   },
-  "docker": {
-    "enabled": true,
-    "fileMatch": [
-      "(^|/)docker-compose\\.ya?ml$"
-    ],
-    "automerge": false,
-    "pinDigests": false,
-    "packageRules": [
-      {
-        "matchPackagePatterns": [
-          ".*"
-        ],
-        "groupName": "Docker Compose Updates"
-      }
-    ]
-  }
+  "packageRules": [
+    {
+      "matchCategories": [
+        "docker"
+      ],
+      "enabled": true,
+      "automerge": false,
+      "pinDigests": false,
+      "groupName": "Docker Compose Updates",
+      "matchPackageNames": [
+        "/.*/"
+      ],
+      "matchManagers": [
+        "docker-compose",
+        "docker"
+      ]
+    }
+  ]
 }
