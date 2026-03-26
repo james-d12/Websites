@@ -11,7 +11,11 @@ const PLACEHOLDER_IMAGE =
 
 const imageCache = new Map<string, string>();
 
-async function getOptimizedImage(imageId: string): Promise<string> {
+async function getOptimizedImage(
+  imageId: string,
+  width: number,
+  height: number,
+): Promise<string> {
   if (imageCache.has(imageId)) {
     console.log(`[Cache HIT] ${imageId}`);
     return imageCache.get(imageId)!;
@@ -22,7 +26,8 @@ async function getOptimizedImage(imageId: string): Promise<string> {
   const optimizedImage = await getImage({
     src: imageUrl,
     format: "webp",
-    inferSize: true,
+    width,
+    height,
   });
 
   imageCache.set(imageId, optimizedImage.src);
@@ -44,7 +49,7 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
   const tattoos = await directus.request(
     readItems("Tattoos", {
       limit: 500,
-      fields: ["Title", "Style", "Image"],
+      fields: ["Title", "Style", "Image.id", "Image.width", "Image.height"],
       sort: ["Title"],
     }),
   );
@@ -53,7 +58,11 @@ export async function getTattoosAsync(): Promise<GallerySlide[]> {
     text: tattoo.Style,
     category: tattoo.Style,
     caption: tattoo.Title,
-    image: await getOptimizedImage(tattoo.Image),
+    image: await getOptimizedImage(
+      tattoo.Image.id,
+      tattoo.Image.width,
+      tattoo.Image.height,
+    ),
   }));
 }
 
@@ -67,14 +76,18 @@ export async function getTattooStylesAsync(): Promise<
   const tattooStyles = await directus.request(
     readItems("TattooStyles", {
       limit: 500,
-      fields: ["Style", "Image"],
+      fields: ["Style", "Image.id", "Image.width", "Image.height"],
       sort: ["Style"],
     }),
   );
 
   return await promiseAllWithLimit(tattooStyles, async (tattooStyle) => ({
     Style: tattooStyle.Style,
-    Image: await getOptimizedImage(tattooStyle.Image),
+    Image: await getOptimizedImage(
+      tattooStyle.Image.id,
+      tattooStyle.Image.width,
+      tattooStyle.Image.height,
+    ),
   }));
 }
 
@@ -93,7 +106,7 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
   const piercings = await directus.request(
     readItems("Piercings", {
       limit: 500,
-      fields: ["Title", "Style", "Image"],
+      fields: ["Title", "Style", "Image.id", "Image.width", "Image.height"],
       sort: ["Title"],
     }),
   );
@@ -102,7 +115,11 @@ export async function getPiercingsAsync(): Promise<GallerySlide[]> {
     text: piercing.Title,
     category: piercing.Style,
     caption: piercing.Title,
-    image: await getOptimizedImage(piercing.Image),
+    image: await getOptimizedImage(
+      piercing.Image.id,
+      piercing.Image.width,
+      piercing.Image.height,
+    ),
   }));
 }
 
@@ -120,7 +137,7 @@ export async function getShopImagesAsync(): Promise<GallerySlide[]> {
   const shopImages = await directus.request(
     readItems("Shop", {
       limit: 500,
-      fields: ["Title", "Image"],
+      fields: ["Title", "Image.id", "Image.width", "Image.height"],
       sort: ["Title"],
     }),
   );
@@ -128,6 +145,10 @@ export async function getShopImagesAsync(): Promise<GallerySlide[]> {
   return await promiseAllWithLimit(shopImages, async (shopImage) => ({
     text: shopImage.Title,
     caption: shopImage.Title,
-    image: await getOptimizedImage(shopImage.Image),
+    image: await getOptimizedImage(
+      shopImage.Image.id,
+      shopImage.Image.width,
+      shopImage.Image.height,
+    ),
   }));
 }
