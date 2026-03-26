@@ -33,314 +33,328 @@ const testimonials = [
         description="Qualified practice nurses providing primary care nursing services in your home or GP practice.">
     <Navbar/>
 
-    <Hero
-        label="Specialist Nurses"
-        title="Practice Nurses"
-        description="Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention."
-        image={practiceNursesImage}
-        imageAlt="Practice nursing services"
-    />
+    <main>
+        <Hero
+                label="Specialist Nurses"
+                title="Practice Nurses"
+                description="Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention."
+                image={practiceNursesImage}
+                imageAlt="Practice nursing services"
+        />
 
-    <!-- Services -->
-    <section class="py-20 md:py-28 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Primary Care Services</p>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    Comprehensive Practice Nursing
-                </h2>
-                <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                    We provide the full range of nursing services you'd expect from a GP practice, delivered in the
-                    comfort of your own home.
-                </p>
-            </div>
-
-            <div class="space-y-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-warm-50 rounded-xl p-8">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Chronic Disease Management</h3>
-                                <p class="text-gray-600 leading-relaxed mb-3">
-                                    Regular monitoring and management of long-term conditions including diabetes, COPD,
-                                    asthma, and cardiovascular disease with structured care reviews.
-                                </p>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Diabetes monitoring and education</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>COPD and asthma management</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Blood pressure and cardiovascular checks</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-warm-50 rounded-xl p-8">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Health Screening & Checks</h3>
-                                <p class="text-gray-600 leading-relaxed mb-3">
-                                    Comprehensive health assessments, screening programmes, and preventative health
-                                    checks to identify and manage potential health issues early.
-                                </p>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>NHS health checks and over-40s assessments</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Blood tests and health monitoring</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Cardiovascular risk assessments</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-warm-50 rounded-xl p-8">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Immunisations & Vaccinations</h3>
-                                <p class="text-gray-600 leading-relaxed mb-3">
-                                    Full vaccination services including seasonal flu, travel vaccines, and routine
-                                    immunisations administered safely by qualified practice nurses.
-                                </p>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Seasonal flu and COVID-19 vaccines</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Travel vaccinations and health advice</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Childhood and adult immunisations</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-warm-50 rounded-xl p-8">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Wound Care & Dressings</h3>
-                                <p class="text-gray-600 leading-relaxed mb-3">
-                                    Expert wound assessment and management including leg ulcers, pressure sores,
-                                    surgical wounds, and chronic wound care with modern dressing techniques.
-                                </p>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Leg ulcer assessment and compression therapy</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Pressure sore prevention and treatment</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Wound healing monitoring</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-warm-50 rounded-xl p-8">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Health Education & Advice</h3>
-                                <p class="text-gray-600 leading-relaxed mb-3">
-                                    Patient education on medication management, lifestyle changes, self-care techniques,
-                                    and disease prevention to empower better health outcomes.
-                                </p>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Medication reviews and education</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Lifestyle and diet advice</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Self-management support</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-warm-50 rounded-xl p-8">
-                        <div class="flex items-start gap-4 mb-4">
-                            <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-3">Minor Procedures</h3>
-                                <p class="text-gray-600 leading-relaxed mb-3">
-                                    Common nursing procedures including blood tests, ECGs, suture removal, ear
-                                    syringing, and other minor treatments typically provided in GP surgeries.
-                                </p>
-                                <ul class="space-y-2 text-gray-600 text-sm">
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Blood tests and specimen collection</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>ECG recordings</span>
-                                    </li>
-                                    <li class="flex items-start gap-2">
-                                        <span class="text-green-dark">→</span>
-                                        <span>Suture and clip removal</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Practice Nurses -->
-    <section class="py-20 md:py-28 bg-warm-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Team</p>
+        <section class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Primary Care
+                        Services</p>
                     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Experienced Primary Care Nurses
+                        Comprehensive Practice Nursing
                     </h2>
-                    <div class="space-y-4 text-gray-700 leading-relaxed">
-                        <p>
-                            Our practice nurses have extensive experience in GP surgeries and primary care settings.
-                            They're trained in the full spectrum of practice nursing from health promotion and disease
-                            prevention to chronic condition management and minor illness care.
-                        </p>
-                        <p>
-                            Each nurse holds specialist qualifications in areas such as asthma management, diabetes
-                            care, and immunisation. They understand the importance of holistic, patient-centred care and
-                            work collaboratively with GPs and other healthcare professionals.
-                        </p>
-                        <p>
-                            By bringing practice nursing to your home, we make primary healthcare more accessible while
-                            maintaining the professional standards and clinical expertise you'd expect from your GP
-                            surgery.
-                        </p>
-                    </div>
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                        We provide the full range of nursing services you'd expect from a GP practice, delivered in the
+                        comfort of your own home.
+                    </p>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Practice Nurses Are:</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
+                <div class="space-y-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Chronic Disease Management</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        Regular monitoring and management of long-term conditions including diabetes,
+                                        COPD,
+                                        asthma, and cardiovascular disease with structured care reviews.
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Diabetes monitoring and education</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>COPD and asthma management</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Blood pressure and cardiovascular checks</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <span class="text-gray-700"><strong>GP Practice Experienced</strong> - Years working in primary care settings</span>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
+
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Health Screening & Checks</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        Comprehensive health assessments, screening programmes, and preventative health
+                                        checks to identify and manage potential health issues early.
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>NHS health checks and over-40s assessments</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Blood tests and health monitoring</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Cardiovascular risk assessments</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <span class="text-gray-700"><strong>Specialist Qualified</strong> - Additional certifications in chronic disease management</span>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
+
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Immunisations & Vaccinations</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        Full vaccination services including seasonal flu, travel vaccines, and routine
+                                        immunisations administered safely by qualified practice nurses.
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Seasonal flu and COVID-19 vaccines</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Travel vaccinations and health advice</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Childhood and adult immunisations</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <span class="text-gray-700"><strong>Immunisation Trained</strong> - Certified in vaccination administration and anaphylaxis management</span>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
+
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Wound Care & Dressings</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        Expert wound assessment and management including leg ulcers, pressure sores,
+                                        surgical wounds, and chronic wound care with modern dressing techniques.
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Leg ulcer assessment and compression therapy</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Pressure sore prevention and treatment</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Wound healing monitoring</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <span class="text-gray-700"><strong>Holistic Care Focused</strong> - Patient-centred approach to health and wellbeing</span>
                         </div>
-                        <div class="flex items-start gap-3">
-                            <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd"
-                                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                          clip-rule="evenodd"/>
-                                </svg>
+
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Health Education & Advice</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        Patient education on medication management, lifestyle changes, self-care
+                                        techniques,
+                                        and disease prevention to empower better health outcomes.
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Medication reviews and education</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Lifestyle and diet advice</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Self-management support</span>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <span class="text-gray-700"><strong>Evidence-Based Practitioners</strong> - Using latest clinical guidelines and best practice</span>
+                        </div>
+
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">Minor Procedures</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        Common nursing procedures including blood tests, ECGs, suture removal, ear
+                                        syringing, and other minor treatments typically provided in GP surgeries.
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Blood tests and specimen collection</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>ECG recordings</span>
+                                        </li>
+                                        <li class="flex items-start gap-2">
+                                            <span class="text-green-dark">→</span>
+                                            <span>Suture and clip removal</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <Testimonials testimonials={testimonials}/>
+        <!-- Our Practice Nurses -->
+        <section class="py-20 md:py-28 bg-warm-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Team</p>
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Experienced Primary Care Nurses
+                        </h2>
+                        <div class="space-y-4 text-gray-700 leading-relaxed">
+                            <p>
+                                Our practice nurses have extensive experience in GP surgeries and primary care settings.
+                                They're trained in the full spectrum of practice nursing from health promotion and
+                                disease
+                                prevention to chronic condition management and minor illness care.
+                            </p>
+                            <p>
+                                Each nurse holds specialist qualifications in areas such as asthma management, diabetes
+                                care, and immunisation. They understand the importance of holistic, patient-centred care
+                                and
+                                work collaboratively with GPs and other healthcare professionals.
+                            </p>
+                            <p>
+                                By bringing practice nursing to your home, we make primary healthcare more accessible
+                                while
+                                maintaining the professional standards and clinical expertise you'd expect from your GP
+                                surgery.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Practice Nurses Are:</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700"><strong>GP Practice Experienced</strong> - Years working in primary care settings</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700"><strong>Specialist Qualified</strong> - Additional certifications in chronic disease management</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700"><strong>Immunisation Trained</strong> - Certified in vaccination administration and anaphylaxis management</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700"><strong>Holistic Care Focused</strong> - Patient-centred approach to health and wellbeing</span>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                              clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <span class="text-gray-700"><strong>Evidence-Based Practitioners</strong> - Using latest clinical guidelines and best practice</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <Testimonials testimonials={testimonials}/>
+    </main>
+
     <CallToAction/>
     <Footer/>
 </Layout>

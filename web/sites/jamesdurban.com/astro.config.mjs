@@ -4,6 +4,9 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://jamesdurban.com",
+  server: {
+    port: 35421,
+  },
   vite: {
     plugins: [tailwindcss()],
   },

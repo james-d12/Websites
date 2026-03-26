@@ -4,6 +4,9 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://stcatherinesgroup.com",
+  server: {
+    port: 35424,
+  },
   vite: {
     plugins: [tailwindcss()],
   },

@@ -3,6 +3,11 @@ dist/
 .vscode/
 .idea/
 result
+web/test-results
+web/playwright-report
+web/blob-report/
+web/playwright/.cache/
+web/playwright/.auth/
 
 *.env
 vps-nix-signing-key
