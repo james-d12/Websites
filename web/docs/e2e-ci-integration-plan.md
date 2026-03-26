@@ -67,10 +67,10 @@ on:
 ### New optional secret
 
 ```yaml
-    secrets:
-      # …existing secrets…
-      e2e_cloudflare_secret:
-        required: false
+secrets:
+  # …existing secrets…
+  e2e_cloudflare_secret:
+    required: false
 ```
 
 ### New job: `e2e-staging`
@@ -206,8 +206,8 @@ Repeat this pattern for any other site that has a spec file.
 
 Add a new repository (or organisation) secret:
 
-| Secret name | Value |
-|---|---|
+| Secret name             | Value                                                         |
+| ----------------------- | ------------------------------------------------------------- |
 | `E2E_CLOUDFLARE_SECRET` | A strong random string shared with the Cloudflare bypass rule |
 
 The value must match exactly what the Cloudflare rule checks for in the `x-cloudflare-e2e-secret` request header.
@@ -229,12 +229,12 @@ This ensures Playwright traffic from GitHub Actions is not blocked while all oth
 
 ## Spec file to env var mapping
 
-| Spec file | `e2e_spec` input | `e2e_base_url_env` input |
-|---|---|---|
-| `blackcattattoos-co-uk.spec.ts` | `blackcattattoos-co-uk` | `BLACKCATTATTOOS_BASE_URL` |
-| `jamesdurban-com.spec.ts` | `jamesdurban-com` | `JAMESDURBAN_BASE_URL` |
-| `orchitect-net.spec.ts` | `orchitect-net` | `ORCHITECT_BASE_URL` |
-| `stcatherinesgroup-com.spec.ts` | `stcatherinesgroup-com` | `STCATHERINESGROUP_BASE_URL` |
+| Spec file                                | `e2e_spec` input                 | `e2e_base_url_env` input            |
+| ---------------------------------------- | -------------------------------- | ----------------------------------- |
+| `blackcattattoos-co-uk.spec.ts`          | `blackcattattoos-co-uk`          | `BLACKCATTATTOOS_BASE_URL`          |
+| `jamesdurban-com.spec.ts`                | `jamesdurban-com`                | `JAMESDURBAN_BASE_URL`              |
+| `orchitect-net.spec.ts`                  | `orchitect-net`                  | `ORCHITECT_BASE_URL`                |
+| `stcatherinesgroup-com.spec.ts`          | `stcatherinesgroup-com`          | `STCATHERINESGROUP_BASE_URL`        |
 | `thecontourclinicrichmond-co-uk.spec.ts` | `thecontourclinicrichmond-co-uk` | `THECONTOURCLINICRICHMOND_BASE_URL` |
 
 > **Note:** The env var names in the right column must match what each spec file reads. Check each spec for the exact variable name and update accordingly if they differ.
