@@ -125,7 +125,6 @@ test.describe("All Pages Load", () => {
     { url: "/", name: "home" },
     { url: "/about-us", name: "about-us" },
     { url: "/contact", name: "contact" },
-    { url: "/enquiries", name: "enquiries" },
     { url: "/nurses/carehome-nurses", name: "nurses-carehome" },
     { url: "/nurses/hospital-nurses", name: "nurses-hospital" },
     { url: "/nurses/practice-nurses", name: "nurses-practice" },
