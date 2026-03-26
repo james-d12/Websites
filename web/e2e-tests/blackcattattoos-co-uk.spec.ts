@@ -15,10 +15,10 @@ test.describe("Home Page", () => {
     await expect(body).toBeVisible();
   });
 
-  test("has header navigation", async ({ page }) => {
+  test("has navigation", async ({ page }) => {
     await page.goto(BASE_URL);
-    const header = page.locator("header").first();
-    await expect(header).toBeVisible();
+    const nav = page.locator("nav").first();
+    await expect(nav).toBeVisible();
   });
 
   test("has footer", async ({ page }) => {
