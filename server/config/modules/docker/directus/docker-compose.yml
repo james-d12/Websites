@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgis/postgis:18-3.6@sha256:9d0c4aaab2bf31e84b9bac9709e7d4384a3fdf5b4755dad41b25b4548f804662
+    image: postgis/postgis:18-3.6@sha256:0ca74aefd15c59d26f62581cb06cd7c7e0e08269f50d6cd676400684cb061fbb
     volumes:
       - ./database:/var/lib/postgresql
     environment:
@@ -16,7 +16,7 @@ services:
       start_period: 30s
 
   directus:
-    image: directus/directus:11@sha256:ed77e528106e51433ecf513755b13c1be1697daa5c63a264345e778f5f141285
+    image: directus/directus:11@sha256:076269ccbe7d4a0c44ce5f5b7f11e2ea5f7b3e4c4f704c0f88a52805e069c1c6
     ports:
       - 8055:8055
     volumes:
@@ -42,4 +42,5 @@ services:
       USERS_APP_ACCESS_LIMIT: "5"
       USERS_API_ACCESS_LIMIT: "10"
       CORS_ENABLED: "true"
-      CORS_ORIGIN: "https://blackcattattoos.co.uk,https://staging.blackcattattoos.co.uk,http://localhost:4321"
+      CORS_ORIGIN: "https://blackcattattoos.co.uk,https://staging.blackcattattoos.co.uk"
+      OPENAPI_ENABLED: "false"
