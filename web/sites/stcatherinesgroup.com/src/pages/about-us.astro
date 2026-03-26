@@ -13,91 +13,95 @@ const {title, description, hero, pullQuote} = entry.data;
 <Layout title={title} description={description}>
     <Navbar/>
 
-    <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-20">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
-                {hero.eyebrow}
-            </p>
-            <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                {hero.heading}
-            </h1>
-        </div>
-    </section>
+    <main>
 
-    <section class="py-24 md:py-32 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <!-- Main story content -->
-            <div class="prose prose-2xl max-w-none">
-                <div class="space-y-10 text-2xl md:text-3xl leading-relaxed text-gray-800">
-                    <Content/>
-                </div>
+        <section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-20">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">
+                    {hero.eyebrow}
+                </p>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                    {hero.heading}
+                </h1>
             </div>
+        </section>
 
-            <!-- Pull quote / highlight -->
-            {pullQuote && (
-                    <div class="mt-20 mb-12 px-10 py-12 bg-warm-50 rounded-2xl border-l-4 border-green-dark">
-                        <p class="text-4xl md:text-5xl font-light italic text-gray-900 leading-relaxed">
-                            "{pullQuote}"
+        <section class="py-24 md:py-32 bg-white">
+            <div class="max-w-5xl mx-auto px-6">
+                <!-- Main story content -->
+                <div class="prose prose-2xl max-w-none">
+                    <div class="space-y-10 text-2xl md:text-3xl leading-relaxed text-gray-800">
+                        <Content/>
+                    </div>
+                </div>
+
+                <!-- Pull quote / highlight -->
+                {pullQuote && (
+                        <div class="mt-20 mb-12 px-10 py-12 bg-warm-50 rounded-2xl border-l-4 border-green-dark">
+                            <p class="text-4xl md:text-5xl font-light italic text-gray-900 leading-relaxed">
+                                "{pullQuote}"
+                            </p>
+                        </div>
+                )}
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-20 md:py-28 bg-warm-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Values</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        What Guides Us
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Compassion</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Every interaction is guided by genuine care, empathy, and a deep commitment to understanding
+                            individual needs.
                         </p>
                     </div>
-            )}
-        </div>
-    </section>
 
-    <!-- Values Section -->
-    <section class="py-20 md:py-28 bg-warm-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Values</p>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                    What Guides Us
-                </h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
+                    <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We maintain the highest standards in everything we do, from training our team to delivering
+                            exceptional care.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Compassion</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        Every interaction is guided by genuine care, empathy, and a deep commitment to understanding
-                        individual needs.
-                    </p>
-                </div>
 
-                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
+                    <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
+                        <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
+                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Respect</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            We honour dignity, choice, and independence, ensuring every person feels valued and heard.
+                        </p>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Excellence</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We maintain the highest standards in everything we do, from training our team to delivering
-                        exceptional care.
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-8 text-center hover:shadow-lg transition-shadow">
-                    <div class="w-16 h-16 mx-auto mb-6 rounded-xl bg-green-dark flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Respect</h3>
-                    <p class="text-gray-600 leading-relaxed">
-                        We honour dignity, choice, and independence, ensuring every person feels valued and heard.
-                    </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <CallToAction/>
     <Footer/>

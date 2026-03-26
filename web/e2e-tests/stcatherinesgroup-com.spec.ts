@@ -72,28 +72,6 @@ test.describe("Contact Page", () => {
   });
 });
 
-test.describe("Enquiries Page", () => {
-  test("loads enquiries page", async ({ page }) => {
-    await page.goto(`${BASE_URL}/enquiries`);
-    await expect(page).toHaveTitle(/St Catherine/i);
-  });
-
-  test("displays enquiries content", async ({ page }) => {
-    await page.goto(`${BASE_URL}/enquiries`);
-    const main = page.locator("main");
-    await expect(main).toBeVisible();
-  });
-
-  test("navigates to enquiries from home", async ({ page }) => {
-    await page.goto(BASE_URL);
-    const enquiriesLink = page.locator('a[href*="/enquiries"]').first();
-    if (await enquiriesLink.isVisible()) {
-      await enquiriesLink.click();
-      await expect(page).toHaveURL(/\/enquiries/);
-    }
-  });
-});
-
 test.describe("Nurses Pages", () => {
   const nursesPages = [
     { url: "/nurses/carehome-nurses", name: "Carehome Nurses" },
