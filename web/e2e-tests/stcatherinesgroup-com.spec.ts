@@ -11,8 +11,8 @@ test.describe("Home Page", () => {
 
   test("displays main content", async ({ page }) => {
     await page.goto(BASE_URL);
-    const body = page.locator("body");
-    await expect(body).toBeVisible();
+    const main = page.locator("main");
+    await expect(main).toBeVisible();
   });
 
   test("has navigation", async ({ page }) => {
@@ -36,8 +36,8 @@ test.describe("About Us Page", () => {
 
   test("displays about content", async ({ page }) => {
     await page.goto(`${BASE_URL}/about-us`);
-    const body = page.locator("body");
-    await expect(body).toBeVisible();
+    const main = page.locator("main");
+    await expect(main).toBeVisible();
   });
 
   test("navigates to about from home", async ({ page }) => {
@@ -58,8 +58,8 @@ test.describe("Contact Page", () => {
 
   test("displays contact content", async ({ page }) => {
     await page.goto(`${BASE_URL}/contact`);
-    const body = page.locator("body");
-    await expect(body).toBeVisible();
+    const main = page.locator("main");
+    await expect(main).toBeVisible();
   });
 
   test("navigates to contact from home", async ({ page }) => {
@@ -80,8 +80,8 @@ test.describe("Enquiries Page", () => {
 
   test("displays enquiries content", async ({ page }) => {
     await page.goto(`${BASE_URL}/enquiries`);
-    const body = page.locator("body");
-    await expect(body).toBeVisible();
+    const main = page.locator("main");
+    await expect(main).toBeVisible();
   });
 
   test("navigates to enquiries from home", async ({ page }) => {
@@ -136,7 +136,7 @@ test.describe("Services Pages", () => {
 
     test(`displays ${name} content`, async ({ page }) => {
       await page.goto(`${BASE_URL}${url}`);
-      const main = page.locator("section");
+      const main = page.locator("main");
       await expect(main).toBeVisible();
     });
   }
