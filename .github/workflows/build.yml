@@ -55,6 +55,9 @@ jobs:
         working-directory: web
         run: pnpm run format:check
 
+      - name: Validate Renovate Config
+        run: npx --yes --package renovate -- renovate-config-validator --strict
+    
       - name: Run ESLint
         working-directory: web
         run: pnpm run lint
@@ -73,7 +76,7 @@ jobs:
 
       - name: Run Playwright tests
         working-directory: web
-        run: pnpm exec playwright test --reporter=list
+        run: pnpm exec playwright test --reporter=list,html
 
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
