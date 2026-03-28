@@ -10,6 +10,9 @@
     "enabled": true,
     "automerge": false,
     "rangeStrategy": "bump",
+    "major": {
+      "enabled": false
+    },
     "packageRules": [
       {
         "minimumReleaseAge": "2 days",
