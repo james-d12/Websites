@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgis/postgis:18-3.6@sha256:0ca74aefd15c59d26f62581cb06cd7c7e0e08269f50d6cd676400684cb061fbb
+    image: postgis/postgis:18-3.6@sha256:f91e6ca04fb4c9fe3d41ffcf3d37712da62cd5e12184d70453d8f6c9f3858b5f
     volumes:
       - ./database:/var/lib/postgresql
     environment:
