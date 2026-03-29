@@ -1,8 +1,11 @@
 ---
-
+interface Props {
+    background?: string;
+}
+const {background = 'bg-warm-50'} = Astro.props;
 ---
 
-<section class="py-20 md:py-28 bg-warm-50">
+<section class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-4xl mx-auto px-6 text-center">
         <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8">
             Ready to Take the Next Step?
