@@ -30,112 +30,250 @@ const testimonials = [
 ---
 
 <Layout title="1-1 Safety Carer - St Catherine's Group"
-        description="Personalised, one-to-one safety support for care home residents who need focused, attentive care and reassurance.">
+        description="Dedicated safety support tailored to individual needs, providing reassurance and peace of mind.">
     <Navbar/>
 
     <main>
         <Hero
                 label="Our Services"
                 title="1-1 Safety Carer"
-                description="Personalised, one-to-one safety support for those who need focused, attentive care. We help residents regain confidence and independence while giving families complete reassurance."
+                description="Dedicated safety support tailored to individual needs, providing reassurance and peace of mind. Whether you need support with mobility, managing health conditions, or simply require an extra level of care and attention, we're here to ensure you feel safe, secure, and supported at all times."
                 image={safetyImage}
                 imageAlt="1-1 Safety services"
         />
 
-        <section class="py-24 md:py-32 bg-white">
-            <div class="max-w-5xl mx-auto px-6">
+        <section class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <p class="text-green-dark text-xl font-medium tracking-[0.2em] uppercase mb-4">About the Service</p>
-                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900">1-to-1 Safety Care</h2>
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Comprehensive
+                        Coverage</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Safety Support That Covers Everything
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                        From health monitoring to environmental safety, our 1-1 service provides the complete support
+                        you
+                        need to live confidently and securely.
+                    </p>
                 </div>
 
-                <div class="space-y-12">
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 p-6 bg-warm-50 rounded-xl border-2 border-transparent hover:border-green-dark transition-colors">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <span class="text-white font-bold text-lg">1</span>
+                                </div>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Dedicated, Personalised Safety Support</h3>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Risk Assessment</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We identify potential safety concerns in your environment and daily routines,
+                                    creating a
+                                    comprehensive protection plan tailored to your needs.
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">St Catherine's Safety Carers provide
-                            dedicated, personalised support for residents within care homes, ensuring both safety and
-                            peace of mind for families. This service is designed for individuals who require focused
-                            attention due to temporary or ongoing risks, allowing them to regain independence,
-                            confidence, and comfort in a safe, supportive environment.</p>
+
+                        <div class="flex items-start gap-4 p-6 bg-warm-50 rounded-xl border-2 border-transparent hover:border-green-dark transition-colors">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <span class="text-white font-bold text-lg">2</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Continuous Monitoring</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Attentive observation of your wellbeing, health status, and environmental factors,
+                                    with
+                                    proactive intervention when needed.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-6 bg-warm-50 rounded-xl border-2 border-transparent hover:border-green-dark transition-colors">
+                            <div class="flex-shrink-0 mt-1">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <span class="text-white font-bold text-lg">3</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Immediate Response</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Trained to act quickly and appropriately in any situation, with clear protocols for
+                                    emergencies and direct communication channels.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                    <div class="bg-gradient-to-br from-green-dark to-green-dark/90 rounded-3xl p-8 md:p-10 text-white">
+                        <h3 class="text-3xl font-bold mb-6">Who Benefits From 1-1 Safety?</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <p class="leading-relaxed">Individuals at risk of falls or with mobility challenges</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <p class="leading-relaxed">People managing complex health conditions requiring close
+                                    monitoring</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <p class="leading-relaxed">Those recovering from hospital stays or medical
+                                    procedures</p>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                          clip-rule="evenodd"/>
+                                </svg>
+                                <p class="leading-relaxed">Anyone requiring an extra level of observation and support
+                                    for
+                                    peace of mind</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Pillars Section -->
+        <section class="py-20 md:py-28 bg-warm-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Four Pillars of
+                        Safety</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Complete Protection
+                    </h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-green-dark flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                           d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Tailored to Every Situation</h3>
+                            <h3 class="text-2xl font-bold text-gray-900">Physical Safety</h3>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">Our Safety Care service is tailored to
-                            meet the individual needs of each resident. It can support someone following a fall or in
-                            situations where there is a risk of falling, assist those recovering from surgery or medical
-                            procedures to regain mobility and confidence, or provide vigilant support for residents at
-                            risk due to mental health concerns. Each scenario is approached with professionalism,
-                            sensitivity, and respect, ensuring the resident's dignity and wellbeing are always
-                            prioritised.</p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Fall prevention and mobility support</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Safe transfer and movement assistance</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Environmental hazard identification</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-green-dark flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Complete Reassurance for Families</h3>
+                            <h3 class="text-2xl font-bold text-gray-900">Health Monitoring</h3>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">For families, St Catherine's offers
-                            complete reassurance. We provide feedback if required hourly, daily, or weekly, giving
-                            families peace of mind and allowing them the freedom to rest knowing their loved one is
-                            being attentively supported. Our professionals liaise and work closely with care home staff
-                            and medical professional teams, providing updates and ensuring continuity in their care
-                            plans. The service is fully personalised and adaptable, responding to changes in the
-                            resident's needs while maintaining the highest standard of safety and support at all
-                            times.</p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Observation for changes in condition</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Medication reminders and compliance</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Communication with healthcare team</span>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-green-dark flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M13 10V3L4 14h7v7l9-11h-7z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Trust, Compatibility & Excellence</h3>
+                            <h3 class="text-2xl font-bold text-gray-900">Emergency Readiness</h3>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">At St Catherine's, we recognise that
-                            trust and compatibility are essential. If, for any reason, the assigned carer does not meet
-                            the resident's preferences, we work closely with the resident and their family to ensure an
-                            alternative is provided, always maintaining a focus on comfort, safety, and personalised
-                            attention. Our One-to-One Safety Care service is delivered with the same attention to
-                            excellence and discretion that defines all St Catherine's offerings, providing residents
-                            with confidence and reassurance while ensuring families can feel fully supported.</p>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Rapid response to urgent situations</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>First aid and crisis intervention</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Clear escalation procedures</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-16 h-16 rounded-xl bg-green-dark flex items-center justify-center">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900">Emotional Wellbeing</h3>
+                        </div>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Reassurance and companionship</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Reducing anxiety about safety</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-dark mt-1">•</span>
+                                <span>Building confidence and independence</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
         <Testimonials testimonials={testimonials}/>
-
-        <CallToAction background="bg-white"/>
     </main>
 
+    <CallToAction/>
     <Footer/>
 </Layout>

@@ -30,145 +30,187 @@ const testimonials = [
 ---
 
 <Layout title="1-1 Dementia Carer - St Catherine's Group"
-        description="Specialist, person-centred dementia care built on compassion, familiarity, and deep respect for every individual.">
+        description="Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual.">
     <Navbar/>
 
     <main>
         <Hero
                 label="Our Services"
                 title="1-1 Dementia Carer"
-                description="Specialist, person-centred support for those living with dementia. Our highly trained carers take time to truly know your loved one, delivering compassionate care that maintains familiar routines, promotes calm, and keeps families informed and reassured."
+                description="Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual. Our trained team members work with compassion and skill to provide person-centred care that honours dignity, maintains independence, and creates moments of joy and connection throughout the day."
                 image={dementiaImage}
                 imageAlt="Dementia care services"
         />
 
-        <section class="py-24 md:py-32 bg-white">
+        <section class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Philosophy</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        See the Person, Not the Diagnosis
+                    </h2>
+                    <p class="text-gray-600 text-xl leading-relaxed max-w-3xl mx-auto">
+                        Living with dementia doesn't define who someone is. Our specialist care focuses on preserving
+                        identity, celebrating individuality, and creating moments of connection and joy.
+                    </p>
+                </div>
+
+                <div class="bg-warm-50 rounded-3xl p-8 md:p-12 mb-12">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-green-dark mb-3">Patience</div>
+                            <p class="text-gray-600">Taking time to understand, never rushing, always listening</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-green-dark mb-3">Dignity</div>
+                            <p class="text-gray-600">Honouring choice, respecting autonomy, maintaining pride</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold text-green-dark mb-3">Joy</div>
+                            <p class="text-gray-600">Finding moments of happiness in everyday interactions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="bg-gradient-to-r from-warm-50 to-white rounded-2xl p-8 border-l-4 border-green-dark">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">We Learn Your Story</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Understanding your life history, interests, preferences, and routines helps us provide care
+                            that
+                            feels familiar and meaningful. We take time to learn what matters to you.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-white to-warm-50 rounded-2xl p-8 border-l-4 border-green-dark">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">We Maintain Familiar Routines</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Consistency and familiarity provide comfort and security. We work to maintain the daily
+                            rhythms
+                            and rituals that bring structure and reassurance to your day.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-warm-50 to-white rounded-2xl p-8 border-l-4 border-green-dark">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">We Create Meaningful Moments</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Through reminiscence, music, gentle activities, and simple conversation, we focus on
+                            engagement
+                            that brings connection and joy rather than frustration.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-white to-warm-50 rounded-2xl p-8 border-l-4 border-green-dark">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">We Support Your Family</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Caring for someone with dementia affects the whole family. We provide respite, share
+                            insights,
+                            and work collaboratively to ensure the best possible support for everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Understanding Behaviours Section -->
+        <section class="py-20 md:py-28 bg-warm-50">
             <div class="max-w-5xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <p class="text-green-dark text-xl font-medium tracking-[0.2em] uppercase mb-4">About the Service</p>
-                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900">1-to-1 Dementia Care</h2>
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Our Expertise</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Understanding What You Need
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                        Our team is trained to recognize, understand, and respond compassionately to the challenges that
+                        dementia can bring.
+                    </p>
                 </div>
 
-                <div class="space-y-12">
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-sm">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
                                 <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                                      viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">A Personal, Patient & Compassionate
-                                Approach</h3>
-                        </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">At St Catherine's, we understand that
-                            dementia affects far more than memory. It impacts emotions, confidence, routines, and the
-                            wider care home community. No two people experience dementia in the same way, which is why
-                            our approach is personal, patient, and deeply compassionate. Our Specialist Carers are
-                            highly trained experts who take the time to learn about your loved one, their life story,
-                            personality, routines, hobbies, music, photographs, and memories, so that every interaction
-                            feels familiar, comforting, and reassuring.</p>
-                    </div>
-
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">When Communication Changes</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We use gentle communication techniques, visual cues, and patient listening to
+                                    understand
+                                    and be understood.
+                                </p>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Familiar Routines & Community Calm</h3>
-                        </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">Maintaining familiar routines, including
-                            meals, rest, activities, and bedtime, is crucial to reduce confusion, anxiety, and distress.
-                            Within care homes, we provide one-to-one support that promotes independence, wellbeing,
-                            emotional security, and trust. By keeping your loved one calm and reassured, our Carers also
-                            contribute to a calmer environment for other residents, helping the whole care home
-                            community feel more settled and comfortable.</p>
-                    </div>
-
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold text-gray-900">When to Consider Dementia Care</h3>
-                        </div>
-                        <div class="pl-16">
-                            <p class="text-2xl leading-relaxed text-gray-600 mb-6">There is rarely a single right
-                                moment, but early support can make a significant difference. You might consider care if
-                                your loved one:</p>
-                            <ul class="space-y-3 text-2xl text-gray-600 mb-6">
-                                <li class="flex items-start gap-3">
-                                    <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                                    Is increasingly forgetful or confused
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                                    Finds daily tasks or personal care challenging
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                                    Feels anxious, isolated, or distressed
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                                    Struggles to participate in social activities or maintain friendships
-                                </li>
-                            </ul>
-                            <p class="text-2xl leading-relaxed text-gray-600">Early care helps your loved one remain
-                                calm, engaged, and socially connected, while families can feel reassured that their
-                                loved one is in safe, expert hands.</p>
                         </div>
                     </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                    <div class="bg-white rounded-2xl p-8 shadow-sm">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
                                 <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                                      viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Supporting Families & BRACE Research</h3>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Managing Confusion</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We provide reassurance, maintain calm environments, and use validation techniques to
+                                    reduce distress.
+                                </p>
+                            </div>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">Choosing dementia care for a loved one
-                            can feel overwhelming. At St Catherine's, we want families to know that seeking support is
-                            an act of love. We care for your loved one with understanding and expertise, while providing
-                            families with clear communication and reassurance, whether hourly, daily, or weekly updates.
-                            Together, we help your loved one feel safe, valued, and supported.</p>
                     </div>
-                </div>
 
-                <div class="mt-16 bg-green-dark rounded-2xl p-8 md:p-10 flex items-start gap-6">
-                    <div class="shrink-0 w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mt-1">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
+                    <div class="bg-white rounded-2xl p-8 shadow-sm">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Responding to Agitation</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We identify triggers, de-escalate with empathy, and create calm through familiar
+                                    routines and gentle redirection.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <p class="text-white/70 text-sm font-medium tracking-[0.2em] uppercase mb-2">Our Commitment</p>
-                        <p class="text-white text-2xl leading-relaxed font-medium">We are committed to the wider fight
-                            against dementia, donating 25p for every hour we care to BRACE Research, funding vital
-                            studies to improve diagnosis, treatment, and ultimately find a cure.</p>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-sm">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-lg bg-green-dark/10 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                                     viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Supporting Independence</h3>
+                                <p class="text-gray-600 leading-relaxed">
+                                    We encourage participation in daily activities, offering assistance only where
+                                    needed,
+                                    preserving dignity and choice.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <Testimonials testimonials={testimonials}/>
-
-        <CallToAction background="bg-white"/>
     </main>
 
+    <CallToAction/>
     <Footer/>
 </Layout>

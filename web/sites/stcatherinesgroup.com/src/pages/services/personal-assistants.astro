@@ -30,143 +30,282 @@ const testimonials = [
 ---
 
 <Layout title="Personal Assistant Services - St Catherine's Group"
-        description="Unrivalled one-to-one personal assistance, built on discretion, sophistication, and seamless organisation for those who expect the very best.">
+        description="Practical, day-to-day assistance to help you manage life on your own terms with confidence.">
     <Navbar/>
 
     <main>
         <Hero
                 label="Our Services"
                 title="Personal Assistant"
-                description="Unrivalled one-to-one personal assistance for those who value discretion, sophistication, and seamless organisation. Every aspect of daily life handled with impeccable care, giving you and your family complete reassurance and peace of mind."
+                description="Practical, day-to-day assistance to help you manage life on your own terms with confidence. From organizing appointments and managing correspondence to helping with household tasks and personal admin, we handle the details so you can focus on what matters most to you."
                 image={personalAssistantImage}
                 imageAlt="Personal assistant services"
         />
 
-        <section class="py-24 md:py-32 bg-white">
-            <div class="max-w-5xl mx-auto px-6">
+        <section class="py-20 md:py-28 bg-white">
+            <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <p class="text-green-dark text-xl font-medium tracking-[0.2em] uppercase mb-4">About the Service</p>
-                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900">Personal Assistant</h2>
+                    <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">We Handle The
+                        Details</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Life Admin, Simplified
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                        From managing your calendar to organizing your home, we take care of the administrative tasks
+                        that
+                        consume your time and energy.
+                    </p>
                 </div>
 
-                <div class="space-y-12">
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="space-y-6">
+                        <div class="bg-warm-50 rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Calendar & Scheduling</h3>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Discretion, Sophistication & Seamless
-                                Organisation</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Book and manage appointments</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Set reminders for important dates</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Coordinate multiple commitments</span>
+                                </li>
+                            </ul>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">At St Catherine's, we offer an
-                            unrivalled level of one-to-one personal assistance support for individuals living in their
-                            own homes as well as for residents within high-end residences. Designed for those who value
-                            discretion, sophistication, and seamless organisation, our Personal Assistants provide a
-                            personalised experience that enhances every aspect of daily life while offering families
-                            complete reassurance and peace of mind.</p>
+
+                        <div class="bg-warm-50 rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Mail & Communication</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Sort and organize correspondence</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Draft letters and emails</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Make calls on your behalf</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                                </svg>
+                    <div class="space-y-6">
+                        <div class="bg-warm-50 rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Paperwork & Forms</h3>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Dedicated to Your Lifestyle & Preferences</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Complete forms accurately</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Organize important documents</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>File and retrieve records</span>
+                                </li>
+                            </ul>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">Each Personal Assistant provided by St
-                            Catherine's is carefully selected for their professionalism, discretion, and exceptional
-                            attention to detail. They are dedicated exclusively to understanding the client's lifestyle,
-                            preferences, and routines. From managing diaries, appointments, and correspondence to
-                            coordinating social engagements, travel, family visits, and shopping, every task is handled
-                            with impeccable precision and care, ensuring the experience is effortless and enjoyable.</p>
+
+                        <div class="bg-warm-50 rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Financial Tasks</h3>
+                            </div>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Pay bills and track expenses</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Manage budgets and statements</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Liaise with banks and providers</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                </svg>
+                    <div class="space-y-6">
+                        <div class="bg-warm-50 rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Home Organization</h3>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">A Trusted Point of Contact for Families</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Declutter and organize spaces</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Create filing systems</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Coordinate tradespeople</span>
+                                </li>
+                            </ul>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">For families, St Catherine's Personal
-                            Assistants serve as a trusted and consistent point of contact, liaising seamlessly with
-                            household staff, external service providers, and where relevant, residential teams. This
-                            ensures that communication is clear, coordination is smooth, and the client's preferences,
-                            wishes, and wellbeing are always prioritised.</p>
-                    </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
+                        <div class="bg-warm-50 rounded-xl p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-10 rounded-lg bg-green-dark flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Special Projects</h3>
                             </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Companionship, Advocacy & Lifestyle
-                                Management</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Research and planning</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Event coordination</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-dark">→</span>
+                                    <span>Custom requests welcome</span>
+                                </li>
+                            </ul>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">Beyond organisation, the service offers
-                            companionship, advocacy, and lifestyle management. St Catherine's Personal Assistants
-                            anticipate needs, curate experiences, and ensure that every day flows smoothly and
-                            elegantly. For clients in high-end residences, the role complements any regulated support
-                            provided by staff, while for private home clients, the focus is entirely on enhancing
-                            comfort, convenience, and independence.</p>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div>
-                    <div class="flex gap-4 items-center mb-4">
-                        <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                            </svg>
+        <section class="py-20 md:py-28 bg-warm-50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid lg:grid-cols-5 gap-12 items-center">
+                    <div class="lg:col-span-2">
+                        <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Time Well
+                            Spent</p>
+                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                            Get Your Time Back
+                        </h2>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                            When we handle the administrative burden, you're free to focus on what truly matters -
+                            family,
+                            hobbies, health, and the activities that bring you joy and fulfillment.
+                        </p>
+                        <div class="bg-white rounded-xl p-6 shadow-sm">
+                            <p class="text-gray-700 leading-relaxed italic">
+                                "The average person spends 8-12 hours per week on household admin and organization.
+                                Imagine
+                                having that time back to spend on the things you love."
+                            </p>
                         </div>
-                        <h3 class="text-3xl font-bold text-gray-900">The Right Match, Every Time</h3>
                     </div>
-                    <p class="text-2xl leading-relaxed text-gray-600 pl-16">We recognise the relationship between a
-                        client and their Personal Assistant is highly personal. If the match does not feel quite right,
-                        we work closely with the client and their family to ensure a replacement is provided who meets
-                        their exact requirements. Our priority is always to create a harmonious and supportive
-                        partnership that enhances daily life.</p>
-                </div>
 
-                <div class="mt-16 bg-green-dark rounded-2xl p-8 md:p-10 flex items-start gap-6">
-                    <div class="shrink-0 w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mt-1">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="text-white/70 text-sm font-medium tracking-[0.2em] uppercase mb-2">Entirely
-                            Bespoke</p>
-                        <p class="text-white text-2xl leading-relaxed font-medium">Above all, the Personal Assistant
-                            service from St Catherine's is entirely bespoke. Every aspect is tailored to the individual,
-                            their family, and their lifestyle.</p>
+                    <div class="lg:col-span-3 space-y-4">
+                        <div class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm">
+                            <div class="shrink-0 w-16 h-16 rounded-full bg-green-dark/10 flex items-center justify-center">
+                                <span class="text-3xl font-bold text-green-dark">1</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">Tell Us What You Need</h3>
+                                <p class="text-gray-600">We discuss your priorities, challenges, and the tasks you'd
+                                    like
+                                    support with</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm">
+                            <div class="shrink-0 w-16 h-16 rounded-full bg-green-dark/10 flex items-center justify-center">
+                                <span class="text-3xl font-bold text-green-dark">2</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">We Create Your System</h3>
+                                <p class="text-gray-600">Together we establish routines, preferences, and processes that
+                                    work for you</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm">
+                            <div class="shrink-0 w-16 h-16 rounded-full bg-green-dark/10 flex items-center justify-center">
+                                <span class="text-3xl font-bold text-green-dark">3</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">You Stay In Control</h3>
+                                <p class="text-gray-600">Final decisions are always yours - we simply handle the details
+                                    and
+                                    keep you informed</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white rounded-xl p-6 shadow-sm">
+                            <div class="shrink-0 w-16 h-16 rounded-full bg-green-dark/10 flex items-center justify-center">
+                                <span class="text-3xl font-bold text-green-dark">4</span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-1">Life Gets Easier</h3>
+                                <p class="text-gray-600">Reduce stress, stay organized, and enjoy the freedom of having
+                                    support you can trust</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <Testimonials testimonials={testimonials}/>
-
-        <CallToAction background="bg-white"/>
     </main>
 
+    <CallToAction/>
     <Footer/>
 </Layout>
