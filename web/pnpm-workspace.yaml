@@ -4,4 +4,4 @@ packages:
 
 auditConfig: {}
 
-minimumReleaseAge: 1440
+minimumReleaseAge: 20160

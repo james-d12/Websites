@@ -1,4 +1,5 @@
 ---
+import SectionHeading from "./SectionHeading.astro";
 interface Testimonial {
     quote: string;
     name: string;
@@ -16,13 +17,10 @@ const {testimonials} = Astro.props;
 <section class="py-20 md:py-28">
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
-            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">Testimonials</p>
-            <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-                What People Say
-            </h2>
-            <p class="text-xl leading-relaxed">
-                Hear from the families and individuals who trust us with their care
-            </p>
+            <SectionHeading
+                    title="What People Say"
+                    subTitle="Testimonials"
+                    description="Hear from the families and individuals who trust us with their care"/>
         </div>
 
         <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
@@ -34,7 +32,7 @@ const {testimonials} = Astro.props;
                             </svg>
                         </div>
 
-                        <blockquote class="leading-relaxed mb-6 grow">
+                        <blockquote class="leading-relaxed text-lg mb-6 grow">
                             "{testimonial.quote}"
                         </blockquote>
 
@@ -52,18 +50,6 @@ const {testimonials} = Astro.props;
                         </div>
                     </div>
             ))}
-        </div>
-
-        <div class="mt-16 text-center">
-            <div class="inline-flex items-center gap-3 px-6 py-4 bg-green-dark/5 rounded-full">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-                <span class="font-medium">
-                    Trusted by over 5,000 families across the region
-                </span>
-            </div>
         </div>
     </div>
 </section>

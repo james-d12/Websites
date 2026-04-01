@@ -1,0 +1,18 @@
+---
+import SectionHeading from "./SectionHeading.astro";
+interface Props {
+    subTitle: string;
+    title: string;
+}
+
+const {subTitle, title} = Astro.props;
+---
+<section class="py-24 md:py-32 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+        <SectionHeading title={title} subTitle={subTitle}/>
+
+        <div class="space-y-12">
+            <slot/>
+        </div>
+    </div>
+</section>
