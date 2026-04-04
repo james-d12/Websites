@@ -28,7 +28,7 @@ jobs:
       DIRECTUS_BUILD_SECRET: ${{ inputs.enable_cms && secrets.DIRECTUS_BUILD_SECRET || '' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
 
       - name: Install Node.js
         uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
@@ -188,11 +188,11 @@ jobs:
             done
 
             echo "❌ Health check failed after 10 attempts"
-            exit 1
+            exit 1 
           EOF
 
       - name: Rollback to previous deployment if verification failed
-        if: failure()
+        if: failure() 
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519_vps_ci \
