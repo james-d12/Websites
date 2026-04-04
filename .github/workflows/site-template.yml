@@ -198,11 +198,11 @@ jobs:
             done
 
             echo "❌ Health check failed after 10 attempts"
-            exit 1
+            exit 1 
           EOF
 
       - name: Rollback to previous deployment if verification failed
-        if: failure()
+        if: failure() 
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519_vps_ci \
