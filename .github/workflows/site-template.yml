@@ -98,22 +98,35 @@ jobs:
           echo "Disallow: /" >> ./deploy/robots.txt
           echo "✅ robots.txt added to deploy folder"
 
-      - name: Create SSH Key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          touch ~/.ssh/id_ed25519_vps_ci 
+          chmod 700 ~/.ssh
+          
+          touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
+          
+          grep -qxF "${{ secrets.VPS_HOST_PUBLIC_KEY }}" ~/.ssh/known_hosts || \
+            echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
       - name: Deploy site via SCP
         run: |
-          scp -r -C -o StrictHostKeyChecking=no \
+          scp -r -C \
+          -o StrictHostKeyChecking=yes -o ForwardAgent=no \
+          -o UserKnownHostsFile=~/.ssh/known_hosts \
+          -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+          -o HostkeyAlgorithms=+ssh-ed25519 \
           -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.VPS_PORT }} \
           ./deploy/. ci@${{ secrets.VPS_HOST }}:/var/www/staging.${{ inputs.site }}
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
-          ssh -o StrictHostKeyChecking=no \
+          ssh -o StrictHostKeyChecking=yes -o ForwardAgent=no \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+              -o HostkeyAlgorithms=+ssh-ed25519 \
               -i ~/.ssh/id_ed25519_vps_ci \
               -p ${{ secrets.VPS_PORT }} \
               ci@${{ secrets.VPS_HOST }} << 'EOF'
@@ -147,16 +160,25 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
-      - name: Create SSH Key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          
           touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
+          
+          grep -qxF "${{ secrets.VPS_HOST_PUBLIC_KEY }}" ~/.ssh/known_hosts || \
+            echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
 
       - name: Backup previous deployment
         run: |
-          ssh -o StrictHostKeyChecking=no \
+          ssh -o StrictHostKeyChecking=yes -o ForwardAgent=no \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+              -o HostkeyAlgorithms=+ssh-ed25519 \
               -i ~/.ssh/id_ed25519_vps_ci \
               -p ${{ secrets.VPS_PORT }} \
               ci@${{ secrets.VPS_HOST }} \
@@ -164,13 +186,20 @@ jobs:
 
       - name: Deploy site via SCP
         run: |
-          scp -r -C -o StrictHostKeyChecking=no  \
+          scp -r -C \
+          -o StrictHostKeyChecking=yes -o ForwardAgent=no \
+          -o UserKnownHostsFile=~/.ssh/known_hosts \
+          -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+          -o HostkeyAlgorithms=+ssh-ed25519 \
           -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.VPS_PORT }} \
           ./deploy/. ci@${{ secrets.VPS_HOST }}:/var/www/${{ inputs.site }}
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
-          ssh -o StrictHostKeyChecking=no \
+          ssh -o StrictHostKeyChecking=yes -o ForwardAgent=no \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+              -o HostkeyAlgorithms=+ssh-ed25519 \
               -i ~/.ssh/id_ed25519_vps_ci \
               -p ${{ secrets.VPS_PORT }} \
               ci@${{ secrets.VPS_HOST }} << 'EOF'
@@ -192,9 +221,12 @@ jobs:
           EOF
 
       - name: Rollback to previous deployment if verification failed
-        if: failure() 
+        if: failure()
         run: |
-          ssh -o StrictHostKeyChecking=no \
+          ssh -o StrictHostKeyChecking=yes -o ForwardAgent=no \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+              -o HostkeyAlgorithms=+ssh-ed25519 \
               -i ~/.ssh/id_ed25519_vps_ci \
               -p ${{ secrets.VPS_PORT }} \
               ci@${{ secrets.VPS_HOST }} << 'EOF'
