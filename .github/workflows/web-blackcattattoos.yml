@@ -26,3 +26,4 @@ jobs:
     with:
       site: blackcattattoos.co.uk
       enable_cms: true
+    secrets: inherit

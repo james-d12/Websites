@@ -25,3 +25,4 @@ jobs:
     uses: ./.github/workflows/site-template.yml
     with:
       site: jamesdurban.com
+    secrets: inherit
