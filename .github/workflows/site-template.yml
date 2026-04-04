@@ -98,16 +98,17 @@ jobs:
           echo "Disallow: /" >> ./deploy/robots.txt
           echo "✅ robots.txt added to deploy folder"
 
-      - name: Create SSH Key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          
           touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
-
-      - name: Add SSH known hosts
-        run: |
-          echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
+          
+          grep -qxF "${{ secrets.VPS_HOST_PUBLIC_KEY }}" ~/.ssh/known_hosts || \
+            echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
       - name: Deploy site via SCP
@@ -159,16 +160,17 @@ jobs:
           name: site-dist-${{ inputs.site }}
           path: ./deploy
 
-      - name: Create SSH Key
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+          
           touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
-
-      - name: Add SSH known hosts
-        run: |
-          echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
+          
+          grep -qxF "${{ secrets.VPS_HOST_PUBLIC_KEY }}" ~/.ssh/known_hosts || \
+            echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
 
       - name: Backup previous deployment
