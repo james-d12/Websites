@@ -16,7 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     name: Build Web
     env:
-      DIRECTUS_URL: ${{ secrets.DIRECTUS_URL }}
       PUBLIC_ENABLE_CMS: false
     steps:
       - name: Checkout
@@ -57,7 +56,7 @@ jobs:
 
       - name: Validate Renovate Config
         run: npx --yes --package renovate -- renovate-config-validator --strict
-    
+
       - name: Run ESLint
         working-directory: web
         run: pnpm run lint
