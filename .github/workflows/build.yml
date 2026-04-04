@@ -78,7 +78,7 @@ jobs:
         working-directory: web
         run: pnpm exec playwright test --reporter=list,html
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
