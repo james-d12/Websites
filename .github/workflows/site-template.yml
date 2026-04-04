@@ -106,7 +106,8 @@ jobs:
           touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
-          
+
+          touch ~/.ssh/known_hosts
           grep -qxF "${{ secrets.VPS_HOST_PUBLIC_KEY }}" ~/.ssh/known_hosts || \
             echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
@@ -168,7 +169,8 @@ jobs:
           touch ~/.ssh/id_ed25519_vps_ci
           echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
-          
+
+          touch ~/.ssh/known_hosts
           grep -qxF "${{ secrets.VPS_HOST_PUBLIC_KEY }}" ~/.ssh/known_hosts || \
             echo "${{ secrets.VPS_HOST_PUBLIC_KEY }}" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
