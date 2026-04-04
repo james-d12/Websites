@@ -4,7 +4,7 @@ permissions:
 on:
   workflow_call:
     inputs:
-      site:
+      site: 
         required: true
         type: string
       cms_deployment:
