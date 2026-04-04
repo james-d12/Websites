@@ -1,5 +1,6 @@
 interface ImportMetaEnv {
   readonly DIRECTUS_URL: string;
+  readonly DIRECTUS_BUILD_SECRET: string;
   readonly PUBLIC_ENABLE_CMS: string;
 }
 
