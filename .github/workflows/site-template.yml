@@ -172,7 +172,7 @@ jobs:
           echo "${{ secrets.VPS_CI_KEY }}" > ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
 
-          HOST_ENTRY="[${{ secrets.VPS_HOST }}]:${{ secrets.VPS_PORT }} ${{ secrets.VPS_HOST_PUBLIC_KEY }}"
+          HOST_ENTRY="[${{ secrets.VPS_HOST }}]:${{ secrets.VPS_SSH_PORT }} ${{ secrets.VPS_HOST_PUBLIC_KEY }}"
           touch ~/.ssh/known_hosts
           grep -qxF "$HOST_ENTRY" ~/.ssh/known_hosts || \
           echo "$HOST_ENTRY" >> ~/.ssh/known_hosts
