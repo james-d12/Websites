@@ -26,11 +26,12 @@ on:
         required: false
       directus_build_secret:
         required: false
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
+    environment: 'Build'
     env:
       site_full_path: web/sites/${{ inputs.site }}
       DIRECTUS_URL: ${{ secrets.directus_url }}
