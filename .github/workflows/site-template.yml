@@ -15,27 +15,17 @@ on:
         required: false
         type: boolean
         default: false
-    secrets:
-      server_host:
-        required: true
-      server_ssh_port:
-        required: true
-      server_key:
-        required: true
-      directus_url:
-        required: false
-      directus_build_secret:
-        required: false
-        
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: Build ${{ inputs.site }}
+    environment: 'Build'
     env:
       site_full_path: web/sites/${{ inputs.site }}
-      DIRECTUS_URL: ${{ secrets.directus_url }}
-      DIRECTUS_BUILD_SECRET: ${{ secrets.directus_build_secret }}
       PUBLIC_ENABLE_CMS: ${{ inputs.enable_cms }}
+      DIRECTUS_URL: ${{ inputs.enable_cms && secrets.DIRECTUS_URL || '' }}
+      DIRECTUS_BUILD_SECRET: ${{ inputs.enable_cms && secrets.DIRECTUS_BUILD_SECRET || '' }}
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
@@ -112,21 +102,21 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           touch ~/.ssh/id_ed25519_vps_ci 
-          echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
+          echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
 
       - name: Deploy site via SCP
         run: |
           scp -r -C -o StrictHostKeyChecking=no \
-          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
-          ./deploy/. ci@${{ secrets.server_host }}:/var/www/staging.${{ inputs.site }}
+          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.VPS_PORT }} \
+          ./deploy/. ci@${{ secrets.VPS_HOST }}:/var/www/staging.${{ inputs.site }}
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519_vps_ci \
-              -p ${{ secrets.server_ssh_port }} \
-              ci@${{ secrets.server_host }} << 'EOF'
+              -p ${{ secrets.VPS_PORT }} \
+              ci@${{ secrets.VPS_HOST }} << 'EOF'
             for i in {1..10}; do
               HTTPS_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" https://staging.${{ inputs.site }} || echo "000")
               HTTP_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" http://staging.${{ inputs.site }} || echo "000")
@@ -161,29 +151,29 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           touch ~/.ssh/id_ed25519_vps_ci
-          echo "${{ secrets.server_key }}" >> ~/.ssh/id_ed25519_vps_ci
+          echo "${{ secrets.VPS_CI_KEY }}" >> ~/.ssh/id_ed25519_vps_ci
           chmod 600 ~/.ssh/id_ed25519_vps_ci
 
       - name: Backup previous deployment
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519_vps_ci \
-              -p ${{ secrets.server_ssh_port }} \
-              ci@${{ secrets.server_host }} \
+              -p ${{ secrets.VPS_PORT }} \
+              ci@${{ secrets.VPS_HOST }} \
               "cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ inputs.site }}-$(date +%F%H%M%S)"
 
       - name: Deploy site via SCP
         run: |
           scp -r -C -o StrictHostKeyChecking=no  \
-          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.server_ssh_port }} \
-          ./deploy/. ci@${{ secrets.server_host }}:/var/www/${{ inputs.site }}
+          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.VPS_PORT }} \
+          ./deploy/. ci@${{ secrets.VPS_HOST }}:/var/www/${{ inputs.site }}
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519_vps_ci \
-              -p ${{ secrets.server_ssh_port }} \
-              ci@${{ secrets.server_host }} << 'EOF'
+              -p ${{ secrets.VPS_PORT }} \
+              ci@${{ secrets.VPS_HOST }} << 'EOF'
             for i in {1..10}; do
               HTTPS_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" https://${{ inputs.site }} || echo "000")
               HTTP_STATUS=$(curl -sSI --max-time 10 --connect-timeout 5 -o /dev/null -w "%{http_code}" http://${{ inputs.site }} || echo "000")
@@ -206,8 +196,8 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no \
               -i ~/.ssh/id_ed25519_vps_ci \
-              -p ${{ secrets.server_ssh_port }} \
-              ci@${{ secrets.server_host }} << 'EOF'
+              -p ${{ secrets.VPS_PORT }} \
+              ci@${{ secrets.VPS_HOST }} << 'EOF'
             echo "🚨 Rolling back to previous deployment..."
             LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* 2>/dev/null | head -n 1)
             if [ -d "$LATEST_BACKUP" ]; then

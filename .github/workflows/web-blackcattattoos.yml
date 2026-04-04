@@ -26,9 +26,3 @@ jobs:
     with:
       site: blackcattattoos.co.uk
       enable_cms: true
-    secrets:
-      server_host: ${{ secrets.VPS_HOST }}
-      server_ssh_port: ${{ secrets.VPS_PORT }}
-      server_key: ${{ secrets.VPS_CI_KEY }}
-      directus_url: ${{ secrets.DIRECTUS_URL }}
-      directus_build_secret: ${{ secrets.DIRECTUS_BUILD_SECRET }}
