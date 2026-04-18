@@ -1,4 +1,4 @@
-import About from "./About.astro"
-import AboutParagraph from "./AboutParagraph.astro"
+import About from "./About.astro";
+import AboutParagraph from "./AboutParagraph.astro";
 
-export {About, AboutParagraph}
+export { About, AboutParagraph };

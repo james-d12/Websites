@@ -1,38 +1,37 @@
 @import "tailwindcss";
 
 @theme {
-    --color-green-dark: #13705b;
-    --color-green-middle: #105c4b;
-    --color-green-darker: #0c4438;
-    --color-green-light: #29b595;
-    --color-green-50: #f0fdf9;
-    --color-green-100: #d5f5ec;
-    --color-warm-50: #faf9f7;
-    --color-warm-100: #f3f1ed;
-    --color-warm-200: #e8e4dd;
+  --color-green-dark: #13705b;
+  --color-green-middle: #105c4b;
+  --color-green-darker: #0c4438;
+  --color-green-light: #29b595;
+  --color-green-50: #f0fdf9;
+  --color-green-100: #d5f5ec;
+  --color-warm-50: #faf9f7;
+  --color-warm-100: #f3f1ed;
+  --color-warm-200: #e8e4dd;
 }
 
-
 @font-face {
-    font-family: "Bellefair";
-    src: url("/fonts/Bellefair-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Bellefair";
+  src: url("/fonts/Bellefair-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
-    font-family: "Bellefair", serif;
-    font-synthesis: none;
+  font-family: "Bellefair", serif;
+  font-synthesis: none;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-size: 110%;
+  scroll-behavior: smooth;
+  font-size: 110%;
 }
 
 body {
-    margin: 0;
-    color: #2d3748;
-    background-color: #faf9f7;
+  margin: 0;
+  color: #2d3748;
+  background-color: #faf9f7;
 }
