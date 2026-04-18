@@ -46,66 +46,41 @@ const nurses = [
             </p>
         </div>
 
-        <div class="relative max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {nurses.map((nurse, i) => (
-                    <div class="relative">
-                        {i < nurses.length - 1 && (
-                                <div class="hidden md:block absolute left-0 right-0 -bottom-20 h-42 pointer-events-none z-10">
-                                    <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                        <path
-                                                d={i % 2 === 0
-                                                    ? "M 20 0 C 20 40, 20 60, 50 70 C 65 75, 80 80, 80 100"
-                                                    : "M 80 0 C 80 40, 80 60, 50 70 C 35 75, 20 80, 20 100"}
-                                                stroke="#13705B"
-                                                stroke-width="2.5"
-                                                stroke-linecap="round"
-                                                fill="none"
-                                        />
-                                    </svg>
-                                </div>
-                        )}
-
-                        <a
-                                href={nurse.href}
-                                class={`group grid md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-20 px-6 md:px-8 ${i % 2 === 1 ? 'md:grid-flow-dense' : ''}`}
-                        >
-                            <div class={`relative ${i % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                                <!-- Number badge on image -->
-                                <div class="hidden md:flex absolute -top-4 -left-4 w-16 h-16 rounded-full bg-green-dark items-center justify-center z-20 shadow-lg ring-4 ring-white">
-                                    <span class="text-white font-bold text-xl">0{i + 1}</span>
-                                </div>
-
-                                <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
-                                <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
-                                    <Image
-                                            src={nurse.image}
-                                            alt={nurse.title}
-                                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                </div>
-                            </div>
-
-                            <div class={`${i % 2 === 1 ? 'md:col-start-1 md:row-start-1' : ''}`}>
-                                <div class="inline-block md:hidden px-4 py-2 bg-green-dark/10 rounded-lg mb-6">
-                                    <span class="text-green-dark font-semibold text-sm">0{i + 1}</span>
-                                </div>
-                                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 group-hover:text-green-dark transition-colors">
-                                    {nurse.title}
-                                </h3>
-                                <p class="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8">
-                                    {nurse.description}
-                                </p>
-                                <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
-                                Learn more
-                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
-                                     stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </span>
-                            </div>
-                        </a>
+                <a
+                    href={nurse.href}
+                    class="group flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white"
+                >
+                    <div class="relative overflow-hidden h-64">
+                        <Image
+                            src={nurse.image}
+                            alt={nurse.title}
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div class="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-11 h-11 rounded-full bg-green-dark flex items-center justify-center shadow-lg ring-2 ring-white">
+                            <span class="text-white font-bold text-base">0{i + 1}</span>
+                        </div>
                     </div>
+
+                    <div class="flex flex-col flex-1 p-8">
+                        <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 group-hover:text-green-dark transition-colors">
+                            {nurse.title}
+                        </h3>
+                        <p class="text-gray-600 text-xl leading-relaxed flex-1 mb-6">
+                            {nurse.description}
+                        </p>
+                        <span class="inline-flex items-center text-green-dark font-semibold text-2xl group-hover:gap-3 gap-2 transition-all">
+                            Learn more
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
+                                 stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                      d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </span>
+                    </div>
+                </a>
             ))}
         </div>
     </div>
