@@ -33,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <ServiceComponent.Hero
+        <ServiceComponent.ServicesHero
                 label="Carer Services"
                 title="Personal Assistant"
                 description="Unrivalled one-to-one personal assistance for those who value discretion, sophistication, and seamless organisation. Every aspect of daily life handled with impeccable care, giving you and your family complete reassurance and peace of mind."
@@ -41,8 +41,8 @@ const testimonials = [
                 imageAlt="Personal assistant services"
         />
 
-        <ServiceComponent.About title="Personal Assistant" subTitle="About the Service">
-            <ServiceComponent.AboutParagraph title="Discretion, Sophistication & Seamless Organisation">
+        <ServiceComponent.ServicesAbout title="Personal Assistant" subTitle="About the Service">
+            <ServiceComponent.ServicesAboutParagraph title="Discretion, Sophistication & Seamless Organisation">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -53,9 +53,9 @@ const testimonials = [
                 those who value discretion, sophistication, and seamless organisation, our Personal Assistants provide a
                 personalised experience that enhances every aspect of daily life while offering families complete
                 reassurance and peace of mind.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Dedicated to Your Lifestyle & Preferences">
+            <ServiceComponent.ServicesAboutParagraph title="Dedicated to Your Lifestyle & Preferences">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -66,9 +66,9 @@ const testimonials = [
                 client's lifestyle, preferences, and routines. From managing diaries, appointments, and correspondence
                 to coordinating social engagements, travel, family visits, and shopping, every task is handled with
                 impeccable precision and care, ensuring the experience is effortless and enjoyable.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="A Trusted Point of Contact for Families">
+            <ServiceComponent.ServicesAboutParagraph title="A Trusted Point of Contact for Families">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -78,9 +78,9 @@ const testimonials = [
                 liaising seamlessly with household staff, external service providers, and where relevant, residential
                 teams. This ensures that communication is clear, coordination is smooth, and the client's preferences,
                 wishes, and wellbeing are always prioritised.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Companionship, Advocacy & Lifestyle Management">
+            <ServiceComponent.ServicesAboutParagraph title="Companionship, Advocacy & Lifestyle Management">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -91,9 +91,9 @@ const testimonials = [
                 smoothly and elegantly. For clients in high-end residences, the role complements any regulated support
                 provided by staff, while for private home clients, the focus is entirely on enhancing comfort,
                 convenience, and independence.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="The Right Match, Every Time">
+            <ServiceComponent.ServicesAboutParagraph title="The Right Match, Every Time">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -103,7 +103,7 @@ const testimonials = [
                 match does not feel quite right, we work closely with the client and their family to ensure a
                 replacement is provided who meets their exact requirements. Our priority is always to create a harmonious
                 and supportive partnership that enhances daily life.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
             <div class="mt-4 bg-green-dark rounded-2xl p-8 md:p-10 flex items-start gap-6">
                 <div class="shrink-0 w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mt-1">
@@ -119,9 +119,9 @@ const testimonials = [
                         family, and their lifestyle.</p>
                 </div>
             </div>
-        </ServiceComponent.About>
+        </ServiceComponent.ServicesAbout>
 
-        <ServiceComponent.Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
         <CallToAction background="bg-white"/>
     </main>

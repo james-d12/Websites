@@ -33,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <ServiceComponent.Hero
+        <ServiceComponent.ServicesHero
                 label="Carer Services"
                 title="1-1 Dementia Carer"
                 description="Specialist, person-centred support for those living with dementia. Our highly trained carers take time to truly know your loved one, delivering compassionate care that maintains familiar routines, promotes calm, and keeps families informed and reassured."
@@ -41,8 +41,8 @@ const testimonials = [
                 imageAlt="Dementia care services"
         />
 
-        <ServiceComponent.About title="1-to-1 Dementia Care" subTitle="About the Service">
-            <ServiceComponent.AboutParagraph title="A Personal, Patient & Compassionate Approach">
+        <ServiceComponent.ServicesAbout title="1-to-1 Dementia Care" subTitle="About the Service">
+            <ServiceComponent.ServicesAboutParagraph title="A Personal, Patient & Compassionate Approach">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -54,9 +54,9 @@ const testimonials = [
                 highly trained experts who take the time to learn about your loved one, their life story, personality,
                 routines, hobbies, music, photographs, and memories, so that every interaction feels familiar,
                 comforting, and reassuring.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Familiar Routines & Community Calm">
+            <ServiceComponent.ServicesAboutParagraph title="Familiar Routines & Community Calm">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -67,9 +67,9 @@ const testimonials = [
                 independence, wellbeing, emotional security, and trust. By keeping your loved one calm and reassured,
                 our Carers also contribute to a calmer environment for other residents, helping the whole care home
                 community feel more settled and comfortable.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="When to Consider Dementia Care">
+            <ServiceComponent.ServicesAboutParagraph title="When to Consider Dementia Care">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -97,9 +97,9 @@ const testimonials = [
                 </ul>
                 <p>Early care helps your loved one remain calm, engaged, and socially connected, while families can feel
                     reassured that their loved one is in safe, expert hands.</p>
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Supporting Families & BRACE Research">
+            <ServiceComponent.ServicesAboutParagraph title="Supporting Families & BRACE Research">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -109,7 +109,7 @@ const testimonials = [
                 know that seeking support is an act of love. We care for your loved one with understanding and expertise,
                 while providing families with clear communication and reassurance, whether hourly, daily, or weekly
                 updates. Together, we help your loved one feel safe, valued, and supported.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
             <div class="mt-4 bg-green-dark rounded-2xl p-8 md:p-10 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
                 <div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/20 flex items-center justify-center">
@@ -125,11 +125,11 @@ const testimonials = [
                         to improve diagnosis, treatment, and ultimately find a cure.</p>
                 </div>
             </div>
-        </ServiceComponent.About>
+        </ServiceComponent.ServicesAbout>
 
-        <ServiceComponent.Story storyId="dementia-story"/>
+        <ServiceComponent.ServicesStory storyId="dementia-story"/>
 
-        <ServiceComponent.Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
         <CallToAction background="bg-warm-50"/>
     </main>

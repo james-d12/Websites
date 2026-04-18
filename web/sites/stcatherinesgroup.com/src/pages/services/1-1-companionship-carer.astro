@@ -33,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <ServiceComponent.Hero
+        <ServiceComponent.ServicesHero
                 label="Carer Services"
                 title="1-1 Companionship Carer"
                 description="Genuine companionship centred on emotional wellbeing, social connection, and quality of life. Our carers take time to truly know your loved one, providing the human connection that makes every day feel meaningful."
@@ -41,8 +41,8 @@ const testimonials = [
                 imageAlt="Companionship services"
         />
 
-        <ServiceComponent.About title="1-to-1 Companionship Care" subTitle="About the Service">
-            <ServiceComponent.AboutParagraph title="Emotional, Social & Practical Support">
+        <ServiceComponent.ServicesAbout title="1-to-1 Companionship Care" subTitle="About the Service">
+            <ServiceComponent.ServicesAboutParagraph title="Emotional, Social & Practical Support">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -54,9 +54,9 @@ const testimonials = [
                 regular companionship, individuals may experience a decline in confidence, increased anxiety, and a
                 greater risk of depression. Over time, this can also affect overall wellbeing, making connection and
                 human interaction an essential part of care.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Building Trust Through Shared Interests">
+            <ServiceComponent.ServicesAboutParagraph title="Building Trust Through Shared Interests">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -66,9 +66,9 @@ const testimonials = [
                 daily routines. Whether it's music, gardening, art, books, or sharing treasured memories, St Catherine's
                 Carers engage in meaningful ways that build trust, comfort, and familiarity. This helps each individual
                 feel valued, connected, and supported every day.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Settling In & Staying Connected">
+            <ServiceComponent.ServicesAboutParagraph title="Settling In & Staying Connected">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -78,9 +78,9 @@ const testimonials = [
                 accompanying residents to activities, joining them at mealtimes, and helping them interact with others
                 to build friendships. Maintaining consistent daily routines, including meals, rest, and bedtime, helps
                 to reduce confusion, anxiety, and fatigue.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Regular Updates for Families">
+            <ServiceComponent.ServicesAboutParagraph title="Regular Updates for Families">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -90,12 +90,12 @@ const testimonials = [
                 information on meals, activities, mood, and overall wellbeing, offering reassurance and peace of mind.
                 Our Companionship Carers actively promote engagement, comfort, and joy, helping your loved ones live
                 safely, happily, and with dignity.
-            </ServiceComponent.AboutParagraph>
-        </ServiceComponent.About>
+            </ServiceComponent.ServicesAboutParagraph>
+        </ServiceComponent.ServicesAbout>
 
-        <ServiceComponent.Story storyId="companionship-story"/>
+        <ServiceComponent.ServicesStory storyId="companionship-story"/>
 
-        <ServiceComponent.Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
         <CallToAction background="bg-warm-50"/>
     </main>

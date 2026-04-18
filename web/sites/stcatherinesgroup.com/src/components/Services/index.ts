@@ -1,7 +1,7 @@
-import Hero from "./Hero.astro";
-import { About, AboutParagraph } from "./About";
-import SectionHeading from "./SectionHeading.astro";
-import Story from "./Story.astro";
-import Testimonials from "./Testimonials.astro";
+import ServicesHero from "./ServicesHero.astro";
+import {ServicesAbout, ServicesAboutParagraph} from "./ServicesAbout";
+import ServicesHeading from "./ServicesHeading.astro";
+import ServicesStory from "./ServicesStory.astro";
+import ServicesTestimonials from "./ServicesTestimonials.astro";
 
-export { Hero, About, AboutParagraph, SectionHeading, Story, Testimonials };
+export {ServicesHero, ServicesAbout, ServicesAboutParagraph, ServicesHeading, ServicesStory, ServicesTestimonials};

@@ -33,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <ServiceComponent.Hero
+        <ServiceComponent.ServicesHero
                 label="Carer Services"
                 title="1-1 Safety Carer"
                 description="Personalised, one-to-one safety support for those who need focused, attentive care. We help residents regain confidence and independence while giving families complete reassurance."
@@ -41,8 +41,8 @@ const testimonials = [
                 imageAlt="1-1 Safety services"
         />
 
-        <ServiceComponent.About title="1-to-1 Safety Care" subTitle="About the Service">
-            <ServiceComponent.AboutParagraph title="Dedicated, Personalised Safety Support">
+        <ServiceComponent.ServicesAbout title="1-to-1 Safety Care" subTitle="About the Service">
+            <ServiceComponent.ServicesAboutParagraph title="Dedicated, Personalised Safety Support">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -52,9 +52,9 @@ const testimonials = [
                 ensuring both safety and peace of mind for families. This service is designed for individuals who require
                 focused attention due to temporary or ongoing risks, allowing them to regain independence, confidence,
                 and comfort in a safe, supportive environment.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Tailored to Every Situation">
+            <ServiceComponent.ServicesAboutParagraph title="Tailored to Every Situation">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -65,9 +65,9 @@ const testimonials = [
                 or medical procedures to regain mobility and confidence, or provide vigilant support for residents at
                 risk due to mental health concerns. Each scenario is approached with professionalism, sensitivity, and
                 respect, ensuring the resident's dignity and wellbeing are always prioritised.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Complete Reassurance for Families">
+            <ServiceComponent.ServicesAboutParagraph title="Complete Reassurance for Families">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -79,9 +79,9 @@ const testimonials = [
                 professional teams, providing updates and ensuring continuity in their care plans. The service is fully
                 personalised and adaptable, responding to changes in the resident's needs while maintaining the highest
                 standard of safety and support at all times.
-            </ServiceComponent.AboutParagraph>
+            </ServiceComponent.ServicesAboutParagraph>
 
-            <ServiceComponent.AboutParagraph title="Trust, Compatibility & Excellence">
+            <ServiceComponent.ServicesAboutParagraph title="Trust, Compatibility & Excellence">
                 <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
                      viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
@@ -93,12 +93,12 @@ const testimonials = [
                 personalised attention. Our One-to-One Safety Care service is delivered with the same attention to
                 excellence and discretion that defines all St Catherine's offerings, providing residents with confidence
                 and reassurance while ensuring families can feel fully supported.
-            </ServiceComponent.AboutParagraph>
-        </ServiceComponent.About>
+            </ServiceComponent.ServicesAboutParagraph>
+        </ServiceComponent.ServicesAbout>
 
-        <ServiceComponent.Story storyId="safety-and-recovery-story"/>
+        <ServiceComponent.ServicesStory storyId="safety-and-recovery-story"/>
 
-        <ServiceComponent.Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
         <CallToAction background="bg-warm-50"/>
     </main>
