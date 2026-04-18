@@ -3,8 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import Hero from '../../components/Services/Hero.astro';
-import Testimonials from '../../components/Services/Testimonials.astro';
+import * as ServiceComponent from "../../components/Services";
 import vaccinationsImage from "../../assets/mathurin-napoly-matnapo-pIJ34ZrZEEw-unsplash.jpg";
 
 const testimonials = [
@@ -34,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <Hero
+        <ServiceComponent.ServicesHero
                 label="Specialist Nurses"
                 title="Vaccination Nurses"
                 description="Professional vaccination services delivered in the comfort of your home by our qualified nursing team. From seasonal flu jabs to travel vaccinations and routine immunisations, we provide safe, convenient healthcare that fits around your schedule."
@@ -239,7 +238,7 @@ const testimonials = [
             </div>
         </section>
 
-        <Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
     </main>
 
     <CallToAction/>

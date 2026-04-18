@@ -3,8 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import Hero from '../../components/Services/Hero.astro';
-import Testimonials from '../../components/Services/Testimonials.astro';
+import * as ServiceComponent from "../../components/Services";
 import careHomeNursesImage from "../../assets/georg-arthur-pflueger-eO_JhqabBY0-unsplash.jpg";
 
 const testimonials = [
@@ -34,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <Hero
+        <ServiceComponent.ServicesHero
                 label="Specialist Nurses"
                 title="Care Home Nurses"
                 description="Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team and ensure the highest standards of resident healthcare."
@@ -59,7 +58,7 @@ const testimonials = [
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -92,7 +91,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -125,7 +124,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -158,7 +157,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -191,7 +190,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -224,7 +223,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -290,7 +289,7 @@ const testimonials = [
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Care Home Nurses Provide:</h3>
                         <div class="space-y-4">
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -300,7 +299,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>Care Home Experience</strong> - Deep understanding of residential care environments</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -310,7 +309,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>CQC Knowledge</strong> - Expertise in regulatory compliance and standards</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -320,7 +319,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>Team Integration</strong> - Ability to work seamlessly with care home staff</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -330,7 +329,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>Medication Expertise</strong> - Specialist knowledge in care home medication management</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -345,7 +344,7 @@ const testimonials = [
             </div>
         </section>
 
-        <Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
     </main>
 
     <CallToAction/>

@@ -1,6 +1,6 @@
 ---
 import {getCollection, render} from 'astro:content';
-import SectionHeading from './SectionHeading.astro';
+import ServicesHeading from './ServicesHeading.astro';
 
 interface Props {
     storyId: string;
@@ -25,7 +25,7 @@ const {title} = entry.data;
 
 <section class="py-24 md:py-32 bg-warm-50">
     <div class="max-w-4xl mx-auto px-6">
-        <SectionHeading subTitle="A Story From Charmaine" title={title}/>
+        <ServicesHeading subTitle="A Story From Charmaine" title={title}/>
 
         <div class="prose-story">
             <Content/>

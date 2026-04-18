@@ -1,5 +1,5 @@
 ---
-import SectionHeading from "./SectionHeading.astro";
+import ServicesHeading from "./ServicesHeading.astro";
 interface Testimonial {
     quote: string;
     name: string;
@@ -17,7 +17,7 @@ const {testimonials, background = 'bg-white'} = Astro.props;
 <section class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
-            <SectionHeading
+            <ServicesHeading
                     title="What People Say"
                     subTitle="Testimonials"
                     description="Hear from the families and individuals who trust us with their care"/>

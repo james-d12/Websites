@@ -3,8 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import Hero from '../../components/Services/Hero.astro';
-import Testimonials from '../../components/Services/Testimonials.astro';
+import * as ServiceComponent from "../../components/Services";
 import practiceNursesImage from "../../assets/cdc-Jusy7vxGPLM-unsplash.jpg";
 
 const testimonials = [
@@ -34,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <Hero
+        <ServiceComponent.ServicesHero
                 label="Specialist Nurses"
                 title="Practice Nurses"
                 description="Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention."
@@ -60,7 +59,7 @@ const testimonials = [
                     <div class="grid md:grid-cols-2 gap-8">
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -94,7 +93,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,7 +126,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -160,7 +159,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -193,7 +192,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -227,7 +226,7 @@ const testimonials = [
 
                         <div class="bg-warm-50 rounded-xl p-8">
                             <div class="flex items-start gap-4 mb-4">
-                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center flex-shrink-0">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
                                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
                                          viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -297,7 +296,7 @@ const testimonials = [
                         <h3 class="text-2xl font-bold text-gray-900 mb-6">Our Practice Nurses Are:</h3>
                         <div class="space-y-4">
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -307,7 +306,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>GP Practice Experienced</strong> - Years working in primary care settings</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -317,7 +316,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>Specialist Qualified</strong> - Additional certifications in chronic disease management</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -327,7 +326,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>Immunisation Trained</strong> - Certified in vaccination administration and anaphylaxis management</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -337,7 +336,7 @@ const testimonials = [
                                 <span class="text-gray-700"><strong>Holistic Care Focused</strong> - Patient-centred approach to health and wellbeing</span>
                             </div>
                             <div class="flex items-start gap-3">
-                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center flex-shrink-0 mt-1">
+                                <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
                                     <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd"
                                               d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
@@ -352,7 +351,7 @@ const testimonials = [
             </div>
         </section>
 
-        <Testimonials testimonials={testimonials}/>
+        <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
     </main>
 
     <CallToAction/>
