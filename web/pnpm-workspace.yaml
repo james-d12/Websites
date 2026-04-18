@@ -4,4 +4,6 @@ packages:
 
 auditConfig: {}
 
-minimumReleaseAge: 20160
+minimumReleaseAge: 10080
+trustPolicy: no-downgrade
+blockExoticSubdeps: true
