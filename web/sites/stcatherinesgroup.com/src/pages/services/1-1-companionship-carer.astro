@@ -3,11 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
-import Hero from '../../components/Services/Hero.astro';
-import Testimonials from '../../components/Services/Testimonials.astro';
 import companionshipImage from "../../assets/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg";
-import MainContent from "../../components/Services/MainContent.astro";
-import Story from "../../components/Services/Story.astro";
+import * as ServiceComponent from "../../components/Services";
 
 const testimonials = [
     {
@@ -36,7 +33,7 @@ const testimonials = [
     <Navbar/>
 
     <main>
-        <Hero
+        <ServiceComponent.Hero
                 label="Carer Services"
                 title="1-1 Companionship Carer"
                 description="Genuine companionship centred on emotional wellbeing, social connection, and quality of life. Our carers take time to truly know your loved one, providing the human connection that makes every day feel meaningful."
@@ -44,85 +41,61 @@ const testimonials = [
                 imageAlt="Companionship services"
         />
 
-        <MainContent title="1-to-1 Companionship Care" subTitle="About the Service">
-            <div>
-                <div class="flex gap-4 items-center mb-4">
-                    <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Emotional, Social & Practical Support</h3>
-                </div>
-                <p class="text-2xl leading-relaxed text-gray-600 pl-16">St Catherine's Companionship Carers
-                    focus on emotional, social, personal care, and practical support. Our care is centred around
-                    connection, wellbeing, and enhancing quality of life. Loneliness, low mobility, and social
-                    isolation can have a profound impact on both mental and physical health. Without regular
-                    companionship, individuals may experience a decline in confidence, increased anxiety, and a
-                    greater risk of depression. Over time, this can also affect overall wellbeing, making
-                    connection and human interaction an essential part of care.</p>
-            </div>
+        <ServiceComponent.About title="1-to-1 Companionship Care" subTitle="About the Service">
+            <ServiceComponent.AboutParagraph title="Emotional, Social & Practical Support">
+                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+                St Catherine's Companionship Carers focus on emotional, social, personal care, and practical support.
+                Our care is centred around connection, wellbeing, and enhancing quality of life. Loneliness, low
+                mobility, and social isolation can have a profound impact on both mental and physical health. Without
+                regular companionship, individuals may experience a decline in confidence, increased anxiety, and a
+                greater risk of depression. Over time, this can also affect overall wellbeing, making connection and
+                human interaction an essential part of care.
+            </ServiceComponent.AboutParagraph>
 
-            <div>
-                <div class="flex gap-4 items-center mb-4">
-                    <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Building Trust Through Shared Interests</h3>
-                </div>
-                <p class="text-2xl leading-relaxed text-gray-600 pl-16">Our Carers take the time to truly get to
-                    know your loved one, their personality, hobbies, interests, and daily routines. Whether it's
-                    music, gardening, art, books, or sharing treasured memories, St Catherine's Carers engage in
-                    meaningful ways that build trust, comfort, and familiarity. This helps each individual feel
-                    valued, connected, and supported every day.</p>
-            </div>
+            <ServiceComponent.AboutParagraph title="Building Trust Through Shared Interests">
+                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                </svg>
+                Our Carers take the time to truly get to know your loved one, their personality, hobbies, interests, and
+                daily routines. Whether it's music, gardening, art, books, or sharing treasured memories, St Catherine's
+                Carers engage in meaningful ways that build trust, comfort, and familiarity. This helps each individual
+                feel valued, connected, and supported every day.
+            </ServiceComponent.AboutParagraph>
 
-            <div>
-                <div class="flex gap-4 items-center mb-4">
-                    <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Settling In & Staying Connected</h3>
-                </div>
-                <p class="text-2xl leading-relaxed text-gray-600 pl-16">For those new to a care home or
-                    unfamiliar surroundings, our Carers provide gentle encouragement, accompanying residents to
-                    activities, joining them at mealtimes, and helping them interact with others to build
-                    friendships. Maintaining consistent daily routines, including meals, rest, and bedtime,
-                    helps to reduce confusion, anxiety, and fatigue.</p>
-            </div>
+            <ServiceComponent.AboutParagraph title="Settling In & Staying Connected">
+                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+                For those new to a care home or unfamiliar surroundings, our Carers provide gentle encouragement,
+                accompanying residents to activities, joining them at mealtimes, and helping them interact with others
+                to build friendships. Maintaining consistent daily routines, including meals, rest, and bedtime, helps
+                to reduce confusion, anxiety, and fatigue.
+            </ServiceComponent.AboutParagraph>
 
-            <div>
-                <div class="flex gap-4 items-center mb-4">
-                    <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                        <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                             viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Regular Updates for Families</h3>
-                </div>
-                <p class="text-2xl leading-relaxed text-gray-600 pl-16">Families receive regular updates,
-                    hourly, daily, or weekly, tailored to your preference. These include information on meals,
-                    activities, mood, and overall wellbeing, offering reassurance and peace of mind. Our
-                    Companionship Carers actively promote engagement, comfort, and joy, helping your loved ones
-                    live safely, happily, and with dignity.</p>
-            </div>
-        </MainContent>
+            <ServiceComponent.AboutParagraph title="Regular Updates for Families">
+                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                </svg>
+                Families receive regular updates, hourly, daily, or weekly, tailored to your preference. These include
+                information on meals, activities, mood, and overall wellbeing, offering reassurance and peace of mind.
+                Our Companionship Carers actively promote engagement, comfort, and joy, helping your loved ones live
+                safely, happily, and with dignity.
+            </ServiceComponent.AboutParagraph>
+        </ServiceComponent.About>
 
-        <Story storyId="companionship-story"/>
+        <ServiceComponent.Story storyId="companionship-story"/>
 
-        <Testimonials testimonials={testimonials}/>
+        <ServiceComponent.Testimonials testimonials={testimonials}/>
 
         <CallToAction background="bg-warm-50"/>
     </main>
