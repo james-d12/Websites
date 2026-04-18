@@ -11,8 +11,7 @@ const pages = defineCollection({
       eyebrow: z.string(),
       heading: z.string(),
       subheading: z.string(),
-    }),
-    pullQuote: z.string().optional(),
+    })
   }),
 });
 

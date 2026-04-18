@@ -3,17 +3,19 @@
 This folder contains the NixOS configuration for the server hosted on Hetzner.
 
 <!-- TOC -->
+
 * [Server](#server)
-  * [Getting Started](#getting-started)
-    * [Bootstrapping a new VPS](#bootstrapping-a-new-vps)
-      * [Hetzner](#hetzner)
-    * [Making Changes to existing VPS](#making-changes-to-existing-vps)
-    * [Updating Flake](#updating-flake)
-    * [Formatting Nix Files](#formatting-nix-files)
-    * [Updating Secret with Agenix](#updating-secret-with-agenix)
-    * [Common Nix OS Commands To Resolve Issues](#common-nix-os-commands-to-resolve-issues)
-  * [Health Checks](#health-checks)
-  * [Useful Links](#useful-links)
+    * [Getting Started](#getting-started)
+        * [Bootstrapping a new VPS](#bootstrapping-a-new-vps)
+            * [Hetzner](#hetzner)
+        * [Making Changes to existing VPS](#making-changes-to-existing-vps)
+        * [Updating Flake](#updating-flake)
+        * [Formatting Nix Files](#formatting-nix-files)
+        * [Updating Secret with Agenix](#updating-secret-with-agenix)
+        * [Common Nix OS Commands To Resolve Issues](#common-nix-os-commands-to-resolve-issues)
+    * [Health Checks](#health-checks)
+    * [Useful Links](#useful-links)
+
 <!-- TOC -->
 
 ## Getting Started
@@ -39,6 +41,15 @@ This folder contains the NixOS configuration for the server hosted on Hetzner.
 3. Navigate to the ```server``` folder.
 4. Run ```docker compose run --rm vps-build```.
 5. Changes should have been applied.
+
+### Secrets with Sops-Nix
+
+1. Run ```go install github.com/Mic92/ssh-to-age/cmd/ssh-to-age@latest```
+2. Create the directory for the age keys: ```mkdir -p ~/.config/sops/age```
+3. Run
+   ```SSH_TO_AGE_PASSPHRASE=$(systemd-ask-password) ssh-to-age -private-key -i ~/.ssh/id_ed25519_sops > ~/.config/sops/age/keys.txt```
+4. Run ```docker compose run --rm nix```.
+5. Run ```sops secrets/<filename>``` to start creating an encrypted file.
 
 ### Updating Flake
 
