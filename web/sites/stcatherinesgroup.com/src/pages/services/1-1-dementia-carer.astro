@@ -5,6 +5,8 @@ import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import Hero from '../../components/Services/Hero.astro';
 import Testimonials from '../../components/Services/Testimonials.astro';
+import MainContent from '../../components/Services/MainContent.astro';
+import Story from '../../components/Services/Story.astro';
 import dementiaImage from "../../assets/centre-for-ageing-better-lNTbuoYMSro-unsplash.jpg";
 
 const testimonials = [
@@ -42,13 +44,7 @@ const testimonials = [
                 imageAlt="Dementia care services"
         />
 
-        <section class="py-24 md:py-32 bg-white">
-            <div class="max-w-5xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <p class="text-green-dark text-xl font-medium tracking-[0.2em] uppercase mb-4">About the Service</p>
-                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900">1-to-1 Dementia Care</h2>
-                </div>
-
+        <MainContent title="1-to-1 Dementia Care" subTitle="About the Service">
                 <div class="space-y-12">
                     <div>
                         <div class="flex gap-4 items-center mb-4">
@@ -162,8 +158,9 @@ const testimonials = [
                             studies to improve diagnosis, treatment, and ultimately find a cure.</p>
                     </div>
                 </div>
-            </div>
-        </section>
+        </MainContent>
+
+        <Story storyId="dementia-story"/>
 
         <Testimonials testimonials={testimonials}/>
 

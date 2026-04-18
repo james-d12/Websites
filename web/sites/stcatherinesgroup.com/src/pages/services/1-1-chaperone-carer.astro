@@ -7,6 +7,7 @@ import Hero from '../../components/Services/Hero.astro';
 import Testimonials from '../../components/Services/Testimonials.astro';
 import chaperoneImage from "../../assets/thiago-cerqueira-Wr3HGvx_RSM-unsplash.jpg";
 import MainContent from "../../components/Services/MainContent.astro";
+import Story from "../../components/Services/Story.astro";
 
 const testimonials = [
     {
@@ -114,6 +115,8 @@ const testimonials = [
                     connected, and supported while families feel informed, reassured, and never alone.</p>
             </div>
         </MainContent>
+
+        <Story storyId="chaperone-story"/>
 
         <Testimonials testimonials={testimonials}/>
 

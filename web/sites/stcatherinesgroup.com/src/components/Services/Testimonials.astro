@@ -9,12 +9,12 @@ interface Testimonial {
 
 interface Props {
     testimonials: Testimonial[];
+    background?: string;
 }
 
-const {testimonials} = Astro.props;
+const {testimonials, background = 'bg-white'} = Astro.props;
 ---
-
-<section class="py-20 md:py-28">
+<section class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
             <SectionHeading

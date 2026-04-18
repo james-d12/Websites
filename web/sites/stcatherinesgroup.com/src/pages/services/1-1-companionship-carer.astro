@@ -7,6 +7,7 @@ import Hero from '../../components/Services/Hero.astro';
 import Testimonials from '../../components/Services/Testimonials.astro';
 import companionshipImage from "../../assets/national-cancer-institute-BxXgTQEw1M4-unsplash.jpg";
 import MainContent from "../../components/Services/MainContent.astro";
+import Story from "../../components/Services/Story.astro";
 
 const testimonials = [
     {
@@ -44,7 +45,6 @@ const testimonials = [
         />
 
         <MainContent title="1-to-1 Companionship Care" subTitle="About the Service">
-
             <div>
                 <div class="flex gap-4 items-center mb-4">
                     <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
@@ -120,9 +120,11 @@ const testimonials = [
             </div>
         </MainContent>
 
+        <Story storyId="companionship-story"/>
+
         <Testimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-white"/>
+        <CallToAction background="bg-warm-50"/>
     </main>
 
     <Footer/>

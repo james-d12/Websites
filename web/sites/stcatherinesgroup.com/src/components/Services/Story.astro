@@ -1,0 +1,58 @@
+---
+import {getCollection, render} from 'astro:content';
+import SectionHeading from './SectionHeading.astro';
+
+interface Props {
+    storyId: string;
+}
+
+const {storyId} = Astro.props;
+
+const allStories = await getCollection('stories');
+const entry = allStories.find((s: {
+    id: string
+}) => s.id === storyId || s.id.endsWith(`/${storyId}`) || s.id.endsWith(`${storyId}.md`));
+
+if (!entry) {
+    throw new Error(`Story "${storyId}" not found. Available IDs: ${allStories.map((s: {
+        id: any;
+    }) => s.id).join(', ')}`);
+}
+
+const {Content} = await render(entry);
+const {title} = entry.data;
+---
+
+<section class="py-24 md:py-32 bg-warm-50">
+    <div class="max-w-4xl mx-auto px-6">
+        <SectionHeading subTitle="A Story From Charmaine" title={title}/>
+
+        <div class="prose-story">
+            <Content/>
+        </div>
+    </div>
+</section>
+
+<style is:global>
+    .prose-story p {
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        line-height: 1.75;
+        color: #374151;
+        margin-bottom: 1.75em;
+        font-style: italic;
+    }
+
+    .prose-story p:first-of-type {
+        margin-top: 0;
+    }
+
+    .prose-story p:last-of-type {
+        font-style: normal;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 0;
+        margin-top: 2.5em;
+        padding-top: 1.5em;
+        border-top: 1px solid #d1d5db;
+    }
+</style>

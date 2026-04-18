@@ -5,6 +5,8 @@ import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import Hero from '../../components/Services/Hero.astro';
 import Testimonials from '../../components/Services/Testimonials.astro';
+import MainContent from '../../components/Services/MainContent.astro';
+import Story from '../../components/Services/Story.astro';
 import safetyImage from "../../assets/nathan-anderson-GM5Yn5XRVqA-unsplash.jpg";
 
 const testimonials = [
@@ -42,99 +44,94 @@ const testimonials = [
                 imageAlt="1-1 Safety services"
         />
 
-        <section class="py-24 md:py-32 bg-white">
-            <div class="max-w-5xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <p class="text-green-dark text-xl font-medium tracking-[0.2em] uppercase mb-4">About the Service</p>
-                    <h2 class="text-5xl md:text-6xl font-bold text-gray-900">1-to-1 Safety Care</h2>
+        <MainContent title="1-to-1 Safety Care" subTitle="About the Service">
+            <div class="space-y-12">
+                <div>
+                    <div class="flex gap-4 items-center mb-4">
+                        <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900">Dedicated, Personalised Safety Support</h3>
+                    </div>
+                    <p class="text-2xl leading-relaxed text-gray-600 pl-16">St Catherine's Safety Carers provide
+                        dedicated, personalised support for residents within care homes, ensuring both safety and
+                        peace of mind for families. This service is designed for individuals who require focused
+                        attention due to temporary or ongoing risks, allowing them to regain independence,
+                        confidence, and comfort in a safe, supportive environment.</p>
                 </div>
 
-                <div class="space-y-12">
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Dedicated, Personalised Safety Support</h3>
+                <div>
+                    <div class="flex gap-4 items-center mb-4">
+                        <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">St Catherine's Safety Carers provide
-                            dedicated, personalised support for residents within care homes, ensuring both safety and
-                            peace of mind for families. This service is designed for individuals who require focused
-                            attention due to temporary or ongoing risks, allowing them to regain independence,
-                            confidence, and comfort in a safe, supportive environment.</p>
+                        <h3 class="text-3xl font-bold text-gray-900">Tailored to Every Situation</h3>
                     </div>
+                    <p class="text-2xl leading-relaxed text-gray-600 pl-16">Our Safety Care service is tailored to
+                        meet the individual needs of each resident. It can support someone following a fall or in
+                        situations where there is a risk of falling, assist those recovering from surgery or medical
+                        procedures to regain mobility and confidence, or provide vigilant support for residents at
+                        risk due to mental health concerns. Each scenario is approached with professionalism,
+                        sensitivity, and respect, ensuring the resident's dignity and wellbeing are always
+                        prioritised.</p>
+                </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Tailored to Every Situation</h3>
+                <div>
+                    <div class="flex gap-4 items-center mb-4">
+                        <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">Our Safety Care service is tailored to
-                            meet the individual needs of each resident. It can support someone following a fall or in
-                            situations where there is a risk of falling, assist those recovering from surgery or medical
-                            procedures to regain mobility and confidence, or provide vigilant support for residents at
-                            risk due to mental health concerns. Each scenario is approached with professionalism,
-                            sensitivity, and respect, ensuring the resident's dignity and wellbeing are always
-                            prioritised.</p>
+                        <h3 class="text-3xl font-bold text-gray-900">Complete Reassurance for Families</h3>
                     </div>
+                    <p class="text-2xl leading-relaxed text-gray-600 pl-16">For families, St Catherine's offers
+                        complete reassurance. We provide feedback if required hourly, daily, or weekly, giving
+                        families peace of mind and allowing them the freedom to rest knowing their loved one is
+                        being attentively supported. Our professionals liaise and work closely with care home staff
+                        and medical professional teams, providing updates and ensuring continuity in their care
+                        plans. The service is fully personalised and adaptable, responding to changes in the
+                        resident's needs while maintaining the highest standard of safety and support at all
+                        times.</p>
+                </div>
 
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Complete Reassurance for Families</h3>
+                <div>
+                    <div class="flex gap-4 items-center mb-4">
+                        <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+                            </svg>
                         </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">For families, St Catherine's offers
-                            complete reassurance. We provide feedback if required hourly, daily, or weekly, giving
-                            families peace of mind and allowing them the freedom to rest knowing their loved one is
-                            being attentively supported. Our professionals liaise and work closely with care home staff
-                            and medical professional teams, providing updates and ensuring continuity in their care
-                            plans. The service is fully personalised and adaptable, responding to changes in the
-                            resident's needs while maintaining the highest standard of safety and support at all
-                            times.</p>
+                        <h3 class="text-3xl font-bold text-gray-900">Trust, Compatibility & Excellence</h3>
                     </div>
-
-                    <div>
-                        <div class="flex gap-4 items-center mb-4">
-                            <div class="shrink-0 w-12 h-12 rounded-xl bg-green-dark/10 flex items-center justify-center">
-                                <svg class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                                     viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                                </svg>
-                            </div>
-                            <h3 class="text-3xl font-bold text-gray-900">Trust, Compatibility & Excellence</h3>
-                        </div>
-                        <p class="text-2xl leading-relaxed text-gray-600 pl-16">At St Catherine's, we recognise that
-                            trust and compatibility are essential. If, for any reason, the assigned carer does not meet
-                            the resident's preferences, we work closely with the resident and their family to ensure an
-                            alternative is provided, always maintaining a focus on comfort, safety, and personalised
-                            attention. Our One-to-One Safety Care service is delivered with the same attention to
-                            excellence and discretion that defines all St Catherine's offerings, providing residents
-                            with confidence and reassurance while ensuring families can feel fully supported.</p>
-                    </div>
+                    <p class="text-2xl leading-relaxed text-gray-600 pl-16">At St Catherine's, we recognise that
+                        trust and compatibility are essential. If, for any reason, the assigned carer does not meet
+                        the resident's preferences, we work closely with the resident and their family to ensure an
+                        alternative is provided, always maintaining a focus on comfort, safety, and personalised
+                        attention. Our One-to-One Safety Care service is delivered with the same attention to
+                        excellence and discretion that defines all St Catherine's offerings, providing residents
+                        with confidence and reassurance while ensuring families can feel fully supported.</p>
                 </div>
             </div>
-        </section>
+        </MainContent>
+
+        <Story storyId="safety-and-recovery-story"/>
 
         <Testimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-white"/>
+        <CallToAction background="bg-warm-50"/>
     </main>
 
     <Footer/>
