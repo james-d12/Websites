@@ -15,14 +15,15 @@
 
 @font-face {
     font-family: "Bellefair";
-    src: url("/fonts/Bellefair-Regular.ttf") format("truetype");
-    font-weight: normal;
+    src: url("/fonts/Bellefair-Regular.woff2") format("woff2");
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 * {
-    font-family: "Bellefair", sans-serif;
+    font-family: "Bellefair", serif;
+    font-synthesis: none;
 }
 
 html {
