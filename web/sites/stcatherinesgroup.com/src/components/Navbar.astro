@@ -39,7 +39,7 @@ const navLinks = [
             </div>
         </a>
 
-        <ul class="hidden lg:flex items-center gap-16">
+        <ul class="hidden xl:flex items-center gap-16">
             {navLinks.map(link => (
                     <li class={link.dropdown ? "relative group" : ""}>
                         {link.href ? (
@@ -83,7 +83,7 @@ const navLinks = [
 
         <button
                 id="mobile-menu-btn"
-                class="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
+                class="xl:hidden flex items-center justify-center w-10 h-10 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
                 aria-expanded="false"
                 aria-controls="mobile-menu"
                 title="Open menu"
@@ -99,7 +99,7 @@ const navLinks = [
     </div>
 
     <div id="mobile-menu"
-         class="hidden lg:hidden border-t border-white/10 bg-linear-to-l from-green-dark to-green-darker">
+         class="hidden xl:hidden border-t border-white/10 bg-linear-to-l from-green-dark to-green-darker">
         <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
             {navLinks.map(link => (
                     <div>

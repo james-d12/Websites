@@ -111,8 +111,8 @@ const testimonials = [
                 updates. Together, we help your loved one feel safe, valued, and supported.
             </ServiceComponent.AboutParagraph>
 
-            <div class="mt-4 bg-green-dark rounded-2xl p-8 md:p-10 flex items-start gap-6">
-                <div class="shrink-0 w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mt-1">
+            <div class="mt-4 bg-green-dark rounded-2xl p-8 md:p-10 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+                <div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/20 flex items-center justify-center">
                     <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                               d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
@@ -120,7 +120,7 @@ const testimonials = [
                 </div>
                 <div>
                     <p class="text-white/70 text-sm font-medium tracking-[0.2em] uppercase mb-2">Our Commitment</p>
-                    <p class="text-white text-2xl leading-relaxed font-medium">We are committed to the wider fight
+                    <p class="text-white text-base sm:text-2xl leading-relaxed font-medium">We are committed to the wider fight
                         against dementia, donating 25p for every hour we care to BRACE Research, funding vital studies
                         to improve diagnosis, treatment, and ultimately find a cure.</p>
                 </div>
@@ -131,7 +131,7 @@ const testimonials = [
 
         <ServiceComponent.Testimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-white"/>
+        <CallToAction background="bg-warm-50"/>
     </main>
 
     <Footer/>
