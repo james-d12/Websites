@@ -119,6 +119,7 @@ jobs:
         run: |
           rsync -avz \
             --omit-dir-times \
+            --no-perms \
             --delete-delay \
             --delay-updates \
             --partial \
@@ -202,6 +203,7 @@ jobs:
         run: |
           rsync -avz \
             --omit-dir-times \
+            --no-perms \
             --delete-delay \
             --delay-updates \
             --partial \
