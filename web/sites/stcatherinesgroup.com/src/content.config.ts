@@ -64,6 +64,7 @@ const services = defineCollection({
         service: z.string(),
       })
     ),
+    testimonialsBackground: z.string().default("bg-white"),
     ctaBackground: z.string().default("bg-warm-50"),
   }),
 });
