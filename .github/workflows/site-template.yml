@@ -115,15 +115,23 @@ jobs:
       - name: Print Known Hosts
         run: cat ~/.ssh/known_hosts
 
-      - name: Deploy site via SCP
+      - name: Deploy site via rsync
         run: |
-          scp -r -C \
-          -o StrictHostKeyChecking=yes -o ForwardAgent=no \
-          -o UserKnownHostsFile=~/.ssh/known_hosts \
-          -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
-          -o HostkeyAlgorithms=+ssh-ed25519 \
-          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.VPS_PORT }} \
-          ./deploy/. ci@${{ secrets.VPS_HOST }}:/var/www/staging.${{ inputs.site }}
+          rsync -avz \
+            --delete-delay \
+            --delay-updates \
+            --partial \
+            --human-readable \
+            -e "ssh \
+              -o StrictHostKeyChecking=yes \
+              -o ForwardAgent=no \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+              -o HostkeyAlgorithms=+ssh-ed25519 \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.VPS_PORT }}" \
+            ./deploy/. \
+            ci@${{ secrets.VPS_HOST }}:/var/www/staging.${{ inputs.site }}
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
@@ -189,15 +197,23 @@ jobs:
               ci@${{ secrets.VPS_HOST }} \
               "cp -r /var/www/${{ inputs.site }} /var/www/backup/${{ inputs.site }}-$(date +%F%H%M%S)"
 
-      - name: Deploy site via SCP
+      - name: Deploy site via rsync
         run: |
-          scp -r -C \
-          -o StrictHostKeyChecking=yes -o ForwardAgent=no \
-          -o UserKnownHostsFile=~/.ssh/known_hosts \
-          -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
-          -o HostkeyAlgorithms=+ssh-ed25519 \
-          -i ~/.ssh/id_ed25519_vps_ci -P ${{ secrets.VPS_PORT }} \
-          ./deploy/. ci@${{ secrets.VPS_HOST }}:/var/www/${{ inputs.site }}
+          rsync -avz \
+            --delete-delay \
+            --delay-updates \
+            --partial \
+            --human-readable \
+            -e "ssh \
+              -o StrictHostKeyChecking=yes \
+              -o ForwardAgent=no \
+              -o UserKnownHostsFile=~/.ssh/known_hosts \
+              -o PubkeyAcceptedAlgorithms=+ssh-ed25519 \
+              -o HostkeyAlgorithms=+ssh-ed25519 \
+              -i ~/.ssh/id_ed25519_vps_ci \
+              -p ${{ secrets.VPS_PORT }}" \
+            ./deploy/. \
+            ci@${{ secrets.VPS_HOST }}:/var/www/${{ inputs.site }}
 
       - name: Verify website returns 200 (HTTPS) and 301 (HTTP)
         run: |
