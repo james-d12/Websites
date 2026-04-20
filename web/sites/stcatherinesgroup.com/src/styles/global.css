@@ -28,10 +28,11 @@
 html {
   scroll-behavior: smooth;
   font-size: 110%;
+  background-color: #13705b;
 }
 
 body {
   margin: 0;
   color: #2d3748;
-  background-color: #faf9f7;
+  background-color: #13705b;
 }
