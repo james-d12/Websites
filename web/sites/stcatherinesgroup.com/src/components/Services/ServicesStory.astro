@@ -1,0 +1,48 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import ServicesHeading from './ServicesHeading.astro';
+
+interface Props {
+    entry: CollectionEntry<'services'>;
+}
+
+const { entry } = Astro.props;
+if (!entry.data.story) return;
+
+const { title, content } = entry.data.story;
+const paragraphs = content.trim().split(/\n\n+/);
+---
+
+<section class="py-24 md:py-32 bg-warm-50">
+    <div class="max-w-4xl mx-auto px-6">
+        <ServicesHeading subTitle="A Story From Charmaine" title={title}/>
+
+        <div class="prose-story">
+            {paragraphs.map((p: string) => <p>{p}</p>)}
+        </div>
+    </div>
+</section>
+
+<style is:global>
+    .prose-story p {
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        line-height: 1.75;
+        color: #374151;
+        margin-bottom: 1.75em;
+        font-style: italic;
+    }
+
+    .prose-story p:first-of-type {
+        margin-top: 0;
+    }
+
+    .prose-story p:last-of-type {
+        font-style: normal;
+        font-weight: 600;
+        color: #111827;
+        margin-bottom: 0;
+        margin-top: 2.5em;
+        padding-top: 1.5em;
+        border-top: 1px solid #d1d5db;
+    }
+</style>

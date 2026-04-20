@@ -12,26 +12,22 @@
   --color-warm-200: #e8e4dd;
 }
 
-* {
-  font-family:
-    "Inter",
-    "Segoe UI",
-    system-ui,
-    -apple-system,
-    sans-serif;
+@font-face {
+  font-family: "Bellefair";
+  src: url("/fonts/Bellefair-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Lora", "Georgia", serif;
+* {
+  font-family: "Bellefair", serif;
+  font-synthesis: none;
 }
 
 html {
   scroll-behavior: smooth;
+  font-size: 110%;
 }
 
 body {
