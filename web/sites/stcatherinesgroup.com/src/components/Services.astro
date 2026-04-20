@@ -4,6 +4,7 @@ import dementiaImage from "../assets/dementia-care.jpg";
 import safetyImage from "../assets/safety-carer.jpg";
 import companionshipImage from "../assets/companionship-carer.jpg";
 import chaperoneImage from "../assets/chaperone-carer.jpg";
+import Heading from "./Heading.astro";
 
 const services = [
     {
@@ -35,16 +36,11 @@ const services = [
 
 <section id="services" class="py-20 md:py-28 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center mb-20">
-            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">What We Offer</p>
-            <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                Our 1-1 Services
-            </h2>
-            <p class="text-gray-600 text-xl leading-relaxed">
-                Each of our services is delivered on a one-to-one basis, giving you
-                the dedicated time and attention that makes the difference.
-            </p>
-        </div>
+
+        <Heading title="Our 1-1 Services" subTitle="What We Offer">
+            Each of our services is delivered on a one-to-one basis, giving you
+            the dedicated time and attention that makes the difference.
+        </Heading>
 
         <div class="relative max-w-7xl mx-auto">
             {services.map((service, i) => (
@@ -95,7 +91,7 @@ const services = [
                                 <p class="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8">
                                     {service.description}
                                 </p>
-                                <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
+                                <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg md:text-2xl rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
                                 Learn more
                                 <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
                                      stroke="currentColor" viewBox="0 0 24 24">
