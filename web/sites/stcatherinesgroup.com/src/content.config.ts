@@ -15,7 +15,12 @@ const pages = defineCollection({
   }),
 });
 
-export const SECTION_ICONS = ["heart", "shield", "clipboard", "people"] as const;
+export const SECTION_ICONS = [
+  "heart",
+  "shield",
+  "clipboard",
+  "people",
+] as const;
 export const CALLOUT_ICONS = [...SECTION_ICONS, "star"] as const;
 
 const serviceSection = z.object({
@@ -67,7 +72,7 @@ const services = defineCollection({
           name: z.string(),
           relationship: z.string(),
           service: z.string(),
-        })
+        }),
       ),
       testimonialsBackground: z.string().default("bg-white"),
       ctaBackground: z.string().default("bg-warm-50"),
