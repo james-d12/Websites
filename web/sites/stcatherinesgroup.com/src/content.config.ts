@@ -15,13 +15,6 @@ const pages = defineCollection({
   }),
 });
 
-const stories = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/stories" }),
-  schema: z.object({
-    title: z.string(),
-  }),
-});
-
 export const SECTION_ICONS = ["heart", "shield", "clipboard", "people"] as const;
 export const CALLOUT_ICONS = [...SECTION_ICONS, "star"] as const;
 
@@ -62,7 +55,7 @@ const services = defineCollection({
       sections: z.array(serviceSection),
       callout: serviceCallout.optional(),
     }),
-    storyId: z.string().optional(),
+    story: z.object({ title: z.string(), content: z.string() }).optional(),
     testimonials: z.array(
       z.object({
         quote: z.string(),
@@ -75,4 +68,4 @@ const services = defineCollection({
   }),
 });
 
-export const collections = { pages, stories, services };
+export const collections = { pages, services };

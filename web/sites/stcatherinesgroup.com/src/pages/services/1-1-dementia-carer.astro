@@ -9,7 +9,7 @@ import * as ServiceComponent from "../../components/Services";
 
 const entry = await getEntry('services', '1-1-dementia-carer');
 if (!entry) throw new Error('Service content not found: 1-1-dementia-carer');
-const { meta, hero, about, testimonials, storyId, ctaBackground } = entry.data;
+const { meta, hero, about, testimonials, ctaBackground } = entry.data;
 ---
 
 <Layout title={meta.title} description={meta.description}>
@@ -31,7 +31,7 @@ const { meta, hero, about, testimonials, storyId, ctaBackground } = entry.data;
                 callout={about.callout}
         />
 
-        <ServiceComponent.ServicesStory storyId={storyId}/>
+        <ServiceComponent.ServicesStory entry={entry}/>
 
         <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 

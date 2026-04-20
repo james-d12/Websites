@@ -1,23 +1,16 @@
 ---
-import {getCollection, render} from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
 import ServicesHeading from './ServicesHeading.astro';
 
 interface Props {
-    storyId?: string;
+    entry: CollectionEntry<'services'>;
 }
 
-const {storyId} = Astro.props;
-if (!storyId) return;
+const { entry } = Astro.props;
+if (!entry.data.story) return;
 
-const allStories = await getCollection('stories');
-const entry = allStories.find((s: {
-    id: string
-}) => s.id === storyId || s.id.endsWith(`/${storyId}`) || s.id.endsWith(`${storyId}.md`));
-
-if (!entry) return;
-
-const {Content} = await render(entry);
-const {title} = entry.data;
+const { title, content } = entry.data.story;
+const paragraphs = content.trim().split(/\n\n+/);
 ---
 
 <section class="py-24 md:py-32 bg-warm-50">
@@ -25,7 +18,7 @@ const {title} = entry.data;
         <ServicesHeading subTitle="A Story From Charmaine" title={title}/>
 
         <div class="prose-story">
-            <Content/>
+            {paragraphs.map((p: string) => <p>{p}</p>)}
         </div>
     </div>
 </section>
