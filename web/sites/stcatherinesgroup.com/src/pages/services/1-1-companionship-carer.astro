@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
@@ -6,98 +7,35 @@ import CallToAction from '../../components/CallToAction.astro';
 import companionshipImage from "../../assets/companionship-carer.jpg";
 import * as ServiceComponent from "../../components/Services";
 
-const testimonials = [
-    {
-        quote: "The care and attention my mother receives is truly exceptional. Her companion has become like family to us, and we see such a positive change in Mum's wellbeing and happiness.",
-        name: "Sarah M.",
-        relationship: "Daughter",
-        service: "Companionship"
-    },
-    {
-        quote: "I was lonely after losing my wife. My companion visits three times a week and it's made such a difference - someone to talk to, share a cup of tea, go for walks. I look forward to every visit.",
-        name: "Arthur W.",
-        relationship: "Client",
-        service: "Companionship"
-    },
-    {
-        quote: "It's not just about having someone there - it's about having someone who genuinely cares, who listens, who makes my dad smile. That's priceless.",
-        name: "Jennifer H.",
-        relationship: "Daughter",
-        service: "Companionship"
-    }
-];
+const entry = await getEntry('services', '1-1-companionship-carer');
+if (!entry) throw new Error('Service content not found: 1-1-companionship-carer');
+const { meta, hero, about, testimonials, storyId, ctaBackground } = entry.data;
 ---
 
-<Layout title="1-1 Companionship Carer - St Catherine's Group"
-        description="Genuine companionship focused on connection, wellbeing, and quality of life for your loved one every day.">
+<Layout title={meta.title} description={meta.description}>
     <Navbar/>
 
     <main>
         <ServiceComponent.ServicesHero
-                label="Carer Services"
-                title="1-1 Companionship Carer"
-                description="Genuine companionship centred on emotional wellbeing, social connection, and quality of life. Our carers take time to truly know your loved one, providing the human connection that makes every day feel meaningful."
+                label={hero.label}
+                title={hero.title}
+                description={hero.description}
                 image={companionshipImage}
-                imageAlt="Companionship services"
+                imageAlt={hero.imageAlt}
         />
 
-        <ServiceComponent.ServicesAbout title="1-to-1 Companionship Care" subTitle="About the Service">
-            <ServiceComponent.ServicesAboutParagraph title="Emotional, Social & Practical Support">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                </svg>
-                St Catherine's Companionship Carers focus on emotional, social, personal care, and practical support.
-                Our care is centred around connection, wellbeing, and enhancing quality of life. Loneliness, low
-                mobility, and social isolation can have a profound impact on both mental and physical health. Without
-                regular companionship, individuals may experience a decline in confidence, increased anxiety, and a
-                greater risk of depression. Over time, this can also affect overall wellbeing, making connection and
-                human interaction an essential part of care.
-            </ServiceComponent.ServicesAboutParagraph>
+        <ServiceComponent.ServicesAbout
+                title={about.title}
+                subTitle={about.subTitle}
+                sections={about.sections}
+                callout={about.callout}
+        />
 
-            <ServiceComponent.ServicesAboutParagraph title="Building Trust Through Shared Interests">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                Our Carers take the time to truly get to know your loved one, their personality, hobbies, interests, and
-                daily routines. Whether it's music, gardening, art, books, or sharing treasured memories, St Catherine's
-                Carers engage in meaningful ways that build trust, comfort, and familiarity. This helps each individual
-                feel valued, connected, and supported every day.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title="Settling In & Staying Connected">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-                For those new to a care home or unfamiliar surroundings, our Carers provide gentle encouragement,
-                accompanying residents to activities, joining them at mealtimes, and helping them interact with others
-                to build friendships. Maintaining consistent daily routines, including meals, rest, and bedtime, helps
-                to reduce confusion, anxiety, and fatigue.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title="Regular Updates for Families">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                </svg>
-                Families receive regular updates, hourly, daily, or weekly, tailored to your preference. These include
-                information on meals, activities, mood, and overall wellbeing, offering reassurance and peace of mind.
-                Our Companionship Carers actively promote engagement, comfort, and joy, helping your loved ones live
-                safely, happily, and with dignity.
-            </ServiceComponent.ServicesAboutParagraph>
-        </ServiceComponent.ServicesAbout>
-
-        <ServiceComponent.ServicesStory storyId="companionship-story"/>
+        <ServiceComponent.ServicesStory storyId={storyId}/>
 
         <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-warm-50"/>
+        <CallToAction background={ctaBackground}/>
     </main>
 
     <Footer/>

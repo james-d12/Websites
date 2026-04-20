@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
@@ -6,132 +7,35 @@ import CallToAction from '../../components/CallToAction.astro';
 import dementiaImage from "../../assets/dementia-care.jpg";
 import * as ServiceComponent from "../../components/Services";
 
-const testimonials = [
-    {
-        quote: "The dementia care team understands my husband in a way that brings me such relief. They're patient, kind, and genuinely care about making his days meaningful and joyful.",
-        name: "Margaret L.",
-        relationship: "Wife",
-        service: "Dementia Care"
-    },
-    {
-        quote: "Mum lights up when her carer arrives. They've taken time to learn her history, her preferences, and they connect with her in ways that bring out the person she still is.",
-        name: "Susan D.",
-        relationship: "Daughter",
-        service: "Dementia Care"
-    },
-    {
-        quote: "The consistency and familiarity of having the same carers has made such a difference. Dad feels safe with them, and we finally have the respite we desperately needed.",
-        name: "Michael B.",
-        relationship: "Son",
-        service: "Dementia Care"
-    }
-];
+const entry = await getEntry('services', '1-1-dementia-carer');
+if (!entry) throw new Error('Service content not found: 1-1-dementia-carer');
+const { meta, hero, about, testimonials, storyId, ctaBackground } = entry.data;
 ---
 
-<Layout title="1-1 Dementia Carer - St Catherine's Group"
-        description="Specialist, person-centred dementia care built on compassion, familiarity, and deep respect for every individual.">
+<Layout title={meta.title} description={meta.description}>
     <Navbar/>
 
     <main>
         <ServiceComponent.ServicesHero
-                label="Carer Services"
-                title="1-1 Dementia Carer"
-                description="Specialist, person-centred support for those living with dementia. Our highly trained carers take time to truly know your loved one, delivering compassionate care that maintains familiar routines, promotes calm, and keeps families informed and reassured."
+                label={hero.label}
+                title={hero.title}
+                description={hero.description}
                 image={dementiaImage}
-                imageAlt="Dementia care services"
+                imageAlt={hero.imageAlt}
         />
 
-        <ServiceComponent.ServicesAbout title="1-to-1 Dementia Care" subTitle="About the Service">
-            <ServiceComponent.ServicesAboutParagraph title="A Personal, Patient & Compassionate Approach">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                </svg>
-                At St Catherine's, we understand that dementia affects far more than memory. It impacts emotions,
-                confidence, routines, and the wider care home community. No two people experience dementia in the same
-                way, which is why our approach is personal, patient, and deeply compassionate. Our Specialist Carers are
-                highly trained experts who take the time to learn about your loved one, their life story, personality,
-                routines, hobbies, music, photographs, and memories, so that every interaction feels familiar,
-                comforting, and reassuring.
-            </ServiceComponent.ServicesAboutParagraph>
+        <ServiceComponent.ServicesAbout
+                title={about.title}
+                subTitle={about.subTitle}
+                sections={about.sections}
+                callout={about.callout}
+        />
 
-            <ServiceComponent.ServicesAboutParagraph title="Familiar Routines & Community Calm">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-                Maintaining familiar routines, including meals, rest, activities, and bedtime, is crucial to reduce
-                confusion, anxiety, and distress. Within care homes, we provide one-to-one support that promotes
-                independence, wellbeing, emotional security, and trust. By keeping your loved one calm and reassured,
-                our Carers also contribute to a calmer environment for other residents, helping the whole care home
-                community feel more settled and comfortable.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title="When to Consider Dementia Care">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                <p class="mb-6">There is rarely a single right moment, but early support can make a significant
-                    difference. You might consider care if your loved one:</p>
-                <ul class="space-y-3 mb-6">
-                    <li class="flex items-start gap-3">
-                        <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                        Is increasingly forgetful or confused
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                        Finds daily tasks or personal care challenging
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                        Feels anxious, isolated, or distressed
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
-                        Struggles to participate in social activities or maintain friendships
-                    </li>
-                </ul>
-                <p>Early care helps your loved one remain calm, engaged, and socially connected, while families can feel
-                    reassured that their loved one is in safe, expert hands.</p>
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title="Supporting Families & BRACE Research">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                </svg>
-                Choosing dementia care for a loved one can feel overwhelming. At St Catherine's, we want families to
-                know that seeking support is an act of love. We care for your loved one with understanding and expertise,
-                while providing families with clear communication and reassurance, whether hourly, daily, or weekly
-                updates. Together, we help your loved one feel safe, valued, and supported.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <div class="mt-4 bg-green-dark rounded-2xl p-8 md:p-10 flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
-                <div class="shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-white/20 flex items-center justify-center">
-                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </div>
-                <div>
-                    <p class="text-white/70 text-sm font-medium tracking-[0.2em] uppercase mb-2">Our Commitment</p>
-                    <p class="text-white text-base sm:text-2xl leading-relaxed font-medium">We are committed to the wider fight
-                        against dementia, donating 25p for every hour we care to BRACE Research, funding vital studies
-                        to improve diagnosis, treatment, and ultimately find a cure.</p>
-                </div>
-            </div>
-        </ServiceComponent.ServicesAbout>
-
-        <ServiceComponent.ServicesStory storyId="dementia-story"/>
+        <ServiceComponent.ServicesStory storyId={storyId}/>
 
         <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-warm-50"/>
+        <CallToAction background={ctaBackground}/>
     </main>
 
     <Footer/>

@@ -3,21 +3,18 @@ import {getCollection, render} from 'astro:content';
 import ServicesHeading from './ServicesHeading.astro';
 
 interface Props {
-    storyId: string;
+    storyId?: string;
 }
 
 const {storyId} = Astro.props;
+if (!storyId) return;
 
 const allStories = await getCollection('stories');
 const entry = allStories.find((s: {
     id: string
 }) => s.id === storyId || s.id.endsWith(`/${storyId}`) || s.id.endsWith(`${storyId}.md`));
 
-if (!entry) {
-    throw new Error(`Story "${storyId}" not found. Available IDs: ${allStories.map((s: {
-        id: any;
-    }) => s.id).join(', ')}`);
-}
+if (!entry) return;
 
 const {Content} = await render(entry);
 const {title} = entry.data;

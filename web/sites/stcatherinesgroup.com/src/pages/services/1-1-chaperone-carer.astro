@@ -1,4 +1,5 @@
 ---
+import {getEntry} from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
@@ -6,101 +7,35 @@ import CallToAction from '../../components/CallToAction.astro';
 import chaperoneImage from "../../assets/chaperone-carer.jpg";
 import * as ServiceComponent from "../../components/Services";
 
-const testimonials = [
-    {
-        quote: "The care and attention my mother receives is truly exceptional. Her companion has become like family to us, and we see such a positive change in Mum's wellbeing and happiness.",
-        name: "Sarah M.",
-        relationship: "Daughter",
-        service: "Companionship"
-    },
-    {
-        quote: "Having someone accompany me to medical appointments has made such a difference. I feel confident asking questions and never worry about forgetting important information anymore.",
-        name: "Robert T.",
-        relationship: "Client",
-        service: "Chaperone"
-    },
-    {
-        quote: "The dementia care team understands my husband in a way that brings me such relief. They're patient, kind, and genuinely care about making his days meaningful and joyful.",
-        name: "Margaret L.",
-        relationship: "Wife",
-        service: "Dementia Care"
-    }
-];
+const entry = await getEntry('services', '1-1-chaperone-carer');
+if (!entry) throw new Error('Service content not found: 1-1-chaperone-carer');
+const {meta, hero, about, testimonials, storyId, ctaBackground} = entry.data;
 ---
 
-<Layout title="1-1 Chaperone Carer - St Catherine's Group"
-        description="Reliable, discreet support for appointments, outings, and events so you never have to go alone.">
+<Layout title={meta.title} description={meta.description}>
     <Navbar/>
 
     <main>
         <ServiceComponent.ServicesHero
-                label="Carer Services"
-                title="1-1 Chaperone Carer"
-                description="Calm, reliable support for medical appointments, family gatherings, and social events. Every outing is carefully planned with dignity and discretion, keeping your loved one confident, independent, and connected."
+                label={hero.label}
+                title={hero.title}
+                description={hero.description}
                 image={chaperoneImage}
-                imageAlt="Chaperone services"
+                imageAlt={hero.imageAlt}
         />
 
-        <ServiceComponent.ServicesAbout title="1-to-1 Chaperone Care" subTitle="About the Service">
-            <ServiceComponent.ServicesAboutParagraph title='Medical Appointments, Family Gatherings & Social Events'>
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                </svg>
+        <ServiceComponent.ServicesAbout
+                title={about.title}
+                subTitle={about.subTitle}
+                sections={about.sections}
+                callout={about.callout}
+        />
 
-                St Catherine’s Chaperone Carers provide
-                calm, reliable support for medical appointments, family gatherings, and social events. For
-                people who are naturally sociable and recently moved into a care home, this service is
-                highly valuable due to the importance of keeping active and engaging with others. If your
-                loved one has reduced mobility, anxiety, or cognitive challenges, these outings can feel
-                overwhelming. Our Carers ensure they feel safe, supported, and confident throughout.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title='Planned, Unhurried & Discreet'>
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                </svg>
-
-                We take time to understand your loved
-                one’s routines and preferences, ensuring every outing is well planned and unhurried. During
-                medical appointments, carers relay outcomes, specialist advice, and can collect
-                prescriptions if needed. Immediate assistance for personal care is always provided with
-                dignity and discretion at all times.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title='Peace of Mind for Families'>
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-
-                This service relieves pressure on
-                families, removing the stress of scheduling or attending appointments themselves. Families
-                receive regular feedback, giving reassurance and peace of mind.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title='Independence & Connection'>
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-
-                Through consistency, companionship, and
-                practical support, our Chaperone Carers help individuals remain independent, socially
-                connected, and supported while families feel informed, reassured, and never alone.
-            </ServiceComponent.ServicesAboutParagraph>
-        </ServiceComponent.ServicesAbout>
-
-        <ServiceComponent.ServicesStory storyId="chaperone-story"/>
+        <ServiceComponent.ServicesStory storyId={storyId}/>
 
         <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-warm-50"/>
+        <CallToAction background={ctaBackground}/>
     </main>
 
     <Footer/>

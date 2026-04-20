@@ -22,4 +22,57 @@ const stories = defineCollection({
   }),
 });
 
-export const collections = { pages, stories };
+export const SECTION_ICONS = ["heart", "shield", "clipboard", "people"] as const;
+export const CALLOUT_ICONS = [...SECTION_ICONS, "star"] as const;
+
+const serviceSection = z.object({
+  title: z.string(),
+  icon: z.enum(SECTION_ICONS),
+  body: z.string(),
+  items: z.array(z.string()).optional(),
+  bodyOutro: z.string().optional(),
+});
+
+export type ServiceSection = z.infer<typeof serviceSection>;
+
+const serviceCallout = z.object({
+  eyebrow: z.string(),
+  text: z.string(),
+  icon: z.enum(CALLOUT_ICONS),
+});
+
+export type ServiceCallout = z.infer<typeof serviceCallout>;
+
+const services = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/services" }),
+  schema: z.object({
+    meta: z.object({
+      title: z.string(),
+      description: z.string(),
+    }),
+    hero: z.object({
+      label: z.string(),
+      title: z.string(),
+      description: z.string(),
+      imageAlt: z.string(),
+    }),
+    about: z.object({
+      title: z.string(),
+      subTitle: z.string(),
+      sections: z.array(serviceSection),
+      callout: serviceCallout.optional(),
+    }),
+    storyId: z.string().optional(),
+    testimonials: z.array(
+      z.object({
+        quote: z.string(),
+        name: z.string(),
+        relationship: z.string(),
+        service: z.string(),
+      })
+    ),
+    ctaBackground: z.string().default("bg-warm-50"),
+  }),
+});
+
+export const collections = { pages, stories, services };

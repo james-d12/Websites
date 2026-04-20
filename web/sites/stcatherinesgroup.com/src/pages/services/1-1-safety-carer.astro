@@ -1,4 +1,5 @@
 ---
+import { getEntry } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
@@ -6,101 +7,35 @@ import CallToAction from '../../components/CallToAction.astro';
 import safetyImage from "../../assets/safety-carer.jpg";
 import * as ServiceComponent from "../../components/Services";
 
-const testimonials = [
-    {
-        quote: "After several falls, I was terrified to be alone. My safety carer has given me back my confidence. I know someone capable is always there, and that makes all the difference.",
-        name: "Elizabeth W.",
-        relationship: "Client",
-        service: "Safety Care"
-    },
-    {
-        quote: "Dad's Parkinson's meant we were constantly worried about his safety. The 1-1 care provides the monitoring he needs while still allowing him to live at home with dignity.",
-        name: "Andrew M.",
-        relationship: "Son",
-        service: "Safety Care"
-    },
-    {
-        quote: "They're vigilant without being overbearing. I feel safe and secure, but never like I'm being watched or restricted. It's exactly the support I needed.",
-        name: "Gerald T.",
-        relationship: "Client",
-        service: "Safety Care"
-    }
-];
+const entry = await getEntry('services', '1-1-safety-carer');
+if (!entry) throw new Error('Service content not found: 1-1-safety-carer');
+const { meta, hero, about, testimonials, storyId, ctaBackground } = entry.data;
 ---
 
-<Layout title="1-1 Safety Carer - St Catherine's Group"
-        description="Personalised, one-to-one safety support for care home residents who need focused, attentive care and reassurance.">
+<Layout title={meta.title} description={meta.description}>
     <Navbar/>
 
     <main>
         <ServiceComponent.ServicesHero
-                label="Carer Services"
-                title="1-1 Safety Carer"
-                description="Personalised, one-to-one safety support for those who need focused, attentive care. We help residents regain confidence and independence while giving families complete reassurance."
+                label={hero.label}
+                title={hero.title}
+                description={hero.description}
                 image={safetyImage}
-                imageAlt="1-1 Safety services"
+                imageAlt={hero.imageAlt}
         />
 
-        <ServiceComponent.ServicesAbout title="1-to-1 Safety Care" subTitle="About the Service">
-            <ServiceComponent.ServicesAboutParagraph title="Dedicated, Personalised Safety Support">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                </svg>
-                St Catherine's Safety Carers provide dedicated, personalised support for residents within care homes,
-                ensuring both safety and peace of mind for families. This service is designed for individuals who require
-                focused attention due to temporary or ongoing risks, allowing them to regain independence, confidence,
-                and comfort in a safe, supportive environment.
-            </ServiceComponent.ServicesAboutParagraph>
+        <ServiceComponent.ServicesAbout
+                title={about.title}
+                subTitle={about.subTitle}
+                sections={about.sections}
+                callout={about.callout}
+        />
 
-            <ServiceComponent.ServicesAboutParagraph title="Tailored to Every Situation">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-                Our Safety Care service is tailored to meet the individual needs of each resident. It can support someone
-                following a fall or in situations where there is a risk of falling, assist those recovering from surgery
-                or medical procedures to regain mobility and confidence, or provide vigilant support for residents at
-                risk due to mental health concerns. Each scenario is approached with professionalism, sensitivity, and
-                respect, ensuring the resident's dignity and wellbeing are always prioritised.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title="Complete Reassurance for Families">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-                For families, St Catherine's offers complete reassurance. We provide feedback if required hourly, daily,
-                or weekly, giving families peace of mind and allowing them the freedom to rest knowing their loved one is
-                being attentively supported. Our professionals liaise and work closely with care home staff and medical
-                professional teams, providing updates and ensuring continuity in their care plans. The service is fully
-                personalised and adaptable, responding to changes in the resident's needs while maintaining the highest
-                standard of safety and support at all times.
-            </ServiceComponent.ServicesAboutParagraph>
-
-            <ServiceComponent.ServicesAboutParagraph title="Trust, Compatibility & Excellence">
-                <svg slot="icon" class="w-6 h-6 text-green-dark" fill="none" stroke="currentColor"
-                     viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                          d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
-                </svg>
-                At St Catherine's, we recognise that trust and compatibility are essential. If, for any reason, the
-                assigned carer does not meet the resident's preferences, we work closely with the resident and their
-                family to ensure an alternative is provided, always maintaining a focus on comfort, safety, and
-                personalised attention. Our One-to-One Safety Care service is delivered with the same attention to
-                excellence and discretion that defines all St Catherine's offerings, providing residents with confidence
-                and reassurance while ensuring families can feel fully supported.
-            </ServiceComponent.ServicesAboutParagraph>
-        </ServiceComponent.ServicesAbout>
-
-        <ServiceComponent.ServicesStory storyId="safety-and-recovery-story"/>
+        <ServiceComponent.ServicesStory storyId={storyId}/>
 
         <ServiceComponent.ServicesTestimonials testimonials={testimonials}/>
 
-        <CallToAction background="bg-warm-50"/>
+        <CallToAction background={ctaBackground}/>
     </main>
 
     <Footer/>

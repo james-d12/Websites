@@ -1,18 +1,47 @@
 ---
+import type { ServiceSection, ServiceCallout } from '../../../content.config';
 import ServicesHeading from "../ServicesHeading.astro";
+import ServicesAboutParagraph from "./ServicesAboutParagraph.astro";
+import ServicesAboutCallout from "./ServicesAboutCallout.astro";
+
 interface Props {
-    subTitle: string;
     title: string;
+    subTitle: string;
+    sections: ServiceSection[];
+    callout?: ServiceCallout;
 }
 
-const {subTitle, title} = Astro.props;
+const { title, subTitle, sections, callout } = Astro.props;
 ---
+
 <section id="about" class="py-24 md:py-32 bg-white">
     <div class="max-w-5xl mx-auto px-6">
         <ServicesHeading title={title} subTitle={subTitle}/>
 
         <div class="space-y-12">
-            <slot/>
+            {sections.map((section: ServiceSection) => (
+                    <ServicesAboutParagraph title={section.title} icon={section.icon}>
+                        <p class={section.items ? "mb-6" : ""}>{section.body}</p>
+                        {section.items && (
+                                <ul class="space-y-3 mb-6">
+                                    {section.items.map((item: string) => (
+                                            <li class="flex items-start gap-3">
+                                                <span class="shrink-0 w-2 h-2 rounded-full bg-green-dark mt-3"></span>
+                                                {item}
+                                            </li>
+                                    ))}
+                                </ul>
+                        )}
+                        {section.bodyOutro && <p>{section.bodyOutro}</p>}
+                    </ServicesAboutParagraph>
+            ))}
+            {callout && (
+                    <ServicesAboutCallout
+                            eyebrow={callout.eyebrow}
+                            text={callout.text}
+                            icon={callout.icon}
+                    />
+            )}
         </div>
     </div>
 </section>
