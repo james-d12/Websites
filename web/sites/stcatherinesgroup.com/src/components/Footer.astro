@@ -29,35 +29,35 @@ const quickLinks = [
                 <h2 class="text-lg font-semibold text-white mb-4" style="font-family: 'Lora', Georgia, serif;">
                     St Catherine's Group
                 </h2>
-                <p class="text-md text-white/80 max-w-xs">
+                <p class="text-lg text-white/80 max-w-xs">
                     Providing exceptional one-to-one care and professional nursing services with compassion and
                     dedication.
                 </p>
             </div>
 
             <div>
-                <h3 class="text-md font-semibold text-white mb-3 uppercase tracking-wider">Care Services</h3>
+                <h3 class="text-md font-bold text-white mb-3 uppercase tracking-wider" style="font-family: 'Lora', Georgia, serif;">Care Services</h3>
                 <div class="flex flex-col gap-0.5 text-md text-white/80">
                     {careServices.map(link => (
-                            <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                            <a href={link.href} class="hover:text-white transition-colors text-lg">{link.name}</a>
                     ))}
                 </div>
             </div>
 
             <div>
-                <h3 class="text-md font-semibold text-white mb-3 uppercase tracking-wider">Nursing Services</h3>
+                <h3 class="text-md font-bold text-white mb-3 uppercase tracking-wider" style="font-family: 'Lora', Georgia, serif;">Nursing Services</h3>
                 <div class="flex flex-col gap-0.5 text-md text-white/80">
                     {nursingServices.map(link => (
-                            <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                            <a href={link.href} class="hover:text-white transition-colors text-lg">{link.name}</a>
                     ))}
                 </div>
             </div>
 
             <div>
-                <h3 class="text-md font-semibold text-white mb-3 uppercase tracking-wider">Quick Links</h3>
+                <h3 class="text-md font-bold text-white mb-3 uppercase tracking-wider" style="font-family: 'Lora', Georgia, serif;">Quick Links</h3>
                 <div class="flex flex-col gap-0.5 text-md text-white/80">
                     {quickLinks.map(link => (
-                            <a href={link.href} class="hover:text-white transition-colors">{link.name}</a>
+                            <a href={link.href} class="hover:text-white transition-colors text-lg">{link.name}</a>
                     ))}
                 </div>
             </div>
@@ -65,8 +65,8 @@ const quickLinks = [
     </div>
     <div class="border-t border-white/10">
         <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col sm:flex-row justify-between items-center gap-1">
-            <p class="text-md text-white">&copy; {year} St Catherine's Group. All rights reserved.</p>
-            <p class="text-md text-white">Dedicated to exceptional care.</p>
+            <p class="text-lg text-white">&copy; {year} St Catherine's Group. All rights reserved.</p>
+            <p class="text-lg text-white">Dedicated to exceptional care.</p>
         </div>
     </div>
 </footer>
