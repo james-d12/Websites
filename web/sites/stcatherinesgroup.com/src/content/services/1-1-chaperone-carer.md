@@ -1,4 +1,8 @@
 ---
+listing:
+  image: ../../assets/chaperone-carer.jpg
+  order: 1
+
 meta:
   title: "1-1 Chaperone Carer - St Catherine's Group"
   description: >-

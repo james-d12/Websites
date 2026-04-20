@@ -1,4 +1,8 @@
 ---
+listing:
+  image: ../../assets/safety-carer.jpg
+  order: 4
+
 meta:
   title: "1-1 Safety Carer - St Catherine's Group"
   description: >-

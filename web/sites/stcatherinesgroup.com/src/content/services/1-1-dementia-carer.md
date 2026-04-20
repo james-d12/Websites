@@ -1,4 +1,8 @@
 ---
+listing:
+  image: ../../assets/dementia-care.jpg
+  order: 3
+
 meta:
   title: "1-1 Dementia Carer - St Catherine's Group"
   description: >-

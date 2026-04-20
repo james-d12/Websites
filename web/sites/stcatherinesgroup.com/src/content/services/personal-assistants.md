@@ -1,4 +1,8 @@
 ---
+listing:
+  image: ../../assets/personal-assistant.jpg
+  order: 5
+
 meta:
   title: "Personal Assistant Services - St Catherine's Group"
   description: >-

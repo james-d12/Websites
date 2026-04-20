@@ -1,44 +1,13 @@
 ---
-import {Image} from "astro:assets";
-import dementiaImage from "../assets/dementia-care.jpg";
-import safetyImage from "../assets/safety-carer.jpg";
-import companionshipImage from "../assets/companionship-carer.jpg";
-import chaperoneImage from "../assets/chaperone-carer.jpg";
-import personalAssistantImage from "../assets/personal-assistant.jpg";
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
 import Heading from "./Heading.astro";
 
-const services = [
-    {
-        title: "1-1 Chaperone Carer",
-        description: "Reliable, discreet support for appointments, outings, and events so you never have to go alone. From medical appointments to social gatherings, shopping trips to family occasions, we provide the reassuring presence that helps you feel confident and comfortable wherever you need to be.",
-        href: "/services/1-1-chaperone-carer",
-        image: chaperoneImage,
-    },
-    {
-        title: "1-1 Companionship Carer",
-        description: "Genuine, meaningful companionship that brings comfort, conversation, and connection into everyday life. Whether it's sharing stories over a cup of tea, enjoying a walk together, or simply having someone to talk to, our companions are here to brighten your day and provide the human connection that matters most.",
-        href: "/services/1-1-companionship-carer",
-        image: companionshipImage,
-    },
-    {
-        title: "1-1 Dementia Carer",
-        description: "Specialist one-to-one support delivered with patience, understanding, and deep respect for the individual. Our trained team members work with compassion and skill to provide person-centred care that honours dignity, maintains independence, and creates moments of joy and connection throughout the day.",
-        href: "/services/1-1-dementia-carer",
-        image: dementiaImage,
-    },
-    {
-        title: "1-1 Safety Carer",
-        description: "Dedicated safety support tailored to individual needs, providing reassurance and peace of mind. Whether you need support with mobility, managing health conditions, or simply require an extra level of care and attention, we're here to ensure you feel safe, secure, and supported at all times.",
-        href: "/services/1-1-safety-carer",
-        image: safetyImage,
-    },
-    {
-        title: "Personal Assistants",
-        description: "Unrivalled one-to-one personal assistance for those who value discretion, sophistication, and seamless organisation. Every aspect of daily life handled with impeccable care, giving you and your family complete reassurance and peace of mind.",
-        href: "/services/personal-assistants",
-        image: personalAssistantImage,
-    },
-];
+const entries = (await getCollection("services")).sort(
+    (a: CollectionEntry<"services">, b: CollectionEntry<"services">) =>
+        a.data.listing.order - b.data.listing.order
+);
 ---
 
 <section id="services" class="py-20 md:py-28 bg-white">
@@ -50,9 +19,9 @@ const services = [
         </Heading>
 
         <div class="relative max-w-7xl mx-auto">
-            {services.map((service, i) => (
+            {entries.map((entry: CollectionEntry<"services">, i: number) => (
                     <div class="relative">
-                        {i < services.length - 1 && (
+                        {i < entries.length - 1 && (
                                 <div class="hidden md:block absolute left-0 right-0 -bottom-20 h-42 pointer-events-none z-10">
                                     <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                                         <path
@@ -69,11 +38,10 @@ const services = [
                         )}
 
                         <a
-                                href={service.href}
+                                href={`/services/${entry.id}`}
                                 class={`group grid md:grid-cols-2 gap-8 md:gap-16 items-center py-16 md:py-20 px-6 md:px-8 ${i % 2 === 1 ? 'md:grid-flow-dense' : ''}`}
                         >
                             <div class={`relative ${i % 2 === 1 ? 'md:col-start-2' : ''}`}>
-                                <!-- Number badge on image -->
                                 <div class="hidden md:flex absolute -top-4 -left-4 w-16 h-16 rounded-full bg-green-dark items-center justify-center z-20 shadow-lg ring-4 ring-white">
                                     <span class="text-white font-bold text-xl">0{i + 1}</span>
                                 </div>
@@ -81,8 +49,8 @@ const services = [
                                 <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
                                 <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
                                     <Image
-                                            src={service.image}
-                                            alt={service.title}
+                                            src={entry.data.listing.image}
+                                            alt={entry.data.hero.title}
                                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     />
                                 </div>
@@ -93,19 +61,19 @@ const services = [
                                     <span class="text-green-dark font-semibold text-sm">0{i + 1}</span>
                                 </div>
                                 <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 group-hover:text-green-dark transition-colors">
-                                    {service.title}
+                                    {entry.data.hero.title}
                                 </h3>
                                 <p class="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8">
-                                    {service.description}
+                                    {entry.data.hero.description}
                                 </p>
                                 <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg md:text-2xl rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
-                                Learn more
-                                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
-                                     stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                          d="M9 5l7 7-7 7"/>
-                                </svg>
-                            </span>
+                                    Learn more
+                                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                                         stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </span>
                             </div>
                         </a>
                     </div>

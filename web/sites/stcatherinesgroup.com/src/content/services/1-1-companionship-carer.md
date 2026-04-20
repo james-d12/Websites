@@ -1,4 +1,8 @@
 ---
+listing:
+  image: ../../assets/companionship-carer.jpg
+  order: 2
+
 meta:
   title: "1-1 Companionship Carer - St Catherine's Group"
   description: >-

@@ -38,35 +38,40 @@ export type ServiceCallout = z.infer<typeof serviceCallout>;
 
 const services = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/services" }),
-  schema: z.object({
-    meta: z.object({
-      title: z.string(),
-      description: z.string(),
+  schema: ({ image }) =>
+    z.object({
+      listing: z.object({
+        image: image(),
+        order: z.number().int(),
+      }),
+      meta: z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
+      hero: z.object({
+        label: z.string(),
+        title: z.string(),
+        description: z.string(),
+        imageAlt: z.string(),
+      }),
+      about: z.object({
+        title: z.string(),
+        subTitle: z.string(),
+        sections: z.array(serviceSection),
+        callout: serviceCallout.optional(),
+      }),
+      story: z.object({ title: z.string(), content: z.string() }).optional(),
+      testimonials: z.array(
+        z.object({
+          quote: z.string(),
+          name: z.string(),
+          relationship: z.string(),
+          service: z.string(),
+        })
+      ),
+      testimonialsBackground: z.string().default("bg-white"),
+      ctaBackground: z.string().default("bg-warm-50"),
     }),
-    hero: z.object({
-      label: z.string(),
-      title: z.string(),
-      description: z.string(),
-      imageAlt: z.string(),
-    }),
-    about: z.object({
-      title: z.string(),
-      subTitle: z.string(),
-      sections: z.array(serviceSection),
-      callout: serviceCallout.optional(),
-    }),
-    story: z.object({ title: z.string(), content: z.string() }).optional(),
-    testimonials: z.array(
-      z.object({
-        quote: z.string(),
-        name: z.string(),
-        relationship: z.string(),
-        service: z.string(),
-      })
-    ),
-    testimonialsBackground: z.string().default("bg-white"),
-    ctaBackground: z.string().default("bg-warm-50"),
-  }),
 });
 
 export const collections = { pages, services };
