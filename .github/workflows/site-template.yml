@@ -254,11 +254,23 @@ jobs:
               -p ${{ secrets.VPS_PORT }} \
               ci@${{ secrets.VPS_HOST }} << 'EOF'
             echo "🚨 Rolling back to previous deployment..."
-            LATEST_BACKUP=$(ls -td /var/www/backup/${{ inputs.site }}-* 2>/dev/null | head -n 1)
-            if [ -d "$LATEST_BACKUP" ]; then
-              rsync -a --delete "$LATEST_BACKUP"/ /var/www/${{ inputs.site }}/
-              echo "✅ Rollback complete: restored from $LATEST_BACKUP"
-            else
-              echo "⚠️ No backup found to restore from."
+
+            LATEST_BACKUP=$(find /var/www/backup -maxdepth 1 -type d -name "${{ inputs.site }}-*" -printf '%T@ %p\n' 2>/dev/null | sort -n | tail -n 1 | awk '{print $2}')
+
+            if [ -z "$LATEST_BACKUP" ]; then
+              echo "❌ No backup found for ${{ inputs.site }}. Cannot roll back."
+              exit 1
             fi
+
+            if [ ! -d "$LATEST_BACKUP" ]; then
+              echo "❌ Backup path is not a valid directory: $LATEST_BACKUP"
+              exit 1
+            fi
+
+            SOURCE="${LATEST_BACKUP%/}/"
+            TARGET="/var/www/${{ inputs.site }}/"
+
+            echo "Restoring from: $SOURCE → $TARGET"
+            rsync -a --delete "$SOURCE" "$TARGET"
+            echo "✅ Rollback complete: restored from $SOURCE"
           EOF
