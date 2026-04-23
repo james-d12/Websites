@@ -9,7 +9,7 @@ skills:
   - NixOS
   - GitHub Actions
 github: https://github.com/Websites/web/sites/blackcattattoos.co.uk
-type: professional
+type: website
 ---
 
 # Overview
