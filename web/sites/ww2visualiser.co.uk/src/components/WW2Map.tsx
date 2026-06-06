@@ -69,7 +69,15 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
   const toggleFilter = useCallback((cat: EventCategory) => {
     setActiveFilters((prev) => {
       const next = new Set(prev);
-      next.has(cat) ? next.delete(cat) : next.add(cat);
+
+      const hasId = next.has(cat);
+
+      if (hasId) {
+        next.delete(cat);
+      } else {
+        next.add(cat);
+      }
+
       return next;
     });
   }, []);
