@@ -1,4 +1,4 @@
-import type { WW2Event, EventCategory } from '../types/events';
+import type { WW2Event, EventCategory } from "../types/events";
 
 interface Props {
   event: WW2Event;
@@ -6,23 +6,27 @@ interface Props {
 }
 
 const CATEGORY_COLORS: Record<EventCategory, string> = {
-  battle:     '#e63946',
-  naval:      '#457b9d',
-  air:        '#a8dadc',
-  political:  '#6a4c93',
-  atrocity:   '#555'
+  battle: "#e63946",
+  naval: "#457b9d",
+  air: "#a8dadc",
+  political: "#6a4c93",
+  atrocity: "#555",
 };
 
 const CATEGORY_LABELS: Record<EventCategory, string> = {
-  battle:     'Battle',
-  naval:      'Naval',
-  air:        'Air Operation',
-  political:  'Political',
-  atrocity:   'Atrocity'
+  battle: "Battle",
+  naval: "Naval",
+  air: "Air Operation",
+  political: "Political",
+  atrocity: "Atrocity",
 };
 
 function formatDate(d: string) {
-  return new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  return new Date(d).toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 }
 
 export default function EventPanel({ event, onClose }: Props) {
@@ -41,7 +45,11 @@ export default function EventPanel({ event, onClose }: Props) {
         <div className="flex justify-between items-start gap-2">
           <div>
             <span
-              style={{ color, background: `${color}22`, border: `1px solid ${color}44` }}
+              style={{
+                color,
+                background: `${color}22`,
+                border: `1px solid ${color}44`,
+              }}
               className="inline-block text-[10px] font-bold tracking-[0.08em] uppercase rounded px-1.5 py-px mb-1.5"
             >
               {CATEGORY_LABELS[event.category]}
@@ -66,9 +74,7 @@ export default function EventPanel({ event, onClose }: Props) {
 
       {/* Body */}
       <div className="px-3.5 py-3 overflow-y-auto flex-1">
-        <p className="m-0 mb-3.5 text-sm text-dim leading-7">
-          {event.article}
-        </p>
+        <p className="m-0 mb-3.5 text-sm text-dim leading-7">{event.article}</p>
 
         {event.links && event.links.length > 0 && (
           <div className="border-t border-rim pt-2.5">

@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-deep:    #0d1117;  /* page background */
-  --color-surface: #161b22;  /* panel / header background */
-  --color-rim:     #30363d;  /* borders */
-  --color-accent:  #e63946;  /* red highlight */
-  --color-ink:     #f0f6fc;  /* brightest text */
-  --color-dim:     #e6edf3;  /* normal text */
-  --color-muted:   #8b949e;  /* secondary text */
-  --color-faint:   #6e7681;  /* tertiary / label text */
-  --color-body:    #c9d1d9;  /* body copy */
-  --color-link:    #58a6ff;  /* hyperlinks */
+  --color-deep: #0d1117; /* page background */
+  --color-surface: #161b22; /* panel / header background */
+  --color-rim: #30363d; /* borders */
+  --color-accent: #e63946; /* red highlight */
+  --color-ink: #f0f6fc; /* brightest text */
+  --color-dim: #e6edf3; /* normal text */
+  --color-muted: #8b949e; /* secondary text */
+  --color-faint: #6e7681; /* tertiary / label text */
+  --color-body: #c9d1d9; /* body copy */
+  --color-link: #58a6ff; /* hyperlinks */
 }
 
-html, body {
+html,
+body {
   height: 100%;
   overflow: hidden;
   background: #0d1117;

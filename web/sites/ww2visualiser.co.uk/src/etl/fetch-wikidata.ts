@@ -8,39 +8,45 @@
  *   pnpm fetch-data:dry       # print counts only, no file written
  */
 
-import { writeFileSync, existsSync, readFileSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
-import type { WW2Event, EventCategory, Theater, Country } from '../types/events.ts';
+import { writeFileSync, existsSync, readFileSync } from "fs";
+import { join, dirname } from "path";
+import { fileURLToPath } from "url";
+import type {
+  WW2Event,
+  EventCategory,
+  Theater,
+  Country,
+} from "../types/events.ts";
 
-const __dirname  = dirname(fileURLToPath(import.meta.url));
-const OUT_PATH   = join(__dirname, '../data/events.json');
-const CACHE_PATH = join(__dirname, 'wiki-cache.json');
-const DRY_RUN    = process.argv.includes('--dry-run');
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const OUT_PATH = join(__dirname, "../data/events.json");
+const CACHE_PATH = join(__dirname, "wiki-cache.json");
+const DRY_RUN = process.argv.includes("--dry-run");
 
-const SPARQL_ENDPOINT = 'https://query.wikidata.org/sparql';
-const WP_SUMMARY_API  = 'https://en.wikipedia.org/api/rest_v1/page/summary';
-const UA = 'WW2Visualiser/1.0 (build-time data fetcher; contact james_d02@protonmail.com)';
+const SPARQL_ENDPOINT = "https://query.wikidata.org/sparql";
+const WP_SUMMARY_API = "https://en.wikipedia.org/api/rest_v1/page/summary";
+const UA =
+  "WW2Visualiser/1.0 (build-time data fetcher; contact james_d02@protonmail.com)";
 
 // ── Types ─────────────────────────────────────────────────────────────────────
 
 interface SparqlValue {
-  type: 'uri' | 'literal' | 'bnode';
+  type: "uri" | "literal" | "bnode";
   value: string;
   datatype?: string;
 }
 
 /** One result row from our SPARQL SELECT queries. */
 interface SparqlBinding {
-  item:         SparqlValue;
-  itemLabel:    SparqlValue;
-  startTime?:   SparqlValue;
-  endTime?:     SparqlValue;
+  item: SparqlValue;
+  itemLabel: SparqlValue;
+  startTime?: SparqlValue;
+  endTime?: SparqlValue;
   pointInTime?: SparqlValue;
-  inception?:   SparqlValue;  // P571 — used as date fallback for camps
-  coords?:      SparqlValue;
-  wpTitle?:     SparqlValue;
-  countryQID?:  SparqlValue;  // one combatant country QID per row (e.g. "Q183")
+  inception?: SparqlValue; // P571 — used as date fallback for camps
+  coords?: SparqlValue;
+  wpTitle?: SparqlValue;
+  countryQID?: SparqlValue; // one combatant country QID per row (e.g. "Q183")
 }
 
 interface SparqlResponse {
@@ -59,34 +65,37 @@ interface WpApiResponse {
 }
 
 /** The categories our queries produce — a subset of EventCategory. */
-type QueryCategory = Extract<EventCategory, 'battle' | 'naval' | 'air' | 'political' | 'atrocity'>;
+type QueryCategory = Extract<
+  EventCategory,
+  "battle" | "naval" | "air" | "political" | "atrocity"
+>;
 
 /** A single SPARQL query spec — key for logging, category for output mapping. */
 interface QuerySpec {
-  key:      string;
+  key: string;
   category: QueryCategory;
-  query:    string;
+  query: string;
   /** If true, events with no date get a fallback of WW2 start rather than being dropped. */
   dateFallback?: boolean;
 }
 
 interface EventSides {
   allied: Country[];
-  axis:   Country[];
+  axis: Country[];
 }
 
 /** Intermediate shape after parsing SPARQL bindings, before Wikipedia enrichment. */
 interface ParsedEvent {
-  qid:      string;
-  label:    string;
-  date:     string;
+  qid: string;
+  label: string;
+  date: string;
   endDate?: string;
-  lat:      number;
-  lng:      number;
+  lat: number;
+  lng: number;
   category: QueryCategory;
-  theater:  Theater;
+  theater: Theater;
   wpTitle?: string;
-  sides?:   EventSides;
+  sides?: EventSides;
 }
 
 interface EnrichedEvent extends ParsedEvent {
@@ -96,10 +105,14 @@ interface EnrichedEvent extends ParsedEvent {
 // ── Utilities ─────────────────────────────────────────────────────────────────
 
 function sleep(ms: number): Promise<void> {
-  return new Promise(r => setTimeout(r, ms));
+  return new Promise((r) => setTimeout(r, ms));
 }
 
-async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 2000): Promise<T> {
+async function withRetry<T>(
+  fn: () => Promise<T>,
+  retries = 3,
+  delayMs = 2000,
+): Promise<T> {
   for (let attempt = 1; attempt <= retries; attempt++) {
     try {
       return await fn();
@@ -110,7 +123,7 @@ async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 2000): 
       await sleep(delayMs * attempt);
     }
   }
-  throw new Error('withRetry exhausted');
+  throw new Error("withRetry exhausted");
 }
 
 // ── SPARQL ────────────────────────────────────────────────────────────────────
@@ -118,23 +131,23 @@ async function withRetry<T>(fn: () => Promise<T>, retries = 3, delayMs = 2000): 
 async function sparql(label: string, query: string): Promise<SparqlBinding[]> {
   return withRetry(async () => {
     const url = new URL(SPARQL_ENDPOINT);
-    url.searchParams.set('query', query.trim());
-    url.searchParams.set('format', 'json');
+    url.searchParams.set("query", query.trim());
+    url.searchParams.set("format", "json");
     const res = await fetch(url.toString(), {
-      headers: { Accept: 'application/sparql-results+json', 'User-Agent': UA },
+      headers: { Accept: "application/sparql-results+json", "User-Agent": UA },
     });
     if (!res.ok) {
       const body = await res.text();
       throw new Error(`SPARQL [${label}] ${res.status}: ${body.slice(0, 300)}`);
     }
-    return (await res.json() as SparqlResponse).results.bindings;
+    return ((await res.json()) as SparqlResponse).results.bindings;
   });
 }
 
 // ── Queries ───────────────────────────────────────────────────────────────────
 
 const WW2_START = '"1939-09-01"^^xsd:dateTime';
-const WW2_END   = '"1945-09-02"^^xsd:dateTime';
+const WW2_END = '"1945-09-02"^^xsd:dateTime';
 
 const DATE_OPTIONALS = `
   OPTIONAL { ?item wdt:P580 ?startTime.   }
@@ -170,7 +183,8 @@ const QUERIES: QuerySpec[] = [
   // Q890701 siege · Q180684 conflict · Q3272563 airborne operation
   // Q2001676 military operation (alt) · Q831663 military campaign
   {
-    key: 'battle', category: 'battle',
+    key: "battle",
+    category: "battle",
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
         ?item wdt:P31 ?t; wdt:P625 ?coords.
@@ -188,7 +202,9 @@ const QUERIES: QuerySpec[] = [
   // catches any battle-subtype (amphibious assault, airborne op, raid, etc.)
   // that editors tagged with P361=Q362 but typed with an uncommon P31 value.
   {
-    key: 'ww2-battle-tagged', category: 'battle', dateFallback: true,
+    key: "ww2-battle-tagged",
+    category: "battle",
+    dateFallback: true,
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
         ?item wdt:P361 wd:Q362; wdt:P625 ?coords.
@@ -202,7 +218,8 @@ const QUERIES: QuerySpec[] = [
 
   // ── Naval engagements — direct type + WW2-tagged subclasses ───────────────
   {
-    key: 'naval', category: 'naval',
+    key: "naval",
+    category: "naval",
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
         ?item wdt:P31 wd:Q1261499; wdt:P625 ?coords.
@@ -215,7 +232,9 @@ const QUERIES: QuerySpec[] = [
   },
 
   {
-    key: 'ww2-naval-tagged', category: 'naval', dateFallback: true,
+    key: "ww2-naval-tagged",
+    category: "naval",
+    dateFallback: true,
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
         ?item wdt:P361 wd:Q362; wdt:P625 ?coords.
@@ -229,7 +248,8 @@ const QUERIES: QuerySpec[] = [
 
   // ── Air campaigns and aerial bombings ─────────────────────────────────────
   {
-    key: 'air', category: 'air',
+    key: "air",
+    category: "air",
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
         ?item wdt:P31 ?t; wdt:P625 ?coords.
@@ -244,7 +264,8 @@ const QUERIES: QuerySpec[] = [
 
   // ── Diplomatic conferences, treaties, armistices ───────────────────────────
   {
-    key: 'political', category: 'political',
+    key: "political",
+    category: "political",
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
         ?item wdt:P31 ?t.
@@ -263,7 +284,8 @@ const QUERIES: QuerySpec[] = [
 
   // ── Massacres ──────────────────────────────────────────────────────────────
   {
-    key: 'massacre', category: 'atrocity',
+    key: "massacre",
+    category: "atrocity",
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle WHERE {
         ?item wdt:P31 wd:Q3199915; wdt:P625 ?coords.
@@ -276,7 +298,9 @@ const QUERIES: QuerySpec[] = [
 
   // ── Concentration & extermination camps ───────────────────────────────────
   {
-    key: 'camp', category: 'atrocity', dateFallback: true,
+    key: "camp",
+    category: "atrocity",
+    dateFallback: true,
     query: `
       SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?inception ?coords ?wpTitle WHERE {
         ?item wdt:P31 ?t; wdt:P625 ?coords.
@@ -298,81 +322,104 @@ const QUERIES: QuerySpec[] = [
 const COUNTRY_QID_TO_COUNTRY: Partial<Record<string, Country>> = {
   // Germany — P710 uses both Q7318 (Nazi Germany) and Q1206012 (German Reich)
   // depending on which editor wrote the Wikidata item (verified via live query)
-  Q183:      'germany',      // Germany (general/modern)
-  Q7318:     'germany',      // Nazi Germany
-  Q1206012:  'germany',      // German Reich (used directly as P710 on e.g. Battle of Stalingrad)
-  Q43287:    'germany',      // Third Reich (alt)
-  Q202215:   'germany',      // German Reich (alt)
-  Q40:       'germany',      // Austria (under Anschluss — acts as part of Germany militarily)
+  Q183: "germany", // Germany (general/modern)
+  Q7318: "germany", // Nazi Germany
+  Q1206012: "germany", // German Reich (used directly as P710 on e.g. Battle of Stalingrad)
+  Q43287: "germany", // Third Reich (alt)
+  Q202215: "germany", // German Reich (alt)
+  Q40: "germany", // Austria (under Anschluss — acts as part of Germany militarily)
   // Soviet Union — Q15180 is what Wikidata actually returns on battles (verified)
-  Q15180:    'ussr',
-  Q34266:    'ussr',         // alt, kept for safety
+  Q15180: "ussr",
+  Q34266: "ussr", // alt, kept for safety
   // United Kingdom
-  Q145:      'uk',
-  Q174193:   'uk',           // United Kingdom of Great Britain (historical alt)
+  Q145: "uk",
+  Q174193: "uk", // United Kingdom of Great Britain (historical alt)
   // Commonwealth — tracked individually
-  Q16:       'canada',
-  Q408:      'australia',
-  Q664:      'new_zealand',
-  Q668:      'india',        // British India
+  Q16: "canada",
+  Q408: "australia",
+  Q664: "new_zealand",
+  Q668: "india", // British India
   // United States
-  Q30:       'usa',
+  Q30: "usa",
   // Italy — historical state QIDs verified from Battle of Stalingrad query
-  Q38:       'italy',
-  Q172579:   'italy',        // Kingdom of Italy (WW2-era QID used in battles)
-  Q6764:     'italy',        // Kingdom of Italy (alt)
-  Q45095:    'italy',        // Italian Social Republic
+  Q38: "italy",
+  Q172579: "italy", // Kingdom of Italy (WW2-era QID used in battles)
+  Q6764: "italy", // Kingdom of Italy (alt)
+  Q45095: "italy", // Italian Social Republic
   // Japan
-  Q17:       'japan',
-  Q16849950: 'japan',        // Empire of Japan
+  Q17: "japan",
+  Q16849950: "japan", // Empire of Japan
   // France — Free France vs Vichy tracked separately
-  Q142:      'france',
-  Q235547:   'france',       // Free France
-  Q34981:    'vichy_france', // Vichy France (Axis-aligned)
+  Q142: "france",
+  Q235547: "france", // Free France
+  Q34981: "vichy_france", // Vichy France (Axis-aligned)
   // Allied nations — individual countries, not lumped together
-  Q36:       'poland',
-  Q55:       'netherlands',
-  Q29999:    'netherlands',  // Kingdom of the Netherlands (P17 of Q55)
-  Q31:       'belgium',
-  Q20:       'norway',
-  Q35:       'denmark',
-  Q756617:   'denmark',      // Kingdom of Denmark (P17 of Q35)
-  Q191:      'estonia',
-  Q211:      'latvia',
-  Q37:       'lithuania',
-  Q41:       'greece',
-  Q148:      'china',
-  Q865:      'china',        // Republic of China
-  Q83286:    'yugoslavia',   // Kingdom of Yugoslavia
-  Q36704:    'yugoslavia',   // Yugoslavia (general)
+  Q36: "poland",
+  Q55: "netherlands",
+  Q29999: "netherlands", // Kingdom of the Netherlands (P17 of Q55)
+  Q31: "belgium",
+  Q20: "norway",
+  Q35: "denmark",
+  Q756617: "denmark", // Kingdom of Denmark (P17 of Q35)
+  Q191: "estonia",
+  Q211: "latvia",
+  Q37: "lithuania",
+  Q41: "greece",
+  Q148: "china",
+  Q865: "china", // Republic of China
+  Q83286: "yugoslavia", // Kingdom of Yugoslavia
+  Q36704: "yugoslavia", // Yugoslavia (general)
   // Axis allies — individual countries
-  Q218:      'romania',
-  Q203493:   'romania',      // Kingdom of Romania (WW2-era QID)
-  Q28:       'hungary',
-  Q600018:   'hungary',      // Kingdom of Hungary (WW2-era QID)
-  Q214:      'slovakia',
-  Q153128:   'croatia',      // Independent State of Croatia
-  Q33:       'finland',
-  Q797278:   'finland',      // Finland (WW2-era alt)
-  Q222:      'albania',
-  Q13474305: 'spain',        // Francoist Spain
+  Q218: "romania",
+  Q203493: "romania", // Kingdom of Romania (WW2-era QID)
+  Q28: "hungary",
+  Q600018: "hungary", // Kingdom of Hungary (WW2-era QID)
+  Q214: "slovakia",
+  Q153128: "croatia", // Independent State of Croatia
+  Q33: "finland",
+  Q797278: "finland", // Finland (WW2-era alt)
+  Q222: "albania",
+  Q13474305: "spain", // Francoist Spain
 };
 
 const ALLIED_COUNTRIES = new Set<Country>([
-  'uk', 'usa', 'ussr', 'france',
-  'canada', 'australia', 'new_zealand', 'india',
-  'poland', 'netherlands', 'belgium', 'norway', 'denmark',
-  'greece', 'china', 'estonia', 'latvia', 'lithuania', 'yugoslavia',
+  "uk",
+  "usa",
+  "ussr",
+  "france",
+  "canada",
+  "australia",
+  "new_zealand",
+  "india",
+  "poland",
+  "netherlands",
+  "belgium",
+  "norway",
+  "denmark",
+  "greece",
+  "china",
+  "estonia",
+  "latvia",
+  "lithuania",
+  "yugoslavia",
 ]);
 const AXIS_COUNTRIES = new Set<Country>([
-  'germany', 'italy', 'japan',
-  'romania', 'hungary', 'slovakia', 'croatia',
-  'vichy_france', 'finland', 'albania', 'spain',
+  "germany",
+  "italy",
+  "japan",
+  "romania",
+  "hungary",
+  "slovakia",
+  "croatia",
+  "vichy_france",
+  "finland",
+  "albania",
+  "spain",
 ]);
 
 function mapSides(countryQIDs: Iterable<string>): EventSides | undefined {
   const allied = new Set<Country>();
-  const axis   = new Set<Country>();
+  const axis = new Set<Country>();
   for (const qid of countryQIDs) {
     const c = COUNTRY_QID_TO_COUNTRY[qid];
     if (!c) continue;
@@ -382,13 +429,15 @@ function mapSides(countryQIDs: Iterable<string>): EventSides | undefined {
   if (allied.size === 0 && axis.size === 0) return undefined;
   return {
     allied: [...allied].slice(0, 6),
-    axis:   [...axis].slice(0, 6),
+    axis: [...axis].slice(0, 6),
   };
 }
 
 // ── Geo helpers ───────────────────────────────────────────────────────────────
 
-function parseCoords(raw: string | undefined): { lat: number; lng: number } | null {
+function parseCoords(
+  raw: string | undefined,
+): { lat: number; lng: number } | null {
   if (!raw) return null;
   const m = raw.match(/Point\(([+-]?\d+\.?\d*)\s+([+-]?\d+\.?\d*)\)/);
   if (!m) return null;
@@ -396,11 +445,11 @@ function parseCoords(raw: string | undefined): { lat: number; lng: number } | nu
 }
 
 function inferTheater(lat: number, lng: number): Theater {
-  if (lat >= 34  && lat <= 72  && lng >= -12  && lng <=  42) return 'europe';
-  if (lat >= -36 && lat <= 38  && lng >= -18  && lng <=  55) return 'africa';
-  if (lat >= 0   && lat <= 55  && lng >=  42  && lng <= 100) return 'asia';
-  if (lat >= -55 && lat <= 65  && (lng >= 100 || lng <= -60)) return 'pacific';
-  return 'atlantic';
+  if (lat >= 34 && lat <= 72 && lng >= -12 && lng <= 42) return "europe";
+  if (lat >= -36 && lat <= 38 && lng >= -18 && lng <= 55) return "africa";
+  if (lat >= 0 && lat <= 55 && lng >= 42 && lng <= 100) return "asia";
+  if (lat >= -55 && lat <= 65 && (lng >= 100 || lng <= -60)) return "pacific";
+  return "atlantic";
 }
 
 // ── Date helpers ──────────────────────────────────────────────────────────────
@@ -411,9 +460,9 @@ function parseDate(raw: string | undefined): string | undefined {
   if (!m) return undefined;
   const year = parseInt(m[1], 10);
   if (year < 1930 || year > 1950) return undefined;
-  const month = m[2] === '00' ? '01' : m[2];
-  const day   = m[3] === '00' ? '01' : m[3];
-  return `${String(year).padStart(4, '0')}-${month}-${day}`;
+  const month = m[2] === "00" ? "01" : m[2];
+  const day = m[3] === "00" ? "01" : m[3];
+  return `${String(year).padStart(4, "0")}-${month}-${day}`;
 }
 
 // ── Slug helper ───────────────────────────────────────────────────────────────
@@ -421,9 +470,9 @@ function parseDate(raw: string | undefined): string | undefined {
 function toSlug(label: string): string {
   return label
     .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/[^a-z0-9\s-]/g, "")
     .trim()
-    .replace(/\s+/g, '-')
+    .replace(/\s+/g, "-")
     .slice(0, 80);
 }
 
@@ -432,21 +481,25 @@ function toSlug(label: string): string {
 async function fetchWpSummary(title: string): Promise<WpEntry | null> {
   try {
     const res = await fetch(
-      `${WP_SUMMARY_API}/${encodeURIComponent(title.replace(/ /g, '_'))}`,
-      { headers: { 'User-Agent': UA } },
+      `${WP_SUMMARY_API}/${encodeURIComponent(title.replace(/ /g, "_"))}`,
+      { headers: { "User-Agent": UA } },
     );
     if (!res.ok) return null;
-    const data = await res.json() as WpApiResponse;
-    const extract = data.extract ?? '';
+    const data = (await res.json()) as WpApiResponse;
+    const extract = data.extract ?? "";
     const sentences = extract.match(/[^.!?]+[.!?]+(\s|$)/g) ?? [];
-    const summary = sentences.slice(0, 2).join('').trim() || extract.slice(0, 200);
+    const summary =
+      sentences.slice(0, 2).join("").trim() || extract.slice(0, 200);
     return { summary, article: extract };
   } catch {
     return null;
   }
 }
 
-async function resolveWpTitle(label: string, year: string): Promise<string | null> {
+async function resolveWpTitle(
+  label: string,
+  year: string,
+): Promise<string | null> {
   const withYear = `${label} (${year})`;
   const res = await fetchWpSummary(withYear);
   if (res) return withYear;
@@ -459,8 +512,11 @@ async function resolveWpTitle(label: string, year: string): Promise<string | nul
 
 function loadCache(): WikiCache {
   if (!existsSync(CACHE_PATH)) return {};
-  try { return JSON.parse(readFileSync(CACHE_PATH, 'utf8')) as WikiCache; }
-  catch { return {}; }
+  try {
+    return JSON.parse(readFileSync(CACHE_PATH, "utf8")) as WikiCache;
+  } catch {
+    return {};
+  }
 }
 
 function saveCache(cache: WikiCache): void {
@@ -470,23 +526,29 @@ function saveCache(cache: WikiCache): void {
 // ── Main ──────────────────────────────────────────────────────────────────────
 
 async function main(): Promise<void> {
-  console.log('Querying Wikidata SPARQL…');
+  console.log("Querying Wikidata SPARQL…");
 
   type TaggedBinding = SparqlBinding & { _spec: QuerySpec; _qid: string };
 
   const settled = await Promise.allSettled(
-    QUERIES.map(spec =>
-      sparql(spec.key, spec.query).then(rows =>
-        rows.map(r => ({ ...r, _spec: spec, _qid: r.item.value.split('/').pop()! }))
-      )
-    )
+    QUERIES.map((spec) =>
+      sparql(spec.key, spec.query).then((rows) =>
+        rows.map((r) => ({
+          ...r,
+          _spec: spec,
+          _qid: r.item.value.split("/").pop()!,
+        })),
+      ),
+    ),
   );
 
   const allRows: TaggedBinding[] = [];
   for (const [i, result] of settled.entries()) {
     const { key } = QUERIES[i];
-    if (result.status === 'rejected') {
-      console.warn(`  [${key}] failed: ${result.reason instanceof Error ? result.reason.message : String(result.reason)}`);
+    if (result.status === "rejected") {
+      console.warn(
+        `  [${key}] failed: ${result.reason instanceof Error ? result.reason.message : String(result.reason)}`,
+      );
     } else {
       console.log(`  [${key}] ${result.value.length} rows`);
       allRows.push(...result.value);
@@ -514,28 +576,28 @@ async function main(): Promise<void> {
     const label = row.itemLabel?.value;
     if (!label || /^Q\d+$/.test(label)) continue;
 
-    const rawDate = row.startTime?.value
-      ?? row.pointInTime?.value
-      ?? row.inception?.value;
-    const date = parseDate(rawDate) ?? (row._spec.dateFallback ? '1939-09-01' : undefined);
+    const rawDate =
+      row.startTime?.value ?? row.pointInTime?.value ?? row.inception?.value;
+    const date =
+      parseDate(rawDate) ?? (row._spec.dateFallback ? "1939-09-01" : undefined);
     if (!date) continue;
 
     const endDate = parseDate(row.endTime?.value);
-    const coords  = parseCoords(row.coords?.value);
+    const coords = parseCoords(row.coords?.value);
     if (!coords) continue;
 
     const sides = mapSides(countryQIDs);
 
     parsed.push({
-      qid:      row._qid,
+      qid: row._qid,
       label,
       date,
       endDate,
-      lat:      coords.lat,
-      lng:      coords.lng,
+      lat: coords.lat,
+      lng: coords.lng,
       category: row._spec.category,
-      theater:  inferTheater(coords.lat, coords.lng),
-      wpTitle:  row.wpTitle?.value,
+      theater: inferTheater(coords.lat, coords.lng),
+      wpTitle: row.wpTitle?.value,
       sides,
     });
   }
@@ -543,59 +605,76 @@ async function main(): Promise<void> {
   parsed.sort((a, b) => a.date.localeCompare(b.date));
   console.log(`After filtering: ${parsed.length} events with date + coords`);
 
-  const withSides = parsed.filter(e => e.sides && (e.sides.allied.length + e.sides.axis.length) > 0).length;
+  const withSides = parsed.filter(
+    (e) => e.sides && e.sides.allied.length + e.sides.axis.length > 0,
+  ).length;
   console.log(`Events with sides data: ${withSides} / ${parsed.length}`);
 
   if (DRY_RUN) {
     for (const e of parsed.slice(0, 15)) {
-      const allied = e.sides?.allied.join('+') ?? '—';
-      const axis   = e.sides?.axis.join('+')   ?? '—';
-      console.log(`  [${e.category.padEnd(9)}] ${e.date}  ${e.label}  (${e.theater})  allied: ${allied}  axis: ${axis}`);
+      const allied = e.sides?.allied.join("+") ?? "—";
+      const axis = e.sides?.axis.join("+") ?? "—";
+      console.log(
+        `  [${e.category.padEnd(9)}] ${e.date}  ${e.label}  (${e.theater})  allied: ${allied}  axis: ${axis}`,
+      );
     }
     const breakdown = parsed.reduce<Record<string, number>>((acc, e) => {
       acc[e.category] = (acc[e.category] ?? 0) + 1;
       return acc;
     }, {});
-    console.log('\nBreakdown:', breakdown);
+    console.log("\nBreakdown:", breakdown);
     console.log(`Total: ${parsed.length} events. No file written (--dry-run).`);
     return;
   }
 
   // Wikipedia summaries — cache-first, batch-fetch only what's missing
   const cache = loadCache();
-  const needed = parsed.filter(e => e.wpTitle !== undefined && !cache[e.wpTitle]);
-  console.log(`\nWikipedia: ${Object.keys(cache).length} cached, ${needed.length} to fetch…`);
+  const needed = parsed.filter(
+    (e) => e.wpTitle !== undefined && !cache[e.wpTitle],
+  );
+  console.log(
+    `\nWikipedia: ${Object.keys(cache).length} cached, ${needed.length} to fetch…`,
+  );
 
   const BATCH = 10;
   let fetched = 0;
   for (let i = 0; i < needed.length; i += BATCH) {
     const batch = needed.slice(i, i + BATCH);
-    const entries = await Promise.all(batch.map(e => fetchWpSummary(e.wpTitle!)));
-    batch.forEach((e, j) => { if (entries[j]) cache[e.wpTitle!] = entries[j]!; });
+    const entries = await Promise.all(
+      batch.map((e) => fetchWpSummary(e.wpTitle!)),
+    );
+    batch.forEach((e, j) => {
+      if (entries[j]) cache[e.wpTitle!] = entries[j]!;
+    });
     fetched += batch.length;
     process.stdout.write(`\r  ${fetched}/${needed.length}`);
     if (i + BATCH < needed.length) await sleep(500);
   }
-  if (needed.length > 0) { console.log(); saveCache(cache); }
+  if (needed.length > 0) {
+    console.log();
+    saveCache(cache);
+  }
 
-  const noLink = parsed.filter(e => e.wpTitle === undefined);
+  const noLink = parsed.filter((e) => e.wpTitle === undefined);
   console.log(`Resolving ${noLink.length} events with no sitelink…`);
   let resolved = 0;
   for (let i = 0; i < noLink.length; i += BATCH) {
     const batch = noLink.slice(i, i + BATCH);
-    await Promise.all(batch.map(async e => {
-      const year = e.date.slice(0, 4);
-      const cacheKey = `${e.label} (${year})`;
-      if (cache[cacheKey] || cache[e.label]) return;
-      const title = await resolveWpTitle(e.label, year);
-      if (title) {
-        const entry = await fetchWpSummary(title);
-        if (entry) {
-          cache[title] = entry;
-          e.wpTitle = title;
+    await Promise.all(
+      batch.map(async (e) => {
+        const year = e.date.slice(0, 4);
+        const cacheKey = `${e.label} (${year})`;
+        if (cache[cacheKey] || cache[e.label]) return;
+        const title = await resolveWpTitle(e.label, year);
+        if (title) {
+          const entry = await fetchWpSummary(title);
+          if (entry) {
+            cache[title] = entry;
+            e.wpTitle = title;
+          }
         }
-      }
-    }));
+      }),
+    );
     resolved += batch.length;
     process.stdout.write(`\r  ${resolved}/${noLink.length}`);
     if (i + BATCH < noLink.length) await sleep(500);
@@ -603,13 +682,13 @@ async function main(): Promise<void> {
   for (const e of noLink) {
     if (e.wpTitle !== undefined) continue;
     const year = e.date.slice(0, 4);
-    if      (cache[`${e.label} (${year})`]) e.wpTitle = `${e.label} (${year})`;
-    else if (cache[e.label])                e.wpTitle = e.label;
+    if (cache[`${e.label} (${year})`]) e.wpTitle = `${e.label} (${year})`;
+    else if (cache[e.label]) e.wpTitle = e.label;
   }
   console.log();
   saveCache(cache);
 
-  const enriched: EnrichedEvent[] = parsed.map(e => ({
+  const enriched: EnrichedEvent[] = parsed.map((e) => ({
     ...e,
     wp: e.wpTitle ? (cache[e.wpTitle] ?? null) : null,
   }));
@@ -623,33 +702,39 @@ async function main(): Promise<void> {
 
   const events: WW2Event[] = enriched.map((e): WW2Event => {
     const baseSlug = toSlug(e.label);
-    const id = slugCount[baseSlug] > 1 ? `${baseSlug}-${e.qid.toLowerCase()}` : baseSlug;
+    const id =
+      slugCount[baseSlug] > 1 ? `${baseSlug}-${e.qid.toLowerCase()}` : baseSlug;
 
     return {
       id,
-      title:    e.label,
-      date:     e.date,
+      title: e.label,
+      date: e.date,
       ...(e.endDate !== undefined ? { endDate: e.endDate } : {}),
-      ...(e.sides   !== undefined ? { sides:   e.sides   } : {}),
-      lat:      e.lat,
-      lng:      e.lng,
+      ...(e.sides !== undefined ? { sides: e.sides } : {}),
+      lat: e.lat,
+      lng: e.lng,
       category: e.category,
-      theater:  e.theater,
-      article:  e.wp?.article ?? '',
-      links:    e.wpTitle
-        ? [{ label: `Wikipedia: ${e.label}`, url: `https://en.wikipedia.org/wiki/${encodeURIComponent(e.wpTitle.replace(/ /g, '_'))}` }]
+      theater: e.theater,
+      article: e.wp?.article ?? "",
+      links: e.wpTitle
+        ? [
+            {
+              label: `Wikipedia: ${e.label}`,
+              url: `https://en.wikipedia.org/wiki/${encodeURIComponent(e.wpTitle.replace(/ /g, "_"))}`,
+            },
+          ]
         : [],
     };
   });
 
   if (events.length === 0) {
-    console.error('No events produced — keeping existing events.json.');
+    console.error("No events produced — keeping existing events.json.");
     process.exit(1);
   }
 
   console.log(`Writing ${events.length} events → ${OUT_PATH}`);
   writeFileSync(OUT_PATH, JSON.stringify(events, null, 2));
-  console.log('Done.');
+  console.log("Done.");
 }
 
 main().catch((err: unknown) => {

@@ -15,13 +15,13 @@ MapLibre GL JS is GPU-accelerated via WebGL, has first-class GeoJSON layer suppo
 
 ## Target stack
 
-| Role | Before | After |
-|---|---|---|
-| Map engine | `leaflet@1.9` | `maplibre-gl` |
-| React integration | manual `useRef` + `useEffect` | `react-map-gl` (MapLibre flavour) |
-| Tile style | CARTO tile URL | CARTO MapLibre style JSON |
-| Markers | `L.divIcon` + `L.marker` | `<Marker>` components or GeoJSON symbol layer |
-| Types | `@types/leaflet` | built into `maplibre-gl` |
+| Role              | Before                        | After                                         |
+| ----------------- | ----------------------------- | --------------------------------------------- |
+| Map engine        | `leaflet@1.9`                 | `maplibre-gl`                                 |
+| React integration | manual `useRef` + `useEffect` | `react-map-gl` (MapLibre flavour)             |
+| Tile style        | CARTO tile URL                | CARTO MapLibre style JSON                     |
+| Markers           | `L.divIcon` + `L.marker`      | `<Marker>` components or GeoJSON symbol layer |
+| Types             | `@types/leaflet`              | built into `maplibre-gl`                      |
 
 ---
 
@@ -45,10 +45,10 @@ pnpm add maplibre-gl react-map-gl
 
 ```tsx
 // Dynamically imported to avoid SSR, then exposed as a global
-import('leaflet').then(({ default: L }) => {
+import("leaflet").then(({ default: L }) => {
   (window as any).L = L;
   const map = L.map(containerRef.current!, { center: [30, 10], zoom: 3 });
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/...').addTo(map);
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/...").addTo(map);
   mapRef.current = map;
 });
 ```
@@ -56,11 +56,12 @@ import('leaflet').then(({ default: L }) => {
 ### After
 
 ```tsx
-import Map from 'react-map-gl/maplibre';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import Map from "react-map-gl/maplibre";
+import "maplibre-gl/dist/maplibre-gl.css";
 
 // CARTO provides a MapLibre-native dark style — same tiles, no URL hacking
-const CARTO_DARK = 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json';
+const CARTO_DARK =
+  "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
 
 export default function WW2Map() {
   return (
@@ -92,37 +93,42 @@ There are two viable approaches. Choose based on expected event count.
 This is the most direct replacement and keeps the custom emoji+colour div icons.
 
 ```tsx
-import { Marker, Popup } from 'react-map-gl/maplibre';
+import { Marker, Popup } from "react-map-gl/maplibre";
 
 // Replace makeDivIcon + marker.on('click') with:
-{visibleEvents.map(ev => (
-  <Marker
-    key={ev.id}
-    longitude={ev.lng}
-    latitude={ev.lat}
-    anchor="center"
-    onClick={() => setSelectedEvent(ev)}
-  >
-    <div style={{
-      width: selectedEvent?.id === ev.id ? 38 : 30,
-      height: selectedEvent?.id === ev.id ? 38 : 30,
-      background: CATEGORY_COLORS[ev.category],
-      border: `2px solid ${selectedEvent?.id === ev.id ? '#fff' : 'rgba(255,255,255,0.5)'}`,
-      borderRadius: '50%',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontSize: selectedEvent?.id === ev.id ? 18 : 14,
-      boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
-      cursor: 'pointer',
-    }}>
-      {CATEGORY_ICONS[ev.category]}
-    </div>
-  </Marker>
-))}
+{
+  visibleEvents.map((ev) => (
+    <Marker
+      key={ev.id}
+      longitude={ev.lng}
+      latitude={ev.lat}
+      anchor="center"
+      onClick={() => setSelectedEvent(ev)}
+    >
+      <div
+        style={{
+          width: selectedEvent?.id === ev.id ? 38 : 30,
+          height: selectedEvent?.id === ev.id ? 38 : 30,
+          background: CATEGORY_COLORS[ev.category],
+          border: `2px solid ${selectedEvent?.id === ev.id ? "#fff" : "rgba(255,255,255,0.5)"}`,
+          borderRadius: "50%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: selectedEvent?.id === ev.id ? 18 : 14,
+          boxShadow: "0 2px 8px rgba(0,0,0,0.5)",
+          cursor: "pointer",
+        }}
+      >
+        {CATEGORY_ICONS[ev.category]}
+      </div>
+    </Marker>
+  ));
+}
 ```
 
 Key differences from the Leaflet version:
+
 - No `setOpacity` — invisible events simply aren't rendered (filter `visibleEvents` as before)
 - No `markersRef` Map — React owns the marker lifecycle
 - No `(window as any).L` — `makeDivIcon` is deleted entirely
@@ -133,15 +139,18 @@ Key differences from the Leaflet version:
 For hundreds of simultaneous markers, pushing all geometry into a single GeoJSON source and letting MapLibre batch-render it as a WebGL layer is significantly faster.
 
 ```tsx
-import { Source, Layer } from 'react-map-gl/maplibre';
+import { Source, Layer } from "react-map-gl/maplibre";
 
 const geojson: GeoJSON.FeatureCollection = {
-  type: 'FeatureCollection',
-  features: visibleEvents.map(ev => ({
-    type: 'Feature',
+  type: "FeatureCollection",
+  features: visibleEvents.map((ev) => ({
+    type: "Feature",
     id: ev.id,
-    geometry: { type: 'Point', coordinates: [ev.lng, ev.lat] },
-    properties: { category: ev.category, selected: ev.id === selectedEvent?.id },
+    geometry: { type: "Point", coordinates: [ev.lng, ev.lat] },
+    properties: {
+      category: ev.category,
+      selected: ev.id === selectedEvent?.id,
+    },
   })),
 };
 
@@ -150,18 +159,27 @@ const geojson: GeoJSON.FeatureCollection = {
     id="event-circles"
     type="circle"
     paint={{
-      'circle-radius': ['case', ['get', 'selected'], 19, 15],
-      'circle-color': ['match', ['get', 'category'],
-        'battle', '#e63946',
-        'naval',  '#457b9d',
+      "circle-radius": ["case", ["get", "selected"], 19, 15],
+      "circle-color": [
+        "match",
+        ["get", "category"],
+        "battle",
+        "#e63946",
+        "naval",
+        "#457b9d",
         // ... etc
-        '#888'
+        "#888",
       ],
-      'circle-stroke-width': 2,
-      'circle-stroke-color': ['case', ['get', 'selected'], '#fff', 'rgba(255,255,255,0.5)'],
+      "circle-stroke-width": 2,
+      "circle-stroke-color": [
+        "case",
+        ["get", "selected"],
+        "#fff",
+        "rgba(255,255,255,0.5)",
+      ],
     }}
   />
-</Source>
+</Source>;
 ```
 
 Click handling moves to the map's `onClick` callback, filtering by layer:
@@ -185,7 +203,7 @@ This approach also makes it trivial to add front-line or territory GeoJSON layer
 // Runs on every currentDay / filter / selectedEvent change
 useEffect(() => {
   if (!mapRef.current || !(window as any).L) return;
-  events.forEach(ev => {
+  events.forEach((ev) => {
     const marker = markersRef.current.get(ev.id);
     marker.setOpacity(isEventVisible(ev) ? 1 : 0);
     marker.setZIndexOffset(isSelected ? 1000 : 0);
@@ -210,13 +228,13 @@ In `WW2Map.tsx`, replace:
 
 ```tsx
 // Remove — was likely in index.astro or a global stylesheet
-import 'leaflet/dist/leaflet.css';
+import "leaflet/dist/leaflet.css";
 ```
 
 With:
 
 ```tsx
-import 'maplibre-gl/dist/maplibre-gl.css';
+import "maplibre-gl/dist/maplibre-gl.css";
 ```
 
 The broken default-icon-path workaround in the Leaflet init block is also deleted:
@@ -231,15 +249,15 @@ L.Icon.Default.mergeOptions({ iconUrl: '...', ... });
 
 ## Files changed
 
-| File | Change |
-|---|---|
-| `package.json` | Remove `leaflet`, `@types/leaflet`; add `maplibre-gl`, `react-map-gl` |
-| `src/components/WW2Map.tsx` | Full rewrite — see phases above |
-| `src/pages/index.astro` | Verify `client:only="react"` is on `<WW2Map />` |
-| `src/components/Timeline.tsx` | No changes needed |
-| `src/components/FilterBar.tsx` | No changes needed |
-| `src/components/EventPanel.tsx` | No changes needed |
-| `src/types/events.ts` | No changes needed |
+| File                            | Change                                                                |
+| ------------------------------- | --------------------------------------------------------------------- |
+| `package.json`                  | Remove `leaflet`, `@types/leaflet`; add `maplibre-gl`, `react-map-gl` |
+| `src/components/WW2Map.tsx`     | Full rewrite — see phases above                                       |
+| `src/pages/index.astro`         | Verify `client:only="react"` is on `<WW2Map />`                       |
+| `src/components/Timeline.tsx`   | No changes needed                                                     |
+| `src/components/FilterBar.tsx`  | No changes needed                                                     |
+| `src/components/EventPanel.tsx` | No changes needed                                                     |
+| `src/types/events.ts`           | No changes needed                                                     |
 
 ---
 

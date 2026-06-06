@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react';
+import { useState, useRef, useCallback, useEffect } from "react";
 
 interface Props {
   totalDays: number;
@@ -11,18 +11,30 @@ const YEARS = [1939, 1940, 1941, 1942, 1943, 1944, 1945];
 
 function dayOffset(warStart: Date, year: number) {
   const d = new Date(`${year}-01-01`);
-  return Math.max(0, Math.round((d.getTime() - warStart.getTime()) / 86_400_000));
+  return Math.max(
+    0,
+    Math.round((d.getTime() - warStart.getTime()) / 86_400_000),
+  );
 }
 
-export default function Timeline({ totalDays, currentDay, warStart, onChange }: Props) {
-  const [playing, setPlaying]   = useState(false);
-  const [speed, setSpeed]       = useState(1); // days per second
-  const intervalRef             = useRef<number | null>(null);
-  const currentDayRef           = useRef(currentDay);
-  currentDayRef.current         = currentDay;
+export default function Timeline({
+  totalDays,
+  currentDay,
+  warStart,
+  onChange,
+}: Props) {
+  const [playing, setPlaying] = useState(false);
+  const [speed, setSpeed] = useState(1); // days per second
+  const intervalRef = useRef<number | null>(null);
+  const currentDayRef = useRef(currentDay);
+  currentDayRef.current = currentDay;
 
   const currentDate = new Date(warStart.getTime() + currentDay * 86_400_000);
-  const dateStr     = currentDate.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+  const dateStr = currentDate.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   const tick = useCallback(() => {
     const next = currentDayRef.current + 1;
@@ -39,19 +51,21 @@ export default function Timeline({ totalDays, currentDay, warStart, onChange }: 
     } else {
       if (intervalRef.current) clearInterval(intervalRef.current);
     }
-    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, [playing, speed, tick]);
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      if (e.code !== 'Space') return;
+      if (e.code !== "Space") return;
       const tag = (e.target as HTMLElement).tagName;
-      if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+      if (tag === "INPUT" || tag === "SELECT" || tag === "TEXTAREA") return;
       e.preventDefault();
-      setPlaying(p => !p);
+      setPlaying((p) => !p);
     };
-    window.addEventListener('keydown', handleKey);
-    return () => window.removeEventListener('keydown', handleKey);
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
   return (
@@ -60,7 +74,7 @@ export default function Timeline({ totalDays, currentDay, warStart, onChange }: 
       <div className="text-center mb-2.5">
         <span
           className="text-[26px] font-bold text-ink tracking-[0.03em] tabular-nums"
-          style={{ textShadow: '0 1px 6px rgba(230,57,70,0.25)' }}
+          style={{ textShadow: "0 1px 6px rgba(230,57,70,0.25)" }}
         >
           {dateStr}
         </span>
@@ -70,17 +84,17 @@ export default function Timeline({ totalDays, currentDay, warStart, onChange }: 
       <div className="flex items-center gap-3.5">
         {/* Play/Pause */}
         <button
-          onClick={() => setPlaying(p => !p)}
-          title={playing ? 'Pause (Space)' : 'Play (Space)'}
+          onClick={() => setPlaying((p) => !p)}
+          title={playing ? "Pause (Space)" : "Play (Space)"}
           style={{
-            background: playing ? '#e63946' : '#238636',
+            background: playing ? "#e63946" : "#238636",
             boxShadow: playing
-              ? '0 0 10px rgba(230,57,70,0.4)'
-              : '0 0 10px rgba(35,134,54,0.4)',
+              ? "0 0 10px rgba(230,57,70,0.4)"
+              : "0 0 10px rgba(35,134,54,0.4)",
           }}
           className="border-none rounded-lg text-white w-11 h-11 text-xl cursor-pointer shrink-0 flex items-center justify-center transition-[background,box-shadow] duration-150"
         >
-          {playing ? '⏸' : '▶'}
+          {playing ? "⏸" : "▶"}
         </button>
 
         {/* Track + year labels */}
@@ -90,12 +104,15 @@ export default function Timeline({ totalDays, currentDay, warStart, onChange }: 
             min={0}
             max={totalDays}
             value={currentDay}
-            onChange={e => { setPlaying(false); onChange(Number(e.target.value)); }}
-            style={{ accentColor: '#e63946' }}
+            onChange={(e) => {
+              setPlaying(false);
+              onChange(Number(e.target.value));
+            }}
+            style={{ accentColor: "#e63946" }}
             className="w-full cursor-pointer block h-5"
           />
           <div className="relative h-4 mt-0.5">
-            {YEARS.map(y => {
+            {YEARS.map((y) => {
               const left = (dayOffset(warStart, y) / totalDays) * 100;
               if (left > 100) return null;
               return (
@@ -113,10 +130,12 @@ export default function Timeline({ totalDays, currentDay, warStart, onChange }: 
 
         {/* Speed */}
         <div className="flex items-center gap-1.5 shrink-0">
-          <span className="text-[11px] text-faint uppercase tracking-[0.05em]">Speed</span>
+          <span className="text-[11px] text-faint uppercase tracking-[0.05em]">
+            Speed
+          </span>
           <select
             value={speed}
-            onChange={e => setSpeed(Number(e.target.value))}
+            onChange={(e) => setSpeed(Number(e.target.value))}
             className="bg-deep text-dim border border-rim rounded-md px-2 py-1.5 text-xs cursor-pointer"
           >
             <option value={1}>Slow (1 day/s)</option>

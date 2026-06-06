@@ -22,11 +22,11 @@ export default defineConfig({
       sidebar: [
         {
           label: "Guides",
-          items: [{ autogenerate: { directory: 'docs/guides' } }],
+          items: [{ autogenerate: { directory: "docs/guides" } }],
         },
         {
           label: "References",
-          items: [{ autogenerate: { directory: 'docs/references' } }],
+          items: [{ autogenerate: { directory: "docs/references" } }],
         },
       ],
     }),

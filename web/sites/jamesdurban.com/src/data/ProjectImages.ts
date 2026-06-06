@@ -12,5 +12,5 @@ export const projectImages: Record<string, ImageMetadata> = {
   blackcattattoos: blackCatImg,
   "push-notifications": pushNotificationsImg,
   "openbanking-vrp": openbankingVrpImg,
-  "stcatherinesgroup": stcatherinesgroupImg
+  stcatherinesgroup: stcatherinesgroupImg,
 };

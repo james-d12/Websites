@@ -17,5 +17,3 @@ type: professional
 During my time at PayPoint, when we began our shift towards using Event Driven Architecture and Domain Driven Design
 during a re-architecture of the core platform, I was tasked with implementing Variable Recurring Payments (VRP) for our
 clients.
-
-
