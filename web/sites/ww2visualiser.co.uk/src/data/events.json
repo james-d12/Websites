@@ -4065,6 +4065,32 @@
     ]
   },
   {
+    "id": "battles-of-narvik",
+    "title": "Battles of Narvik",
+    "date": "1940-04-09",
+    "endDate": "1940-06-08",
+    "sides": {
+      "allied": [
+        "norway",
+        "uk"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 68.420555555,
+    "lng": 17.56,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battles of Narvik were fought from 9 April to 8 June 1940, as a naval battle in Ofotfjord and as a land battle in the mountains surrounding the north Norwegian town of Narvik, as part of the Norwegian campaign of the Second World War.",
+    "links": [
+      {
+        "label": "Wikipedia: Battles of Narvik",
+        "url": "https://en.wikipedia.org/wiki/Battles_of_Narvik"
+      }
+    ]
+  },
+  {
     "id": "operation-weserbung",
     "title": "Operation Weserübung",
     "date": "1940-04-09",
@@ -4090,32 +4116,6 @@
       {
         "label": "Wikipedia: Operation Weserübung",
         "url": "https://en.wikipedia.org/wiki/Operation_Weser%C3%BCbung"
-      }
-    ]
-  },
-  {
-    "id": "battles-of-narvik",
-    "title": "Battles of Narvik",
-    "date": "1940-04-09",
-    "endDate": "1940-06-08",
-    "sides": {
-      "allied": [
-        "norway",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
-    },
-    "lat": 68.420555555,
-    "lng": 17.56,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battles of Narvik were fought from 9 April to 8 June 1940, as a naval battle in Ofotfjord and as a land battle in the mountains surrounding the north Norwegian town of Narvik, as part of the Norwegian campaign of the Second World War.",
-    "links": [
-      {
-        "label": "Wikipedia: Battles of Narvik",
-        "url": "https://en.wikipedia.org/wiki/Battles_of_Narvik"
       }
     ]
   },
@@ -8606,29 +8606,6 @@
     ]
   },
   {
-    "id": "battle-of-gazala",
-    "title": "Battle of Gazala",
-    "date": "1942-05-26",
-    "endDate": "1942-06-21",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 31.95,
-    "lng": 23.45,
-    "category": "battle",
-    "theater": "africa",
-    "article": "The Battle of Gazala, also the Gazala Offensive was fought near the village of Gazala during the Western Desert Campaign of the Second World War, west of the port of Tobruk in Libya, from 26 May to 21 June 1942. Axis troops consisting of German and Italian units fought the British Eighth Army composed mainly of British Commonwealth, Indian and Free French troops.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Gazala",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Gazala"
-      }
-    ]
-  },
-  {
     "id": "battle-of-bir-hakeim",
     "title": "Battle of Bir Hakeim",
     "date": "1942-05-26",
@@ -8651,6 +8628,29 @@
       {
         "label": "Wikipedia: Battle of Bir Hakeim",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Bir_Hakeim"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-gazala",
+    "title": "Battle of Gazala",
+    "date": "1942-05-26",
+    "endDate": "1942-06-21",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 31.95,
+    "lng": 23.45,
+    "category": "battle",
+    "theater": "africa",
+    "article": "The Battle of Gazala, also the Gazala Offensive was fought near the village of Gazala during the Western Desert Campaign of the Second World War, west of the port of Tobruk in Libya, from 26 May to 21 June 1942. Axis troops consisting of German and Italian units fought the British Eighth Army composed mainly of British Commonwealth, Indian and Free French troops.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Gazala",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Gazala"
       }
     ]
   },
@@ -9039,6 +9039,29 @@
     ]
   },
   {
+    "id": "battle-of-tulagi-and-gavututanambogo",
+    "title": "Battle of Tulagi and Gavutu–Tanambogo",
+    "date": "1942-08-07",
+    "endDate": "1942-08-09",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": -9.10722,
+    "lng": 160.14889,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Battle of Tulagi and Gavutu–Tanambogo was a land battle of the Pacific campaign of World War II, between the forces of the Imperial Japanese Navy and Allied ground forces. It took place 7–9 August 1942 on the Solomon Islands, during the initial Allied landings in the Guadalcanal campaign.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Tulagi and Gavutu–Tanambogo",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Tulagi_and_Gavutu%E2%80%93Tanambogo"
+      }
+    ]
+  },
+  {
     "id": "guadalcanal-campaign",
     "title": "Guadalcanal campaign",
     "date": "1942-08-07",
@@ -9060,29 +9083,6 @@
       {
         "label": "Wikipedia: Guadalcanal campaign",
         "url": "https://en.wikipedia.org/wiki/Guadalcanal_campaign"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-tulagi-and-gavututanambogo",
-    "title": "Battle of Tulagi and Gavutu–Tanambogo",
-    "date": "1942-08-07",
-    "endDate": "1942-08-09",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": []
-    },
-    "lat": -9.10722,
-    "lng": 160.14889,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Tulagi and Gavutu–Tanambogo was a land battle of the Pacific campaign of World War II, between the forces of the Imperial Japanese Navy and Allied ground forces. It took place 7–9 August 1942 on the Solomon Islands, during the initial Allied landings in the Guadalcanal campaign.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Tulagi and Gavutu–Tanambogo",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Tulagi_and_Gavutu%E2%80%93Tanambogo"
       }
     ]
   },
@@ -9403,8 +9403,13 @@
     "lng": 19.157406,
     "category": "atrocity",
     "theater": "europe",
-    "article": "",
-    "links": []
+    "article": "The Massacre in Budy was the massacre of female prisoners from the penal company of Auschwitz concentration camp, who were quartered in the Wirtschaftshof Budy subcamp, which took place in the evening of 5 October 1942. Around 90 female prisoners, most of them French Jewish women, were killed by German prisoner functionaries and SS guards.",
+    "links": [
+      {
+        "label": "Wikipedia: Massacre in Budy",
+        "url": "https://en.wikipedia.org/wiki/Massacre_in_Budy"
+      }
+    ]
   },
   {
     "id": "battle-of-bowmanville",
@@ -9458,29 +9463,6 @@
     ]
   },
   {
-    "id": "second-battle-of-el-alamein",
-    "title": "Second Battle of El Alamein",
-    "date": "1942-10-23",
-    "endDate": "1942-11-11",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 30.841388888,
-    "lng": 28.942777777,
-    "category": "battle",
-    "theater": "africa",
-    "article": "The Second Battle of El Alamein was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein. The First Battle of El Alamein and the Battle of Alam el Halfa had prevented the Axis from advancing further into Egypt.",
-    "links": [
-      {
-        "label": "Wikipedia: Second Battle of El Alamein",
-        "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
-      }
-    ]
-  },
-  {
     "id": "battle-for-henderson-field",
     "title": "Battle for Henderson Field",
     "date": "1942-10-23",
@@ -9500,6 +9482,29 @@
       {
         "label": "Wikipedia: Battle for Henderson Field",
         "url": "https://en.wikipedia.org/wiki/Battle_for_Henderson_Field"
+      }
+    ]
+  },
+  {
+    "id": "second-battle-of-el-alamein",
+    "title": "Second Battle of El Alamein",
+    "date": "1942-10-23",
+    "endDate": "1942-11-11",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 30.841388888,
+    "lng": 28.942777777,
+    "category": "battle",
+    "theater": "africa",
+    "article": "The Second Battle of El Alamein was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein. The First Battle of El Alamein and the Battle of Alam el Halfa had prevented the Axis from advancing further into Egypt.",
+    "links": [
+      {
+        "label": "Wikipedia: Second Battle of El Alamein",
+        "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
       }
     ]
   },
@@ -13670,30 +13675,6 @@
     ]
   },
   {
-    "id": "battle-of-cherbourg",
-    "title": "Battle of Cherbourg",
-    "date": "1944-06-06",
-    "endDate": "1944-06-30",
-    "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 49.638888888,
-    "lng": -1.625,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Cherbourg was part of the Battle of Normandy during World War II. It was fought immediately after the successful Allied landings on 6 June 1944. Allied troops, mainly American, isolated and captured the fortified port, which was considered vital to the campaign in Western Europe, in a hard-fought, month-long campaign.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Cherbourg",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Cherbourg"
-      }
-    ]
-  },
-  {
     "id": "battle-for-caen",
     "title": "Battle for Caen",
     "date": "1944-06-06",
@@ -13716,6 +13697,30 @@
       {
         "label": "Wikipedia: Battle for Caen",
         "url": "https://en.wikipedia.org/wiki/Battle_for_Caen"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-cherbourg",
+    "title": "Battle of Cherbourg",
+    "date": "1944-06-06",
+    "endDate": "1944-06-30",
+    "sides": {
+      "allied": [
+        "usa",
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 49.638888888,
+    "lng": -1.625,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Cherbourg was part of the Battle of Normandy during World War II. It was fought immediately after the successful Allied landings on 6 June 1944. Allied troops, mainly American, isolated and captured the fortified port, which was considered vital to the campaign in Western Europe, in a hard-fought, month-long campaign.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Cherbourg",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Cherbourg"
       }
     ]
   },
@@ -13946,28 +13951,6 @@
     ]
   },
   {
-    "id": "battle-of-villers-bocage",
-    "title": "Battle of Villers-Bocage",
-    "date": "1944-06-13",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 49.080555555,
-    "lng": -0.656111111,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Villers-Bocage took place during the Second World War on 13 June 1944, one week after the Normandy landings, which had begun the Western Allies' conquest of German-occupied France. The battle was the result of a British attempt to exploit a gap in the German defences west of the city of Caen. After one day of fighting in and around the small town of Villers-Bocage and a second day defending a position outside the town, the British force retreated.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Villers-Bocage",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Villers-Bocage"
-      }
-    ]
-  },
-  {
     "id": "battle-of-brville",
     "title": "Battle of Bréville",
     "date": "1944-06-13",
@@ -13986,6 +13969,28 @@
       {
         "label": "Wikipedia: Battle of Bréville",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Br%C3%A9ville"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-villers-bocage",
+    "title": "Battle of Villers-Bocage",
+    "date": "1944-06-13",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 49.080555555,
+    "lng": -0.656111111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Villers-Bocage took place during the Second World War on 13 June 1944, one week after the Normandy landings, which had begun the Western Allies' conquest of German-occupied France. The battle was the result of a British attempt to exploit a gap in the German defences west of the city of Caen. After one day of fighting in and around the small town of Villers-Bocage and a second day defending a position outside the town, the British force retreated.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Villers-Bocage",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Villers-Bocage"
       }
     ]
   },
@@ -14698,6 +14703,28 @@
     "links": []
   },
   {
+    "id": "battle-of-saint-l",
+    "title": "Battle of Saint-Lô",
+    "date": "1944-07-24",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": 49.12,
+    "lng": -1.09,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Saint-Lô was one of the three conflicts in the battle of the hedgerows which took place between July 7 and 19, 1944, in Saint-Lô, Manche, Normandy, France, just before Operation Cobra. Saint-Lô had fallen to Germany in 1940, and, after the Invasion of Normandy, the Americans targeted the city, as it served as a strategic crossroads. American bombardment caused heavy damage and a high number of casualties, which resulted in the martyr city being called \"The Capital of Ruins\", popularized in a report by Samuel Beckett.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Saint-Lô",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Saint-L%C3%B4"
+      }
+    ]
+  },
+  {
     "id": "battle-of-tinian",
     "title": "Battle of Tinian",
     "date": "1944-07-24",
@@ -14717,28 +14744,6 @@
       {
         "label": "Wikipedia: Battle of Tinian",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Tinian"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-saint-l",
-    "title": "Battle of Saint-Lô",
-    "date": "1944-07-24",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": []
-    },
-    "lat": 49.12,
-    "lng": -1.09,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Saint-Lô was one of the three conflicts in the battle of the hedgerows which took place between July 7 and 19, 1944, in Saint-Lô, Manche, Normandy, France, just before Operation Cobra. Saint-Lô had fallen to Germany in 1940, and, after the Invasion of Normandy, the Americans targeted the city, as it served as a strategic crossroads. American bombardment caused heavy damage and a high number of casualties, which resulted in the martyr city being called \"The Capital of Ruins\", popularized in a report by Samuel Beckett.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Saint-Lô",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Saint-L%C3%B4"
       }
     ]
   },
@@ -15858,6 +15863,23 @@
     ]
   },
   {
+    "id": "battle-of-the-nijmegen-salient",
+    "title": "Battle of the Nijmegen Salient",
+    "date": "1944-09-30",
+    "endDate": "1944-10-08",
+    "lat": 51.916666666,
+    "lng": 5.85,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of the Nijmegen salient or the Defence of the Nijmegen bridgehead was a series of engagements that took place in the Netherlands during World War II between 30 September and 8 October 1944. The battle occurred in the aftermath of Operation Market Garden, a failed attempt by the Allies to cut off German forces in the Netherlands and end the war quickly.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of the Nijmegen Salient",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nijmegen_salient"
+      }
+    ]
+  },
+  {
     "id": "battle-of-overloon",
     "title": "Battle of Overloon",
     "date": "1944-09-30",
@@ -15877,23 +15899,6 @@
       {
         "label": "Wikipedia: Battle of Overloon",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Overloon"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-the-nijmegen-salient",
-    "title": "Battle of the Nijmegen Salient",
-    "date": "1944-09-30",
-    "endDate": "1944-10-08",
-    "lat": 51.916666666,
-    "lng": 5.85,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of the Nijmegen salient or the Defence of the Nijmegen bridgehead was a series of engagements that took place in the Netherlands during World War II between 30 September and 8 October 1944. The battle occurred in the aftermath of Operation Market Garden, a failed attempt by the Allies to cut off German forces in the Netherlands and end the war quickly.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of the Nijmegen Salient",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nijmegen_salient"
       }
     ]
   },
@@ -16636,8 +16641,13 @@
     "lng": 6.232047,
     "category": "atrocity",
     "theater": "europe",
-    "article": "",
-    "links": []
+    "article": "The 333rd Field Artillery Battalion was a United States Army unit of racially segregated African-American troops during World War II.",
+    "links": [
+      {
+        "label": "Wikipedia: Wereth 11 Massacre",
+        "url": "https://en.wikipedia.org/wiki/Wereth_11_Massacre"
+      }
+    ]
   },
   {
     "id": "malmedy-massacre",
