@@ -1,0 +1,18 @@
+---
+import '../styles/global.css';
+import EventsList from '../components/EventsList';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>WW2 Events</title>
+    <style>html, body { overflow: auto; height: auto; }</style>
+  </head>
+  <body>
+    <EventsList client:load />
+  </body>
+</html>

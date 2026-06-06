@@ -1,0 +1,27 @@
+{
+  "name": "ww2-visualiser",
+  "type": "module",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro",
+    "fetch-data": "tsx src/etl/fetch-wikidata.ts",
+    "fetch-data:dry": "tsx src/etl/fetch-wikidata.ts --dry-run",
+    "prebuild": "tsx src/etl//fetch-wikidata.ts"
+  },
+  "dependencies": {
+    "@astrojs/react": "^5.0.6",
+    "@tailwindcss/vite": "^4.3.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "maplibre-gl": "^5.24.0",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-map-gl": "^8.1.1",
+    "tsx": "^4.22.3"
+  }
+}
