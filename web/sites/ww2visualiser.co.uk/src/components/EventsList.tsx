@@ -235,21 +235,25 @@ export default function EventsList() {
                   </button>
                 )}
 
-                {event.links && event.links.length > 0 && (
-                  <div className="mt-3 flex flex-wrap gap-3">
-                    {event.links.map((l) => (
-                      <a
-                        key={l.url}
-                        href={l.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-link text-xs hover:underline"
-                      >
-                        {l.label} ↗
-                      </a>
-                    ))}
-                  </div>
-                )}
+                <div className="mt-3 flex flex-wrap gap-3">
+                  <a
+                    href={`/?event=${event.id}`}
+                    className="text-link text-xs hover:underline"
+                  >
+                    View on map →
+                  </a>
+                  {event.links?.map((l) => (
+                    <a
+                      key={l.url}
+                      href={l.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-link text-xs hover:underline"
+                    >
+                      {l.label} ↗
+                    </a>
+                  ))}
+                </div>
               </article>
             );
           })}

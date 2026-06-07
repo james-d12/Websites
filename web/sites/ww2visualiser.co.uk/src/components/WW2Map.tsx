@@ -1,5 +1,5 @@
-import { useState, useCallback } from "react";
-import Map, { Marker } from "react-map-gl/maplibre";
+import { useState, useCallback, useRef } from "react";
+import Map, { Marker, type MapRef } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { WW2Event, EventCategory } from "../types/events";
 import eventsData from "../data/events.json";
@@ -44,6 +44,7 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [speed, setSpeed] = useState(1); // days per second
+  const mapRef = useRef<MapRef>(null);
 
   const currentDate = new Date(WAR_START.getTime() + currentDay * 86_400_000);
 
@@ -65,6 +66,23 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
   );
 
   const visibleEvents = events.filter(isEventVisible);
+
+  const handleMapLoad = useCallback(() => {
+    const eventId = new URLSearchParams(window.location.search).get("event");
+    if (!eventId) return;
+
+    const target = events.find((ev) => ev.id === eventId);
+    if (!target) return;
+
+    const day = Math.round(
+      (new Date(target.date).getTime() - WAR_START.getTime()) / 86_400_000,
+    );
+    setCurrentDay(Math.min(Math.max(day, 0), TOTAL_DAYS));
+    setSelectedEvent(target);
+    mapRef.current?.flyTo({ center: [target.lng, target.lat], zoom: 6 });
+
+    history.replaceState(null, "", "/");
+  }, []);
 
   const toggleFilter = useCallback((cat: EventCategory) => {
     setActiveFilters((prev) => {
@@ -143,6 +161,8 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
 
       <div className="flex-1 relative overflow-hidden">
         <Map
+          ref={mapRef}
+          onLoad={handleMapLoad}
           initialViewState={{ longitude: 10, latitude: 30, zoom: 3 }}
           minZoom={2}
           maxZoom={10}
