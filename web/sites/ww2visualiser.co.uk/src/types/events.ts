@@ -99,7 +99,7 @@ export const COUNTRY_FLAGS: Record<Country, string> = {
   latvia: "🇱🇻",
   lithuania: "🇱🇹",
   yugoslavia: "🇷🇸",
-  germany: "卐",
+  germany: "🇩🇪",
   italy: "🇮🇹",
   japan: "🇯🇵",
   romania: "🇷🇴",

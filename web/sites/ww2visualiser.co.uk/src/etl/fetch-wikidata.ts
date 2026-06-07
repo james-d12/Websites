@@ -24,7 +24,9 @@ const CACHE_PATH = join(__dirname, "wiki-cache.json");
 const DRY_RUN = process.argv.includes("--dry-run");
 
 const SPARQL_ENDPOINT = "https://query.wikidata.org/sparql";
+const WP_API = "https://en.wikipedia.org/w/api.php";
 const WP_SUMMARY_API = "https://en.wikipedia.org/api/rest_v1/page/summary";
+const BATTLE_LIST_PAGE = "List of World War II battles";
 const UA =
   "WW2Visualiser/1.0 (build-time data fetcher; contact james_d02@protonmail.com)";
 
@@ -314,6 +316,107 @@ const QUERIES: QuerySpec[] = [
   },
 ];
 
+// ── "List of World War II battles" cross-reference ───────────────────────────
+//
+// The type-based SPARQL queries above miss battles that Wikidata editors typed
+// or tagged inconsistently. Wikipedia's "List of World War II battles" article
+// is hand-curated and links to (almost) every battle article, so we resolve
+// each linked article to its Wikidata QID via the Wikipedia API, then pull
+// those QIDs through Wikidata (via SPARQL VALUES) so they go through the same
+// coords/date/combatant enrichment as everything else.
+
+interface WpLinksPage {
+  links?: { title: string }[];
+}
+interface WpLinksResponse {
+  continue?: { plcontinue: string };
+  query: { pages: Record<string, WpLinksPage> };
+}
+
+interface WpPagePropsPage {
+  pageprops?: { wikibase_item?: string };
+}
+interface WpPagePropsResponse {
+  query: { pages: Record<string, WpPagePropsPage> };
+}
+
+async function wpApiGet<T>(params: Record<string, string>): Promise<T> {
+  const url = new URL(WP_API);
+  url.searchParams.set("action", "query");
+  url.searchParams.set("format", "json");
+  for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
+  return withRetry(async () => {
+    const res = await fetch(url.toString(), { headers: { "User-Agent": UA } });
+    if (!res.ok) throw new Error(`Wikipedia API ${res.status}`);
+    return (await res.json()) as T;
+  });
+}
+
+/** All article titles linked from the WW2 battle list page (paginated). */
+async function fetchListedBattleTitles(): Promise<string[]> {
+  const titles: string[] = [];
+  let plcontinue: string | undefined;
+  do {
+    const data = await wpApiGet<WpLinksResponse>({
+      titles: BATTLE_LIST_PAGE,
+      prop: "links",
+      plnamespace: "0",
+      pllimit: "500",
+      ...(plcontinue ? { plcontinue } : {}),
+    });
+    for (const page of Object.values(data.query.pages)) {
+      for (const link of page.links ?? []) titles.push(link.title);
+    }
+    plcontinue = data.continue?.plcontinue;
+  } while (plcontinue);
+  return titles;
+}
+
+/** Resolves Wikipedia article titles to their Wikidata QIDs (follows redirects). */
+async function resolveTitlesToQids(titles: string[]): Promise<string[]> {
+  const qids = new Set<string>();
+  const BATCH = 50;
+  for (let i = 0; i < titles.length; i += BATCH) {
+    const batch = titles.slice(i, i + BATCH);
+    const data = await wpApiGet<WpPagePropsResponse>({
+      titles: batch.join("|"),
+      prop: "pageprops",
+      ppprop: "wikibase_item",
+      redirects: "1",
+    });
+    for (const page of Object.values(data.query.pages)) {
+      const qid = page.pageprops?.wikibase_item;
+      if (qid) qids.add(qid);
+    }
+    if (i + BATCH < titles.length) await sleep(300);
+  }
+  return [...qids];
+}
+
+function listBattlesQuery(qids: string[]): string {
+  return `
+    SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
+      VALUES ?item { ${qids.map((q) => `wd:${q}`).join(" ")} }
+      ?item wdt:P625 ?coords.
+      ${DATE_OPTIONALS}
+      ${WP_OPTIONAL}
+      ${COMBATANT_OPTIONAL}
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+    }`;
+}
+
+/** Pulls the given QIDs through Wikidata in URL-length-safe chunks. */
+async function fetchListBattleRows(qids: string[]): Promise<SparqlBinding[]> {
+  const CHUNK = 80;
+  const rows: SparqlBinding[] = [];
+  for (let i = 0; i < qids.length; i += CHUNK) {
+    const chunk = qids.slice(i, i + CHUNK);
+    rows.push(...(await sparql("list-battles", listBattlesQuery(chunk))));
+    if (i + CHUNK < qids.length) await sleep(500);
+  }
+  return rows;
+}
+
 // ── Country mapping ───────────────────────────────────────────────────────────
 
 // Maps Wikidata country QIDs to our Country type.
@@ -553,6 +656,31 @@ async function main(): Promise<void> {
       console.log(`  [${key}] ${result.value.length} rows`);
       allRows.push(...result.value);
     }
+  }
+
+  console.log(`Cross-referencing "${BATTLE_LIST_PAGE}"…`);
+  try {
+    const titles = await fetchListedBattleTitles();
+    console.log(`  ${titles.length} linked articles`);
+    const qids = await resolveTitlesToQids(titles);
+    console.log(`  ${qids.length} resolved to Wikidata items`);
+    const listSpec: QuerySpec = {
+      key: "list-battles",
+      category: "battle",
+      dateFallback: true,
+      query: "",
+    };
+    const listRows = (await fetchListBattleRows(qids)).map((r) => ({
+      ...r,
+      _spec: listSpec,
+      _qid: r.item.value.split("/").pop()!,
+    }));
+    console.log(`  [list-battles] ${listRows.length} rows`);
+    allRows.push(...listRows);
+  } catch (err) {
+    console.warn(
+      `  [list-battles] failed: ${err instanceof Error ? err.message : String(err)}`,
+    );
   }
 
   // Deduplicate by QID, accumulating combatant country QIDs across rows.
