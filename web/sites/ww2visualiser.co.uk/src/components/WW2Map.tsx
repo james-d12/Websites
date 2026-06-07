@@ -5,7 +5,7 @@ import type { WW2Event, EventCategory } from "../types/events";
 import eventsData from "../data/events.json";
 import EventPanel from "./EventPanel";
 import Timeline from "./Timeline";
-import FilterBar from "./FilterBar";
+import FilterSidebar from "./FilterSidebar";
 
 const events = eventsData as WW2Event[];
 
@@ -42,6 +42,8 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
     new Set(Object.keys(CATEGORY_COLORS) as EventCategory[]),
   );
   const [searchQuery, setSearchQuery] = useState("");
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [speed, setSpeed] = useState(1); // days per second
 
   const currentDate = new Date(WAR_START.getTime() + currentDay * 86_400_000);
 
@@ -85,6 +87,17 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
       <header className="bg-surface border-b border-rim px-5 pt-2 pb-1.5 shrink-0 flex flex-col gap-1.5">
         {/* Title row */}
         <div className="flex items-center gap-4">
+          <button
+            onClick={() => setSidebarOpen((o) => !o)}
+            title={sidebarOpen ? "Close filters" : "Open filters"}
+            className="shrink-0 w-8 h-8 flex items-center justify-center rounded border border-rim text-muted hover:text-ink hover:border-accent/60 bg-transparent cursor-pointer transition-colors duration-150"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+              <rect x="2" y="3.5" width="12" height="1.6" rx="0.8" />
+              <rect x="2" y="7.2" width="12" height="1.6" rx="0.8" />
+              <rect x="2" y="10.9" width="12" height="1.6" rx="0.8" />
+            </svg>
+          </button>
           <h1 className="m-0 text-lg font-bold tracking-[0.05em] text-ink shrink-0">
             WW2 <span className="text-accent">Interactive Map</span>
           </h1>
@@ -126,15 +139,6 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
             Events list
           </a>
         </div>
-
-        {/* Category filter pills */}
-        <FilterBar
-          categories={Object.keys(CATEGORY_COLORS) as EventCategory[]}
-          activeFilters={activeFilters}
-          colors={CATEGORY_COLORS}
-          icons={CATEGORY_ICONS}
-          onToggle={toggleFilter}
-        />
       </header>
 
       <div className="flex-1 relative overflow-hidden">
@@ -175,6 +179,18 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
           })}
         </Map>
 
+        <FilterSidebar
+          open={sidebarOpen}
+          onClose={() => setSidebarOpen(false)}
+          categories={Object.keys(CATEGORY_COLORS) as EventCategory[]}
+          activeFilters={activeFilters}
+          colors={CATEGORY_COLORS}
+          icons={CATEGORY_ICONS}
+          onToggle={toggleFilter}
+          speed={speed}
+          onSpeedChange={setSpeed}
+        />
+
         {selectedEvent && (
           <EventPanel
             event={selectedEvent}
@@ -189,6 +205,7 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
         currentDay={currentDay}
         warStart={WAR_START}
         onChange={setCurrentDay}
+        speed={speed}
       />
     </div>
   );

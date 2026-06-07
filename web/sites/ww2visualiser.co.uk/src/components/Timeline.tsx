@@ -5,6 +5,7 @@ interface Props {
   currentDay: number;
   warStart: Date;
   onChange: (day: number) => void;
+  speed: number;
 }
 
 const YEARS = [1939, 1940, 1941, 1942, 1943, 1944, 1945];
@@ -22,9 +23,9 @@ export default function Timeline({
   currentDay,
   warStart,
   onChange,
+  speed,
 }: Props) {
   const [playing, setPlaying] = useState(false);
-  const [speed, setSpeed] = useState(1); // days per second
   const intervalRef = useRef<number | null>(null);
   const currentDayRef = useRef(currentDay);
   currentDayRef.current = currentDay;
@@ -137,22 +138,6 @@ export default function Timeline({
           </div>
         </div>
 
-        {/* Speed */}
-        <div className="flex items-center gap-2 shrink-0">
-          <span className="text-[12px] text-faint uppercase tracking-[0.05em]">
-            Speed
-          </span>
-          <select
-            value={speed}
-            onChange={(e) => setSpeed(Number(e.target.value))}
-            className="bg-deep text-dim border border-rim rounded-md px-2.5 py-2 text-sm cursor-pointer"
-          >
-            <option value={1}>Slow (1 day/s)</option>
-            <option value={7}>Normal (1 wk/s)</option>
-            <option value={30}>Fast (1 month/s)</option>
-            <option value={90}>Very fast (1 qtr/s)</option>
-          </select>
-        </div>
       </div>
     </div>
   );
