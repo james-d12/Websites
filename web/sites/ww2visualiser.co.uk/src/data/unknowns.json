@@ -1,0 +1,2118 @@
+[
+  {
+    "id": "wietmarschen-concentration-camp",
+    "title": "Wietmarschen concentration camp",
+    "date": "1938-01-01",
+    "lat": 52.5606,
+    "lng": 7.11777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-wol-wodysk",
+    "title": "Battle of Wolą Wodyńską",
+    "date": "1939-09-01",
+    "lat": 52.038056,
+    "lng": 22.021111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "occupation-of-stryj-by-the-ukrainians-in-1939",
+    "title": "Occupation of Stryj by the Ukrainians in 1939",
+    "date": "1939-09-01",
+    "lat": 49.25,
+    "lng": 23.85,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "sterzhnevsky-lodgement",
+    "title": "Sterzhnevsky lodgement",
+    "date": "1939-09-01",
+    "lat": 57.06053056,
+    "lng": 28.81281111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-streensk-prsmyk",
+    "title": "Battle of Strečenský průsmyk",
+    "date": "1939-09-01",
+    "lat": 49.170755,
+    "lng": 18.877258,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-hohneck",
+    "title": "Battle of Hohneck",
+    "date": "1939-09-01",
+    "lat": 48.03803,
+    "lng": 7.01667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-the-rhine",
+    "title": "Battle of the Rhine",
+    "date": "1939-09-01",
+    "lat": 48.166666666,
+    "lng": 7.55,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bialochowo-massacre",
+    "title": "Bialochowo massacre",
+    "date": "1939-09-01",
+    "lat": 53.5425,
+    "lng": 18.864722,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kaufering-ii-concentration-camp",
+    "title": "Kaufering II concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.0499468,
+    "lng": 10.8229218,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "secureni-concentration-camp",
+    "title": "Secureni concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.45,
+    "lng": 27.416667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "maria-lanzendorf-concentration-camp",
+    "title": "Maria Lanzendorf concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.099722,
+    "lng": 16.421111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "nazi-forced-labour-in-sotysowice",
+    "title": "Nazi forced labour in Sołtysowice",
+    "date": "1939-09-01",
+    "lat": 51.145027777,
+    "lng": 17.073694444,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "smukaa-concentration-camp",
+    "title": "Smukała concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.191944,
+    "lng": 17.966667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "masiukoyna-extermination-camp",
+    "title": "Masiukoŭščyna extermination camp",
+    "date": "1939-09-01",
+    "lat": 53.9311,
+    "lng": 27.48086,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "graslitz-concentration-camp",
+    "title": "Graslitz concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.333301,
+    "lng": 12.516699,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "spergau-labor-education-camp",
+    "title": "Spergau Labor Education Camp",
+    "date": "1939-09-01",
+    "lat": 51.3,
+    "lng": 12.033333333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "stassfurt-i-concentration-camp",
+    "title": "Stassfurt I concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.866699,
+    "lng": 11.583299,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "beec-forced-labor-camp",
+    "title": "Bełżec forced-labor camp",
+    "date": "1939-09-01",
+    "lat": 50.384444,
+    "lng": 23.438333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ampfing-concentration-camp---waldlager-v",
+    "title": "Ampfing (concentration camp) - Waldlager V",
+    "date": "1939-09-01",
+    "lat": 48.237637,
+    "lng": 12.425687,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hannover-stcken-continental-concentration-camp",
+    "title": "Hannover-Stöcken (Continental) concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.4093,
+    "lng": 9.62907,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "nimptsch-concentration-camp",
+    "title": "Nimptsch concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.716701,
+    "lng": 16.85,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "wesuwe-concentration-camp",
+    "title": "Wesuwe concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.762727,
+    "lng": 7.142765,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kaufering-vi-concentration-camp",
+    "title": "Kaufering VI concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.050694444,
+    "lng": 10.617194444,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rosslau-concentration-camp",
+    "title": "Rosslau concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.8833,
+    "lng": 12.25,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "martha-ii-concentration-camp",
+    "title": "Martha II concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.1935,
+    "lng": 10.3991,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "neusustrum-concentration-camp",
+    "title": "Neusustrum concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.901869444,
+    "lng": 7.169327777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "porta-westfalica-concentration-camp",
+    "title": "Porta Westfalica concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.2167,
+    "lng": 8.9333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hamburg-hammerbrook-concentration-camp",
+    "title": "Hamburg-Hammerbrook concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.55075,
+    "lng": 10.02238889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bad-gandersheim-concentration-camp",
+    "title": "Bad Gandersheim concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.8825,
+    "lng": 10.031,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "salzgitter-bad-concentration-camp",
+    "title": "Salzgitter-Bad concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.0385,
+    "lng": 10.3938,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "wilhelmshaven-concentration-camp",
+    "title": "Wilhelmshaven concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.51525309,
+    "lng": 8.086887,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "blankenburg-oesig-concentration-camp",
+    "title": "Blankenburg-Oesig concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.7809,
+    "lng": 10.9082,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "mnchmhle-concentration-camp",
+    "title": "Münchmühle concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.8216,
+    "lng": 8.9883,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kamp-dobbendal",
+    "title": "Kamp Dobbendal",
+    "date": "1939-09-01",
+    "lat": 52.971944444,
+    "lng": 6.792222222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "schaarshoek-concentration-camp",
+    "title": "Schaarshoek concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.435833,
+    "lng": 6.233889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "meppen-dalum-concentration-camp",
+    "title": "Meppen-Dalum concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.6833,
+    "lng": 7.3167,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rhede-brual-concentration-camp",
+    "title": "Rhede-Brual concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.0861,
+    "lng": 7.22944,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kz-hohenbruch",
+    "title": "KZ Hohenbruch",
+    "date": "1939-09-01",
+    "lat": 54.97613889,
+    "lng": 21.41311111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ankenbuck-concentration-camp",
+    "title": "Ankenbuck concentration camp",
+    "date": "1939-09-01",
+    "lat": 48,
+    "lng": 8.51278,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "beendorf-concentration-camp",
+    "title": "Beendorf concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.2428,
+    "lng": 11.0852,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "pavlos-melas-camp",
+    "title": "Pavlos Melas Camp",
+    "date": "1939-09-01",
+    "lat": 40.66,
+    "lng": 22.938611111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "uphusen-concentration-camp",
+    "title": "Uphusen concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.0268,
+    "lng": 8.98733,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "unterl-concentration-camp",
+    "title": "Unterlüß concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.880009,
+    "lng": 10.285435,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "reichenbach-concentration-camp-1933",
+    "title": "Reichenbach concentration camp (1933)",
+    "date": "1939-09-01",
+    "lat": 50.599998,
+    "lng": 12.3,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hambhren-concentration-camp",
+    "title": "Hambühren concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.6333,
+    "lng": 9.9833,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "blankenburg-regenstein-concentration-camp",
+    "title": "Blankenburg-Regenstein concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.8108,
+    "lng": 10.9749,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "site-of-nazi-concentration-camp-loibl-nord",
+    "title": "Site of Nazi concentration camp Loibl Nord",
+    "date": "1939-09-01",
+    "lat": 46.44399722,
+    "lng": 14.25191389,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rossla-concentration-camp",
+    "title": "Rossla concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.4667,
+    "lng": 11.0833,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "frankfurt-am-main-concentration-camp",
+    "title": "Frankfurt am Main concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.10116667,
+    "lng": 8.64297222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hinterbrhl-concentration-camp-memorial",
+    "title": "Hinterbrühl concentration camp memorial",
+    "date": "1939-09-01",
+    "lat": 48.08962,
+    "lng": 16.26051,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "skarysko-kamienna-concentration-camp",
+    "title": "Skarżysko-Kamienna concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.116666,
+    "lng": 20.9,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "leonberg-concentration-camp",
+    "title": "Leonberg concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.797611111,
+    "lng": 9.022777777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "engerhafe-concentration-camp",
+    "title": "Engerhafe concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.4872,
+    "lng": 7.31528,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hannover-stcken-akkumulatorenfabrik-concentration-camp",
+    "title": "Hannover-Stöcken (Akkumulatorenfabrik) concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.4109,
+    "lng": 9.63249,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "schwarzheide-concentration-camp",
+    "title": "Schwarzheide concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.4833,
+    "lng": 13.8667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "neu-dachs-concentration-camp",
+    "title": "Neu-Dachs concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.21342,
+    "lng": 19.23936,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "milbertshofen-concentration-camp",
+    "title": "Milbertshofen concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.195,
+    "lng": 11.5733,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ahrensbk-concentration-camp",
+    "title": "Ahrensbök concentration camp",
+    "date": "1939-09-01",
+    "lat": 54.0261,
+    "lng": 10.5936,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "salzwedel-concentration-camp",
+    "title": "Salzwedel concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.85,
+    "lng": 11.15,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gross-hesepe-concentration-camp",
+    "title": "Gross Hesepe concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.62222,
+    "lng": 7.20556,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kz-meisnerhof",
+    "title": "KZ Meisnerhof",
+    "date": "1939-09-01",
+    "lat": 52.663722222,
+    "lng": 13.215305555,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "walchum-concentration-camp",
+    "title": "Walchum concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.931416666,
+    "lng": 7.208638888,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "uelzen-concentration-camp",
+    "title": "Uelzen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.9746,
+    "lng": 10.562,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "lengenfeld-concentration-camp",
+    "title": "Lengenfeld concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.566699,
+    "lng": 12.3667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "weferlingen-concentration-camp",
+    "title": "Weferlingen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.299999,
+    "lng": 11.066699,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bremen-blumenthal-concentration-camp",
+    "title": "Bremen-Blumenthal concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.1815,
+    "lng": 8.56473,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "alexisdorf-concentration-camp",
+    "title": "Alexisdorf concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.61556,
+    "lng": 6.97861,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "brnn-concentration-camp",
+    "title": "Brünn concentration camp",
+    "date": "1939-09-01",
+    "lat": 49.20222222,
+    "lng": 16.57277778,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "labor-camp-blechhammer",
+    "title": "Labor camp Blechhammer",
+    "date": "1939-09-01",
+    "lat": 50.354722,
+    "lng": 18.258611,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gunskirchen-concentration-camp",
+    "title": "Gunskirchen concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.134444,
+    "lng": 13.943056,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "barkhausen-concentration-camp",
+    "title": "Barkhausen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.246341,
+    "lng": 8.912079,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "arbeitslager-langenbielau-i",
+    "title": "Arbeitslager Langenbielau I",
+    "date": "1939-09-01",
+    "lat": 50.717222222,
+    "lng": 16.6225,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "darnysia-concentration-camp",
+    "title": "Darnysia concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.429444444,
+    "lng": 30.694722222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hradischko-concentration-camp",
+    "title": "Hradischko concentration camp",
+    "date": "1939-09-01",
+    "lat": 49.866699,
+    "lng": 14.4167,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gunskirchen-wels-i-concentration-camp",
+    "title": "Gunskirchen-Wels I concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.112964358,
+    "lng": 13.940360901,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "fullen-concentration-camp",
+    "title": "Fullen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.7,
+    "lng": 7.17694,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "eutin-concentration-camp",
+    "title": "Eutin concentration camp",
+    "date": "1939-09-01",
+    "lat": 54.134,
+    "lng": 10.618,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "de-vecht-concentration-camp",
+    "title": "De Vecht concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.5,
+    "lng": 6.25,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rees-concentration-camp",
+    "title": "Rees concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.7792,
+    "lng": 6.40722,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "dorohucza-concentration-camp",
+    "title": "Dorohucza concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.16,
+    "lng": 22.99388889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-krasn",
+    "title": "Battle of Krasną",
+    "date": "1939-09-06",
+    "lat": 51.128333,
+    "lng": 20.471389,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-odrzywo",
+    "title": "Battle of Odrzywoł",
+    "date": "1939-09-08",
+    "lat": 51.548889,
+    "lng": 20.493333,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-mrog",
+    "title": "Battle of Mrogą",
+    "date": "1939-09-10",
+    "sides": {
+      "allied": [
+        "poland"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 51.964167,
+    "lng": 19.711667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "trip-to-wawrzyszew",
+    "title": "Trip to Wawrzyszew",
+    "date": "1939-09-10",
+    "lat": 52.278888888,
+    "lng": 20.926944444,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "raid-on-okcie-and-zauski",
+    "title": "Raid on Okęcie and Załuski",
+    "date": "1939-09-12",
+    "lat": 52.165833333,
+    "lng": 20.967222222,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-bigorajem",
+    "title": "Battle of Biłgorajem",
+    "date": "1939-09-16",
+    "endDate": "1939-09-17",
+    "lat": 50.533333,
+    "lng": 22.716667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-kamionka-strumiowa",
+    "title": "Battle of Kamionka Strumiłowa",
+    "date": "1939-09-21",
+    "lat": 50.109111,
+    "lng": 24.343278,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "skirmish-near-kalety",
+    "title": "Skirmish near Kalety",
+    "date": "1939-09-23",
+    "lat": 53.916667,
+    "lng": 23.566667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-rawa-ruska",
+    "title": "Battle of Rawa Ruska",
+    "date": "1939-09-24",
+    "endDate": "1939-09-25",
+    "lat": 50.25,
+    "lng": 23.616667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "war-crime-in-mokrany",
+    "title": "war crime in Mokrany",
+    "date": "1939-09-28",
+    "lat": 51.833333,
+    "lng": 24.25,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "sinking-of-hms-royal-oak",
+    "title": "Sinking of HMS Royal Oak",
+    "date": "1939-10-14",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 58.9,
+    "lng": -3.05,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "murder-in-the-bratian-forest",
+    "title": "murder in the Bratian Forest",
+    "date": "1939-10-15",
+    "lat": 53.458333,
+    "lng": 19.611111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "zbylitowska-gra-massacre",
+    "title": "Zbylitowska Góra massacre",
+    "date": "1939-12-11",
+    "endDate": "1944-01-01",
+    "lat": 49.985361,
+    "lng": 20.899806,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bochnia-massacre",
+    "title": "Bochnia massacre",
+    "date": "1939-12-18",
+    "lat": 49.963888888,
+    "lng": 20.424722222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-eiunna-bridge",
+    "title": "Battle of Eiunna Bridge",
+    "date": "1940-04-26",
+    "lat": 62.199450297,
+    "lng": 10.382799547,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kjrem-campaign",
+    "title": "Kjørem Campaign",
+    "date": "1940-04-27",
+    "lat": 61.662526358,
+    "lng": 9.642555722,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-stonne",
+    "title": "Battle of Stonne",
+    "date": "1940-05-25",
+    "lat": 49.5508,
+    "lng": 4.9272,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bombing-of-chemnitz-in-world-war-ii",
+    "title": "Bombing of Chemnitz in World War II",
+    "date": "1940-08-17",
+    "endDate": "1945-04-11",
+    "lat": 50.833333333,
+    "lng": 12.916666666,
+    "category": "air",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-for-alytus",
+    "title": "Battle for Alytus",
+    "date": "1941-06-22",
+    "endDate": "1941-06-23",
+    "lat": 54.388889,
+    "lng": 24.047222,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "solovyovo-crossing",
+    "title": "Solovyovo crossing",
+    "date": "1941-07-01",
+    "endDate": "1941-08-01",
+    "lat": 54.923051,
+    "lng": 32.718705,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "stalag-352",
+    "title": "Stalag 352",
+    "date": "1941-08-01",
+    "lat": 53.9311,
+    "lng": 27.480861111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "khorol-yama-concentration-camp",
+    "title": "Khorol Yama concentration camp",
+    "date": "1941-09-20",
+    "lat": 49.77833333,
+    "lng": 33.26138889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "melitopol-massacre",
+    "title": "Melitopol massacre",
+    "date": "1941-10-01",
+    "lat": 46.833333,
+    "lng": 35.366667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "massacre-of-kerdyllia",
+    "title": "Massacre of Kerdyllia",
+    "date": "1941-10-17",
+    "lat": 40.806319025,
+    "lng": 23.801207752,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "christmas-massacre-mass-murder-in-simferopol",
+    "title": "Christmas massacre (mass murder in Simferopol)",
+    "date": "1941-12-01",
+    "lat": 44.95,
+    "lng": 34.1,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "zgierz-massacre",
+    "title": "Zgierz massacre",
+    "date": "1942-03-20",
+    "lat": 51.855,
+    "lng": 19.406111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "concentration-camp-arbeitsdorf",
+    "title": "Concentration camp \"Arbeitsdorf\"",
+    "date": "1942-04-01",
+    "endDate": "1942-10-01",
+    "lat": 52.439471687,
+    "lng": 10.799152284,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-at-bir-el-harmat",
+    "title": "Battle at Bir el Harmat",
+    "date": "1942-06-02",
+    "endDate": "1942-06-11",
+    "lat": 31.61666667,
+    "lng": 23.46666667,
+    "category": "battle",
+    "theater": "africa",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "fight-at-the-saints-cyril-and-methodius-cathedral",
+    "title": "Fight at the Saints Cyril and Methodius Cathedral",
+    "date": "1942-06-18",
+    "lat": 50.0759,
+    "lng": 14.41685,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "action-of-5-july-1942",
+    "title": "Action of 5 July 1942",
+    "date": "1942-07-05",
+    "lat": 52,
+    "lng": 177.66,
+    "category": "naval",
+    "theater": "pacific",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "attack-of-the-u-209-on-the-convoy-near-matveyev-island",
+    "title": "Attack of the U-209 on the convoy near Matveyev Island",
+    "date": "1942-08-17",
+    "lat": 69.5,
+    "lng": 58.53,
+    "category": "naval",
+    "theater": "atlantic",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "night-operation",
+    "title": "Night operation",
+    "date": "1942-09-09",
+    "sides": {
+      "allied": [
+        "ussr"
+      ],
+      "axis": []
+    },
+    "lat": 54.298115,
+    "lng": 28.978179,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "attack-on-stalingrad",
+    "title": "Attack on Stalingrad",
+    "date": "1942-09-13",
+    "endDate": "1942-11-18",
+    "lat": 48.68721111,
+    "lng": 44.48385278,
+    "category": "battle",
+    "theater": "asia",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-ss-stephen-hopkins",
+    "title": "Battle of SS Stephen Hopkins",
+    "date": "1942-09-27",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": -28.214722,
+    "lng": -11.918333,
+    "category": "battle",
+    "theater": "africa",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "crossing-the-neretva",
+    "title": "Crossing the Neretva",
+    "date": "1943-03-06",
+    "endDate": "1943-03-15",
+    "lat": 43.654102777,
+    "lng": 17.762286111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-ksar-ghilane",
+    "title": "Battle of Ksar Ghilane",
+    "date": "1943-03-10",
+    "lat": 32.983333,
+    "lng": 9.6375,
+    "category": "battle",
+    "theater": "africa",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-lampedusa",
+    "title": "Battle of Lampedusa",
+    "date": "1943-06-05",
+    "endDate": "1943-06-13",
+    "lat": 35.5108,
+    "lng": 12.6056,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "maria-wola-massacre",
+    "title": "Maria Wola massacre",
+    "date": "1943-07-12",
+    "lat": 50.743611,
+    "lng": 24.439722,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-arachov",
+    "title": "Battle of Arachov",
+    "date": "1943-09-09",
+    "sides": {
+      "allied": [
+        "greece"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 38.4836,
+    "lng": 22.5578,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-douch",
+    "title": "Battle of Douch",
+    "date": "1943-09-10",
+    "lat": 43.6111,
+    "lng": 2.97361,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-montelungo",
+    "title": "Battle of Montelungo",
+    "date": "1943-12-07",
+    "endDate": "1943-12-16",
+    "lat": 41.4,
+    "lng": 13.98333333,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ivotice-tragedy",
+    "title": "Životice tragedy",
+    "date": "1944-01-01",
+    "lat": 49.768889,
+    "lng": 18.476389,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "valibona",
+    "title": "Valibona",
+    "date": "1944-01-03",
+    "sides": {
+      "allied": [],
+      "axis": [
+        "italy"
+      ]
+    },
+    "lat": 43.9304375,
+    "lng": 11.1653192,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-rivne",
+    "title": "Battle of Rivne",
+    "date": "1944-02-02",
+    "endDate": "1944-02-05",
+    "lat": 50.61666667,
+    "lng": 26.25,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "mala-berezovytsia-massacre",
+    "title": "Mala Berezovytsia massacre",
+    "date": "1944-02-23",
+    "lat": 49.7553,
+    "lng": 25.5642,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "belz-massacre",
+    "title": "Belz massacre",
+    "date": "1944-03-01",
+    "lat": 50.366667,
+    "lng": 24,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "massacre-of-monchio-susano-e-costrignano",
+    "title": "massacre of Monchio, Susano e Costrignano",
+    "date": "1944-03-18",
+    "lat": 44.316666666,
+    "lng": 10.65,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "skirmish-near-sadkwka",
+    "title": "Skirmish near Sadkówka",
+    "date": "1944-03-25",
+    "lat": 50.452222,
+    "lng": 20.426944,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "concentration-camp-protection-squad-junk-school-braunschweig",
+    "title": "Concentration Camp Protection Squad Junk School Braunschweig",
+    "date": "1944-03-25",
+    "endDate": "1944-06-05",
+    "lat": 52.26474,
+    "lng": 10.523679,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "biarritz-bombing",
+    "title": "Biarritz Bombing",
+    "date": "1944-03-27",
+    "lat": 43.46666667,
+    "lng": -1.55,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kleisoura-massacre-1944",
+    "title": "Kleisoura massacre 1944",
+    "date": "1944-04-05",
+    "lat": 40.5372,
+    "lng": 21.4717,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "memoriale-delleccidio-delle-fosse-reatine",
+    "title": "Memoriale dell'eccidio delle Fosse Reatine",
+    "date": "1944-04-09",
+    "lat": 42.43064,
+    "lng": 12.855589,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-25-april-1944",
+    "title": "Battle of 25 April 1944",
+    "date": "1944-04-25",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 48.717,
+    "lng": -4.517,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-at-achladokampos-inn",
+    "title": "Battle at Achladokampos inn",
+    "date": "1944-05-17",
+    "lat": 37.523461,
+    "lng": 22.634197,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "massacre-of-birchinia",
+    "title": "Massacre of Birchinia",
+    "date": "1944-05-18",
+    "lat": 45.616111111,
+    "lng": 14.038055555,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "salzgitter-watenstedt-concentration-camp",
+    "title": "Salzgitter-Watenstedt Concentration Camp",
+    "date": "1944-05-27",
+    "lat": 52.138528327,
+    "lng": 10.437433149,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kz-fallersleben-laagberg-men",
+    "title": "KZ Fallersleben-Laagberg (men)",
+    "date": "1944-05-31",
+    "lat": 52.415740183,
+    "lng": 10.751455242,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-tulle",
+    "title": "Battle of Tulle",
+    "date": "1944-06-07",
+    "endDate": "1944-06-08",
+    "lat": 45.267222222,
+    "lng": 1.765555555,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-la-truyre",
+    "title": "Battle of la Truyère",
+    "date": "1944-06-20",
+    "lat": 44.975555555,
+    "lng": 3.372777777,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-filottrano",
+    "title": "Battle of Filottrano",
+    "date": "1944-07-01",
+    "endDate": "1944-07-09",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": [
+        "germany",
+        "italy"
+      ]
+    },
+    "lat": 43.434419444,
+    "lng": 13.35025,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-roquefixade",
+    "title": "Battle of Roquefixade",
+    "date": "1944-07-06",
+    "endDate": "1944-07-07",
+    "sides": {
+      "allied": [
+        "france"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 42.932527777,
+    "lng": 1.7685,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "skirmish-at-mokre",
+    "title": "Skirmish at Mokre",
+    "date": "1944-07-16",
+    "lat": 50.577778,
+    "lng": 21.047222,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-mount-gargan",
+    "title": "Battle of Mount Gargan",
+    "date": "1944-07-18",
+    "endDate": "1944-07-24",
+    "lat": 45.620555555,
+    "lng": 1.647777777,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "conference-of-the-league-of-coloured-peoples",
+    "title": "Conference of the League of Coloured Peoples",
+    "date": "1944-07-21",
+    "endDate": "1944-07-23",
+    "lat": 51.4714,
+    "lng": -0.0625,
+    "category": "political",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-modzawy",
+    "title": "Battle of Młodzawy",
+    "date": "1944-07-31",
+    "lat": 50.461944,
+    "lng": 20.504722,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-skalbmierz",
+    "title": "Battle of Skalbmierz",
+    "date": "1944-08-05",
+    "sides": {
+      "allied": [
+        "poland"
+      ],
+      "axis": []
+    },
+    "lat": 50.319444,
+    "lng": 20.399167,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-jaksicami",
+    "title": "Battle of Jaksicami",
+    "date": "1944-08-05",
+    "lat": 50.1455,
+    "lng": 20.5115,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "massacre-of-penguerec",
+    "title": "massacre of Penguerec",
+    "date": "1944-08-07",
+    "lat": 48.4425,
+    "lng": -4.472777777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-gletons",
+    "title": "Battle of Égletons",
+    "date": "1944-08-14",
+    "endDate": "1944-08-19",
+    "lat": 45.407222222,
+    "lng": 2.046111111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "skirmish-near-baranw",
+    "title": "Skirmish near Baranów",
+    "date": "1944-08-14",
+    "endDate": "1944-08-15",
+    "lat": 50.408889,
+    "lng": 20.8025,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-nice",
+    "title": "Battle of Nice",
+    "date": "1944-08-28",
+    "lat": 43.695833333,
+    "lng": 7.271388888,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-meximieux",
+    "title": "Battle of Meximieux",
+    "date": "1944-08-31",
+    "endDate": "1944-09-02",
+    "lat": 45.905277777,
+    "lng": 5.195277777,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-merksem",
+    "title": "Battle of Merksem",
+    "date": "1944-09-04",
+    "endDate": "1944-10-03",
+    "lat": 51.242222222,
+    "lng": 4.441111111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "annener-gustahlwerk-concentration-camp",
+    "title": "Annener Gußstahlwerk concentration camp",
+    "date": "1944-09-16",
+    "lat": 51.44825,
+    "lng": 7.37131,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-opheusden",
+    "title": "Battle of Opheusden",
+    "date": "1944-10-04",
+    "endDate": "1944-10-08",
+    "lat": 51.933330555,
+    "lng": 5.629722222,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-purocielo",
+    "title": "Battle of Purocielo",
+    "date": "1944-10-09",
+    "endDate": "1944-10-12",
+    "lat": 44.17655,
+    "lng": 11.66536,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-the-bagni-di-craveggia",
+    "title": "Battle of the Bagni di Craveggia",
+    "date": "1944-10-18",
+    "sides": {
+      "allied": [],
+      "axis": [
+        "italy"
+      ]
+    },
+    "lat": 46.19834,
+    "lng": 8.54014,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-the-university",
+    "title": "Battle of the University",
+    "date": "1944-10-20",
+    "lat": 44.49688,
+    "lng": 11.35254,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bataille-de-bruyres",
+    "title": "Bataille de Bruyères",
+    "date": "1944-10-30",
+    "lat": 48.2083,
+    "lng": 6.72111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "international-civil-aviation-conference",
+    "title": "International Civil Aviation Conference",
+    "date": "1944-11-01",
+    "endDate": "1944-12-07",
+    "lat": 41.881944444,
+    "lng": -87.627777777,
+    "category": "political",
+    "theater": "pacific",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "action-of-10-november-1944",
+    "title": "Action of 10 November 1944",
+    "date": "1944-11-10",
+    "lat": -7.21666667,
+    "lng": 115.28333333,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "eccidio-di-portofino",
+    "title": "eccidio di Portofino",
+    "date": "1944-12-02",
+    "lat": 44.302222,
+    "lng": 9.215262,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battles-for-wilhelmshaven",
+    "title": "Battles for Wilhelmshaven",
+    "date": "1945-01-01",
+    "lat": 53.516667,
+    "lng": 8.133333,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-koo",
+    "title": "Battle of Koło",
+    "date": "1945-01-19",
+    "endDate": "1945-01-20",
+    "sides": {
+      "allied": [
+        "ussr"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 52.201944444,
+    "lng": 18.647222222,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "liberation-of-d",
+    "title": "Liberation of Łódź",
+    "date": "1945-01-19",
+    "lat": 51.776667,
+    "lng": 19.454722,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-ory-1945",
+    "title": "Battle of Żory (1945)",
+    "date": "1945-01-27",
+    "endDate": "1945-03-24",
+    "lat": 50.044167,
+    "lng": 18.694611,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "fight-at-the-golden-deer-grove",
+    "title": "Fight at the Golden Deer grove",
+    "date": "1945-02-06",
+    "lat": 49.0917506,
+    "lng": 16.9827131,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "zalissia-massacre",
+    "title": "Zalissia massacre",
+    "date": "1945-02-07",
+    "lat": 49.0144,
+    "lng": 25.2058,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "siege-of-glogau",
+    "title": "Siege of Glogau",
+    "date": "1945-02-11",
+    "endDate": "1945-04-01",
+    "lat": 51.658888888,
+    "lng": 16.080277777,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-riva-ridge",
+    "title": "Battle of Riva Ridge",
+    "date": "1945-02-18",
+    "endDate": "1945-02-25",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 44.18811,
+    "lng": 10.83441,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "la-rossa-massacre",
+    "title": "La Rossa massacre",
+    "date": "1945-03-10",
+    "lat": 44.360694444,
+    "lng": 11.695138888,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-prudnik",
+    "title": "Battle of Prudnik",
+    "date": "1945-03-17",
+    "endDate": "1945-05-01",
+    "lat": 50.319722,
+    "lng": 17.579167,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "the-long-fight",
+    "title": "The Long Fight",
+    "date": "1945-03-26",
+    "endDate": "1945-03-27",
+    "lat": 49.7719856,
+    "lng": 15.5365653,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-oechov",
+    "title": "Battle of Ořechov",
+    "date": "1945-04-01",
+    "lat": 49.1095,
+    "lng": 16.5263,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "battle-of-knigshofen",
+    "title": "Battle of Königshofen",
+    "date": "1945-04-01",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": 49.5479622,
+    "lng": 9.739315,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "wenzelnberg-massacre",
+    "title": "Wenzelnberg massacre",
+    "date": "1945-04-13",
+    "lat": 51.121944444,
+    "lng": 6.990555555,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "abtnaundorf-massacre",
+    "title": "Abtnaundorf Massacre",
+    "date": "1945-04-18",
+    "lat": 51.368055555,
+    "lng": 12.424722222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "san-bernardo-massacre",
+    "title": "San Bernardo massacre",
+    "date": "1945-04-26",
+    "lat": 45.3013,
+    "lng": 9.51287,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "budnka",
+    "title": "Budínka",
+    "date": "1945-05-19",
+    "lat": 49.4882939,
+    "lng": 15.6557233,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "treysa-conference-1945",
+    "title": "Treysa Conference 1945",
+    "date": "1945-08-27",
+    "endDate": "1945-08-31",
+    "lat": 50.9119,
+    "lng": 9.18833,
+    "category": "political",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  }
+]

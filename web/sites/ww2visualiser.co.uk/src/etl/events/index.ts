@@ -22,6 +22,7 @@ import type {
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUT_PATH = join(__dirname, "../../data/events.json");
+const UNKNOWNS_PATH = join(__dirname, "../../data/unknowns.json");
 
 const BATCH = 10;
 
@@ -254,7 +255,15 @@ export async function fetchEvents(dryRun: boolean): Promise<void> {
     wp: e.wpTitle ? (cache[e.wpTitle] ?? null) : null,
   }));
 
-  const events = toWW2Events(enriched);
+  // Events with neither a Wikipedia summary nor an article extract are too
+  // thin to show on the map. Park them in unknowns.json rather than dropping
+  // them entirely or polluting events.json with empty descriptions.
+  const known = enriched.filter((e) => e.wp?.article);
+  const unknown = enriched.filter((e) => !e.wp?.article);
+  console.log(`Events with no summary/article: ${unknown.length} → unknowns.json`);
+
+  const events = toWW2Events(known);
+  const unknowns = toWW2Events(unknown);
 
   if (events.length === 0) {
     console.error("No events produced — keeping existing events.json.");
@@ -263,5 +272,7 @@ export async function fetchEvents(dryRun: boolean): Promise<void> {
 
   console.log(`Writing ${events.length} events → ${OUT_PATH}`);
   writeFileSync(OUT_PATH, JSON.stringify(events, null, 2));
+  console.log(`Writing ${unknowns.length} unknowns → ${UNKNOWNS_PATH}`);
+  writeFileSync(UNKNOWNS_PATH, JSON.stringify(unknowns, null, 2));
   console.log("Done.");
 }
