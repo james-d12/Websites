@@ -9,11 +9,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "astro": "astro",
-    "fetch-data": "tsx src/etl/fetch-wikidata.ts",
-    "fetch-data:dry": "tsx src/etl/fetch-wikidata.ts --dry-run",
-    "fetch-divisions": "tsx src/etl/fetch-divisions.ts",
-    "fetch-divisions:dry": "tsx src/etl/fetch-divisions.ts --dry-run",
-    "prebuild": "tsx src/etl//fetch-wikidata.ts"
+    "fetch-data": "tsx src/etl/fetch.ts",
+    "fetch-data:dry": "tsx src/etl/fetch.ts --dry-run",
+    "prebuild": "tsx src/etl/fetch.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",
