@@ -328,17 +328,6 @@
     ]
   },
   {
-    "id": "wietmarschen-concentration-camp",
-    "title": "Wietmarschen concentration camp",
-    "date": "1938-01-01",
-    "lat": 52.5606,
-    "lng": 7.11777,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
     "id": "neuengamme-concentration-camp",
     "title": "Neuengamme concentration camp",
     "date": "1938-01-01",
@@ -369,6 +358,17 @@
         "url": "https://en.wikipedia.org/wiki/Ravensbr%C3%BCck_concentration_camp"
       }
     ]
+  },
+  {
+    "id": "wietmarschen-concentration-camp",
+    "title": "Wietmarschen concentration camp",
+    "date": "1938-01-01",
+    "lat": 52.5606,
+    "lng": 7.11777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
   },
   {
     "id": "bombing-of-chongqing",
@@ -999,846 +999,6 @@
         "url": "https://en.wikipedia.org/wiki/Szp%C4%99gawsk_Forest"
       }
     ]
-  },
-  {
-    "id": "hannover-stcken-continental-concentration-camp",
-    "title": "Hannover-Stöcken (Continental) concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.4093,
-    "lng": 9.62907,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "nimptsch-concentration-camp",
-    "title": "Nimptsch concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.716701,
-    "lng": 16.85,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "wesuwe-concentration-camp",
-    "title": "Wesuwe concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.762727,
-    "lng": 7.142765,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "kaufering-vi-concentration-camp",
-    "title": "Kaufering VI concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.050694444,
-    "lng": 10.617194444,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "rosslau-concentration-camp",
-    "title": "Rosslau concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.8833,
-    "lng": 12.25,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "martha-ii-concentration-camp",
-    "title": "Martha II concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.1935,
-    "lng": 10.3991,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "neusustrum-concentration-camp",
-    "title": "Neusustrum concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.901869444,
-    "lng": 7.169327777,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "porta-westfalica-concentration-camp",
-    "title": "Porta Westfalica concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.2167,
-    "lng": 8.9333,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "hamburg-hammerbrook-concentration-camp",
-    "title": "Hamburg-Hammerbrook concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.55075,
-    "lng": 10.02238889,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "bad-gandersheim-concentration-camp",
-    "title": "Bad Gandersheim concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.8825,
-    "lng": 10.031,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "salzgitter-bad-concentration-camp",
-    "title": "Salzgitter-Bad concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.0385,
-    "lng": 10.3938,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "fuhlsbttel-concentration-camp",
-    "title": "Fuhlsbüttel concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.6225,
-    "lng": 10.01888889,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Fuhlsbüttel is an urban quarter in the north of Hamburg, Germany in the Hamburg-Nord district. It is known as the site of Hamburg's international airport, and as the location of a prison which served as a concentration camp in the Nazi system of repression. As a result of boundary changes, JVA Fuhlsbüttel prison is now in Ohlsdorf, Hamburg.",
-    "links": [
-      {
-        "label": "Wikipedia: Fuhlsbüttel concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Fuhlsb%C3%BCttel_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "wilhelmshaven-concentration-camp",
-    "title": "Wilhelmshaven concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.51525309,
-    "lng": 8.086887,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "blankenburg-oesig-concentration-camp",
-    "title": "Blankenburg-Oesig concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.7809,
-    "lng": 10.9082,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "mnchmhle-concentration-camp",
-    "title": "Münchmühle concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.8216,
-    "lng": 8.9883,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "kamp-dobbendal",
-    "title": "Kamp Dobbendal",
-    "date": "1939-09-01",
-    "lat": 52.971944444,
-    "lng": 6.792222222,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "schaarshoek-concentration-camp",
-    "title": "Schaarshoek concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.435833,
-    "lng": 6.233889,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "meppen-dalum-concentration-camp",
-    "title": "Meppen-Dalum concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.6833,
-    "lng": 7.3167,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "rhede-brual-concentration-camp",
-    "title": "Rhede-Brual concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.0861,
-    "lng": 7.22944,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "kz-hohenbruch",
-    "title": "KZ Hohenbruch",
-    "date": "1939-09-01",
-    "lat": 54.97613889,
-    "lng": 21.41311111,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "ankenbuck-concentration-camp",
-    "title": "Ankenbuck concentration camp",
-    "date": "1939-09-01",
-    "lat": 48,
-    "lng": 8.51278,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "beendorf-concentration-camp",
-    "title": "Beendorf concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.2428,
-    "lng": 11.0852,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "pavlos-melas-camp",
-    "title": "Pavlos Melas Camp",
-    "date": "1939-09-01",
-    "lat": 40.66,
-    "lng": 22.938611111,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "uphusen-concentration-camp",
-    "title": "Uphusen concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.0268,
-    "lng": 8.98733,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "unterl-concentration-camp",
-    "title": "Unterlüß concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.880009,
-    "lng": 10.285435,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "reichenbach-concentration-camp-1933",
-    "title": "Reichenbach concentration camp (1933)",
-    "date": "1939-09-01",
-    "lat": 50.599998,
-    "lng": 12.3,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "hambhren-concentration-camp",
-    "title": "Hambühren concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.6333,
-    "lng": 9.9833,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "blankenburg-regenstein-concentration-camp",
-    "title": "Blankenburg-Regenstein concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.8108,
-    "lng": 10.9749,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "site-of-nazi-concentration-camp-loibl-nord",
-    "title": "Site of Nazi concentration camp Loibl Nord",
-    "date": "1939-09-01",
-    "lat": 46.44399722,
-    "lng": 14.25191389,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "rossla-concentration-camp",
-    "title": "Rossla concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.4667,
-    "lng": 11.0833,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "frankfurt-am-main-concentration-camp",
-    "title": "Frankfurt am Main concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.10116667,
-    "lng": 8.64297222,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "hinterbrhl-concentration-camp-memorial",
-    "title": "Hinterbrühl concentration camp memorial",
-    "date": "1939-09-01",
-    "lat": 48.08962,
-    "lng": 16.26051,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "skarysko-kamienna-concentration-camp",
-    "title": "Skarżysko-Kamienna concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.116666,
-    "lng": 20.9,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "leonberg-concentration-camp",
-    "title": "Leonberg concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.797611111,
-    "lng": 9.022777777,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "engerhafe-concentration-camp",
-    "title": "Engerhafe concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.4872,
-    "lng": 7.31528,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "hannover-stcken-akkumulatorenfabrik-concentration-camp",
-    "title": "Hannover-Stöcken (Akkumulatorenfabrik) concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.4109,
-    "lng": 9.63249,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "schwarzheide-concentration-camp",
-    "title": "Schwarzheide concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.4833,
-    "lng": 13.8667,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "neu-dachs-concentration-camp",
-    "title": "Neu-Dachs concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.21342,
-    "lng": 19.23936,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "milbertshofen-concentration-camp",
-    "title": "Milbertshofen concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.195,
-    "lng": 11.5733,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "ahrensbk-concentration-camp",
-    "title": "Ahrensbök concentration camp",
-    "date": "1939-09-01",
-    "lat": 54.0261,
-    "lng": 10.5936,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "salzwedel-concentration-camp",
-    "title": "Salzwedel concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.85,
-    "lng": 11.15,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "gross-hesepe-concentration-camp",
-    "title": "Gross Hesepe concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.62222,
-    "lng": 7.20556,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "kz-meisnerhof",
-    "title": "KZ Meisnerhof",
-    "date": "1939-09-01",
-    "lat": 52.663722222,
-    "lng": 13.215305555,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "walchum-concentration-camp",
-    "title": "Walchum concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.931416666,
-    "lng": 7.208638888,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "uelzen-concentration-camp",
-    "title": "Uelzen concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.9746,
-    "lng": 10.562,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "lengenfeld-concentration-camp",
-    "title": "Lengenfeld concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.566699,
-    "lng": 12.3667,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "weferlingen-concentration-camp",
-    "title": "Weferlingen concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.299999,
-    "lng": 11.066699,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "hainichen-concentration-camp-q2792136",
-    "title": "Hainichen concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.969454,
-    "lng": 13.122099,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
-    "links": [
-      {
-        "label": "Wikipedia: Hainichen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "bremen-blumenthal-concentration-camp",
-    "title": "Bremen-Blumenthal concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.1815,
-    "lng": 8.56473,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "gusen-i-concentration-camp",
-    "title": "Gusen I concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.2575,
-    "lng": 14.4639,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
-    "links": [
-      {
-        "label": "Wikipedia: Gusen I concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Gusen_I_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "alexisdorf-concentration-camp",
-    "title": "Alexisdorf concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.61556,
-    "lng": 6.97861,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "brnn-concentration-camp",
-    "title": "Brünn concentration camp",
-    "date": "1939-09-01",
-    "lat": 49.20222222,
-    "lng": 16.57277778,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "labor-camp-blechhammer",
-    "title": "Labor camp Blechhammer",
-    "date": "1939-09-01",
-    "lat": 50.354722,
-    "lng": 18.258611,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "gunskirchen-concentration-camp",
-    "title": "Gunskirchen concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.134444,
-    "lng": 13.943056,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "barkhausen-concentration-camp",
-    "title": "Barkhausen concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.246341,
-    "lng": 8.912079,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "arbeitslager-langenbielau-i",
-    "title": "Arbeitslager Langenbielau I",
-    "date": "1939-09-01",
-    "lat": 50.717222222,
-    "lng": 16.6225,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "darnysia-concentration-camp",
-    "title": "Darnysia concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.429444444,
-    "lng": 30.694722222,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "hradischko-concentration-camp",
-    "title": "Hradischko concentration camp",
-    "date": "1939-09-01",
-    "lat": 49.866699,
-    "lng": 14.4167,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "gunskirchen-wels-i-concentration-camp",
-    "title": "Gunskirchen-Wels I concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.112964358,
-    "lng": 13.940360901,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "fullen-concentration-camp",
-    "title": "Fullen concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.7,
-    "lng": 7.17694,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "eutin-concentration-camp",
-    "title": "Eutin concentration camp",
-    "date": "1939-09-01",
-    "lat": 54.134,
-    "lng": 10.618,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "de-vecht-concentration-camp",
-    "title": "De Vecht concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.5,
-    "lng": 6.25,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "rees-concentration-camp",
-    "title": "Rees concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.7792,
-    "lng": 6.40722,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "dorohucza-concentration-camp",
-    "title": "Dorohucza concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.16,
-    "lng": 22.99388889,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "kaufering-ii-concentration-camp",
-    "title": "Kaufering II concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.0499468,
-    "lng": 10.8229218,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "secureni-concentration-camp",
-    "title": "Secureni concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.45,
-    "lng": 27.416667,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "maria-lanzendorf-concentration-camp",
-    "title": "Maria Lanzendorf concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.099722,
-    "lng": 16.421111,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "nazi-forced-labour-in-sotysowice",
-    "title": "Nazi forced labour in Sołtysowice",
-    "date": "1939-09-01",
-    "lat": 51.145027777,
-    "lng": 17.073694444,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "smukaa-concentration-camp",
-    "title": "Smukała concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.191944,
-    "lng": 17.966667,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "masiukoyna-extermination-camp",
-    "title": "Masiukoŭščyna extermination camp",
-    "date": "1939-09-01",
-    "lat": 53.9311,
-    "lng": 27.48086,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "graslitz-concentration-camp",
-    "title": "Graslitz concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.333301,
-    "lng": 12.516699,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "spergau-labor-education-camp",
-    "title": "Spergau Labor Education Camp",
-    "date": "1939-09-01",
-    "lat": 51.3,
-    "lng": 12.033333333,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "stassfurt-i-concentration-camp",
-    "title": "Stassfurt I concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.866699,
-    "lng": 11.583299,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "beec-forced-labor-camp",
-    "title": "Bełżec forced-labor camp",
-    "date": "1939-09-01",
-    "lat": 50.384444,
-    "lng": 23.438333,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
-    "id": "ampfing-concentration-camp---waldlager-v",
-    "title": "Ampfing (concentration camp) - Waldlager V",
-    "date": "1939-09-01",
-    "lat": 48.237637,
-    "lng": 12.425687,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
   },
   {
     "id": "mittelsteine-concentration-camp",
@@ -3025,116 +2185,844 @@
     ]
   },
   {
-    "id": "admiralty-islands-campaign",
-    "title": "Admiralty Islands campaign",
+    "id": "kaufering-ii-concentration-camp",
+    "title": "Kaufering II concentration camp",
     "date": "1939-09-01",
-    "lat": -2.03333333,
-    "lng": 147.275,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Admiralty Islands campaign was a series of battles in the New Guinea campaign of World War II in which the United States Army's 1st Cavalry Division took the Japanese-held Admiralty Islands.",
-    "links": [
-      {
-        "label": "Wikipedia: Admiralty Islands campaign",
-        "url": "https://en.wikipedia.org/wiki/Admiralty_Islands_campaign"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-grauyszki",
-    "title": "Battle of Graużyszki",
-    "date": "1939-09-01",
-    "lat": 54.328055555,
-    "lng": 25.841111111,
-    "category": "battle",
+    "lat": 48.0499468,
+    "lng": 10.8229218,
+    "category": "atrocity",
     "theater": "europe",
-    "article": "The battle of Graużyszki took place on 6 May 1944 near the Villages of Graużyszki, Adamowszczyzna and Sieńkowszyzna. Polish forces from the 8th and 13th Oszmiana Brigade of the Home Army under the command of Adam Walczak engaged units of the Lithuanian Territorial Defense Force under the command of Antanas Andriunas. The battle ended with a Polish victory.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Graużyszki",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Grau%C5%BCyszki"
-      }
-    ]
+    "article": "",
+    "links": []
   },
   {
-    "id": "battle-of-odziutycze",
-    "title": "Battle of Oździutycze",
+    "id": "secureni-concentration-camp",
+    "title": "Secureni concentration camp",
     "date": "1939-09-01",
-    "lat": 50.850833,
-    "lng": 24.711111,
-    "category": "battle",
+    "lat": 48.45,
+    "lng": 27.416667,
+    "category": "atrocity",
     "theater": "europe",
-    "article": "The Battle of Oździutycze was fought between the “Łuna”, “Trzask” and “Grzyms” battalions in the Polish 27th Volhynian Infantry Division of the Home Army under the command of Stanisław Piaszczyński ,against the “Siromantsi” company of the 16th tactical district “Seret” in the 3rd Operational Group “Lysonia” of the Ukrainian Insurgent Army and Kusch Units of the Ukrainian Self–Defense under the command of Hryhoriy Kovalchuk in the Włodzimierz County of the Wołyń Voivodeship.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Oździutycze",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_O%C5%BAdziutycze"
-      }
-    ]
+    "article": "",
+    "links": []
   },
   {
-    "id": "battle-of-vercors",
-    "title": "Battle of Vercors",
+    "id": "maria-lanzendorf-concentration-camp",
+    "title": "Maria Lanzendorf concentration camp",
     "date": "1939-09-01",
-    "lat": 44.8961,
-    "lng": 5.3708,
-    "category": "battle",
+    "lat": 48.099722,
+    "lng": 16.421111,
+    "category": "atrocity",
     "theater": "europe",
-    "article": "The Battle of Vercors in July and August 1944 was between a rural group of the French Forces of the Interior (FFI) [maquis] and the armed forces of Nazi Germany which had occupied France since 1940 in the Second World War.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Vercors",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Vercors"
-      }
-    ]
+    "article": "",
+    "links": []
   },
   {
-    "id": "battle-of-villa-verde-trail",
-    "title": "Battle of Villa Verde Trail",
+    "id": "nazi-forced-labour-in-sotysowice",
+    "title": "Nazi forced labour in Sołtysowice",
     "date": "1939-09-01",
-    "lat": 16.174,
-    "lng": 120.87,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Villa Verde Trail was a campaign by the United States Army and Filipino guerrillas in the Philippines during World War II in 1945 to force its way across the Caraballo Mountains from the Central Luzon plain to the Cagayan Valley. Somewhat to the surprise of the Americans, the Japanese had constructed strong defenses along the narrow and winding Villa Verde Trail, 27 miles (43 km) in length. The campaign began on 21 February 1945 and concluded with the success of the Americans on 31 May 1945. The U.S.'s 32nd Infantry Division, called the Red Arrow Division, carried out the campaign with assistance from Filipino guerrillas.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Villa Verde Trail",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Villa_Verde_Trail"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-wawa-dam",
-    "title": "Battle of Wawa Dam",
-    "date": "1939-09-01",
-    "lat": 14.727777777,
-    "lng": 121.191666666,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Wawa Dam, also known as the Seizure of Wawa Dam, was a subsidiary action of the Battle of Manila to secure the vital water sources east of the capital. It was the longest continuous combat during the Liberation of the Philippines, lasting from February 20–May 31, 1945. It also proved critical in neutralizing the Imperial Japanese Army's Shimbu Group, which controlled the Sierra Madre mountain range east of Manila in Southern Luzon.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Wawa Dam",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Wawa_Dam"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-the-messina-convoy",
-    "title": "Battle of the Messina Convoy",
-    "date": "1939-09-01",
-    "lat": 37.899722222,
-    "lng": 15.968638888,
-    "category": "battle",
+    "lat": 51.145027777,
+    "lng": 17.073694444,
+    "category": "atrocity",
     "theater": "europe",
-    "article": "The Battle of the Messina Convoy was a naval action fought on the night of 1/2 June 1943 off the Calabrian coast, near Cape Spartivento. The action was between the Allied destroyers HMS Jervis and Greek destroyer Vasilissa Olga of the 14th Destroyer Flotilla and an Italian convoy of the merchant ships Vragnizza and Postumia, escorted by the Italian torpedo boat Castore. The merchant ships managed to slip away but Castore sank a couple of hours after the engagement.",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "smukaa-concentration-camp",
+    "title": "Smukała concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.191944,
+    "lng": 17.966667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "masiukoyna-extermination-camp",
+    "title": "Masiukoŭščyna extermination camp",
+    "date": "1939-09-01",
+    "lat": 53.9311,
+    "lng": 27.48086,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "graslitz-concentration-camp",
+    "title": "Graslitz concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.333301,
+    "lng": 12.516699,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "spergau-labor-education-camp",
+    "title": "Spergau Labor Education Camp",
+    "date": "1939-09-01",
+    "lat": 51.3,
+    "lng": 12.033333333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "stassfurt-i-concentration-camp",
+    "title": "Stassfurt I concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.866699,
+    "lng": 11.583299,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "beec-forced-labor-camp",
+    "title": "Bełżec forced-labor camp",
+    "date": "1939-09-01",
+    "lat": 50.384444,
+    "lng": 23.438333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ampfing-concentration-camp---waldlager-v",
+    "title": "Ampfing (concentration camp) - Waldlager V",
+    "date": "1939-09-01",
+    "lat": 48.237637,
+    "lng": 12.425687,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hannover-stcken-continental-concentration-camp",
+    "title": "Hannover-Stöcken (Continental) concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.4093,
+    "lng": 9.62907,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "nimptsch-concentration-camp",
+    "title": "Nimptsch concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.716701,
+    "lng": 16.85,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "wesuwe-concentration-camp",
+    "title": "Wesuwe concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.762727,
+    "lng": 7.142765,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kaufering-vi-concentration-camp",
+    "title": "Kaufering VI concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.050694444,
+    "lng": 10.617194444,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rosslau-concentration-camp",
+    "title": "Rosslau concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.8833,
+    "lng": 12.25,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "martha-ii-concentration-camp",
+    "title": "Martha II concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.1935,
+    "lng": 10.3991,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "neusustrum-concentration-camp",
+    "title": "Neusustrum concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.901869444,
+    "lng": 7.169327777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "porta-westfalica-concentration-camp",
+    "title": "Porta Westfalica concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.2167,
+    "lng": 8.9333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hamburg-hammerbrook-concentration-camp",
+    "title": "Hamburg-Hammerbrook concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.55075,
+    "lng": 10.02238889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "bad-gandersheim-concentration-camp",
+    "title": "Bad Gandersheim concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.8825,
+    "lng": 10.031,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "salzgitter-bad-concentration-camp",
+    "title": "Salzgitter-Bad concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.0385,
+    "lng": 10.3938,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "fuhlsbttel-concentration-camp",
+    "title": "Fuhlsbüttel concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.6225,
+    "lng": 10.01888889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Fuhlsbüttel is an urban quarter in the north of Hamburg, Germany in the Hamburg-Nord district. It is known as the site of Hamburg's international airport, and as the location of a prison which served as a concentration camp in the Nazi system of repression. As a result of boundary changes, JVA Fuhlsbüttel prison is now in Ohlsdorf, Hamburg.",
     "links": [
       {
-        "label": "Wikipedia: Battle of the Messina Convoy",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Messina_Convoy"
+        "label": "Wikipedia: Fuhlsbüttel concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Fuhlsb%C3%BCttel_concentration_camp"
       }
     ]
+  },
+  {
+    "id": "wilhelmshaven-concentration-camp",
+    "title": "Wilhelmshaven concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.51525309,
+    "lng": 8.086887,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "blankenburg-oesig-concentration-camp",
+    "title": "Blankenburg-Oesig concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.7809,
+    "lng": 10.9082,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "mnchmhle-concentration-camp",
+    "title": "Münchmühle concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.8216,
+    "lng": 8.9883,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kamp-dobbendal",
+    "title": "Kamp Dobbendal",
+    "date": "1939-09-01",
+    "lat": 52.971944444,
+    "lng": 6.792222222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "schaarshoek-concentration-camp",
+    "title": "Schaarshoek concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.435833,
+    "lng": 6.233889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "meppen-dalum-concentration-camp",
+    "title": "Meppen-Dalum concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.6833,
+    "lng": 7.3167,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rhede-brual-concentration-camp",
+    "title": "Rhede-Brual concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.0861,
+    "lng": 7.22944,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kz-hohenbruch",
+    "title": "KZ Hohenbruch",
+    "date": "1939-09-01",
+    "lat": 54.97613889,
+    "lng": 21.41311111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ankenbuck-concentration-camp",
+    "title": "Ankenbuck concentration camp",
+    "date": "1939-09-01",
+    "lat": 48,
+    "lng": 8.51278,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "beendorf-concentration-camp",
+    "title": "Beendorf concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.2428,
+    "lng": 11.0852,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "pavlos-melas-camp",
+    "title": "Pavlos Melas Camp",
+    "date": "1939-09-01",
+    "lat": 40.66,
+    "lng": 22.938611111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "uphusen-concentration-camp",
+    "title": "Uphusen concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.0268,
+    "lng": 8.98733,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "unterl-concentration-camp",
+    "title": "Unterlüß concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.880009,
+    "lng": 10.285435,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "reichenbach-concentration-camp-1933",
+    "title": "Reichenbach concentration camp (1933)",
+    "date": "1939-09-01",
+    "lat": 50.599998,
+    "lng": 12.3,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hambhren-concentration-camp",
+    "title": "Hambühren concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.6333,
+    "lng": 9.9833,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "blankenburg-regenstein-concentration-camp",
+    "title": "Blankenburg-Regenstein concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.8108,
+    "lng": 10.9749,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "site-of-nazi-concentration-camp-loibl-nord",
+    "title": "Site of Nazi concentration camp Loibl Nord",
+    "date": "1939-09-01",
+    "lat": 46.44399722,
+    "lng": 14.25191389,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rossla-concentration-camp",
+    "title": "Rossla concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.4667,
+    "lng": 11.0833,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "frankfurt-am-main-concentration-camp",
+    "title": "Frankfurt am Main concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.10116667,
+    "lng": 8.64297222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hinterbrhl-concentration-camp-memorial",
+    "title": "Hinterbrühl concentration camp memorial",
+    "date": "1939-09-01",
+    "lat": 48.08962,
+    "lng": 16.26051,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "skarysko-kamienna-concentration-camp",
+    "title": "Skarżysko-Kamienna concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.116666,
+    "lng": 20.9,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "leonberg-concentration-camp",
+    "title": "Leonberg concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.797611111,
+    "lng": 9.022777777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "engerhafe-concentration-camp",
+    "title": "Engerhafe concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.4872,
+    "lng": 7.31528,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hannover-stcken-akkumulatorenfabrik-concentration-camp",
+    "title": "Hannover-Stöcken (Akkumulatorenfabrik) concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.4109,
+    "lng": 9.63249,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "schwarzheide-concentration-camp",
+    "title": "Schwarzheide concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.4833,
+    "lng": 13.8667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "neu-dachs-concentration-camp",
+    "title": "Neu-Dachs concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.21342,
+    "lng": 19.23936,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "milbertshofen-concentration-camp",
+    "title": "Milbertshofen concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.195,
+    "lng": 11.5733,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "ahrensbk-concentration-camp",
+    "title": "Ahrensbök concentration camp",
+    "date": "1939-09-01",
+    "lat": 54.0261,
+    "lng": 10.5936,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "salzwedel-concentration-camp",
+    "title": "Salzwedel concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.85,
+    "lng": 11.15,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gross-hesepe-concentration-camp",
+    "title": "Gross Hesepe concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.62222,
+    "lng": 7.20556,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "kz-meisnerhof",
+    "title": "KZ Meisnerhof",
+    "date": "1939-09-01",
+    "lat": 52.663722222,
+    "lng": 13.215305555,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "walchum-concentration-camp",
+    "title": "Walchum concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.931416666,
+    "lng": 7.208638888,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "uelzen-concentration-camp",
+    "title": "Uelzen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.9746,
+    "lng": 10.562,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "lengenfeld-concentration-camp",
+    "title": "Lengenfeld concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.566699,
+    "lng": 12.3667,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "weferlingen-concentration-camp",
+    "title": "Weferlingen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.299999,
+    "lng": 11.066699,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hainichen-concentration-camp-q2792136",
+    "title": "Hainichen concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.969454,
+    "lng": 13.122099,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
+    "links": [
+      {
+        "label": "Wikipedia: Hainichen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "bremen-blumenthal-concentration-camp",
+    "title": "Bremen-Blumenthal concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.1815,
+    "lng": 8.56473,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gusen-i-concentration-camp",
+    "title": "Gusen I concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.2575,
+    "lng": 14.4639,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
+    "links": [
+      {
+        "label": "Wikipedia: Gusen I concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Gusen_I_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "alexisdorf-concentration-camp",
+    "title": "Alexisdorf concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.61556,
+    "lng": 6.97861,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "brnn-concentration-camp",
+    "title": "Brünn concentration camp",
+    "date": "1939-09-01",
+    "lat": 49.20222222,
+    "lng": 16.57277778,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "labor-camp-blechhammer",
+    "title": "Labor camp Blechhammer",
+    "date": "1939-09-01",
+    "lat": 50.354722,
+    "lng": 18.258611,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gunskirchen-concentration-camp",
+    "title": "Gunskirchen concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.134444,
+    "lng": 13.943056,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "barkhausen-concentration-camp",
+    "title": "Barkhausen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.246341,
+    "lng": 8.912079,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "arbeitslager-langenbielau-i",
+    "title": "Arbeitslager Langenbielau I",
+    "date": "1939-09-01",
+    "lat": 50.717222222,
+    "lng": 16.6225,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "darnysia-concentration-camp",
+    "title": "Darnysia concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.429444444,
+    "lng": 30.694722222,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "hradischko-concentration-camp",
+    "title": "Hradischko concentration camp",
+    "date": "1939-09-01",
+    "lat": 49.866699,
+    "lng": 14.4167,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "gunskirchen-wels-i-concentration-camp",
+    "title": "Gunskirchen-Wels I concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.112964358,
+    "lng": 13.940360901,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "fullen-concentration-camp",
+    "title": "Fullen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.7,
+    "lng": 7.17694,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "eutin-concentration-camp",
+    "title": "Eutin concentration camp",
+    "date": "1939-09-01",
+    "lat": 54.134,
+    "lng": 10.618,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "de-vecht-concentration-camp",
+    "title": "De Vecht concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.5,
+    "lng": 6.25,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "rees-concentration-camp",
+    "title": "Rees concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.7792,
+    "lng": 6.40722,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
+    "id": "dorohucza-concentration-camp",
+    "title": "Dorohucza concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.16,
+    "lng": 22.99388889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
   },
   {
     "id": "bombing-of-wielu",
@@ -3149,86 +3037,6 @@
       {
         "label": "Wikipedia: Bombing of Wieluń",
         "url": "https://en.wikipedia.org/wiki/Bombing_of_Wielu%C5%84"
-      }
-    ]
-  },
-  {
-    "id": "battles-for-narol",
-    "title": "Battles for Narol",
-    "date": "1939-09-01",
-    "lat": 50.350278,
-    "lng": 23.327222,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battles of Narol are a series of armed battles fought over the town of Narol, Poland, and for control of the Narol region between the Home Army supported by Peasant Battalions and the Ukrainian insurgent army during the period May to June 1944.",
-    "links": [
-      {
-        "label": "Wikipedia: Battles for Narol",
-        "url": "https://en.wikipedia.org/wiki/Battles_of_Narol"
-      }
-    ]
-  },
-  {
-    "id": "bombing-of-rangoon",
-    "title": "Bombing of Rangoon",
-    "date": "1939-09-01",
-    "lat": 16.783333333,
-    "lng": 96.166666666,
-    "category": "battle",
-    "theater": "asia",
-    "article": "The bombing of Rangoon was a series of air raids conducted by the Imperial Japanese Army Air Service that took place between December 1941 to March 1942 during the Burma Campaign of World War II. The capital city of Rangoon was the first to be attacked after Japan executed air raids on Burma in preparation for its invasion of the country weeks following its declaration of war upon the United States and the United Kingdom on December 8, 1941.",
-    "links": [
-      {
-        "label": "Wikipedia: Bombing of Rangoon",
-        "url": "https://en.wikipedia.org/wiki/Bombing_of_Rangoon_in_World_War_II"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-kassala",
-    "title": "Battle of Kassala",
-    "date": "1939-09-01",
-    "lat": 15.45,
-    "lng": 36.4,
-    "category": "battle",
-    "theater": "africa",
-    "article": "The Battle of Kassala was fought in Sudan, near Kassala, in the Second World War, on 4 July 1940. The battle was early in the East African campaign. The battle led to an Italian occupation that lasted six months. On 18 January 1941, forces led by General William Platt occupied the nearby town of Gallabat and the Italian command ordered the evacuation of Kassala on 21 January.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Kassala",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Kassala_(1940)"
-      }
-    ]
-  },
-  {
-    "id": "first-upa-attack-on-mizocz",
-    "title": "First UPA attack on Mizocz",
-    "date": "1939-09-01",
-    "lat": 50.406944,
-    "lng": 26.145,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The first UPA attack on Mizocz - an attack by Ukrainian Insurgent Army units on the town of Mizocz, located in the Zdolbunov district of Volhynia province, and battles with a Hungarian army unit and police, combined with the murder of more than 100 Poles and the burning of most of the village buildings. The attack took place on the night of 24 to 25 August or 31 August to 1 September 1943, during the German occupation. The consequence of the attack was the evacuation of the surviving Polish civilians to Zdolbunov.",
-    "links": [
-      {
-        "label": "Wikipedia: First UPA attack on Mizocz",
-        "url": "https://en.wikipedia.org/wiki/First_UPA_attack_on_Mizocz"
-      }
-    ]
-  },
-  {
-    "id": "skidal-uprising",
-    "title": "Skidal uprising",
-    "date": "1939-09-01",
-    "lat": 53.583333333,
-    "lng": 24.25,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Skidel Revolt or Skidal Uprising was an anti-state and anti-Polish sabotage action done by Jewish and Belarusian inhabitants of the Polish town of Skidel near Grodno at the onset of World War II. It started on the second day of the Soviet invasion of Poland in an attempt to assist the external attack.",
-    "links": [
-      {
-        "label": "Wikipedia: Skidal uprising",
-        "url": "https://en.wikipedia.org/wiki/Skidel_revolt"
       }
     ]
   },
@@ -4931,29 +4739,6 @@
     ]
   },
   {
-    "id": "battle-of-rotterdam",
-    "title": "Battle of Rotterdam",
-    "date": "1940-05-10",
-    "endDate": "1940-05-14",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 51.93083333,
-    "lng": 4.47916667,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Rotterdam was a Second World War battle fought during the Battle of the Netherlands. Fought between 10 and 14 May 1940, it was a German attempt to seize the Dutch city. It ended in a German victory, following the Rotterdam Blitz.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Rotterdam",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Rotterdam"
-      }
-    ]
-  },
-  {
     "id": "battle-for-the-hague",
     "title": "Battle for The Hague",
     "date": "1940-05-10",
@@ -4974,6 +4759,29 @@
       {
         "label": "Wikipedia: Battle for The Hague",
         "url": "https://en.wikipedia.org/wiki/Battle_of_the_Hague_(1940)"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-rotterdam",
+    "title": "Battle of Rotterdam",
+    "date": "1940-05-10",
+    "endDate": "1940-05-14",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 51.93083333,
+    "lng": 4.47916667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Rotterdam was a Second World War battle fought during the Battle of the Netherlands. Fought between 10 and 14 May 1940, it was a German attempt to seize the Dutch city. It ended in a German victory, following the Rotterdam Blitz.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Rotterdam",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Rotterdam"
       }
     ]
   },
@@ -7334,17 +7142,6 @@
     ]
   },
   {
-    "id": "stalag-352",
-    "title": "Stalag 352",
-    "date": "1941-08-01",
-    "lat": 53.9311,
-    "lng": 27.480861111,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
     "id": "stara-gradika-concentration-camp",
     "title": "Stara Gradiška concentration camp",
     "date": "1941-08-01",
@@ -7375,6 +7172,17 @@
         "url": "https://en.wikipedia.org/wiki/Jasenovac_concentration_camp"
       }
     ]
+  },
+  {
+    "id": "stalag-352",
+    "title": "Stalag 352",
+    "date": "1941-08-01",
+    "lat": 53.9311,
+    "lng": 27.480861111,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
   },
   {
     "id": "battle-of-culqualber",
@@ -8623,32 +8431,6 @@
     ]
   },
   {
-    "id": "battle-of-balikpapan-q610048",
-    "title": "Battle of Balikpapan",
-    "date": "1942-01-23",
-    "endDate": "1942-01-24",
-    "sides": {
-      "allied": [
-        "usa",
-        "netherlands"
-      ],
-      "axis": [
-        "japan"
-      ]
-    },
-    "lat": -1.24611111,
-    "lng": 116.82166667,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The First Battle of Balikpapan took place on 23–25 January 1942, off the major oil-producing town and port of Balikpapan, on Borneo, in the Netherlands East Indies. After capturing mostly-destroyed oilfields at Tarakan, Japanese forces sent an ultimatum to the Dutch that they would be executed if they destroyed the oilfields there, to no avail.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Balikpapan",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Balikpapan_(1942)"
-      }
-    ]
-  },
-  {
     "id": "kholm-pocket",
     "title": "Kholm Pocket",
     "date": "1942-01-23",
@@ -8679,6 +8461,32 @@
       {
         "label": "Wikipedia: Battle of Rabaul",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Rabaul_(1942)"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-balikpapan-q610048",
+    "title": "Battle of Balikpapan",
+    "date": "1942-01-23",
+    "endDate": "1942-01-24",
+    "sides": {
+      "allied": [
+        "usa",
+        "netherlands"
+      ],
+      "axis": [
+        "japan"
+      ]
+    },
+    "lat": -1.24611111,
+    "lng": 116.82166667,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The First Battle of Balikpapan took place on 23–25 January 1942, off the major oil-producing town and port of Balikpapan, on Borneo, in the Netherlands East Indies. After capturing mostly-destroyed oilfields at Tarakan, Japanese forces sent an ultimatum to the Dutch that they would be executed if they destroyed the oilfields there, to no avail.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Balikpapan",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Balikpapan_(1942)"
       }
     ]
   },
@@ -9319,18 +9127,6 @@
     ]
   },
   {
-    "id": "concentration-camp-arbeitsdorf",
-    "title": "Concentration camp \"Arbeitsdorf\"",
-    "date": "1942-04-01",
-    "endDate": "1942-10-01",
-    "lat": 52.439471687,
-    "lng": 10.799152284,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
     "id": "syrets-concentration-camp",
     "title": "Syrets concentration camp",
     "date": "1942-04-01",
@@ -9345,6 +9141,18 @@
         "url": "https://en.wikipedia.org/wiki/Syrets_concentration_camp"
       }
     ]
+  },
+  {
+    "id": "concentration-camp-arbeitsdorf",
+    "title": "Concentration camp \"Arbeitsdorf\"",
+    "date": "1942-04-01",
+    "endDate": "1942-10-01",
+    "lat": 52.439471687,
+    "lng": 10.799152284,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "",
+    "links": []
   },
   {
     "id": "battle-of-nanos",
@@ -10003,6 +9811,29 @@
     ]
   },
   {
+    "id": "battle-of-tulagi-and-gavututanambogo",
+    "title": "Battle of Tulagi and Gavutu–Tanambogo",
+    "date": "1942-08-07",
+    "endDate": "1942-08-09",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": -9.10722,
+    "lng": 160.14889,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Battle of Tulagi and Gavutu–Tanambogo was a land battle of the Pacific campaign of World War II, between the forces of the Imperial Japanese Navy and Allied ground forces. It took place 7–9 August 1942 on the Solomon Islands, during the initial Allied landings in the Guadalcanal campaign.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Tulagi and Gavutu–Tanambogo",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Tulagi_and_Gavutu%E2%80%93Tanambogo"
+      }
+    ]
+  },
+  {
     "id": "guadalcanal-campaign",
     "title": "Guadalcanal campaign",
     "date": "1942-08-07",
@@ -10024,29 +9855,6 @@
       {
         "label": "Wikipedia: Guadalcanal campaign",
         "url": "https://en.wikipedia.org/wiki/Guadalcanal_campaign"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-tulagi-and-gavututanambogo",
-    "title": "Battle of Tulagi and Gavutu–Tanambogo",
-    "date": "1942-08-07",
-    "endDate": "1942-08-09",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": []
-    },
-    "lat": -9.10722,
-    "lng": 160.14889,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Tulagi and Gavutu–Tanambogo was a land battle of the Pacific campaign of World War II, between the forces of the Imperial Japanese Navy and Allied ground forces. It took place 7–9 August 1942 on the Solomon Islands, during the initial Allied landings in the Guadalcanal campaign.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Tulagi and Gavutu–Tanambogo",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Tulagi_and_Gavutu%E2%80%93Tanambogo"
       }
     ]
   },
@@ -10469,29 +10277,6 @@
     ]
   },
   {
-    "id": "second-battle-of-el-alamein",
-    "title": "Second Battle of El Alamein",
-    "date": "1942-10-23",
-    "endDate": "1942-11-11",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 30.841388888,
-    "lng": 28.942777777,
-    "category": "battle",
-    "theater": "africa",
-    "article": "The Second Battle of El Alamein was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein. The First Battle of El Alamein and the Battle of Alam el Halfa had prevented the Axis from advancing further into Egypt.",
-    "links": [
-      {
-        "label": "Wikipedia: Second Battle of El Alamein",
-        "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
-      }
-    ]
-  },
-  {
     "id": "battle-for-henderson-field",
     "title": "Battle for Henderson Field",
     "date": "1942-10-23",
@@ -10511,6 +10296,29 @@
       {
         "label": "Wikipedia: Battle for Henderson Field",
         "url": "https://en.wikipedia.org/wiki/Battle_for_Henderson_Field"
+      }
+    ]
+  },
+  {
+    "id": "second-battle-of-el-alamein",
+    "title": "Second Battle of El Alamein",
+    "date": "1942-10-23",
+    "endDate": "1942-11-11",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 30.841388888,
+    "lng": 28.942777777,
+    "category": "battle",
+    "theater": "africa",
+    "article": "The Second Battle of El Alamein was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein. The First Battle of El Alamein and the Battle of Alam el Halfa had prevented the Axis from advancing further into Egypt.",
+    "links": [
+      {
+        "label": "Wikipedia: Second Battle of El Alamein",
+        "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
       }
     ]
   },
@@ -15862,6 +15670,28 @@
     "links": []
   },
   {
+    "id": "battle-of-saint-l",
+    "title": "Battle of Saint-Lô",
+    "date": "1944-07-24",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": 49.12,
+    "lng": -1.09,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Saint-Lô was one of the three conflicts in the battle of the hedgerows which took place between July 7 and 19, 1944, in Saint-Lô, Manche, Normandy, France, just before Operation Cobra. Saint-Lô had fallen to Germany in 1940, and, after the Invasion of Normandy, the Americans targeted the city, as it served as a strategic crossroads. American bombardment caused heavy damage and a high number of casualties, which resulted in the martyr city being called \"The Capital of Ruins\", popularized in a report by Samuel Beckett.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Saint-Lô",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Saint-L%C3%B4"
+      }
+    ]
+  },
+  {
     "id": "battle-of-tinian",
     "title": "Battle of Tinian",
     "date": "1944-07-24",
@@ -15881,28 +15711,6 @@
       {
         "label": "Wikipedia: Battle of Tinian",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Tinian"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-saint-l",
-    "title": "Battle of Saint-Lô",
-    "date": "1944-07-24",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": []
-    },
-    "lat": 49.12,
-    "lng": -1.09,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Saint-Lô was one of the three conflicts in the battle of the hedgerows which took place between July 7 and 19, 1944, in Saint-Lô, Manche, Normandy, France, just before Operation Cobra. Saint-Lô had fallen to Germany in 1940, and, after the Invasion of Normandy, the Americans targeted the city, as it served as a strategic crossroads. American bombardment caused heavy damage and a high number of casualties, which resulted in the martyr city being called \"The Capital of Ruins\", popularized in a report by Samuel Beckett.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Saint-Lô",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Saint-L%C3%B4"
       }
     ]
   },
@@ -16806,31 +16614,6 @@
     ]
   },
   {
-    "id": "battle-of-peleliu",
-    "title": "Battle of Peleliu",
-    "date": "1944-09-15",
-    "endDate": "1944-11-25",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
-    },
-    "lat": 7.01666667,
-    "lng": 134.25,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Peleliu, codenamed Operation Stalemate II by the US military, was fought between the United States and Japan during the Mariana and Palau Islands campaign of World War II, from 15 September to 27 November 1944, on the island of Peleliu.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Peleliu",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Peleliu"
-      }
-    ]
-  },
-  {
     "id": "battle-of-angaur",
     "title": "Battle of Angaur",
     "date": "1944-09-15",
@@ -16890,6 +16673,31 @@
       {
         "label": "Wikipedia: Siege of Dunkirk",
         "url": "https://en.wikipedia.org/wiki/Siege_of_Dunkirk_(1944%E2%80%931945)"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-peleliu",
+    "title": "Battle of Peleliu",
+    "date": "1944-09-15",
+    "endDate": "1944-11-25",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": [
+        "japan"
+      ]
+    },
+    "lat": 7.01666667,
+    "lng": 134.25,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Battle of Peleliu, codenamed Operation Stalemate II by the US military, was fought between the United States and Japan during the Mariana and Palau Islands campaign of World War II, from 15 September to 27 November 1944, on the island of Peleliu.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Peleliu",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Peleliu"
       }
     ]
   },
@@ -17068,6 +16876,23 @@
     ]
   },
   {
+    "id": "battle-of-the-nijmegen-salient",
+    "title": "Battle of the Nijmegen Salient",
+    "date": "1944-09-30",
+    "endDate": "1944-10-08",
+    "lat": 51.916666666,
+    "lng": 5.85,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of the Nijmegen salient or the Defence of the Nijmegen bridgehead was a series of engagements that took place in the Netherlands during World War II between 30 September and 8 October 1944. The battle occurred in the aftermath of Operation Market Garden, a failed attempt by the Allies to cut off German forces in the Netherlands and end the war quickly.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of the Nijmegen Salient",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nijmegen_salient"
+      }
+    ]
+  },
+  {
     "id": "battle-of-overloon",
     "title": "Battle of Overloon",
     "date": "1944-09-30",
@@ -17087,23 +16912,6 @@
       {
         "label": "Wikipedia: Battle of Overloon",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Overloon"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-the-nijmegen-salient",
-    "title": "Battle of the Nijmegen Salient",
-    "date": "1944-09-30",
-    "endDate": "1944-10-08",
-    "lat": 51.916666666,
-    "lng": 5.85,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of the Nijmegen salient or the Defence of the Nijmegen bridgehead was a series of engagements that took place in the Netherlands during World War II between 30 September and 8 October 1944. The battle occurred in the aftermath of Operation Market Garden, a failed attempt by the Allies to cut off German forces in the Netherlands and end the war quickly.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of the Nijmegen Salient",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nijmegen_salient"
       }
     ]
   },
@@ -18334,6 +18142,23 @@
     ]
   },
   {
+    "id": "battle-of-bydgoszcz",
+    "title": "Battle of Bydgoszcz",
+    "date": "1945-01-23",
+    "endDate": "1945-01-27",
+    "lat": 53.125,
+    "lng": 18.011111,
+    "category": "battle",
+    "theater": "europe",
+    "article": "Battle of Bydgoszcz took place on 2 October 1794 during the Kościuszko Uprising. It involved Polish–Lithuanian forces led by Jan Henryk Dąbrowski against Prussia led by Johann Friedrich Székely. It ended with a Polish–Lithuanian victory.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Bydgoszcz",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Bydgoszcz"
+      }
+    ]
+  },
+  {
     "id": "siege-of-breslau",
     "title": "Siege of Breslau",
     "date": "1945-01-23",
@@ -18355,23 +18180,6 @@
       {
         "label": "Wikipedia: Siege of Breslau",
         "url": "https://en.wikipedia.org/wiki/Siege_of_Breslau"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-bydgoszcz",
-    "title": "Battle of Bydgoszcz",
-    "date": "1945-01-23",
-    "endDate": "1945-01-27",
-    "lat": 53.125,
-    "lng": 18.011111,
-    "category": "battle",
-    "theater": "europe",
-    "article": "Battle of Bydgoszcz took place on 2 October 1794 during the Kościuszko Uprising. It involved Polish–Lithuanian forces led by Jan Henryk Dąbrowski against Prussia led by Johann Friedrich Székely. It ended with a Polish–Lithuanian victory.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Bydgoszcz",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Bydgoszcz"
       }
     ]
   },
