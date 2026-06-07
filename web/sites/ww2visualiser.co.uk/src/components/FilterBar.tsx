@@ -24,23 +24,29 @@ export default function FilterBar({
   onToggle,
 }: Props) {
   return (
-    <div className="flex flex-wrap gap-1.5">
+    <div className="flex flex-col gap-1.5">
       {categories.map((cat) => {
         const active = activeFilters.has(cat);
         return (
-          <button
+          <label
             key={cat}
-            onClick={() => onToggle(cat)}
-            style={{
-              border: `1px solid ${active ? colors[cat] : "#30363d"}`,
-              background: active ? `${colors[cat]}22` : "transparent",
-              color: active ? colors[cat] : "#6e7681",
-            }}
-            className={`flex items-center gap-1.5 px-2 py-px rounded-full text-[11px] cursor-pointer transition-all duration-150 ${active ? "font-semibold" : "font-normal"}`}
+            className="flex items-center gap-2 cursor-pointer select-none"
           >
-            <span>{icons[cat]}</span>
-            <span>{LABELS[cat]}</span>
-          </button>
+            <input
+              type="checkbox"
+              checked={active}
+              onChange={() => onToggle(cat)}
+              style={{ accentColor: colors[cat] }}
+              className="w-3.5 h-3.5 cursor-pointer"
+            />
+            <span
+              style={{ color: active ? colors[cat] : "#6e7681" }}
+              className={`flex items-center gap-1.5 text-[12px] transition-colors duration-150 ${active ? "font-semibold" : "font-normal"}`}
+            >
+              <span>{icons[cat]}</span>
+              <span>{LABELS[cat]}</span>
+            </span>
+          </label>
         );
       })}
     </div>
