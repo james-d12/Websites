@@ -55,12 +55,8 @@
     "date": "1932-03-01",
     "endDate": "1939-09-16",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["ussr"],
+      "axis": ["japan"]
     },
     "lat": 47.7303,
     "lng": 118.59,
@@ -294,9 +290,7 @@
     "endDate": "1937-11-01",
     "sides": {
       "allied": [],
-      "axis": [
-        "japan"
-      ]
+      "axis": ["japan"]
     },
     "lat": 31.242183,
     "lng": 121.466298,
@@ -377,9 +371,7 @@
     "endDate": "1943-08-23",
     "sides": {
       "allied": [],
-      "axis": [
-        "japan"
-      ]
+      "axis": ["japan"]
     },
     "lat": 29.4814,
     "lng": 106.9382,
@@ -611,12 +603,8 @@
     "date": "1939-05-11",
     "endDate": "1939-09-16",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["ussr"],
+      "axis": ["japan"]
     },
     "lat": 47.730277777,
     "lng": 118.59,
@@ -667,9 +655,7 @@
     "title": "Charge at Krojanty",
     "date": "1939-09-01",
     "sides": {
-      "allied": [
-        "poland"
-      ],
+      "allied": ["poland"],
       "axis": []
     },
     "lat": 53.725555555,
@@ -708,9 +694,7 @@
     "endDate": "1939-09-07",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 54.4075,
     "lng": 18.671388888,
@@ -3063,12 +3047,8 @@
     "date": "1939-09-03",
     "endDate": "1939-09-04",
     "sides": {
-      "allied": [
-        "poland"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["poland"],
+      "axis": ["germany"]
     },
     "lat": 50.264167,
     "lng": 19.023611,
@@ -3266,9 +3246,7 @@
     "endDate": "1939-09-28",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 52.23,
     "lng": 21.01083333,
@@ -3477,12 +3455,8 @@
     "title": "Battle of Mrogą",
     "date": "1939-09-10",
     "sides": {
-      "allied": [
-        "poland"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["poland"],
+      "axis": ["germany"]
     },
     "lat": 51.964167,
     "lng": 19.711667,
@@ -3689,10 +3663,7 @@
     "date": "1939-09-17",
     "endDate": "1939-10-06",
     "sides": {
-      "allied": [
-        "poland",
-        "ussr"
-      ],
+      "allied": ["poland", "ussr"],
       "axis": []
     },
     "lat": 52,
@@ -4002,12 +3973,8 @@
     "title": "Sinking of HMS Royal Oak",
     "date": "1939-10-14",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 58.9,
     "lng": -3.05,
@@ -4051,9 +4018,7 @@
     "endDate": "1940-02-28",
     "sides": {
       "allied": [],
-      "axis": [
-        "finland"
-      ]
+      "axis": ["finland"]
     },
     "lat": 66.83333333,
     "lng": 28.66666667,
@@ -4108,9 +4073,7 @@
     "endDate": "1940-01-08",
     "sides": {
       "allied": [],
-      "axis": [
-        "finland"
-      ]
+      "axis": ["finland"]
     },
     "lat": 64.888333333,
     "lng": 28.888888888,
@@ -4208,13 +4171,8 @@
     "title": "Battle of the River Plate",
     "date": "1939-12-13",
     "sides": {
-      "allied": [
-        "uk",
-        "new_zealand"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk", "new_zealand"],
+      "axis": ["germany"]
     },
     "lat": -34,
     "lng": -49,
@@ -4295,12 +4253,8 @@
     "date": "1940-01-01",
     "endDate": "1940-01-07",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "finland"
-      ]
+      "allied": ["ussr"],
+      "axis": ["finland"]
     },
     "lat": 64.848055555,
     "lng": 29.326388888,
@@ -4416,9 +4370,7 @@
     "title": "Altmark Incident",
     "date": "1940-02-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 58.316944444,
@@ -4438,12 +4390,8 @@
     "title": "Operation Wikinger",
     "date": "1940-02-19",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 54.716666666,
     "lng": 2.766666666,
@@ -4513,9 +4461,7 @@
     "date": "1940-04-01",
     "endDate": "1940-05-01",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 62.56345833,
@@ -4553,16 +4499,8 @@
     "date": "1940-04-09",
     "endDate": "1940-06-10",
     "sides": {
-      "allied": [
-        "norway",
-        "denmark",
-        "poland",
-        "france",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["norway", "denmark", "poland", "france", "uk"],
+      "axis": ["germany"]
     },
     "lat": 59.916666666,
     "lng": 10.733333333,
@@ -4582,13 +4520,8 @@
     "date": "1940-04-09",
     "endDate": "1940-06-08",
     "sides": {
-      "allied": [
-        "norway",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["norway", "uk"],
+      "axis": ["germany"]
     },
     "lat": 68.420555555,
     "lng": 17.56,
@@ -4743,12 +4676,8 @@
     "title": "Battle for The Hague",
     "date": "1940-05-10",
     "sides": {
-      "allied": [
-        "netherlands"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["netherlands"],
+      "axis": ["germany"]
     },
     "lat": 52.083333333,
     "lng": 4.316666666,
@@ -4768,9 +4697,7 @@
     "date": "1940-05-10",
     "endDate": "1940-05-14",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.93083333,
@@ -4874,9 +4801,7 @@
     "title": "Battle of Sedan",
     "date": "1940-05-13",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.7025,
@@ -4977,9 +4902,7 @@
     "title": "Battle of Arras",
     "date": "1940-05-21",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 50.25,
@@ -5062,9 +4985,7 @@
     "date": "1940-05-26",
     "endDate": "1940-06-04",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.048388888,
@@ -5085,17 +5006,8 @@
     "date": "1940-05-26",
     "endDate": "1940-06-04",
     "sides": {
-      "allied": [
-        "canada",
-        "belgium",
-        "poland",
-        "netherlands",
-        "uk",
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["canada", "belgium", "poland", "netherlands", "uk", "france"],
+      "axis": ["germany"]
     },
     "lat": 51.0575,
     "lng": 2.3575,
@@ -5147,9 +5059,7 @@
     "title": "Battle of Abbeville",
     "date": "1940-06-04",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 50.105833,
@@ -5170,9 +5080,7 @@
     "date": "1940-06-10",
     "endDate": "1941-01-17",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 16,
@@ -5325,9 +5233,7 @@
     "title": "Action off Calabria",
     "date": "1940-07-09",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.666666666,
@@ -5348,15 +5254,8 @@
     "date": "1940-07-10",
     "endDate": "1940-10-31",
     "sides": {
-      "allied": [
-        "canada",
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "germany",
-        "italy"
-      ]
+      "allied": ["canada", "uk", "australia"],
+      "axis": ["germany", "italy"]
     },
     "lat": 54,
     "lng": -2,
@@ -5375,13 +5274,8 @@
     "title": "Battle of Cape Spada",
     "date": "1940-07-19",
     "sides": {
-      "allied": [
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk", "australia"],
+      "axis": ["italy"]
     },
     "lat": 35.692777777,
     "lng": 23.720555555,
@@ -5434,12 +5328,8 @@
     "date": "1940-08-09",
     "endDate": "1943-04-23",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 52.48,
     "lng": -1.9025,
@@ -5505,12 +5395,8 @@
     "date": "1940-09-07",
     "endDate": "1941-05-21",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 51.50694444,
     "lng": -0.1275,
@@ -5531,9 +5417,7 @@
     "endDate": "1940-09-16",
     "sides": {
       "allied": [],
-      "axis": [
-        "italy"
-      ]
+      "axis": ["italy"]
     },
     "lat": 26,
     "lng": 30,
@@ -5585,12 +5469,8 @@
     "title": "Battle of Graveney Marsh",
     "date": "1940-09-27",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 51.343938,
     "lng": 0.958887,
@@ -5709,13 +5589,8 @@
     "title": "Battle of the Strait of Otranto",
     "date": "1940-11-12",
     "sides": {
-      "allied": [
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk", "australia"],
+      "axis": ["italy"]
     },
     "lat": 40.805277777,
     "lng": 18.690277777,
@@ -5768,12 +5643,8 @@
     "title": "Battle of Cape Spartivento",
     "date": "1940-11-27",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["italy"]
     },
     "lat": 38.4275,
     "lng": 8.865833333,
@@ -5793,10 +5664,7 @@
     "date": "1940-12-01",
     "endDate": "1941-03-21",
     "sides": {
-      "allied": [
-        "uk",
-        "australia"
-      ],
+      "allied": ["uk", "australia"],
       "axis": []
     },
     "lat": 29.7425,
@@ -5833,12 +5701,8 @@
     "date": "1940-12-10",
     "endDate": "1940-12-11",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["italy"]
     },
     "lat": 31.6108,
     "lng": 25.9256,
@@ -5859,9 +5723,7 @@
     "endDate": "1945-01-01",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 54.71666667,
     "lng": 20.51666667,
@@ -5946,9 +5808,7 @@
     "date": "1941-01-16",
     "endDate": "1941-01-17",
     "sides": {
-      "allied": [
-        "france"
-      ],
+      "allied": ["france"],
       "axis": []
     },
     "lat": 12.001,
@@ -6002,9 +5862,7 @@
     "date": "1941-01-26",
     "endDate": "1941-01-31",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 15.548611,
@@ -6076,9 +5934,7 @@
     "date": "1941-02-05",
     "endDate": "1941-04-01",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 15.77666667,
@@ -6133,9 +5989,7 @@
     "date": "1941-03-01",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 55.8997,
     "lng": -4.4006,
@@ -6238,13 +6092,8 @@
     "date": "1941-03-27",
     "endDate": "1941-03-29",
     "sides": {
-      "allied": [
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk", "australia"],
+      "axis": ["italy"]
     },
     "lat": 35.35,
     "lng": 22,
@@ -6312,14 +6161,8 @@
     "date": "1941-04-06",
     "endDate": "1941-04-30",
     "sides": {
-      "allied": [
-        "uk",
-        "australia",
-        "greece"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk", "australia", "greece"],
+      "axis": ["germany"]
     },
     "lat": 38.5,
     "lng": 23,
@@ -6356,9 +6199,7 @@
     "date": "1941-04-13",
     "endDate": "1941-04-14",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 40.535185,
@@ -6378,9 +6219,7 @@
     "title": "Battle of Ptolemaida",
     "date": "1941-04-13",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 40.489166666,
@@ -6400,12 +6239,8 @@
     "title": "Battle of the Tarigo Convoy",
     "date": "1941-04-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["italy"]
     },
     "lat": 35.15753611,
     "lng": 11.51367222,
@@ -6424,9 +6259,7 @@
     "title": "Battle of Tempe Gorge",
     "date": "1941-04-18",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 39.8769,
@@ -6464,9 +6297,7 @@
     "date": "1941-04-24",
     "endDate": "1941-04-25",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 38.79638889,
@@ -6503,9 +6334,7 @@
     "date": "1941-05-04",
     "endDate": "1941-05-19",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 12.983333333,
@@ -6575,9 +6404,7 @@
     "date": "1941-05-20",
     "endDate": "1941-06-01",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 35.5,
@@ -6613,9 +6440,7 @@
     "title": "Battle of Heraklion",
     "date": "1941-05-20",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 35.336388888,
@@ -6635,12 +6460,8 @@
     "title": "Battle of the Denmark Strait",
     "date": "1941-05-24",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 67.766667,
     "lng": -31,
@@ -6807,11 +6628,7 @@
     "date": "1941-06-18",
     "endDate": "1941-06-21",
     "sides": {
-      "allied": [
-        "uk",
-        "australia",
-        "france"
-      ],
+      "allied": ["uk", "australia", "france"],
       "axis": []
     },
     "lat": 33.5,
@@ -7089,12 +6906,8 @@
     "date": "1941-07-10",
     "endDate": "1941-09-10",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 54.782778,
     "lng": 32.045278,
@@ -7257,10 +7070,7 @@
     "date": "1941-08-25",
     "endDate": "1941-09-17",
     "sides": {
-      "allied": [
-        "uk",
-        "ussr"
-      ],
+      "allied": ["uk", "ussr"],
       "axis": []
     },
     "lat": 32,
@@ -7565,15 +7375,8 @@
     "date": "1941-10-30",
     "endDate": "1942-07-04",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany",
-        "croatia",
-        "italy",
-        "romania"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany", "croatia", "italy", "romania"]
     },
     "lat": 44.60472222,
     "lng": 33.54111111,
@@ -7641,9 +7444,7 @@
     "title": "Battle of the Duisburg Convoy",
     "date": "1941-11-09",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.13333333,
@@ -7681,9 +7482,7 @@
     "date": "1941-11-13",
     "endDate": "1941-11-27",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 12.6,
@@ -7719,12 +7518,8 @@
     "title": "Battle between HMAS Sydney and German auxiliary cruiser Kormoran",
     "date": "1941-11-19",
     "sides": {
-      "allied": [
-        "australia"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["australia"],
+      "axis": ["germany"]
     },
     "lat": -26.163889,
     "lng": 111.073611,
@@ -7821,12 +7616,8 @@
     "title": "Attack on Pearl Harbor",
     "date": "1941-12-07",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 21.365,
     "lng": -157.95,
@@ -7864,9 +7655,7 @@
     "endDate": "1941-12-13",
     "sides": {
       "allied": [],
-      "axis": [
-        "japan"
-      ]
+      "axis": ["japan"]
     },
     "lat": 21.8653,
     "lng": -160.2235,
@@ -7886,12 +7675,8 @@
     "date": "1941-12-08",
     "endDate": "1941-12-25",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["uk"],
+      "axis": ["japan"]
     },
     "lat": 22.2825,
     "lng": 114.161111111,
@@ -7911,12 +7696,8 @@
     "date": "1941-12-08",
     "endDate": "1941-12-23",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 19.29,
     "lng": 166.601,
@@ -7937,9 +7718,7 @@
     "endDate": "1941-12-09",
     "sides": {
       "allied": [],
-      "axis": [
-        "japan"
-      ]
+      "axis": ["japan"]
     },
     "lat": 11.786574,
     "lng": 99.811695,
@@ -7959,16 +7738,8 @@
     "date": "1941-12-08",
     "endDate": "1945-09-09",
     "sides": {
-      "allied": [
-        "usa",
-        "netherlands",
-        "france",
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "netherlands", "france", "uk", "australia"],
+      "axis": ["japan"]
     },
     "lat": 10,
     "lng": 110,
@@ -7987,12 +7758,8 @@
     "title": "Sinking of Prince of Wales and Repulse",
     "date": "1941-12-10",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["uk"],
+      "axis": ["japan"]
     },
     "lat": 3.56,
     "lng": 104.478333333,
@@ -8045,10 +7812,7 @@
     "date": "1941-12-14",
     "endDate": "1941-12-16",
     "sides": {
-      "allied": [
-        "uk",
-        "india"
-      ],
+      "allied": ["uk", "india"],
       "axis": []
     },
     "lat": 5.81666667,
@@ -8100,12 +7864,8 @@
     "title": "Raid on Alexandria",
     "date": "1941-12-19",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["italy"]
     },
     "lat": 31.17880833,
     "lng": 29.86246944,
@@ -8125,10 +7885,7 @@
     "date": "1941-12-22",
     "endDate": "1942-01-14",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 38.895,
@@ -8264,9 +8021,7 @@
     "date": "1942-01-06",
     "endDate": "1942-01-08",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 4.05,
@@ -8470,13 +8225,8 @@
     "date": "1942-01-23",
     "endDate": "1942-01-24",
     "sides": {
-      "allied": [
-        "usa",
-        "netherlands"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "netherlands"],
+      "axis": ["japan"]
     },
     "lat": -1.24611111,
     "lng": 116.82166667,
@@ -8545,9 +8295,7 @@
     "date": "1942-02-03",
     "endDate": "1943-08-17",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -9.48154722,
@@ -8567,13 +8315,8 @@
     "title": "Battle of Makassar Strait",
     "date": "1942-02-04",
     "sides": {
-      "allied": [
-        "usa",
-        "netherlands"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "netherlands"],
+      "axis": ["japan"]
     },
     "lat": -7.5,
     "lng": 115.5,
@@ -8609,13 +8352,8 @@
     "date": "1942-02-08",
     "endDate": "1942-02-15",
     "sides": {
-      "allied": [
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["uk", "australia"],
+      "axis": ["japan"]
     },
     "lat": 1.3525,
     "lng": 103.768888888,
@@ -8700,14 +8438,8 @@
     "date": "1942-02-18",
     "endDate": "1942-02-20",
     "sides": {
-      "allied": [
-        "usa",
-        "netherlands",
-        "uk"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "netherlands", "uk"],
+      "axis": ["japan"]
     },
     "lat": -8.630555555,
     "lng": 115.388055555,
@@ -8727,13 +8459,8 @@
     "date": "1942-02-19",
     "endDate": "1943-02-10",
     "sides": {
-      "allied": [
-        "australia",
-        "netherlands"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["australia", "netherlands"],
+      "axis": ["japan"]
     },
     "lat": -10.38333333,
     "lng": 123.63333333,
@@ -8800,14 +8527,8 @@
     "title": "Battle of the Java Sea",
     "date": "1942-02-27",
     "sides": {
-      "allied": [
-        "usa",
-        "netherlands",
-        "australia"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "netherlands", "australia"],
+      "axis": ["japan"]
     },
     "lat": -5,
     "lng": 111,
@@ -8876,13 +8597,8 @@
     "date": "1942-03-05",
     "endDate": "1942-03-07",
     "sides": {
-      "allied": [
-        "uk",
-        "netherlands"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["uk", "netherlands"],
+      "axis": ["japan"]
     },
     "lat": -6.766666666,
     "lng": 107.633333333,
@@ -8995,12 +8711,8 @@
     "title": "Second Battle of Sirte",
     "date": "1942-03-22",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["italy"]
     },
     "lat": 34,
     "lng": 17.5,
@@ -9103,16 +8815,8 @@
     "date": "1942-03-31",
     "endDate": "1942-04-10",
     "sides": {
-      "allied": [
-        "canada",
-        "usa",
-        "netherlands",
-        "uk",
-        "australia"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["canada", "usa", "netherlands", "uk", "australia"],
+      "axis": ["japan"]
     },
     "lat": -20,
     "lng": 80,
@@ -9257,13 +8961,8 @@
     "date": "1942-05-04",
     "endDate": "1942-05-08",
     "sides": {
-      "allied": [
-        "usa",
-        "australia"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "australia"],
+      "axis": ["japan"]
     },
     "lat": -16.266666666,
     "lng": 162.333333333,
@@ -9367,9 +9066,7 @@
     "date": "1942-05-26",
     "endDate": "1942-06-21",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 31.95,
@@ -9390,13 +9087,8 @@
     "date": "1942-05-26",
     "endDate": "1942-06-11",
     "sides": {
-      "allied": [
-        "uk",
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk", "france"],
+      "axis": ["germany"]
     },
     "lat": 31.593869444,
     "lng": 23.479766666,
@@ -9417,9 +9109,7 @@
     "endDate": "1942-06-08",
     "sides": {
       "allied": [],
-      "axis": [
-        "japan"
-      ]
+      "axis": ["japan"]
     },
     "lat": -33.85833333,
     "lng": 151.23333333,
@@ -9439,12 +9129,8 @@
     "date": "1942-06-01",
     "endDate": "1942-11-24",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 47.2225,
     "lng": 39.71,
@@ -9476,10 +9162,7 @@
     "date": "1942-06-02",
     "endDate": "1943-09-08",
     "sides": {
-      "allied": [
-        "uk",
-        "usa"
-      ],
+      "allied": ["uk", "usa"],
       "axis": []
     },
     "lat": 39.216666666,
@@ -9516,9 +9199,7 @@
     "title": "Battle of Dutch Harbor",
     "date": "1942-06-04",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 53.8875,
@@ -9539,12 +9220,8 @@
     "date": "1942-06-04",
     "endDate": "1942-06-07",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 30,
     "lng": -178,
@@ -9597,14 +9274,8 @@
     "date": "1942-06-12",
     "endDate": "1942-06-15",
     "sides": {
-      "allied": [
-        "poland",
-        "uk"
-      ],
-      "axis": [
-        "germany",
-        "italy"
-      ]
+      "allied": ["poland", "uk"],
+      "axis": ["germany", "italy"]
     },
     "lat": 36.2,
     "lng": 11.63333333,
@@ -9667,9 +9338,7 @@
     "date": "1942-07-01",
     "endDate": "1942-07-27",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 30.841388888,
@@ -9768,12 +9437,8 @@
     "date": "1942-07-23",
     "endDate": "1942-08-11",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 48.70998874,
     "lng": 43.481819982,
@@ -9793,9 +9458,7 @@
     "date": "1942-08-03",
     "endDate": "1942-08-15",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 35.904012,
@@ -9816,9 +9479,7 @@
     "date": "1942-08-07",
     "endDate": "1942-08-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -9.10722,
@@ -9839,12 +9500,8 @@
     "date": "1942-08-07",
     "endDate": "1943-02-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -9.416666666,
     "lng": 160,
@@ -9891,9 +9548,7 @@
     "title": "Dieppe Raid",
     "date": "1942-08-19",
     "sides": {
-      "allied": [
-        "canada"
-      ],
+      "allied": ["canada"],
       "axis": []
     },
     "lat": 49.933333333,
@@ -9913,12 +9568,8 @@
     "title": "Battle of the Tenaru",
     "date": "1942-08-21",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -9.422168,
     "lng": 160.066803,
@@ -9938,15 +9589,8 @@
     "date": "1942-08-23",
     "endDate": "1943-02-02",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "croatia",
-        "italy",
-        "romania",
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["croatia", "italy", "romania", "germany"]
     },
     "lat": 48.715,
     "lng": 44.5325,
@@ -9983,9 +9627,7 @@
     "date": "1942-08-25",
     "endDate": "1942-09-07",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -10.32,
@@ -10006,9 +9648,7 @@
     "date": "1942-08-30",
     "endDate": "1942-09-05",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 30.66666667,
@@ -10060,9 +9700,7 @@
     "title": "Night operation",
     "date": "1942-09-09",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
+      "allied": ["ussr"],
       "axis": []
     },
     "lat": 54.298115,
@@ -10078,9 +9716,7 @@
     "date": "1942-09-12",
     "endDate": "1942-09-14",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -9.446944444,
@@ -10113,12 +9749,8 @@
     "date": "1942-09-23",
     "endDate": "1942-10-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -9.41055556,
     "lng": 160.34888889,
@@ -10153,12 +9785,8 @@
     "title": "Battle of SS Stephen Hopkins",
     "date": "1942-09-27",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": -28.214722,
     "lng": -11.918333,
@@ -10205,13 +9833,8 @@
     "date": "1942-10-05",
     "endDate": "1942-10-12",
     "sides": {
-      "allied": [
-        "yugoslavia"
-      ],
-      "axis": [
-        "germany",
-        "italy"
-      ]
+      "allied": ["yugoslavia"],
+      "axis": ["germany", "italy"]
     },
     "lat": 43.82,
     "lng": 17.61,
@@ -10282,9 +9905,7 @@
     "date": "1942-10-23",
     "endDate": "1942-10-26",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -9.42889,
@@ -10305,9 +9926,7 @@
     "date": "1942-10-23",
     "endDate": "1942-11-11",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 30.841388888,
@@ -10344,9 +9963,7 @@
     "date": "1942-10-25",
     "endDate": "1942-10-27",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -8.63333333,
@@ -10401,9 +10018,7 @@
     "date": "1942-11-03",
     "endDate": "1942-11-12",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -9.45,
@@ -10474,12 +10089,8 @@
     "date": "1942-11-13",
     "endDate": "1942-11-15",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -9.186111111,
     "lng": 159.895,
@@ -10499,9 +10110,7 @@
     "date": "1942-11-16",
     "endDate": "1943-01-22",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -8.65,
@@ -10554,9 +10163,7 @@
     "title": "Battle of La Réunion",
     "date": "1942-11-28",
     "sides": {
-      "allied": [
-        "france"
-      ],
+      "allied": ["france"],
       "axis": []
     },
     "lat": -20.9394,
@@ -10576,12 +10183,8 @@
     "title": "Battle of Tassafaronga",
     "date": "1942-11-30",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -9.2,
     "lng": 159.83333333,
@@ -10600,9 +10203,7 @@
     "title": "Battle of Skerki Bank",
     "date": "1942-12-02",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.75333333,
@@ -10623,9 +10224,7 @@
     "date": "1942-12-11",
     "endDate": "1942-12-18",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 30.2667,
@@ -10646,9 +10245,7 @@
     "date": "1942-12-15",
     "endDate": "1943-01-23",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -9.43472222,
@@ -10668,12 +10265,8 @@
     "title": "Battle of the Barents Sea",
     "date": "1942-12-31",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 73.25,
     "lng": 29,
@@ -10809,9 +10402,7 @@
     "endDate": "1943-03-01",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 43.6542,
     "lng": 17.7625,
@@ -10831,9 +10422,7 @@
     "date": "1943-01-29",
     "endDate": "1943-01-31",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -7.338888888,
@@ -10854,12 +10443,8 @@
     "date": "1943-01-29",
     "endDate": "1943-01-30",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -11.416666666,
     "lng": 160.933333333,
@@ -10897,9 +10482,7 @@
     "endDate": "1943-02-13",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 59.67972222,
     "lng": 30.66944444,
@@ -10919,14 +10502,8 @@
     "date": "1943-02-14",
     "endDate": "1943-02-17",
     "sides": {
-      "allied": [
-        "usa",
-        "uk",
-        "france"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["usa", "uk", "france"],
+      "axis": ["italy"]
     },
     "lat": 34.86666667,
     "lng": 9.48333333,
@@ -10979,10 +10556,7 @@
     "date": "1943-02-19",
     "endDate": "1943-02-25",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 35.2596,
@@ -11003,9 +10577,7 @@
     "date": "1943-02-26",
     "endDate": "1943-03-04",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.05,
@@ -11054,12 +10626,8 @@
     "title": "Battle of Blackett Strait",
     "date": "1943-03-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -5.06666667,
     "lng": 152.3,
@@ -11122,9 +10690,7 @@
     "title": "Battle of El Guettar",
     "date": "1943-03-23",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 34.336667,
@@ -11144,12 +10710,8 @@
     "title": "Battle of the Komandorski Islands",
     "date": "1943-03-27",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 53.098611111,
     "lng": 168.212777777,
@@ -11185,9 +10747,7 @@
     "title": "Battle of the Cigno Convoy",
     "date": "1943-04-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.8098,
@@ -11290,9 +10850,7 @@
     "date": "1943-04-27",
     "endDate": "1943-05-01",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 36.90222222,
@@ -11346,12 +10904,8 @@
     "date": "1943-05-11",
     "endDate": "1943-05-30",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 52.879075,
     "lng": 173.15688889,
@@ -11465,9 +11019,7 @@
     "date": "1943-06-20",
     "endDate": "1943-10-07",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -8.5,
@@ -11487,12 +11039,8 @@
     "title": "Battle of Sarantaporos",
     "date": "1943-06-21",
     "sides": {
-      "allied": [
-        "greece"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["greece"],
+      "axis": ["germany"]
     },
     "lat": 40.0977,
     "lng": 22.0527,
@@ -11545,9 +11093,7 @@
     "date": "1943-06-30",
     "endDate": "1944-03-20",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -4.196130555,
@@ -11568,9 +11114,7 @@
     "date": "1943-06-30",
     "endDate": "1943-07-03",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -8.742,
@@ -11640,12 +11184,8 @@
     "title": "Battle of Kula Gulf",
     "date": "1943-07-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -7.966666666,
     "lng": 157.066666666,
@@ -11665,9 +11205,7 @@
     "date": "1943-07-09",
     "endDate": "1943-08-17",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 36.883333,
@@ -11703,12 +11241,8 @@
     "title": "Battle of Prokhorovka",
     "date": "1943-07-12",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 51.017,
     "lng": 36.675,
@@ -11728,13 +11262,8 @@
     "date": "1943-07-12",
     "endDate": "1943-07-13",
     "sides": {
-      "allied": [
-        "usa",
-        "new_zealand"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "new_zealand"],
+      "axis": ["japan"]
     },
     "lat": -7.83333333,
     "lng": 157.35,
@@ -11765,9 +11294,7 @@
     "date": "1943-07-13",
     "endDate": "1943-07-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.399444444,
@@ -11836,9 +11363,7 @@
     "date": "1943-07-16",
     "endDate": "1943-07-19",
     "sides": {
-      "allied": [
-        "poland"
-      ],
+      "allied": ["poland"],
       "axis": []
     },
     "lat": 51.150278,
@@ -11874,9 +11399,7 @@
     "title": "Battle of Bairoko",
     "date": "1943-07-20",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -8.19125,
@@ -11897,10 +11420,7 @@
     "date": "1943-07-24",
     "endDate": "1943-08-03",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 53.5506,
@@ -11920,10 +11440,7 @@
     "title": "Allied bombings of Amsterdam-Noord",
     "date": "1943-07-28",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 52.395833333,
@@ -11944,9 +11461,7 @@
     "date": "1943-07-31",
     "endDate": "1943-08-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 37.78333333,
@@ -11967,9 +11482,7 @@
     "date": "1943-08-02",
     "endDate": "1943-08-04",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.616666666,
@@ -12121,12 +11634,8 @@
     "date": "1943-08-17",
     "endDate": "1943-08-18",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -7.7,
     "lng": 156.716666666,
@@ -12276,10 +11785,7 @@
     "date": "1943-09-03",
     "endDate": "1943-09-16",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 40.679,
@@ -12317,9 +11823,7 @@
     "endDate": "1943-09-09",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 51.058333333,
     "lng": 24.593611111,
@@ -12339,9 +11843,7 @@
     "date": "1943-09-07",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 50.8252,
     "lng": 4.3921,
@@ -12377,12 +11879,8 @@
     "title": "Battle of Arachov",
     "date": "1943-09-09",
     "sides": {
-      "allied": [
-        "greece"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["greece"],
+      "axis": ["germany"]
     },
     "lat": 38.4836,
     "lng": 22.5578,
@@ -12457,9 +11955,7 @@
     "title": "Operation Garlic",
     "date": "1943-09-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 52.041,
@@ -12513,9 +12009,7 @@
     "date": "1943-09-19",
     "endDate": "1943-09-20",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -6.266666666,
@@ -12536,12 +12030,8 @@
     "date": "1943-09-22",
     "endDate": "1943-11-01",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 49.954189,
     "lng": 31.313903,
@@ -12561,9 +12051,7 @@
     "date": "1943-09-22",
     "endDate": "1943-10-02",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -6.483333,
@@ -12584,9 +12072,7 @@
     "date": "1943-09-26",
     "endDate": "1943-11-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 37.13194444,
@@ -12606,9 +12092,7 @@
     "title": "Operation Jaywick",
     "date": "1943-09-26",
     "sides": {
-      "allied": [
-        "australia"
-      ],
+      "allied": ["australia"],
       "axis": []
     },
     "lat": 1.287222222,
@@ -12646,9 +12130,7 @@
     "endDate": "1945-03-01",
     "sides": {
       "allied": [],
-      "axis": [
-        "japan"
-      ]
+      "axis": ["japan"]
     },
     "lat": 22.83,
     "lng": 97.14,
@@ -12684,9 +12166,7 @@
     "date": "1943-10-03",
     "endDate": "1943-10-04",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 36.79088,
@@ -12722,12 +12202,8 @@
     "title": "Naval Battle of Vella Lavella",
     "date": "1943-10-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -7.5,
     "lng": 156.23333333,
@@ -12863,9 +12339,7 @@
     "date": "1943-11-01",
     "endDate": "1945-08-21",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -6.02,
@@ -13036,9 +12510,7 @@
     "date": "1943-11-17",
     "endDate": "1943-11-25",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -6.486388888,
@@ -13127,11 +12599,7 @@
     "date": "1943-11-28",
     "endDate": "1943-12-01",
     "sides": {
-      "allied": [
-        "usa",
-        "uk",
-        "ussr"
-      ],
+      "allied": ["usa", "uk", "ussr"],
       "axis": []
     },
     "lat": 35.6985869,
@@ -13184,9 +12652,7 @@
     "date": "1943-12-03",
     "endDate": "1943-12-09",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 41.3833,
@@ -13240,9 +12706,7 @@
     "date": "1943-12-05",
     "endDate": "1944-03-01",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -5.955,
@@ -13308,9 +12772,7 @@
     "date": "1943-12-15",
     "endDate": "1944-02-24",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -6.154444444,
@@ -13397,9 +12859,7 @@
     "date": "1943-12-26",
     "endDate": "1944-04-22",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -5.45,
@@ -13419,12 +12879,8 @@
     "title": "Battle of the North Cape",
     "date": "1943-12-26",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 72.5167,
     "lng": 28.25,
@@ -13443,12 +12899,8 @@
     "title": "Battle of the Bay of Biscay",
     "date": "1943-12-28",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 45,
     "lng": -12,
@@ -13543,9 +12995,7 @@
     "date": "1944-01-03",
     "sides": {
       "allied": [],
-      "axis": [
-        "italy"
-      ]
+      "axis": ["italy"]
     },
     "lat": 43.9304375,
     "lng": 11.1653192,
@@ -13560,14 +13010,8 @@
     "date": "1944-01-17",
     "endDate": "1944-05-18",
     "sides": {
-      "allied": [
-        "usa",
-        "uk",
-        "new_zealand"
-      ],
-      "axis": [
-        "italy"
-      ]
+      "allied": ["usa", "uk", "new_zealand"],
+      "axis": ["italy"]
     },
     "lat": 41.49,
     "lng": 13.813888888,
@@ -13587,10 +13031,7 @@
     "date": "1944-01-22",
     "endDate": "1944-06-05",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 41.443022,
@@ -13627,12 +13068,8 @@
     "date": "1944-01-24",
     "endDate": "1944-02-17",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 49.4194,
     "lng": 31.2772,
@@ -13652,9 +13089,7 @@
     "date": "1944-01-29",
     "endDate": "1944-02-27",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -4.5,
@@ -13691,9 +13126,7 @@
     "date": "1944-01-30",
     "endDate": "1944-02-02",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 41.4,
@@ -13731,9 +13164,7 @@
     "date": "1944-01-31",
     "endDate": "1944-02-03",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 8.71666667,
@@ -13783,13 +13214,8 @@
     "date": "1944-02-02",
     "endDate": "1944-08-10",
     "sides": {
-      "allied": [
-        "ussr",
-        "estonia"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr", "estonia"],
+      "axis": ["germany"]
     },
     "lat": 59.38333333,
     "lng": 28.2,
@@ -13875,12 +13301,8 @@
     "date": "1944-02-17",
     "endDate": "1944-02-23",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 11.465,
     "lng": 162.189,
@@ -13987,9 +13409,7 @@
     "date": "1944-03-08",
     "endDate": "1944-07-03",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 24.816666666,
@@ -14042,9 +13462,7 @@
     "title": "Battle of Talasea",
     "date": "1944-03-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -5.263888888,
@@ -14242,12 +13660,8 @@
     "date": "1944-04-04",
     "endDate": "1944-06-22",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["uk"],
+      "axis": ["japan"]
     },
     "lat": 25.667645,
     "lng": 94.103175,
@@ -14356,9 +13770,7 @@
     "date": "1944-04-22",
     "endDate": "1944-06-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -2.533,
@@ -14378,9 +13790,7 @@
     "title": "Raid on Santorini",
     "date": "1944-04-24",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 36.42,
@@ -14416,12 +13826,8 @@
     "title": "Battle of 25 April 1944",
     "date": "1944-04-25",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 48.717,
     "lng": -4.517,
@@ -14509,12 +13915,8 @@
     "date": "1944-05-20",
     "endDate": "1944-06-22",
     "sides": {
-      "allied": [
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["france"],
+      "axis": ["germany"]
     },
     "lat": 44.975555555,
     "lng": 3.372777777,
@@ -14550,12 +13952,8 @@
     "date": "1944-05-27",
     "endDate": "1944-08-17",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": -1,
     "lng": 136,
@@ -14631,13 +14029,8 @@
     "date": "1944-06-06",
     "endDate": "1944-08-06",
     "sides": {
-      "allied": [
-        "canada",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["canada", "uk"],
+      "axis": ["germany"]
     },
     "lat": 49.186111111,
     "lng": -0.3625,
@@ -14657,10 +14050,7 @@
     "date": "1944-06-06",
     "endDate": "1944-06-30",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
+      "allied": ["usa", "uk"],
       "axis": []
     },
     "lat": 49.638888888,
@@ -14681,17 +14071,8 @@
     "date": "1944-06-06",
     "endDate": "1944-08-29",
     "sides": {
-      "allied": [
-        "canada",
-        "norway",
-        "usa",
-        "belgium",
-        "denmark",
-        "poland"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["canada", "norway", "usa", "belgium", "denmark", "poland"],
+      "axis": ["germany"]
     },
     "lat": 49.34,
     "lng": -0.6,
@@ -14710,12 +14091,8 @@
     "title": "Brécourt Manor Assault",
     "date": "1944-06-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 49.38805556,
     "lng": -1.22611111,
@@ -14735,11 +14112,7 @@
     "date": "1944-06-06",
     "endDate": "1944-07-01",
     "sides": {
-      "allied": [
-        "canada",
-        "usa",
-        "uk"
-      ],
+      "allied": ["canada", "usa", "uk"],
       "axis": []
     },
     "lat": 49.333333333,
@@ -14760,9 +14133,7 @@
     "date": "1944-06-06",
     "endDate": "1944-06-07",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.345,
@@ -14798,9 +14169,7 @@
     "title": "Battle of Merville Gun Battery",
     "date": "1944-06-06",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.27,
@@ -14849,12 +14218,8 @@
     "date": "1944-06-10",
     "endDate": "1944-06-14",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 49.305,
     "lng": -1.24944,
@@ -14922,9 +14287,7 @@
     "title": "Battle of Villers-Bocage",
     "date": "1944-06-13",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.080555555,
@@ -14944,9 +14307,7 @@
     "title": "Battle of Bréville",
     "date": "1944-06-13",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.24029722,
@@ -15017,9 +14378,7 @@
     "date": "1944-06-15",
     "endDate": "1944-07-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 15.18333333,
@@ -15040,13 +14399,8 @@
     "date": "1944-06-16",
     "endDate": "1944-07-18",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany",
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany", "italy"]
     },
     "lat": 43.61194444,
     "lng": 13.51444444,
@@ -15081,9 +14435,7 @@
     "title": "Battle of Douvres Radar Station",
     "date": "1944-06-17",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.286,
@@ -15104,12 +14456,8 @@
     "date": "1944-06-19",
     "endDate": "1944-06-20",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 20,
     "lng": 130,
@@ -15128,9 +14476,7 @@
     "title": "Battle of Nerva Island",
     "date": "1944-06-20",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
+      "allied": ["ussr"],
       "axis": []
     },
     "lat": 60.267,
@@ -15295,13 +14641,8 @@
     "date": "1944-07-01",
     "endDate": "1944-07-09",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany",
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany", "italy"]
     },
     "lat": 43.434419444,
     "lng": 13.35025,
@@ -15349,9 +14690,7 @@
     "date": "1944-07-02",
     "endDate": "1944-08-31",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": -0.980482,
@@ -15421,12 +14760,8 @@
     "title": "Battle of Pierres Noires",
     "date": "1944-07-05",
     "sides": {
-      "allied": [
-        "canada"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["canada"],
+      "axis": ["germany"]
     },
     "lat": 48.21166667,
     "lng": -4.91472222,
@@ -15446,12 +14781,8 @@
     "date": "1944-07-06",
     "endDate": "1944-07-07",
     "sides": {
-      "allied": [
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["france"],
+      "axis": ["germany"]
     },
     "lat": 42.932527777,
     "lng": 1.7685,
@@ -15551,9 +14882,7 @@
     "date": "1944-07-15",
     "endDate": "1944-07-17",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 49.079722222,
@@ -15674,9 +15003,7 @@
     "title": "Battle of Saint-Lô",
     "date": "1944-07-24",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 49.12,
@@ -15697,9 +15024,7 @@
     "date": "1944-07-24",
     "endDate": "1944-08-01",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 15,
@@ -15800,9 +15125,7 @@
     "endDate": "1944-10-02",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 52.23,
     "lng": 21.010833333,
@@ -15870,9 +15193,7 @@
     "title": "Battle of Skalbmierz",
     "date": "1944-08-05",
     "sides": {
-      "allied": [
-        "poland"
-      ],
+      "allied": ["poland"],
       "axis": []
     },
     "lat": 50.319444,
@@ -15915,9 +15236,7 @@
     "date": "1944-08-06",
     "endDate": "1944-08-17",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 48.637222222,
@@ -15954,13 +15273,8 @@
     "date": "1944-08-07",
     "endDate": "1944-09-19",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa", "uk"],
+      "axis": ["germany"]
     },
     "lat": 48.38994307,
     "lng": -4.486262423,
@@ -16023,9 +15337,7 @@
     "title": "Battle of Guam",
     "date": "1944-08-10",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 13.402777777,
@@ -16046,14 +15358,8 @@
     "date": "1944-08-12",
     "endDate": "1944-08-21",
     "sides": {
-      "allied": [
-        "canada",
-        "usa",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["canada", "usa", "uk"],
+      "axis": ["germany"]
     },
     "lat": 48.892777777,
     "lng": -0.191944444,
@@ -16114,9 +15420,7 @@
     "endDate": "1944-09-14",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 43.2275,
     "lng": 6.6625,
@@ -16185,9 +15489,7 @@
     "date": "1944-08-18",
     "endDate": "1944-08-20",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 48.8058,
@@ -16208,13 +15510,8 @@
     "date": "1944-08-19",
     "endDate": "1944-08-25",
     "sides": {
-      "allied": [
-        "uk",
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk", "france"],
+      "axis": ["germany"]
     },
     "lat": 48.8735,
     "lng": 2.29642,
@@ -16283,9 +15580,7 @@
     "title": "Battle of Surkonty",
     "date": "1944-08-21",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
+      "allied": ["ussr"],
       "axis": []
     },
     "lat": 53.944722,
@@ -16472,9 +15767,7 @@
     "date": "1944-09-08",
     "endDate": "1944-09-23",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.164768,
@@ -16562,9 +15855,7 @@
     "date": "1944-09-13",
     "endDate": "1944-09-15",
     "sides": {
-      "allied": [
-        "greece"
-      ],
+      "allied": ["greece"],
       "axis": []
     },
     "lat": 37.223056,
@@ -16619,9 +15910,7 @@
     "date": "1944-09-15",
     "endDate": "1944-10-22",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 6.9,
@@ -16642,9 +15931,7 @@
     "date": "1944-09-15",
     "endDate": "1944-10-04",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 2.031111111,
@@ -16682,12 +15969,8 @@
     "date": "1944-09-15",
     "endDate": "1944-11-25",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 7.01666667,
     "lng": 134.25,
@@ -16752,12 +16035,8 @@
     "date": "1944-09-18",
     "endDate": "1944-09-29",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 48.74166667,
     "lng": 6.61416667,
@@ -16809,9 +16088,7 @@
     "date": "1944-09-27",
     "endDate": "1944-12-13",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 49.12027778,
@@ -16898,9 +16175,7 @@
     "date": "1944-09-30",
     "endDate": "1944-10-18",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.57027778,
@@ -16921,9 +16196,7 @@
     "date": "1944-10-02",
     "endDate": "1944-11-08",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.552313,
@@ -16944,12 +16217,8 @@
     "date": "1944-10-02",
     "endDate": "1944-10-21",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 50.776388888,
     "lng": 6.083333333,
@@ -16998,12 +16267,8 @@
     "date": "1944-10-06",
     "endDate": "1945-02-10",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 50.708611111,
     "lng": 6.362777777,
@@ -17023,12 +16288,8 @@
     "date": "1944-10-07",
     "endDate": "1944-10-31",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 69.42777778,
     "lng": 31.22805556,
@@ -17047,9 +16308,7 @@
     "title": "Battle of Crucifix Hill",
     "date": "1944-10-08",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 50.79934167,
@@ -17132,9 +16391,7 @@
     "date": "1944-10-17",
     "endDate": "1944-12-26",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 11.172222222,
@@ -17155,9 +16412,7 @@
     "date": "1944-10-18",
     "sides": {
       "allied": [],
-      "axis": [
-        "italy"
-      ]
+      "axis": ["italy"]
     },
     "lat": 46.19834,
     "lng": 8.54014,
@@ -17215,12 +16470,8 @@
     "date": "1944-10-23",
     "endDate": "1944-10-26",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 10.37,
     "lng": 125.355,
@@ -17239,12 +16490,8 @@
     "title": "Battle of the Sibuyan Sea",
     "date": "1944-10-24",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 12.75,
     "lng": 122.5,
@@ -17291,10 +16538,7 @@
     "date": "1944-10-31",
     "endDate": "1944-11-02",
     "sides": {
-      "allied": [
-        "uk",
-        "canada"
-      ],
+      "allied": ["uk", "canada"],
       "axis": []
     },
     "lat": 51.5031,
@@ -17437,12 +16681,8 @@
     "date": "1944-11-11",
     "endDate": "1944-12-21",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 10.982,
     "lng": 124.581,
@@ -17529,9 +16769,7 @@
     "date": "1944-11-27",
     "endDate": "1944-11-30",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.48333333,
@@ -17612,9 +16850,7 @@
     "date": "1944-12-13",
     "endDate": "1945-02-01",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 50.60753,
@@ -17635,13 +16871,8 @@
     "date": "1944-12-16",
     "endDate": "1945-01-25",
     "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa", "uk"],
+      "axis": ["germany"]
     },
     "lat": 50.6243,
     "lng": 6.13724,
@@ -17661,9 +16892,7 @@
     "date": "1944-12-16",
     "endDate": "1944-12-17",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 50.359487,
@@ -17732,12 +16961,8 @@
     "date": "1944-12-20",
     "endDate": "1944-12-27",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 50,
     "lng": 5.7214,
@@ -17756,9 +16981,7 @@
     "title": "Battle of St. Vith",
     "date": "1944-12-21",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 50.28194444,
@@ -17778,9 +17001,7 @@
     "title": "Elsenborn Ridge",
     "date": "1944-12-26",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 50.44638889,
@@ -17961,9 +17182,7 @@
     "date": "1945-01-03",
     "endDate": "1945-01-05",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 50.0888,
@@ -17984,9 +17203,7 @@
     "date": "1945-01-09",
     "endDate": "1945-08-15",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 16,
@@ -18057,12 +17274,8 @@
     "date": "1945-01-18",
     "endDate": "1945-01-19",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 53.127222,
     "lng": 20.3575,
@@ -18082,12 +17295,8 @@
     "date": "1945-01-19",
     "endDate": "1945-01-20",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 52.201944444,
     "lng": 18.647222222,
@@ -18164,12 +17373,8 @@
     "date": "1945-01-23",
     "endDate": "1945-05-06",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 51.10773,
     "lng": 17.03533,
@@ -18284,9 +17489,7 @@
     "date": "1945-02-03",
     "endDate": "1945-03-03",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 14.58333333,
@@ -18363,12 +17566,8 @@
     "date": "1945-02-08",
     "endDate": "1945-03-26",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 24.78,
     "lng": 141.32,
@@ -18387,9 +17586,7 @@
     "title": "Black Friday",
     "date": "1945-02-09",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 61.4625,
@@ -18472,12 +17669,8 @@
     "date": "1945-02-18",
     "endDate": "1945-02-25",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 44.18811,
     "lng": 10.83441,
@@ -18492,12 +17685,8 @@
     "date": "1945-02-18",
     "endDate": "1945-03-05",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 44.216666666,
     "lng": 10.916666666,
@@ -18583,9 +17772,7 @@
     "date": "1945-03-07",
     "endDate": "1945-03-25",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 50.57916667,
@@ -18606,9 +17793,7 @@
     "date": "1945-03-10",
     "endDate": "1945-08-15",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 8,
@@ -18640,9 +17825,7 @@
     "date": "1945-03-11",
     "endDate": "1945-03-13",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
+      "allied": ["ussr"],
       "axis": []
     },
     "lat": 55.27722222,
@@ -18674,9 +17857,7 @@
     "title": "Battle of the Ligurian Sea",
     "date": "1945-03-18",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 43.5,
@@ -18841,9 +18022,7 @@
     "date": "1945-04-01",
     "endDate": "1945-04-04",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 51.28916667,
@@ -18864,16 +18043,8 @@
     "date": "1945-04-01",
     "endDate": "1945-06-23",
     "sides": {
-      "allied": [
-        "canada",
-        "usa",
-        "uk",
-        "australia",
-        "new_zealand"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["canada", "usa", "uk", "australia", "new_zealand"],
+      "axis": ["japan"]
     },
     "lat": 26.5,
     "lng": 128,
@@ -18919,9 +18090,7 @@
     "title": "Battle of Königshofen",
     "date": "1945-04-01",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 49.5479622,
@@ -18937,12 +18106,8 @@
     "date": "1945-04-04",
     "endDate": "1945-04-12",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 49.2664612,
     "lng": 9.2665522,
@@ -18980,9 +18145,7 @@
     "endDate": "1945-05-20",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 53.05,
     "lng": 4.8,
@@ -19018,12 +18181,8 @@
     "title": "Operation Ten-Go",
     "date": "1945-04-07",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 30.36666667,
     "lng": 128.06666667,
@@ -19043,11 +18202,7 @@
     "date": "1945-04-09",
     "endDate": "1945-04-21",
     "sides": {
-      "allied": [
-        "usa",
-        "poland",
-        "uk"
-      ],
+      "allied": ["usa", "poland", "uk"],
       "axis": []
     },
     "lat": 44.493889,
@@ -19068,13 +18223,8 @@
     "date": "1945-04-10",
     "endDate": "1945-04-25",
     "sides": {
-      "allied": [
-        "usa",
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa", "france"],
+      "axis": ["germany"]
     },
     "lat": 44.001080544,
     "lng": 7.433039249,
@@ -19094,9 +18244,7 @@
     "date": "1945-04-12",
     "endDate": "1945-04-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.984444444,
@@ -19162,13 +18310,8 @@
     "date": "1945-04-16",
     "endDate": "1945-05-02",
     "sides": {
-      "allied": [
-        "ussr",
-        "poland"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr", "poland"],
+      "axis": ["germany"]
     },
     "lat": 52.518611111,
     "lng": 13.376111111,
@@ -19188,9 +18331,7 @@
     "date": "1945-04-16",
     "endDate": "1945-04-20",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 49.46,
@@ -19260,9 +18401,7 @@
     "title": "Ruhr Pocket",
     "date": "1945-04-18",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 51.466666666,
@@ -19361,9 +18500,7 @@
     "date": "1945-04-26",
     "endDate": "1945-04-29",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 44.749659,
@@ -19410,12 +18547,8 @@
     "title": "Operation Cowboy",
     "date": "1945-04-28",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 49.577981,
     "lng": 12.771055,
@@ -19501,9 +18634,7 @@
     "endDate": "1945-05-09",
     "sides": {
       "allied": [],
-      "axis": [
-        "germany"
-      ]
+      "axis": ["germany"]
     },
     "lat": 50.07861111,
     "lng": 14.43444444,
@@ -19522,12 +18653,8 @@
     "title": "Battle of Castle Itter",
     "date": "1945-05-05",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 47.470555555,
     "lng": 12.139722222,
@@ -19595,9 +18722,7 @@
     "date": "1945-05-09",
     "endDate": "1945-05-15",
     "sides": {
-      "allied": [
-        "uk"
-      ],
+      "allied": ["uk"],
       "axis": []
     },
     "lat": 46.54444444,
@@ -19618,9 +18743,7 @@
     "date": "1945-05-11",
     "endDate": "1945-05-12",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 49.6433,
@@ -19641,12 +18764,8 @@
     "date": "1945-05-15",
     "endDate": "1945-05-16",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["uk"],
+      "axis": ["japan"]
     },
     "lat": 4,
     "lng": 100,
@@ -19726,13 +18845,8 @@
     "date": "1945-06-10",
     "endDate": "1945-06-21",
     "sides": {
-      "allied": [
-        "usa",
-        "australia"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa", "australia"],
+      "axis": ["japan"]
     },
     "lat": 5.32028,
     "lng": 115.211,
@@ -19883,11 +18997,7 @@
     "date": "1945-07-17",
     "endDate": "1945-08-02",
     "sides": {
-      "allied": [
-        "usa",
-        "uk",
-        "ussr"
-      ],
+      "allied": ["usa", "uk", "ussr"],
       "axis": []
     },
     "lat": 52.419169444,
@@ -19989,9 +19099,7 @@
     "title": "atomic bombing of Hiroshima",
     "date": "1945-08-06",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 34.3914,
@@ -20011,12 +19119,8 @@
     "title": "atomic bombings of Hiroshima and Nagasaki",
     "date": "1945-08-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
+      "allied": ["usa"],
+      "axis": ["japan"]
     },
     "lat": 34.39468002,
     "lng": 132.45462036,
@@ -20035,9 +19139,7 @@
     "title": "atomic bombing of Nagasaki",
     "date": "1945-08-09",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 32.77372222,
@@ -20058,9 +19160,7 @@
     "date": "1945-08-09",
     "endDate": "1945-08-20",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
+      "allied": ["ussr"],
       "axis": []
     },
     "lat": 49,

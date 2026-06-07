@@ -28,7 +28,11 @@ const BATCH = 10;
 type TaggedBinding = SparqlBinding & { _spec: QuerySpec; _qid: string };
 
 function tag(spec: QuerySpec, rows: SparqlBinding[]): TaggedBinding[] {
-  return rows.map((r) => ({ ...r, _spec: spec, _qid: r.item.value.split("/").pop()! }));
+  return rows.map((r) => ({
+    ...r,
+    _spec: spec,
+    _qid: r.item.value.split("/").pop()!,
+  }));
 }
 
 async function collectRows(): Promise<TaggedBinding[]> {
@@ -36,7 +40,9 @@ async function collectRows(): Promise<TaggedBinding[]> {
 
   const settled = await Promise.allSettled(
     QUERIES.map((spec) =>
-      sparql<SparqlBinding>(spec.key, spec.query).then((rows) => tag(spec, rows)),
+      sparql<SparqlBinding>(spec.key, spec.query).then((rows) =>
+        tag(spec, rows),
+      ),
     ),
   );
 
@@ -59,7 +65,11 @@ async function collectRows(): Promise<TaggedBinding[]> {
   // start date would misplace real, well-documented battles (e.g. "Battle
   // of Vercors" — July 1944 — has no Wikidata date claims at all). Better
   // to drop an event than to show it on the wrong date.
-  const listSpec: QuerySpec = { key: "list-battles", category: "battle", query: "" };
+  const listSpec: QuerySpec = {
+    key: "list-battles",
+    category: "battle",
+    query: "",
+  };
   try {
     allRows.push(...tag(listSpec, await fetchListBattleRows()));
   } catch (err) {
@@ -76,11 +86,17 @@ async function collectRows(): Promise<TaggedBinding[]> {
  * Queries with COMBATANT_OPTIONAL return one row per (event × country), so the
  * same event QID appears multiple times — one per combatant country.
  */
-function dedupe(rows: TaggedBinding[]): Map<string, { binding: TaggedBinding; countryQIDs: Set<string> }> {
-  const accum = new Map<string, { binding: TaggedBinding; countryQIDs: Set<string> }>();
+function dedupe(
+  rows: TaggedBinding[],
+): Map<string, { binding: TaggedBinding; countryQIDs: Set<string> }> {
+  const accum = new Map<
+    string,
+    { binding: TaggedBinding; countryQIDs: Set<string> }
+  >();
   for (const row of rows) {
     const qid = row._qid;
-    if (!accum.has(qid)) accum.set(qid, { binding: row, countryQIDs: new Set() });
+    if (!accum.has(qid))
+      accum.set(qid, { binding: row, countryQIDs: new Set() });
     const cqid = row.countryQID?.value;
     if (cqid) accum.get(qid)!.countryQIDs.add(cqid);
   }
@@ -161,7 +177,10 @@ async function resolveMissingWpTitles(
   }
 }
 
-async function resolveWpTitle(label: string, year: string): Promise<string | null> {
+async function resolveWpTitle(
+  label: string,
+  year: string,
+): Promise<string | null> {
   const withYear = `${label} (${year})`;
   if (await fetchWpSummary(withYear)) return withYear;
   if (await fetchWpSummary(label)) return label;
@@ -170,26 +189,28 @@ async function resolveWpTitle(label: string, year: string): Promise<string | nul
 
 function toWW2Events(enriched: EnrichedEvent[]): WW2Event[] {
   const ids = assignSlugIds(enriched);
-  return enriched.map((e, i): WW2Event => ({
-    id: ids[i],
-    title: e.label,
-    date: e.date,
-    ...(e.endDate !== undefined ? { endDate: e.endDate } : {}),
-    ...(e.sides !== undefined ? { sides: e.sides } : {}),
-    lat: e.lat,
-    lng: e.lng,
-    category: e.category,
-    theater: e.theater,
-    article: e.wp?.article ?? "",
-    links: e.wpTitle
-      ? [
-          {
-            label: `Wikipedia: ${e.label}`,
-            url: `https://en.wikipedia.org/wiki/${encodeURIComponent(e.wpTitle.replace(/ /g, "_"))}`,
-          },
-        ]
-      : [],
-  }));
+  return enriched.map(
+    (e, i): WW2Event => ({
+      id: ids[i],
+      title: e.label,
+      date: e.date,
+      ...(e.endDate !== undefined ? { endDate: e.endDate } : {}),
+      ...(e.sides !== undefined ? { sides: e.sides } : {}),
+      lat: e.lat,
+      lng: e.lng,
+      category: e.category,
+      theater: e.theater,
+      article: e.wp?.article ?? "",
+      links: e.wpTitle
+        ? [
+            {
+              label: `Wikipedia: ${e.label}`,
+              url: `https://en.wikipedia.org/wiki/${encodeURIComponent(e.wpTitle.replace(/ /g, "_"))}`,
+            },
+          ]
+        : [],
+    }),
+  );
 }
 
 export async function fetchEvents(dryRun: boolean): Promise<void> {

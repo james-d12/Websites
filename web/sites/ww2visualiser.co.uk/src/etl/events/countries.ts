@@ -102,7 +102,9 @@ const AXIS_COUNTRIES = new Set<Country>([
   "spain",
 ]);
 
-export function mapSides(countryQIDs: Iterable<string>): EventSides | undefined {
+export function mapSides(
+  countryQIDs: Iterable<string>,
+): EventSides | undefined {
   const allied = new Set<Country>();
   const axis = new Set<Country>();
   for (const qid of countryQIDs) {

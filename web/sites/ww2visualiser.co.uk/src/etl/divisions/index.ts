@@ -28,7 +28,11 @@ async function collectRows(): Promise<DivisionBinding[]> {
   console.log(`  ${qids.length} resolved to Wikidata items`);
 
   console.log("Querying Wikidata for division facts…");
-  const rows = await fetchRowsByQid<DivisionBinding>("divisions", qids, divisionsQuery);
+  const rows = await fetchRowsByQid<DivisionBinding>(
+    "divisions",
+    qids,
+    divisionsQuery,
+  );
   console.log(`  ${rows.length} rows`);
   return rows;
 }
@@ -112,7 +116,9 @@ export async function fetchDivisions(dryRun: boolean): Promise<void> {
         `  ${d.label.padEnd(40)} type: ${(d.type ?? "—").padEnd(28)} branch: ${d.branch ?? "—"}  ${d.formed ?? "?"}–${d.disbanded ?? "?"}`,
       );
     }
-    console.log(`Total: ${parsed.length} divisions. No file written (--dry-run).`);
+    console.log(
+      `Total: ${parsed.length} divisions. No file written (--dry-run).`,
+    );
     return;
   }
 
