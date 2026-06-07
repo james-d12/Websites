@@ -2,7 +2,6 @@ import { useState, useCallback } from "react";
 import Map, { Marker } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type { WW2Event, EventCategory } from "../types/events";
-import { COUNTRY_COLORS, COUNTRY_FLAGS } from "../types/events";
 import eventsData from "../data/events.json";
 import EventPanel from "./EventPanel";
 import Timeline from "./Timeline";
@@ -37,7 +36,6 @@ const CATEGORY_ICONS: Record<EventCategory, string> = {
 };
 
 export default function WW2Map({ flags }: { flags: Record<string, string> }) {
-  const flagImages: Record<string, string> = flags;
   const [currentDay, setCurrentDay] = useState(0);
   const [selectedEvent, setSelectedEvent] = useState<WW2Event | null>(null);
   const [activeFilters, setActiveFilters] = useState<Set<EventCategory>>(
@@ -84,7 +82,7 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
 
   return (
     <div className="flex flex-col h-screen bg-deep text-dim font-sans">
-      <header className="bg-surface border-b border-rim px-5 pt-3 pb-2.5 shrink-0 flex flex-col gap-2.5">
+      <header className="bg-surface border-b border-rim px-5 pt-2 pb-1.5 shrink-0 flex flex-col gap-1.5">
         {/* Title row */}
         <div className="flex items-center gap-4">
           <h1 className="m-0 text-lg font-bold tracking-[0.05em] text-ink shrink-0">
@@ -150,13 +148,6 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
           {visibleEvents.map((ev) => {
             const isSelected = selectedEvent?.id === ev.id;
             const size = isSelected ? 46 : 38;
-            const flagSize = isSelected ? 20 : 15;
-            const f1 = ev.sides?.allied[0];
-            const f2 = ev.sides?.axis[0];
-            const c1 = f1 ? COUNTRY_COLORS[f1] : CATEGORY_COLORS[ev.category];
-            const c2 = f2 ? COUNTRY_COLORS[f2] : null;
-            const img1 = f1 ? flagImages[f1] : undefined;
-            const img2 = f2 ? flagImages[f2] : undefined;
             return (
               <Marker
                 key={ev.id}
@@ -170,81 +161,14 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
                   style={{
                     width: size,
                     height: size,
-                    background:
-                      img1 || img2
-                        ? "transparent"
-                        : c2
-                          ? `linear-gradient(135deg, ${c1} 50%, ${c2} 50%)`
-                          : c1,
+                    background: CATEGORY_COLORS[ev.category],
                     border: `2px solid ${isSelected ? "#fff" : "rgba(255,255,255,0.5)"}`,
                   }}
-                  className="rounded-full flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.5)] cursor-pointer transition-all duration-150 overflow-hidden relative select-none"
+                  className="rounded-full flex items-center justify-center shadow-[0_2px_8px_rgba(0,0,0,0.5)] cursor-pointer transition-all duration-150 select-none"
                 >
-                  {/* No factions: category icon */}
-                  {!f1 && (
-                    <span style={{ fontSize: isSelected ? 18 : 14 }}>
-                      {CATEGORY_ICONS[ev.category]}
-                    </span>
-                  )}
-
-                  {/* Single faction */}
-                  {f1 &&
-                    !f2 &&
-                    (img1 ? (
-                      <img
-                        src={img1}
-                        alt={f1}
-                        className="absolute inset-0 w-full h-full object-cover"
-                      />
-                    ) : (
-                      <span style={{ fontSize: flagSize }}>
-                        {COUNTRY_FLAGS[f1]}
-                      </span>
-                    ))}
-
-                  {/* Dual faction: each half fills its side */}
-                  {f1 && f2 && (
-                    <>
-                      <div
-                        className="absolute left-0 top-0 w-1/2 h-full overflow-hidden"
-                        style={{ background: c1 }}
-                      >
-                        {img1 ? (
-                          <img
-                            src={img1}
-                            alt={f1}
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <span
-                            className="absolute inset-0 flex items-center justify-center"
-                            style={{ fontSize: flagSize }}
-                          >
-                            {COUNTRY_FLAGS[f1]}
-                          </span>
-                        )}
-                      </div>
-                      <div
-                        className="absolute right-0 top-0 w-1/2 h-full overflow-hidden"
-                        style={{ background: c2 ?? undefined }}
-                      >
-                        {img2 ? (
-                          <img
-                            src={img2}
-                            alt={f2}
-                            className="w-full h-full object-cover"
-                          />
-                        ) : (
-                          <span
-                            className="absolute inset-0 flex items-center justify-center"
-                            style={{ fontSize: flagSize }}
-                          >
-                            {COUNTRY_FLAGS[f2]}
-                          </span>
-                        )}
-                      </div>
-                    </>
-                  )}
+                  <span style={{ fontSize: isSelected ? 18 : 14 }}>
+                    {CATEGORY_ICONS[ev.category]}
+                  </span>
                 </div>
               </Marker>
             );
@@ -254,6 +178,7 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
         {selectedEvent && (
           <EventPanel
             event={selectedEvent}
+            flags={flags}
             onClose={() => setSelectedEvent(null)}
           />
         )}

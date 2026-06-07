@@ -69,11 +69,11 @@ export default function Timeline({
   }, []);
 
   return (
-    <div className="bg-surface border-t-2 border-rim px-6 pt-3.5 pb-3 shrink-0 select-none">
+    <div className="bg-surface border-t-2 border-rim px-6 pt-3 pb-3.5 shrink-0 select-none">
       {/* Prominent date */}
-      <div className="text-center mb-2.5">
+      <div className="text-center mb-3">
         <span
-          className="text-[26px] font-bold text-ink tracking-[0.03em] tabular-nums"
+          className="text-[34px] font-bold text-ink tracking-[0.03em] tabular-nums"
           style={{ textShadow: "0 1px 6px rgba(230,57,70,0.25)" }}
         >
           {dateStr}
@@ -81,7 +81,7 @@ export default function Timeline({
       </div>
 
       {/* Controls row */}
-      <div className="flex items-center gap-3.5">
+      <div className="flex items-center gap-4">
         {/* Play/Pause */}
         <button
           onClick={() => setPlaying((p) => !p)}
@@ -92,9 +92,18 @@ export default function Timeline({
               ? "0 0 10px rgba(230,57,70,0.4)"
               : "0 0 10px rgba(35,134,54,0.4)",
           }}
-          className="border-none rounded-lg text-white w-11 h-11 text-xl cursor-pointer shrink-0 flex items-center justify-center transition-[background,box-shadow] duration-150"
+          className="border-none rounded-lg text-white w-14 h-14 cursor-pointer shrink-0 flex items-center justify-center transition-[background,box-shadow] duration-150"
         >
-          {playing ? "⏸" : "▶"}
+          {playing ? (
+            <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor">
+              <rect x="3" y="2" width="4" height="12" rx="1" />
+              <rect x="9" y="2" width="4" height="12" rx="1" />
+            </svg>
+          ) : (
+            <svg width="22" height="22" viewBox="0 0 16 16" fill="currentColor">
+              <path d="M4 2.5v11l9-5.5z" />
+            </svg>
+          )}
         </button>
 
         {/* Track + year labels */}
@@ -108,10 +117,10 @@ export default function Timeline({
               setPlaying(false);
               onChange(Number(e.target.value));
             }}
-            style={{ accentColor: "#e63946" }}
-            className="w-full cursor-pointer block h-5"
+            style={{ accentColor: "#e63946", height: 10 }}
+            className="w-full cursor-pointer block"
           />
-          <div className="relative h-4 mt-0.5">
+          <div className="relative h-5 mt-1">
             {YEARS.map((y) => {
               const left = (dayOffset(warStart, y) / totalDays) * 100;
               if (left > 100) return null;
@@ -119,7 +128,7 @@ export default function Timeline({
                 <span
                   key={y}
                   style={{ left: `${left}%` }}
-                  className="absolute -translate-x-1/2 text-[11px] text-faint whitespace-nowrap"
+                  className="absolute -translate-x-1/2 text-[13px] font-medium text-faint whitespace-nowrap"
                 >
                   {y}
                 </span>
@@ -129,14 +138,14 @@ export default function Timeline({
         </div>
 
         {/* Speed */}
-        <div className="flex items-center gap-1.5 shrink-0">
-          <span className="text-[11px] text-faint uppercase tracking-[0.05em]">
+        <div className="flex items-center gap-2 shrink-0">
+          <span className="text-[12px] text-faint uppercase tracking-[0.05em]">
             Speed
           </span>
           <select
             value={speed}
             onChange={(e) => setSpeed(Number(e.target.value))}
-            className="bg-deep text-dim border border-rim rounded-md px-2 py-1.5 text-xs cursor-pointer"
+            className="bg-deep text-dim border border-rim rounded-md px-2.5 py-2 text-sm cursor-pointer"
           >
             <option value={1}>Slow (1 day/s)</option>
             <option value={7}>Normal (1 wk/s)</option>

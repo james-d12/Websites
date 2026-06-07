@@ -4,11 +4,21 @@ import WW2Map from '../components/WW2Map';
 import germanyFlagImg from '../images/Germany.png';
 import UnitedKingdomImg from '../images/UnitedKingdom.png';
 import SovietUnionImg from '../images/SovietUnion.png';
+import JapanImg from '../images/Japan.png';
+import ChinaImg from '../images/China.png';
+import UnitedStatesImg from '../images/UnitedStates.png';
+import PolandImg from '../images/Poland.png';
+import FinlandImg from '../images/Finland.png';
 
 const flags: Record<string, string> = {
   germany: germanyFlagImg.src,
   uk: UnitedKingdomImg.src,
-  ussr: SovietUnionImg.src
+  ussr: SovietUnionImg.src,
+  japan: JapanImg.src,
+  china: ChinaImg.src,
+  usa: UnitedStatesImg.src,
+  poland: PolandImg.src,
+  finland: FinlandImg.src,
 }
 
 ---
@@ -18,7 +28,7 @@ const flags: Record<string, string> = {
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png+xml" href="/favicon.png" />
     <title>WW2 Interactive Map</title>
   </head>
   <body>

@@ -1,8 +1,41 @@
-import type { WW2Event, EventCategory } from "../types/events";
+import type { WW2Event, EventCategory, Country } from "../types/events";
+import { COUNTRY_COLORS, COUNTRY_FLAGS, COUNTRY_LABELS } from "../types/events";
 
 interface Props {
   event: WW2Event;
+  flags: Record<string, string>;
   onClose: () => void;
+}
+
+function SideFlag({
+  country,
+  flags,
+}: {
+  country: Country;
+  flags: Record<string, string>;
+}) {
+  const img = flags[country];
+  return (
+    <div className="flex flex-col items-center gap-1 w-20">
+      <div
+        className="w-full h-12 rounded border border-rim overflow-hidden flex items-center justify-center"
+        style={{ background: img ? "transparent" : COUNTRY_COLORS[country] }}
+      >
+        {img ? (
+          <img
+            src={img}
+            alt={COUNTRY_LABELS[country]}
+            className="w-full h-full object-contain"
+          />
+        ) : (
+          <span className="text-2xl">{COUNTRY_FLAGS[country]}</span>
+        )}
+      </div>
+      <span className="text-[11px] text-muted text-center leading-tight">
+        {COUNTRY_LABELS[country]}
+      </span>
+    </div>
+  );
 }
 
 const CATEGORY_COLORS: Record<EventCategory, string> = {
@@ -29,8 +62,10 @@ function formatDate(d: string) {
   });
 }
 
-export default function EventPanel({ event, onClose }: Props) {
+export default function EventPanel({ event, flags, onClose }: Props) {
   const color = CATEGORY_COLORS[event.category];
+  const allied = event.sides?.allied[0];
+  const axis = event.sides?.axis[0];
 
   return (
     <div
@@ -71,6 +106,17 @@ export default function EventPanel({ event, onClose }: Props) {
           {event.endDate && ` — ${formatDate(event.endDate)}`}
         </div>
       </div>
+
+      {/* Sides */}
+      {(allied || axis) && (
+        <div className="flex items-center justify-center gap-4 px-3.5 py-3 border-b border-rim bg-deep/40 shrink-0">
+          {allied ? <SideFlag country={allied} flags={flags} /> : <div className="w-20" />}
+          <span className="text-[11px] font-bold tracking-[0.1em] text-faint">
+            VS
+          </span>
+          {axis ? <SideFlag country={axis} flags={flags} /> : <div className="w-20" />}
+        </div>
+      )}
 
       {/* Body */}
       <div className="px-3.5 py-3 overflow-y-auto flex-1">

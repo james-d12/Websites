@@ -36,7 +36,7 @@ export default function FilterBar({
               background: active ? `${colors[cat]}22` : "transparent",
               color: active ? colors[cat] : "#6e7681",
             }}
-            className={`flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs cursor-pointer transition-all duration-150 ${active ? "font-semibold" : "font-normal"}`}
+            className={`flex items-center gap-1.5 px-2 py-px rounded-full text-[11px] cursor-pointer transition-all duration-150 ${active ? "font-semibold" : "font-normal"}`}
           >
             <span>{icons[cat]}</span>
             <span>{LABELS[cat]}</span>
