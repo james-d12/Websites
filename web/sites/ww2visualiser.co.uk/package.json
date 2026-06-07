@@ -11,6 +11,8 @@
     "astro": "astro",
     "fetch-data": "tsx src/etl/fetch-wikidata.ts",
     "fetch-data:dry": "tsx src/etl/fetch-wikidata.ts --dry-run",
+    "fetch-divisions": "tsx src/etl/fetch-divisions.ts",
+    "fetch-divisions:dry": "tsx src/etl/fetch-divisions.ts --dry-run",
     "prebuild": "tsx src/etl//fetch-wikidata.ts"
   },
   "dependencies": {

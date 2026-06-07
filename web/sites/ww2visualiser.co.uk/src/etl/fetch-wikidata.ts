@@ -393,11 +393,22 @@ async function resolveTitlesToQids(titles: string[]): Promise<string[]> {
   return [...qids];
 }
 
+// Wikipedia's battle list links to plenty of non-battle articles too (places,
+// units, leaders, occupied territories…). Restrict to the same battle/naval/air
+// conflict types the rest of the pipeline recognises (transitively via P279*)
+// so things like "Guangzhouwan" — a leased territory with coordinates — don't
+// slip in as a "battle" via the WW2-start date fallback.
+const BATTLE_LIKE_TYPES = `
+  wd:Q178561 wd:Q15275719 wd:Q188055 wd:Q890701 wd:Q180684 wd:Q3272563 wd:Q2001676 wd:Q831663
+  wd:Q1261499
+  wd:Q189760 wd:Q4688003`;
+
 function listBattlesQuery(qids: string[]): string {
   return `
     SELECT DISTINCT ?item ?itemLabel ?startTime ?endTime ?pointInTime ?coords ?wpTitle ?countryQID WHERE {
       VALUES ?item { ${qids.map((q) => `wd:${q}`).join(" ")} }
-      ?item wdt:P625 ?coords.
+      ?item wdt:P31/wdt:P279* ?broadType; wdt:P625 ?coords.
+      VALUES ?broadType { ${BATTLE_LIKE_TYPES} }
       ${DATE_OPTIONALS}
       ${WP_OPTIONAL}
       ${COMBATANT_OPTIONAL}
@@ -664,10 +675,15 @@ async function main(): Promise<void> {
     console.log(`  ${titles.length} linked articles`);
     const qids = await resolveTitlesToQids(titles);
     console.log(`  ${qids.length} resolved to Wikidata items`);
+    // No dateFallback: unlike the WW2-tagged queries (whose items are vetted
+    // WW2 conflicts simply missing precise dates), these cross-referenced
+    // items are often near-empty Wikidata stubs. Defaulting them to the WW2
+    // start date would misplace real, well-documented battles (e.g. "Battle
+    // of Vercors" — July 1944 — has no Wikidata date claims at all). Better
+    // to drop an event than to show it on the wrong date.
     const listSpec: QuerySpec = {
       key: "list-battles",
       category: "battle",
-      dateFallback: true,
       query: "",
     };
     const listRows = (await fetchListBattleRows(qids)).map((r) => ({
