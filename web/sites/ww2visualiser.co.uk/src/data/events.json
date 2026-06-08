@@ -151,8 +151,8 @@
     "qid": "Q321525",
     "title": "Columbia-Haus concentration camp",
     "date": "1934-12-27",
-    "lat": 52.4835,
-    "lng": 13.3991,
+    "lat": 52,
+    "lng": 13,
     "category": "atrocity",
     "theater": "europe",
     "article": "Columbia concentration camp was a Nazi concentration camp situated in the Tempelhof area of Berlin. It was one of the first such institutions established by the regime.",
@@ -347,23 +347,6 @@
     ]
   },
   {
-    "id": "ravensbrck-concentration-camp",
-    "qid": "Q159483",
-    "title": "Ravensbrück concentration camp",
-    "date": "1938-01-01",
-    "lat": 53.189875,
-    "lng": 13.168809,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Ravensbrück was a Nazi Germany concentration camp exclusively for women from 1939 to 1945, located in Northern Germany, 90 km (56 mi) north of Berlin at a site near the village of Ravensbrück. The camp memorial's estimated figure of 132,000 women who were in the camp during the war includes about 48,500 from Poland, 28,000 from the Soviet Union, almost 24,000 from Germany and Austria, nearly 8,000 from France, almost 2,000 from Belgium, and thousands from other countries including a few from the United Kingdom and the United States. More than 20,000 of the total were Jewish. More than 80 percent were political prisoners. Many prisoners were employed as slave laborers by Siemens & Halske. From 1942 to 1945, the Nazis undertook medical experiments on Ravensbrück prisoners to test the effectiveness of sulfonamides.",
-    "links": [
-      {
-        "label": "Wikipedia: Ravensbrück concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Ravensbr%C3%BCck_concentration_camp"
-      }
-    ]
-  },
-  {
     "id": "neuengamme-concentration-camp",
     "qid": "Q312478",
     "title": "Neuengamme concentration camp",
@@ -377,6 +360,23 @@
       {
         "label": "Wikipedia: Neuengamme concentration camp",
         "url": "https://en.wikipedia.org/wiki/Neuengamme_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "ravensbrck-concentration-camp",
+    "qid": "Q159483",
+    "title": "Ravensbrück concentration camp",
+    "date": "1938-01-01",
+    "lat": 53.189875,
+    "lng": 13.168809,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Ravensbrück was a Nazi Germany concentration camp exclusively for women from 1939 to 1945, located in Northern Germany, 90 km (56 mi) north of Berlin at a site near the village of Ravensbrück. The camp memorial's estimated figure of 132,000 women who were in the camp during the war includes about 48,500 from Poland, 28,000 from the Soviet Union, almost 24,000 from Germany and Austria, nearly 8,000 from France, almost 2,000 from Belgium, and thousands from other countries including a few from the United Kingdom and the United States. More than 20,000 of the total were Jewish. More than 80 percent were political prisoners. Many prisoners were employed as slave laborers by Siemens & Halske. From 1942 to 1945, the Nazis undertook medical experiments on Ravensbrück prisoners to test the effectiveness of sulfonamides.",
+    "links": [
+      {
+        "label": "Wikipedia: Ravensbrück concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Ravensbr%C3%BCck_concentration_camp"
       }
     ]
   },
@@ -966,6 +966,431 @@
     ]
   },
   {
+    "id": "fuhlsbttel-concentration-camp",
+    "qid": "Q1719371",
+    "title": "Fuhlsbüttel concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.6225,
+    "lng": 10.01888889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Fuhlsbüttel is an urban quarter in the north of Hamburg, Germany in the Hamburg-Nord district. It is known as the site of Hamburg's international airport, and as the location of a prison which served as a concentration camp in the Nazi system of repression. As a result of boundary changes, JVA Fuhlsbüttel prison is now in Ohlsdorf, Hamburg.",
+    "links": [
+      {
+        "label": "Wikipedia: Fuhlsbüttel concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Fuhlsb%C3%BCttel_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "hainichen-concentration-camp-q2792136",
+    "qid": "Q2792136",
+    "title": "Hainichen concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.969454,
+    "lng": 13.122099,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
+    "links": [
+      {
+        "label": "Wikipedia: Hainichen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "gusen-i-concentration-camp",
+    "qid": "Q1719374",
+    "title": "Gusen I concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.2575,
+    "lng": 14.4639,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
+    "links": [
+      {
+        "label": "Wikipedia: Gusen I concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Gusen_I_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "mittelsteine-concentration-camp",
+    "qid": "Q6883503",
+    "title": "Mittelsteine concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.51527778,
+    "lng": 16.48388889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Mittelsteine concentration camp was a Nazi Arbeitslager or slave-labour camp functional on the territory of Nazi Germany during the latter part of the Second World War, now at Ścinawka Średnia in south-western Poland.",
+    "links": [
+      {
+        "label": "Wikipedia: Mittelsteine concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Mittelsteine"
+      }
+    ]
+  },
+  {
+    "id": "hainichen-concentration-camp-q5639444",
+    "qid": "Q5639444",
+    "title": "Hainichen concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.96972222,
+    "lng": 13.12527778,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
+    "links": [
+      {
+        "label": "Wikipedia: Hainichen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "sachsenburg-concentration-camp",
+    "qid": "Q528990",
+    "title": "Sachsenburg concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.95,
+    "lng": 13.0333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Sachsenburg was a Nazi concentration camp in eastern Germany, located in Frankenberg, Saxony, near Chemnitz. Along with Lichtenburg, it was among the first to be built by the Nazis, and operated by the SS from 1933 to 1937. The camp was an abandoned four-story textile mill which was renovated in May 1933 to serve as a \"protective custody\" facility for dissidents such as Jehovah's Witnesses, who opposed the Nazi regime.",
+    "links": [
+      {
+        "label": "Wikipedia: Sachsenburg concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Sachsenburg_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "grafenort-concentration-camp",
+    "qid": "Q16200650",
+    "title": "Grafenort concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.3508,
+    "lng": 16.6167,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Grafenort concentration camp was a subcamp of the Gross-Rosen concentration camp located in Grafenort Castle, at modern Gorzanów in south-western Poland, which was operational throughout World War II.",
+    "links": [
+      {
+        "label": "Wikipedia: Grafenort concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Grafenort_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "gross-rosen-concentration-camp",
+    "qid": "Q160268",
+    "title": "Gross-Rosen concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.998199,
+    "lng": 16.2777,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Gross-Rosen was a network of Nazi concentration camps built and operated by Nazi Germany during World War II. The main camp was located in the German village of Gross-Rosen, now the modern-day Rogoźnica in Lower Silesian Voivodeship, Poland, directly on the rail-line between the towns of Jawor (Jauer) and Strzegom (Striegau). Its prisoners were mostly Jews, Poles and Soviet citizens.",
+    "links": [
+      {
+        "label": "Wikipedia: Gross-Rosen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Gross-Rosen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "gusen-concentration-camp",
+    "qid": "Q681748",
+    "title": "Gusen concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.25722222,
+    "lng": 14.46333333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
+    "links": [
+      {
+        "label": "Wikipedia: Gusen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Gusen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "lager-norderney",
+    "qid": "Q14968931",
+    "title": "Lager Norderney",
+    "date": "1939-09-01",
+    "lat": 49.72805556,
+    "lng": -2.17805556,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Lager Norderney was a Nazi concentration camp on Alderney, in the Channel Islands, named after the East Frisian island of Norderney.",
+    "links": [
+      {
+        "label": "Wikipedia: Lager Norderney",
+        "url": "https://en.wikipedia.org/wiki/Lager_Norderney"
+      }
+    ]
+  },
+  {
+    "id": "abac-concentration-camp",
+    "qid": "Q2197757",
+    "title": "Šabac concentration camp",
+    "date": "1939-09-01",
+    "lat": 44.750292,
+    "lng": 19.69073,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "During World War II, the German Wehrmacht committed systematic war crimes, including massacres, mass rape, looting, the exploitation of forced labour, the murder of three million Soviet prisoners of war, and participated in the extermination of Jews. While the Nazi Party's own SS forces was the organization most responsible for the Holocaust, the regular armed forces of the Wehrmacht committed many war crimes of their own, particularly on the Eastern Front.",
+    "links": [
+      {
+        "label": "Wikipedia: Šabac concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Dulag_183"
+      }
+    ]
+  },
+  {
+    "id": "ebensee-concentration-camp",
+    "qid": "Q699561",
+    "title": "Ebensee concentration camp",
+    "date": "1939-09-01",
+    "lat": 47.7875,
+    "lng": 13.7578,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Ebensee was a subcamp of Mauthausen concentration camp established by the SS to build tunnels for armaments storage near the town of Ebensee, Austria, in 1943. The camp held a total of 27,278 male inmates from 1943 until 1945. Between 8,500 and 11,000 prisoners died in the camp, most from hunger or malnutrition. Political prisoners were most common, and prisoners came from many different countries. Conditions were poor, and along with the lack of food, exposure to cold weather and forced hard labor made survival difficult. American troops of the 3rd Cavalry Reconnaissance Squadron liberated the camp on 6 May 1945; the 80th Infantry Division helped with the full liberation.",
+    "links": [
+      {
+        "label": "Wikipedia: Ebensee concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Ebensee_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "treblinka-extermination-camp",
+    "qid": "Q152010",
+    "title": "Treblinka extermination camp",
+    "date": "1939-09-01",
+    "lat": 52.631111111,
+    "lng": 22.053055555,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Treblinka was the second-deadliest extermination camp to be built and operated by Nazi Germany in occupied Poland during World War II, second only to Auschwitz. It was in a forest north-east of Warsaw, four kilometres south of the village of Treblinka in what is now the Masovian Voivodeship. The camp operated between 23 July 1942 and 19 October 1943 as part of Operation Reinhard, the deadliest phase of the Final Solution. During this time, it is estimated that between 800,000 and 925,000 Jews were murdered in its gas chambers, along with 2,000 Romani people. More Jews were murdered at Treblinka than at any other Nazi extermination camp apart from Auschwitz-Birkenau.",
+    "links": [
+      {
+        "label": "Wikipedia: Treblinka extermination camp",
+        "url": "https://en.wikipedia.org/wiki/Treblinka_extermination_camp"
+      }
+    ]
+  },
+  {
+    "id": "hinzert-concentration-camp",
+    "qid": "Q697753",
+    "title": "Hinzert concentration camp",
+    "date": "1939-09-01",
+    "lat": 49.7,
+    "lng": 6.9,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Hinzert was a concentration camp in Nazi Germany, in what is now Rhineland-Palatinate, 30 kilometres (19 mi) from the border with Luxembourg. Between 1939 and 1945, 13,600 political prisoners between the ages of 13 and 80 were imprisoned at Hinzert. Many were in transit towards larger concentration camps where most would be killed. However, many prisoners were executed at Hinzert. The camp was administered, run, and guarded mainly by the SS, who, according to survivors, were notorious for their brutality and viciousness.",
+    "links": [
+      {
+        "label": "Wikipedia: Hinzert concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Hinzert_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "niederhagen-concentration-camp",
+    "qid": "Q565655",
+    "title": "Niederhagen concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.6,
+    "lng": 8.65,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Niederhagen was a Nazi concentration camp on the outskirts of Büren-Wewelsburg which existed from 1941 to 1943 when it was disbanded.",
+    "links": [
+      {
+        "label": "Wikipedia: Niederhagen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Niederhagen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "camp-neue-bremm",
+    "qid": "Q882145",
+    "title": "Camp Neue Bremm",
+    "date": "1939-09-01",
+    "lat": 49.2111,
+    "lng": 6.96556,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Neue Bremm was a Nazi torture camp in Saarbrücken, set up in 1943 by the Gestapo intentionally with no oversight from other institutions. It was designed to break prisoners who were not destined for immediate death. Some prisoners were held only for a few weeks, others, much longer; both men, and women. During that time they were put to work in slave-labour commandos and broken. Those who survived purposeful starvation were sent on to Nazi concentration camps such as Buchenwald. Approximately 20,000 men and women passed through Neue Bremm, including Jews from occupied Eastern Europe as well as Frenchmen, Belgians, Britons and Italians. However, the total number of casualties remains unknown.",
+    "links": [
+      {
+        "label": "Wikipedia: Camp Neue Bremm",
+        "url": "https://en.wikipedia.org/wiki/Neue_Bremm"
+      }
+    ]
+  },
+  {
+    "id": "sonnenburg-concentration-camp",
+    "qid": "Q553435",
+    "title": "Sonnenburg concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.5641,
+    "lng": 14.8114,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Sonnenburg concentration camp was a Nazi German concentration camp, that was opened on 3 April 1933 in Sonnenburg in a former prison, on the initiative of the Free State of Prussia Ministry of the Interior and Justice.",
+    "links": [
+      {
+        "label": "Wikipedia: Sonnenburg concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Sonnenburg_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "emsland-concentration-camp-xiv-bathorn-stalag-vi-c",
+    "qid": "Q931504",
+    "title": "Emsland concentration Camp XIV, Bathorn / Stalag VI-C",
+    "date": "1939-09-01",
+    "lat": 52.59028,
+    "lng": 6.99361,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Stalag VI-C was a World War II German POW camp located 6 km west of the village Oberlangen in Emsland in north-western Germany. It was originally built with five others in the same marshland area as a prison camp (Straflager) for Germans. From 1939 till 1945 the Oberlangen camp was a Prisoner of War camp.",
+    "links": [
+      {
+        "label": "Wikipedia: Emsland concentration Camp XIV, Bathorn / Stalag VI-C",
+        "url": "https://en.wikipedia.org/wiki/Stalag_VI-C"
+      }
+    ]
+  },
+  {
+    "id": "chemno-extermination-camp",
+    "qid": "Q160152",
+    "title": "Chełmno extermination camp",
+    "date": "1939-09-01",
+    "lat": 52.154166666,
+    "lng": 18.723055555,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Chełmno, or Kulmhof, was the first of Nazi Germany's extermination camps and was situated 50 km (31 mi) north of Łódź, near the village of Chełmno nad Nerem. Following the invasion of Poland in 1939, Germany annexed the area into the new territory of Reichsgau Wartheland. The camp, which was specifically intended for no other purpose than mass murder, operated from December 8, 1941, to April 11, 1943, parallel to Operation Reinhard during the deadliest phase of the Holocaust, and again from June 23, 1944, to January 18, 1945, during the Soviet counter-offensive. In 1943, modifications were made to the camp's killing methods as the reception building had already been dismantled.",
+    "links": [
+      {
+        "label": "Wikipedia: Chełmno extermination camp",
+        "url": "https://en.wikipedia.org/wiki/Che%C5%82mno_extermination_camp"
+      }
+    ]
+  },
+  {
+    "id": "bergen-belsen-concentration-camp",
+    "qid": "Q7332",
+    "title": "Bergen-Belsen concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.758899,
+    "lng": 9.907099,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Bergen-Belsen, or Belsen, was a Nazi concentration camp in what is today Lower Saxony in northern Germany, southwest of the town of Bergen near Celle. Originally established as a prisoner of war camp, in 1943, parts of it became a concentration camp. Initially this was an \"exchange camp\", where Jewish hostages were held with the intention of exchanging them for German prisoners of war held overseas. The camp was later expanded to hold Jews from other concentration camps.",
+    "links": [
+      {
+        "label": "Wikipedia: Bergen-Belsen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Bergen-Belsen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "berga-concentration-camp",
+    "qid": "Q1719416",
+    "title": "Berga concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.73333333,
+    "lng": 13.38333333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Berga an der Elster was a subcamp of the Buchenwald concentration camp. The Berga forced labour camp was located on the outskirts of the village of Schlieben. Workers were supplied by Buchenwald concentration camp and from a prisoner-of-war camp, Stalag IX-B; the latter contravened the provisions of the Third Geneva Convention and the Hague Treaties. Many prisoners died as a result of malnutrition, sickness, and beatings, including 73 American POWs.",
+    "links": [
+      {
+        "label": "Wikipedia: Berga concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Berga_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "kislau-concentration-camp",
+    "qid": "Q1719387",
+    "title": "Kislau concentration camp",
+    "date": "1939-09-01",
+    "lat": 49.2164,
+    "lng": 8.64472,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Kislau concentration camp, also known as KZ Kislau in German, was a concentration camp operating in Nazi Germany from April 21, 1933, until April 1, 1939.",
+    "links": [
+      {
+        "label": "Wikipedia: Kislau concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Kislau_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "arbeitsdorf-concentration-camp",
+    "qid": "Q683104",
+    "title": "Arbeitsdorf concentration camp",
+    "date": "1939-09-01",
+    "lat": 52.434455,
+    "lng": 10.782223,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Arbeitsdorf (\"work-village\") was a Nazi concentration camp in Stadt des KdF-Wagens bei Fallersleben 1942.",
+    "links": [
+      {
+        "label": "Wikipedia: Arbeitsdorf concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Arbeitsdorf_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "breitenau-concentration-camp",
+    "qid": "Q562005",
+    "title": "Breitenau concentration camp",
+    "date": "1939-09-01",
+    "lat": 51.2031,
+    "lng": 9.47556,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Breitenau concentration camp was one of the first concentration camps established by the Nazis. It was founded in June 1933 as an addition to the Breitenau Labor and Welfare House, less than six months after the Nazis had seized power in Germany. It closed in March 1934 and reopened in 1940 where it remained in operation until the end of World War II. In 1984, a memorial was constructed on the site of the former camp.",
+    "links": [
+      {
+        "label": "Wikipedia: Breitenau concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Breitenau_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "allach-concentration-camp-complex",
+    "qid": "Q1719246",
+    "title": "Allach concentration camp complex",
+    "date": "1939-09-01",
+    "lat": 48.215214,
+    "lng": 11.49147,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Munich-Allach concentration camp was a forced labour camp established by the Nazi Schutzstaffel (SS) in Allach-Untermenzing, a suburb of Munich in southern Germany, in 1943. It provided slave labour for nearby factories of BMW, Dyckerhoff, Sager & Woerner, Kirsch Sägemühle, Pumpel Lochhausen and Organisation Todt with up to 17,000 prisoners in 1945. More than 1,800 of them came to death. It was the largest sub-camp of the Dachau concentration camp system. Another smaller subcamp Allach porcelain a.k.a. Porzellan Manufaktur Allach with about 40 prisoners produced porcelain artworks.",
+    "links": [
+      {
+        "label": "Wikipedia: Allach concentration camp complex",
+        "url": "https://en.wikipedia.org/wiki/Munich-Allach_concentration_camp"
+      }
+    ]
+  },
+  {
     "id": "potulice-concentration-camp",
     "qid": "Q7235433",
     "title": "Potulice concentration camp",
@@ -1068,23 +1493,6 @@
     ]
   },
   {
-    "id": "arbeitsdorf-concentration-camp",
-    "qid": "Q683104",
-    "title": "Arbeitsdorf concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.43333,
-    "lng": 10.76667,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Arbeitsdorf (\"work-village\") was a Nazi concentration camp in Stadt des KdF-Wagens bei Fallersleben 1942.",
-    "links": [
-      {
-        "label": "Wikipedia: Arbeitsdorf concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Arbeitsdorf_concentration_camp"
-      }
-    ]
-  },
-  {
     "id": "trawniki-concentration-camp",
     "qid": "Q153598",
     "title": "Trawniki concentration camp",
@@ -1115,23 +1523,6 @@
       {
         "label": "Wikipedia: Poniatowa concentration camp",
         "url": "https://en.wikipedia.org/wiki/Poniatowa_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "kislau-concentration-camp",
-    "qid": "Q1719387",
-    "title": "Kislau concentration camp",
-    "date": "1939-09-01",
-    "lat": 49.216701,
-    "lng": 8.649999,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "The Kislau concentration camp, also known as KZ Kislau in German, was a concentration camp operating in Nazi Germany from April 21, 1933, until April 1, 1939.",
-    "links": [
-      {
-        "label": "Wikipedia: Kislau concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Kislau_concentration_camp"
       }
     ]
   },
@@ -1234,23 +1625,6 @@
       {
         "label": "Wikipedia: Ninth Fort",
         "url": "https://en.wikipedia.org/wiki/Ninth_Fort"
-      }
-    ]
-  },
-  {
-    "id": "hinzert-concentration-camp",
-    "qid": "Q697753",
-    "title": "Hinzert concentration camp",
-    "date": "1939-09-01",
-    "lat": 49.69889,
-    "lng": 6.89278,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Hinzert was a concentration camp in Nazi Germany, in what is now Rhineland-Palatinate, 30 kilometres (19 mi) from the border with Luxembourg. Between 1939 and 1945, 13,600 political prisoners between the ages of 13 and 80 were imprisoned at Hinzert. Many were in transit towards larger concentration camps where most would be killed. However, many prisoners were executed at Hinzert. The camp was administered, run, and guarded mainly by the SS, who, according to survivors, were notorious for their brutality and viciousness.",
-    "links": [
-      {
-        "label": "Wikipedia: Hinzert concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Hinzert_concentration_camp"
       }
     ]
   },
@@ -1527,23 +1901,6 @@
     ]
   },
   {
-    "id": "sachsenburg-concentration-camp",
-    "qid": "Q528990",
-    "title": "Sachsenburg concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.9324,
-    "lng": 13.0269,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Sachsenburg was a Nazi concentration camp in eastern Germany, located in Frankenberg, Saxony, near Chemnitz. Along with Lichtenburg, it was among the first to be built by the Nazis, and operated by the SS from 1933 to 1937. The camp was an abandoned four-story textile mill which was renovated in May 1933 to serve as a \"protective custody\" facility for dissidents such as Jehovah's Witnesses, who opposed the Nazi regime.",
-    "links": [
-      {
-        "label": "Wikipedia: Sachsenburg concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Sachsenburg_concentration_camp"
-      }
-    ]
-  },
-  {
     "id": "lichtenburg-concentration-camp",
     "qid": "Q565646",
     "title": "Lichtenburg concentration camp",
@@ -1680,40 +2037,6 @@
     ]
   },
   {
-    "id": "niederhagen-concentration-camp",
-    "qid": "Q565655",
-    "title": "Niederhagen concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.6077,
-    "lng": 8.66193,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Niederhagen was a Nazi concentration camp on the outskirts of Büren-Wewelsburg which existed from 1941 to 1943 when it was disbanded.",
-    "links": [
-      {
-        "label": "Wikipedia: Niederhagen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Niederhagen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "chemno-extermination-camp",
-    "qid": "Q160152",
-    "title": "Chełmno extermination camp",
-    "date": "1939-09-01",
-    "lat": 52.153889,
-    "lng": 18.723056,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Chełmno, or Kulmhof, was the first of Nazi Germany's extermination camps and was situated 50 km (31 mi) north of Łódź, near the village of Chełmno nad Nerem. Following the invasion of Poland in 1939, Germany annexed the area into the new territory of Reichsgau Wartheland. The camp, which was specifically intended for no other purpose than mass murder, operated from December 8, 1941, to April 11, 1943, parallel to Operation Reinhard during the deadliest phase of the Holocaust, and again from June 23, 1944, to January 18, 1945, during the Soviet counter-offensive. In 1943, modifications were made to the camp's killing methods as the reception building had already been dismantled.",
-    "links": [
-      {
-        "label": "Wikipedia: Chełmno extermination camp",
-        "url": "https://en.wikipedia.org/wiki/Che%C5%82mno_extermination_camp"
-      }
-    ]
-  },
-  {
     "id": "erika-concentration-camp",
     "qid": "Q13479820",
     "title": "Erika concentration camp",
@@ -1744,23 +2067,6 @@
       {
         "label": "Wikipedia: Sobibór Extermination Camp",
         "url": "https://en.wikipedia.org/wiki/Sobibor_extermination_camp"
-      }
-    ]
-  },
-  {
-    "id": "mittelsteine-concentration-camp",
-    "qid": "Q6883503",
-    "title": "Mittelsteine concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.5167,
-    "lng": 16.483299,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "The Mittelsteine concentration camp was a Nazi Arbeitslager or slave-labour camp functional on the territory of Nazi Germany during the latter part of the Second World War, now at Ścinawka Średnia in south-western Poland.",
-    "links": [
-      {
-        "label": "Wikipedia: Mittelsteine concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Mittelsteine"
       }
     ]
   },
@@ -1850,23 +2156,6 @@
     ]
   },
   {
-    "id": "berga-concentration-camp",
-    "qid": "Q1719416",
-    "title": "Berga concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.716701,
-    "lng": 13.383299,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Berga an der Elster was a subcamp of the Buchenwald concentration camp. The Berga forced labour camp was located on the outskirts of the village of Schlieben. Workers were supplied by Buchenwald concentration camp and from a prisoner-of-war camp, Stalag IX-B; the latter contravened the provisions of the Third Geneva Convention and the Hague Treaties. Many prisoners died as a result of malnutrition, sickness, and beatings, including 73 American POWs.",
-    "links": [
-      {
-        "label": "Wikipedia: Berga concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Berga_concentration_camp"
-      }
-    ]
-  },
-  {
     "id": "garavice",
     "qid": "Q4862813",
     "title": "Garavice",
@@ -1935,23 +2224,6 @@
     ]
   },
   {
-    "id": "emsland-concentration-camp-xiv-bathorn-stalag-vi-c",
-    "qid": "Q931504",
-    "title": "Emsland concentration Camp XIV, Bathorn / Stalag VI-C",
-    "date": "1939-09-01",
-    "lat": 52.592222222,
-    "lng": 7.036666666,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Stalag VI-C was a World War II German POW camp located 6 km west of the village Oberlangen in Emsland in north-western Germany. It was originally built with five others in the same marshland area as a prison camp (Straflager) for Germans. From 1939 till 1945 the Oberlangen camp was a Prisoner of War camp.",
-    "links": [
-      {
-        "label": "Wikipedia: Emsland concentration Camp XIV, Bathorn / Stalag VI-C",
-        "url": "https://en.wikipedia.org/wiki/Stalag_VI-C"
-      }
-    ]
-  },
-  {
     "id": "oranienburg-concentration-camp",
     "qid": "Q119720",
     "title": "Oranienburg concentration camp",
@@ -1999,278 +2271,6 @@
       {
         "label": "Wikipedia: Breslau-Dürrgoy concentration camp",
         "url": "https://en.wikipedia.org/wiki/Breslau-D%C3%BCrrgoy_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "breitenau-concentration-camp",
-    "qid": "Q562005",
-    "title": "Breitenau concentration camp",
-    "date": "1939-09-01",
-    "lat": 51.2,
-    "lng": 9.4833,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Breitenau concentration camp was one of the first concentration camps established by the Nazis. It was founded in June 1933 as an addition to the Breitenau Labor and Welfare House, less than six months after the Nazis had seized power in Germany. It closed in March 1934 and reopened in 1940 where it remained in operation until the end of World War II. In 1984, a memorial was constructed on the site of the former camp.",
-    "links": [
-      {
-        "label": "Wikipedia: Breitenau concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Breitenau_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "hainichen-concentration-camp-q5639444",
-    "qid": "Q5639444",
-    "title": "Hainichen concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.96972222,
-    "lng": 13.12527778,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
-    "links": [
-      {
-        "label": "Wikipedia: Hainichen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "grafenort-concentration-camp",
-    "qid": "Q16200650",
-    "title": "Grafenort concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.3508,
-    "lng": 16.6167,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "The Grafenort concentration camp was a subcamp of the Gross-Rosen concentration camp located in Grafenort Castle, at modern Gorzanów in south-western Poland, which was operational throughout World War II.",
-    "links": [
-      {
-        "label": "Wikipedia: Grafenort concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Grafenort_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "gross-rosen-concentration-camp",
-    "qid": "Q160268",
-    "title": "Gross-Rosen concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.998199,
-    "lng": 16.2777,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Gross-Rosen was a network of Nazi concentration camps built and operated by Nazi Germany during World War II. The main camp was located in the German village of Gross-Rosen, now the modern-day Rogoźnica in Lower Silesian Voivodeship, Poland, directly on the rail-line between the towns of Jawor (Jauer) and Strzegom (Striegau). Its prisoners were mostly Jews, Poles and Soviet citizens.",
-    "links": [
-      {
-        "label": "Wikipedia: Gross-Rosen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Gross-Rosen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "gusen-concentration-camp",
-    "qid": "Q681748",
-    "title": "Gusen concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.25722222,
-    "lng": 14.46333333,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
-    "links": [
-      {
-        "label": "Wikipedia: Gusen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Gusen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "lager-norderney",
-    "qid": "Q14968931",
-    "title": "Lager Norderney",
-    "date": "1939-09-01",
-    "lat": 49.72805556,
-    "lng": -2.17805556,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Lager Norderney was a Nazi concentration camp on Alderney, in the Channel Islands, named after the East Frisian island of Norderney.",
-    "links": [
-      {
-        "label": "Wikipedia: Lager Norderney",
-        "url": "https://en.wikipedia.org/wiki/Lager_Norderney"
-      }
-    ]
-  },
-  {
-    "id": "abac-concentration-camp",
-    "qid": "Q2197757",
-    "title": "Šabac concentration camp",
-    "date": "1939-09-01",
-    "lat": 44.750292,
-    "lng": 19.69073,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "During World War II, the German Wehrmacht committed systematic war crimes, including massacres, mass rape, looting, the exploitation of forced labour, the murder of three million Soviet prisoners of war, and participated in the extermination of Jews. While the Nazi Party's own SS forces was the organization most responsible for the Holocaust, the regular armed forces of the Wehrmacht committed many war crimes of their own, particularly on the Eastern Front.",
-    "links": [
-      {
-        "label": "Wikipedia: Šabac concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Dulag_183"
-      }
-    ]
-  },
-  {
-    "id": "ebensee-concentration-camp",
-    "qid": "Q699561",
-    "title": "Ebensee concentration camp",
-    "date": "1939-09-01",
-    "lat": 47.7875,
-    "lng": 13.7578,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Ebensee was a subcamp of Mauthausen concentration camp established by the SS to build tunnels for armaments storage near the town of Ebensee, Austria, in 1943. The camp held a total of 27,278 male inmates from 1943 until 1945. Between 8,500 and 11,000 prisoners died in the camp, most from hunger or malnutrition. Political prisoners were most common, and prisoners came from many different countries. Conditions were poor, and along with the lack of food, exposure to cold weather and forced hard labor made survival difficult. American troops of the 3rd Cavalry Reconnaissance Squadron liberated the camp on 6 May 1945; the 80th Infantry Division helped with the full liberation.",
-    "links": [
-      {
-        "label": "Wikipedia: Ebensee concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Ebensee_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "treblinka-extermination-camp",
-    "qid": "Q152010",
-    "title": "Treblinka extermination camp",
-    "date": "1939-09-01",
-    "lat": 52.631111111,
-    "lng": 22.053055555,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Treblinka was the second-deadliest extermination camp to be built and operated by Nazi Germany in occupied Poland during World War II, second only to Auschwitz. It was in a forest north-east of Warsaw, four kilometres south of the village of Treblinka in what is now the Masovian Voivodeship. The camp operated between 23 July 1942 and 19 October 1943 as part of Operation Reinhard, the deadliest phase of the Final Solution. During this time, it is estimated that between 800,000 and 925,000 Jews were murdered in its gas chambers, along with 2,000 Romani people. More Jews were murdered at Treblinka than at any other Nazi extermination camp apart from Auschwitz-Birkenau.",
-    "links": [
-      {
-        "label": "Wikipedia: Treblinka extermination camp",
-        "url": "https://en.wikipedia.org/wiki/Treblinka_extermination_camp"
-      }
-    ]
-  },
-  {
-    "id": "camp-neue-bremm",
-    "qid": "Q882145",
-    "title": "Camp Neue Bremm",
-    "date": "1939-09-01",
-    "lat": 49.2111,
-    "lng": 6.96556,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Neue Bremm was a Nazi torture camp in Saarbrücken, set up in 1943 by the Gestapo intentionally with no oversight from other institutions. It was designed to break prisoners who were not destined for immediate death. Some prisoners were held only for a few weeks, others, much longer; both men, and women. During that time they were put to work in slave-labour commandos and broken. Those who survived purposeful starvation were sent on to Nazi concentration camps such as Buchenwald. Approximately 20,000 men and women passed through Neue Bremm, including Jews from occupied Eastern Europe as well as Frenchmen, Belgians, Britons and Italians. However, the total number of casualties remains unknown.",
-    "links": [
-      {
-        "label": "Wikipedia: Camp Neue Bremm",
-        "url": "https://en.wikipedia.org/wiki/Neue_Bremm"
-      }
-    ]
-  },
-  {
-    "id": "sonnenburg-concentration-camp",
-    "qid": "Q553435",
-    "title": "Sonnenburg concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.5641,
-    "lng": 14.8114,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "The Sonnenburg concentration camp was a Nazi German concentration camp, that was opened on 3 April 1933 in Sonnenburg in a former prison, on the initiative of the Free State of Prussia Ministry of the Interior and Justice.",
-    "links": [
-      {
-        "label": "Wikipedia: Sonnenburg concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Sonnenburg_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "bergen-belsen-concentration-camp",
-    "qid": "Q7332",
-    "title": "Bergen-Belsen concentration camp",
-    "date": "1939-09-01",
-    "lat": 52.758899,
-    "lng": 9.907099,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Bergen-Belsen, or Belsen, was a Nazi concentration camp in what is today Lower Saxony in northern Germany, southwest of the town of Bergen near Celle. Originally established as a prisoner of war camp, in 1943, parts of it became a concentration camp. Initially this was an \"exchange camp\", where Jewish hostages were held with the intention of exchanging them for German prisoners of war held overseas. The camp was later expanded to hold Jews from other concentration camps.",
-    "links": [
-      {
-        "label": "Wikipedia: Bergen-Belsen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Bergen-Belsen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "allach-concentration-camp-complex",
-    "qid": "Q1719246",
-    "title": "Allach concentration camp complex",
-    "date": "1939-09-01",
-    "lat": 48.215214,
-    "lng": 11.49147,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Munich-Allach concentration camp was a forced labour camp established by the Nazi Schutzstaffel (SS) in Allach-Untermenzing, a suburb of Munich in southern Germany, in 1943. It provided slave labour for nearby factories of BMW, Dyckerhoff, Sager & Woerner, Kirsch Sägemühle, Pumpel Lochhausen and Organisation Todt with up to 17,000 prisoners in 1945. More than 1,800 of them came to death. It was the largest sub-camp of the Dachau concentration camp system. Another smaller subcamp Allach porcelain a.k.a. Porzellan Manufaktur Allach with about 40 prisoners produced porcelain artworks.",
-    "links": [
-      {
-        "label": "Wikipedia: Allach concentration camp complex",
-        "url": "https://en.wikipedia.org/wiki/Munich-Allach_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "fuhlsbttel-concentration-camp",
-    "qid": "Q1719371",
-    "title": "Fuhlsbüttel concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.6225,
-    "lng": 10.01888889,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Fuhlsbüttel is an urban quarter in the north of Hamburg, Germany in the Hamburg-Nord district. It is known as the site of Hamburg's international airport, and as the location of a prison which served as a concentration camp in the Nazi system of repression. As a result of boundary changes, JVA Fuhlsbüttel prison is now in Ohlsdorf, Hamburg.",
-    "links": [
-      {
-        "label": "Wikipedia: Fuhlsbüttel concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Fuhlsb%C3%BCttel_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "hainichen-concentration-camp-q2792136",
-    "qid": "Q2792136",
-    "title": "Hainichen concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.969454,
-    "lng": 13.122099,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
-    "links": [
-      {
-        "label": "Wikipedia: Hainichen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "gusen-i-concentration-camp",
-    "qid": "Q1719374",
-    "title": "Gusen I concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.2575,
-    "lng": 14.4639,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
-    "links": [
-      {
-        "label": "Wikipedia: Gusen I concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Gusen_I_concentration_camp"
       }
     ]
   },
@@ -3880,30 +3880,6 @@
     ]
   },
   {
-    "id": "battle-of-rotterdam",
-    "qid": "Q3532325",
-    "title": "Battle of Rotterdam",
-    "date": "1940-05-10",
-    "endDate": "1940-05-14",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 51.93083333,
-    "lng": 4.47916667,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Rotterdam was a Second World War battle fought during the Battle of the Netherlands. Fought between 10 and 14 May 1940, it was a German attempt to seize the Dutch city. It ended in a German victory, following the Rotterdam Blitz.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Rotterdam",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Rotterdam"
-      }
-    ]
-  },
-  {
     "id": "battle-for-the-hague",
     "qid": "Q1891631",
     "title": "Battle for The Hague",
@@ -3925,6 +3901,30 @@
       {
         "label": "Wikipedia: Battle for The Hague",
         "url": "https://en.wikipedia.org/wiki/Battle_of_the_Hague_(1940)"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-rotterdam",
+    "qid": "Q3532325",
+    "title": "Battle of Rotterdam",
+    "date": "1940-05-10",
+    "endDate": "1940-05-14",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 51.93083333,
+    "lng": 4.47916667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Rotterdam was a Second World War battle fought during the Battle of the Netherlands. Fought between 10 and 14 May 1940, it was a German attempt to seize the Dutch city. It ended in a German victory, following the Rotterdam Blitz.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Rotterdam",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Rotterdam"
       }
     ]
   },
@@ -7084,30 +7084,6 @@
     ]
   },
   {
-    "id": "battle-of-prachuap-khiri-khan",
-    "qid": "Q1280169",
-    "title": "Battle of Prachuap Khiri Khan",
-    "date": "1941-12-08",
-    "endDate": "1941-12-09",
-    "sides": {
-      "allied": [],
-      "axis": [
-        "japan"
-      ]
-    },
-    "lat": 11.786574,
-    "lng": 99.811695,
-    "category": "battle",
-    "theater": "asia",
-    "article": "The Battle of Prachuap Khiri Khan was an early engagement of the Japanese invasion of Thailand in the Southeast Asian theatre of World War II. It was fought on 8–9 December 1941 at the airfield of Prachuap Khiri Khan, on the coast of the Gulf of Thailand along the Kra Isthmus. The Japanese meant to use Thailand as a base to strike at British possessions in Burma and Malaya and attacked Thailand after it failed to respond to an ultimatum sent by the Japanese government.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Prachuap Khiri Khan",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Prachuap_Khiri_Khan"
-      }
-    ]
-  },
-  {
     "id": "battle-of-hong-kong",
     "qid": "Q697059",
     "title": "Battle of Hong Kong",
@@ -7156,6 +7132,30 @@
       {
         "label": "Wikipedia: Battle of Wake Island",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Wake_Island"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-prachuap-khiri-khan",
+    "qid": "Q1280169",
+    "title": "Battle of Prachuap Khiri Khan",
+    "date": "1941-12-08",
+    "endDate": "1941-12-09",
+    "sides": {
+      "allied": [],
+      "axis": [
+        "japan"
+      ]
+    },
+    "lat": 11.786574,
+    "lng": 99.811695,
+    "category": "battle",
+    "theater": "asia",
+    "article": "The Battle of Prachuap Khiri Khan was an early engagement of the Japanese invasion of Thailand in the Southeast Asian theatre of World War II. It was fought on 8–9 December 1941 at the airfield of Prachuap Khiri Khan, on the coast of the Gulf of Thailand along the Kra Isthmus. The Japanese meant to use Thailand as a base to strike at British possessions in Burma and Malaya and attacked Thailand after it failed to respond to an ultimatum sent by the Japanese government.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Prachuap Khiri Khan",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Prachuap_Khiri_Khan"
       }
     ]
   },
@@ -7434,8 +7434,8 @@
     "qid": "Q323420",
     "title": "Westerbork Transit Camp",
     "date": "1942-01-01",
-    "lat": 52.916666666,
-    "lng": 6.606944444,
+    "lat": 52.9217192,
+    "lng": 6.5700818,
     "category": "atrocity",
     "theater": "europe",
     "article": "Camp Westerbork, also known as Westerbork transit camp, was a Nazi transit camp in the province of Drenthe in the Northeastern Netherlands, during World War II. It was located in the municipality of Westerbork, current-day Midden-Drenthe. Camp Westerbork was used as a staging location for sending Jews, Sinti and Roma to concentration camps elsewhere.",
@@ -7443,23 +7443,6 @@
       {
         "label": "Wikipedia: Westerbork Transit Camp",
         "url": "https://en.wikipedia.org/wiki/Westerbork_transit_camp"
-      }
-    ]
-  },
-  {
-    "id": "koldichevo-concentration-camp",
-    "qid": "Q3569713",
-    "title": "Koldichevo concentration camp",
-    "date": "1942-01-01",
-    "lat": 53.281666666,
-    "lng": 26.065,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Koldichevo (Kaldyčava/Koldychevo/Kołdyczewo) was the site of a Nazi concentration camp 16 kilometres (10 mi) north of Baranovichi, Belarus. About 22,000 people, mostly Jews, were killed in the camp between 1942 and 1944. The murders in the camp were done as part of The Holocaust in the Baranavichy District.",
-    "links": [
-      {
-        "label": "Wikipedia: Koldichevo concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Koldichevo"
       }
     ]
   },
@@ -7477,6 +7460,23 @@
       {
         "label": "Wikipedia: Budzyń concentration camp",
         "url": "https://en.wikipedia.org/wiki/Budzy%C5%84_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "koldichevo-concentration-camp",
+    "qid": "Q3569713",
+    "title": "Koldichevo concentration camp",
+    "date": "1942-01-01",
+    "lat": 53.281666666,
+    "lng": 26.065,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Koldichevo (Kaldyčava/Koldychevo/Kołdyczewo) was the site of a Nazi concentration camp 16 kilometres (10 mi) north of Baranovichi, Belarus. About 22,000 people, mostly Jews, were killed in the camp between 1942 and 1944. The murders in the camp were done as part of The Holocaust in the Baranavichy District.",
+    "links": [
+      {
+        "label": "Wikipedia: Koldichevo concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Koldichevo"
       }
     ]
   },
@@ -9947,23 +9947,6 @@
     ]
   },
   {
-    "id": "zigeunerlager-auschwitz",
-    "qid": "Q199395",
-    "title": "Zigeunerlager Auschwitz",
-    "date": "1943-01-01",
-    "lat": 50.0375,
-    "lng": 19.17333333,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "The Gypsy family camp was Section B-IIe of the Auschwitz II-Birkenau concentration camp, where Romani families deported to the camp were held together, instead of being separated as was typical at Auschwitz.",
-    "links": [
-      {
-        "label": "Wikipedia: Zigeunerlager Auschwitz",
-        "url": "https://en.wikipedia.org/wiki/Gypsy_family_camp_(Auschwitz)"
-      }
-    ]
-  },
-  {
     "id": "riga-kaiserwald-concentration-camp",
     "qid": "Q697912",
     "title": "Riga-Kaiserwald concentration camp",
@@ -9977,6 +9960,23 @@
       {
         "label": "Wikipedia: Riga-Kaiserwald concentration camp",
         "url": "https://en.wikipedia.org/wiki/Kaiserwald_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "zigeunerlager-auschwitz",
+    "qid": "Q199395",
+    "title": "Zigeunerlager Auschwitz",
+    "date": "1943-01-01",
+    "lat": 50.0375,
+    "lng": 19.17333333,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Gypsy family camp was Section B-IIe of the Auschwitz II-Birkenau concentration camp, where Romani families deported to the camp were held together, instead of being separated as was typical at Auschwitz.",
+    "links": [
+      {
+        "label": "Wikipedia: Zigeunerlager Auschwitz",
+        "url": "https://en.wikipedia.org/wiki/Gypsy_family_camp_(Auschwitz)"
       }
     ]
   },
@@ -10196,6 +10196,24 @@
     ]
   },
   {
+    "id": "third-battle-of-kharkov",
+    "qid": "Q157873",
+    "title": "Third Battle of Kharkov",
+    "date": "1943-02-19",
+    "endDate": "1943-03-15",
+    "lat": 49.966666666,
+    "lng": 36.316666666,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Third Battle of Kharkov was a series of battles on the Eastern Front of World War II, undertaken by Nazi Germany's Army Group South against the Soviet Red Army, around the city of Kharkov from 19 February to 15 March 1943. Known to the German side as the Donets Campaign and in the Soviet Union as the Donbass and Kharkov operations, the German counterstrike led to the recapture of the cities of Kharkov and Belgorod.",
+    "links": [
+      {
+        "label": "Wikipedia: Third Battle of Kharkov",
+        "url": "https://en.wikipedia.org/wiki/Third_Battle_of_Kharkov"
+      }
+    ]
+  },
+  {
     "id": "battle-of-kasserine-passe",
     "qid": "Q327099",
     "title": "Battle of Kasserine Passe",
@@ -10217,24 +10235,6 @@
       {
         "label": "Wikipedia: Battle of Kasserine Passe",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Kasserine_Pass"
-      }
-    ]
-  },
-  {
-    "id": "third-battle-of-kharkov",
-    "qid": "Q157873",
-    "title": "Third Battle of Kharkov",
-    "date": "1943-02-19",
-    "endDate": "1943-03-15",
-    "lat": 49.966666666,
-    "lng": 36.316666666,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Third Battle of Kharkov was a series of battles on the Eastern Front of World War II, undertaken by Nazi Germany's Army Group South against the Soviet Red Army, around the city of Kharkov from 19 February to 15 March 1943. Known to the German side as the Donets Campaign and in the Soviet Union as the Donbass and Kharkov operations, the German counterstrike led to the recapture of the cities of Kharkov and Belgorod.",
-    "links": [
-      {
-        "label": "Wikipedia: Third Battle of Kharkov",
-        "url": "https://en.wikipedia.org/wiki/Third_Battle_of_Kharkov"
       }
     ]
   },
@@ -13765,31 +13765,6 @@
     ]
   },
   {
-    "id": "battle-of-cherbourg",
-    "qid": "Q516202",
-    "title": "Battle of Cherbourg",
-    "date": "1944-06-06",
-    "endDate": "1944-06-30",
-    "sides": {
-      "allied": [
-        "usa",
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 49.638888888,
-    "lng": -1.625,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Cherbourg was part of the Battle of Normandy during World War II. It was fought immediately after the successful Allied landings on 6 June 1944. Allied troops, mainly American, isolated and captured the fortified port, which was considered vital to the campaign in Western Europe, in a hard-fought, month-long campaign.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Cherbourg",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Cherbourg"
-      }
-    ]
-  },
-  {
     "id": "battle-for-caen",
     "qid": "Q696823",
     "title": "Battle for Caen",
@@ -13813,6 +13788,31 @@
       {
         "label": "Wikipedia: Battle for Caen",
         "url": "https://en.wikipedia.org/wiki/Battle_for_Caen"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-cherbourg",
+    "qid": "Q516202",
+    "title": "Battle of Cherbourg",
+    "date": "1944-06-06",
+    "endDate": "1944-06-30",
+    "sides": {
+      "allied": [
+        "usa",
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 49.638888888,
+    "lng": -1.625,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Cherbourg was part of the Battle of Normandy during World War II. It was fought immediately after the successful Allied landings on 6 June 1944. Allied troops, mainly American, isolated and captured the fortified port, which was considered vital to the campaign in Western Europe, in a hard-fought, month-long campaign.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Cherbourg",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Cherbourg"
       }
     ]
   },
@@ -15621,32 +15621,6 @@
     ]
   },
   {
-    "id": "battle-of-hrtgen-forest",
-    "qid": "Q162287",
-    "title": "Battle of Hürtgen Forest",
-    "date": "1944-09-14",
-    "endDate": "1944-12-16",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
-    },
-    "lat": 50.708611111,
-    "lng": 6.362777777,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Hürtgen Forest was a series of battles fought from 19 September to 16 December 1944, between American and German forces on the Western Front during World War II, in the Hürtgen Forest, a 140 km2 (54 mi2) area about 5 km (3.1 mi) east of the Belgian–German border. Lasting 88 days, it was the longest battle on German ground during World War II and it is the second longest single battle the U.S. Army has ever fought after the three-month-long Battle of Bataan.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Hürtgen Forest",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_H%C3%BCrtgen_Forest"
-      }
-    ]
-  },
-  {
     "id": "riga-offensive",
     "qid": "Q2662170",
     "title": "Riga Offensive",
@@ -15971,6 +15945,30 @@
     ]
   },
   {
+    "id": "battle-of-the-scheldt",
+    "qid": "Q697022",
+    "title": "Battle of the Scheldt",
+    "date": "1944-10-02",
+    "endDate": "1944-11-08",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 51.552313,
+    "lng": 4.65271,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of the Scheldt in World War II was a series of military operations to open up the Scheldt river between Antwerp and the North Sea for shipping, so that Antwerp's port could be used to supply the Allies in north-west Europe. The operations were carried out by the First Canadian Army, with assistance from Polish and British units which had been attached. The action was under the acting command of the First Canadian's Lieutenant-General Guy Simonds. The battle took place in the vicinity of the Scheldt river in northern Belgium and southwestern Netherlands from 2 October to 8 November 1944.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of the Scheldt",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Scheldt"
+      }
+    ]
+  },
+  {
     "id": "battle-of-aachen",
     "qid": "Q327052",
     "title": "Battle of Aachen",
@@ -15997,30 +15995,6 @@
     ]
   },
   {
-    "id": "battle-of-the-scheldt",
-    "qid": "Q697022",
-    "title": "Battle of the Scheldt",
-    "date": "1944-10-02",
-    "endDate": "1944-11-08",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 51.552313,
-    "lng": 4.65271,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of the Scheldt in World War II was a series of military operations to open up the Scheldt river between Antwerp and the North Sea for shipping, so that Antwerp's port could be used to supply the Allies in north-west Europe. The operations were carried out by the First Canadian Army, with assistance from Polish and British units which had been attached. The action was under the acting command of the First Canadian's Lieutenant-General Guy Simonds. The battle took place in the vicinity of the Scheldt river in northern Belgium and southwestern Netherlands from 2 October to 8 November 1944.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of the Scheldt",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Scheldt"
-      }
-    ]
-  },
-  {
     "id": "battle-of-memel",
     "qid": "Q3620958",
     "title": "Battle of Memel",
@@ -16035,6 +16009,32 @@
       {
         "label": "Wikipedia: Battle of Memel",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Memel"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-hrtgen-forest",
+    "qid": "Q162287",
+    "title": "Battle of Hürtgen Forest",
+    "date": "1944-10-06",
+    "endDate": "1945-02-10",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 50.708611111,
+    "lng": 6.362777777,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Hürtgen Forest was a series of battles fought from 19 September to 16 December 1944, between American and German forces on the Western Front during World War II, in the Hürtgen Forest, a 140 km2 (54 mi2) area about 5 km (3.1 mi) east of the Belgian–German border. Lasting 88 days, it was the longest battle on German ground during World War II and it is the second longest single battle the U.S. Army has ever fought after the three-month-long Battle of Bataan.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Hürtgen Forest",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_H%C3%BCrtgen_Forest"
       }
     ]
   },
@@ -16331,8 +16331,8 @@
     "qid": "Q303036",
     "title": "Meppen-Versen concentration camp",
     "date": "1944-11-01",
-    "lat": 52.7246,
-    "lng": 7.18372,
+    "lat": 52.7162,
+    "lng": 7.23364,
     "category": "atrocity",
     "theater": "europe",
     "article": "Stalag VI-B was a German World War II prisoner-of-war camp (Stammlager), located about 3 km (1.9 mi) east of the village of Versen in the Emsland district of Lower Saxony, in north-western Germany, close to the border with the Netherlands.",
