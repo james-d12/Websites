@@ -193,6 +193,7 @@ function toWW2Events(enriched: EnrichedEvent[]): WW2Event[] {
   return enriched.map(
     (e, i): WW2Event => ({
       id: ids[i],
+      qid: e.qid,
       title: e.label,
       date: e.date,
       ...(e.endDate !== undefined ? { endDate: e.endDate } : {}),

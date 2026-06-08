@@ -1,13 +1,70 @@
-import { useState, useCallback, useRef } from "react";
-import Map, { Marker, type MapRef } from "react-map-gl/maplibre";
+import { useState, useCallback, useRef, useMemo } from "react";
+import Map, { Marker, Source, Layer, type MapRef } from "react-map-gl/maplibre";
 import "maplibre-gl/dist/maplibre-gl.css";
-import type { WW2Event, EventCategory } from "../types/events";
+import type {
+  WW2Event,
+  EventCategory,
+  TerritorySnapshot,
+} from "../types/events";
+import { COUNTRY_LABELS } from "../types/events";
 import eventsData from "../data/events.json";
+import territoriesData from "../data/territories.json";
 import EventPanel from "./EventPanel";
 import Timeline from "./Timeline";
 import FilterSidebar from "./FilterSidebar";
 
 const events = eventsData as WW2Event[];
+const territories = territoriesData as TerritorySnapshot[];
+
+// Palette for territory shading — distinct from COUNTRY_COLORS (flag-derived
+// colours, which cluster heavily around red/blue and make adjacent powers like
+// USA/USSR/China hard to tell apart on a filled map). Hues are spread by
+// adjacency: countries that border each other or share a theatre get the most
+// separated colours; rarely-co-occurring "minor" nations share a quieter,
+// less saturated secondary set.
+const TERRITORY_COLORS: Record<string, string> = {
+  germany: "#52525b",
+  ussr: "#bc2f2f",
+  italy: "#bc5e2f",
+  poland: "#bcab2f",
+  japan: "#52bc2f",
+  vichy_france: "#2fbc59",
+  usa: "#2fa4bc",
+  uk: "#362fbc",
+  china: "#812fbc",
+  france: "#bc2f7a",
+  finland: "#c37465",
+  greece: "#65c390",
+  yugoslavia: "#ab65c3",
+  romania: "#bfc365",
+  hungary: "#65a4c3",
+  netherlands: "#c36588",
+  belgium: "#6dc365",
+  norway: "#7865c3",
+  denmark: "#c39465",
+  croatia: "#65c3af",
+  albania: "#c365bb",
+  slovakia: "#a0c365",
+  estonia: "#6584c3",
+  latvia: "#c36569",
+  lithuania: "#65c37d",
+  canada: "#9865c3",
+  australia: "#c3b465",
+  new_zealand: "#65b7c3",
+  neutral: "#9aa0a6",
+};
+
+const TERRITORY_LABELS: Record<string, string> = {
+  ...COUNTRY_LABELS,
+  neutral: "Neutral",
+};
+
+const COUNTRY_FILL_EXPRESSION = [
+  "match",
+  ["get", "country"],
+  ...Object.entries(TERRITORY_COLORS).flat(),
+  "#888888",
+] as any;
 
 const WAR_START = new Date("1939-09-01");
 const WAR_END = new Date("1945-09-02");
@@ -44,9 +101,36 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [speed, setSpeed] = useState(1); // days per second
+  const [showTerritories, setShowTerritories] = useState(true);
   const mapRef = useRef<MapRef>(null);
 
   const currentDate = new Date(WAR_START.getTime() + currentDay * 86_400_000);
+
+  const activeTerritories = useMemo(() => {
+    let active: TerritorySnapshot | null = null;
+    for (const snapshot of territories) {
+      if (new Date(snapshot.date) <= currentDate) active = snapshot;
+      else break;
+    }
+    return active;
+  }, [currentDay]);
+
+  const territoryLegend = useMemo(() => {
+    if (!activeTerritories) return [];
+    const seen = new Set<string>();
+    const entries: { key: string; label: string; color: string }[] = [];
+    for (const feature of activeTerritories.regions.features) {
+      const key = feature.properties.country;
+      if (seen.has(key)) continue;
+      seen.add(key);
+      entries.push({
+        key,
+        label: TERRITORY_LABELS[key] ?? key,
+        color: TERRITORY_COLORS[key] ?? "#888888",
+      });
+    }
+    return entries.sort((a, b) => a.label.localeCompare(b.label));
+  }, [activeTerritories]);
 
   const isEventVisible = useCallback(
     (ev: WW2Event) => {
@@ -156,6 +240,13 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
           >
             Events list
           </a>
+
+          <a
+            href="/divisions"
+            className="shrink-0 px-3 py-1.5 text-xs font-medium rounded border border-rim text-muted hover:text-ink hover:border-accent/60 transition-colors duration-150"
+          >
+            Divisions
+          </a>
         </div>
       </header>
 
@@ -169,6 +260,32 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
           mapStyle={CARTO_DARK}
           style={{ width: "100%", height: "100%" }}
         >
+          {showTerritories && activeTerritories && (
+            <Source
+              id="territories"
+              type="geojson"
+              data={activeTerritories.regions as any}
+            >
+              <Layer
+                id="territory-fill"
+                type="fill"
+                paint={{
+                  "fill-color": COUNTRY_FILL_EXPRESSION,
+                  "fill-opacity": 0.22,
+                }}
+              />
+              <Layer
+                id="territory-outline"
+                type="line"
+                paint={{
+                  "line-color": COUNTRY_FILL_EXPRESSION,
+                  "line-width": 1,
+                  "line-opacity": 0.5,
+                }}
+              />
+            </Source>
+          )}
+
           {visibleEvents.map((ev) => {
             const isSelected = selectedEvent?.id === ev.id;
             const size = isSelected ? 46 : 38;
@@ -209,6 +326,9 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
           onToggle={toggleFilter}
           speed={speed}
           onSpeedChange={setSpeed}
+          showTerritories={showTerritories}
+          onShowTerritoriesChange={setShowTerritories}
+          territoryLegend={territoryLegend}
         />
 
         {selectedEvent && (

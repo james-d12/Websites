@@ -1,5 +1,6 @@
 import type { Division } from "../types/divisions";
 import { COUNTRY_FLAGS, COUNTRY_LABELS } from "../types/events";
+import { eventsForDivision } from "../lib/divisionLinks";
 
 interface Props {
   division: Division;
@@ -18,6 +19,8 @@ function formatDate(iso: string) {
 }
 
 export default function DivisionPanel({ division, onClose }: Props) {
+  const battles = eventsForDivision(division);
+
   return (
     <div
       style={{
@@ -79,6 +82,24 @@ export default function DivisionPanel({ division, onClose }: Props) {
         <p className="m-0 mb-3.5 text-sm text-dim leading-7">
           {division.article}
         </p>
+
+        {battles.length > 0 && (
+          <div className="border-t border-rim pt-2.5 mb-3.5">
+            <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-faint mb-1.5">
+              Battles
+            </div>
+            {battles.map((event) => (
+              <a
+                key={event.id}
+                href={`/?event=${event.id}`}
+                className="block text-xs text-link no-underline py-0.5 hover:underline"
+              >
+                → {event.title}
+                <span className="text-faint"> · {formatDate(event.date)}</span>
+              </a>
+            ))}
+          </div>
+        )}
 
         {division.links.length > 0 && (
           <div className="border-t border-rim pt-2.5">

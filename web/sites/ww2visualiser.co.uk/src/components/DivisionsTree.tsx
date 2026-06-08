@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import divisionsData from "../data/divisions.json";
 import type { Division } from "../types/divisions";
 import DivisionPanel from "./DivisionPanel";
@@ -38,6 +38,19 @@ export default function DivisionsTree() {
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState<Set<string>>(new Set());
   const [selected, setSelected] = useState<Division | null>(null);
+
+  useEffect(() => {
+    const divisionId = new URLSearchParams(window.location.search).get(
+      "division",
+    );
+    if (!divisionId) return;
+
+    const target = divisions.find((d) => d.id === divisionId);
+    if (!target) return;
+
+    setSelected(target);
+    history.replaceState(null, "", "/divisions");
+  }, []);
 
   const groups = useMemo(() => {
     const q = query.toLowerCase().trim();

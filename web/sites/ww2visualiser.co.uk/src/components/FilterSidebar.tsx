@@ -11,6 +11,9 @@ interface Props {
   onToggle: (cat: EventCategory) => void;
   speed: number;
   onSpeedChange: (speed: number) => void;
+  showTerritories: boolean;
+  onShowTerritoriesChange: (show: boolean) => void;
+  territoryLegend: { key: string; label: string; color: string }[];
 }
 
 export default function FilterSidebar({
@@ -23,6 +26,9 @@ export default function FilterSidebar({
   onToggle,
   speed,
   onSpeedChange,
+  showTerritories,
+  onShowTerritoriesChange,
+  territoryLegend,
 }: Props) {
   return (
     <div
@@ -58,6 +64,37 @@ export default function FilterSidebar({
             icons={icons}
             onToggle={onToggle}
           />
+        </div>
+
+        <div>
+          <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-faint mb-2">
+            Map Layers
+          </div>
+          <label className="flex items-center gap-2 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked={showTerritories}
+              onChange={(e) => onShowTerritoriesChange(e.target.checked)}
+              className="w-3.5 h-3.5 cursor-pointer"
+            />
+            <span className="text-[12px] text-dim">Territorial control</span>
+          </label>
+
+          {showTerritories && territoryLegend.length > 0 && (
+            <div className="mt-2.5 grid grid-cols-2 gap-x-2 gap-y-1.5">
+              {territoryLegend.map((entry) => (
+                <div key={entry.key} className="flex items-center gap-1.5 min-w-0">
+                  <span
+                    style={{ background: entry.color }}
+                    className="w-2.5 h-2.5 rounded-sm shrink-0"
+                  />
+                  <span className="text-[11px] text-faint truncate">
+                    {entry.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         <div>

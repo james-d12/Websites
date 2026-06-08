@@ -147,6 +147,8 @@ export const COUNTRY_LABELS: Record<Country, string> = {
 
 export interface WW2Event {
   id: string;
+  /** Wikidata QID — used to cross-reference with divisions during ETL. */
+  qid: string;
   title: string;
   date: string; // ISO date YYYY-MM-DD
   endDate?: string;
@@ -161,4 +163,22 @@ export interface WW2Event {
   article: string;
   links?: { label: string; url: string }[];
   icon?: string;
+  /** IDs of divisions known to have fought in this event (via Wikidata P607). */
+  divisionIds?: string[];
+}
+
+export interface TerritoryRegion {
+  type: "Feature";
+  properties: { country: Country; name?: string };
+  geometry:
+    | { type: "Polygon"; coordinates: number[][][] }
+    | { type: "MultiPolygon"; coordinates: number[][][][] };
+}
+
+export interface TerritorySnapshot {
+  date: string; // ISO date YYYY-MM-DD — in effect until the next snapshot's date
+  regions: {
+    type: "FeatureCollection";
+    features: TerritoryRegion[];
+  };
 }

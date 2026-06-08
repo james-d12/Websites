@@ -1,5 +1,6 @@
 import type { WW2Event, EventCategory, Country } from "../types/events";
 import { COUNTRY_COLORS, COUNTRY_FLAGS, COUNTRY_LABELS } from "../types/events";
+import { divisionsForEvent } from "../lib/divisionLinks";
 
 interface Props {
   event: WW2Event;
@@ -66,6 +67,7 @@ export default function EventPanel({ event, flags, onClose }: Props) {
   const color = CATEGORY_COLORS[event.category];
   const allied = event.sides?.allied[0];
   const axis = event.sides?.axis[0];
+  const divisions = divisionsForEvent(event);
 
   return (
     <div
@@ -121,6 +123,26 @@ export default function EventPanel({ event, flags, onClose }: Props) {
       {/* Body */}
       <div className="px-3.5 py-3 overflow-y-auto flex-1">
         <p className="m-0 mb-3.5 text-sm text-dim leading-7">{event.article}</p>
+
+        {divisions.length > 0 && (
+          <div className="border-t border-rim pt-2.5 mb-3.5">
+            <div className="text-[11px] font-bold tracking-[0.06em] uppercase text-faint mb-1.5">
+              Units Involved
+            </div>
+            {divisions.map((division) => (
+              <a
+                key={division.id}
+                href={`/divisions?division=${division.id}`}
+                className="block text-xs text-link no-underline py-0.5 hover:underline"
+              >
+                → {division.name}
+                {division.branch && (
+                  <span className="text-faint"> · {division.branch}</span>
+                )}
+              </a>
+            ))}
+          </div>
+        )}
 
         {event.links && event.links.length > 0 && (
           <div className="border-t border-rim pt-2.5">

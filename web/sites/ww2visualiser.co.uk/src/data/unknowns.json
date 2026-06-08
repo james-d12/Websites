@@ -1,6 +1,7 @@
 [
   {
     "id": "wietmarschen-concentration-camp",
+    "qid": "Q664805",
     "title": "Wietmarschen concentration camp",
     "date": "1938-01-01",
     "lat": 52.5606,
@@ -12,6 +13,7 @@
   },
   {
     "id": "battle-of-wol-wodysk",
+    "qid": "Q110387409",
     "title": "Battle of Wolą Wodyńską",
     "date": "1939-09-01",
     "lat": 52.038056,
@@ -23,6 +25,7 @@
   },
   {
     "id": "occupation-of-stryj-by-the-ukrainians-in-1939",
+    "qid": "Q9386008",
     "title": "Occupation of Stryj by the Ukrainians in 1939",
     "date": "1939-09-01",
     "lat": 49.25,
@@ -34,6 +37,7 @@
   },
   {
     "id": "sterzhnevsky-lodgement",
+    "qid": "Q4443569",
     "title": "Sterzhnevsky lodgement",
     "date": "1939-09-01",
     "lat": 57.06053056,
@@ -45,6 +49,7 @@
   },
   {
     "id": "battle-of-streensk-prsmyk",
+    "qid": "Q12763260",
     "title": "Battle of Strečenský průsmyk",
     "date": "1939-09-01",
     "lat": 49.170755,
@@ -56,6 +61,7 @@
   },
   {
     "id": "battle-of-hohneck",
+    "qid": "Q111431697",
     "title": "Battle of Hohneck",
     "date": "1939-09-01",
     "lat": 48.03803,
@@ -67,6 +73,7 @@
   },
   {
     "id": "battle-of-the-rhine",
+    "qid": "Q113688110",
     "title": "Battle of the Rhine",
     "date": "1939-09-01",
     "lat": 48.166666666,
@@ -78,6 +85,7 @@
   },
   {
     "id": "bialochowo-massacre",
+    "qid": "Q9388605",
     "title": "Bialochowo massacre",
     "date": "1939-09-01",
     "lat": 53.5425,
@@ -89,6 +97,7 @@
   },
   {
     "id": "kaufering-ii-concentration-camp",
+    "qid": "Q47515558",
     "title": "Kaufering II concentration camp",
     "date": "1939-09-01",
     "lat": 48.0499468,
@@ -100,6 +109,7 @@
   },
   {
     "id": "secureni-concentration-camp",
+    "qid": "Q45535863",
     "title": "Secureni concentration camp",
     "date": "1939-09-01",
     "lat": 48.45,
@@ -111,6 +121,7 @@
   },
   {
     "id": "maria-lanzendorf-concentration-camp",
+    "qid": "Q105612800",
     "title": "Maria Lanzendorf concentration camp",
     "date": "1939-09-01",
     "lat": 48.099722,
@@ -122,6 +133,7 @@
   },
   {
     "id": "nazi-forced-labour-in-sotysowice",
+    "qid": "Q83870821",
     "title": "Nazi forced labour in Sołtysowice",
     "date": "1939-09-01",
     "lat": 51.145027777,
@@ -133,6 +145,7 @@
   },
   {
     "id": "smukaa-concentration-camp",
+    "qid": "Q130211560",
     "title": "Smukała concentration camp",
     "date": "1939-09-01",
     "lat": 53.191944,
@@ -144,6 +157,7 @@
   },
   {
     "id": "masiukoyna-extermination-camp",
+    "qid": "Q54313364",
     "title": "Masiukoŭščyna extermination camp",
     "date": "1939-09-01",
     "lat": 53.9311,
@@ -155,6 +169,7 @@
   },
   {
     "id": "graslitz-concentration-camp",
+    "qid": "Q47515607",
     "title": "Graslitz concentration camp",
     "date": "1939-09-01",
     "lat": 50.333301,
@@ -166,6 +181,7 @@
   },
   {
     "id": "spergau-labor-education-camp",
+    "qid": "Q136787972",
     "title": "Spergau Labor Education Camp",
     "date": "1939-09-01",
     "lat": 51.3,
@@ -177,6 +193,7 @@
   },
   {
     "id": "stassfurt-i-concentration-camp",
+    "qid": "Q47515356",
     "title": "Stassfurt I concentration camp",
     "date": "1939-09-01",
     "lat": 51.866699,
@@ -188,6 +205,7 @@
   },
   {
     "id": "beec-forced-labor-camp",
+    "qid": "Q81502225",
     "title": "Bełżec forced-labor camp",
     "date": "1939-09-01",
     "lat": 50.384444,
@@ -199,6 +217,7 @@
   },
   {
     "id": "ampfing-concentration-camp---waldlager-v",
+    "qid": "Q104173765",
     "title": "Ampfing (concentration camp) - Waldlager V",
     "date": "1939-09-01",
     "lat": 48.237637,
@@ -210,6 +229,7 @@
   },
   {
     "id": "hannover-stcken-continental-concentration-camp",
+    "qid": "Q1719380",
     "title": "Hannover-Stöcken (Continental) concentration camp",
     "date": "1939-09-01",
     "lat": 52.4093,
@@ -221,6 +241,7 @@
   },
   {
     "id": "nimptsch-concentration-camp",
+    "qid": "Q2385448",
     "title": "Nimptsch concentration camp",
     "date": "1939-09-01",
     "lat": 50.716701,
@@ -232,6 +253,7 @@
   },
   {
     "id": "wesuwe-concentration-camp",
+    "qid": "Q2041988",
     "title": "Wesuwe concentration camp",
     "date": "1939-09-01",
     "lat": 52.762727,
@@ -243,6 +265,7 @@
   },
   {
     "id": "kaufering-vi-concentration-camp",
+    "qid": "Q17265682",
     "title": "Kaufering VI concentration camp",
     "date": "1939-09-01",
     "lat": 48.050694444,
@@ -254,6 +277,7 @@
   },
   {
     "id": "rosslau-concentration-camp",
+    "qid": "Q1369785",
     "title": "Rosslau concentration camp",
     "date": "1939-09-01",
     "lat": 51.8833,
@@ -265,6 +289,7 @@
   },
   {
     "id": "martha-ii-concentration-camp",
+    "qid": "Q1719396",
     "title": "Martha II concentration camp",
     "date": "1939-09-01",
     "lat": 51.1935,
@@ -276,6 +301,7 @@
   },
   {
     "id": "neusustrum-concentration-camp",
+    "qid": "Q2071320",
     "title": "Neusustrum concentration camp",
     "date": "1939-09-01",
     "lat": 52.901869444,
@@ -287,6 +313,7 @@
   },
   {
     "id": "porta-westfalica-concentration-camp",
+    "qid": "Q1719291",
     "title": "Porta Westfalica concentration camp",
     "date": "1939-09-01",
     "lat": 52.2167,
@@ -298,6 +325,7 @@
   },
   {
     "id": "hamburg-hammerbrook-concentration-camp",
+    "qid": "Q1719263",
     "title": "Hamburg-Hammerbrook concentration camp",
     "date": "1939-09-01",
     "lat": 53.55075,
@@ -309,6 +337,7 @@
   },
   {
     "id": "bad-gandersheim-concentration-camp",
+    "qid": "Q1719347",
     "title": "Bad Gandersheim concentration camp",
     "date": "1939-09-01",
     "lat": 51.8825,
@@ -320,6 +349,7 @@
   },
   {
     "id": "salzgitter-bad-concentration-camp",
+    "qid": "Q1719412",
     "title": "Salzgitter-Bad concentration camp",
     "date": "1939-09-01",
     "lat": 52.0385,
@@ -331,6 +361,7 @@
   },
   {
     "id": "wilhelmshaven-concentration-camp",
+    "qid": "Q15822377",
     "title": "Wilhelmshaven concentration camp",
     "date": "1939-09-01",
     "lat": 53.51525309,
@@ -342,6 +373,7 @@
   },
   {
     "id": "blankenburg-oesig-concentration-camp",
+    "qid": "Q1719250",
     "title": "Blankenburg-Oesig concentration camp",
     "date": "1939-09-01",
     "lat": 51.7809,
@@ -353,6 +385,7 @@
   },
   {
     "id": "mnchmhle-concentration-camp",
+    "qid": "Q1719287",
     "title": "Münchmühle concentration camp",
     "date": "1939-09-01",
     "lat": 50.8216,
@@ -364,6 +397,7 @@
   },
   {
     "id": "kamp-dobbendal",
+    "qid": "Q2769308",
     "title": "Kamp Dobbendal",
     "date": "1939-09-01",
     "lat": 52.971944444,
@@ -375,6 +409,7 @@
   },
   {
     "id": "schaarshoek-concentration-camp",
+    "qid": "Q2180222",
     "title": "Schaarshoek concentration camp",
     "date": "1939-09-01",
     "lat": 52.435833,
@@ -386,6 +421,7 @@
   },
   {
     "id": "meppen-dalum-concentration-camp",
+    "qid": "Q1849977",
     "title": "Meppen-Dalum concentration camp",
     "date": "1939-09-01",
     "lat": 52.6833,
@@ -397,6 +433,7 @@
   },
   {
     "id": "rhede-brual-concentration-camp",
+    "qid": "Q1339747",
     "title": "Rhede-Brual concentration camp",
     "date": "1939-09-01",
     "lat": 53.0861,
@@ -408,6 +445,7 @@
   },
   {
     "id": "kz-hohenbruch",
+    "qid": "Q1275642",
     "title": "KZ Hohenbruch",
     "date": "1939-09-01",
     "lat": 54.97613889,
@@ -419,6 +457,7 @@
   },
   {
     "id": "ankenbuck-concentration-camp",
+    "qid": "Q936203",
     "title": "Ankenbuck concentration camp",
     "date": "1939-09-01",
     "lat": 48,
@@ -430,6 +469,7 @@
   },
   {
     "id": "beendorf-concentration-camp",
+    "qid": "Q1719351",
     "title": "Beendorf concentration camp",
     "date": "1939-09-01",
     "lat": 52.2428,
@@ -441,6 +481,7 @@
   },
   {
     "id": "pavlos-melas-camp",
+    "qid": "Q31192646",
     "title": "Pavlos Melas Camp",
     "date": "1939-09-01",
     "lat": 40.66,
@@ -452,6 +493,7 @@
   },
   {
     "id": "uphusen-concentration-camp",
+    "qid": "Q1719425",
     "title": "Uphusen concentration camp",
     "date": "1939-09-01",
     "lat": 53.0268,
@@ -463,6 +505,7 @@
   },
   {
     "id": "unterl-concentration-camp",
+    "qid": "Q1719310",
     "title": "Unterlüß concentration camp",
     "date": "1939-09-01",
     "lat": 52.880009,
@@ -474,6 +517,7 @@
   },
   {
     "id": "reichenbach-concentration-camp-1933",
+    "qid": "Q45478322",
     "title": "Reichenbach concentration camp (1933)",
     "date": "1939-09-01",
     "lat": 50.599998,
@@ -485,6 +529,7 @@
   },
   {
     "id": "hambhren-concentration-camp",
+    "qid": "Q1719266",
     "title": "Hambühren concentration camp",
     "date": "1939-09-01",
     "lat": 52.6333,
@@ -496,6 +541,7 @@
   },
   {
     "id": "blankenburg-regenstein-concentration-camp",
+    "qid": "Q1719251",
     "title": "Blankenburg-Regenstein concentration camp",
     "date": "1939-09-01",
     "lat": 51.8108,
@@ -507,6 +553,7 @@
   },
   {
     "id": "site-of-nazi-concentration-camp-loibl-nord",
+    "qid": "Q38104687",
     "title": "Site of Nazi concentration camp Loibl Nord",
     "date": "1939-09-01",
     "lat": 46.44399722,
@@ -518,6 +565,7 @@
   },
   {
     "id": "rossla-concentration-camp",
+    "qid": "Q1719296",
     "title": "Rossla concentration camp",
     "date": "1939-09-01",
     "lat": 51.4667,
@@ -529,6 +577,7 @@
   },
   {
     "id": "frankfurt-am-main-concentration-camp",
+    "qid": "Q18627933",
     "title": "Frankfurt am Main concentration camp",
     "date": "1939-09-01",
     "lat": 50.10116667,
@@ -540,6 +589,7 @@
   },
   {
     "id": "hinterbrhl-concentration-camp-memorial",
+    "qid": "Q38123656",
     "title": "Hinterbrühl concentration camp memorial",
     "date": "1939-09-01",
     "lat": 48.08962,
@@ -551,6 +601,7 @@
   },
   {
     "id": "skarysko-kamienna-concentration-camp",
+    "qid": "Q13740850",
     "title": "Skarżysko-Kamienna concentration camp",
     "date": "1939-09-01",
     "lat": 51.116666,
@@ -562,6 +613,7 @@
   },
   {
     "id": "leonberg-concentration-camp",
+    "qid": "Q1991215",
     "title": "Leonberg concentration camp",
     "date": "1939-09-01",
     "lat": 48.797611111,
@@ -573,6 +625,7 @@
   },
   {
     "id": "engerhafe-concentration-camp",
+    "qid": "Q1719366",
     "title": "Engerhafe concentration camp",
     "date": "1939-09-01",
     "lat": 53.4872,
@@ -584,6 +637,7 @@
   },
   {
     "id": "hannover-stcken-akkumulatorenfabrik-concentration-camp",
+    "qid": "Q1719379",
     "title": "Hannover-Stöcken (Akkumulatorenfabrik) concentration camp",
     "date": "1939-09-01",
     "lat": 52.4109,
@@ -595,6 +649,7 @@
   },
   {
     "id": "schwarzheide-concentration-camp",
+    "qid": "Q1719308",
     "title": "Schwarzheide concentration camp",
     "date": "1939-09-01",
     "lat": 51.4833,
@@ -606,6 +661,7 @@
   },
   {
     "id": "neu-dachs-concentration-camp",
+    "qid": "Q1434447",
     "title": "Neu-Dachs concentration camp",
     "date": "1939-09-01",
     "lat": 50.21342,
@@ -617,6 +673,7 @@
   },
   {
     "id": "milbertshofen-concentration-camp",
+    "qid": "Q1710925",
     "title": "Milbertshofen concentration camp",
     "date": "1939-09-01",
     "lat": 48.195,
@@ -628,6 +685,7 @@
   },
   {
     "id": "ahrensbk-concentration-camp",
+    "qid": "Q1719342",
     "title": "Ahrensbök concentration camp",
     "date": "1939-09-01",
     "lat": 54.0261,
@@ -639,6 +697,7 @@
   },
   {
     "id": "salzwedel-concentration-camp",
+    "qid": "Q1719415",
     "title": "Salzwedel concentration camp",
     "date": "1939-09-01",
     "lat": 52.85,
@@ -650,6 +709,7 @@
   },
   {
     "id": "gross-hesepe-concentration-camp",
+    "qid": "Q2150460",
     "title": "Gross Hesepe concentration camp",
     "date": "1939-09-01",
     "lat": 52.62222,
@@ -661,6 +721,7 @@
   },
   {
     "id": "kz-meisnerhof",
+    "qid": "Q23787584",
     "title": "KZ Meisnerhof",
     "date": "1939-09-01",
     "lat": 52.663722222,
@@ -672,6 +733,7 @@
   },
   {
     "id": "walchum-concentration-camp",
+    "qid": "Q1339745",
     "title": "Walchum concentration camp",
     "date": "1939-09-01",
     "lat": 52.931416666,
@@ -683,6 +745,7 @@
   },
   {
     "id": "uelzen-concentration-camp",
+    "qid": "Q1351920",
     "title": "Uelzen concentration camp",
     "date": "1939-09-01",
     "lat": 52.9746,
@@ -694,6 +757,7 @@
   },
   {
     "id": "lengenfeld-concentration-camp",
+    "qid": "Q13749104",
     "title": "Lengenfeld concentration camp",
     "date": "1939-09-01",
     "lat": 50.566699,
@@ -705,6 +769,7 @@
   },
   {
     "id": "weferlingen-concentration-camp",
+    "qid": "Q1411170",
     "title": "Weferlingen concentration camp",
     "date": "1939-09-01",
     "lat": 52.299999,
@@ -716,6 +781,7 @@
   },
   {
     "id": "bremen-blumenthal-concentration-camp",
+    "qid": "Q1719350",
     "title": "Bremen-Blumenthal concentration camp",
     "date": "1939-09-01",
     "lat": 53.1815,
@@ -727,6 +793,7 @@
   },
   {
     "id": "alexisdorf-concentration-camp",
+    "qid": "Q1854973",
     "title": "Alexisdorf concentration camp",
     "date": "1939-09-01",
     "lat": 52.61556,
@@ -738,6 +805,7 @@
   },
   {
     "id": "brnn-concentration-camp",
+    "qid": "Q12045738",
     "title": "Brünn concentration camp",
     "date": "1939-09-01",
     "lat": 49.20222222,
@@ -749,6 +817,7 @@
   },
   {
     "id": "labor-camp-blechhammer",
+    "qid": "Q26212260",
     "title": "Labor camp Blechhammer",
     "date": "1939-09-01",
     "lat": 50.354722,
@@ -760,6 +829,7 @@
   },
   {
     "id": "gunskirchen-concentration-camp",
+    "qid": "Q2331201",
     "title": "Gunskirchen concentration camp",
     "date": "1939-09-01",
     "lat": 48.134444,
@@ -771,6 +841,7 @@
   },
   {
     "id": "barkhausen-concentration-camp",
+    "qid": "Q2175644",
     "title": "Barkhausen concentration camp",
     "date": "1939-09-01",
     "lat": 52.246341,
@@ -782,6 +853,7 @@
   },
   {
     "id": "arbeitslager-langenbielau-i",
+    "qid": "Q9340463",
     "title": "Arbeitslager Langenbielau I",
     "date": "1939-09-01",
     "lat": 50.717222222,
@@ -793,6 +865,7 @@
   },
   {
     "id": "darnysia-concentration-camp",
+    "qid": "Q4155096",
     "title": "Darnysia concentration camp",
     "date": "1939-09-01",
     "lat": 50.429444444,
@@ -804,6 +877,7 @@
   },
   {
     "id": "hradischko-concentration-camp",
+    "qid": "Q3141691",
     "title": "Hradischko concentration camp",
     "date": "1939-09-01",
     "lat": 49.866699,
@@ -815,6 +889,7 @@
   },
   {
     "id": "gunskirchen-wels-i-concentration-camp",
+    "qid": "Q1719260",
     "title": "Gunskirchen-Wels I concentration camp",
     "date": "1939-09-01",
     "lat": 48.112964358,
@@ -826,6 +901,7 @@
   },
   {
     "id": "fullen-concentration-camp",
+    "qid": "Q2351552",
     "title": "Fullen concentration camp",
     "date": "1939-09-01",
     "lat": 52.7,
@@ -837,6 +913,7 @@
   },
   {
     "id": "eutin-concentration-camp",
+    "qid": "Q1719369",
     "title": "Eutin concentration camp",
     "date": "1939-09-01",
     "lat": 54.134,
@@ -848,6 +925,7 @@
   },
   {
     "id": "de-vecht-concentration-camp",
+    "qid": "Q13740839",
     "title": "De Vecht concentration camp",
     "date": "1939-09-01",
     "lat": 52.5,
@@ -859,6 +937,7 @@
   },
   {
     "id": "rees-concentration-camp",
+    "qid": "Q4678797",
     "title": "Rees concentration camp",
     "date": "1939-09-01",
     "lat": 51.7792,
@@ -870,6 +949,7 @@
   },
   {
     "id": "dorohucza-concentration-camp",
+    "qid": "Q1314014",
     "title": "Dorohucza concentration camp",
     "date": "1939-09-01",
     "lat": 51.16,
@@ -881,6 +961,7 @@
   },
   {
     "id": "battle-of-krasn",
+    "qid": "Q114949753",
     "title": "Battle of Krasną",
     "date": "1939-09-06",
     "lat": 51.128333,
@@ -892,6 +973,7 @@
   },
   {
     "id": "battle-of-odrzywo",
+    "qid": "Q110390183",
     "title": "Battle of Odrzywoł",
     "date": "1939-09-08",
     "lat": 51.548889,
@@ -902,7 +984,20 @@
     "links": []
   },
   {
+    "id": "trip-to-wawrzyszew",
+    "qid": "Q136414539",
+    "title": "Trip to Wawrzyszew",
+    "date": "1939-09-10",
+    "lat": 52.278888888,
+    "lng": 20.926944444,
+    "category": "battle",
+    "theater": "europe",
+    "article": "",
+    "links": []
+  },
+  {
     "id": "battle-of-mrog",
+    "qid": "Q9172480",
     "title": "Battle of Mrogą",
     "date": "1939-09-10",
     "sides": {
@@ -921,18 +1016,8 @@
     "links": []
   },
   {
-    "id": "trip-to-wawrzyszew",
-    "title": "Trip to Wawrzyszew",
-    "date": "1939-09-10",
-    "lat": 52.278888888,
-    "lng": 20.926944444,
-    "category": "battle",
-    "theater": "europe",
-    "article": "",
-    "links": []
-  },
-  {
     "id": "raid-on-okcie-and-zauski",
+    "qid": "Q131101333",
     "title": "Raid on Okęcie and Załuski",
     "date": "1939-09-12",
     "lat": 52.165833333,
@@ -944,6 +1029,7 @@
   },
   {
     "id": "battle-of-bigorajem",
+    "qid": "Q63373294",
     "title": "Battle of Biłgorajem",
     "date": "1939-09-16",
     "endDate": "1939-09-17",
@@ -956,6 +1042,7 @@
   },
   {
     "id": "battle-of-kamionka-strumiowa",
+    "qid": "Q27767300",
     "title": "Battle of Kamionka Strumiłowa",
     "date": "1939-09-21",
     "lat": 50.109111,
@@ -967,6 +1054,7 @@
   },
   {
     "id": "skirmish-near-kalety",
+    "qid": "Q135278591",
     "title": "Skirmish near Kalety",
     "date": "1939-09-23",
     "lat": 53.916667,
@@ -978,6 +1066,7 @@
   },
   {
     "id": "battle-of-rawa-ruska",
+    "qid": "Q27767483",
     "title": "Battle of Rawa Ruska",
     "date": "1939-09-24",
     "endDate": "1939-09-25",
@@ -990,6 +1079,7 @@
   },
   {
     "id": "war-crime-in-mokrany",
+    "qid": "Q132127985",
     "title": "war crime in Mokrany",
     "date": "1939-09-28",
     "lat": 51.833333,
@@ -1001,6 +1091,7 @@
   },
   {
     "id": "sinking-of-hms-royal-oak",
+    "qid": "Q5710379",
     "title": "Sinking of HMS Royal Oak",
     "date": "1939-10-14",
     "sides": {
@@ -1020,6 +1111,7 @@
   },
   {
     "id": "murder-in-the-bratian-forest",
+    "qid": "Q11785458",
     "title": "murder in the Bratian Forest",
     "date": "1939-10-15",
     "lat": 53.458333,
@@ -1031,6 +1123,7 @@
   },
   {
     "id": "zbylitowska-gra-massacre",
+    "qid": "Q24946580",
     "title": "Zbylitowska Góra massacre",
     "date": "1939-12-11",
     "endDate": "1944-01-01",
@@ -1043,6 +1136,7 @@
   },
   {
     "id": "bochnia-massacre",
+    "qid": "Q9388606",
     "title": "Bochnia massacre",
     "date": "1939-12-18",
     "lat": 49.963888888,
@@ -1054,6 +1148,7 @@
   },
   {
     "id": "battle-of-eiunna-bridge",
+    "qid": "Q113239692",
     "title": "Battle of Eiunna Bridge",
     "date": "1940-04-26",
     "lat": 62.199450297,
@@ -1065,6 +1160,7 @@
   },
   {
     "id": "kjrem-campaign",
+    "qid": "Q113136479",
     "title": "Kjørem Campaign",
     "date": "1940-04-27",
     "lat": 61.662526358,
@@ -1076,6 +1172,7 @@
   },
   {
     "id": "battle-of-stonne",
+    "qid": "Q2890071",
     "title": "Battle of Stonne",
     "date": "1940-05-25",
     "lat": 49.5508,
@@ -1087,6 +1184,7 @@
   },
   {
     "id": "bombing-of-chemnitz-in-world-war-ii",
+    "qid": "Q19965115",
     "title": "Bombing of Chemnitz in World War II",
     "date": "1940-08-17",
     "endDate": "1945-04-11",
@@ -1099,6 +1197,7 @@
   },
   {
     "id": "battle-for-alytus",
+    "qid": "Q4438359",
     "title": "Battle for Alytus",
     "date": "1941-06-22",
     "endDate": "1941-06-23",
@@ -1111,6 +1210,7 @@
   },
   {
     "id": "solovyovo-crossing",
+    "qid": "Q4428126",
     "title": "Solovyovo crossing",
     "date": "1941-07-01",
     "endDate": "1941-08-01",
@@ -1123,6 +1223,7 @@
   },
   {
     "id": "stalag-352",
+    "qid": "Q15135817",
     "title": "Stalag 352",
     "date": "1941-08-01",
     "lat": 53.9311,
@@ -1134,6 +1235,7 @@
   },
   {
     "id": "khorol-yama-concentration-camp",
+    "qid": "Q12167643",
     "title": "Khorol Yama concentration camp",
     "date": "1941-09-20",
     "lat": 49.77833333,
@@ -1145,6 +1247,7 @@
   },
   {
     "id": "melitopol-massacre",
+    "qid": "Q122828705",
     "title": "Melitopol massacre",
     "date": "1941-10-01",
     "lat": 46.833333,
@@ -1156,6 +1259,7 @@
   },
   {
     "id": "massacre-of-kerdyllia",
+    "qid": "Q13557329",
     "title": "Massacre of Kerdyllia",
     "date": "1941-10-17",
     "lat": 40.806319025,
@@ -1167,6 +1271,7 @@
   },
   {
     "id": "christmas-massacre-mass-murder-in-simferopol",
+    "qid": "Q15847613",
     "title": "Christmas massacre (mass murder in Simferopol)",
     "date": "1941-12-01",
     "lat": 44.95,
@@ -1178,6 +1283,7 @@
   },
   {
     "id": "zgierz-massacre",
+    "qid": "Q112210783",
     "title": "Zgierz massacre",
     "date": "1942-03-20",
     "lat": 51.855,
@@ -1189,6 +1295,7 @@
   },
   {
     "id": "concentration-camp-arbeitsdorf",
+    "qid": "Q106510601",
     "title": "Concentration camp \"Arbeitsdorf\"",
     "date": "1942-04-01",
     "endDate": "1942-10-01",
@@ -1201,6 +1308,7 @@
   },
   {
     "id": "battle-at-bir-el-harmat",
+    "qid": "Q1317908",
     "title": "Battle at Bir el Harmat",
     "date": "1942-06-02",
     "endDate": "1942-06-11",
@@ -1213,6 +1321,7 @@
   },
   {
     "id": "fight-at-the-saints-cyril-and-methodius-cathedral",
+    "qid": "Q4845406",
     "title": "Fight at the Saints Cyril and Methodius Cathedral",
     "date": "1942-06-18",
     "lat": 50.0759,
@@ -1224,6 +1333,7 @@
   },
   {
     "id": "action-of-5-july-1942",
+    "qid": "Q4677367",
     "title": "Action of 5 July 1942",
     "date": "1942-07-05",
     "lat": 52,
@@ -1235,6 +1345,7 @@
   },
   {
     "id": "attack-of-the-u-209-on-the-convoy-near-matveyev-island",
+    "qid": "Q48942015",
     "title": "Attack of the U-209 on the convoy near Matveyev Island",
     "date": "1942-08-17",
     "lat": 69.5,
@@ -1246,6 +1357,7 @@
   },
   {
     "id": "night-operation",
+    "qid": "Q117730161",
     "title": "Night operation",
     "date": "1942-09-09",
     "sides": {
@@ -1263,6 +1375,7 @@
   },
   {
     "id": "attack-on-stalingrad",
+    "qid": "Q543166",
     "title": "Attack on Stalingrad",
     "date": "1942-09-13",
     "endDate": "1942-11-18",
@@ -1275,6 +1388,7 @@
   },
   {
     "id": "battle-of-ss-stephen-hopkins",
+    "qid": "Q67322153",
     "title": "Battle of SS Stephen Hopkins",
     "date": "1942-09-27",
     "sides": {
@@ -1294,6 +1408,7 @@
   },
   {
     "id": "crossing-the-neretva",
+    "qid": "Q128305042",
     "title": "Crossing the Neretva",
     "date": "1943-03-06",
     "endDate": "1943-03-15",
@@ -1306,6 +1421,7 @@
   },
   {
     "id": "battle-of-ksar-ghilane",
+    "qid": "Q2237578",
     "title": "Battle of Ksar Ghilane",
     "date": "1943-03-10",
     "lat": 32.983333,
@@ -1317,6 +1433,7 @@
   },
   {
     "id": "battle-of-lampedusa",
+    "qid": "Q2889088",
     "title": "Battle of Lampedusa",
     "date": "1943-06-05",
     "endDate": "1943-06-13",
@@ -1329,6 +1446,7 @@
   },
   {
     "id": "maria-wola-massacre",
+    "qid": "Q9388643",
     "title": "Maria Wola massacre",
     "date": "1943-07-12",
     "lat": 50.743611,
@@ -1340,6 +1458,7 @@
   },
   {
     "id": "battle-of-arachov",
+    "qid": "Q115991026",
     "title": "Battle of Arachov",
     "date": "1943-09-09",
     "sides": {
@@ -1359,6 +1478,7 @@
   },
   {
     "id": "battle-of-douch",
+    "qid": "Q125748052",
     "title": "Battle of Douch",
     "date": "1943-09-10",
     "lat": 43.6111,
@@ -1370,6 +1490,7 @@
   },
   {
     "id": "battle-of-montelungo",
+    "qid": "Q603177",
     "title": "Battle of Montelungo",
     "date": "1943-12-07",
     "endDate": "1943-12-16",
@@ -1382,6 +1503,7 @@
   },
   {
     "id": "ivotice-tragedy",
+    "qid": "Q3505714",
     "title": "Životice tragedy",
     "date": "1944-01-01",
     "lat": 49.768889,
@@ -1393,6 +1515,7 @@
   },
   {
     "id": "valibona",
+    "qid": "Q3636650",
     "title": "Valibona",
     "date": "1944-01-03",
     "sides": {
@@ -1410,6 +1533,7 @@
   },
   {
     "id": "battle-of-rivne",
+    "qid": "Q4872208",
     "title": "Battle of Rivne",
     "date": "1944-02-02",
     "endDate": "1944-02-05",
@@ -1422,6 +1546,7 @@
   },
   {
     "id": "mala-berezovytsia-massacre",
+    "qid": "Q9388603",
     "title": "Mala Berezovytsia massacre",
     "date": "1944-02-23",
     "lat": 49.7553,
@@ -1433,6 +1558,7 @@
   },
   {
     "id": "belz-massacre",
+    "qid": "Q60863142",
     "title": "Belz massacre",
     "date": "1944-03-01",
     "lat": 50.366667,
@@ -1444,6 +1570,7 @@
   },
   {
     "id": "massacre-of-monchio-susano-e-costrignano",
+    "qid": "Q3297449",
     "title": "massacre of Monchio, Susano e Costrignano",
     "date": "1944-03-18",
     "lat": 44.316666666,
@@ -1455,6 +1582,7 @@
   },
   {
     "id": "skirmish-near-sadkwka",
+    "qid": "Q24945173",
     "title": "Skirmish near Sadkówka",
     "date": "1944-03-25",
     "lat": 50.452222,
@@ -1466,6 +1594,7 @@
   },
   {
     "id": "concentration-camp-protection-squad-junk-school-braunschweig",
+    "qid": "Q106559746",
     "title": "Concentration Camp Protection Squad Junk School Braunschweig",
     "date": "1944-03-25",
     "endDate": "1944-06-05",
@@ -1478,6 +1607,7 @@
   },
   {
     "id": "biarritz-bombing",
+    "qid": "Q16516605",
     "title": "Biarritz Bombing",
     "date": "1944-03-27",
     "lat": 43.46666667,
@@ -1489,6 +1619,7 @@
   },
   {
     "id": "kleisoura-massacre-1944",
+    "qid": "Q31284270",
     "title": "Kleisoura massacre 1944",
     "date": "1944-04-05",
     "lat": 40.5372,
@@ -1500,6 +1631,7 @@
   },
   {
     "id": "memoriale-delleccidio-delle-fosse-reatine",
+    "qid": "Q23692168",
     "title": "Memoriale dell'eccidio delle Fosse Reatine",
     "date": "1944-04-09",
     "lat": 42.43064,
@@ -1511,6 +1643,7 @@
   },
   {
     "id": "battle-of-25-april-1944",
+    "qid": "Q16701434",
     "title": "Battle of 25 April 1944",
     "date": "1944-04-25",
     "sides": {
@@ -1530,6 +1663,7 @@
   },
   {
     "id": "battle-at-achladokampos-inn",
+    "qid": "Q16331867",
     "title": "Battle at Achladokampos inn",
     "date": "1944-05-17",
     "lat": 37.523461,
@@ -1541,6 +1675,7 @@
   },
   {
     "id": "massacre-of-birchinia",
+    "qid": "Q107264131",
     "title": "Massacre of Birchinia",
     "date": "1944-05-18",
     "lat": 45.616111111,
@@ -1552,6 +1687,7 @@
   },
   {
     "id": "salzgitter-watenstedt-concentration-camp",
+    "qid": "Q1719413",
     "title": "Salzgitter-Watenstedt Concentration Camp",
     "date": "1944-05-27",
     "lat": 52.138528327,
@@ -1563,6 +1699,7 @@
   },
   {
     "id": "kz-fallersleben-laagberg-men",
+    "qid": "Q106565188",
     "title": "KZ Fallersleben-Laagberg (men)",
     "date": "1944-05-31",
     "lat": 52.415740183,
@@ -1574,6 +1711,7 @@
   },
   {
     "id": "battle-of-tulle",
+    "qid": "Q15889808",
     "title": "Battle of Tulle",
     "date": "1944-06-07",
     "endDate": "1944-06-08",
@@ -1586,6 +1724,7 @@
   },
   {
     "id": "battle-of-la-truyre",
+    "qid": "Q88849674",
     "title": "Battle of la Truyère",
     "date": "1944-06-20",
     "lat": 44.975555555,
@@ -1597,6 +1736,7 @@
   },
   {
     "id": "battle-of-filottrano",
+    "qid": "Q3636433",
     "title": "Battle of Filottrano",
     "date": "1944-07-01",
     "endDate": "1944-07-09",
@@ -1618,6 +1758,7 @@
   },
   {
     "id": "battle-of-roquefixade",
+    "qid": "Q99238349",
     "title": "Battle of Roquefixade",
     "date": "1944-07-06",
     "endDate": "1944-07-07",
@@ -1638,6 +1779,7 @@
   },
   {
     "id": "skirmish-at-mokre",
+    "qid": "Q20034893",
     "title": "Skirmish at Mokre",
     "date": "1944-07-16",
     "lat": 50.577778,
@@ -1649,6 +1791,7 @@
   },
   {
     "id": "battle-of-mount-gargan",
+    "qid": "Q2890791",
     "title": "Battle of Mount Gargan",
     "date": "1944-07-18",
     "endDate": "1944-07-24",
@@ -1661,6 +1804,7 @@
   },
   {
     "id": "conference-of-the-league-of-coloured-peoples",
+    "qid": "Q114868683",
     "title": "Conference of the League of Coloured Peoples",
     "date": "1944-07-21",
     "endDate": "1944-07-23",
@@ -1673,6 +1817,7 @@
   },
   {
     "id": "battle-of-modzawy",
+    "qid": "Q20034940",
     "title": "Battle of Młodzawy",
     "date": "1944-07-31",
     "lat": 50.461944,
@@ -1684,6 +1829,7 @@
   },
   {
     "id": "battle-of-skalbmierz",
+    "qid": "Q20034837",
     "title": "Battle of Skalbmierz",
     "date": "1944-08-05",
     "sides": {
@@ -1701,6 +1847,7 @@
   },
   {
     "id": "battle-of-jaksicami",
+    "qid": "Q20034938",
     "title": "Battle of Jaksicami",
     "date": "1944-08-05",
     "lat": 50.1455,
@@ -1712,6 +1859,7 @@
   },
   {
     "id": "massacre-of-penguerec",
+    "qid": "Q3297451",
     "title": "massacre of Penguerec",
     "date": "1944-08-07",
     "lat": 48.4425,
@@ -1723,6 +1871,7 @@
   },
   {
     "id": "battle-of-gletons",
+    "qid": "Q2888061",
     "title": "Battle of Égletons",
     "date": "1944-08-14",
     "endDate": "1944-08-19",
@@ -1735,6 +1884,7 @@
   },
   {
     "id": "skirmish-near-baranw",
+    "qid": "Q20035078",
     "title": "Skirmish near Baranów",
     "date": "1944-08-14",
     "endDate": "1944-08-15",
@@ -1747,6 +1897,7 @@
   },
   {
     "id": "battle-of-nice",
+    "qid": "Q3237998",
     "title": "Battle of Nice",
     "date": "1944-08-28",
     "lat": 43.695833333,
@@ -1758,6 +1909,7 @@
   },
   {
     "id": "battle-of-meximieux",
+    "qid": "Q15816796",
     "title": "Battle of Meximieux",
     "date": "1944-08-31",
     "endDate": "1944-09-02",
@@ -1770,6 +1922,7 @@
   },
   {
     "id": "battle-of-merksem",
+    "qid": "Q101628069",
     "title": "Battle of Merksem",
     "date": "1944-09-04",
     "endDate": "1944-10-03",
@@ -1782,6 +1935,7 @@
   },
   {
     "id": "annener-gustahlwerk-concentration-camp",
+    "qid": "Q789801",
     "title": "Annener Gußstahlwerk concentration camp",
     "date": "1944-09-16",
     "lat": 51.44825,
@@ -1793,6 +1947,7 @@
   },
   {
     "id": "battle-of-opheusden",
+    "qid": "Q121432702",
     "title": "Battle of Opheusden",
     "date": "1944-10-04",
     "endDate": "1944-10-08",
@@ -1805,6 +1960,7 @@
   },
   {
     "id": "battle-of-purocielo",
+    "qid": "Q108180729",
     "title": "Battle of Purocielo",
     "date": "1944-10-09",
     "endDate": "1944-10-12",
@@ -1817,6 +1973,7 @@
   },
   {
     "id": "battle-of-the-bagni-di-craveggia",
+    "qid": "Q21043582",
     "title": "Battle of the Bagni di Craveggia",
     "date": "1944-10-18",
     "sides": {
@@ -1834,6 +1991,7 @@
   },
   {
     "id": "battle-of-the-university",
+    "qid": "Q115512540",
     "title": "Battle of the University",
     "date": "1944-10-20",
     "lat": 44.49688,
@@ -1845,6 +2003,7 @@
   },
   {
     "id": "bataille-de-bruyres",
+    "qid": "Q2888205",
     "title": "Bataille de Bruyères",
     "date": "1944-10-30",
     "lat": 48.2083,
@@ -1856,6 +2015,7 @@
   },
   {
     "id": "international-civil-aviation-conference",
+    "qid": "Q47142801",
     "title": "International Civil Aviation Conference",
     "date": "1944-11-01",
     "endDate": "1944-12-07",
@@ -1868,6 +2028,7 @@
   },
   {
     "id": "action-of-10-november-1944",
+    "qid": "Q4677230",
     "title": "Action of 10 November 1944",
     "date": "1944-11-10",
     "lat": -7.21666667,
@@ -1879,6 +2040,7 @@
   },
   {
     "id": "eccidio-di-portofino",
+    "qid": "Q24939962",
     "title": "eccidio di Portofino",
     "date": "1944-12-02",
     "lat": 44.302222,
@@ -1890,6 +2052,7 @@
   },
   {
     "id": "battles-for-wilhelmshaven",
+    "qid": "Q9370600",
     "title": "Battles for Wilhelmshaven",
     "date": "1945-01-01",
     "lat": 53.516667,
@@ -1901,6 +2064,7 @@
   },
   {
     "id": "battle-of-koo",
+    "qid": "Q114840683",
     "title": "Battle of Koło",
     "date": "1945-01-19",
     "endDate": "1945-01-20",
@@ -1921,6 +2085,7 @@
   },
   {
     "id": "liberation-of-d",
+    "qid": "Q9380570",
     "title": "Liberation of Łódź",
     "date": "1945-01-19",
     "lat": 51.776667,
@@ -1932,6 +2097,7 @@
   },
   {
     "id": "battle-of-ory-1945",
+    "qid": "Q9173830",
     "title": "Battle of Żory (1945)",
     "date": "1945-01-27",
     "endDate": "1945-03-24",
@@ -1944,6 +2110,7 @@
   },
   {
     "id": "fight-at-the-golden-deer-grove",
+    "qid": "Q11222871",
     "title": "Fight at the Golden Deer grove",
     "date": "1945-02-06",
     "lat": 49.0917506,
@@ -1955,6 +2122,7 @@
   },
   {
     "id": "zalissia-massacre",
+    "qid": "Q18747805",
     "title": "Zalissia massacre",
     "date": "1945-02-07",
     "lat": 49.0144,
@@ -1966,6 +2134,7 @@
   },
   {
     "id": "siege-of-glogau",
+    "qid": "Q815141",
     "title": "Siege of Glogau",
     "date": "1945-02-11",
     "endDate": "1945-04-01",
@@ -1978,6 +2147,7 @@
   },
   {
     "id": "battle-of-riva-ridge",
+    "qid": "Q3883998",
     "title": "Battle of Riva Ridge",
     "date": "1945-02-18",
     "endDate": "1945-02-25",
@@ -1998,6 +2168,7 @@
   },
   {
     "id": "la-rossa-massacre",
+    "qid": "Q113520738",
     "title": "La Rossa massacre",
     "date": "1945-03-10",
     "lat": 44.360694444,
@@ -2009,6 +2180,7 @@
   },
   {
     "id": "battle-of-prudnik",
+    "qid": "Q57452634",
     "title": "Battle of Prudnik",
     "date": "1945-03-17",
     "endDate": "1945-05-01",
@@ -2021,6 +2193,7 @@
   },
   {
     "id": "the-long-fight",
+    "qid": "Q11222701",
     "title": "The Long Fight",
     "date": "1945-03-26",
     "endDate": "1945-03-27",
@@ -2033,6 +2206,7 @@
   },
   {
     "id": "battle-of-oechov",
+    "qid": "Q11156113",
     "title": "Battle of Ořechov",
     "date": "1945-04-01",
     "lat": 49.1095,
@@ -2044,6 +2218,7 @@
   },
   {
     "id": "battle-of-knigshofen",
+    "qid": "Q99455352",
     "title": "Battle of Königshofen",
     "date": "1945-04-01",
     "sides": {
@@ -2061,6 +2236,7 @@
   },
   {
     "id": "wenzelnberg-massacre",
+    "qid": "Q63725650",
     "title": "Wenzelnberg massacre",
     "date": "1945-04-13",
     "lat": 51.121944444,
@@ -2072,6 +2248,7 @@
   },
   {
     "id": "abtnaundorf-massacre",
+    "qid": "Q991455",
     "title": "Abtnaundorf Massacre",
     "date": "1945-04-18",
     "lat": 51.368055555,
@@ -2083,6 +2260,7 @@
   },
   {
     "id": "san-bernardo-massacre",
+    "qid": "Q107096378",
     "title": "San Bernardo massacre",
     "date": "1945-04-26",
     "lat": 45.3013,
@@ -2094,6 +2272,7 @@
   },
   {
     "id": "budnka",
+    "qid": "Q12035976",
     "title": "Budínka",
     "date": "1945-05-19",
     "lat": 49.4882939,
@@ -2105,6 +2284,7 @@
   },
   {
     "id": "treysa-conference-1945",
+    "qid": "Q59236753",
     "title": "Treysa Conference 1945",
     "date": "1945-08-27",
     "endDate": "1945-08-31",
