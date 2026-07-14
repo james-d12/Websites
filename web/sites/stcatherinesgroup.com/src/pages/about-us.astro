@@ -6,7 +6,6 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import CallToAction from '../components/CallToAction.astro';
 import ProseContent from '../components/ProseContent.astro';
-import Headshot from "../assets/headshot.png";
 
 const entry = await getEntry('pages', 'about');
 const {Content} = await render(entry);
@@ -32,8 +31,6 @@ const {title, description, hero} = entry.data;
                 <ProseContent>
                     <Content/>
                 </ProseContent>
-
-                <Image class="mx-auto" src={Headshot} alt="Headshot"/>
             </div>
         </section>
 

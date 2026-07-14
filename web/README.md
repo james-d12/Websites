@@ -8,8 +8,8 @@ to help manage shared dependencies across all sites.
 - [Web](#web)
   - [Website Status](#website-status)
   - [Getting Started](#getting-started)
-  _ [Creating a New Site](#creating-a-new-site)
-  _ [List of Sites](#list-of-sites)
+    _ [Creating a New Site](#creating-a-new-site)
+    _ [List of Sites](#list-of-sites)
   <!-- TOC -->
 
 ## Website Status

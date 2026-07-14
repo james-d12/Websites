@@ -93,7 +93,7 @@ story:
     expected, reflecting both her determination and the effectiveness of the
     tailored approach.
 
-    — Charmaine Jennings
+    — Char Jennings
 
 testimonials:
   - quote: >-
