@@ -4,6 +4,13 @@ packages:
 
 auditConfig: {}
 
-minimumReleaseAge: 10080
+minimumReleaseAge: 1440
 trustPolicy: no-downgrade
+trustPolicyExclude:
+  - "tinyclip@0.1.13"
+  - "chokidar@4.0.3"
+  - "semver@6.3.1"
+allowBuilds:
+  esbuild@0.27.7: true
+  sharp@0.34.5: true
 blockExoticSubdeps: true
