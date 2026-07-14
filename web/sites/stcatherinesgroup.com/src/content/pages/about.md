@@ -50,4 +50,4 @@ you can trust us to take the reins for as long as you need.
 At St Catherine’s, care is not just a service, it is a promise.
 
 Warmest regards,
-Charmaine Jennings
+Char Jennings

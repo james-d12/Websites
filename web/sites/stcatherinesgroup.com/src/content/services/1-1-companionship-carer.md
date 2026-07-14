@@ -90,7 +90,7 @@ story:
     had the chance to rest and spend quality time with their own families,
     knowing everything at home was being looked after.
 
-    — Charmaine Jennings
+    — Char Jennings
 
 testimonials:
   - quote: >-

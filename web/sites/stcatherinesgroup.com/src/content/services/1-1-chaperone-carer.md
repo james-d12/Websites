@@ -86,7 +86,7 @@ story:
 
     Because sometimes, it is not just about care — it is about connection.
 
-    — Charmaine Jennings
+    — Char Jennings
 
 testimonials:
   - quote: >-
