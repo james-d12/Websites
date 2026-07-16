@@ -683,7 +683,7 @@
     "links": [
       {
         "label": "Wikipedia: 141st Reserve Division",
-        "url": "https://en.wikipedia.org/wiki/141st_Reserve_Division_(Wehrmacht)"
+        "url": "https://en.wikipedia.org/wiki/141st_Reserve_Division"
       }
     ]
   },
@@ -1742,7 +1742,7 @@
     "links": [
       {
         "label": "Wikipedia: 1st Parachute Division",
-        "url": "https://en.wikipedia.org/wiki/1st_Parachute_Division_(Germany)"
+        "url": "https://en.wikipedia.org/wiki/1st_Parachute_Division"
       }
     ]
   },
@@ -5436,7 +5436,7 @@
     "name": "548th Volksgrenadier Division (Wehrmacht)",
     "qid": "Q2817472",
     "country": "germany",
-    "type": "Volksgrenadier division",
+    "type": "Grenadier Division",
     "formed": "1944-07-11",
     "disbanded": "1944-10-09",
     "article": "The 548th Grenadier Division was a German Infantry Division during World War II.",
@@ -5469,7 +5469,7 @@
     "name": "551st Volksgrenadier Division (Wehrmacht)",
     "qid": "Q2817484",
     "country": "germany",
-    "type": "Volksgrenadier division",
+    "type": "Grenadier Division",
     "formed": "1944-07-11",
     "disbanded": "1944-10-09",
     "article": "The 551st Volksgrenadier Division was a Volksgrenadier infantry division of the German Army during World War II, active from 1944 to 1945.",
@@ -5683,7 +5683,7 @@
     "qid": "Q244124",
     "country": "germany",
     "type": "Wehrmacht infantry division",
-    "branch": "German Army",
+    "branch": "Wehrmacht",
     "formed": "1939-01-01",
     "disbanded": "1945-01-01",
     "article": "The 56th Infantry Division was a German infantry division which fought during World War II.",
@@ -5894,7 +5894,7 @@
     "name": "60th Infantry Division (Wehrmacht)",
     "qid": "Q246684",
     "country": "germany",
-    "type": "military unit",
+    "type": "Wehrmacht infantry division",
     "branch": "Wehrmacht",
     "formed": "1939-01-01",
     "disbanded": "1945-01-01",
@@ -5991,8 +5991,8 @@
     "qid": "Q2817995",
     "country": "germany",
     "type": "Wehrmacht infantry division",
-    "branch": "Wehrmacht",
-    "formed": "1945-03-01",
+    "branch": "Russian Liberation Army",
+    "formed": "1945-01-17",
     "disbanded": "1945-05-05",
     "article": "The 650th (Russian) Infantry Division, 2nd lnfantry Division of the ROA (KONR) was a military division that was formed by the German Army during World War II. It drew its men mainly from Russian prisoners of war.",
     "links": [
@@ -6024,7 +6024,7 @@
     "qid": "Q256755",
     "country": "germany",
     "type": "Wehrmacht infantry division",
-    "branch": "German Army",
+    "branch": "Wehrmacht",
     "formed": "1939-01-01",
     "disbanded": "1945-01-01",
     "article": "The 68th Infantry Division was a formation of the German army during World War II. It was formed in 1939 and was initially committed to the German invasion of Poland. It took part in the Battle of France in 1940, and then Operation Barbarossa in 1941 as part of Army Group South. The 68th remained in southern Russia until refitted in Poland in early 1944. Returned to action the 68th fought for rest of the war in the East, in Russia, Slovakia, in the defence of Germany until finally surrendering to the Soviets in Czechoslovakia.",
@@ -6454,7 +6454,7 @@
     "qid": "Q265919",
     "country": "germany",
     "type": "Wehrmacht infantry division",
-    "branch": "Wehrmacht",
+    "branch": "German Army",
     "formed": "1939-01-01",
     "disbanded": "1945-01-01",
     "article": "The 75th Infantry Division was a German infantry division in World War II. It was formed on 26 August 1939.",

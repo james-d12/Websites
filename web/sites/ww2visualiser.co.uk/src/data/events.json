@@ -690,6 +690,24 @@
     ]
   },
   {
+    "id": "battle-of-mawa-q443587",
+    "qid": "Q443587",
+    "title": "Battle of Mława",
+    "date": "1939-09-01",
+    "endDate": "1939-09-03",
+    "lat": 53.1167,
+    "lng": 20.3667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Mława, otherwise known as the Defence of the Mława position, took place to the north of the town of Mława in northern Poland between 1 and 3 September 1939. It was one of the opening battles of the Invasion of Poland and World War II in general. It was fought between the forces of the Polish Modlin Army under General Krukowicz-Przedrzymirski and the German 3rd Army under General Georg von Küchler.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Mława",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_M%C5%82awa"
+      }
+    ]
+  },
+  {
     "id": "charge-at-krojanty",
     "qid": "Q469416",
     "title": "Charge at Krojanty",
@@ -709,24 +727,6 @@
       {
         "label": "Wikipedia: Charge at Krojanty",
         "url": "https://en.wikipedia.org/wiki/Charge_at_Krojanty"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-mawa-q443587",
-    "qid": "Q443587",
-    "title": "Battle of Mława",
-    "date": "1939-09-01",
-    "endDate": "1939-09-03",
-    "lat": 53.1167,
-    "lng": 20.3667,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Mława, otherwise known as the Defence of the Mława position, took place to the north of the town of Mława in northern Poland between 1 and 3 September 1939. It was one of the opening battles of the Invasion of Poland and World War II in general. It was fought between the forces of the Polish Modlin Army under General Krukowicz-Przedrzymirski and the German 3rd Army under General Georg von Küchler.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Mława",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_M%C5%82awa"
       }
     ]
   },
@@ -900,8 +900,8 @@
     "title": "Battle of Częstochowa",
     "date": "1939-09-01",
     "endDate": "1939-09-03",
-    "lat": 50.817778,
-    "lng": 19.138333,
+    "lat": 50.817222222,
+    "lng": 19.138333333,
     "category": "battle",
     "theater": "europe",
     "article": "The Battle of Częstochowa was one of the first battles of the Invasion of Poland during World War II. It took place on September 1–3, 1939.",
@@ -962,57 +962,6 @@
       {
         "label": "Wikipedia: Massacre in the Szpęgawski Forest",
         "url": "https://en.wikipedia.org/wiki/Szp%C4%99gawsk_Forest"
-      }
-    ]
-  },
-  {
-    "id": "fuhlsbttel-concentration-camp",
-    "qid": "Q1719371",
-    "title": "Fuhlsbüttel concentration camp",
-    "date": "1939-09-01",
-    "lat": 53.6225,
-    "lng": 10.01888889,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Fuhlsbüttel is an urban quarter in the north of Hamburg, Germany in the Hamburg-Nord district. It is known as the site of Hamburg's international airport, and as the location of a prison which served as a concentration camp in the Nazi system of repression. As a result of boundary changes, JVA Fuhlsbüttel prison is now in Ohlsdorf, Hamburg.",
-    "links": [
-      {
-        "label": "Wikipedia: Fuhlsbüttel concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Fuhlsb%C3%BCttel_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "hainichen-concentration-camp-q2792136",
-    "qid": "Q2792136",
-    "title": "Hainichen concentration camp",
-    "date": "1939-09-01",
-    "lat": 50.969454,
-    "lng": 13.122099,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
-    "links": [
-      {
-        "label": "Wikipedia: Hainichen concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
-      }
-    ]
-  },
-  {
-    "id": "gusen-i-concentration-camp",
-    "qid": "Q1719374",
-    "title": "Gusen I concentration camp",
-    "date": "1939-09-01",
-    "lat": 48.2575,
-    "lng": 14.4639,
-    "category": "atrocity",
-    "theater": "europe",
-    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
-    "links": [
-      {
-        "label": "Wikipedia: Gusen I concentration camp",
-        "url": "https://en.wikipedia.org/wiki/Gusen_I_concentration_camp"
       }
     ]
   },
@@ -2258,6 +2207,23 @@
     ]
   },
   {
+    "id": "stalag-ii-b",
+    "qid": "Q7597180",
+    "title": "Stalag II-B",
+    "date": "1939-09-01",
+    "lat": 53.6853,
+    "lng": 16.9096,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Stalag II-B was a German World War II prisoner-of-war camp situated 2.4 kilometres (1.5 mi) west of the town of Hammerstein, Pomerania on the north side of the railway line. It housed Polish, French, Belgian, Serbian, Dutch, Soviet, Italian and American prisoners of war.",
+    "links": [
+      {
+        "label": "Wikipedia: Stalag II-B",
+        "url": "https://en.wikipedia.org/wiki/Stalag_II-B"
+      }
+    ]
+  },
+  {
     "id": "breslau-drrgoy-concentration-camp",
     "qid": "Q1719359",
     "title": "Breslau-Dürrgoy concentration camp",
@@ -2271,6 +2237,57 @@
       {
         "label": "Wikipedia: Breslau-Dürrgoy concentration camp",
         "url": "https://en.wikipedia.org/wiki/Breslau-D%C3%BCrrgoy_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "fuhlsbttel-concentration-camp",
+    "qid": "Q1719371",
+    "title": "Fuhlsbüttel concentration camp",
+    "date": "1939-09-01",
+    "lat": 53.6225,
+    "lng": 10.01888889,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Fuhlsbüttel is an urban quarter in the north of Hamburg, Germany in the Hamburg-Nord district. It is known as the site of Hamburg's international airport, and as the location of a prison which served as a concentration camp in the Nazi system of repression. As a result of boundary changes, JVA Fuhlsbüttel prison is now in Ohlsdorf, Hamburg.",
+    "links": [
+      {
+        "label": "Wikipedia: Fuhlsbüttel concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Fuhlsb%C3%BCttel_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "hainichen-concentration-camp-q2792136",
+    "qid": "Q2792136",
+    "title": "Hainichen concentration camp",
+    "date": "1939-09-01",
+    "lat": 50.969454,
+    "lng": 13.122099,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Hainichen concentration camp is a concentration camp at Öderanstrasse in Hainichen, Saxony, formed on April 4, 1933, by order of Amtshauptmann Döbeln. Ortsgruppenleiter Georg \"Zuff\" Ziegler was the commandant and Friedrich Zill served as his deputy. The guards consisted of SA-Sturm 5/139, later supplemented by SA-Sturmbann II/148 from Colditz. Despite the nomenclature, Hainichen was an early concentration camp for leftist detainees. Its population fluctuated from an initial 50 prisoners to 144 by April 12, then to nearly three hundred before its dissolution on June 13, 1933.",
+    "links": [
+      {
+        "label": "Wikipedia: Hainichen concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Hainichen_concentration_camp"
+      }
+    ]
+  },
+  {
+    "id": "gusen-i-concentration-camp",
+    "qid": "Q1719374",
+    "title": "Gusen I concentration camp",
+    "date": "1939-09-01",
+    "lat": 48.2575,
+    "lng": 14.4639,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "Gusen was a subcamp of Mauthausen concentration camp operated by the SS between the villages of Sankt Georgen an der Gusen and Langestein in the Reichsgau Ostmark. It was primarily populated by Polish prisoners; there were also large numbers of Spanish Republicans, Soviet citizens, and Italians. Initially, prisoners worked in nearby quarries, producing granite which was sold by the SS company DEST.",
+    "links": [
+      {
+        "label": "Wikipedia: Gusen I concentration camp",
+        "url": "https://en.wikipedia.org/wiki/Gusen_I_concentration_camp"
       }
     ]
   },
@@ -2370,24 +2387,6 @@
     ]
   },
   {
-    "id": "battle-of-ran",
-    "qid": "Q4872223",
-    "title": "Battle of Różan",
-    "date": "1939-09-04",
-    "endDate": "1939-09-06",
-    "lat": 52.8894,
-    "lng": 21.3991,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Różan, otherwise known as defence of Różan bridgehead, took place between the 4 and 6 September 1939, in the fields before the town of Różan on the Narew River. A small Polish garrison of three World War I forts successfully defended the bridgehead against the entire German panzer division for the entire day and night. However, as a result of a misunderstanding of the commander in chief's orders, the Polish forces were then withdrawn to the other side of the river, and then further eastwards on the 6 September.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Różan",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_R%C3%B3%C5%BCan"
-      }
-    ]
-  },
-  {
     "id": "battle-of-piotrkw-trybunalski",
     "qid": "Q4872049",
     "title": "Battle of Piotrków Trybunalski",
@@ -2402,6 +2401,24 @@
       {
         "label": "Wikipedia: Battle of Piotrków Trybunalski",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Piotrk%C3%B3w_Trybunalski"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-ran",
+    "qid": "Q4872223",
+    "title": "Battle of Różan",
+    "date": "1939-09-04",
+    "endDate": "1939-09-06",
+    "lat": 52.8894,
+    "lng": 21.3991,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Różan, otherwise known as defence of Różan bridgehead, took place between the 4 and 6 September 1939, in the fields before the town of Różan on the Narew River. A small Polish garrison of three World War I forts successfully defended the bridgehead against the entire German panzer division for the entire day and night. However, as a result of a misunderstanding of the commander in chief's orders, the Polish forces were then withdrawn to the other side of the river, and then further eastwards on the 6 September.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Różan",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_R%C3%B3%C5%BCan"
       }
     ]
   },
@@ -3647,8 +3664,8 @@
     "qid": "Q28674662",
     "title": "Battle of Hucisko",
     "date": "1940-03-30",
-    "lat": 51.250278,
-    "lng": 20.608889,
+    "lat": 51.250277777,
+    "lng": 20.608888888,
     "category": "battle",
     "theater": "europe",
     "article": "The Battle of Hucisko was a confrontation between the Detached Unit of the Polish Army led by Major Henryk Dobrzański, codenamed Hubal, and the 51st Battalion of the German Ordnungspolizei, fought on 30 March 1940, near the village of Hucisko in the Kielce Land.",
@@ -3702,6 +3719,36 @@
     ]
   },
   {
+    "id": "battles-of-narvik",
+    "qid": "Q708217",
+    "title": "Battles of Narvik",
+    "date": "1940-04-09",
+    "endDate": "1940-06-08",
+    "sides": {
+      "allied": [
+        "norway",
+        "uk"
+      ],
+      "axis": [
+        "germany"
+      ]
+    },
+    "lat": 68.420555555,
+    "lng": 17.56,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battles of Narvik were fought from 9 April to 8 June 1940, as a naval battle in Ofotfjord and as a land battle in the mountains surrounding the north Norwegian town of Narvik, as part of the Norwegian campaign of the Second World War.",
+    "links": [
+      {
+        "label": "Wikipedia: Battles of Narvik",
+        "url": "https://en.wikipedia.org/wiki/Battles_of_Narvik"
+      }
+    ],
+    "divisionIds": [
+      "1st-parachute-division"
+    ]
+  },
+  {
     "id": "operation-weserbung",
     "qid": "Q150939",
     "title": "Operation Weserübung",
@@ -3729,33 +3776,12 @@
         "label": "Wikipedia: Operation Weserübung",
         "url": "https://en.wikipedia.org/wiki/Operation_Weser%C3%BCbung"
       }
-    ]
-  },
-  {
-    "id": "battles-of-narvik",
-    "qid": "Q708217",
-    "title": "Battles of Narvik",
-    "date": "1940-04-09",
-    "endDate": "1940-06-08",
-    "sides": {
-      "allied": [
-        "norway",
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
-    },
-    "lat": 68.420555555,
-    "lng": 17.56,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battles of Narvik were fought from 9 April to 8 June 1940, as a naval battle in Ofotfjord and as a land battle in the mountains surrounding the north Norwegian town of Narvik, as part of the Norwegian campaign of the Second World War.",
-    "links": [
-      {
-        "label": "Wikipedia: Battles of Narvik",
-        "url": "https://en.wikipedia.org/wiki/Battles_of_Narvik"
-      }
+    ],
+    "divisionIds": [
+      "181st-infantry-division",
+      "1st-parachute-division",
+      "69th-infantry-division-wehrmacht",
+      "68th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -3880,6 +3906,30 @@
     ]
   },
   {
+    "id": "battle-of-rotterdam",
+    "qid": "Q3532325",
+    "title": "Battle of Rotterdam",
+    "date": "1940-05-10",
+    "endDate": "1940-05-14",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 51.93083333,
+    "lng": 4.47916667,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Rotterdam was a Second World War battle fought during the Battle of the Netherlands. Fought between 10 and 14 May 1940, it was a German attempt to seize the Dutch city. It ended in a German victory, following the Rotterdam Blitz.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Rotterdam",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Rotterdam"
+      }
+    ]
+  },
+  {
     "id": "battle-for-the-hague",
     "qid": "Q1891631",
     "title": "Battle for The Hague",
@@ -3901,30 +3951,6 @@
       {
         "label": "Wikipedia: Battle for The Hague",
         "url": "https://en.wikipedia.org/wiki/Battle_of_the_Hague_(1940)"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-rotterdam",
-    "qid": "Q3532325",
-    "title": "Battle of Rotterdam",
-    "date": "1940-05-10",
-    "endDate": "1940-05-14",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 51.93083333,
-    "lng": 4.47916667,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Rotterdam was a Second World War battle fought during the Battle of the Netherlands. Fought between 10 and 14 May 1940, it was a German attempt to seize the Dutch city. It ended in a German victory, following the Rotterdam Blitz.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Rotterdam",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Rotterdam"
       }
     ]
   },
@@ -3952,7 +3978,7 @@
     "title": "Battle of Maastricht",
     "date": "1940-05-10",
     "lat": 50.85,
-    "lng": 5.683333333,
+    "lng": 5.6833,
     "category": "battle",
     "theater": "europe",
     "article": "The Battle of Maastricht was one of the first battles that took place during the German Campaign on the Western Front during World War II. Maastricht was a key city in order to capture the Belgian Fort Eben-Emael and split the allied armies in half.",
@@ -4097,8 +4123,8 @@
     "qid": "Q2889367",
     "title": "Battle of Montcornet",
     "date": "1940-05-17",
-    "lat": 49.696389,
-    "lng": 4.018056,
+    "lat": 49.696388888,
+    "lng": 4.018055555,
     "category": "battle",
     "theater": "europe",
     "article": "The Battle of Montcornet, on 17 May 1940 took place during the Battle of France. The French 4e Division cuirassée, attacked the German-held village of Montcornet with over 200 tanks. The French drove off the Germans but later had to retreat due to lack of support and the intervention of the Luftwaffe.",
@@ -4374,6 +4400,9 @@
         "label": "Wikipedia: Mediterranean and Middle East Theater of World War II",
         "url": "https://en.wikipedia.org/wiki/Mediterranean_and_Middle_East_theatre_of_World_War_II"
       }
+    ],
+    "divisionIds": [
+      "297th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -5052,6 +5081,23 @@
     ]
   },
   {
+    "id": "prebilovci-massacre",
+    "qid": "Q7239373",
+    "title": "Prebilovci massacre",
+    "date": "1941-01-01",
+    "lat": 43.0945,
+    "lng": 17.7549,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Prebilovci massacre was an atrocity and war crime perpetrated by the Croatian Ustaše in the Independent State of Croatia during the World War II genocide of Serbs. On 6 August 1941, the Ustaše killed around 600 women and children from the village of Prebilovci, Herzegovina, by throwing them into the Golubinka pit, near Šurmanci.",
+    "links": [
+      {
+        "label": "Wikipedia: Prebilovci massacre",
+        "url": "https://en.wikipedia.org/wiki/Prebilovci_massacre"
+      }
+    ]
+  },
+  {
     "id": "1941-biaystok-massacres",
     "qid": "Q122741015",
     "title": "1941 Białystok massacres",
@@ -5191,8 +5237,8 @@
       ],
       "axis": []
     },
-    "lat": 15.548611,
-    "lng": 37.886667,
+    "lat": 15.548611111,
+    "lng": 37.886666666,
     "category": "battle",
     "theater": "africa",
     "article": "The Battle of Agordat was fought near Agordat in Eritrea from 26 to 31 January 1941, by the Italian army and Royal Corps of Colonial Troops against British, Commonwealth and Indian forces, during the East African Campaign of the Second World War. The British had the advantage of breaking Italian codes and cyphers before the offensive and received copious amounts of information from Italian sources on the order of battle and plans of the Regia Aeronautica and the Italian army.",
@@ -5494,8 +5540,8 @@
     "qid": "Q472100",
     "title": "Bombing of Belgrade in 1941",
     "date": "1941-04-06",
-    "lat": 44.816667,
-    "lng": 20.466667,
+    "lat": 44.817777777,
+    "lng": 20.456944444,
     "category": "battle",
     "theater": "europe",
     "article": "Operation Retribution or Operation Punishment was the April 1941 German bombing of Belgrade, the capital of Yugoslavia, in retaliation for the coup d'état that overthrew the government that had signed the Tripartite Pact. The bombing occurred in the first days of the German-led Axis invasion of Yugoslavia during World War II. The Royal Yugoslav Army Air Force (VVKJ) had only 77 modern fighter aircraft available to defend Belgrade against the hundreds of German fighters and bombers that struck in the first wave early on 6 April. Three days prior, VVKJ Major Vladimir Kren had defected to the Germans, disclosing the locations of multiple military assets and divulging the VVKJ's codes.",
@@ -5804,6 +5850,9 @@
         "label": "Wikipedia: Battle of Crete",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Crete"
       }
+    ],
+    "divisionIds": [
+      "1st-parachute-division"
     ]
   },
   {
@@ -6141,6 +6190,9 @@
         "label": "Wikipedia: Battle of Brody",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Brody_(1941)"
       }
+    ],
+    "divisionIds": [
+      "75th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -6324,6 +6376,10 @@
         "label": "Wikipedia: Battle of Smolensk",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Smolensk_(1941)"
       }
+    ],
+    "divisionIds": [
+      "197th-infantry-division-wehrmacht",
+      "3rd-panzer-division"
     ]
   },
   {
@@ -6342,6 +6398,9 @@
         "label": "Wikipedia: Battle of Uman",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Uman"
       }
+    ],
+    "divisionIds": [
+      "297th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -6429,6 +6488,11 @@
         "label": "Wikipedia: Battle of Kiev",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Kiev_(1941)"
       }
+    ],
+    "divisionIds": [
+      "297th-infantry-division-wehrmacht",
+      "3rd-panzer-division",
+      "75th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -6561,6 +6625,9 @@
         "label": "Wikipedia: Siege of Leningrad",
         "url": "https://en.wikipedia.org/wiki/Siege_of_Leningrad"
       }
+    ],
+    "divisionIds": [
+      "1st-panzer-division"
     ]
   },
   {
@@ -6631,6 +6698,13 @@
         "label": "Wikipedia: Battle of Moscow",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Moscow"
       }
+    ],
+    "divisionIds": [
+      "15th-infantry-division",
+      "1st-panzer-division",
+      "197th-infantry-division-wehrmacht",
+      "3rd-panzer-division",
+      "6th-infantry-division"
     ]
   },
   {
@@ -6784,6 +6858,9 @@
         "label": "Wikipedia: Siege of Sevastopol",
         "url": "https://en.wikipedia.org/wiki/Siege_of_Sevastopol_(1941%E2%80%931942)"
       }
+    ],
+    "divisionIds": [
+      "72nd-infantry-division-wehrmacht"
     ]
   },
   {
@@ -6877,6 +6954,9 @@
         "label": "Wikipedia: Tikhvin offensive",
         "url": "https://en.wikipedia.org/wiki/Tikhvin_Offensive"
       }
+    ],
+    "divisionIds": [
+      "250th-infantry-division"
     ]
   },
   {
@@ -6892,7 +6972,7 @@
       "axis": []
     },
     "lat": 12.6,
-    "lng": 37.466667,
+    "lng": 37.466666666,
     "category": "battle",
     "theater": "africa",
     "article": "The Battle of Gondar or Capture of Gondar was the last stand of the Italian forces in Italian East Africa during the Second World War. The battle took place in November 1941, during the East African Campaign. Gondar was the main town of Amhara in the mountains north of Lake Tana in Ethiopia, at an elevation of 7,000 ft (2,100 m) and had an Italian garrison of 40,000 men, commanded by Generale Guglielmo Nasi.",
@@ -7017,6 +7097,24 @@
     ]
   },
   {
+    "id": "philippines-campaign",
+    "qid": "Q696462",
+    "title": "Philippines Campaign",
+    "date": "1941-12-07",
+    "endDate": "1942-05-10",
+    "lat": 15,
+    "lng": 121,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Philippines campaign, also known as the Battle of the Philippines or the Fall of the Philippines, was the invasion of the Philippines by the Empire of Japan during the Pacific War and World War II. The operation to capture the islands, which was defended by the U.S. and Philippine Armies, was intended to prevent interference with Japan's expansion in Southeast Asia.",
+    "links": [
+      {
+        "label": "Wikipedia: Philippines Campaign",
+        "url": "https://en.wikipedia.org/wiki/Philippines_campaign_(1941%E2%80%931942)"
+      }
+    ]
+  },
+  {
     "id": "attack-on-pearl-harbor",
     "qid": "Q52418",
     "title": "Attack on Pearl Harbor",
@@ -7038,24 +7136,6 @@
       {
         "label": "Wikipedia: Attack on Pearl Harbor",
         "url": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor"
-      }
-    ]
-  },
-  {
-    "id": "philippines-campaign",
-    "qid": "Q696462",
-    "title": "Philippines Campaign",
-    "date": "1941-12-07",
-    "endDate": "1942-05-10",
-    "lat": 15,
-    "lng": 121,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Philippines campaign, also known as the Battle of the Philippines or the Fall of the Philippines, was the invasion of the Philippines by the Empire of Japan during the Pacific War and World War II. The operation to capture the islands, which was defended by the U.S. and Philippine Armies, was intended to prevent interference with Japan's expansion in Southeast Asia.",
-    "links": [
-      {
-        "label": "Wikipedia: Philippines Campaign",
-        "url": "https://en.wikipedia.org/wiki/Philippines_campaign_(1941%E2%80%931942)"
       }
     ]
   },
@@ -7359,6 +7439,24 @@
     ]
   },
   {
+    "id": "japanese-occupation-of-hong-kong",
+    "qid": "Q701967",
+    "title": "Japanese occupation of Hong Kong",
+    "date": "1941-12-25",
+    "endDate": "1945-08-30",
+    "lat": 22.283333333,
+    "lng": 114.166666666,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Japanese occupation of Hong Kong began when the governor of Hong Kong, Mark Aitchison Young, surrendered the British Crown colony of Hong Kong to the Empire of Japan on 25 December 1941. His surrender occurred after 18 days of fierce fighting against the Japanese forces that invaded the territory. The occupation lasted for three years and eight months until Japan surrendered at the end of the Second World War. The length of the period later became a metonym of the occupation.",
+    "links": [
+      {
+        "label": "Wikipedia: Japanese occupation of Hong Kong",
+        "url": "https://en.wikipedia.org/wiki/Japanese_occupation_of_Hong_Kong"
+      }
+    ]
+  },
+  {
     "id": "battle-of-the-kerch-peninsula",
     "qid": "Q119625147",
     "title": "Battle of the Kerch Peninsula",
@@ -7520,6 +7618,9 @@
         "label": "Wikipedia: Demyansk Pocket",
         "url": "https://en.wikipedia.org/wiki/Demyansk_Pocket"
       }
+    ],
+    "divisionIds": [
+      "371st-infantry-division-wehrmacht"
     ]
   },
   {
@@ -8599,6 +8700,11 @@
         "label": "Wikipedia: Second Battle of Kharkov",
         "url": "https://en.wikipedia.org/wiki/Second_Battle_of_Kharkov"
       }
+    ],
+    "divisionIds": [
+      "376th-infantry-division-wehrmacht",
+      "384th-infantry-division-wehrmacht",
+      "389th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -8616,30 +8722,6 @@
       {
         "label": "Wikipedia: Defense of the Adzhimushkay quarry",
         "url": "https://en.wikipedia.org/wiki/Defense_of_the_Adzhimushkay_quarry"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-gazala",
-    "qid": "Q327035",
-    "title": "Battle of Gazala",
-    "date": "1942-05-26",
-    "endDate": "1942-06-21",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 31.95,
-    "lng": 23.45,
-    "category": "battle",
-    "theater": "africa",
-    "article": "The Battle of Gazala, also the Gazala Offensive was fought near the village of Gazala during the Western Desert Campaign of the Second World War, west of the port of Tobruk in Libya, from 26 May to 21 June 1942. Axis troops consisting of German and Italian units fought the British Eighth Army composed mainly of British Commonwealth, Indian and Free French troops.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Gazala",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Gazala"
       }
     ]
   },
@@ -8667,6 +8749,30 @@
       {
         "label": "Wikipedia: Battle of Bir Hakeim",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Bir_Hakeim"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-gazala",
+    "qid": "Q327035",
+    "title": "Battle of Gazala",
+    "date": "1942-05-26",
+    "endDate": "1942-06-21",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 31.95,
+    "lng": 23.45,
+    "category": "battle",
+    "theater": "africa",
+    "article": "The Battle of Gazala, also the Gazala Offensive was fought near the village of Gazala during the Western Desert Campaign of the Second World War, west of the port of Tobruk in Libya, from 26 May to 21 June 1942. Axis troops consisting of German and Italian units fought the British Eighth Army composed mainly of British Commonwealth, Indian and Free French troops.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Gazala",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Gazala"
       }
     ]
   },
@@ -8718,6 +8824,11 @@
         "label": "Wikipedia: Case Blue",
         "url": "https://en.wikipedia.org/wiki/Case_Blue"
       }
+    ],
+    "divisionIds": [
+      "389th-infantry-division-wehrmacht",
+      "444th-security-division",
+      "75th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -8813,6 +8924,50 @@
     ]
   },
   {
+    "id": "japanese-occupation-of-kiska",
+    "qid": "Q1758518",
+    "title": "Japanese occupation of Kiska",
+    "date": "1942-06-06",
+    "endDate": "1943-07-28",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": [
+        "japan"
+      ]
+    },
+    "lat": 51.973,
+    "lng": 177.495,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Japanese occupation of Kiska took place between 6 June 1942 and 28 July 1943 during the Aleutian Islands campaign of the American Theater and the Pacific Theater of World War II. The Japanese occupied Kiska and nearby Attu Island in order to protect the northern flank of the Japanese Empire.",
+    "links": [
+      {
+        "label": "Wikipedia: Japanese occupation of Kiska",
+        "url": "https://en.wikipedia.org/wiki/Japanese_occupation_of_Kiska"
+      }
+    ]
+  },
+  {
+    "id": "japanese-occupation-of-attu",
+    "qid": "Q6158901",
+    "title": "Japanese occupation of Attu",
+    "date": "1942-06-06",
+    "endDate": "1943-05-30",
+    "lat": 52.9241,
+    "lng": 173.1568,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Japanese occupation of Attu was the result of an invasion of the Aleutian Islands in Alaska during World War II. Imperial Japanese Army troops landed on 7 June 1942, the day after the invasion of nearby Kiska. Along with the Kiska landing, it was the first time that the continental United States was invaded and occupied by a foreign power since the War of 1812. The occupation ended with the Allied victory in the Battle of Attu on 30 May 1943.",
+    "links": [
+      {
+        "label": "Wikipedia: Japanese occupation of Attu",
+        "url": "https://en.wikipedia.org/wiki/Japanese_occupation_of_Attu"
+      }
+    ]
+  },
+  {
     "id": "kozara-offensive",
     "qid": "Q2985697",
     "title": "Kozara Offensive",
@@ -8828,6 +8983,9 @@
         "label": "Wikipedia: Kozara Offensive",
         "url": "https://en.wikipedia.org/wiki/Kozara_Offensive"
       }
+    ],
+    "divisionIds": [
+      "114th-jger-division"
     ]
   },
   {
@@ -9055,30 +9213,6 @@
     ]
   },
   {
-    "id": "battle-of-tulagi-and-gavututanambogo",
-    "qid": "Q1497996",
-    "title": "Battle of Tulagi and Gavutu–Tanambogo",
-    "date": "1942-08-07",
-    "endDate": "1942-08-09",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": []
-    },
-    "lat": -9.10722,
-    "lng": 160.14889,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Tulagi and Gavutu–Tanambogo was a land battle of the Pacific campaign of World War II, between the forces of the Imperial Japanese Navy and Allied ground forces. It took place 7–9 August 1942 on the Solomon Islands, during the initial Allied landings in the Guadalcanal campaign.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Tulagi and Gavutu–Tanambogo",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Tulagi_and_Gavutu%E2%80%93Tanambogo"
-      }
-    ]
-  },
-  {
     "id": "guadalcanal-campaign",
     "qid": "Q217145",
     "title": "Guadalcanal campaign",
@@ -9101,6 +9235,30 @@
       {
         "label": "Wikipedia: Guadalcanal campaign",
         "url": "https://en.wikipedia.org/wiki/Guadalcanal_campaign"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-tulagi-and-gavututanambogo",
+    "qid": "Q1497996",
+    "title": "Battle of Tulagi and Gavutu–Tanambogo",
+    "date": "1942-08-07",
+    "endDate": "1942-08-09",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": -9.10722,
+    "lng": 160.14889,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Battle of Tulagi and Gavutu–Tanambogo was a land battle of the Pacific campaign of World War II, between the forces of the Imperial Japanese Navy and Allied ground forces. It took place 7–9 August 1942 on the Solomon Islands, during the initial Allied landings in the Guadalcanal campaign.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Tulagi and Gavutu–Tanambogo",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Tulagi_and_Gavutu%E2%80%93Tanambogo"
       }
     ]
   },
@@ -9197,6 +9355,12 @@
         "label": "Wikipedia: Battle of Stalingrad",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Stalingrad"
       }
+    ],
+    "divisionIds": [
+      "100th-light-infantry-division",
+      "371st-infantry-division-wehrmacht",
+      "376th-infantry-division-wehrmacht",
+      "384th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -9482,6 +9646,30 @@
     ]
   },
   {
+    "id": "second-battle-of-el-alamein",
+    "qid": "Q153376",
+    "title": "Second Battle of El Alamein",
+    "date": "1942-10-23",
+    "endDate": "1942-11-11",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 30.841388888,
+    "lng": 28.943055555,
+    "category": "battle",
+    "theater": "africa",
+    "article": "The Second Battle of El Alamein was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein. The First Battle of El Alamein and the Battle of Alam el Halfa had prevented the Axis from advancing further into Egypt.",
+    "links": [
+      {
+        "label": "Wikipedia: Second Battle of El Alamein",
+        "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
+      }
+    ]
+  },
+  {
     "id": "battle-for-henderson-field",
     "qid": "Q2277035",
     "title": "Battle for Henderson Field",
@@ -9502,30 +9690,6 @@
       {
         "label": "Wikipedia: Battle for Henderson Field",
         "url": "https://en.wikipedia.org/wiki/Battle_for_Henderson_Field"
-      }
-    ]
-  },
-  {
-    "id": "second-battle-of-el-alamein",
-    "qid": "Q153376",
-    "title": "Second Battle of El Alamein",
-    "date": "1942-10-23",
-    "endDate": "1942-11-11",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 30.841388888,
-    "lng": 28.942777777,
-    "category": "battle",
-    "theater": "africa",
-    "article": "The Second Battle of El Alamein was a battle of the Second World War that took place near the Egyptian railway halt of El Alamein. The First Battle of El Alamein and the Battle of Alam el Halfa had prevented the Axis from advancing further into Egypt.",
-    "links": [
-      {
-        "label": "Wikipedia: Second Battle of El Alamein",
-        "url": "https://en.wikipedia.org/wiki/Second_Battle_of_El_Alamein"
       }
     ]
   },
@@ -10148,6 +10312,10 @@
         "label": "Wikipedia: Battle of Krasny Bor",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Krasny_Bor"
       }
+    ],
+    "divisionIds": [
+      "250th-infantry-division",
+      "4th-ss-polizei-division"
     ]
   },
   {
@@ -10196,24 +10364,6 @@
     ]
   },
   {
-    "id": "third-battle-of-kharkov",
-    "qid": "Q157873",
-    "title": "Third Battle of Kharkov",
-    "date": "1943-02-19",
-    "endDate": "1943-03-15",
-    "lat": 49.966666666,
-    "lng": 36.316666666,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Third Battle of Kharkov was a series of battles on the Eastern Front of World War II, undertaken by Nazi Germany's Army Group South against the Soviet Red Army, around the city of Kharkov from 19 February to 15 March 1943. Known to the German side as the Donets Campaign and in the Soviet Union as the Donbass and Kharkov operations, the German counterstrike led to the recapture of the cities of Kharkov and Belgorod.",
-    "links": [
-      {
-        "label": "Wikipedia: Third Battle of Kharkov",
-        "url": "https://en.wikipedia.org/wiki/Third_Battle_of_Kharkov"
-      }
-    ]
-  },
-  {
     "id": "battle-of-kasserine-passe",
     "qid": "Q327099",
     "title": "Battle of Kasserine Passe",
@@ -10235,6 +10385,24 @@
       {
         "label": "Wikipedia: Battle of Kasserine Passe",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Kasserine_Pass"
+      }
+    ]
+  },
+  {
+    "id": "third-battle-of-kharkov",
+    "qid": "Q157873",
+    "title": "Third Battle of Kharkov",
+    "date": "1943-02-19",
+    "endDate": "1943-03-15",
+    "lat": 49.966666666,
+    "lng": 36.316666666,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Third Battle of Kharkov was a series of battles on the Eastern Front of World War II, undertaken by Nazi Germany's Army Group South against the Soviet Red Army, around the city of Kharkov from 19 February to 15 March 1943. Known to the German side as the Donets Campaign and in the Soviet Union as the Donbass and Kharkov operations, the German counterstrike led to the recapture of the cities of Kharkov and Belgorod.",
+    "links": [
+      {
+        "label": "Wikipedia: Third Battle of Kharkov",
+        "url": "https://en.wikipedia.org/wiki/Third_Battle_of_Kharkov"
       }
     ]
   },
@@ -10448,23 +10616,6 @@
     ]
   },
   {
-    "id": "battle-of-mubo",
-    "qid": "Q22115503",
-    "title": "Battle of Mubo",
-    "date": "1943-04-22",
-    "lat": -5.5,
-    "lng": 141,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Mubo was a series of actions in the Mubo area of the Territory of New Guinea between Australian and Japanese forces which took place between 22 April and 14 July 1943, during World War II. The battle formed part of the wider Salamaua–Lae campaign, and was fought in the early stages of the campaign. The battle followed the successful defence of the airfield around Wau by the Australians in late January 1943, after the Japanese had attempted to infiltrate the Australian positions with two infantry battalions.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Mubo",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Mubo"
-      }
-    ]
-  },
-  {
     "id": "battle-of-longstop-hill",
     "qid": "Q16165490",
     "title": "Battle of Longstop Hill",
@@ -10479,6 +10630,23 @@
       {
         "label": "Wikipedia: Battle of Longstop Hill",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Longstop_Hill"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-mubo",
+    "qid": "Q22115503",
+    "title": "Battle of Mubo",
+    "date": "1943-04-22",
+    "lat": -5.5,
+    "lng": 141,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Battle of Mubo was a series of actions in the Mubo area of the Territory of New Guinea between Australian and Japanese forces which took place between 22 April and 14 July 1943, during World War II. The battle formed part of the wider Salamaua–Lae campaign, and was fought in the early stages of the campaign. The battle followed the successful defence of the airfield around Wau by the Australians in late January 1943, after the Japanese had attempted to infiltrate the Australian positions with two infantry battalions.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Mubo",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Mubo"
       }
     ]
   },
@@ -10646,12 +10814,16 @@
     "lng": 18.687777777,
     "category": "battle",
     "theater": "europe",
-    "article": "Case Black, also known as the Fifth Enemy Offensive in Yugoslav historiography and often identified with its final phase, the Battle of the Sutjeska, was a joint attack by the Axis. Taking place from 15 May to 16 June 1943, it aimed to destroy the main Yugoslav Partisan force, near the Sutjeska River in south-eastern Bosnia. The failure of the offensive marked a turning point for Yugoslavia during World War II. It was also the last major German-Italian joint operation against the partisans.",
+    "article": "Operation Schwarz, also known as the Fifth Enemy Offensive in Yugoslav historiography and often identified with its final phase, the Battle of the Sutjeska was a joint attack by the Axis. Taking place from 15 May to 16 June 1943, it aimed to destroy the main Yugoslav Partisan force, near the Sutjeska River in south-eastern Bosnia. The failure of the offensive marked a turning point for Yugoslavia during World War II. It was also the last big German–Italian joint operation against the partisans.",
     "links": [
       {
         "label": "Wikipedia: Battle of the Sutjeska",
-        "url": "https://en.wikipedia.org/wiki/Case_Black"
+        "url": "https://en.wikipedia.org/wiki/Operation_Schwarz"
       }
+    ],
+    "divisionIds": [
+      "118th-jger-division",
+      "369th-croatian-infantry-division-wehrmacht"
     ]
   },
   {
@@ -10871,6 +11043,11 @@
         "label": "Wikipedia: Battle of Kursk",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Kursk"
       }
+    ],
+    "divisionIds": [
+      "3rd-panzer-division",
+      "6th-infantry-division",
+      "78th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -10920,6 +11097,9 @@
         "label": "Wikipedia: Allied invasion of Sicily",
         "url": "https://en.wikipedia.org/wiki/Allied_invasion_of_Sicily"
       }
+    ],
+    "divisionIds": [
+      "1st-parachute-division"
     ]
   },
   {
@@ -11678,8 +11858,8 @@
     "title": "Battle of Turjak Castle",
     "date": "1943-09-14",
     "endDate": "1943-09-19",
-    "lat": 45.876998267,
-    "lng": 14.607284036,
+    "lat": 45.8767,
+    "lng": 14.6079,
     "category": "battle",
     "theater": "europe",
     "article": "The siege of Turjak or Battle of Turjak was fought between 14 and 19 September 1943 at the Turjak Castle between the Slovene Partisans and the combined forces of Slovene former units of the Anti-Communist Volunteer Militia (MVAC) and Slovene Chetniks. The battle followed the Partisan victory at Battle of Grčarice. Partisans encircled the Turjak castle on 14 September and laid siege to the castle after the defenders refused to surrender. The siege ended on 19 September with a Partisan victory, in part due to the heavy weapons that they had acquired from Italian forces.",
@@ -12612,6 +12792,10 @@
         "label": "Wikipedia: Battle of Nevel",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Nevel_(1943)"
       }
+    ],
+    "divisionIds": [
+      "69th-infantry-division-wehrmacht",
+      "68th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -12835,6 +13019,9 @@
         "label": "Wikipedia: Battle of Monte Cassino",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Monte_Cassino"
       }
+    ],
+    "divisionIds": [
+      "1st-parachute-division"
     ]
   },
   {
@@ -12860,6 +13047,9 @@
         "label": "Wikipedia: Battle of Anzio",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Anzio"
       }
+    ],
+    "divisionIds": [
+      "1st-parachute-division"
     ]
   },
   {
@@ -12903,6 +13093,9 @@
         "label": "Wikipedia: Battle of the Korsun–Cherkassy Pocket",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Korsun%E2%80%93Cherkassy"
       }
+    ],
+    "divisionIds": [
+      "389th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -13458,8 +13651,8 @@
         "japan"
       ]
     },
-    "lat": 25.667645,
-    "lng": 94.103175,
+    "lat": 25.668,
+    "lng": 94.103,
     "category": "battle",
     "theater": "asia",
     "article": "The Battle of Kohima was the turning point of the Japanese U-Go offensive into British India in 1944 during the Second World War. It took place in three stages from 4 April to 22 June 1944 around the town of Kohima, now the capital city of the state of Nagaland in Northeast India. From 3 to 16 April, the Japanese attempted to capture Kohima ridge, a feature which dominated the road by which the besieged British and Indian troops of IV Corps at Imphal were supplied. By mid-April, the small British and British Indian force at Kohima was relieved.",
@@ -13642,24 +13835,6 @@
     ]
   },
   {
-    "id": "siege-of-myitkyina",
-    "qid": "Q19840798",
-    "title": "Siege of Myitkyina",
-    "date": "1944-05-17",
-    "endDate": "1944-08-03",
-    "lat": 25.386666666,
-    "lng": 97.393611111,
-    "category": "battle",
-    "theater": "asia",
-    "article": "The siege of Myitkyina was an engagement during the Burma campaign of World War II. The Allied victory was part of the larger Battle of Northern Burma and Western Yunnan which succeeded in opening the Ledo Road.",
-    "links": [
-      {
-        "label": "Wikipedia: Siege of Myitkyina",
-        "url": "https://en.wikipedia.org/wiki/Siege_of_Myitkyina"
-      }
-    ]
-  },
-  {
     "id": "battle-of-mont-mouchet",
     "qid": "Q2890796",
     "title": "Battle of Mont Mouchet",
@@ -13789,6 +13964,9 @@
         "label": "Wikipedia: Battle for Caen",
         "url": "https://en.wikipedia.org/wiki/Battle_for_Caen"
       }
+    ],
+    "divisionIds": [
+      "711th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -14058,29 +14236,6 @@
     ]
   },
   {
-    "id": "battle-of-brville",
-    "qid": "Q4870580",
-    "title": "Battle of Bréville",
-    "date": "1944-06-13",
-    "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": []
-    },
-    "lat": 49.24029722,
-    "lng": 0.22616389,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Bréville was fought by the British 6th Airborne Division and the German 346th Infantry Division, between 8 and 13 June 1944, during the early phases of the invasion of Normandy in the Second World War.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Bréville",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Br%C3%A9ville"
-      }
-    ]
-  },
-  {
     "id": "battle-of-villers-bocage",
     "qid": "Q700710",
     "title": "Battle of Villers-Bocage",
@@ -14100,6 +14255,29 @@
       {
         "label": "Wikipedia: Battle of Villers-Bocage",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Villers-Bocage"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-brville",
+    "qid": "Q4870580",
+    "title": "Battle of Bréville",
+    "date": "1944-06-13",
+    "sides": {
+      "allied": [
+        "uk"
+      ],
+      "axis": []
+    },
+    "lat": 49.24029722,
+    "lng": 0.22616389,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Bréville was fought by the British 6th Airborne Division and the German 346th Infantry Division, between 8 and 13 June 1944, during the early phases of the invasion of Normandy in the Second World War.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Bréville",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Br%C3%A9ville"
       }
     ]
   },
@@ -14365,6 +14543,9 @@
         "label": "Wikipedia: Vitebsk–Orsha Offensive",
         "url": "https://en.wikipedia.org/wiki/Vitebsk%E2%80%93Orsha_offensive"
       }
+    ],
+    "divisionIds": [
+      "197th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -14759,29 +14940,6 @@
     ]
   },
   {
-    "id": "battle-of-saint-l",
-    "qid": "Q2237217",
-    "title": "Battle of Saint-Lô",
-    "date": "1944-07-24",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": []
-    },
-    "lat": 49.12,
-    "lng": -1.09,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of Saint-Lô was one of the three conflicts in the battle of the hedgerows which took place between July 7 and 19, 1944, in Saint-Lô, Manche, Normandy, France, just before Operation Cobra. Saint-Lô had fallen to Germany in 1940, and, after the Invasion of Normandy, the Americans targeted the city, as it served as a strategic crossroads. American bombardment caused heavy damage and a high number of casualties, which resulted in the martyr city being called \"The Capital of Ruins\", popularized in a report by Samuel Beckett.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Saint-Lô",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Saint-L%C3%B4"
-      }
-    ]
-  },
-  {
     "id": "battle-of-tinian",
     "qid": "Q176915",
     "title": "Battle of Tinian",
@@ -14802,6 +14960,29 @@
       {
         "label": "Wikipedia: Battle of Tinian",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Tinian"
+      }
+    ]
+  },
+  {
+    "id": "battle-of-saint-l",
+    "qid": "Q2237217",
+    "title": "Battle of Saint-Lô",
+    "date": "1944-07-24",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": []
+    },
+    "lat": 49.12,
+    "lng": -1.09,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of Saint-Lô was one of the three conflicts in the battle of the hedgerows which took place between July 7 and 19, 1944, in Saint-Lô, Manche, Normandy, France, just before Operation Cobra. Saint-Lô had fallen to Germany in 1940, and, after the Invasion of Normandy, the Americans targeted the city, as it served as a strategic crossroads. American bombardment caused heavy damage and a high number of casualties, which resulted in the martyr city being called \"The Capital of Ruins\", popularized in a report by Samuel Beckett.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Saint-Lô",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Saint-L%C3%B4"
       }
     ]
   },
@@ -14884,7 +15065,9 @@
     "date": "1944-08-01",
     "endDate": "1944-10-02",
     "sides": {
-      "allied": [],
+      "allied": [
+        "poland"
+      ],
       "axis": [
         "germany"
       ]
@@ -15523,6 +15706,9 @@
         "label": "Wikipedia: Battle of the Dukla Pass",
         "url": "https://en.wikipedia.org/wiki/Battle_of_the_Dukla_Pass"
       }
+    ],
+    "divisionIds": [
+      "75th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -15590,8 +15776,8 @@
       ],
       "axis": []
     },
-    "lat": 37.223056,
-    "lng": 21.953889,
+    "lat": 37.223055555,
+    "lng": 21.953888888,
     "category": "battle",
     "theater": "europe",
     "article": "The Battle of Meligalas took place during the Axis occupation of Greece in Meligalas in southwestern Greece on 13–15 September 1944. Greek Resistance forces of the Greek People's Liberation Army (ELAS) defeated a Security Battalion garrison loyal to the collaborationist government.",
@@ -15635,6 +15821,35 @@
       {
         "label": "Wikipedia: Riga Offensive",
         "url": "https://en.wikipedia.org/wiki/Riga_offensive_(1944)"
+      }
+    ],
+    "divisionIds": [
+      "389th-infantry-division-wehrmacht"
+    ]
+  },
+  {
+    "id": "battle-of-peleliu",
+    "qid": "Q609030",
+    "title": "Battle of Peleliu",
+    "date": "1944-09-15",
+    "endDate": "1944-11-25",
+    "sides": {
+      "allied": [
+        "usa"
+      ],
+      "axis": [
+        "japan"
+      ]
+    },
+    "lat": 7.01666667,
+    "lng": 134.25,
+    "category": "battle",
+    "theater": "pacific",
+    "article": "The Battle of Peleliu, codenamed Operation Stalemate II by the US military, was fought between the United States and Japan during the Mariana and Palau Islands campaign of World War II, from 15 September to 27 November 1944, on the island of Peleliu.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of Peleliu",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_Peleliu"
       }
     ]
   },
@@ -15683,32 +15898,6 @@
       {
         "label": "Wikipedia: Battle of Morotai",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Morotai"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-peleliu",
-    "qid": "Q609030",
-    "title": "Battle of Peleliu",
-    "date": "1944-09-15",
-    "endDate": "1944-11-25",
-    "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "japan"
-      ]
-    },
-    "lat": 7.01666667,
-    "lng": 134.25,
-    "category": "battle",
-    "theater": "pacific",
-    "article": "The Battle of Peleliu, codenamed Operation Stalemate II by the US military, was fought between the United States and Japan during the Mariana and Palau Islands campaign of World War II, from 15 September to 27 November 1944, on the island of Peleliu.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of Peleliu",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_Peleliu"
       }
     ]
   },
@@ -15903,6 +16092,24 @@
     ]
   },
   {
+    "id": "battle-of-the-nijmegen-salient",
+    "qid": "Q107751208",
+    "title": "Battle of the Nijmegen Salient",
+    "date": "1944-09-30",
+    "endDate": "1944-10-08",
+    "lat": 51.916666666,
+    "lng": 5.85,
+    "category": "battle",
+    "theater": "europe",
+    "article": "The Battle of the Nijmegen salient or the Defence of the Nijmegen bridgehead was a series of engagements that took place in the Netherlands during World War II between 30 September and 8 October 1944. The battle occurred in the aftermath of Operation Market Garden, a failed attempt by the Allies to cut off German forces in the Netherlands and end the war quickly.",
+    "links": [
+      {
+        "label": "Wikipedia: Battle of the Nijmegen Salient",
+        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nijmegen_salient"
+      }
+    ]
+  },
+  {
     "id": "battle-of-overloon",
     "qid": "Q1332237",
     "title": "Battle of Overloon",
@@ -15923,24 +16130,6 @@
       {
         "label": "Wikipedia: Battle of Overloon",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Overloon"
-      }
-    ]
-  },
-  {
-    "id": "battle-of-the-nijmegen-salient",
-    "qid": "Q107751208",
-    "title": "Battle of the Nijmegen Salient",
-    "date": "1944-09-30",
-    "endDate": "1944-10-08",
-    "lat": 51.916666666,
-    "lng": 5.85,
-    "category": "battle",
-    "theater": "europe",
-    "article": "The Battle of the Nijmegen salient or the Defence of the Nijmegen bridgehead was a series of engagements that took place in the Netherlands during World War II between 30 September and 8 October 1944. The battle occurred in the aftermath of Operation Market Garden, a failed attempt by the Allies to cut off German forces in the Netherlands and end the war quickly.",
-    "links": [
-      {
-        "label": "Wikipedia: Battle of the Nijmegen Salient",
-        "url": "https://en.wikipedia.org/wiki/Battle_of_the_Nijmegen_salient"
       }
     ]
   },
@@ -16036,6 +16225,20 @@
         "label": "Wikipedia: Battle of Hürtgen Forest",
         "url": "https://en.wikipedia.org/wiki/Battle_of_H%C3%BCrtgen_Forest"
       }
+    ],
+    "divisionIds": [
+      "116th-panzer-division",
+      "12th-infantry-division",
+      "246th-infantry-division",
+      "275th-infantry-division-wehrmacht",
+      "272nd-volksgrenadier-division",
+      "3rd-infantry-division",
+      "3rd-parachute-division",
+      "344th-infantry-division-wehrmacht",
+      "353rd-infantry-division-wehrmacht",
+      "47th-volksgrenadier-division",
+      "347th-infantry-division-wehrmacht",
+      "89th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -16062,6 +16265,9 @@
         "label": "Wikipedia: Petsamo–Kirkenes Offensive",
         "url": "https://en.wikipedia.org/wiki/Petsamo%E2%80%93Kirkenes_offensive"
       }
+    ],
+    "divisionIds": [
+      "210th-coastal-defense-division-wehrmacht"
     ]
   },
   {
@@ -16324,6 +16530,9 @@
         "label": "Wikipedia: Colmar Pocket",
         "url": "https://en.wikipedia.org/wiki/Colmar_Pocket"
       }
+    ],
+    "divisionIds": [
+      "159th-infantry-division-wehrmacht"
     ]
   },
   {
@@ -16348,8 +16557,8 @@
     "qid": "Q15896585",
     "title": "Battle of Kilkis",
     "date": "1944-11-04",
-    "lat": 40.983333,
-    "lng": 22.866667,
+    "lat": 40.983333333,
+    "lng": 22.866666666,
     "category": "battle",
     "theater": "europe",
     "article": "The Battle of Kilkis was an armed conflict between communist resistance organisation ELAS and a coalition of collaborationist Security Battalions, nationalist resistance organisations EDES and the National Greek Army (EES). On 4 November 1944, ELAS captured Kilkis after nine hours of fighting. The nationalists suffered many casualties during the battle and in prisoner killings afterwards.",
@@ -17250,8 +17459,8 @@
     "title": "Battle of Pokoku and Irrawaddy River operations",
     "date": "1945-02-04",
     "endDate": "1945-05-13",
-    "lat": 21.331308679,
-    "lng": 95.057551225,
+    "lat": 21.331388888,
+    "lng": 95.0575,
     "category": "battle",
     "theater": "asia",
     "article": "The Battle of Pakokku and Irrawaddy River operations were a series of battles fought between the British Indian Army and the Imperial Japanese Army and allied forces over the successful Allied Burma campaign on the China Burma India Theater during World War II. The battles and operations were instrumental in facilitating the eventual capture of Rangoon in summer 1945.",
@@ -17440,6 +17649,23 @@
       {
         "label": "Wikipedia: Battle of Schoenfeld",
         "url": "https://en.wikipedia.org/wiki/Battle_of_Schoenfeld"
+      }
+    ]
+  },
+  {
+    "id": "massacre-in-the-arnsberg-forest",
+    "qid": "Q4956199",
+    "title": "Massacre in the Arnsberg Forest",
+    "date": "1945-03-01",
+    "lat": 51.378875,
+    "lng": 8.336044444,
+    "category": "atrocity",
+    "theater": "europe",
+    "article": "The Arnsberg Forest massacre was a series of mass extrajudicial killings of 208 forced labourers and POWs (Ostarbeiter), mainly of Russian and Polish descent, by Nazi troops under the command of Hans Kammler from 20 to 23 March 1945.",
+    "links": [
+      {
+        "label": "Wikipedia: Massacre in the Arnsberg Forest",
+        "url": "https://en.wikipedia.org/wiki/Arnsberg_Forest_massacre"
       }
     ]
   },
@@ -17868,6 +18094,9 @@
         "label": "Wikipedia: Battle of Königsberg",
         "url": "https://en.wikipedia.org/wiki/Battle_of_K%C3%B6nigsberg"
       }
+    ],
+    "divisionIds": [
+      "35th-infantry-division"
     ]
   },
   {
@@ -18260,8 +18489,8 @@
         "germany"
       ]
     },
-    "lat": 49.577981,
-    "lng": 12.771055,
+    "lat": 49.560555555,
+    "lng": 12.769166666,
     "category": "battle",
     "theater": "europe",
     "article": "Operation Cowboy was fought in the town of Hostau, Sudetenland, on 28 April 1945, in the last days of fighting in the European theater of World War II. It is one of two known incidents during the war in which Americans and Germans of the Wehrmacht fought side by side against the Waffen-SS, the other being the Battle of Castle Itter.",
