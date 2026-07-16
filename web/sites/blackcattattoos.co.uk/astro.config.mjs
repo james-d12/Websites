@@ -5,6 +5,7 @@ import solidJs from "@astrojs/solid-js";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  compressHTML: true,
   site: "https://blackcattattoos.co.uk",
   server: {
     port: 35422,

@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  compressHTML: true,
   site: "https://orchitect.net",
   server: {
     port: 35423,

@@ -4,6 +4,7 @@ import solidJs from "@astrojs/solid-js";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  compressHTML: true,
   site: "https://thecontourclinicrichmond.co.uk",
   server: {
     port: 35425,
