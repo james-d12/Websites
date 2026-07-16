@@ -70,8 +70,8 @@ importers:
         specifier: ^7.0.1
         version: 7.0.1(@types/node@26.1.1)(esbuild@0.28.1)(jiti@2.7.0)(solid-js@1.9.14)(tsx@4.23.1)(yaml@2.9.0)
       '@directus/sdk':
-        specifier: ^21.3.0
-        version: 21.3.0
+        specifier: ^23.0.0
+        version: 23.0.0
       shared-ui:
         specifier: workspace:*
         version: link:../../libs/shared-ui
@@ -438,8 +438,8 @@ packages:
     resolution: {integrity: sha512-kzyuwOAQnXJNLS9PSyrk0CWk35nWJW/zl/6KvnTBMFK65gm7U1/Z5BqjxeapjZCIhQcM/DsrEmcbRwDyXyXK4A==}
     engines: {node: '>=14'}
 
-  '@directus/sdk@21.3.0':
-    resolution: {integrity: sha512-ozK2OmlaBiCuP5RuL046CaGGqEnlOdl4Rg690qaOgbC0C45XnDZVeBlb+NDLTUqEj88iSX8Cv74G3qh0L2i7Yw==}
+  '@directus/sdk@23.0.0':
+    resolution: {integrity: sha512-hoPSj9bhe2dxaq9PXuvqqCHzjy9sUvcik2vi5DA/xKZ7E42O2TgDfNgRjYY8gb0ZOkm3TAUeLuEKf4aJTrUYIw==}
     engines: {node: '>=22'}
 
   '@emmetio/abbreviation@2.3.3':
@@ -4093,7 +4093,7 @@ snapshots:
 
   '@ctrl/tinycolor@4.2.0': {}
 
-  '@directus/sdk@21.3.0': {}
+  '@directus/sdk@23.0.0': {}
 
   '@emmetio/abbreviation@2.3.3':
     dependencies:
