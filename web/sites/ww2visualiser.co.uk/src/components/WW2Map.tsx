@@ -1,5 +1,9 @@
 import { useState, useCallback, useRef, useMemo } from "react";
 import Map, { Marker, Source, Layer, type MapRef } from "react-map-gl/maplibre";
+import type {
+  ExpressionSpecification,
+  GeoJSONSourceSpecification,
+} from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import type {
   WW2Event,
@@ -64,7 +68,7 @@ const COUNTRY_FILL_EXPRESSION = [
   ["get", "country"],
   ...Object.entries(TERRITORY_COLORS).flat(),
   "#888888",
-] as any;
+] as unknown as ExpressionSpecification;
 
 const WAR_START = new Date("1939-09-01");
 const WAR_END = new Date("1945-09-02");
@@ -264,7 +268,9 @@ export default function WW2Map({ flags }: { flags: Record<string, string> }) {
             <Source
               id="territories"
               type="geojson"
-              data={activeTerritories.regions as any}
+              data={
+                activeTerritories.regions as unknown as GeoJSONSourceSpecification["data"]
+              }
             >
               <Layer
                 id="territory-fill"
