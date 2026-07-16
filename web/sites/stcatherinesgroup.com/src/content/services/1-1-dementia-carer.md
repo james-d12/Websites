@@ -120,7 +120,7 @@ story:
     needs, it is about understanding the person, supporting families, and
     creating moments that truly matter.
 
-    — Charmaine Jennings
+    — Char Jennings
 
 testimonials:
   - quote: >-
