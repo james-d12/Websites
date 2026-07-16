@@ -112,11 +112,19 @@ export default function EventPanel({ event, flags, onClose }: Props) {
       {/* Sides */}
       {(allied || axis) && (
         <div className="flex items-center justify-center gap-4 px-3.5 py-3 border-b border-rim bg-deep/40 shrink-0">
-          {allied ? <SideFlag country={allied} flags={flags} /> : <div className="w-20" />}
+          {allied ? (
+            <SideFlag country={allied} flags={flags} />
+          ) : (
+            <div className="w-20" />
+          )}
           <span className="text-[11px] font-bold tracking-[0.1em] text-faint">
             VS
           </span>
-          {axis ? <SideFlag country={axis} flags={flags} /> : <div className="w-20" />}
+          {axis ? (
+            <SideFlag country={axis} flags={flags} />
+          ) : (
+            <div className="w-20" />
+          )}
         </div>
       )}
 

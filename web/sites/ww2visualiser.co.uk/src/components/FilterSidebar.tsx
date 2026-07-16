@@ -83,7 +83,10 @@ export default function FilterSidebar({
           {showTerritories && territoryLegend.length > 0 && (
             <div className="mt-2.5 grid grid-cols-2 gap-x-2 gap-y-1.5">
               {territoryLegend.map((entry) => (
-                <div key={entry.key} className="flex items-center gap-1.5 min-w-0">
+                <div
+                  key={entry.key}
+                  className="flex items-center gap-1.5 min-w-0"
+                >
                   <span
                     style={{ background: entry.color }}
                     className="w-2.5 h-2.5 rounded-sm shrink-0"

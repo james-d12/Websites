@@ -1,9 +1,5 @@
 export type EventCategory =
-  | "battle"
-  | "naval"
-  | "air"
-  | "political"
-  | "atrocity";
+  "battle" | "naval" | "air" | "political" | "atrocity";
 
 export type Theater = "europe" | "pacific" | "africa" | "atlantic" | "asia";
 

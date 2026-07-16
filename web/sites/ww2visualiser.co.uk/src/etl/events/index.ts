@@ -190,29 +190,27 @@ async function resolveWpTitle(
 
 function toWW2Events(enriched: EnrichedEvent[]): WW2Event[] {
   const ids = assignSlugIds(enriched);
-  return enriched.map(
-    (e, i): WW2Event => ({
-      id: ids[i],
-      qid: e.qid,
-      title: e.label,
-      date: e.date,
-      ...(e.endDate !== undefined ? { endDate: e.endDate } : {}),
-      ...(e.sides !== undefined ? { sides: e.sides } : {}),
-      lat: e.lat,
-      lng: e.lng,
-      category: e.category,
-      theater: e.theater,
-      article: e.wp?.article ?? "",
-      links: e.wpTitle
-        ? [
-            {
-              label: `Wikipedia: ${e.label}`,
-              url: `https://en.wikipedia.org/wiki/${encodeURIComponent(e.wpTitle.replace(/ /g, "_"))}`,
-            },
-          ]
-        : [],
-    }),
-  );
+  return enriched.map((e, i): WW2Event => ({
+    id: ids[i],
+    qid: e.qid,
+    title: e.label,
+    date: e.date,
+    ...(e.endDate !== undefined ? { endDate: e.endDate } : {}),
+    ...(e.sides !== undefined ? { sides: e.sides } : {}),
+    lat: e.lat,
+    lng: e.lng,
+    category: e.category,
+    theater: e.theater,
+    article: e.wp?.article ?? "",
+    links: e.wpTitle
+      ? [
+          {
+            label: `Wikipedia: ${e.label}`,
+            url: `https://en.wikipedia.org/wiki/${encodeURIComponent(e.wpTitle.replace(/ /g, "_"))}`,
+          },
+        ]
+      : [],
+  }));
 }
 
 export async function fetchEvents(dryRun: boolean): Promise<void> {
@@ -261,7 +259,9 @@ export async function fetchEvents(dryRun: boolean): Promise<void> {
   // them entirely or polluting events.json with empty descriptions.
   const known = enriched.filter((e) => e.wp?.article);
   const unknown = enriched.filter((e) => !e.wp?.article);
-  console.log(`Events with no summary/article: ${unknown.length} → unknowns.json`);
+  console.log(
+    `Events with no summary/article: ${unknown.length} → unknowns.json`,
+  );
 
   const events = toWW2Events(known);
   const unknowns = toWW2Events(unknown);

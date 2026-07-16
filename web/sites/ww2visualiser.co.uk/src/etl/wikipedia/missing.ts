@@ -49,7 +49,9 @@ async function main(): Promise<void> {
   );
 
   const missing = battles.filter((b) => !known.has(b.title));
-  console.log(`${missing.length} listed battles have no matching event at all:\n`);
+  console.log(
+    `${missing.length} listed battles have no matching event at all:\n`,
+  );
 
   const byFront = new Map<string, BattleListEntry[]>();
   for (const b of missing) {

@@ -98,7 +98,9 @@ async function resolveTitleToQidMap(
     url.searchParams.set("ppprop", "wikibase_item");
     url.searchParams.set("redirects", "1");
     const data = await withRetry(async () => {
-      const res = await fetch(url.toString(), { headers: { "User-Agent": UA } });
+      const res = await fetch(url.toString(), {
+        headers: { "User-Agent": UA },
+      });
       if (!res.ok) throw new Error(`Wikipedia API ${res.status}`);
       return (await res.json()) as PagePropsResponse;
     });
@@ -195,7 +197,9 @@ async function fetchWikipediaCoords(
     url.searchParams.set("prop", "coordinates");
     url.searchParams.set("redirects", "1");
     const data = await withRetry(async () => {
-      const res = await fetch(url.toString(), { headers: { "User-Agent": UA } });
+      const res = await fetch(url.toString(), {
+        headers: { "User-Agent": UA },
+      });
       if (!res.ok) throw new Error(`Wikipedia API ${res.status}`);
       return (await res.json()) as CoordResponse;
     });
@@ -261,8 +265,12 @@ async function main(): Promise<void> {
   const known = articleTitlesOf([...events, ...unknowns]);
   const existingQids = new Set([...events, ...unknowns].map((e) => e.qid));
 
-  const candidates = battles.filter((b: BattleListEntry) => !known.has(b.title));
-  console.log(`${candidates.length} listed battles have no matching article link`);
+  const candidates = battles.filter(
+    (b: BattleListEntry) => !known.has(b.title),
+  );
+  console.log(
+    `${candidates.length} listed battles have no matching article link`,
+  );
 
   console.log("Resolving Wikidata QIDs…");
   const qidByTitle = await resolveTitleToQidMap(candidates.map((b) => b.title));
@@ -278,7 +286,9 @@ async function main(): Promise<void> {
   });
   const dupes = candidates.length - missing.length;
   if (dupes > 0) {
-    console.log(`  ${dupes} are duplicates of existing events under another title — skipping`);
+    console.log(
+      `  ${dupes} are duplicates of existing events under another title — skipping`,
+    );
   }
 
   console.log("Querying Wikidata for coordinates + combatants…");
@@ -291,7 +301,9 @@ async function main(): Promise<void> {
   console.log(
     `Falling back to Wikipedia page-coordinates for ${stillNoCoords.length} articles…`,
   );
-  const wpCoords = await fetchWikipediaCoords(stillNoCoords.map((b) => b.title));
+  const wpCoords = await fetchWikipediaCoords(
+    stillNoCoords.map((b) => b.title),
+  );
 
   const merged: MergedEvent[] = [];
   let noQid = 0;
@@ -326,7 +338,9 @@ async function main(): Promise<void> {
 
   if (DRY_RUN) {
     for (const e of merged.slice(0, 20)) {
-      console.log(`  ${e.date}  ${e.title}  (${e.lat.toFixed(2)}, ${e.lng.toFixed(2)})`);
+      console.log(
+        `  ${e.date}  ${e.title}  (${e.lat.toFixed(2)}, ${e.lng.toFixed(2)})`,
+      );
     }
     console.log("\nNo files written (--dry-run).");
     return;

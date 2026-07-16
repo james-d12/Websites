@@ -1013,12 +1013,8 @@
     "title": "Battle of Mrogą",
     "date": "1939-09-10",
     "sides": {
-      "allied": [
-        "poland"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["poland"],
+      "axis": ["germany"]
     },
     "lat": 51.964167,
     "lng": 19.711667,
@@ -1107,12 +1103,8 @@
     "title": "Sinking of HMS Royal Oak",
     "date": "1939-10-14",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 58.9,
     "lng": -3.05,
@@ -1373,9 +1365,7 @@
     "title": "Night operation",
     "date": "1942-09-09",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
+      "allied": ["ussr"],
       "axis": []
     },
     "lat": 54.298115,
@@ -1404,12 +1394,8 @@
     "title": "Battle of SS Stephen Hopkins",
     "date": "1942-09-27",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": -28.214722,
     "lng": -11.918333,
@@ -1474,12 +1460,8 @@
     "title": "Battle of Arachov",
     "date": "1943-09-09",
     "sides": {
-      "allied": [
-        "greece"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["greece"],
+      "axis": ["germany"]
     },
     "lat": 38.4836,
     "lng": 22.5578,
@@ -1532,9 +1514,7 @@
     "date": "1944-01-03",
     "sides": {
       "allied": [],
-      "axis": [
-        "italy"
-      ]
+      "axis": ["italy"]
     },
     "lat": 43.9304375,
     "lng": 11.1653192,
@@ -1659,12 +1639,8 @@
     "title": "Battle of 25 April 1944",
     "date": "1944-04-25",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany"]
     },
     "lat": 48.717,
     "lng": -4.517,
@@ -1753,13 +1729,8 @@
     "date": "1944-07-01",
     "endDate": "1944-07-09",
     "sides": {
-      "allied": [
-        "uk"
-      ],
-      "axis": [
-        "germany",
-        "italy"
-      ]
+      "allied": ["uk"],
+      "axis": ["germany", "italy"]
     },
     "lat": 43.434419444,
     "lng": 13.35025,
@@ -1775,12 +1746,8 @@
     "date": "1944-07-06",
     "endDate": "1944-07-07",
     "sides": {
-      "allied": [
-        "france"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["france"],
+      "axis": ["germany"]
     },
     "lat": 42.932527777,
     "lng": 1.7685,
@@ -1845,9 +1812,7 @@
     "title": "Battle of Skalbmierz",
     "date": "1944-08-05",
     "sides": {
-      "allied": [
-        "poland"
-      ],
+      "allied": ["poland"],
       "axis": []
     },
     "lat": 50.319444,
@@ -1990,9 +1955,7 @@
     "date": "1944-10-18",
     "sides": {
       "allied": [],
-      "axis": [
-        "italy"
-      ]
+      "axis": ["italy"]
     },
     "lat": 46.19834,
     "lng": 8.54014,
@@ -2081,12 +2044,8 @@
     "date": "1945-01-19",
     "endDate": "1945-01-20",
     "sides": {
-      "allied": [
-        "ussr"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["ussr"],
+      "axis": ["germany"]
     },
     "lat": 52.201944444,
     "lng": 18.647222222,
@@ -2164,12 +2123,8 @@
     "date": "1945-02-18",
     "endDate": "1945-02-25",
     "sides": {
-      "allied": [
-        "usa"
-      ],
-      "axis": [
-        "germany"
-      ]
+      "allied": ["usa"],
+      "axis": ["germany"]
     },
     "lat": 44.18811,
     "lng": 10.83441,
@@ -2234,9 +2189,7 @@
     "title": "Battle of Königshofen",
     "date": "1945-04-01",
     "sides": {
-      "allied": [
-        "usa"
-      ],
+      "allied": ["usa"],
       "axis": []
     },
     "lat": 49.5479622,
