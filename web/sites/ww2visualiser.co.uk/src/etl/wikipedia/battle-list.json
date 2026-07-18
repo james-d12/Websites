@@ -1,0 +1,4906 @@
+[
+  {
+    "title": "Battle of Westerplatte",
+    "display": "Westerplatte",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Chojnice (1939)",
+    "display": "Chojnice",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Defence of the Polish Post Office in Danzig",
+    "display": "Danzig",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Danzig Bay",
+    "display": "Danzig Bay",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Charge at Krojanty",
+    "display": "Krojanty",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Lasy Królewskie",
+    "display": "Lasy Królewskie",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Mokra",
+    "display": "Mokra",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Mikołów",
+    "display": "Mikołów",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Pszczyna",
+    "display": "Pszczyna",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Częstochowa (1939)",
+    "display": "Częstochowa",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Mława",
+    "display": "Mława",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Jordanów",
+    "display": "Jordanów",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Węgierska Górka",
+    "display": "Węgierska Górka",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Grudziądz",
+    "display": "Grudziądz",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Tuchola Forest",
+    "display": "Tuchola Forest",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Slovak invasion of Poland",
+    "display": "Slovak invasion of Poland",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Hel",
+    "display": "Hel",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Raid on Fraustadt",
+    "display": "Fraustadt",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Borowa Góra",
+    "display": "Borowa Góra",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Bukowiec",
+    "display": "Bukowiec",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Defense of Katowice",
+    "display": "Katowice",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Piotrków Trybunalski",
+    "display": "Piotrków Trybunalski",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Różan",
+    "display": "Różan",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Tomaszów Mazowiecki",
+    "display": "Tomaszów Mazowiecki",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Pułtusk (1939)",
+    "display": "Pułtusk",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Łódź (1939)",
+    "display": "Łódź",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Barak",
+    "display": "Barak",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Łomża (1939)",
+    "display": "Łomża",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Wizna",
+    "display": "Wizna",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Saar Offensive",
+    "display": "Saar Offensive",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Wola Cyrusowa",
+    "display": "Wola Cyrusowa",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Radom",
+    "display": "Radom",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Gdynia",
+    "display": "Gdynia",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Siege of Warsaw (1939)",
+    "display": "Warsaw",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of the Bzura",
+    "display": "Bzura",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Kampinos Forest",
+    "display": "Kampinos Forest",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Jarosław",
+    "display": "Jarosław",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Kępa Oksywska",
+    "display": "Kępa Oksywska",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Kałuszyn",
+    "display": "Kałuszyn",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Przemyśl (1939)",
+    "display": "Przemyśl",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Lwów (1939)",
+    "display": "Lwów",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Modlin",
+    "display": "Modlin",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Jaworów",
+    "display": "Jaworów",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Brześć Litewski",
+    "display": "Brześć Litewski",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Kobryń",
+    "display": "Kobryń",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Tomaszów Lubelski",
+    "display": "Tomaszów Lubelski",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Wilno (1939)",
+    "display": "Wilno",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Wólka Węglowa",
+    "display": "Wólka Węglowa",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Krasnystaw",
+    "display": "Krasnystaw",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Grodno (1939)",
+    "display": "Grodno",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Cześniki",
+    "display": "Cześniki",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Łomianki",
+    "display": "Łomianki",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Krasnobród",
+    "display": "Krasnobród",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Husynne",
+    "display": "Husynne",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Władypol",
+    "display": "Władypol",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Szack",
+    "display": "Szack",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Wytyczno",
+    "display": "Wytyczno",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Kock (1939)",
+    "display": "Kock",
+    "front": {
+      "title": "Invasion of Poland",
+      "display": "Invasion of Poland"
+    }
+  },
+  {
+    "title": "Battle of Suomussalmi",
+    "display": "Suomussalmi",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Petsamo",
+    "display": "Petsamo",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Salla (1939)",
+    "display": "Salla",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Ilomantsi (1939)",
+    "display": "Ilomantsi",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of the River Plate",
+    "display": "River Plate",
+    "front": {
+      "title": "Battle of the Atlantic",
+      "display": "Battle of the Atlantic"
+    }
+  },
+  {
+    "title": "Battle of Taipale",
+    "display": "Taipale",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Kollaa",
+    "display": "Kollaa",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Varolampi Pond",
+    "display": "Varolampi Pond",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Tolvajärvi",
+    "display": "Tolvajärvi",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Summa",
+    "display": "Summa",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Kelja",
+    "display": "Kelja",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Raate Road",
+    "display": "Raate Road",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Kuhmo",
+    "display": "Kuhmo",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Altmark incident",
+    "display": "Altmark",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Honkaniemi",
+    "display": "Honkaniemi",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Battle of Vyborg Bay (1940)",
+    "display": "Vyborg Bay",
+    "front": {
+      "title": "Winter War",
+      "display": "Winter War"
+    }
+  },
+  {
+    "title": "Action in the Oslofjord",
+    "display": "Oslofjord",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "German invasion of Denmark (1940)",
+    "display": "German invasion of Denmark",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Drøbak Sound",
+    "display": "Drøbak Sound",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Fornebu",
+    "display": "Fornebu",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Horten Harbour",
+    "display": "Horten Harbour",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Kristiansand (1940)",
+    "display": "Kristiansand",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Action off Lofoten",
+    "display": "Lofoten",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battles of Narvik",
+    "display": "Narvik",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Midtskogen",
+    "display": "Midtskogen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Dombås",
+    "display": "Dombås",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Hegra Fortress",
+    "display": "Hegra Fortress",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Namsos campaign",
+    "display": "Namsos",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Åndalsnes landings",
+    "display": "Åndalsnes",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Gratangen",
+    "display": "Gratangen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Høljarast Bridge",
+    "display": "Høljarast Bridge",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle for Kvam",
+    "display": "Kvam",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Vinjesvingen",
+    "display": "Vinjesvingen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Actions in Nordland",
+    "display": "Nordland",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle for The Hague",
+    "display": "The Hague",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Invasion of Iceland",
+    "display": "Invasion of Iceland",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "German invasion of Luxembourg",
+    "display": "German invasion of Luxembourg",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Maastricht",
+    "display": "Maastricht",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Fort Ében-Émael",
+    "display": "Fort Ében-Émael",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Mill",
+    "display": "Mill",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Rotterdam",
+    "display": "Rotterdam",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Zeeland",
+    "display": "Zeeland",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Grebbeberg",
+    "display": "Grebbeberg",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Afsluitdijk",
+    "display": "Afsluitdijk",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Hannut",
+    "display": "Hannut",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Sedan (1940)",
+    "display": "Sedan",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "German bombing of Rotterdam",
+    "display": "Rotterdam Blitz",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Gembloux (1940)",
+    "display": "Gembloux",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Montcornet",
+    "display": "Montcornet",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Arras (1940)",
+    "display": "Arras",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Boulogne",
+    "display": "Boulogne",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Siege of Calais (1940)",
+    "display": "Calais",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Lys (1940)",
+    "display": "Lys",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Ypres–Comines Canal",
+    "display": "Ypres–Comines Canal",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Dunkirk",
+    "display": "Dunkirk",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Abbeville",
+    "display": "Abbeville",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Siege of Lille (1940)",
+    "display": "Lille",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Paula",
+    "display": "Operation Paula",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Fall Rot",
+    "display": "Fall Rot",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Juno",
+    "display": "Operation Juno",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Italian invasion of France",
+    "display": "Italian invasion of France",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Siege of Malta (World War II)",
+    "display": "Siege of Malta",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Lagarde (1940)",
+    "display": "Lagarde",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Saumur (1940)",
+    "display": "Saumur",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Collar (commando raid)",
+    "display": "Operation Collar",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Espero Convoy",
+    "display": "Espero Convoy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Soviet occupation of Bessarabia and Northern Bukovina",
+    "display": "Soviet occupation of Bessarabia and Northern Bukovina",
+    "front": {
+      "title": "Soviet occupation of Bessarabia and Northern Bukovina",
+      "display": "Soviet occupation of Bessarabia and Northern Bukovina"
+    }
+  },
+  {
+    "title": "Attack on Mers-el-Kébir",
+    "display": "Mers-el-Kébir",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Capture of Kassala",
+    "display": "Kassala",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Kanalkampf",
+    "display": "Kanalkampf",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Calabria",
+    "display": "Calabria",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Ambassador",
+    "display": "Operation Ambassador",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Cape Spada",
+    "display": "Cape Spada",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Italian invasion of British Somaliland",
+    "display": "Italian invasion of British Somaliland",
+    "front": {
+      "title": "East African campaign (World War II)",
+      "display": "East African campaign"
+    }
+  },
+  {
+    "title": "Battle of Tug Argan",
+    "display": "Tug Argan",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Adlertag",
+    "display": "Adlertag",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "The Hardest Day",
+    "display": "The Hardest Day",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "The Blitz",
+    "display": "The Blitz",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Italian invasion of Egypt",
+    "display": "Italian invasion of Egypt",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Britain Day",
+    "display": "Battle of Britain Day",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Lạng Sơn (1940)",
+    "display": "Lạng Sơn",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Dakar",
+    "display": "Dakar",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Graveney Marsh",
+    "display": "Graveney Marsh",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Franco-Thai War",
+    "display": "Franco-Thai War",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Cape Passero (1940)",
+    "display": "Cape Passero",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Attack on Convoy BN 7",
+    "display": "Convoy BN 7",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Gabon",
+    "display": "Gabon",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Pindus",
+    "display": "Pindus",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Capture of Konitsa (1940)",
+    "display": "Konitsa",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Elaia–Kalamas",
+    "display": "Elaia–Kalamas",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Taranto",
+    "display": "Taranto",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Morava–Ivan",
+    "display": "Morava–Ivan",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Korytsa",
+    "display": "Korytsa",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Cape Spartivento",
+    "display": "Cape Spartivento",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Saranda",
+    "display": "Saranda",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Attack on Nibeiwa",
+    "display": "Nibeiwa",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Sidi Barrani",
+    "display": "Sidi Barrani",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Himara",
+    "display": "Himara",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Siege of Giarabub",
+    "display": "Giarabub",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Bardia",
+    "display": "Bardia",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "British capture of Tobruk",
+    "display": "British capture of Tobruk",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Capture of Klisura Pass",
+    "display": "Klisura Pass",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Excess",
+    "display": "Operation Excess",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Berlin (Atlantic)",
+    "display": "Operation Berlin (Atlantic)",
+    "front": {
+      "title": "Battle of the Atlantic",
+      "display": "Battle of the Atlantic"
+    }
+  },
+  {
+    "title": "Action at Mechili",
+    "display": "Mechili",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Agordat (1941)",
+    "display": "Agordat",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Trebeshina",
+    "display": "Trebeshina",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Capture of Kufra",
+    "display": "Kufra",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Keren",
+    "display": "Keren",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Beda Fomm",
+    "display": "Beda Fomm",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Sonnenblume",
+    "display": "Operation Sonnenblume",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Action of 27 February 1941",
+    "display": "Action of 27 February 1941",
+    "front": {
+      "title": "Indian Ocean in World War II",
+      "display": "Indian Ocean"
+    }
+  },
+  {
+    "title": "Operation Claymore",
+    "display": "Operation Claymore",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Hill 731",
+    "display": "Hill 731",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Shanggao",
+    "display": "Shanggao",
+    "front": {
+      "title": "Second Sino-Japanese War",
+      "display": "Second Sino-Japanese War"
+    }
+  },
+  {
+    "title": "Operation Appearance",
+    "display": "Operation Appearance",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Siege of Saïo",
+    "display": "Saïo",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Raid on Souda Bay",
+    "display": "Souda Bay",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Cape Matapan",
+    "display": "Cape Matapan",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Action of 4 April 1941",
+    "display": "4 April 1941",
+    "front": {
+      "title": "Battle of the Atlantic",
+      "display": "Battle of the Atlantic"
+    }
+  },
+  {
+    "title": "Operation Retribution (1941)",
+    "display": "Operation Retribution (1941)",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of the Metaxas Line",
+    "display": "Metaxas Line",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Invasion of Yugoslavia",
+    "display": "Invasion of Yugoslavia",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Siege of Tobruk",
+    "display": "Tobruk",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Vevi (1941)",
+    "display": "Vevi",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Ptolemaida",
+    "display": "Ptolemaida",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Kleisoura Pass",
+    "display": "Kleisoura Pass",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Lake Kastoria",
+    "display": "Lake Kastoria",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of the Tarigo Convoy",
+    "display": "Tarigo Convoy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Tempe Gorge",
+    "display": "Tempe Gorge",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Raid on Bardia",
+    "display": "Bardia Raid",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Athens (1941)",
+    "display": "Athens",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Thermopylae (1941)",
+    "display": "Thermopylae",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Anglo-Iraqi War",
+    "display": "Anglo-Iraqi War",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Amba Alagi (1941)",
+    "display": "Amba Alagi",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Convoy OB 318",
+    "display": "Convoy OB 318",
+    "front": {
+      "title": "Battle of the Atlantic",
+      "display": "Battle of the Atlantic"
+    }
+  },
+  {
+    "title": "Action of 8 May 1941",
+    "display": "Action of 8 May 1941",
+    "front": {
+      "title": "Indian Ocean in World War II",
+      "display": "Indian Ocean"
+    }
+  },
+  {
+    "title": "Operation Brevity",
+    "display": "Operation Brevity",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Last battle of Bismarck",
+    "display": "Last battle of Bismarck",
+    "front": {
+      "title": "Battle of the Atlantic",
+      "display": "Battle of the Atlantic"
+    }
+  },
+  {
+    "title": "Battle of Rethymno",
+    "display": "Rethymno",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Crete",
+    "display": "Crete",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of the Denmark Strait",
+    "display": "Denmark Strait",
+    "front": {
+      "title": "Battle of the Atlantic",
+      "display": "Battle of the Atlantic"
+    }
+  },
+  {
+    "title": "Operation Skorpion",
+    "display": "Operation Skorpion",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of 42nd Street",
+    "display": "42nd Street",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of the Litani River",
+    "display": "Litani River",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Jezzine (1941)",
+    "display": "Jezzine",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Sidon (1941)",
+    "display": "Sidon",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Battleaxe",
+    "display": "Operation Battleaxe",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Kissoué",
+    "display": "Kissoué",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Damascus (1941)",
+    "display": "Damascus",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Merdjayoun",
+    "display": "Merdjayoun",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Palmyra (1941)",
+    "display": "Palmyra",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Rentier",
+    "display": "Operation Rentier",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Defense of Brest Fortress",
+    "display": "Brest Fortress",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Białystok–Minsk",
+    "display": "Białystok–Minsk",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Gulf of Riga campaign",
+    "display": "Gulf of Riga",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Soviet Baltic Sea submarine campaign in 1941",
+    "display": "Soviet submarine campaign (1941)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Hanko (1941)",
+    "display": "Hanko",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "German-Soviet air war 22 June 1941",
+    "display": "German-Soviet air war 22 June 1941",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Raseiniai",
+    "display": "Raseiniai",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Brody (1941)",
+    "display": "Brody",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Platinum Fox",
+    "display": "Operation Platinum Fox",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Finnish invasion of Ladoga Karelia",
+    "display": "Finnish invasion of Ladoga Karelia",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Arctic Fox",
+    "display": "Operation Arctic Fox",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation München",
+    "display": "Operation München",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Deir ez-Zor (1941)",
+    "display": "Deir ez-Zor",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Damour",
+    "display": "Damour",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Kiev (1941)",
+    "display": "Kiev (1941)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Smolensk (1941)",
+    "display": "Smolensk (1941)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Finnish invasion of East Karelia (1941)",
+    "display": "Finnish invasion of East Karelia",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Beirut (1941)",
+    "display": "Beirut",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Substance",
+    "display": "Operation Substance",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Uman",
+    "display": "Uman",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Twin Pimples raid",
+    "display": "Twin Pimples",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Bengtskär",
+    "display": "Bengtskär",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation EF (1941)",
+    "display": "Operation EF",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Finnish invasion of the Karelian Isthmus",
+    "display": "Finnish invasion of the Karelian Isthmus",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Culqualber",
+    "display": "Culqualber",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Siege of Odessa",
+    "display": "Odessa (1941)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Anglo-Soviet invasion of Iran",
+    "display": "Anglo-Soviet invasion of Iran",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Middle Eastern Front"
+    }
+  },
+  {
+    "title": "Soviet evacuation of Tallinn",
+    "display": "Soviet evacuation of Tallinn",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Porlampi",
+    "display": "Porlampi",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Loznica (1941)",
+    "display": "Loznica",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Changsha (1941)",
+    "display": "Changsha",
+    "front": {
+      "title": "Second Sino-Japanese War",
+      "display": "Second Sino-Japanese War"
+    }
+  },
+  {
+    "title": "Siege of Leningrad",
+    "display": "Leningrad",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Beowulf",
+    "display": "Operation Beowulf",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Attack on Šabac",
+    "display": "Šabac",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Attack on Kruševac",
+    "display": "Kruševac",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of the Sea of Azov",
+    "display": "Sea of Azov",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Halberd",
+    "display": "Operation Halberd",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Petrikowka",
+    "display": "Petrikowka",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Uzice",
+    "display": "Operation Uzice",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Bryansk (1941)",
+    "display": "Bryansk",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Moscow",
+    "display": "Moscow",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Siege of Kraljevo",
+    "display": "Kraljevo",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle at Borodino Field",
+    "display": "Borodino Field",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Siege of Rogatica (1941)",
+    "display": "Rogatica (1941)",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Tikhvin offensive",
+    "display": "Tikhvin",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Crimean campaign",
+    "display": "Crimean campaign",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "First Battle of Kharkov",
+    "display": "Kharkov",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Siege of Sevastopol (1941–1942)",
+    "display": "Sevastopol",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Novi Pazar",
+    "display": "Novi Pazar",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Capture of Olovo (1941)",
+    "display": "Olovo",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Trešnjica",
+    "display": "Trešnjica",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of the Duisburg Convoy",
+    "display": "Duisburg Convoy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Flipper",
+    "display": "Operation Flipper",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Gondar",
+    "display": "Gondar",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Crusader",
+    "display": "Operation Crusader",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Action at Bir el Gubi (November 1941)",
+    "display": "Bir el Gubi",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Point 175",
+    "display": "Point 175",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Pljevlja",
+    "display": "Pljevlja",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Action at Bir el Gubi (December 1941)",
+    "display": "Bir el Gubi",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Mihailovic",
+    "display": "Operation Mihailovic",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Japanese invasion of Thailand",
+    "display": "Japanese invasion of Thailand",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Kota Bharu",
+    "display": "Kota Bharu",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Attack on Pearl Harbor",
+    "display": "Pearl Harbor",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Japanese invasion of Batan Island",
+    "display": "Batan Island",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Attack on Clark Field",
+    "display": "Clark Field",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "First Bombardment of Midway",
+    "display": "Midway bombardment",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Krohcol",
+    "display": "Operation Krohcol",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Hong Kong",
+    "display": "Hong Kong",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Bombing of Singapore (1941)",
+    "display": "Singapore (1941)",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Guam (1941)",
+    "display": "Guam (1941)",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Wake Island",
+    "display": "Wake Island",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Sinking of Prince of Wales and Repulse",
+    "display": "Sinking of ''Prince of Wales'' and ''Repulse''",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Japanese invasion of Vigan",
+    "display": "Vigan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Japanese invasion of Aparri",
+    "display": "Aparri",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Jitra",
+    "display": "Jitra",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Japanese invasion of Legazpi",
+    "display": "Legazpi",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Cape Bon (1941)",
+    "display": "Cape Bon",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Japanese invasion of Burma",
+    "display": "Japanese invasion of Burma",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Gurun",
+    "display": "Gurun",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of the Kerch Peninsula",
+    "display": "Kerch Peninsula",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "First Battle of Sirte",
+    "display": "Sirte",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Raid on Alexandria (1941)",
+    "display": "Alexandria",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Japanese invasion of Davao",
+    "display": "Davao",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Japanese invasion of Lingayen Gulf",
+    "display": "Lingayen Gulf",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Japanese invasion of Lamon Bay",
+    "display": "Lamon Bay",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Sjenica (1941)",
+    "display": "Sjenica",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Changsha (1941–1942)",
+    "display": "Changsha",
+    "front": {
+      "title": "Second Sino-Japanese War",
+      "display": "Second Sino-Japanese War"
+    }
+  },
+  {
+    "title": "Operation Anklet",
+    "display": "Operation Anklet",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Archery",
+    "display": "Operation Archery",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Kampar",
+    "display": "Kampar",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Slim River",
+    "display": "Slim River",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Bataan",
+    "display": "Bataan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Kuala Lumpur",
+    "display": "Kuala Lumpur",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Gemas",
+    "display": "Gemas",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Muar",
+    "display": "Muar",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle off Endau",
+    "display": "Endau",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Makassar Strait",
+    "display": "Makassar Strait",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Sarimbun Beach",
+    "display": "Sarimbun Beach",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Kranji",
+    "display": "Kranji",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Bukit Timah",
+    "display": "Bukit Timah",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Channel Dash",
+    "display": "Channel Dash",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Donnerkeil",
+    "display": "Operation Donnerkeil",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Pasir Panjang",
+    "display": "Pasir Panjang",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Bilin River",
+    "display": "Bilin River",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Badung Strait",
+    "display": "Badung Strait",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Sittang Bridge",
+    "display": "Sittang Bridge",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Operation Biting",
+    "display": "Operation Biting",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Java Sea",
+    "display": "Java Sea",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Java (1942)",
+    "display": "Java (1942)",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Sportpalast",
+    "display": "Operation Sportpalast",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Pegu",
+    "display": "Pegu",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Taukkyan Roadblock",
+    "display": "Taukkyan Roadblock",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of the Yunnan–Burma Road",
+    "display": "Yunnan–Burma Road",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Suursaari",
+    "display": "Suursaari",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "St Nazaire Raid",
+    "display": "St Nazaire Raid",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Prome (1942)",
+    "display": "Prome (1942)",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Christmas Island",
+    "display": "Christmas Island",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Indian Ocean raid",
+    "display": "Indian Ocean raid",
+    "front": {
+      "title": "Indian Ocean in World War II",
+      "display": "Indian Ocean"
+    }
+  },
+  {
+    "title": "Augsburg raid",
+    "display": "Augsburg raid",
+    "front": {
+      "title": "Strategic bombing during World War II",
+      "display": "Strategic Bombing"
+    }
+  },
+  {
+    "title": "Battle of Nanos",
+    "display": "Nanos",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Doolittle Raid",
+    "display": "Doolittle Raid",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Abercrombie",
+    "display": "Operation Abercrombie",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Coral Sea",
+    "display": "Coral Sea",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Corregidor",
+    "display": "Corregidor",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Madagascar",
+    "display": "Madagascar",
+    "front": {
+      "title": "Indian Ocean in World War II",
+      "display": "Indian Ocean"
+    }
+  },
+  {
+    "title": "Second Battle of Kharkov",
+    "display": "Kharkov",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Defense of the Adzhimushkay quarry",
+    "display": "Adzhimushkay quarry",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Gazala",
+    "display": "Gazala",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Bir Hakeim",
+    "display": "Bir Hakeim",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Attack on Sydney Harbour",
+    "display": "Sydney Harbour",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Dutch Harbor",
+    "display": "Dutch Harbor",
+    "front": {
+      "title": "American theater (World War II)",
+      "display": "American Front"
+    }
+  },
+  {
+    "title": "Battle of Midway",
+    "display": "Midway",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Vigorous",
+    "display": "Operation Vigorous",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Axis capture of Tobruk",
+    "display": "Tobruk",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Mersa Matruh",
+    "display": "Mersa Matruh",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Gearbox",
+    "display": "Operation Gearbox",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Soviet Baltic Sea submarine campaign in 1942",
+    "display": "Soviet submarine campaign (1942)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "First Battle of El Alamein",
+    "display": "El Alamein",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Someri",
+    "display": "Someri",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Stalingrad",
+    "display": "Stalingrad",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Invasion of Buna–Gona",
+    "display": "Invasion of Buna–Gona",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Kokoda",
+    "display": "Kokoda",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Pedestal",
+    "display": "Operation Pedestal",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Tulagi and Gavutu–Tanambogo",
+    "display": "Tulagi and Gavutu–Tanambogo",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Savo Island",
+    "display": "Savo Island",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Bigamy",
+    "display": "Operation Bigamy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Nicety",
+    "display": "Operation Nicety",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Dieppe Raid",
+    "display": "Dieppe Raid",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Sinyavino offensive (1942)",
+    "display": "Sinyavino",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of the Tenaru",
+    "display": "Tenaru",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of the Eastern Solomons",
+    "display": "Eastern Solomons",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Milne Bay",
+    "display": "Milne Bay",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Isurava",
+    "display": "Isurava",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Alam el Halfa",
+    "display": "Alam el Halfa",
+    "front": {
+      "title": "North African campaign",
+      "display": "North African Campaign"
+    }
+  },
+  {
+    "title": "First Battle of Eora Creek–Templeton's Crossing",
+    "display": "Eora Creek–Templeton's Crossing",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Dryad",
+    "display": "Operation Dryad",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Mission Ridge–Brigade Hill",
+    "display": "Mission Ridge–Brigade Hill",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Musketoon",
+    "display": "Operation Musketoon",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Aquatint",
+    "display": "Operation Aquatint",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Edson's Ridge",
+    "display": "Edson's Ridge",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Ioribaiwa",
+    "display": "Ioribaiwa",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Actions along the Matanikau",
+    "display": "Matanikau",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Oslo Mosquito Raid (1942)",
+    "display": "Oslo Mosquito Raid",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Basalt",
+    "display": "Operation Basalt",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Cape Esperance",
+    "display": "Cape Esperance",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Second Battle of Eora Creek–Templeton's Crossing",
+    "display": "Eora Creek–Templeton's Crossing",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Robinson",
+    "display": "Operation Robinson",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Sukho Island",
+    "display": "Sukho Island",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle for Henderson Field",
+    "display": "Henderson Field",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Second Battle of El Alamein",
+    "display": "El Alamein",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of the Santa Cruz Islands",
+    "display": "Santa Cruz Islands",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Title",
+    "display": "Operation Title",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Matanikau Offensive",
+    "display": "Matanikau",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Koli Point action",
+    "display": "Koli Point",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Oivi–Gorari",
+    "display": "Oivi–Gorari",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Reservist",
+    "display": "Operation Reservist",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Terminal",
+    "display": "Operation Terminal",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Port Lyautey",
+    "display": "Port Lyautey",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Blackstone",
+    "display": "Operation Blackstone",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Naval Battle of Casablanca",
+    "display": "Casablanca",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Case Anton",
+    "display": "Case Anton",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Italian occupation of Corsica",
+    "display": "Italian occupation of Corsica",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Freshman",
+    "display": "Operation Freshman",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Scuttling of the French fleet at Toulon",
+    "display": "Scuttling of the French fleet at Toulon",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Skerki Bank",
+    "display": "Skerki Bank",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Raid on Algiers",
+    "display": "Raid on Algiers",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of El Agheila",
+    "display": "El Agheila",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Carlson's patrol",
+    "display": "Carlson's patrol",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Naval Battle of Guadalcanal",
+    "display": "Guadalcanal",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Buna–Gona",
+    "display": "Buna–Gona",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Tassafaronga",
+    "display": "Tassafaronga",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Oyster",
+    "display": "Operation Oyster",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Frankton",
+    "display": "Operation Frankton",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Mount Austen, the Galloping Horse, and the Sea Horse",
+    "display": "Mount Austen, the Galloping Horse, and the Sea Horse",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Operation Weiss",
+    "display": "Case White",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Tripoli (1943)",
+    "display": "Tripoli",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Cartoon",
+    "display": "Operation Cartoon",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Rennell Island",
+    "display": "Rennell Island",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Wau",
+    "display": "Wau",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of Sidi Bou Zid",
+    "display": "Sidi Bou Zid",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Kasserine Pass",
+    "display": "Kasserine Pass",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Third Battle of Kharkov",
+    "display": "Kharkov (Third)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of the Bismarck Sea",
+    "display": "Bismarck Sea",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific Front"
+    }
+  },
+  {
+    "title": "Battle of the Ruhr",
+    "display": "The Ruhr (Bombing)",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Medenine",
+    "display": "Medenine",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of the Mareth Line",
+    "display": "Mareth Line",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of El Guettar",
+    "display": "El Guettar",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of the Komandorski Islands",
+    "display": "Komandorski Islands",
+    "front": {
+      "title": "American theater (World War II)",
+      "display": "American Front"
+    }
+  },
+  {
+    "title": "Soviet Baltic Sea submarine campaign in 1943",
+    "display": "Soviet submarine campaign (1943)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Flax",
+    "display": "Operation Flax",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of the Cigno Convoy",
+    "display": "Cigno Convoy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Warsaw Ghetto Uprising",
+    "display": "Warsaw Ghetto Uprising",
+    "front": {
+      "title": "The Holocaust",
+      "display": "The Holocaust"
+    }
+  },
+  {
+    "title": "Operation Vulcan",
+    "display": "Vulcan",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Strike",
+    "display": "Strike",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Longstop Hill",
+    "display": "Longstop Hill",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Bombing of Grosseto in World War II",
+    "display": "Bombing of Grosseto",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Hill 609",
+    "display": "Hill 609",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Operation Checkmate (commando raid)",
+    "display": "Operation Checkmate",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Ramrod 16",
+    "display": "Operation Ramrod 16",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Campobasso Convoy",
+    "display": "Campobasso Convoy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Retribution",
+    "display": "Operation Retribution",
+    "front": {
+      "title": "North African campaign",
+      "display": "African Front"
+    }
+  },
+  {
+    "title": "Battle of Attu",
+    "display": "Attu",
+    "front": {
+      "title": "American theater (World War II)",
+      "display": "American Front"
+    }
+  },
+  {
+    "title": "Case Black",
+    "display": "Case Black",
+    "front": {
+      "title": "World War II in Yugoslavia",
+      "display": "Yugoslavian Front"
+    }
+  },
+  {
+    "title": "Operation Chastise",
+    "display": "Dambusters Raid",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Messina Convoy",
+    "display": "Messina Convoy",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Operation Corkscrew",
+    "display": "Operation Corkscrew",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Cartwheel",
+    "display": "Operation Cartwheel",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Kursk",
+    "display": "Kursk",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Allied invasion of Sicily",
+    "display": "Sicily",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Ladbroke",
+    "display": "Operation Ladbroke",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Gela (1943)",
+    "display": "Gela",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Chestnut",
+    "display": "Operation Chestnut",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Fustian",
+    "display": "Operation Fustian",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Scylla",
+    "display": "Operation Scylla",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Troina",
+    "display": "Troina",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Centuripe",
+    "display": "Centuripe",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Smolensk operation",
+    "display": "Smolensk (1943)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Schweinfurt–Regensburg mission",
+    "display": "Schweinfurt–Regensburg mission",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Bombing of Pisa in World War II",
+    "display": "Bombing of Pisa",
+    "front": {
+      "title": "Strategic bombing during World War II",
+      "display": "Strategic Bombing"
+    }
+  },
+  {
+    "title": "Allied invasion of Italy",
+    "display": "Invasion of Italy",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Baytown",
+    "display": "Operation Baytown",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Tarvisio (1943)",
+    "display": "Battle of Tarvisio",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Achse",
+    "display": "Operation Achse",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "German occupation of Rome",
+    "display": "German occupation of Rome",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Avalanche",
+    "display": "Operation Avalanche",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Slapstick",
+    "display": "Operation Slapstick",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Rhodes (1943)",
+    "display": "Rhodes",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Gran Sasso raid",
+    "display": "Gran Sasso raid",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Siege of Turjak",
+    "display": "Tujak",
+    "front": {
+      "title": "European theatre of World War II",
+      "display": "European Front"
+    }
+  },
+  {
+    "title": "Operation Source",
+    "display": "Operation Source",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Massacre of the Acqui Division",
+    "display": "Massacre of the Acqui Division",
+    "front": {
+      "title": "Operation Achse",
+      "display": "Operation Achse"
+    }
+  },
+  {
+    "title": "Battle of Leros",
+    "display": "Leros",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Four Days of Naples",
+    "display": "Four Days of Naples",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Devon",
+    "display": "Operation Devon",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Kos (1943)",
+    "display": "Kos",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Second Schweinfurt raid",
+    "display": "Black Thursday",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Sept-Îles",
+    "display": "Sept-Îles",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Barbara Line",
+    "display": "Barbara Line",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Kiev (1943)",
+    "display": "Kiev (1943)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Berlin (RAF campaign)",
+    "display": "Battle of Berlin (RAF campaign)",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Tarawa",
+    "display": "Tarawa",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Makin",
+    "display": "Makin",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Bernhardt Line",
+    "display": "Bernhardt Line",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Air raid on Bari",
+    "display": "Air raid on Bari",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Monte la Difensa",
+    "display": "Monte la Difensa",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of San Pietro Infine",
+    "display": "San Pietro Infine",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Ortona",
+    "display": "Ortona",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Operation Hardtack (commando raid)",
+    "display": "Operation Hardtack",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of the Bay of Biscay",
+    "display": "Bay of Biscay",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Monte Cassino",
+    "display": "Monte Cassino",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Rapido River",
+    "display": "Rapido River",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Baby Blitz",
+    "display": "Baby Blitz",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Anzio",
+    "display": "Anzio",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Cisterna",
+    "display": "Cisterna",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Kwajalein",
+    "display": "Kwajalein",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of the Admin Box",
+    "display": "Admin Box",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Battle of Eniwetok",
+    "display": "Eniwetok",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Jericho",
+    "display": "Operation Jericho",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Big Week",
+    "display": "Big Week",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Bombing of Nijmegen",
+    "display": "Bombing of Nijmegen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operations Ginny I and II",
+    "display": "Operations Ginny I and II",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Transport Plan",
+    "display": "Transport Plan",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Imphal",
+    "display": "Imphal",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Operation Tungsten",
+    "display": "Operation Tungsten",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Kohima",
+    "display": "Kohima",
+    "front": {
+      "title": "South-East Asian theatre of World War II",
+      "display": "South-East Asian Front"
+    }
+  },
+  {
+    "title": "Operation Ichi-Go",
+    "display": "Central Henan",
+    "front": {
+      "title": "Second Sino-Japanese War",
+      "display": "Second Sino-Japanese War"
+    }
+  },
+  {
+    "title": "Battle of Lyme Bay",
+    "display": "Lyme Bay",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Bombardment of Mailly-le-Camp",
+    "display": "Mailly-le-Camp",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Diadem",
+    "display": "Operation Diadem",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Tarbrush",
+    "display": "Operation Tarbrush",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Chesterfield",
+    "display": "Operation Chesterfield",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Rösselsprung (1944)",
+    "display": "Operation Rösselsprung (1944)",
+    "front": {
+      "title": "European theatre of World War II",
+      "display": "European theatre"
+    }
+  },
+  {
+    "title": "Battle of Changsha (1944)",
+    "display": "Changsha",
+    "front": {
+      "title": "Second Sino-Japanese War",
+      "display": "Second Sino-Japanese War"
+    }
+  },
+  {
+    "title": "Operation Hasty",
+    "display": "Operation Hasty",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Dingson",
+    "display": "Operation Dingson",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Samwest",
+    "display": "Operation Samwest",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Tonga",
+    "display": "Operation Tonga",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Overlord",
+    "display": "Operation Overlord",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Mission Albany",
+    "display": "Mission Albany",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Brécourt Manor Assault",
+    "display": "Brécourt Manor Assault",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Normandy landings",
+    "display": "Normandy landings",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Omaha Beach",
+    "display": "Omaha Beach",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Utah Beach",
+    "display": "Utah Beach",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Gold Beach",
+    "display": "Gold Beach",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Sword Beach",
+    "display": "Sword Beach",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Juno Beach",
+    "display": "Juno Beach",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Pointe du Hoc",
+    "display": "Pointe du Hoc",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Capture of the Caen canal and Orne river bridges",
+    "display": "Caen canal and Orne river bridges",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Merville Gun Battery",
+    "display": "Merville Gun Battery",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Cherbourg",
+    "display": "Cherbourg",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Bulbasket",
+    "display": "Operation Bulbasket",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle for Caen",
+    "display": "Caen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Bréville",
+    "display": "Bréville",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Perch",
+    "display": "Operation Perch",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Graignes",
+    "display": "Graignes",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "RAF raid on La Caine (1944)",
+    "display": "RAF raid on La Caine",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Le Mesnil-Patry",
+    "display": "Le Mesnil-Patry",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Villers-Bocage",
+    "display": "Villers-Bocage",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Second Battle of the Odon",
+    "display": "Odon",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Nietjärvi",
+    "display": "Nietjärvi",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Mascot",
+    "display": "Operation Mascot",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Goodwood",
+    "display": "Operation Goodwood",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Atlantic",
+    "display": "Operation Atlantic",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Verrières Ridge",
+    "display": "Verrières Ridge",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Saipan",
+    "display": "Saipan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Guam (1944)",
+    "display": "Guam (1944)",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Tinian",
+    "display": "Tinian",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Bombardment of Cherbourg",
+    "display": "Bombardment of Cherbourg",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Spring",
+    "display": "Operation Spring",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Gothic Line",
+    "display": "Gothic Line",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Ilomantsi (1944)",
+    "display": "Ilomantsi (1944)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Operation Hokki",
+    "display": "Operation Hokki",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Warsaw Uprising",
+    "display": "Warsaw Uprising",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Gemmano",
+    "display": "Gemmano",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Operation Loyton",
+    "display": "Operation Loyton",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Dragoon",
+    "display": "Operation Dragoon",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Guilin–Liuzhou",
+    "display": "Guilin–Liuzhou",
+    "front": {
+      "title": "Second Sino-Japanese War",
+      "display": "Second Sino-Japanese War"
+    }
+  },
+  {
+    "title": "Operation Goodwood (naval)",
+    "display": "Operation Goodwood (naval)",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Mairy",
+    "display": "Mairy",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Aachen",
+    "display": "Aachen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Dompaire",
+    "display": "Dompaire",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Rimini (1944)",
+    "display": "Rimini (1944)",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Operation Paravane",
+    "display": "Operation Paravane",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Peleliu",
+    "display": "Peleliu",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Angaur",
+    "display": "Angaur",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Arnhem",
+    "display": "Arnhem",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of San Marino",
+    "display": "San Marino",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Hürtgen Forest",
+    "display": "Hürtgen Forest",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Monte Battaglia",
+    "display": "Monte Battaglia",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Soviet Baltic Sea submarine campaign in 1944",
+    "display": "Soviet submarine campaign (1944)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of the Scheldt",
+    "display": "Scheldt",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Debrecen",
+    "display": "Debrecen",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Crucifix Hill",
+    "display": "Crucifix Hill",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Leyte",
+    "display": "Leyte",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Leyte Gulf",
+    "display": "Leyte Gulf",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Obviate",
+    "display": "Operation Obviate",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Vianden",
+    "display": "Vianden Castle",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Queen",
+    "display": "Operation Queen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Monte Castello",
+    "display": "Monte Castello",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Battle of Mindoro",
+    "display": "Mindoro",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of the Bulge",
+    "display": "The Bulge",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Garfagnana",
+    "display": "Garfagnana",
+    "front": {
+      "title": "Italian front (World War I)",
+      "display": "Italian Front"
+    }
+  },
+  {
+    "title": "Soviet Baltic Sea campaign in 1945",
+    "display": "Soviet naval campaign (1945)",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Meiktila and Mandalay",
+    "display": "Meiktila and Mandalay",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Luzon",
+    "display": "Luzon",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle for the Kapelsche Veer",
+    "display": "Kapelsche Veer",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Raid at Cabanatuan",
+    "display": "Raid at Cabanatuan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Bataan (1945)",
+    "display": "Bataan (1945)",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Manila (1945)",
+    "display": "Manila",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Solstice",
+    "display": "Operation Solstice",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Corregidor (1945)",
+    "display": "Corregidor (1945)",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Encore",
+    "display": "Operation Encore",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Iwo Jima",
+    "display": "Iwo Jima",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Raid on Los Baños",
+    "display": "Los Baños",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Spring Awakening",
+    "display": "Operation Spring Awakening",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Mindanao",
+    "display": "Mindanao",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of the Ligurian Sea",
+    "display": "Ligurian Sea",
+    "front": {
+      "title": "Mediterranean and Middle East theatre of World War II",
+      "display": "Mediterranean Front"
+    }
+  },
+  {
+    "title": "Battle of Visayas",
+    "display": "Visayas",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of West Henan–North Hubei",
+    "display": "West Henan–North Hubei",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Operation Varsity",
+    "display": "Operation Varsity",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Roast",
+    "display": "Operation Roast",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Okinawa",
+    "display": "Okinawa",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of West Hunan",
+    "display": "West Hunan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Bologna",
+    "display": "Bologna",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of the Argenta Gap",
+    "display": "Argenta Gap",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Groningen",
+    "display": "Groningen",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Montese",
+    "display": "Montese",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Otterlo",
+    "display": "Otterlo",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Battle of Berlin",
+    "display": "Berlin",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Capture of Hamburg",
+    "display": "Hamburg",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Operation Herring",
+    "display": "Operation Herring",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Odžak",
+    "display": "Odžak",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Halbe",
+    "display": "Halbe",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Collecchio",
+    "display": "Collecchio",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Race for Trieste",
+    "display": "Trieste",
+    "front": {
+      "title": "Italian campaign (World War II)",
+      "display": "Italian Campaign"
+    }
+  },
+  {
+    "title": "Battle of Tarakan (1945)",
+    "display": "Tarakan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Castle Itter",
+    "display": "Castle Itter",
+    "front": {
+      "title": "Western Front (World War II)",
+      "display": "Western Front"
+    }
+  },
+  {
+    "title": "Prague offensive",
+    "display": "Prague",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of Poljana",
+    "display": "Poljana",
+    "front": {
+      "title": "Eastern Front (World War II)",
+      "display": "Eastern Front"
+    }
+  },
+  {
+    "title": "Battle of North Borneo",
+    "display": "North Borneo",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Battle of Balikpapan (1945)",
+    "display": "Balikpapan",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  },
+  {
+    "title": "Soviet invasion of Manchuria",
+    "display": "Manchuria",
+    "front": {
+      "title": "Pacific War",
+      "display": "Pacific War"
+    }
+  }
+]

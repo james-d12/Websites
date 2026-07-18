@@ -5,13 +5,13 @@ interface Props {
     title: string;
     imageAlt: string;
     slug: string;
-    type: "hobbyist" | "professional";
+    type: "website" | "professional" | "hobbyist";
 }
 
 const {title, imageAlt, slug, type} = Astro.props;
 const imageSrc = projectImages[slug];
-const typeLabel = type === "professional" ? "Professional" : "Hobbyist";
-const typeClass = type === "professional" ? "bg-green-600" : "bg-blue-600";
+const typeLabel = type === "professional" ? "Professional" : type === "website" ? "Website" : "Hobbyist";
+const typeClass = type === "professional" ? "bg-green-600" : type === "website" ? "bg-purple-600" : "bg-blue-600";
 ---
 
 <a class="project-card" href={`/project/${slug}`}>
@@ -24,7 +24,7 @@ const typeClass = type === "professional" ? "bg-green-600" : "bg-blue-600";
             >
                 {title}
             </h3>
-            <span class={`${typeClass} rounded-xl px-3 py-1 absolute text-sm text-white bottom-5 right-5`}>
+            <span class={`${typeClass} rounded-xl px-6 py-2 absolute text-2xl text-white bottom-5 right-5`}>
                 {typeLabel}
             </span>
         </div>

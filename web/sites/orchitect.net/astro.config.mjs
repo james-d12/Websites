@@ -4,6 +4,7 @@ import starlight from "@astrojs/starlight";
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
+  compressHTML: true,
   site: "https://orchitect.net",
   server: {
     port: 35423,
@@ -22,11 +23,11 @@ export default defineConfig({
       sidebar: [
         {
           label: "Guides",
-          autogenerate: { directory: "docs/guides" },
+          items: [{ autogenerate: { directory: "docs/guides" } }],
         },
         {
           label: "References",
-          autogenerate: { directory: "docs/references" },
+          items: [{ autogenerate: { directory: "docs/references" } }],
         },
       ],
     }),

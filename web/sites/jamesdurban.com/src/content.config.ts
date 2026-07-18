@@ -1,5 +1,6 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
+import { z } from "astro/zod";
 
 const projects = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/projects" }),
@@ -9,7 +10,7 @@ const projects = defineCollection({
     publishDate: z.coerce.date(),
     skills: z.array(z.string()),
     img_alt: z.string(),
-    type: z.enum(["hobbyist", "professional"]),
+    type: z.enum(["website", "professional", "hobbyist"]),
   }),
 });
 
