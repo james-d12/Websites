@@ -22,36 +22,38 @@ export default defineConfig({
       use: { ...devices["Desktop Chrome"] },
     },
   ],
-  webServer: [
-    {
-      command: "pnpm --filter jamesdurban.com dev",
-      url: "http://localhost:35421",
-      timeout: 120 * 1000,
-      reuseExistingServer: !process.env.CI,
-    },
-    {
-      command: "pnpm --filter blackcattattoos.co.uk dev",
-      url: "http://localhost:35422",
-      timeout: 120 * 1000,
-      reuseExistingServer: !process.env.CI,
-    },
-    {
-      command: "pnpm --filter orchitect.net dev",
-      url: "http://localhost:35423",
-      timeout: 120 * 1000,
-      reuseExistingServer: !process.env.CI,
-    },
-    {
-      command: "pnpm --filter stcatherinesgroup.com dev",
-      url: "http://localhost:35424",
-      timeout: 120 * 1000,
-      reuseExistingServer: !process.env.CI,
-    },
-    {
-      command: "pnpm --filter thecontourclinicrichmond.co.uk dev",
-      url: "http://localhost:35425",
-      timeout: 120 * 1000,
-      reuseExistingServer: !process.env.CI,
-    },
-  ],
+  webServer: process.env.PLAYWRIGHT_SKIP_WEBSERVER
+    ? undefined
+    : [
+        {
+          command: "pnpm --filter jamesdurban.com dev",
+          url: "http://localhost:35421",
+          timeout: 120 * 1000,
+          reuseExistingServer: !process.env.CI,
+        },
+        {
+          command: "pnpm --filter blackcattattoos.co.uk dev",
+          url: "http://localhost:35422",
+          timeout: 120 * 1000,
+          reuseExistingServer: !process.env.CI,
+        },
+        {
+          command: "pnpm --filter orchitect.net dev",
+          url: "http://localhost:35423",
+          timeout: 120 * 1000,
+          reuseExistingServer: !process.env.CI,
+        },
+        {
+          command: "pnpm --filter stcatherinesgroup.com dev",
+          url: "http://localhost:35424",
+          timeout: 120 * 1000,
+          reuseExistingServer: !process.env.CI,
+        },
+        {
+          command: "pnpm --filter thecontourclinicrichmond.co.uk dev",
+          url: "http://localhost:35425",
+          timeout: 120 * 1000,
+          reuseExistingServer: !process.env.CI,
+        },
+      ],
 });

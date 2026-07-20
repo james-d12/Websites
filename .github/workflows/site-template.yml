@@ -161,6 +161,18 @@ jobs:
             exit 1
           EOF
 
+  e2e-staging:
+    runs-on: ubuntu-latest
+    name: Test ${{ inputs.site }} Staging
+    needs: deploy-staging
+    if: needs.deploy-staging.result == 'success' && github.ref == 'refs/heads/main'
+    steps:
+      - uses: ./.github/actions/e2e-test
+        with:
+          site: ${{ inputs.site }}
+          base-url: https://staging.${{ inputs.site }}
+          report-name: playwright-report-${{ inputs.site }}-staging
+
   deploy-live:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Live
