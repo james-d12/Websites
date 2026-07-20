@@ -73,7 +73,7 @@ const navLinks = [
         </div>
     </div>
     <nav
-        class="w-full bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-md"
+        class="relative w-full bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-md"
     >
         <div
             class="max-w-8xl mx-auto py-4 lg:py-0 px-2 sm:px-4 md:px-8 flex items-center justify-between"
@@ -103,7 +103,7 @@ const navLinks = [
                 </div>
             </a>
 
-            <ul class="hidden 2xl:flex items-center gap-12">
+            <ul class="hidden 2xl:flex items-center gap-12 ">
                 {
                     navLinks.map((link) => (
                         <li class={link.dropdown ? "relative group" : ""}>
@@ -202,30 +202,51 @@ const navLinks = [
 
         <div
             id="mobile-menu"
-            class="hidden 2xl:hidden border-t border-white/10 bg-linear-to-l from-green-dark to-green-darker"
+            class="hidden 2xl:hidden absolute top-full left-0 w-full z-40 max-h-[80vh] overflow-y-auto border-t border-white/10 bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-lg"
         >
-            <div class="max-w-6xl mx-auto px-6 py-4 space-y-1">
+            <div class="max-w-6xl mx-auto px-6 py-2 divide-y divide-white/10">
                 {
                     navLinks.map((link) => (
-                        <div>
+                        <div class="py-0.5 first:pt-0 last:pb-0">
                             {link.href ? (
                                 <a
                                     href={link.href}
-                                    class="block py-2.5 text-sm font-medium tracking-wide uppercase transition-colors text-white hover:text-white/90"
+                                    class="block py-2 text-xl font-semibold tracking-wide uppercase transition-colors text-white hover:text-white/80"
                                 >
                                     {link.name}
                                 </a>
                             ) : (
-                                <span class="block py-2.5 text-sm font-medium tracking-wide uppercase text-white">
+                                <button
+                                    type="button"
+                                    class="mobile-dropdown-toggle flex items-center justify-between gap-2 w-full py-2 text-xl font-semibold tracking-wide uppercase text-white"
+                                    aria-expanded="false"
+                                    aria-controls={`mobile-dropdown-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
+                                >
                                     {link.name}
-                                </span>
+                                    <svg
+                                        class="mobile-dropdown-chevron w-6 h-6 shrink-0 transition-transform"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M19 9l-7 7-7-7"
+                                        />
+                                    </svg>
+                                </button>
                             )}
                             {link.dropdown && (
-                                <div class="pl-4 space-y-1">
+                                <div
+                                    id={`mobile-dropdown-${link.name.toLowerCase().replace(/\s+/g, "-")}`}
+                                    class="mobile-dropdown-panel hidden mb-1.5 rounded-lg bg-black/15"
+                                >
                                     {link.dropdown.map((item) => (
                                         <a
                                             href={item.href}
-                                            class="block py-2 text-sm text-white hover:text-white/90 transition-colors"
+                                            class="block px-4 py-1.5 text-xl text-white/90 hover:bg-white/10 hover:text-white rounded-lg transition-colors"
                                         >
                                             {item.name}
                                         </a>
@@ -250,12 +271,74 @@ const navLinks = [
 
         if (!btn || !menu || !iconOpen || !iconClose || !btnText) return;
 
+        let scrollY = 0;
+
+        // position: fixed lock (rather than overflow: hidden) avoids iOS
+        // Safari's background rubber-band scroll bleeding through the overlay
+        const lockScroll = () => {
+            scrollY = window.scrollY;
+            document.body.style.position = "fixed";
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.left = "0";
+            document.body.style.right = "0";
+            document.body.style.width = "100%";
+        };
+
+        const unlockScroll = () => {
+            document.body.style.position = "";
+            document.body.style.top = "";
+            document.body.style.left = "";
+            document.body.style.right = "";
+            document.body.style.width = "";
+            window.scrollTo(0, scrollY);
+        };
+
+        const dropdownToggles = menu.querySelectorAll<HTMLButtonElement>(
+            ".mobile-dropdown-toggle",
+        );
+
+        const collapseDropdowns = () => {
+            dropdownToggles.forEach((dropdownBtn) => {
+                dropdownBtn.setAttribute("aria-expanded", "false");
+                dropdownBtn
+                    .querySelector(".mobile-dropdown-chevron")
+                    ?.classList.remove("rotate-180");
+
+                const panelId = dropdownBtn.getAttribute("aria-controls");
+                const panel = panelId && document.getElementById(panelId);
+                panel?.classList.add("hidden");
+            });
+        };
+
+        dropdownToggles.forEach((dropdownBtn) => {
+            dropdownBtn.addEventListener("click", () => {
+                const isExpanded =
+                    dropdownBtn.getAttribute("aria-expanded") === "true";
+                const panelId = dropdownBtn.getAttribute("aria-controls");
+                const panel = panelId && document.getElementById(panelId);
+                if (!panel) return;
+
+                dropdownBtn.setAttribute("aria-expanded", String(!isExpanded));
+                panel.classList.toggle("hidden");
+                dropdownBtn
+                    .querySelector(".mobile-dropdown-chevron")
+                    ?.classList.toggle("rotate-180");
+            });
+        });
+
         const toggle = () => {
             const isOpen = !menu.classList.contains("hidden");
             menu.classList.toggle("hidden");
             iconOpen.classList.toggle("hidden");
             iconClose.classList.toggle("hidden");
             btn.setAttribute("aria-expanded", String(!isOpen));
+
+            if (isOpen) {
+                unlockScroll();
+                collapseDropdowns();
+            } else {
+                lockScroll();
+            }
 
             // Update button text and title for accessibility
             if (!isOpen) {
