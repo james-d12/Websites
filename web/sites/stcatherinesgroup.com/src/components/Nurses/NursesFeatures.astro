@@ -1,0 +1,59 @@
+---
+import type { NurseFeatureCard } from "../../content.config";
+
+interface Props {
+    eyebrow: string;
+    title: string;
+    description: string;
+    cards: NurseFeatureCard[];
+    background?: string;
+}
+
+const {eyebrow, title, description, cards, background = 'bg-white'} = Astro.props;
+---
+
+<section class={`py-20 md:py-28 ${background}`}>
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">{eyebrow}</p>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                {title}
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                {description}
+            </p>
+        </div>
+
+        <div class="space-y-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                {cards.map((card) => (
+                        <div class="bg-warm-50 rounded-xl p-8">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="w-12 h-12 rounded-lg bg-green-dark flex items-center justify-center shrink-0">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                         viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                              d={card.icon}/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-gray-900 mb-3">{card.title}</h3>
+                                    <p class="text-gray-600 leading-relaxed mb-3">
+                                        {card.body}
+                                    </p>
+                                    <ul class="space-y-2 text-gray-600 text-sm">
+                                        {card.items.map((item) => (
+                                                <li class="flex items-start gap-2">
+                                                    <span class="text-green-dark">→</span>
+                                                    <span>{item}</span>
+                                                </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

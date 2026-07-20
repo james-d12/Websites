@@ -10,17 +10,26 @@ interface Testimonial {
 interface Props {
     testimonials: Testimonial[];
     background?: string;
+    title?: string;
+    subTitle?: string;
+    description?: string;
 }
 
-const {testimonials, background = 'bg-white'} = Astro.props;
+const {
+    testimonials,
+    background = 'bg-white',
+    title = 'What People Say',
+    subTitle = 'Testimonials',
+    description = 'Hear from the families and individuals who trust us with their care',
+} = Astro.props;
 ---
 <section class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
             <ServicesHeading
-                    title="What People Say"
-                    subTitle="Testimonials"
-                    description="Hear from the families and individuals who trust us with their care"/>
+                    title={title}
+                    subTitle={subTitle}
+                    description={description}/>
         </div>
 
         <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
