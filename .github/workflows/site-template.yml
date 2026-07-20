@@ -167,6 +167,9 @@ jobs:
     needs: deploy-staging
     if: needs.deploy-staging.result == 'success' && github.ref == 'refs/heads/main'
     steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6
+
       - uses: ./.github/actions/e2e-test
         with:
           site: ${{ inputs.site }}
@@ -176,9 +179,9 @@ jobs:
   deploy-live:
     runs-on: ubuntu-latest
     name: Deploy ${{ inputs.site }} To Live
-    needs: deploy-staging
+    needs: [deploy-staging, e2e-staging]
     environment: ${{ inputs.cms_deployment && 'Production_CMS' || 'Production' }}
-    if: needs.deploy-staging.result == 'success' && github.ref == 'refs/heads/main'
+    if: needs.deploy-staging.result == 'success' && needs.e2e-staging.result == 'success' && github.ref == 'refs/heads/main'
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8

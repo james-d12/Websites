@@ -74,8 +74,9 @@ test.describe("Individual Project Page", () => {
 
   test("displays project title", async ({ page }) => {
     await page.goto(`${BASE_URL}/project/atomic`);
-    // Check for h2 heading with project title
-    const heading = page.locator("h2");
+    // Scoped to <main> so this doesn't also match Astro's dev-toolbar
+    // "Featured integrations" h2, which only renders in `astro dev` mode.
+    const heading = page.locator("main h2");
     await expect(heading).toBeVisible();
   });
 
