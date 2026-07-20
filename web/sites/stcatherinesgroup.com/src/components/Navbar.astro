@@ -1,33 +1,9 @@
 ---
 import favicon from "../assets/favicon.ico";
-
-const services = [
-    { name: "1-1 Chaperone Carer", href: "/services/1-1-chaperone-carer" },
-    {
-        name: "1-1 Companionship Carer",
-        href: "/services/1-1-companionship-carer",
-    },
-    { name: "1-1 Dementia Carer", href: "/services/1-1-dementia-carer" },
-    { name: "1-1 Safety Carer", href: "/services/1-1-safety-carer" },
-    { name: "Personal Assistants", href: "/services/personal-assistants" },
-];
-
-const nurses = [
-    { name: "Care Home Nurses", href: "/nurses/carehome-nurses" },
-    { name: "Hospital Nurses", href: "/nurses/hospital-nurses" },
-    { name: "Practice Nurses", href: "/nurses/practice-nurses" },
-];
-
-const navLinks = [
-    { name: "About", href: "/about-us" },
-    { name: "Services", dropdown: services },
-    { name: "Nurses", dropdown: nurses },
-    { name: "Testimonials", href: "/testimonials" },
-    { name: "Contact", href: "/contact" },
-];
+import { navLinks } from "../data/navigation";
 ---
 
-<div class="sticky top-0 left-0 w-full z-50">
+<div id="site-navbar" class="sticky top-0 left-0 w-full z-50">
     <div class="hidden md:block w-full bg-white py-1 px-6 sm:px-8">
         <div class="max-w-8xl mx-auto flex items-center justify-center gap-6">
             <div class="flex items-center gap-2">
@@ -116,13 +92,15 @@ const navLinks = [
                                     {link.name}
                                 </a>
                             ) : (
-                                <span
+                                <button
+                                    type="button"
+                                    aria-haspopup="true"
                                     class={`text-xl md:text-2xl tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}
                                 >
                                     {link.name}
                                     {link.dropdown && (
                                         <svg
-                                            class="w-6.5 h-6.5 transition-transform group-hover:rotate-180"
+                                            class="w-6.5 h-6.5 transition-transform group-hover:rotate-180 group-focus-within:rotate-180"
                                             fill="none"
                                             stroke="currentColor"
                                             viewBox="0 0 24 24"
@@ -135,10 +113,10 @@ const navLinks = [
                                             />
                                         </svg>
                                     )}
-                                </span>
+                                </button>
                             )}
                             {link.dropdown && (
-                                <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
                                     <div class="bg-linear-to-l from-green-dark to-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-80">
                                         {link.dropdown.map((item) => (
                                             <a
@@ -268,6 +246,7 @@ const navLinks = [
         const iconOpen = document.getElementById("menu-icon-open");
         const iconClose = document.getElementById("menu-icon-close");
         const btnText = document.getElementById("menu-btn-text");
+        const navRoot = document.getElementById("site-navbar");
 
         if (!btn || !menu || !iconOpen || !iconClose || !btnText) return;
 
@@ -275,11 +254,27 @@ const navLinks = [
         // avoids breaking the sticky navbar's position calculation, since it
         // doesn't remove <body> from normal document flow
         const lockScroll = () => {
+            const scrollbarWidth =
+                window.innerWidth - document.documentElement.clientWidth;
             document.documentElement.style.overflow = "hidden";
+            if (scrollbarWidth > 0) {
+                document.documentElement.style.paddingRight = `${scrollbarWidth}px`;
+            }
+
+            // Keep keyboard/AT focus inside the open menu rather than letting
+            // it tab into page content hidden behind the overlay
+            Array.from(document.body.children).forEach((el) => {
+                if (el !== navRoot) el.setAttribute("inert", "");
+            });
         };
 
         const unlockScroll = () => {
             document.documentElement.style.overflow = "";
+            document.documentElement.style.paddingRight = "";
+
+            Array.from(document.body.children).forEach((el) => {
+                el.removeAttribute("inert");
+            });
         };
 
         const dropdownToggles = menu.querySelectorAll<HTMLButtonElement>(
@@ -325,6 +320,7 @@ const navLinks = [
             if (isOpen) {
                 unlockScroll();
                 collapseDropdowns();
+                btn.focus();
             } else {
                 lockScroll();
             }
