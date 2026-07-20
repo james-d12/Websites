@@ -79,4 +79,65 @@ const services = defineCollection({
     }),
 });
 
-export const collections = { pages, services };
+const nurseFeatureCard = z.object({
+  title: z.string(),
+  icon: z.string(),
+  body: z.string(),
+  items: z.array(z.string()),
+});
+
+export type NurseFeatureCard = z.infer<typeof nurseFeatureCard>;
+
+const nurseFeatures = z.object({
+  eyebrow: z.string(),
+  title: z.string(),
+  description: z.string(),
+  cards: z.array(nurseFeatureCard),
+});
+
+export type NurseFeatures = z.infer<typeof nurseFeatures>;
+
+const nurseTeam = z.object({
+  eyebrow: z.string(),
+  title: z.string(),
+  paragraphs: z.array(z.string()),
+  checklistTitle: z.string(),
+  checklistItems: z.array(
+    z.object({
+      label: z.string(),
+      text: z.string(),
+    }),
+  ),
+});
+
+export type NurseTeam = z.infer<typeof nurseTeam>;
+
+const nurses = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/nurses" }),
+  schema: z.object({
+    meta: z.object({
+      title: z.string(),
+      description: z.string(),
+    }),
+    hero: z.object({
+      label: z.string(),
+      title: z.string(),
+      description: z.string(),
+      imageAlt: z.string(),
+    }),
+    features: nurseFeatures,
+    team: nurseTeam,
+    testimonials: z.array(
+      z.object({
+        quote: z.string(),
+        name: z.string(),
+        relationship: z.string(),
+        service: z.string(),
+      }),
+    ),
+    testimonialsBackground: z.string().default("bg-white"),
+    ctaBackground: z.string().default("bg-warm-50"),
+  }),
+});
+
+export const collections = { pages, services, nurses };
