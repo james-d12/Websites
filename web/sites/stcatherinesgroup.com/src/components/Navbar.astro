@@ -271,26 +271,15 @@ const navLinks = [
 
         if (!btn || !menu || !iconOpen || !iconClose || !btnText) return;
 
-        let scrollY = 0;
-
-        // position: fixed lock (rather than overflow: hidden) avoids iOS
-        // Safari's background rubber-band scroll bleeding through the overlay
+        // overflow: hidden on <html> (rather than position: fixed on body)
+        // avoids breaking the sticky navbar's position calculation, since it
+        // doesn't remove <body> from normal document flow
         const lockScroll = () => {
-            scrollY = window.scrollY;
-            document.body.style.position = "fixed";
-            document.body.style.top = `-${scrollY}px`;
-            document.body.style.left = "0";
-            document.body.style.right = "0";
-            document.body.style.width = "100%";
+            document.documentElement.style.overflow = "hidden";
         };
 
         const unlockScroll = () => {
-            document.body.style.position = "";
-            document.body.style.top = "";
-            document.body.style.left = "";
-            document.body.style.right = "";
-            document.body.style.width = "";
-            window.scrollTo(0, scrollY);
+            document.documentElement.style.overflow = "";
         };
 
         const dropdownToggles = menu.querySelectorAll<HTMLButtonElement>(

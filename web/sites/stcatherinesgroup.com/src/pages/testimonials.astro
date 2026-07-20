@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import CallToAction from '../components/CallToAction.astro';
+import * as ServiceComponent from "../components/Services";
+
+interface Testimonial {
+    quote: string;
+    name: string;
+    relationship: string;
+    service: string;
+}
+
+function dedupeTestimonials(entries: { data: { testimonials: Testimonial[] } }[]) {
+    const seen = new Set<string>();
+    return entries
+        .flatMap((entry) => entry.data.testimonials)
+        .filter((testimonial) => (seen.has(testimonial.quote) ? false : (seen.add(testimonial.quote), true)));
+}
+
+const serviceEntries = await getCollection('services');
+const nurseEntries = await getCollection('nurses');
+
+const careTestimonials = dedupeTestimonials(serviceEntries);
+const nursingTestimonials = dedupeTestimonials(nurseEntries);
+---
+
+<Layout title="Testimonials - St Catherine's Group"
+        description="Read what families, clients, and care homes say about the carers and nurses at St Catherine's Group.">
+    <Navbar/>
+
+    <main>
+        <section class="relative bg-warm-50 py-10">
+            <div class="max-w-5xl mx-auto px-6 text-center">
+                <p class="text-green-dark text-xl lg:text-3xl tracking-widest uppercase mb-4">
+                    Testimonials
+                </p>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                    What People Say About Us
+                </h1>
+            </div>
+        </section>
+
+        <ServiceComponent.ServicesTestimonials
+                testimonials={careTestimonials}
+                background="bg-white"
+                subTitle="Care Services"
+                title="What Families Say"
+                description="Hear from the families and individuals who trust our 1-1 carers with their care"
+        />
+
+        <ServiceComponent.ServicesTestimonials
+                testimonials={nursingTestimonials}
+                background="bg-warm-50"
+                subTitle="Nursing Services"
+                title="What Our Clients Say"
+                description="Hear from care homes, hospitals, and clients who trust our specialist nurses"
+        />
+    </main>
+
+    <CallToAction/>
+    <Footer/>
+</Layout>
