@@ -19,11 +19,11 @@ const nurses = [
 ];
 
 const navLinks = [
-    { name: "About Us", href: "/about-us" },
-    { name: "1-1 Care Services", dropdown: services },
+    { name: "About", href: "/about-us" },
+    { name: "Services", dropdown: services },
     { name: "Nurses", dropdown: nurses },
     { name: "Testimonials", href: "/testimonials" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Contact", href: "/contact" },
 ];
 ---
 
@@ -90,9 +90,15 @@ const navLinks = [
                 />
                 <div class="grid grid-rows">
                     <span
-                        class="text-2xl md:text-4xl lg:text-5xl xl:text-6xl m-4 font-semibold text-white tracking-tight lg:whitespace-nowrap"
+                        class="text-2xl md:text-4xl lg:text-6xl text-white tracking-tight lg:whitespace-nowrap"
                     >
-                        St Catherine's Group Healthcare Ltd
+                        St Catherine's Group Ltd
+                    </span>
+                    <span
+                        class="text-md md:text-2xl lg:text-3xl text-white tracking-tight"
+                        style="font-family: 'Lora', Georgia, serif;"
+                    >
+                        Healthcare
                     </span>
                 </div>
             </a>
@@ -105,13 +111,13 @@ const navLinks = [
                                 <a
                                     title={link.name}
                                     href={link.href}
-                                    class="text-xl md:text-2xl font-medium tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
+                                    class="text-xl lg:text-2xl tracking-wide uppercase transition-colors duration-200 text-white hover:text-white/90"
                                 >
                                     {link.name}
                                 </a>
                             ) : (
                                 <span
-                                    class={`text-xl md:text-2xl font-medium tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}
+                                    class={`text-xl md:text-2xl tracking-wide uppercase transition-colors duration-200 text-white cursor-pointer ${link.dropdown ? "flex items-center gap-1" : ""}`}
                                 >
                                     {link.name}
                                     {link.dropdown && (
