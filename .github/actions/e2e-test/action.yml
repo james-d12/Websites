@@ -18,15 +18,15 @@ runs:
   using: composite
   steps:
     - name: Install Node.js
-      uses: actions/setup-node@53b83947a5a98c8d113130e565377fae1a50d02f # v6
+      uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7
       with:
         node-version: 24
 
-    - uses: pnpm/action-setup@fc06bc1257f339d1d5d8b3a19a8cae5388b55320 # v5
+    - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271 # v6
       name: Install pnpm
       id: pnpm-install
       with:
-        version: 10
+        version: 11
         run_install: false
 
     - name: Get pnpm store directory
@@ -35,7 +35,7 @@ runs:
       run: |
         echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-    - uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7   # v5
+    - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9   # v6
       name: Setup pnpm cache
       with:
         path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
@@ -56,7 +56,7 @@ runs:
 
     - name: Cache Playwright browsers
       id: playwright-cache
-      uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7   # v5
+      uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9   # v6
       with:
         path: ~/.cache/ms-playwright
         key: ${{ runner.os }}-playwright-${{ steps.playwright-version.outputs.version }}
