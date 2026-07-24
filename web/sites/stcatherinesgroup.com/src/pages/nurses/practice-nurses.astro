@@ -6,11 +6,12 @@ import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import * as ServiceComponent from "../../components/Services";
 import * as NurseComponent from "../../components/Nurses";
+import SectionDivider from '../../components/SectionDivider.astro';
 import practiceNursesImage from "../../assets/practice-nurses.jpg";
 
 const entry = await getEntry('nurses', 'practice-nurses');
 if (!entry) throw new Error('Nurses content not found: practice-nurses');
-const { meta, hero, features, team, testimonials, testimonialsBackground, ctaBackground } = entry.data;
+const { meta, hero, features, team, testimonials, testimonialsBackground } = entry.data;
 ---
 
 <Layout title={meta.title} description={meta.description}>
@@ -25,12 +26,16 @@ const { meta, hero, features, team, testimonials, testimonialsBackground, ctaBac
                 imageAlt={hero.imageAlt}
         />
 
+        <SectionDivider />
+
         <NurseComponent.NursesFeatures
                 eyebrow={features.eyebrow}
                 title={features.title}
                 description={features.description}
                 cards={features.cards}
         />
+
+        <SectionDivider />
 
         <NurseComponent.NursesTeam
                 eyebrow={team.eyebrow}
@@ -40,9 +45,13 @@ const { meta, hero, features, team, testimonials, testimonialsBackground, ctaBac
                 checklistItems={team.checklistItems}
         />
 
+        <SectionDivider />
+
         <ServiceComponent.ServicesTestimonials testimonials={testimonials} background={testimonialsBackground}/>
     </main>
 
-    <CallToAction background={ctaBackground}/>
+    <SectionDivider />
+
+    <CallToAction />
     <Footer/>
 </Layout>

@@ -100,6 +100,5 @@ testimonials:
     relationship: "Client"
     service: "Personal Assistant"
 
-testimonialsBackground: "bg-warm-50"
-ctaBackground: "bg-white"
+testimonialsBackground: "bg-white"
 ---

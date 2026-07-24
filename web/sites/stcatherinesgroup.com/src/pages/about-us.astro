@@ -1,11 +1,13 @@
 ---
+import { Image } from "astro:assets";
 import { getEntry, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
 import ProseContent from "../components/ProseContent.astro";
-import Heading from "../components/Heading.astro";
+import SectionDivider from "../components/SectionDivider.astro";
+import favicon from "../assets/favicon.ico";
 
 const entry = await getEntry("pages", "about");
 const { Content } = await render(entry);
@@ -15,9 +17,27 @@ const { title, description, hero } = entry.data;
 <Layout title={title} description={description}>
     <Navbar />
     <main>
-        <section class="relative bg-white py-10">
-            <Heading title={hero.heading} subTitle={hero.eyebrow} />
+        <section class="relative bg-white pt-10 pb-10">
+            <div class="flex justify-center mb-12">
+                <div class="bg-linear-to-l from-green-dark via-green-dark to-green-darker rounded-2xl shadow-lg">
+                    <Image
+                        src={favicon}
+                        alt="St Catherine's Group Logo"
+                        width={128}
+                        height={128}
+                        class="w-36 h-36"
+                    />
+                </div>
+            </div>
+
+            <div class="max-w-4xl md:max-w-5xl mx-auto text-center">
+                <h2 class="text-green-dark text-3xl md:text-7xl mb-6">
+                    {hero.heading}
+                </h2>
+            </div>
         </section>
+
+        <SectionDivider />
 
         <section class="bg-white pb-10">
             <ProseContent>
@@ -25,6 +45,9 @@ const { title, description, hero } = entry.data;
             </ProseContent>
         </section>
     </main>
-    <CallToAction />
+
+    <SectionDivider />
+
+    <CallToAction background="bg-white" />
     <Footer />
 </Layout>

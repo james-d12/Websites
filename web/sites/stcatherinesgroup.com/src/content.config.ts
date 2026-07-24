@@ -74,8 +74,7 @@ const services = defineCollection({
           service: z.string(),
         }),
       ),
-      testimonialsBackground: z.string().default("bg-white"),
-      ctaBackground: z.string().default("bg-white"),
+      testimonialsBackground: z.string().default("bg-white")
     }),
 });
 
@@ -135,8 +134,7 @@ const nurses = defineCollection({
         service: z.string(),
       }),
     ),
-    testimonialsBackground: z.string().default("bg-white"),
-    ctaBackground: z.string().default("bg-warm-50"),
+    testimonialsBackground: z.string().default("bg-white")
   }),
 });
 

@@ -6,10 +6,11 @@ import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
 import personalAssistantImage from "../../assets/personal-assistant.jpg";
 import * as ServiceComponent from "../../components/Services";
+import SectionDivider from '../../components/SectionDivider.astro';
 
 const entry = await getEntry('services', 'personal-assistants');
 if (!entry) throw new Error('Service content not found: personal-assistants');
-const { meta, hero, about, testimonials, testimonialsBackground, ctaBackground } = entry.data;
+const { meta, hero, about, testimonials, testimonialsBackground } = entry.data;
 ---
 
 <Layout title={meta.title} description={meta.description}>
@@ -24,6 +25,8 @@ const { meta, hero, about, testimonials, testimonialsBackground, ctaBackground }
                 imageAlt={hero.imageAlt}
         />
 
+        <SectionDivider />
+
         <ServiceComponent.ServicesAbout
                 title={about.title}
                 subTitle={about.subTitle}
@@ -31,9 +34,13 @@ const { meta, hero, about, testimonials, testimonialsBackground, ctaBackground }
                 callout={about.callout}
         />
 
+        <SectionDivider />
+
         <ServiceComponent.ServicesTestimonials testimonials={testimonials} background={testimonialsBackground}/>
 
-        <CallToAction background={ctaBackground}/>
+        <SectionDivider />
+
+        <CallToAction />
     </main>
 
     <Footer/>

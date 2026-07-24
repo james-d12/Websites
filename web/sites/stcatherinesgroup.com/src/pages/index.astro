@@ -7,15 +7,20 @@ import Services from '../components/Services.astro';
 import Nurses from '../components/Nurses.astro';
 import CallToAction from '../components/CallToAction.astro';
 import Footer from '../components/Footer.astro';
+import SectionDivider from '../components/SectionDivider.astro';
 ---
 
 <Layout>
     <Navbar/>
     <Hero/>
+    <SectionDivider/>
     <main>
         <About/>
+        <SectionDivider/>
         <Services/>
+        <SectionDivider/>
         <Nurses/>
+        <SectionDivider/>
         <CallToAction background="bg-white"/>
     </main>
     <Footer/>
