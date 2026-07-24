@@ -1,5 +1,5 @@
 ---
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 import hospitalNursesImage from "../assets/hospital-nurses.jpg";
 import careHomeNursesImage from "../assets/carehome-nurses.jpg";
 import practiceNursesImage from "../assets/practice-nurses.jpg";
@@ -8,19 +8,22 @@ import Heading from "./Heading.astro";
 const nurses = [
     {
         title: "Hospital Nurses",
-        description: "Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments.",
+        description:
+            "Experienced hospital-trained nurses bringing acute care expertise to your home. Our nurses have extensive backgrounds in hospital settings and provide high-level clinical care for complex medical needs, post-operative recovery, and specialist treatments.",
         href: "/nurses/hospital-nurses",
         image: hospitalNursesImage,
     },
     {
         title: "Care Home Nurses",
-        description: "Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team.",
+        description:
+            "Specialist nursing support for care homes and residential facilities. Our experienced nurses provide clinical expertise, medication management, health monitoring, and specialist care to complement your care home team.",
         href: "/nurses/carehome-nurses",
         image: careHomeNursesImage,
     },
     {
         title: "Practice Nurses",
-        description: "Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention.",
+        description:
+            "Qualified practice nurses providing primary care nursing services in your home. From chronic disease management and health screening to wound care and immunisations, we deliver GP practice-level healthcare with convenience and personal attention.",
         href: "/nurses/practice-nurses",
         image: practiceNursesImage,
     },
@@ -29,48 +32,63 @@ const nurses = [
 
 <section id="nurses" class="py-20 md:py-28 bg-warm-50">
     <div class="max-w-7xl mx-auto px-6">
-
-        <Heading title="Our Nursing Services" subTitle="Professional Healthcare">
-            Registered nurses delivering expert clinical care across specialised healthcare settings,
-            from home visits to care homes and hospital-level support.
+        <Heading
+            title="Our Nursing Services"
+            subTitle="Professional Healthcare"
+        >
+            Registered nurses delivering expert clinical care across specialised
+            healthcare settings, from home visits to care homes and
+            hospital-level support.
         </Heading>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {nurses.map((nurse, i) => (
+            {
+                nurses.map((nurse, i) => (
                     <a
-                            href={nurse.href}
-                            class="group flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white"
+                        href={nurse.href}
+                        class="group flex flex-col rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 bg-white"
                     >
                         <div class="relative overflow-hidden h-64">
                             <Image
-                                    src={nurse.image}
-                                    alt={nurse.title}
-                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                src={nurse.image}
+                                alt={nurse.title}
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                             />
-                            <div class="absolute inset-0 bg-linear-to-t from-black/30 to-transparent"></div>
+                            <div class="absolute inset-0 bg-linear-to-t from-black/30 to-transparent" />
                             <div class="absolute top-4 left-4 w-11 h-11 rounded-full bg-green-dark flex items-center justify-center shadow-lg ring-2 ring-white">
-                                <span class="text-white font-bold text-base">0{i + 1}</span>
+                                <span class="text-white font-bold text-base">
+                                    0{i + 1}
+                                </span>
                             </div>
                         </div>
 
                         <div class="flex flex-col flex-1 p-8">
-                            <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 group-hover:text-green-dark transition-colors">
+                            <h3 class="text-3xl md:text-6xl font-bold text-green-darker mb-4 group-hover:text-green-dark transition-colors">
                                 {nurse.title}
                             </h3>
-                            <p class="text-gray-600 text-xl leading-relaxed flex-1 mb-6">
+                            <p class="text-green-darker text-2xl leading-relaxed flex-1 mb-6">
                                 {nurse.description}
                             </p>
-                            <span class="inline-flex items-center text-green-dark font-semibold text-2xl group-hover:gap-3 gap-2 transition-all">
-                            Learn more
-                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none"
-                                 stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                      d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </span>
+                            <span class="self-start inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg md:text-2xl rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
+                                Learn more
+                                <svg
+                                    class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 5l7 7-7 7"
+                                    />
+                                </svg>
+                            </span>
                         </div>
                     </a>
-            ))}
+                ))
+            }
         </div>
     </div>
 </section>
