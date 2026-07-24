@@ -22,7 +22,7 @@ const entries = (await getCollection("services")).sort(
             {entries.map((entry: CollectionEntry<"services">, i: number) => (
                     <div class="relative">
                         {i < entries.length - 1 && (
-                                <div class="hidden md:block absolute left-0 right-0 -bottom-20 h-42 pointer-events-none z-10">
+                                <div class="hidden md:block absolute left-0 right-0 -bottom-20 h-40 pointer-events-none z-10">
                                     <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                                         <path
                                                 d={i % 2 === 0
@@ -60,13 +60,13 @@ const entries = (await getCollection("services")).sort(
                                 <div class="inline-block md:hidden px-4 py-2 bg-green-dark/10 rounded-lg mb-6">
                                     <span class="text-green-dark font-semibold text-sm">0{i + 1}</span>
                                 </div>
-                                <h3 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 group-hover:text-green-dark transition-colors">
+                                <h3 class="text-4xl md:text-6xl font-bold text-green-dark mb-6 group-hover:text-green-dark/90 transition-colors">
                                     {entry.data.hero.title}
                                 </h3>
-                                <p class="text-gray-700 text-xl md:text-2xl leading-relaxed mb-8">
+                                <p class="text-green-dark text-xl md:text-2xl md:text-3xl leading-relaxed mb-8">
                                     {entry.data.hero.description}
                                 </p>
-                                <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-lg md:text-2xl rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
+                                <span class="inline-flex items-center px-6 py-3 bg-green-dark text-white font-medium text-xl md:text-2xl rounded-lg group-hover:bg-green-dark/90 transition-all shadow-md">
                                     Learn more
                                     <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
                                          stroke="currentColor" viewBox="0 0 24 24">

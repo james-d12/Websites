@@ -13,11 +13,11 @@ const { title, content } = entry.data.story;
 const paragraphs = content.trim().split(/\n\n+/);
 ---
 
-<section class="py-24 md:py-32 bg-warm-50">
-    <div class="max-w-4xl mx-auto px-6">
-        <ServicesHeading subTitle="A Story From Char" title={title}/>
+<section id="story" class="py-24 md:py-32 bg-white">
+    <div class="max-w-4xl md:max-w-5xl mx-auto px-6">
+        <ServicesHeading subTitle="A Loved One's Experience" title={title}/>
 
-        <div class="prose-story">
+        <div class="prose-story text-green-dark">
             {paragraphs.map((p: string) => <p>{p}</p>)}
         </div>
     </div>
@@ -27,7 +27,6 @@ const paragraphs = content.trim().split(/\n\n+/);
     .prose-story p {
         font-size: clamp(1.25rem, 2.5vw, 1.75rem);
         line-height: 1.75;
-        color: #374151;
         margin-bottom: 1.75em;
         font-style: italic;
     }
@@ -39,7 +38,6 @@ const paragraphs = content.trim().split(/\n\n+/);
     .prose-story p:last-of-type {
         font-style: normal;
         font-weight: 600;
-        color: #111827;
         margin-bottom: 0;
         margin-top: 2.5em;
         padding-top: 1.5em;

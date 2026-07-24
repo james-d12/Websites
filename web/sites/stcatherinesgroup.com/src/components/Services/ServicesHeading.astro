@@ -5,12 +5,20 @@ interface Props {
     description?: string;
 }
 
-const {subTitle, title, description} = Astro.props;
+const { subTitle, title, description } = Astro.props;
 ---
+
 <div class="text-center mb-16">
-    <p class="text-green-dark text-2xl tracking-widest uppercase mb-6">{subTitle}</p>
-    <h2 class="text-gray-900 text-5xl md:text-6xl lg:text-7xl font-bold mb-6">{title}</h2>
-    <p class="text-gray-700 text-3xl leading-relaxed">
+    <h3
+        class="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-4 mb-6 bg-green-dark text-white font-semibold text-3xl md:text-4xl rounded-lg group shadow-lg"
+    >
+        {subTitle}
+    </h3>
+
+    <h2 class="text-green-dark text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+        {title}
+    </h2>
+    <p class="text-green-dark text-3xl leading-relaxed">
         {description}
     </p>
 </div>

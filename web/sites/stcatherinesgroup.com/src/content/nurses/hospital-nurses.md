@@ -68,19 +68,14 @@ team:
   title: "Acute Care Specialists"
   paragraphs:
     - >-
-      Our hospital nurses have extensive experience in acute care settings
-      including A&E, intensive care, surgical wards, and specialist units.
-      They bring this high-level expertise to home-based care, ensuring
-      patients receive hospital-standard treatment in familiar surroundings.
+      Our hospital nurses have extensive experience in acute care, bringing
+      high-level clinical expertise into patients' homes.
     - >-
-      Each nurse is trained in advanced clinical skills, critical assessment,
-      and emergency response. They work closely with hospital discharge
-      teams, consultants, and GPs to ensure seamless continuity of care from
-      hospital to home.
+      They provide skilled care for complex needs, working closely with
+      hospitals, consultants, and GPs to ensure a smooth transition home.
     - >-
-      With experience managing complex medical devices, medications, and
-      acute conditions, our hospital nurses provide confidence and peace of
-      mind for patients with serious or specialist healthcare needs.
+      Their experience with specialist equipment, medication, and acute
+      conditions gives patients and families confidence and peace of mind.
   checklistTitle: "Our Hospital Nurses Are:"
   checklistItems:
     - label: "Hospital Experienced"

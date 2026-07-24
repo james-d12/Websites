@@ -1,9 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import CallToAction from '../components/CallToAction.astro';
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
+import SectionDivider from "../components/SectionDivider.astro";
 import * as ServiceComponent from "../components/Services";
 
 interface Testimonial {
@@ -13,53 +14,79 @@ interface Testimonial {
     service: string;
 }
 
-function dedupeTestimonials(entries: { data: { testimonials: Testimonial[] } }[]) {
+function dedupeTestimonials(
+    entries: { data: { testimonials: Testimonial[] } }[],
+) {
     const seen = new Set<string>();
     return entries
         .flatMap((entry) => entry.data.testimonials)
-        .filter((testimonial) => (seen.has(testimonial.quote) ? false : (seen.add(testimonial.quote), true)));
+        .filter((testimonial) =>
+            seen.has(testimonial.quote)
+                ? false
+                : (seen.add(testimonial.quote), true),
+        );
 }
 
-const serviceEntries = await getCollection('services');
-const nurseEntries = await getCollection('nurses');
+const serviceEntries = await getCollection("services");
+const nurseEntries = await getCollection("nurses");
 
 const careTestimonials = dedupeTestimonials(serviceEntries);
 const nursingTestimonials = dedupeTestimonials(nurseEntries);
 ---
 
-<Layout title="Testimonials - St Catherine's Group"
-        description="Read what families, clients, and care homes say about the carers and nurses at St Catherine's Group.">
-    <Navbar/>
+<Layout
+    title="Testimonials - St Catherine's Group"
+    description="Read what families, clients, and care homes say about the carers and nurses at St Catherine's Group."
+>
+    <Navbar />
 
     <main>
-        <section class="relative bg-warm-50 py-10">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <p class="text-green-dark text-xl lg:text-3xl tracking-widest uppercase mb-4">
+        <section class="bg-white py-24 md:py-32">
+            <div class="max-w-4xl md:max-w-5xl mx-auto px-6 text-center">
+                <p
+                    class="text-green-dark text-lg md:text-xl tracking-[0.2em] uppercase mb-4"
+                >
                     Testimonials
                 </p>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                <h1
+                    class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6"
+                >
                     What People Say About Us
                 </h1>
+                <p
+                    class="text-gray-600 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto"
+                >
+                    Hear directly from the families, clients, and care homes
+                    who trust our carers and nurses every day.
+                </p>
             </div>
         </section>
 
-        <ServiceComponent.ServicesTestimonials
-                testimonials={careTestimonials}
-                background="bg-white"
-                subTitle="Care Services"
-                title="What Families Say"
-                description="Hear from the families and individuals who trust our 1-1 carers with their care"
-        />
+        <SectionDivider />
 
         <ServiceComponent.ServicesTestimonials
-                testimonials={nursingTestimonials}
-                background="bg-warm-50"
-                subTitle="Nursing Services"
-                title="What Our Clients Say"
-                description="Hear from care homes, hospitals, and clients who trust our specialist nurses"
+            testimonials={careTestimonials}
+            background="bg-white"
+            subTitle="Care Services"
+            title="What Families Say"
+            description="Hear from the families and individuals who trust our 1-1 carers with their care"
+            groupByService
+        />
+
+        <SectionDivider />
+
+        <ServiceComponent.ServicesTestimonials
+            testimonials={nursingTestimonials}
+            background="bg-white"
+            subTitle="Nursing Services"
+            title="What Our Clients Say"
+            description="Hear from care homes, hospitals, and clients who trust our specialist nurses"
+            groupByService
         />
     </main>
 
-    <CallToAction/>
-    <Footer/>
+    <SectionDivider />
+
+    <CallToAction background="bg-white" />
+    <Footer />
 </Layout>

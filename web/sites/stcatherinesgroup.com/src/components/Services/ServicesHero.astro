@@ -7,12 +7,13 @@ interface Props {
     description: string;
     image: ImageMetadata;
     imageAlt: string;
+    ctaHref?: string;
 }
 
-const {label, title, description, image, imageAlt} = Astro.props;
+const {label, title, description, image, imageAlt, ctaHref = "#about"} = Astro.props;
 ---
 
-<section class="relative bg-linear-to-b from-white to-warm-50 py-20 md:py-28">
+<section class="relative bg-white py-20 md:py-28">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div class="space-y-8">
@@ -20,19 +21,19 @@ const {label, title, description, image, imageAlt} = Astro.props;
                     <h2 class="text-green-dark text-xl tracking-[0.2em] uppercase mb-4">
                         {label}
                     </h2>
-                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-green-dark mb-6">
                         {title}
                     </h1>
-                    <p class="text-gray-600 text-xl md:text-3xl leading-relaxed">
+                    <p class="text-green-dark text-xl md:text-3xl leading-relaxed">
                         {description}
                     </p>
                 </div>
 
                 <a
-                        href="#about"
+                        href={ctaHref}
                         class="inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-4 sm:py-5 bg-green-dark text-white text-xl sm:text-3xl rounded-lg hover:bg-green-dark/90 transition-all duration-200 group shadow-lg"
                 >
-                    <span>About This Service</span>
+                    <span>How We Can Help</span>
                     <svg class="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-y-1 transition-transform" fill="none"
                          stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>

@@ -88,19 +88,14 @@ team:
   title: "Experienced Primary Care Nurses"
   paragraphs:
     - >-
-      Our practice nurses have extensive experience in GP surgeries and
-      primary care settings. They're trained in the full spectrum of
-      practice nursing from health promotion and disease prevention to
-      chronic condition management and minor illness care.
+      Our practice nurses have extensive experience in GP surgeries and primary
+      care, supporting health promotion, chronic conditions, and minor illness.
     - >-
-      Each nurse holds specialist qualifications in areas such as asthma
-      management, diabetes care, and immunisation. They understand the
-      importance of holistic, patient-centred care and work collaboratively
-      with GPs and other healthcare professionals.
+      They provide expert care in areas such as asthma, diabetes, and
+      immunisation, working closely with GPs and other healthcare professionals.
     - >-
-      By bringing practice nursing to your home, we make primary healthcare
-      more accessible while maintaining the professional standards and
-      clinical expertise you'd expect from your GP surgery.
+      We bring professional, patient-centred primary care into your home,
+      making healthcare more accessible and convenient.
   checklistTitle: "Our Practice Nurses Are:"
   checklistItems:
     - label: "GP Practice Experienced"

@@ -4,12 +4,22 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import OnThisPage from '../../components/OnThisPage.astro';
+import BackToTop from '../../components/BackToTop.astro';
 import dementiaImage from "../../assets/dementia-care.jpg";
 import * as ServiceComponent from "../../components/Services";
+import SectionDivider from '../../components/SectionDivider.astro';
 
 const entry = await getEntry('services', '1-1-dementia-carer');
 if (!entry) throw new Error('Service content not found: 1-1-dementia-carer');
-const { meta, hero, about, testimonials, testimonialsBackground, ctaBackground } = entry.data;
+const { meta, hero, about, testimonials, testimonialsBackground } = entry.data;
+
+const onThisPageItems = [
+    { id: 'about', label: about.subTitle },
+    ...(entry.data.story ? [{ id: 'story', label: "A Loved One's Experience" }] : []),
+    { id: 'testimonials', label: 'Testimonials' },
+    { id: 'contact', label: "We're Here to Help" },
+];
 ---
 
 <Layout title={meta.title} description={meta.description}>
@@ -24,6 +34,10 @@ const { meta, hero, about, testimonials, testimonialsBackground, ctaBackground }
                 imageAlt={hero.imageAlt}
         />
 
+        <OnThisPage items={onThisPageItems} />
+
+        <SectionDivider />
+
         <ServiceComponent.ServicesAbout
                 title={about.title}
                 subTitle={about.subTitle}
@@ -31,12 +45,19 @@ const { meta, hero, about, testimonials, testimonialsBackground, ctaBackground }
                 callout={about.callout}
         />
 
+        <SectionDivider />
+
         <ServiceComponent.ServicesStory entry={entry}/>
 
-        <ServiceComponent.ServicesTestimonials testimonials={testimonials} background={testimonialsBackground}/>
+        <SectionDivider />
 
-        <CallToAction background={ctaBackground}/>
+        <ServiceComponent.ServicesTestimonials id="testimonials" testimonials={testimonials} background={testimonialsBackground}/>
+
+        <SectionDivider />
+
+        <CallToAction id="contact" />
     </main>
 
+    <BackToTop />
     <Footer/>
 </Layout>

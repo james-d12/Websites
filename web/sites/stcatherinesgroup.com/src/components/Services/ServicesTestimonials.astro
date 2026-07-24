@@ -8,49 +8,91 @@ interface Testimonial {
 }
 
 interface Props {
+    id?: string;
     testimonials: Testimonial[];
     background?: string;
     title?: string;
     subTitle?: string;
     description?: string;
+    groupByService?: boolean;
 }
 
 const {
+    id,
     testimonials,
-    background = 'bg-white',
-    title = 'What People Say',
-    subTitle = 'Testimonials',
-    description = 'Hear from the families and individuals who trust us with their care',
+    background = "bg-white",
+    title = "What People Say",
+    subTitle = "Testimonials",
+    description = "Hear from the families and individuals who trust us with their care",
+    groupByService = false,
 } = Astro.props;
+
+const groups = groupByService
+    ? testimonials.reduce(
+          (acc, testimonial) => {
+              let group = acc.find((g) => g.service === testimonial.service);
+              if (!group) {
+                  group = { service: testimonial.service, testimonials: [] };
+                  acc.push(group);
+              }
+              group.testimonials.push(testimonial);
+              return acc;
+          },
+          [] as { service: string; testimonials: Testimonial[] }[],
+      )
+    : [{ service: "", testimonials }];
 ---
-<section class={`py-20 md:py-28 ${background}`}>
+
+<section id={id} class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
             <ServicesHeading
-                    title={title}
-                    subTitle={subTitle}
-                    description={description}/>
+                title={title}
+                subTitle={subTitle}
+                description={description}
+            />
         </div>
 
-        <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
-                    <div class="bg-green-dark text-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col">
-                        <div class="mb-6">
-                            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                            </svg>
-                        </div>
+        {
+            groups.map((group) => (
+                <div class="mb-16 last:mb-0">
+                    {groupByService && (
+                        <h3 class="text-4xl md:text-6xl font-bold text-green-dark mb-8 text-center">
+                            {group.service}
+                        </h3>
+                    )}
 
-                        <blockquote class="leading-relaxed text-xl mb-6 grow">
-                            "{testimonial.quote}"
-                        </blockquote>
+                    <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
+                        {group.testimonials.map((testimonial) => (
+                            <div class="bg-green-dark text-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col">
+                                <div class="mb-6">
+                                    <svg
+                                        class="w-10 h-10"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                    </svg>
+                                </div>
 
-                        <div class="pt-4 border-t border-gray-200">
-                            <p class="font-semibold mb-1 text-xl">{testimonial.name}</p>
-                            <p class="text-lg">{testimonial.relationship} • {testimonial.service}</p>
-                        </div>
+                                <blockquote class="leading-relaxed text-xl mb-6 grow">
+                                    "{testimonial.quote}"
+                                </blockquote>
+
+                                <div class="pt-4 border-t border-gray-200">
+                                    <p class="font-semibold mb-1 text-xl">
+                                        {testimonial.name}
+                                    </p>
+                                    <p class="text-lg">
+                                        {testimonial.relationship} •{" "}
+                                        {testimonial.service}
+                                    </p>
+                                </div>
+                            </div>
+                        ))}
                     </div>
-            ))}
-        </div>
+                </div>
+            ))
+        }
     </div>
 </section>

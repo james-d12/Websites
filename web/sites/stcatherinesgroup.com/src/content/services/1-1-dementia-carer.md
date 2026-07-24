@@ -21,7 +21,7 @@ hero:
 
 about:
   title: "1-to-1 Dementia Care"
-  subTitle: "About the Service"
+  subTitle: "How We Can Help"
   sections:
     - title: "A Personal, Patient & Compassionate Approach"
       icon: heart
