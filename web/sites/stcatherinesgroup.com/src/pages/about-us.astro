@@ -1,40 +1,30 @@
 ---
-import {Image} from 'astro:assets';
-import {getEntry, render} from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import CallToAction from '../components/CallToAction.astro';
-import ProseContent from '../components/ProseContent.astro';
+import { getEntry, render } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
+import ProseContent from "../components/ProseContent.astro";
+import Heading from "../components/Heading.astro";
 
-const entry = await getEntry('pages', 'about');
-const {Content} = await render(entry);
-const {title, description, hero} = entry.data;
+const entry = await getEntry("pages", "about");
+const { Content } = await render(entry);
+const { title, description, hero } = entry.data;
 ---
 
 <Layout title={title} description={description}>
-    <Navbar/>
+    <Navbar />
     <main>
-        <section class="relative bg-warm-50 py-10">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <p class="text-green-dark text-xl lg:text-3xl tracking-widest uppercase mb-4">
-                    {hero.eyebrow}
-                </p>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-                    {hero.heading}
-                </h1>
-            </div>
+        <section class="relative bg-white py-10">
+            <Heading title={hero.heading} subTitle={hero.eyebrow} />
         </section>
 
-        <section class="py-24 md:py-32 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
-                <ProseContent>
-                    <Content/>
-                </ProseContent>
-            </div>
+        <section class="bg-white pb-10">
+            <ProseContent>
+                <Content />
+            </ProseContent>
         </section>
-
     </main>
-    <CallToAction/>
-    <Footer/>
+    <CallToAction />
+    <Footer />
 </Layout>

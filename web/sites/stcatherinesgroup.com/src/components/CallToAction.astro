@@ -2,36 +2,60 @@
 interface Props {
     background?: string;
 }
-const {background = 'bg-warm-50'} = Astro.props;
+const { background = "bg-warm-50" } = Astro.props;
 ---
 
 <section class={`py-20 md:py-28 ${background}`}>
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-green-darker mb-8">
-            Ready to Take the Next Step?
+    <div class="max-w-4xl md:max-w-5xl mx-auto px-6 text-center">
+        <h2
+            class="text-5xl md:text-6xl lg:text-7xl font-bold text-green-dark mb-8"
+        >
+            We're Here to Help
         </h2>
-        <p class="text-green-darker text-xl md:text-2xl leading-relaxed mb-12 max-w-3xl mx-auto">
-            Whether you're looking for support for yourself or someone you care about, or just need some advice,
-            we're here to help. Get in touch and let's talk about how we can work together.
+        <p
+            class="text-green-dark text-xl md:text-2xl leading-relaxed mb-12 max-w-3xl mx-auto"
+        >
+            Looking for support for yourself or someone you care about? Or
+            perhaps you'd just like to talk things through and get some advice?
+            Whatever you need, we're here to listen. Get in touch and we'll be
+            happy to help.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-                    href="tel:+442036633074"
-                    class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-dark text-white font-medium text-3xl rounded-lg hover:bg-green-dark/90 transition-all duration-200 shadow-md"
+                href="tel:+442036633074"
+                class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-green-dark text-white font-medium text-3xl rounded-lg hover:bg-green-dark/90 transition-all duration-200 shadow-md"
             >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    ></path>
                 </svg>
                 020 3663 3074
             </a>
             <a
-                    href="tel:+447780149826"
-                    class="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-green-dark text-green-dark font-medium text-3xl rounded-lg hover:bg-green-dark hover:text-white transition-all duration-200"
+                href="tel:+447780149826"
+                class="inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-green-dark text-green-dark font-medium text-3xl rounded-lg hover:bg-green-dark hover:text-white transition-all duration-200"
             >
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                <svg
+                    class="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    ></path>
                 </svg>
                 07780 149826
             </a>
