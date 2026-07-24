@@ -2,10 +2,12 @@
 import type { NurseTeam } from "../../content.config";
 
 interface Props extends NurseTeam {
+    id?: string;
     background?: string;
 }
 
 const {
+    id,
     eyebrow,
     title,
     paragraphs,
@@ -15,7 +17,7 @@ const {
 } = Astro.props;
 ---
 
-<section class={`py-20 md:py-28 ${background}`}>
+<section id={id} class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>

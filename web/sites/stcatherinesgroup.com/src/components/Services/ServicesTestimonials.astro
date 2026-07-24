@@ -8,6 +8,7 @@ interface Testimonial {
 }
 
 interface Props {
+    id?: string;
     testimonials: Testimonial[];
     background?: string;
     title?: string;
@@ -17,6 +18,7 @@ interface Props {
 }
 
 const {
+    id,
     testimonials,
     background = "bg-white",
     title = "What People Say",
@@ -41,7 +43,7 @@ const groups = groupByService
     : [{ service: "", testimonials }];
 ---
 
-<section class={`py-20 md:py-28 ${background}`}>
+<section id={id} class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-7xl mx-auto px-6">
         <div class="max-w-3xl mx-auto text-center mb-16">
             <ServicesHeading

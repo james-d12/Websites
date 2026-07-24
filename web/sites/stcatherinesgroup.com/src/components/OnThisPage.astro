@@ -1,0 +1,50 @@
+---
+interface Item {
+    id: string;
+    label: string;
+}
+
+interface Props {
+    items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="On this page" class="on-this-page bg-white pb-14 md:pb-20">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+        <span class="block text-green-dark text-2xl md:text-3xl tracking-[0.2em] uppercase mb-4">
+            On This Page
+        </span>
+        <div class="grid grid-cols-1 sm:grid-cols-[repeat(2,auto)] sm:justify-center gap-3 md:gap-4">
+            {items.map((item, index) => {
+                const isLastOdd =
+                    items.length % 2 !== 0 && index === items.length - 1;
+                return (
+                    <a
+                        href={`#${item.id}`}
+                        class:list={[
+                            "group inline-flex items-center justify-center gap-2 px-6 py-3 md:px-7 md:py-4 bg-green-dark text-white text-xl md:text-2xl leading-none rounded-lg shadow-lg hover:bg-green-dark/90 transition-all duration-200 whitespace-nowrap",
+                            isLastOdd && "sm:col-span-2",
+                        ]}
+                    >
+                        <span>{item.label}</span>
+                        <svg
+                            class="w-5 h-5 shrink-0 group-hover:translate-y-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2.5"
+                                d="M19 9l-7 7-7-7"
+                            />
+                        </svg>
+                    </a>
+                );
+            })}
+        </div>
+    </div>
+</nav>

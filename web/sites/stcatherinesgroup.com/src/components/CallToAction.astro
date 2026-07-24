@@ -1,4 +1,13 @@
-<section class={`py-20 md:py-28 bg-white`}>
+---
+interface Props {
+    id?: string;
+    background?: string;
+}
+
+const { id, background = "bg-white" } = Astro.props;
+---
+
+<section id={id} class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-4xl md:max-w-5xl mx-auto px-6 text-center">
         <h2
             class="text-5xl md:text-6xl lg:text-7xl font-bold text-green-dark mb-8"

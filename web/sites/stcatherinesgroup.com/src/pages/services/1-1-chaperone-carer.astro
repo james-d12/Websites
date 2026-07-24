@@ -4,6 +4,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import OnThisPage from '../../components/OnThisPage.astro';
+import BackToTop from '../../components/BackToTop.astro';
 import chaperoneImage from "../../assets/chaperone-carer.jpg";
 import * as ServiceComponent from "../../components/Services";
 import SectionDivider from '../../components/SectionDivider.astro';
@@ -11,6 +13,13 @@ import SectionDivider from '../../components/SectionDivider.astro';
 const entry = await getEntry('services', '1-1-chaperone-carer');
 if (!entry) throw new Error('Service content not found: 1-1-chaperone-carer');
 const {meta, hero, about, testimonials, testimonialsBackground } = entry.data;
+
+const onThisPageItems = [
+    { id: 'about', label: about.subTitle },
+    ...(entry.data.story ? [{ id: 'story', label: "A Loved One's Experience" }] : []),
+    { id: 'testimonials', label: 'Testimonials' },
+    { id: 'contact', label: "We're Here to Help" },
+];
 ---
 
 <Layout title={meta.title} description={meta.description}>
@@ -24,6 +33,8 @@ const {meta, hero, about, testimonials, testimonialsBackground } = entry.data;
                 image={chaperoneImage}
                 imageAlt={hero.imageAlt}
         />
+
+        <OnThisPage items={onThisPageItems} />
 
         <SectionDivider />
 
@@ -40,12 +51,13 @@ const {meta, hero, about, testimonials, testimonialsBackground } = entry.data;
 
         <SectionDivider />
 
-        <ServiceComponent.ServicesTestimonials testimonials={testimonials} background={testimonialsBackground}/>
+        <ServiceComponent.ServicesTestimonials id="testimonials" testimonials={testimonials} background={testimonialsBackground}/>
 
         <SectionDivider />
 
-        <CallToAction />
+        <CallToAction id="contact" />
     </main>
 
+    <BackToTop />
     <Footer/>
 </Layout>

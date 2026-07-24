@@ -2,6 +2,7 @@
 import type { NurseFeatureCard } from "../../content.config";
 
 interface Props {
+    id?: string;
     eyebrow: string;
     title: string;
     description: string;
@@ -10,6 +11,7 @@ interface Props {
 }
 
 const {
+    id,
     eyebrow,
     title,
     description,
@@ -18,7 +20,7 @@ const {
 } = Astro.props;
 ---
 
-<section class={`py-20 md:py-28 ${background}`}>
+<section id={id} class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-6xl mx-auto px-6">
         <div class="text-center mb-16">
             <h3

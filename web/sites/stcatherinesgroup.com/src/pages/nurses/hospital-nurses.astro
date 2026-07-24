@@ -4,6 +4,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import Footer from '../../components/Footer.astro';
 import CallToAction from '../../components/CallToAction.astro';
+import OnThisPage from '../../components/OnThisPage.astro';
+import BackToTop from '../../components/BackToTop.astro';
 import * as ServiceComponent from "../../components/Services";
 import * as NurseComponent from "../../components/Nurses";
 import SectionDivider from '../../components/SectionDivider.astro';
@@ -12,6 +14,13 @@ import hospitalNursesImage from "../../assets/hospital-nurses.jpg";
 const entry = await getEntry('nurses', 'hospital-nurses');
 if (!entry) throw new Error('Nurses content not found: hospital-nurses');
 const { meta, hero, features, team, testimonials, testimonialsBackground } = entry.data;
+
+const onThisPageItems = [
+    { id: 'features', label: features.eyebrow },
+    { id: 'team', label: team.eyebrow },
+    { id: 'testimonials', label: 'Testimonials' },
+    { id: 'contact', label: "We're Here to Help" },
+];
 ---
 
 <Layout title={meta.title} description={meta.description}>
@@ -24,11 +33,15 @@ const { meta, hero, features, team, testimonials, testimonialsBackground } = ent
                 description={hero.description}
                 image={hospitalNursesImage}
                 imageAlt={hero.imageAlt}
+                ctaHref="#features"
         />
+
+        <OnThisPage items={onThisPageItems} />
 
         <SectionDivider />
 
         <NurseComponent.NursesFeatures
+                id="features"
                 eyebrow={features.eyebrow}
                 title={features.title}
                 description={features.description}
@@ -38,6 +51,7 @@ const { meta, hero, features, team, testimonials, testimonialsBackground } = ent
         <SectionDivider />
 
         <NurseComponent.NursesTeam
+                id="team"
                 eyebrow={team.eyebrow}
                 title={team.title}
                 paragraphs={team.paragraphs}
@@ -47,11 +61,12 @@ const { meta, hero, features, team, testimonials, testimonialsBackground } = ent
 
         <SectionDivider />
 
-        <ServiceComponent.ServicesTestimonials testimonials={testimonials} background={testimonialsBackground}/>
+        <ServiceComponent.ServicesTestimonials id="testimonials" testimonials={testimonials} background={testimonialsBackground}/>
     </main>
 
     <SectionDivider />
 
-    <CallToAction />
+    <CallToAction id="contact" />
+    <BackToTop />
     <Footer/>
 </Layout>
