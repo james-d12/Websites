@@ -84,16 +84,16 @@ team:
   eyebrow: "Our Team"
   title: "Care Home Nursing Specialists"
   paragraphs:
-  - >-
-    Our care home nurses have extensive experience in residential and nursing
-    care, working seamlessly with existing care teams.
-  - >-
-    They provide expert support with elderly care, dementia, medication, and
-    clinical procedures while building positive relationships with residents
-    and families.
-  - >-
-    Reliable nursing support that strengthens your care home's clinical
-    capabilities while maintaining continuity for residents.
+    - >-
+      Our care home nurses have extensive experience in residential and nursing
+      care, working seamlessly with existing care teams.
+    - >-
+      They provide expert support with elderly care, dementia, medication, and
+      clinical procedures while building positive relationships with residents
+      and families.
+    - >-
+      Reliable nursing support that strengthens your care home's clinical
+      capabilities while maintaining continuity for residents.
   checklistTitle: "Our Care Home Nurses Provide:"
   checklistItems:
     - label: "Care Home Experience"

@@ -67,15 +67,15 @@ team:
   eyebrow: "Our Team"
   title: "Acute Care Specialists"
   paragraphs:
-  - >-
-    Our hospital nurses have extensive experience in acute care, bringing
-    high-level clinical expertise into patients' homes.
-  - >-
-    They provide skilled care for complex needs, working closely with
-    hospitals, consultants, and GPs to ensure a smooth transition home.
-  - >-
-    Their experience with specialist equipment, medication, and acute
-    conditions gives patients and families confidence and peace of mind.
+    - >-
+      Our hospital nurses have extensive experience in acute care, bringing
+      high-level clinical expertise into patients' homes.
+    - >-
+      They provide skilled care for complex needs, working closely with
+      hospitals, consultants, and GPs to ensure a smooth transition home.
+    - >-
+      Their experience with specialist equipment, medication, and acute
+      conditions gives patients and families confidence and peace of mind.
   checklistTitle: "Our Hospital Nurses Are:"
   checklistItems:
     - label: "Hospital Experienced"

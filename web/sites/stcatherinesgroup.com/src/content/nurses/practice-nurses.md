@@ -87,15 +87,15 @@ team:
   eyebrow: "Our Team"
   title: "Experienced Primary Care Nurses"
   paragraphs:
-  - >-
-    Our practice nurses have extensive experience in GP surgeries and primary
-    care, supporting health promotion, chronic conditions, and minor illness.
-  - >-
-    They provide expert care in areas such as asthma, diabetes, and
-    immunisation, working closely with GPs and other healthcare professionals.
-  - >-
-    We bring professional, patient-centred primary care into your home,
-    making healthcare more accessible and convenient.
+    - >-
+      Our practice nurses have extensive experience in GP surgeries and primary
+      care, supporting health promotion, chronic conditions, and minor illness.
+    - >-
+      They provide expert care in areas such as asthma, diabetes, and
+      immunisation, working closely with GPs and other healthcare professionals.
+    - >-
+      We bring professional, patient-centred primary care into your home,
+      making healthcare more accessible and convenient.
   checklistTitle: "Our Practice Nurses Are:"
   checklistItems:
     - label: "GP Practice Experienced"
