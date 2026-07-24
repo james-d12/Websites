@@ -5,39 +5,63 @@ interface Props extends NurseTeam {
     background?: string;
 }
 
-const {eyebrow, title, paragraphs, checklistTitle, checklistItems, background = 'bg-warm-50'} = Astro.props;
+const {
+    eyebrow,
+    title,
+    paragraphs,
+    checklistTitle,
+    checklistItems,
+    background = "bg-warm-50",
+} = Astro.props;
 ---
 
 <section class={`py-20 md:py-28 ${background}`}>
     <div class="max-w-6xl mx-auto px-6">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-                <p class="text-green-dark text-sm font-medium tracking-[0.2em] uppercase mb-4">{eyebrow}</p>
-                <h2 class="text-4xl md:text-5xl font-bold text-green-darker mb-6">
+                <h3
+                    class="inline-flex items-center gap-2 px-3 md:px-4 py-2 md:py-2 mb-6 bg-green-dark text-white font-semibold text-xl md:text-2xl rounded-lg group shadow-lg"
+                >
+                    {eyebrow}
+                </h3>
+
+                <h2
+                    class="text-green-dark text-5xl md:text-6xl font-bold mb-6"
+                >
                     {title}
                 </h2>
-                <div class="space-y-4 text-green-darker leading-relaxed">
-                    {paragraphs.map((paragraph) => (
-                            <p>{paragraph}</p>
-                    ))}
+                <div class="text-xl space-y-4 text-green-dark leading-relaxed">
+                    {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
                 </div>
             </div>
 
             <div class="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 class="text-2xl font-bold text-green-darker mb-6">{checklistTitle}</h3>
+                <h3 class="text-3xl font-bold text-green-dark mb-6">
+                    {checklistTitle}
+                </h3>
                 <div class="space-y-4">
-                    {checklistItems.map((item) => (
+                    {
+                        checklistItems.map((item) => (
                             <div class="flex items-start gap-3">
                                 <div class="w-6 h-6 rounded-full bg-green-dark flex items-center justify-center shrink-0 mt-1">
-                                    <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                        <path fill-rule="evenodd"
-                                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                              clip-rule="evenodd"/>
+                                    <svg
+                                        class="w-5 h-5 text-white"
+                                        fill="currentColor"
+                                        viewBox="0 0 20 20"
+                                    >
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd"
+                                        />
                                     </svg>
                                 </div>
-                                <span class="text-green-darker"><strong>{item.label}</strong> - {item.text}</span>
+                                <span class="text-lg text-green-dark">
+                                    <strong>{item.label}</strong> - {item.text}
+                                </span>
                             </div>
-                    ))}
+                        ))
+                    }
                 </div>
             </div>
         </div>

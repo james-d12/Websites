@@ -21,7 +21,7 @@ hero:
 
 about:
   title: "Personal Assistant"
-  subTitle: "About the Service"
+  subTitle: "How We Can Help"
   sections:
     - title: "Discretion, Sophistication & Seamless Organisation"
       icon: heart
