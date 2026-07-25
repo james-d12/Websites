@@ -1,7 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-const BASE_URL =
-  process.env.STCATHERINESGROUP_BASE_URL ?? "http://localhost:35424";
+const BASE_URL = process.env.BASE_URL ?? "http://localhost:35424";
 
 // Tailwind's default 2xl breakpoint (1536px) is where the desktop nav swaps
 // in for the mobile hamburger menu (see Navbar.astro: "hidden 2xl:flex" /
