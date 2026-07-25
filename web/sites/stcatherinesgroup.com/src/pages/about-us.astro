@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
 import ProseContent from "../components/ProseContent.astro";
+import PullQuote from "../components/PullQuote.astro";
 import SectionDivider from "../components/SectionDivider.astro";
 import favicon from "../assets/favicon.ico";
 
@@ -38,9 +39,67 @@ const { title, description, hero } = entry.data;
         </section>
 
         <section class="bg-white pb-10">
-            <ProseContent>
-                <Content />
-            </ProseContent>
+            <div class="relative mx-auto max-w-4xl md:max-w-5xl">
+                <PullQuote
+                    side="left"
+                    top="6rem"
+                    rotate="-2"
+                    quote="Care should be delivered with the same love, respect, and dedication we would give our own family."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="24rem"
+                    rotate="2"
+                    quote="My passion for care comes from personal experience."
+                />
+
+                <PullQuote
+                    side="left"
+                    top="42rem"
+                    rotate="2"
+                    quote="Without the carers he trusted and who we carefully chose, our family would not have been able to cope or support him as he deserved."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="60rem"
+                    rotate="-2"
+                    quote="That experience is why St Catherine's exists today, to give something meaningful back to families walking a similar path."
+                />
+
+                <PullQuote
+                    side="left"
+                    top="78rem"
+                    rotate="-2"
+                    quote="Every service we provide is deeply personal, delivered with dignity and compassion."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="96rem"
+                    rotate="2"
+                    quote="We work closely with families to ensure consistency, calm, and comfort."
+                />
+
+                <PullQuote
+                    side="left"
+                    top="114rem"
+                    rotate="2"
+                    quote="Peace of mind and rest is also highly important for families."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="132rem"
+                    rotate="-2"
+                    quote="At St Catherine's, care is not just a service, it is a promise."
+                />
+
+                <ProseContent>
+                    <Content />
+                </ProseContent>
+            </div>
         </section>
     </main>
 
