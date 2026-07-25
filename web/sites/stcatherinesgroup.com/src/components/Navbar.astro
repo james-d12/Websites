@@ -86,7 +86,7 @@ import { navLinks } from "../data/navigation";
                 </div>
             </a>
 
-            <ul class="hidden nav:flex items-center gap-12 ">
+            <ul data-testid="desktop-nav" class="hidden nav:flex items-center gap-12 ">
                 {
                     navLinks.map((link) => (
                         <li class={link.dropdown ? "relative group" : ""}>

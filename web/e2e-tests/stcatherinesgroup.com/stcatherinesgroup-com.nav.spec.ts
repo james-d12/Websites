@@ -17,7 +17,7 @@ test.describe("Navbar - Desktop", () => {
   });
 
   test("primary nav links have correct hrefs", async ({ page }) => {
-    const desktopNav = page.locator('ul[class*="xl:flex"]');
+    const desktopNav = page.getByTestId("desktop-nav");
     await expect(
       desktopNav.getByRole("link", { name: "About", exact: true }),
     ).toHaveAttribute("href", "/about-us");
@@ -32,7 +32,7 @@ test.describe("Navbar - Desktop", () => {
   test("Services dropdown reveals all 5 service links on hover", async ({
     page,
   }) => {
-    const desktopNav = page.locator('ul[class*="xl:flex"]');
+    const desktopNav = page.getByTestId("desktop-nav");
     await desktopNav.getByText("Services", { exact: true }).hover();
 
     const expected = [
@@ -50,7 +50,7 @@ test.describe("Navbar - Desktop", () => {
   test("Nurses dropdown reveals all 3 nurse links on hover", async ({
     page,
   }) => {
-    const desktopNav = page.locator('ul[class*="xl:flex"]');
+    const desktopNav = page.getByTestId("desktop-nav");
     await desktopNav.getByText("Nurses", { exact: true }).hover();
 
     const expected = [
@@ -141,7 +141,7 @@ test.describe("Responsive Layout", () => {
     await page.setViewportSize(MOBILE_VIEWPORT);
     await page.goto(BASE_URL);
     await expect(page.locator("#mobile-menu-btn")).toBeVisible();
-    await expect(page.locator('ul[class*="xl:flex"]')).toBeHidden();
+    await expect(page.getByTestId("desktop-nav")).toBeHidden();
   });
 
   test("desktop nav shows and mobile hamburger hides at a wide viewport", async ({
@@ -150,6 +150,6 @@ test.describe("Responsive Layout", () => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
     await page.goto(BASE_URL);
     await expect(page.locator("#mobile-menu-btn")).toBeHidden();
-    await expect(page.locator('ul[class*="xl:flex"]')).toBeVisible();
+    await expect(page.getByTestId("desktop-nav")).toBeVisible();
   });
 });
