@@ -86,7 +86,7 @@ import { navLinks } from "../data/navigation";
                 </div>
             </a>
 
-            <ul class="hidden 2xl:flex items-center gap-12 ">
+            <ul class="hidden nav:flex items-center gap-12 ">
                 {
                     navLinks.map((link) => (
                         <li class={link.dropdown ? "relative group" : ""}>
@@ -144,7 +144,7 @@ import { navLinks } from "../data/navigation";
 
             <button
                 id="mobile-menu-btn"
-                class="2xl:hidden flex items-center justify-center w-14 h-14 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
+                class="nav:hidden flex items-center justify-center w-14 h-14 rounded-lg text-white hover:text-white/80 hover:bg-white/10 transition-colors"
                 aria-expanded="false"
                 aria-controls="mobile-menu"
                 title="Open menu"
@@ -187,7 +187,7 @@ import { navLinks } from "../data/navigation";
 
         <div
             id="mobile-menu"
-            class="hidden 2xl:hidden absolute top-full left-0 w-full z-40 max-h-[80vh] overflow-y-auto border-t border-white/10 bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-lg"
+            class="hidden nav:hidden absolute top-full left-0 w-full z-40 max-h-[80vh] overflow-y-auto border-t border-white/10 bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-lg"
         >
             <div class="max-w-6xl mx-auto px-6 py-2 divide-y divide-white/10">
                 {

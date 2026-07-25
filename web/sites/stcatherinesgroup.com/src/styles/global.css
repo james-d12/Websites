@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-nav: 112.5rem; /* 1800px: min width the full navbar (logo + one-line title + all nav links) fits without overlap */
   --color-green-dark: #13705b;
   --color-green-middle: #105c4b;
   --color-green-darker: #0c4438;
