@@ -1,40 +1,110 @@
 ---
-import {Image} from 'astro:assets';
-import {getEntry, render} from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import CallToAction from '../components/CallToAction.astro';
-import ProseContent from '../components/ProseContent.astro';
+import { Image } from "astro:assets";
+import { getEntry, render } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import CallToAction from "../components/CallToAction.astro";
+import ProseContent from "../components/ProseContent.astro";
+import PullQuote from "../components/PullQuote.astro";
+import SectionDivider from "../components/SectionDivider.astro";
+import favicon from "../assets/favicon.ico";
 
-const entry = await getEntry('pages', 'about');
-const {Content} = await render(entry);
-const {title, description, hero} = entry.data;
+const entry = await getEntry("pages", "about");
+const { Content } = await render(entry);
+const { title, description, hero } = entry.data;
 ---
 
 <Layout title={title} description={description}>
-    <Navbar/>
+    <Navbar />
     <main>
-        <section class="relative bg-warm-50 py-10">
-            <div class="max-w-5xl mx-auto px-6 text-center">
-                <p class="text-green-dark text-xl lg:text-3xl tracking-widest uppercase mb-4">
-                    {hero.eyebrow}
-                </p>
-                <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+        <section class="relative bg-white pt-10 pb-10">
+            <div class="flex justify-center mb-12">
+                <div class="bg-linear-to-l from-green-dark via-green-dark to-green-darker rounded-2xl shadow-lg">
+                    <Image
+                        src={favicon}
+                        alt="St Catherine's Group Logo"
+                        width={128}
+                        height={128}
+                        class="w-38 h-38"
+                    />
+                </div>
+            </div>
+
+            <div class="max-w-4xl md:max-w-5xl mx-auto text-center">
+                <h1 class="text-green-dark text-3xl md:text-7xl mb-6">
                     {hero.heading}
                 </h1>
             </div>
         </section>
 
-        <section class="py-24 md:py-32 bg-white">
-            <div class="max-w-6xl mx-auto px-6">
+        <section class="bg-white pb-10">
+            <div class="relative mx-auto max-w-4xl md:max-w-5xl">
+                <PullQuote
+                    side="left"
+                    top="6rem"
+                    rotate="-2"
+                    quote="Care should be delivered with the same love, respect, and dedication we would give our own family."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="24rem"
+                    rotate="2"
+                    quote="My passion for care comes from personal experience."
+                />
+
+                <PullQuote
+                    side="left"
+                    top="42rem"
+                    rotate="2"
+                    quote="Without the carers he trusted and who we carefully chose, our family would not have been able to cope or support him as he deserved."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="60rem"
+                    rotate="-2"
+                    quote="That experience is why St Catherine's exists today, to give something meaningful back to families walking a similar path."
+                />
+
+                <PullQuote
+                    side="left"
+                    top="78rem"
+                    rotate="-2"
+                    quote="Every service we provide is deeply personal, delivered with dignity and compassion."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="96rem"
+                    rotate="2"
+                    quote="We work closely with families to ensure consistency, calm, and comfort."
+                />
+
+                <PullQuote
+                    side="left"
+                    top="114rem"
+                    rotate="2"
+                    quote="Peace of mind and rest is also highly important for families."
+                />
+
+                <PullQuote
+                    side="right"
+                    top="132rem"
+                    rotate="-2"
+                    quote="At St Catherine's, care is not just a service, it is a promise."
+                />
+
                 <ProseContent>
-                    <Content/>
+                    <Content />
                 </ProseContent>
             </div>
         </section>
-
     </main>
-    <CallToAction/>
-    <Footer/>
+
+    <SectionDivider />
+
+    <CallToAction />
+    <Footer />
 </Layout>

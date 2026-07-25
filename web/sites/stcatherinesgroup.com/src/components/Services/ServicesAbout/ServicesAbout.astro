@@ -18,7 +18,7 @@ const { title, subTitle, sections, callout } = Astro.props;
     <div class="max-w-5xl mx-auto px-6">
         <ServicesHeading title={title} subTitle={subTitle}/>
 
-        <div class="space-y-12">
+        <div class="space-y-12 text-green-dark">
             {sections.map((section: ServiceSection) => (
                     <ServicesAboutParagraph title={section.title} icon={section.icon}>
                         <p class={section.items ? "mb-6" : ""}>{section.body}</p>

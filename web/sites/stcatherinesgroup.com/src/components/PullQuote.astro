@@ -1,0 +1,23 @@
+---
+interface Props {
+    quote: string;
+    side: "left" | "right";
+    top: string;
+    rotate: "-2" | "2";
+}
+
+const { quote, side, top, rotate } = Astro.props;
+---
+
+<div
+    class:list={[
+        "hidden min-[1900px]:block absolute w-56 rounded-2xl bg-linear-to-br from-green-dark via-green-dark to-green-darker p-6 text-white shadow-lg",
+        side === "left" ? "-left-80" : "-right-80",
+        rotate === "-2" ? "-rotate-2" : "rotate-2",
+    ]}
+    style={`top: ${top}`}
+>
+    <blockquote class="text-lg lg:text-xl leading-relaxed">
+        &#8220;{quote}&#8221;
+    </blockquote>
+</div>

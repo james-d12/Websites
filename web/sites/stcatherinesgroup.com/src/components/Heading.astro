@@ -6,12 +6,18 @@ interface Props {
 
 const { title, subTitle } = Astro.props;
 ---
-<div class="max-w-3xl mx-auto text-center mb-20">
-    <h3 class="text-green-dark text-2xl tracking-widest uppercase mb-4">{subTitle}</h3>
-    <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+
+<div class="max-w-4xl md:max-w-5xl mx-auto text-center mb-20">
+    <h3
+        class="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 mb-6 bg-green-dark text-white font-semibold text-xl md:text-3xl rounded-lg group shadow-lg"
+    >
+        {subTitle}
+    </h3>
+
+    <h2 class="text-green-dark text-3xl md:text-5xl md:text-6xl lg:text-7xl mb-6">
         {title}
     </h2>
-    <p class="text-gray-600 text-2xl leading-relaxed">
-        <slot/>
+    <p class="text-green-dark text-lg md:text-3xl leading-relaxed">
+        <slot />
     </p>
 </div>

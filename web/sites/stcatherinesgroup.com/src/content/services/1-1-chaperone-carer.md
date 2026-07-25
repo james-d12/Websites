@@ -20,7 +20,7 @@ hero:
 
 about:
   title: "1-to-1 Chaperone Care"
-  subTitle: "About the Service"
+  subTitle: "How We Can Help"
   sections:
     - title: "Medical Appointments, Family Gatherings & Social Events"
       icon: heart

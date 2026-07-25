@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+  --breakpoint-nav: 112.5rem; /* 1800px: min width the full navbar (logo + one-line title + all nav links) fits without overlap */
   --color-green-dark: #13705b;
   --color-green-middle: #105c4b;
   --color-green-darker: #0c4438;
@@ -28,11 +29,8 @@
 html {
   scroll-behavior: smooth;
   font-size: 110%;
-  background-color: #13705b;
 }
 
 body {
   margin: 0;
-  color: #2d3748;
-  background-color: #13705b;
 }

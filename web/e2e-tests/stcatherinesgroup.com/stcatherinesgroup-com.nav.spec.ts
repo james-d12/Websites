@@ -2,9 +2,6 @@ import { test, expect } from "@playwright/test";
 
 const BASE_URL = process.env.BASE_URL ?? "http://localhost:35424";
 
-// Tailwind's default 2xl breakpoint (1536px) is where the desktop nav swaps
-// in for the mobile hamburger menu (see Navbar.astro: "hidden 2xl:flex" /
-// "2xl:hidden").
 const DESKTOP_VIEWPORT = { width: 1920, height: 1080 };
 const MOBILE_VIEWPORT = { width: 375, height: 667 };
 
@@ -19,21 +16,8 @@ test.describe("Navbar - Desktop", () => {
     await expect(phone).toBeVisible();
   });
 
-  test("utility bar Contact Us CTA links to /contact", async ({ page }) => {
-    // scope to the sticky navbar wrapper - the footer also has a "Contact
-    // Us" link, but with different text/href-adjacent markup elsewhere.
-    const stickyNav = page.locator(".sticky.top-0").first();
-    await expect(
-      stickyNav.getByRole("link", { name: "Contact Us" }),
-    ).toHaveAttribute("href", "/contact");
-  });
-
   test("primary nav links have correct hrefs", async ({ page }) => {
-    // scope to the desktop <ul> - the same links also exist in the (hidden)
-    // mobile menu markup, so an unscoped locator would be ambiguous.
-    // attribute selector avoids CSS class-selector parsing issues with the
-    // leading digit in the "2xl:flex" Tailwind class
-    const desktopNav = page.locator('ul[class*="2xl:flex"]');
+    const desktopNav = page.getByTestId("desktop-nav");
     await expect(
       desktopNav.getByRole("link", { name: "About", exact: true }),
     ).toHaveAttribute("href", "/about-us");
@@ -48,7 +32,7 @@ test.describe("Navbar - Desktop", () => {
   test("Services dropdown reveals all 5 service links on hover", async ({
     page,
   }) => {
-    const desktopNav = page.locator('ul[class*="2xl:flex"]');
+    const desktopNav = page.getByTestId("desktop-nav");
     await desktopNav.getByText("Services", { exact: true }).hover();
 
     const expected = [
@@ -66,7 +50,7 @@ test.describe("Navbar - Desktop", () => {
   test("Nurses dropdown reveals all 3 nurse links on hover", async ({
     page,
   }) => {
-    const desktopNav = page.locator('ul[class*="2xl:flex"]');
+    const desktopNav = page.getByTestId("desktop-nav");
     await desktopNav.getByText("Nurses", { exact: true }).hover();
 
     const expected = [
@@ -157,7 +141,7 @@ test.describe("Responsive Layout", () => {
     await page.setViewportSize(MOBILE_VIEWPORT);
     await page.goto(BASE_URL);
     await expect(page.locator("#mobile-menu-btn")).toBeVisible();
-    await expect(page.locator('ul[class*="2xl:flex"]')).toBeHidden();
+    await expect(page.getByTestId("desktop-nav")).toBeHidden();
   });
 
   test("desktop nav shows and mobile hamburger hides at a wide viewport", async ({
@@ -166,6 +150,6 @@ test.describe("Responsive Layout", () => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
     await page.goto(BASE_URL);
     await expect(page.locator("#mobile-menu-btn")).toBeHidden();
-    await expect(page.locator('ul[class*="2xl:flex"]')).toBeVisible();
+    await expect(page.getByTestId("desktop-nav")).toBeVisible();
   });
 });

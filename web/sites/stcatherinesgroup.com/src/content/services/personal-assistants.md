@@ -21,7 +21,7 @@ hero:
 
 about:
   title: "Personal Assistant"
-  subTitle: "About the Service"
+  subTitle: "How We Can Help"
   sections:
     - title: "Discretion, Sophistication & Seamless Organisation"
       icon: heart
@@ -100,6 +100,5 @@ testimonials:
     relationship: "Client"
     service: "Personal Assistant"
 
-testimonialsBackground: "bg-warm-50"
-ctaBackground: "bg-white"
+testimonialsBackground: "bg-white"
 ---

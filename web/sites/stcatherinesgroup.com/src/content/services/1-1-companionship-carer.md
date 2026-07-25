@@ -20,7 +20,7 @@ hero:
 
 about:
   title: "1-to-1 Companionship Care"
-  subTitle: "About the Service"
+  subTitle: "How We Can Help"
   sections:
     - title: "Emotional, Social & Practical Support"
       icon: heart

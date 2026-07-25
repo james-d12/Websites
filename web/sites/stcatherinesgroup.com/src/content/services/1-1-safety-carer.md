@@ -20,7 +20,7 @@ hero:
 
 about:
   title: "1-to-1 Safety Care"
-  subTitle: "About the Service"
+  subTitle: "How We Can Help"
   sections:
     - title: "Dedicated, Personalised Safety Support"
       icon: heart
