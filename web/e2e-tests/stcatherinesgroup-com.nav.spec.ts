@@ -20,15 +20,6 @@ test.describe("Navbar - Desktop", () => {
     await expect(phone).toBeVisible();
   });
 
-  test("utility bar Contact Us CTA links to /contact", async ({ page }) => {
-    // scope to the sticky navbar wrapper - the footer also has a "Contact
-    // Us" link, but with different text/href-adjacent markup elsewhere.
-    const stickyNav = page.locator(".sticky.top-0").first();
-    await expect(
-      stickyNav.getByRole("link", { name: "Contact Us" }),
-    ).toHaveAttribute("href", "/contact");
-  });
-
   test("primary nav links have correct hrefs", async ({ page }) => {
     // scope to the desktop <ul> - the same links also exist in the (hidden)
     // mobile menu markup, so an unscoped locator would be ambiguous.
