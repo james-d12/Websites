@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import CallToAction from "../components/CallToAction.astro";
 import SectionDivider from "../components/SectionDivider.astro";
+import OnThisPage from "../components/OnThisPage.astro";
 import * as ServiceComponent from "../components/Services";
 
 interface Testimonial {
@@ -32,6 +33,12 @@ const nurseEntries = await getCollection("nurses");
 
 const careTestimonials = dedupeTestimonials(serviceEntries);
 const nursingTestimonials = dedupeTestimonials(nurseEntries);
+
+const onThisPageItems = [
+    { id: "care-testimonials", label: "Care Services" },
+    { id: "nursing-testimonials", label: "Nursing Services" },
+    { id: "contact", label: "We're Here to Help" },
+];
 ---
 
 <Layout
@@ -43,28 +50,29 @@ const nursingTestimonials = dedupeTestimonials(nurseEntries);
     <main>
         <section class="bg-white py-24 md:py-32">
             <div class="max-w-4xl md:max-w-5xl mx-auto px-6 text-center">
-                <p
-                    class="text-green-dark text-lg md:text-xl tracking-[0.2em] uppercase mb-4"
+                <h3
+                    class="inline-flex items-center gap-2 px-4 md:px-6 py-2 md:py-3 mb-6 bg-green-dark text-white font-semibold text-xl md:text-3xl rounded-lg shadow-lg"
                 >
                     Testimonials
-                </p>
+                </h3>
                 <h1
-                    class="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6"
+                    class="text-green-dark text-3xl md:text-5xl md:text-6xl lg:text-7xl mb-6"
                 >
                     What People Say About Us
                 </h1>
-                <p
-                    class="text-gray-600 text-xl md:text-2xl leading-relaxed max-w-3xl mx-auto"
-                >
+                <p class="text-green-dark text-lg md:text-3xl leading-relaxed">
                     Hear directly from the families, clients, and care homes
                     who trust our carers and nurses every day.
                 </p>
             </div>
         </section>
 
+        <OnThisPage items={onThisPageItems} />
+
         <SectionDivider />
 
         <ServiceComponent.ServicesTestimonials
+            id="care-testimonials"
             testimonials={careTestimonials}
             background="bg-white"
             subTitle="Care Services"
@@ -76,6 +84,7 @@ const nursingTestimonials = dedupeTestimonials(nurseEntries);
         <SectionDivider />
 
         <ServiceComponent.ServicesTestimonials
+            id="nursing-testimonials"
             testimonials={nursingTestimonials}
             background="bg-white"
             subTitle="Nursing Services"
@@ -87,6 +96,6 @@ const nursingTestimonials = dedupeTestimonials(nurseEntries);
 
     <SectionDivider />
 
-    <CallToAction />
+    <CallToAction id="contact" />
     <Footer />
 </Layout>

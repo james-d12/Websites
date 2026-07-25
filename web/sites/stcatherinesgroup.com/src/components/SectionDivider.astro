@@ -8,7 +8,7 @@ const { class: className = "" } = Astro.props;
 const gradientId = `section-divider-gradient-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
-<div class={`w-full bg-white flex justify-center py-10 md:py-14 ${className}`}>
+<div class={`w-full bg-white flex justify-center ${className}`}>
     <svg
         class="w-full h-14 md:h-20"
         viewBox="0 0 300 48"
