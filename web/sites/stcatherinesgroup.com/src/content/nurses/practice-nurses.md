@@ -14,6 +14,7 @@ hero:
     and immunisations, we deliver GP practice-level healthcare with
     convenience and personal attention.
   imageAlt: "Practice nursing services"
+  ctaLabel: "Explore Practice Nursing"
 
 features:
   eyebrow: "Primary Care Services"

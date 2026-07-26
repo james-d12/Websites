@@ -14,6 +14,7 @@ hero:
     health monitoring, and specialist care to complement your care home team
     and ensure the highest standards of resident healthcare.
   imageAlt: "Care home nursing services"
+  ctaLabel: "Explore Care Home Nursing"
 
 features:
   eyebrow: "Care Home Support"

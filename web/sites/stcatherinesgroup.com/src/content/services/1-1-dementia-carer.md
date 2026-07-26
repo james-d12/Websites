@@ -18,10 +18,11 @@ hero:
     compassionate care that maintains familiar routines, promotes calm, and
     keeps families informed and reassured.
   imageAlt: "Dementia care services"
+  ctaLabel: "Explore Dementia Care"
 
 about:
   title: "1-to-1 Dementia Care"
-  subTitle: "How We Can Help"
+  subTitle: "Compassionate, Person-Centred Care"
   sections:
     - title: "A Personal, Patient & Compassionate Approach"
       icon: heart

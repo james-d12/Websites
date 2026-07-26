@@ -14,6 +14,7 @@ hero:
     provide high-level clinical care for complex medical needs, post-operative
     recovery, and specialist treatments.
   imageAlt: "Hospital nursing services"
+  ctaLabel: "Explore Hospital Nursing"
 
 features:
   eyebrow: "Acute Care Services"

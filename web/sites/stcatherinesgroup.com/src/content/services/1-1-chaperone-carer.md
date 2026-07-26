@@ -17,10 +17,11 @@ hero:
     social events. Every outing is carefully planned with dignity and discretion,
     keeping your loved one confident, independent, and connected.
   imageAlt: "Chaperone services"
+  ctaLabel: "Explore Chaperone Care"
 
 about:
   title: "1-to-1 Chaperone Care"
-  subTitle: "How We Can Help"
+  subTitle: "Confident, Supported Outings"
   sections:
     - title: "Medical Appointments, Family Gatherings & Social Events"
       icon: heart
