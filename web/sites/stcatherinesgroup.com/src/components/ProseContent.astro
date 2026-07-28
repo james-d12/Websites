@@ -1,8 +1,8 @@
 ---
 ---
 
-<div class="items-center mx-auto prose prose-2xl max-w-4xl md:max-w-5xl">
-    <div class="space-y-10 text-3xl md:text-4xl leading-relaxed text-green-dark">
+<div class="prose prose-xl max-w-none">
+    <div class="space-y-6 text-xl lg:text-2xl 2xl:text-3xl leading-relaxed text-green-dark">
         <slot/>
     </div>
 </div>
@@ -10,31 +10,10 @@
 <style is:global>
     .prose p {
         margin-bottom: 1.0em;
-        line-height: 1.5;
+        line-height: 1.4;
     }
 
     .prose p:first-of-type {
         margin-top: 0;
-    }
-
-    .prose strong {
-        color: #111827;
-        font-weight: 600;
-    }
-
-    .prose h2 {
-        font-size: 2.25em;
-        font-weight: 700;
-        color: #111827;
-        margin-top: 2em;
-        margin-bottom: 1em;
-    }
-
-    .prose h3 {
-        font-size: 1.75em;
-        font-weight: 600;
-        color: #1f2937;
-        margin-top: 1.5em;
-        margin-bottom: 0.75em;
     }
 </style>
