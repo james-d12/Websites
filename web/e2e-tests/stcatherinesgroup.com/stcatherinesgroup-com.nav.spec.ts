@@ -55,7 +55,6 @@ test.describe("Navbar - Desktop", () => {
 
     const expected = [
       "/nurses/carehome-nurses",
-      "/nurses/hospital-nurses",
       "/nurses/practice-nurses",
     ];
     for (const href of expected) {

@@ -22,7 +22,6 @@ export const services: NavSubItem[] = [
 
 export const nurses: NavSubItem[] = [
   { name: "Care Home Nurses", href: "/nurses/carehome-nurses" },
-  { name: "Hospital Nurses", href: "/nurses/hospital-nurses" },
   { name: "Practice Nurses", href: "/nurses/practice-nurses" },
 ];
 

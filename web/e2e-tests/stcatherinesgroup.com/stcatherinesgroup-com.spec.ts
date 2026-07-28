@@ -8,7 +8,6 @@ const PAGES = [
   { url: "/contact", name: "contact" },
   { url: "/testimonials", name: "testimonials" },
   { url: "/nurses/carehome-nurses", name: "nurses-carehome" },
-  { url: "/nurses/hospital-nurses", name: "nurses-hospital" },
   { url: "/nurses/practice-nurses", name: "nurses-practice" },
   { url: "/services/1-1-chaperone-carer", name: "services-chaperone" },
   {
@@ -25,7 +24,6 @@ const PAGES = [
 
 const NURSES_PAGES = [
   { url: "/nurses/carehome-nurses", name: "Carehome Nurses" },
-  { url: "/nurses/hospital-nurses", name: "Hospital Nurses" },
   { url: "/nurses/practice-nurses", name: "Practice Nurses" },
 ];
 
@@ -123,7 +121,6 @@ test.describe("Footer", () => {
     await page.goto(BASE_URL);
     const footer = page.locator("footer").first();
     const expected = [
-      { name: "Hospital Nurses", href: "/nurses/hospital-nurses" },
       { name: "Care Home Nurses", href: "/nurses/carehome-nurses" },
       { name: "Practice Nurses", href: "/nurses/practice-nurses" },
     ];
