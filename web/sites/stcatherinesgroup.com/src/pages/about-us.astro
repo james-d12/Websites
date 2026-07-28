@@ -90,7 +90,9 @@ const storySections = [
                                 </div>
                             </div>
 
-                            <div class={i % 2 === 1 ? "xl:col-start-1 xl:row-start-1" : ""}>
+                            <div
+                                class={`${i % 2 === 1 ? "xl:col-start-1 xl:row-start-1 xl:border-l-4 xl:pl-10" : "xl:border-r-4 xl:pr-10"} xl:border-green-dark/35`}
+                            >
                                 <ProseContent>
                                     {section.paragraphs.map((paragraph: string) => (
                                         <p>{paragraph}</p>
