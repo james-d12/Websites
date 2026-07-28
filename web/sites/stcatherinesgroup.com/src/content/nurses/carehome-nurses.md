@@ -62,15 +62,6 @@ features:
         - "Care staff clinical training"
         - "Medication competency assessments"
         - "Clinical supervision and mentoring"
-    - title: "CQC Compliance Support"
-      icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-      body: >-
-        Supporting care homes to meet CQC regulations with clinical audits,
-        care plan reviews, and quality assurance processes.
-      items:
-        - "Clinical care plan audits"
-        - "Documentation compliance checks"
-        - "Quality improvement initiatives"
     - title: "Flexible Cover"
       icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
       body: >-
@@ -99,7 +90,7 @@ team:
   checklistItems:
     - label: "Care Home Experience"
       text: "Deep understanding of residential care environments"
-    - label: "CQC Knowledge"
+    - label: "Regulatory Knowledge"
       text: "Expertise in regulatory compliance and standards"
     - label: "Team Integration"
       text: "Ability to work seamlessly with care home staff"

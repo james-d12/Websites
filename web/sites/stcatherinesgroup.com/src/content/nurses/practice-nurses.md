@@ -2,17 +2,17 @@
 meta:
   title: "Practice Nurses - St Catherine's Group"
   description: >-
-    Qualified practice nurses providing primary care nursing services in your
-    home or GP practice.
+    Qualified practice nurses providing primary care nursing services at your
+    GP practice.
 
 hero:
   label: "Specialist Nurses"
   title: "Practice Nurses"
   description: >-
-    Qualified practice nurses providing primary care nursing services in your
-    home. From chronic disease management and health screening to wound care
-    and immunisations, we deliver GP practice-level healthcare with
-    convenience and personal attention.
+    Qualified practice nurses providing primary care nursing services at your
+    GP practice. From chronic disease management and health screening to
+    wound care and immunisations, we deliver GP practice-level healthcare
+    with expertise and personal attention.
   imageAlt: "Practice nursing services"
   ctaLabel: "Explore Practice Nursing"
 
@@ -21,7 +21,7 @@ features:
   title: "Comprehensive Practice Nursing"
   description: >-
     We provide the full range of nursing services you'd expect from a GP
-    practice, delivered in the comfort of your own home.
+    practice, delivered to the same high professional standard.
   cards:
     - title: "Chronic Disease Management"
       icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
@@ -95,8 +95,8 @@ team:
       They provide expert care in areas such as asthma, diabetes, and
       immunisation, working closely with GPs and other healthcare professionals.
     - >-
-      We bring professional, patient-centred primary care into your home,
-      making healthcare more accessible and convenient.
+      We bring professional, patient-centred primary care to your GP
+      practice, making healthcare more accessible and convenient.
   checklistTitle: "Our Practice Nurses Are:"
   checklistItems:
     - label: "GP Practice Experienced"
@@ -112,23 +112,22 @@ team:
 
 testimonials:
   - quote: >-
-      Having practice nursing at home has been a game-changer for managing my
-      diabetes. The nurse knows me, understands my routine, and I never have
-      to wait weeks for an appointment.
+      Having consistent practice nursing has been a game-changer for managing
+      my diabetes. The nurse knows me, understands my routine, and I never
+      have to wait weeks for an appointment.
     name: "Thomas H."
     relationship: "Client"
     service: "Practice Nursing"
   - quote: >-
-      Mum finds it hard to get to the surgery, so having wound care done at
-      home with such professionalism and kindness has made her recovery so
-      much easier.
+      Mum finds it hard to get around, so having wound care done with such
+      professionalism and kindness has made her recovery so much easier.
     name: "Rachel P."
     relationship: "Daughter"
     service: "Practice Nursing"
   - quote: >-
       The nurse who does my COPD reviews is thorough, knowledgeable, and
-      always takes time to answer my questions. It's GP-level care without
-      leaving the house.
+      always takes time to answer my questions. It's GP-level care with a
+      personal touch.
     name: "Brian K."
     relationship: "Client"
     service: "Practice Nursing"
