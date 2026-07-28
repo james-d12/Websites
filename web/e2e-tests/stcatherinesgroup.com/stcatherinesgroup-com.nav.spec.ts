@@ -53,10 +53,7 @@ test.describe("Navbar - Desktop", () => {
     const desktopNav = page.getByTestId("desktop-nav");
     await desktopNav.getByText("Nurses", { exact: true }).hover();
 
-    const expected = [
-      "/nurses/carehome-nurses",
-      "/nurses/practice-nurses",
-    ];
+    const expected = ["/nurses/carehome-nurses", "/nurses/practice-nurses"];
     for (const href of expected) {
       await expect(desktopNav.locator(`a[href="${href}"]`)).toBeVisible();
     }
