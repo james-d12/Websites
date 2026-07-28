@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { getEntry, render } from "astro:content";
+import { getEntry } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
@@ -9,10 +9,44 @@ import ProseContent from "../components/ProseContent.astro";
 import PullQuote from "../components/PullQuote.astro";
 import SectionDivider from "../components/SectionDivider.astro";
 import favicon from "../assets/favicon.ico";
+import heroImage from "../assets/hero.jpg";
+import dementiaCareImage from "../assets/dementia-care.jpg";
+import aboutUsImage01 from "../assets/aboutus-image-01.jpg";
+import aboutUsImage02 from "../assets/aboutus-image-02.jpg";
 
 const entry = await getEntry("pages", "about");
-const { Content } = await render(entry);
 const { title, description, hero } = entry.data;
+
+const paragraphs = entry.body
+    .trim()
+    .split(/\n\s*\n/)
+    .map((paragraph: string) => paragraph.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+// Paragraph ranges are matched by hand to the letter's narrative beats so each image pairs with the right part of the
+// story, with group sizes balanced by word count (paragraph 3 is long on its own) rather than raw paragraph count.
+const storySections = [
+    {
+        image: heroImage,
+        alt: "St Catherine's Group providing compassionate healthcare",
+        paragraphs: paragraphs.slice(0, 3),
+    },
+    {
+        image: dementiaCareImage,
+        alt: "Specialist one-to-one dementia care",
+        paragraphs: paragraphs.slice(3, 6),
+    },
+    {
+        image: aboutUsImage01,
+        alt: "St Catherine's Group care team",
+        paragraphs: paragraphs.slice(6, 8),
+    },
+    {
+        image: aboutUsImage02,
+        alt: "St Catherine's Group providing one-to-one care",
+        paragraphs: paragraphs.slice(8),
+    },
+];
 ---
 
 <Layout title={title} description={description}>
@@ -39,12 +73,35 @@ const { title, description, hero } = entry.data;
         </section>
 
         <section class="bg-white pb-10">
-            <div class="relative mx-auto max-w-5xl md:max-w-6xl px-4 md:px-20">
-                <div class="hidden md:block absolute inset-y-0 left-0 w-1.5 bg-green-dark" aria-hidden="true"></div>
-                <div class="hidden md:block absolute inset-y-0 right-0 w-1.5 bg-green-dark" aria-hidden="true"></div>
-                <ProseContent>
-                    <Content />
-                </ProseContent>
+            <div class="mx-auto max-w-400 2xl:max-w-450 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
+                {
+                    storySections.map((section, i) => (
+                        <div
+                            class={`grid xl:grid-cols-2 gap-16 items-center py-10 xl:py-14 ${i % 2 === 1 ? "xl:grid-flow-dense" : ""} ${i > 0 ? "border-t border-green-dark/10" : ""}`}
+                        >
+                            <div class={`relative ${i % 2 === 1 ? "xl:col-start-2" : ""}`}>
+                                <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2" />
+                                <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
+                                    <Image
+                                        src={section.image}
+                                        alt={section.alt}
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+
+                            <div
+                                class={`${i % 2 === 1 ? "xl:col-start-1 xl:row-start-1 xl:border-l-4 xl:pl-10" : "xl:border-r-4 xl:pr-10"} xl:border-green-dark/35`}
+                            >
+                                <ProseContent>
+                                    {section.paragraphs.map((paragraph: string) => (
+                                        <p>{paragraph}</p>
+                                    ))}
+                                </ProseContent>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
         </section>
     </main>
