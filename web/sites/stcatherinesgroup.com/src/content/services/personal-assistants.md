@@ -18,10 +18,11 @@ hero:
     with impeccable care, giving you and your family complete reassurance and
     peace of mind.
   imageAlt: "Personal assistant services"
+  ctaLabel: "Explore Personal Assistant Care"
 
 about:
   title: "Personal Assistant"
-  subTitle: "How We Can Help"
+  subTitle: "Effortless, Bespoke Support"
   sections:
     - title: "Discretion, Sophistication & Seamless Organisation"
       icon: heart

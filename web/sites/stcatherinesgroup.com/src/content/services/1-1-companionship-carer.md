@@ -17,10 +17,11 @@ hero:
     quality of life. Our carers take time to truly know your loved one, providing
     the human connection that makes every day feel meaningful.
   imageAlt: "Companionship services"
+  ctaLabel: "Explore Companionship Care"
 
 about:
   title: "1-to-1 Companionship Care"
-  subTitle: "How We Can Help"
+  subTitle: "Connection That Brightens Every Day"
   sections:
     - title: "Emotional, Social & Practical Support"
       icon: heart

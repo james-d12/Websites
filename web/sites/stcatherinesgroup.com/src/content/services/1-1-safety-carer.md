@@ -17,10 +17,11 @@ hero:
     attentive care. We help residents regain confidence and independence while
     giving families complete reassurance.
   imageAlt: "1-1 Safety services"
+  ctaLabel: "Explore Safety Care"
 
 about:
   title: "1-to-1 Safety Care"
-  subTitle: "How We Can Help"
+  subTitle: "Dedicated Safety & Reassurance"
   sections:
     - title: "Dedicated, Personalised Safety Support"
       icon: heart

@@ -58,6 +58,7 @@ const services = defineCollection({
         title: z.string(),
         description: z.string(),
         imageAlt: z.string(),
+        ctaLabel: z.string(),
       }),
       about: z.object({
         title: z.string(),
@@ -123,6 +124,7 @@ const nurses = defineCollection({
       title: z.string(),
       description: z.string(),
       imageAlt: z.string(),
+      ctaLabel: z.string(),
     }),
     features: nurseFeatures,
     team: nurseTeam,
