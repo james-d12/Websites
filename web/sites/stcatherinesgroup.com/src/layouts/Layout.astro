@@ -6,7 +6,20 @@ export interface Props {
   description?: string;
 }
 
-const { title = "St Catherine's Group", description = "Exceptional healthcare services, personally delivered." } = Astro.props;
+const { title = "St Catherine's Group", description = "St Catherine's Group provides exceptional 1-1 care and professional nursing services, with dedicated carers and registered nurses delivering personalised, compassionate healthcare for you and your loved ones." } = Astro.props;
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site);
+const shareImage = new URL('/favicon.ico', Astro.site);
+
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	name: "St Catherine's Group",
+	url: "https://stcatherinesgroup.com",
+	logo: shareImage.toString(),
+	telephone: "+442036633074",
+	email: "clientservices@stcatherinesgroup.com",
+};
 ---
 
 <!doctype html>
@@ -19,10 +32,21 @@ const { title = "St Catherine's Group", description = "Exceptional healthcare se
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={description} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={pageUrl} />
+		<meta property="og:image" content={shareImage} />
+		<meta property="og:site_name" content="St Catherine's Group" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={shareImage} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
+		<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 	</head>
 	<body class="bg-linear-to-l from-green-dark via-green-dark to-green-darker antialiased">
 		<slot />

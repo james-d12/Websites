@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+
+const quickLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about-us" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Our 1-1 Services", href: "/services/personal-assistants" },
+    { name: "Our Nursing Services", href: "/nurses/carehome-nurses" },
+];
+---
+
+<Layout
+    title="Page Not Found - St Catherine's Group"
+    description="Sorry, the page you're looking for doesn't exist. Find your way back to St Catherine's Group's care and nursing services."
+>
+    <Navbar />
+
+    <main>
+        <section class="py-18 bg-white">
+            <div class="max-w-4xl md:max-w-5xl mx-auto px-6 text-center">
+                <h2
+                    class="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-green-dark text-white font-semibold text-2xl md:text-3xl rounded-lg group shadow-lg"
+                >
+                    404 Error
+                </h2>
+
+                <h1 class="text-5xl md:text-8xl font-bold text-gray-900 mb-8">
+                    Page not found
+                </h1>
+                <p
+                    class="text-gray-600 text-2xl md:text-3xl leading-relaxed mb-12 max-w-3xl mx-auto"
+                >
+                    Sorry, we couldn't find the page you were looking for. It
+                    may have been moved or no longer exists.
+                </p>
+
+                <div
+                    class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap"
+                >
+                    {
+                        quickLinks.map((link) => (
+                            <a
+                                href={link.href}
+                                class="flex w-full sm:w-auto items-center justify-center px-8 py-4 border-2 border-green-dark text-green-dark font-medium text-2xl rounded-lg hover:bg-green-dark hover:text-white transition-all duration-200"
+                            >
+                                {link.name}
+                            </a>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
