@@ -16,7 +16,7 @@ services:
       start_period: 30s
 
   directus:
-    image: directus/directus:11@sha256:eb326f679ae847c0a776f93b972761dc2ebe84980e0b9d274a6bc31cd62809f7
+    image: directus/directus:12@sha256:4fb64fd8c264b187aab11f5a23fb2bc789df129d81c944a1628c082419613b67
     ports:
       - 8055:8055
     volumes:
