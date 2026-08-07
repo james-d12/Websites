@@ -6,7 +6,7 @@
     "libs/*",
     "sites/*"
   ],
-  "packageManager": "pnpm@11.17.0",
+  "packageManager": "pnpm@11.19.0",
   "scripts": {
     "build": "pnpm -r run build",
     "build:libs": "pnpm --filter shared-ui run build",
@@ -21,7 +21,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
     "@eslint/js": "^10.0.1",
-    "@playwright/test": "^1.62.0",
+    "@playwright/test": "^1.62.1",
     "@types/node": "^26.1.2",
     "dotenv": "^17.4.2",
     "eslint": "^10.8.0",
@@ -36,7 +36,7 @@
     "@astrojs/check": "^0.9.10",
     "@astrojs/sitemap": "^3.7.3",
     "@tailwindcss/vite": "^4.3.3",
-    "astro": "^7.1.4",
+    "astro": "^7.1.6",
     "tailwindcss": "^4.3.3"
   }
 }
