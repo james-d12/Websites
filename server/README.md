@@ -39,7 +39,7 @@ This folder contains the NixOS configuration for the server hosted on Hetzner.
 1. Install Docker on your system.
 2. Copy the Signing Key from the Password Manager to the server/config folder.
 3. Navigate to the ```server``` folder.
-4. Run ```docker compose run --rm vps-build```.
+4. Run ```docker compose run --rm vps-deploy```.
 5. Changes should have been applied.
 
 ### Secrets with Sops-Nix

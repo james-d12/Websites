@@ -29,7 +29,7 @@ services:
     env_file: ".env"
     command: nix run github:nix-community/nixos-anywhere -- --flake .#vps --generate-hardware-config nixos-generate-config ./modules/hardware.nix root@$TARGET_HOST
 
-  vps-build:
+  vps-deploy:
     image: nixos/nix
     container_name: nixos-build
     working_dir: /flake
