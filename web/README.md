@@ -1,7 +1,6 @@
 # Web
 
-This folder contains the source code for the websites. Most if not all are built using Astro.js. I use pnpm workspace
-to help manage shared dependencies across all sites.
+This folder contains the source code for the websites. Most if not all are built using Astro.js. I use pnpm workspace to help manage shared dependencies across all sites.
 
 <!-- TOC -->
 
