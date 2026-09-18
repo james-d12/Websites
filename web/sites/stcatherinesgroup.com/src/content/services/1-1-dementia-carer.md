@@ -145,4 +145,22 @@ testimonials:
     name: "Michael B."
     relationship: "Son"
     service: "Dementia Care"
+  - quote: >-
+      I first met Charmaine of St Catherine's on the phone in my hour of
+      need. I had recently arrived in the UK and was desperately searching
+      for a home to care for my husband who had been diagnosed with
+      Alzheimer's. Charmaine reached out to me like an immediate friend and
+      her concern and attention to my predicament was like no other. She was
+      very open and suggestive of varying homes that might help me. She
+      carried my worries with her and went out and beyond to help my
+      desperately sad situation. She kept in regular touch with me just to
+      make sure we were ok. Charmaine also made a further effort to meet me
+      personally and made things feel better. Her advice was always greatly
+      appreciated. I know that her genuine caring self is the backbone to
+      this company. I wish St Catherine could touch many more people who
+      need good advice and tremendous warm support and respect. Charmaine
+      thank you and I wish you much success.
+    name: "Linda"
+    relationship: "Wife"
+    service: "Dementia Care"
 ---

@@ -114,4 +114,28 @@ testimonials:
     name: "Jennifer H."
     relationship: "Daughter"
     service: "Companionship"
+  - quote: >-
+      The St Catherines Group provides an invaluable service. One to one
+      care of a loved one based on their particular needs. An essential
+      organisation for those who might benefit from individual attention and
+      companionship. Highly recommended.
+    name: "D.A."
+    relationship: "Family Member"
+    service: "Companionship"
+  - quote: >-
+      The whole family have been so pleased with the improvement in our
+      Aunt's quality of life at her Care Home since she has received 1:1
+      support from the two carers Char selected for her. They built up a
+      good connection with her very quickly and have become like friends who
+      accompany her to meals and the activities she enjoys and give her
+      practical support. One highlight has been that she was able to leave
+      the Care Home to go for a walk on Wimbledon Common, without trying to
+      run away. It feels like her world is opening up again. The whole
+      family have also appreciated the detailed daily updates Char sends and
+      the thoughtful way she updates us early if anything special has
+      happened. It truly is a very personal service focussed on the
+      individual.
+    name: "D.W. Family"
+    relationship: "Niece"
+    service: "Companionship"
 ---
