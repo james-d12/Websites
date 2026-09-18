@@ -61,36 +61,143 @@ const groups = groupByService
                     )}
 
                     <div class="grid md:grid-cols-3 lg:grid-cols-3 gap-8">
-                        {group.testimonials.map((testimonial) => (
-                            <div class="bg-green-dark text-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col">
-                                <div class="mb-6">
-                                    <svg
-                                        class="w-10 h-10"
-                                        fill="currentColor"
-                                        viewBox="0 0 24 24"
+                        {group.testimonials.map((testimonial) => {
+                            const isLong = testimonial.quote.length > 220;
+                            return (
+                                <div class="bg-green-dark text-white rounded-2xl p-8 hover:shadow-lg transition-all duration-300 flex flex-col">
+                                    <div class="mb-6">
+                                        <svg
+                                            class="w-10 h-10"
+                                            fill="currentColor"
+                                            viewBox="0 0 24 24"
+                                        >
+                                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                                        </svg>
+                                    </div>
+
+                                    <blockquote
+                                        class:list={[
+                                            "leading-relaxed text-xl md:text-2xl mb-4 grow",
+                                            { "line-clamp-6": isLong },
+                                        ]}
                                     >
-                                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                                    </svg>
-                                </div>
+                                        "{testimonial.quote}"
+                                    </blockquote>
 
-                                <blockquote class="leading-relaxed text-xl md:text-2xl mb-6 grow">
-                                    "{testimonial.quote}"
-                                </blockquote>
+                                    {isLong && (
+                                        <button
+                                            type="button"
+                                            data-read-more
+                                            data-quote={testimonial.quote}
+                                            data-name={testimonial.name}
+                                            data-relationship={
+                                                testimonial.relationship
+                                            }
+                                            data-service={testimonial.service}
+                                            class="self-start inline-flex items-center gap-1.5 mb-6 px-4 py-2 rounded-full bg-white/15 hover:bg-white/25 font-semibold text-lg transition-colors cursor-pointer"
+                                        >
+                                            Read more
+                                            <svg
+                                                class="w-4 h-4"
+                                                fill="none"
+                                                stroke="currentColor"
+                                                viewBox="0 0 24 24"
+                                            >
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2.5"
+                                                    d="M9 5l7 7-7 7"
+                                                />
+                                            </svg>
+                                        </button>
+                                    )}
 
-                                <div class="pt-4 border-t border-gray-200">
-                                    <p class="font-semibold mb-1 text-xl md:text-2xl">
-                                        {testimonial.name}
-                                    </p>
-                                    <p class="text-lg md:text-xl">
-                                        {testimonial.relationship} •{" "}
-                                        {testimonial.service}
-                                    </p>
+                                    <div class="pt-4 border-t border-gray-200">
+                                        <p class="font-semibold mb-1 text-xl md:text-2xl">
+                                            {testimonial.name}
+                                        </p>
+                                        <p class="text-lg md:text-xl">
+                                            {testimonial.relationship} •{" "}
+                                            {testimonial.service}
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             ))
         }
     </div>
+
+    <dialog
+        id="testimonial-modal"
+        class="m-auto rounded-2xl bg-green-dark text-white p-8 md:p-10 max-w-2xl w-[90vw] max-h-[80vh] overflow-y-auto shadow-2xl backdrop:bg-black/60"
+    >
+        <div class="flex justify-end mb-2">
+            <button
+                type="button"
+                data-close-modal
+                aria-label="Close"
+                class="text-white/60 hover:text-white transition-colors cursor-pointer"
+            >
+                <svg
+                    class="w-7 h-7"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                    />
+                </svg>
+            </button>
+        </div>
+        <blockquote
+            id="testimonial-modal-quote"
+            class="leading-relaxed text-xl md:text-2xl mb-6 whitespace-pre-line"
+        />
+        <div class="pt-4 border-t border-gray-200">
+            <p
+                id="testimonial-modal-name"
+                class="font-semibold mb-1 text-xl md:text-2xl"
+            />
+            <p id="testimonial-modal-meta" class="text-lg md:text-xl" />
+        </div>
+    </dialog>
 </section>
+
+<script>
+    const modal = document.querySelector<HTMLDialogElement>(
+        "#testimonial-modal",
+    );
+    const quoteEl = document.querySelector("#testimonial-modal-quote");
+    const nameEl = document.querySelector("#testimonial-modal-name");
+    const metaEl = document.querySelector("#testimonial-modal-meta");
+
+    if (modal && quoteEl && nameEl && metaEl) {
+        document.querySelectorAll<HTMLButtonElement>("[data-read-more]").forEach(
+            (button) => {
+                button.addEventListener("click", () => {
+                    quoteEl.textContent = `"${button.dataset.quote ?? ""}"`;
+                    nameEl.textContent = button.dataset.name ?? "";
+                    metaEl.textContent = `${button.dataset.relationship ?? ""} • ${button.dataset.service ?? ""}`;
+                    modal.showModal();
+                });
+            },
+        );
+
+        modal.querySelector("[data-close-modal]")?.addEventListener(
+            "click",
+            () => modal.close(),
+        );
+
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) modal.close();
+        });
+    }
+</script>
