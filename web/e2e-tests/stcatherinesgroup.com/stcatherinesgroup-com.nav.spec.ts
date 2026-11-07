@@ -12,7 +12,7 @@ test.describe("Navbar - Desktop", () => {
   });
 
   test("utility bar phone link is correct", async ({ page }) => {
-    const phone = page.locator('a[href="tel:+442036633074"]').first();
+    const phone = page.locator('a[href="tel:+442080874717"]').first();
     await expect(phone).toBeVisible();
   });
 

@@ -195,7 +195,7 @@ test.describe("Contact Page", () => {
   test("has correct phone and email contact links", async ({ page }) => {
     await page.goto(`${BASE_URL}/contact`);
     const main = page.locator("main");
-    await expect(main.locator('a[href="tel:+442036633074"]')).toBeVisible();
+    await expect(main.locator('a[href="tel:+442080874717"]')).toBeVisible();
     await expect(main.locator('a[href="tel:+447780149826"]')).toBeVisible();
     await expect(
       main.locator('a[href="mailto:clientservices@stcatherinesgroup.com"]'),
@@ -207,7 +207,7 @@ test.describe("Contact Page", () => {
   }) => {
     await page.goto(`${BASE_URL}/contact`);
     // one instance in the navbar utility bar, one in the page's own content
-    await expect(page.locator('a[href="tel:+442036633074"]')).toHaveCount(2);
+    await expect(page.locator('a[href="tel:+442080874717"]')).toHaveCount(2);
   });
 });
 

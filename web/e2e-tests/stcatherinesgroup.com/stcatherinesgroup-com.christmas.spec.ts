@@ -46,17 +46,17 @@ test.describe("Christmas Card", () => {
     // Closed: only the front can be interacted with
     await expect(card).toHaveAttribute("data-state", "closed");
     await expect(face("front")).not.toHaveAttribute("inert");
-    await expect(face("inside-left")).toHaveAttribute("inert");
+    await expect(face("inside-top")).toHaveAttribute("inert");
 
     // Clicking the cover opens the card onto the inside spread
     await face("front").click();
     await expect(card).toHaveAttribute("data-state", "open");
     await expect(toggle).toHaveText("Close the card");
     await expect(face("front")).toHaveAttribute("inert");
-    await expect(face("inside-left")).not.toHaveAttribute("inert");
-    await expect(face("inside-right")).not.toHaveAttribute("inert");
+    await expect(face("inside-top")).not.toHaveAttribute("inert");
+    await expect(face("inside-bottom")).not.toHaveAttribute("inert");
     await expect(
-      face("inside-left").locator(
+      face("inside-top").locator(
         'a[href="mailto:clientservices@stcatherinesgroup.com"]',
       ),
     ).toBeVisible();
@@ -83,7 +83,7 @@ test.describe("Christmas Card", () => {
 
     const faces = page.locator("[data-face]");
     await expect(faces).toHaveCount(4);
-    for (const name of ["front", "inside-left", "inside-right", "back"]) {
+    for (const name of ["front", "inside-top", "inside-bottom", "back"]) {
       const face = page.locator(`[data-face="${name}"]`);
       await face.scrollIntoViewIfNeeded();
       await expect(face).toBeVisible();
