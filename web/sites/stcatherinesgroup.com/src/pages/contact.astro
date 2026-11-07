@@ -2,6 +2,24 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
+
+const socialLinks = [
+    {
+        name: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=61595399308723",
+        icon: '<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>',
+    },
+    {
+        name: "Instagram",
+        href: "https://www.instagram.com/stcatherinesgroupltd",
+        icon: '<rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>',
+    },
+    {
+        name: "LinkedIn",
+        href: "https://www.linkedin.com/company/stcatherinesgroup-ltd",
+        icon: '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>',
+    },
+];
 ---
 
 <Layout
@@ -14,16 +32,16 @@ import Footer from "../components/Footer.astro";
         <section class="py-18 bg-white">
             <div class="max-w-4xl md:max-w-5xl mx-auto px-6 text-center">
                 <h2
-                    class="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-green-dark text-white font-semibold text-2xl md:text-3xl rounded-lg group shadow-lg"
+                    class="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-green-primary text-white font-semibold text-2xl md:text-3xl rounded-lg group shadow-lg"
                 >
                     Get In Touch
-            </h2>
+                </h2>
 
-                <h1 class="text-5xl md:text-8xl font-bold text-gray-900 mb-8">
+                <h1 class="text-5xl md:text-8xl font-bold text-green-dark mb-8">
                     Let's talk
                 </h1>
                 <p
-                    class="text-gray-600 text-2xl md:text-3xl leading-relaxed mb-12 max-w-3xl mx-auto"
+                    class="text-green-dark text-2xl md:text-3xl leading-relaxed mb-12 max-w-3xl mx-auto"
                 >
                     We're here to listen, answer your questions, and discuss how
                     we can best support you or your loved ones.
@@ -34,7 +52,7 @@ import Footer from "../components/Footer.astro";
                 >
                     <a
                         href="tel:+442036633074"
-                        class="flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 bg-green-dark text-white font-medium text-3xl rounded-lg hover:bg-green-dark/90 transition-all duration-200 shadow-md"
+                        class="flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 bg-green-primary text-white font-medium text-3xl rounded-lg hover:bg-green-primary/90 transition-all duration-200 shadow-md"
                     >
                         <svg
                             class="w-6 h-6 shrink-0"
@@ -53,7 +71,7 @@ import Footer from "../components/Footer.astro";
                     </a>
                     <a
                         href="tel:+447780149826"
-                        class="flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 border-2 border-green-dark text-green-dark font-medium text-3xl rounded-lg hover:bg-green-dark hover:text-white transition-all duration-200"
+                        class="flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 border-2 border-green-primary text-green-primary font-medium text-3xl rounded-lg hover:bg-green-primary hover:text-white transition-all duration-200"
                     >
                         <svg
                             class="w-6 h-6 shrink-0"
@@ -72,7 +90,7 @@ import Footer from "../components/Footer.astro";
                     </a>
                     <a
                         href="mailto:clientservices@stcatherinesgroup.com"
-                        class="flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 border-2 border-green-dark text-green-dark font-medium text-3xl sm:text-3xl rounded-lg hover:bg-green-dark hover:text-white transition-all duration-200"
+                        class="flex w-full sm:w-auto items-center justify-center gap-3 px-8 py-4 border-2 border-green-primary text-green-primary font-medium text-3xl rounded-lg hover:bg-green-primary hover:text-white transition-all duration-200"
                     >
                         <svg
                             class="w-6 h-6 shrink-0"
@@ -89,6 +107,37 @@ import Footer from "../components/Footer.astro";
                         </svg>
                         Email
                     </a>
+                </div>
+
+                <div class="mt-14">
+                    <p class="text-green-dark text-2xl md:text-3xl mb-6">
+                        Follow us
+                    </p>
+                    <ul class="flex justify-center gap-5">
+                        {socialLinks.map((social) => (
+                            <li>
+                                <a
+                                    href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`St Catherine's Group on ${social.name} (opens in a new tab)`}
+                                    class="flex items-center justify-center w-16 h-16 rounded-full border-2 border-green-primary text-green-primary hover:bg-green-primary hover:text-white transition-all duration-200 shadow-md"
+                                >
+                                    <svg
+                                        class="w-7 h-7"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        viewBox="0 0 24 24"
+                                        aria-hidden="true"
+                                        set:html={social.icon}
+                                    />
+                                </a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </section>

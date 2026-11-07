@@ -3,14 +3,17 @@
 @theme {
   --breakpoint-nav: 112.5rem; /* 1800px: min width the full navbar (logo + one-line title + all nav links) fits without overlap */
   --color-green-dark: #13705b;
-  --color-green-middle: #105c4b;
-  --color-green-darker: #0c4438;
-  --color-green-light: #29b595;
-  --color-green-50: #f0fdf9;
-  --color-green-100: #d5f5ec;
-  --color-warm-50: #faf9f7;
-  --color-warm-100: #f3f1ed;
-  --color-warm-200: #e8e4dd;
+  --color-green-primary: #18826a;
+  --color-gradient-from: #13705b;
+  --color-gradient-to: #27b292;
+}
+
+@utility bg-brand-gradient {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-from),
+    var(--color-gradient-to)
+  );
 }
 
 @font-face {

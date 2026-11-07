@@ -54,7 +54,7 @@ const storySections = [
     <main>
         <section class="relative bg-white pt-10 pb-10">
             <div class="flex justify-center mb-12">
-                <div class="bg-linear-to-l from-green-dark via-green-dark to-green-darker rounded-2xl shadow-lg">
+                <div class="bg-brand-gradient rounded-2xl shadow-lg">
                     <Image
                         src={favicon}
                         alt="St Catherine's Group Logo"
@@ -80,7 +80,7 @@ const storySections = [
                             class={`grid xl:grid-cols-2 gap-16 items-center py-10 xl:py-14 ${i % 2 === 1 ? "xl:grid-flow-dense" : ""} ${i > 0 ? "border-t border-green-dark/10" : ""}`}
                         >
                             <div class={`relative ${i % 2 === 1 ? "xl:col-start-2" : ""}`}>
-                                <div class="absolute -inset-4 bg-linear-to-br from-green-dark/5 to-green-dark/10 rounded-3xl transform -rotate-2" />
+                                <div class="absolute -inset-4 bg-linear-to-br from-green-primary/5 to-green-primary/10 rounded-3xl transform -rotate-2" />
                                 <div class="relative overflow-hidden rounded-2xl aspect-4/3 shadow-xl">
                                     <Image
                                         src={section.image}
