@@ -106,7 +106,7 @@ story:
 
     Working collaboratively with the care home, I suggested gently
     reintroducing her husband during these calmer periods. With careful planning
-    and sensitivity, short visits were trialed. Over time, these became a weekly
+    and sensitivity, short visits were trialled. Over time, these became a weekly
     routine.
 
     Sitting together, sharing tea, smiling, and reminiscing, the couple were

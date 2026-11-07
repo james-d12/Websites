@@ -1,0 +1,94 @@
+---
+/**
+ * Decorative gradient border down both sides of the viewport, running from
+ * just below the sticky navbar to the top of the footer, with rounded
+ * corners where it meets the navbar.
+ * Purely visual: it ignores pointer events.
+ */
+---
+
+<div class="page-frame" aria-hidden="true"></div>
+
+<script is:inline>
+    // Keep the frame between the sticky navbar and the footer:
+    // - top: the navbar's height (differs per breakpoint and when the top
+    //   phone bar is hidden), so the frame never covers it.
+    // - bottom: how far the footer has scrolled into view, so the sides stop
+    //   at the footer's top edge instead of covering its gradient.
+    (() => {
+        const root = document.documentElement;
+        const nav = document.getElementById("site-navbar");
+        const footer = document.querySelector("footer");
+
+        const setNav = () =>
+            root.style.setProperty("--navbar-h", `${nav ? nav.offsetHeight : 0}px`);
+
+        let queued = false;
+        const setFooter = () => {
+            queued = false;
+            const overlap = footer
+                ? Math.max(0, window.innerHeight - footer.getBoundingClientRect().top)
+                : 0;
+            root.style.setProperty("--footer-overlap", `${overlap}px`);
+        };
+        const queueFooter = () => {
+            if (!queued) {
+                queued = true;
+                requestAnimationFrame(setFooter);
+            }
+        };
+
+        setNav();
+        setFooter();
+        if (nav) new ResizeObserver(setNav).observe(nav);
+        window.addEventListener("scroll", queueFooter, { passive: true });
+        window.addEventListener("resize", queueFooter);
+        new ResizeObserver(queueFooter).observe(document.body);
+    })();
+</script>
+
+<style>
+    .page-frame {
+        /* scales with the viewport: ~14px on phones up to 44px on wide screens */
+        --frame-w: clamp(14px, 2.5vw, 44px);
+        --frame-r: clamp(18px, 2.2vw, 38px);
+        /* how far the gradient layer overhangs the viewport, so its own
+           rounded outer corners are clipped off-screen */
+        --frame-overhang: 100px;
+        position: fixed;
+        inset: var(--navbar-h, 0px) 0 var(--footer-overlap, 0px) 0;
+        /* above page content, below the sticky navbar (z-50) and its menus */
+        z-index: 45;
+        pointer-events: none;
+        overflow: hidden;
+    }
+
+    /*
+     * Gradient layer with a rounded hole masked out of its content box.
+     * Padding = overhang + frame width puts the hole's left/right edges
+     * --frame-w in from the viewport; the top edge sits flush under the navbar
+     * and the bottom edge is pushed off-screen, so only the sides show.
+     * The hole's corner radius is border-radius minus padding = --frame-r.
+     */
+    .page-frame::before {
+        --pad: calc(var(--frame-overhang) + var(--frame-w));
+        content: "";
+        position: absolute;
+        inset: calc(-1 * var(--pad)) calc(-1 * var(--frame-overhang))
+            calc(-1 * (var(--pad) + var(--frame-r) * 2));
+        padding: var(--pad);
+        border-radius: calc(var(--pad) + var(--frame-r));
+        background: linear-gradient(
+            to right,
+            var(--color-gradient-from),
+            var(--color-gradient-to)
+        );
+        -webkit-mask:
+            linear-gradient(#000 0 0) content-box,
+            linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask:
+            linear-gradient(#000 0 0) content-box exclude,
+            linear-gradient(#000 0 0);
+    }
+</style>

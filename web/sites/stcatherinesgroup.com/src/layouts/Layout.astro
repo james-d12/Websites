@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import PageFrame from '../components/PageFrame.astro'
 
 export interface Props {
   title?: string;
@@ -48,7 +49,8 @@ const organizationSchema = {
 		<meta name="generator" content={Astro.generator} />
 		<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
 	</head>
-	<body class="bg-linear-to-l from-green-dark via-green-dark to-green-darker antialiased">
+	<body class="bg-brand-gradient antialiased">
 		<slot />
+		<PageFrame />
 	</body>
 </html>

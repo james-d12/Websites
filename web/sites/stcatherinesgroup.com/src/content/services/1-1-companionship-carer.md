@@ -115,7 +115,7 @@ testimonials:
     relationship: "Daughter"
     service: "Companionship"
   - quote: >-
-      The St Catherines Group provides an invaluable service. One to one
+      St Catherine's Group provides an invaluable service. One to one
       care of a loved one based on their particular needs. An essential
       organisation for those who might benefit from individual attention and
       companionship. Highly recommended.

@@ -7,7 +7,7 @@ import { navLinks } from "../data/navigation";
     <div id="top-navbar" class="hidden md:block w-full bg-white py-2 px-6 sm:px-8">
         <div class="max-w-8xl mx-auto flex items-center justify-center gap-8">
             <div class="flex items-center gap-2">
-                <h3 class="text-green-dark hover:text-green text-4xl tracking-wide transition-colors">
+                <h3 class="text-green-dark hover:text-green-primary text-4xl tracking-wide transition-colors">
                     24/7
                 </h3>
             </div>
@@ -27,7 +27,7 @@ import { navLinks } from "../data/navigation";
                 </svg>
                 <a
                     href="tel:+442036633074"
-                    class="text-green-dark hover:text-green text-4xl tracking-wide transition-colors"
+                    class="text-green-dark hover:text-green-primary text-4xl tracking-wide transition-colors"
                 >
                     020 3663 3074
                 </a>
@@ -48,7 +48,7 @@ import { navLinks } from "../data/navigation";
                 </svg>
                 <a
                     href="tel:+447780149826"
-                    class="text-green-dark hover:text-green text-4xl tracking-wide transition-colors"
+                    class="text-green-dark hover:text-green-primary text-4xl tracking-wide transition-colors"
                 >
                     07780 149826
                 </a>
@@ -56,7 +56,7 @@ import { navLinks } from "../data/navigation";
         </div>
     </div>
     <nav
-        class="relative w-full bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-md"
+        class="relative w-full bg-brand-gradient"
     >
         <div
             class="max-w-8xl mx-auto py-4 lg:py-0 px-2 sm:px-4 md:px-8 flex items-center justify-between"
@@ -78,7 +78,7 @@ import { navLinks } from "../data/navigation";
                         St Catherine's Group Ltd
                     </span>
                     <span
-                        class="text-md md:text-2xl lg:text-3xl text-white tracking-tight"
+                        class="text-base md:text-2xl lg:text-3xl text-white tracking-tight"
                         style="font-family: 'Lora', Georgia, serif;"
                     >
                         One-to-One Healthcare
@@ -124,7 +124,7 @@ import { navLinks } from "../data/navigation";
                             )}
                             {link.dropdown && (
                                 <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200">
-                                    <div class="bg-linear-to-l from-green-dark to-green-dark rounded-lg shadow-lg border border-white/10 py-2 min-w-80">
+                                    <div class="bg-brand-gradient rounded-lg shadow-lg border border-white/10 py-2 min-w-80">
                                         {link.dropdown.map((item) => (
                                             <a
                                                 href={item.href}
@@ -187,7 +187,7 @@ import { navLinks } from "../data/navigation";
 
         <div
             id="mobile-menu"
-            class="hidden nav:hidden absolute top-full left-0 w-full z-40 max-h-[80vh] overflow-y-auto border-t border-white/10 bg-linear-to-l from-green-dark via-green-dark to-green-darker shadow-lg"
+            class="hidden nav:hidden absolute top-full left-0 w-full z-40 max-h-[80vh] overflow-y-auto border-t border-white/10 bg-brand-gradient shadow-lg"
         >
             <div class="max-w-6xl mx-auto px-6 py-2 divide-y divide-white/10">
                 {
