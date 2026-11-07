@@ -2,9 +2,10 @@
 /**
  * Interactive version of the client's Canva Christmas card (4 panels).
  *
- * Large screens (lg+): a 3D folding card. The cover (front / inside-left) is
- * hinged on its left edge and swings open over the base (inside-right / back);
- * "Turn it over" flips the closed card to show the back.
+ * Large screens (lg+): a 3D top-fold card. The cover (front / inside-top) is
+ * hinged on its top edge and swings up, revealing the inside with the contact
+ * panel above the message (inside-bottom); "Turn it over" flips the closed
+ * card top-to-bottom to show the back.
  * Smaller screens, or without JS: the four panels stack in reading order.
  *
  * The background art comes straight from the PDF (it has no text baked in);
@@ -45,7 +46,7 @@ const imageSizes = "94vw";
 <div class="xmas" data-xmas data-state="closed">
     <div class="stage">
         <div class="card">
-            <!-- Cover leaf: hinged on its left edge -->
+            <!-- Cover leaf: hinged on its top edge -->
             <div class="leaf leaf--cover">
                 <section class="face face--front" data-face="front" aria-label="Front of the card">
                     <Image
@@ -66,7 +67,7 @@ const imageSizes = "94vw";
                     </h1>
                 </section>
 
-                <section class="face face--reverse" data-face="inside-left" aria-label="Contact details">
+                <section class="face face--reverse" data-face="inside-top" aria-label="Contact details">
                     <Image
                         src={hollyImage}
                         alt=""
@@ -97,9 +98,9 @@ const imageSizes = "94vw";
                 </section>
             </div>
 
-            <!-- Base leaf: inside-right on top, back of the card on the reverse -->
+            <!-- Base leaf: inside-bottom facing up, back of the card on the reverse -->
             <div class="leaf leaf--base">
-                <section class="face face--message" data-face="inside-right" aria-labelledby="xmas-wish">
+                <section class="face face--message" data-face="inside-bottom" aria-labelledby="xmas-wish">
                     <Image
                         src={hollyImage}
                         alt=""
@@ -183,7 +184,7 @@ const imageSizes = "94vw";
 
         const visibleFaces: Record<State, string[]> = {
             closed: ["front"],
-            open: ["inside-left", "inside-right"],
+            open: ["inside-top", "inside-bottom"],
             back: ["back"],
         };
         const announcements: Record<State, string> = {
@@ -219,6 +220,12 @@ const imageSizes = "94vw";
 
         root.dataset.js = "";
         render();
+        // Enable size transitions after the first frame at full size.
+        requestAnimationFrame(() =>
+            requestAnimationFrame(() => {
+                root.dataset.ready = "";
+            }),
+        );
 
         // Stacked layout: fade each panel in as it scrolls into view.
         if ("IntersectionObserver" in window) {
@@ -529,20 +536,29 @@ const imageSizes = "94vw";
 
     @media (min-width: 64rem) {
         .xmas[data-js] {
-            /* One panel's width, as big as the screen allows: the closed card
-               fills the screen, and shrinks as it opens so the two-panel
-               spread fills the width. Room is left for the controls below. */
-            --fit-h: calc((100svh - 9rem) * 1.413);
-            --panel-w: min(94vw, var(--fit-h));
+            /* The stage fills the screen height, leaving room for the controls.
+               One panel is as big as fits: the closed card fills the stage,
+               and shrinks as it opens so the two panels stacked top/bottom
+               fill the stage height. */
+            --stage-h: calc(100svh - 9rem);
+            --panel-w: min(94vw, calc(var(--stage-h) * 1.413));
+            --panel-h: calc(var(--panel-w) * 1055 / 1491);
             --turn: 1.1s cubic-bezier(0.45, 0.05, 0.25, 1);
+        }
+        /* Only animate the size once the card has rendered at full size,
+           otherwise it would grow from 0 on page load. */
+        .xmas[data-js][data-ready] {
             transition: --panel-w var(--turn);
         }
         .xmas[data-js][data-state="open"] {
-            --panel-w: min(48vw, var(--fit-h));
+            --panel-w: min(94vw, calc(var(--stage-h) / 2 * 1.413));
         }
 
         .xmas[data-js] .stage {
-            display: block;
+            /* flow-root: keep the card's centring margin inside the stage
+               rather than collapsing through and pushing the stage down. */
+            display: flow-root;
+            height: var(--stage-h);
             perspective: calc(var(--panel-w) * 4);
         }
 
@@ -552,7 +568,8 @@ const imageSizes = "94vw";
             width: var(--panel-w);
             max-width: none;
             aspect-ratio: 1491 / 1055;
-            margin-inline: auto;
+            /* Closed card centred in the stage (tracks the animating size). */
+            margin: calc((var(--stage-h) - var(--panel-h)) / 2) auto 0;
             transform-style: preserve-3d;
             transition: transform var(--turn);
         }
@@ -575,7 +592,7 @@ const imageSizes = "94vw";
 
         /* Cover sits slightly in front of the base so they never z-fight. */
         .xmas[data-js] .leaf--cover {
-            transform-origin: left center;
+            transform-origin: center top;
             transform: translateZ(2px);
             transition: transform var(--turn);
         }
@@ -590,38 +607,36 @@ const imageSizes = "94vw";
             transform: translateZ(1px);
         }
         .xmas[data-js] .face--reverse {
-            transform: rotateY(180deg);
+            transform: rotateX(180deg);
         }
 
         /* Panel edges meet at the fold when open. */
         .xmas[data-js] .leaf--cover .face--reverse {
-            border-top-left-radius: 0.75rem;
-            border-bottom-left-radius: 0.75rem;
-            border-top-right-radius: 0.15rem;
+            border-bottom-left-radius: 0.15rem;
             border-bottom-right-radius: 0.15rem;
         }
         .xmas[data-js] .face--message {
             border-top-left-radius: 0.15rem;
-            border-bottom-left-radius: 0.15rem;
+            border-top-right-radius: 0.15rem;
         }
 
         .xmas[data-js][data-state="closed"] .face--front {
             cursor: pointer;
         }
 
-        /* Open: cover swings left; the card slides right to keep the spread centred. */
+        /* Open: the cover's bottom edge lifts towards the viewer and over the
+           top; the card slides down half its height to keep the spread centred.
+           (% of the card's own, animating, height.) */
         .xmas[data-js][data-state="open"] .card {
-            /* % of the card's own (animating) width, so it stays centred
-               while --panel-w transitions. */
-            transform: translateX(50%);
+            transform: translateY(50%);
         }
         .xmas[data-js][data-state="open"] .leaf--cover {
-            transform: translateZ(2px) rotateY(-180deg);
+            transform: translateZ(2px) rotateX(180deg);
         }
 
-        /* Back: turn the closed card over. */
+        /* Back: turn the closed card over, top to bottom. */
         .xmas[data-js][data-state="back"] .card {
-            transform: rotateY(180deg);
+            transform: rotateX(180deg);
         }
 
         .xmas[data-js] .controls {
