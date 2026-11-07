@@ -56,7 +56,9 @@ test.describe("Christmas Card", () => {
     await expect(face("inside-left")).not.toHaveAttribute("inert");
     await expect(face("inside-right")).not.toHaveAttribute("inert");
     await expect(
-      face("inside-left").locator('a[href="mailto:clientservices@stcatherinesgroup.com"]'),
+      face("inside-left").locator(
+        'a[href="mailto:clientservices@stcatherinesgroup.com"]',
+      ),
     ).toBeVisible();
 
     await toggle.click();
