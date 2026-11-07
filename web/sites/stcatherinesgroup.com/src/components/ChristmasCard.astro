@@ -1,0 +1,642 @@
+---
+/**
+ * Interactive version of the client's Canva Christmas card (4 panels).
+ *
+ * Large screens (lg+): a 3D folding card. The cover (front / inside-left) is
+ * hinged on its left edge and swings open over the base (inside-right / back);
+ * "Turn it over" flips the closed card to show the back.
+ * Smaller screens, or without JS: the four panels stack in reading order.
+ *
+ * The background art comes straight from the PDF (it has no text baked in);
+ * all text is live HTML scaled with container query units (cqw) so it keeps
+ * the card's proportions at any size.
+ */
+import { Image } from "astro:assets";
+import frontImage from "../assets/christmas/front.jpg";
+import hollyImage from "../assets/christmas/holly.jpg";
+import backImage from "../assets/christmas/back.jpg";
+import dove from "../assets/christmas/dove.png";
+import { socialLinks } from "../data/social";
+
+// As printed on the card. NOTE: the rest of the site uses 020 3663 3074.
+const contacts = [
+    {
+        label: "020 8087 4717",
+        href: "tel:+442080874717",
+        icon: '<path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>',
+        extra: { label: "07780 149826", href: "tel:+447780149826" },
+    },
+    {
+        label: "clientservices@stcatherinesgroup.com",
+        href: "mailto:clientservices@stcatherinesgroup.com",
+        icon: '<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>',
+    },
+    {
+        label: "www.stcatherinesgroup.com",
+        href: "/",
+        icon: '<path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>',
+    },
+];
+
+const imageWidths = [480, 720, 960, 1440];
+const imageSizes = "94vw";
+---
+
+<div class="xmas" data-xmas data-state="closed">
+    <div class="stage">
+        <div class="card">
+            <!-- Cover leaf: hinged on its left edge -->
+            <div class="leaf leaf--cover">
+                <section class="face face--front" data-face="front" aria-label="Front of the card">
+                    <Image
+                        src={frontImage}
+                        alt=""
+                        widths={imageWidths}
+                        sizes={imageSizes}
+                        loading="eager"
+                        fetchpriority="high"
+                        class="absolute inset-0 size-full object-cover"
+                    />
+                    <h1 class="front-text">
+                        <span class="front-line front-line--name">St Catherine’s Group</span>
+                        <span class="front-line front-line--wishes">Wishes you a Merry</span>
+                        <span class="front-line front-line--christmas">Christmas!</span>
+                        <span class="front-line front-line--and">And a</span>
+                        <span class="front-line front-line--new-year">Happy New Year!</span>
+                    </h1>
+                </section>
+
+                <section class="face face--reverse" data-face="inside-left" aria-label="Contact details">
+                    <Image
+                        src={hollyImage}
+                        alt=""
+                        widths={imageWidths}
+                        sizes={imageSizes}
+                        loading="eager"
+                        class="absolute inset-0 size-full object-cover"
+                    />
+                    <div class="face-content face-content--logo">
+                        <Image src={dove} alt="St Catherine's Group" width={454} class="dove dove--contact" loading="eager" />
+                        <ul class="link-list">
+                            {contacts.map((c) => (
+                                <li>
+                                    <svg class="link-icon" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true" set:html={c.icon} />
+                                    <span>
+                                        <a href={c.href}>{c.label}</a>
+                                        {c.extra && (
+                                            <>
+                                                {" / "}
+                                                <a href={c.extra.href}>{c.extra.label}</a>
+                                            </>
+                                        )}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Base leaf: inside-right on top, back of the card on the reverse -->
+            <div class="leaf leaf--base">
+                <section class="face face--message" data-face="inside-right" aria-labelledby="xmas-wish">
+                    <Image
+                        src={hollyImage}
+                        alt=""
+                        widths={imageWidths}
+                        sizes={imageSizes}
+                        loading="eager"
+                        class="absolute inset-0 size-full object-cover"
+                    />
+                    <div class="face-content message">
+                        <h2 id="xmas-wish" class="message-title">A Little Christmas Wish</h2>
+                        <p>
+                            As Christmas approaches, we’re reminded that the most precious
+                            things in life are the moments we share, the kindness we give,
+                            and the time we spend with the loved ones who mean so much to us.
+                        </p>
+                        <p>
+                            From all of us at St Catherine’s Group,<br />
+                            We wish you a Merry Christmas filled with warmth, love, laughter
+                            and special moments with those closest to your heart.
+                        </p>
+                        <p>
+                            May the New Year bring you happiness, hope, good health and many
+                            beautiful moments to cherish.
+                        </p>
+                        <p>
+                            With love and warmest wishes,<br />
+                            Everyone at St Catherine’s Group
+                        </p>
+                    </div>
+                </section>
+
+                <section class="face face--reverse" data-face="back" aria-label="Follow us">
+                    <Image
+                        src={backImage}
+                        alt=""
+                        widths={imageWidths}
+                        sizes={imageSizes}
+                        loading="eager"
+                        class="absolute inset-0 size-full object-cover"
+                    />
+                    <div class="face-content face-content--logo">
+                        <Image src={dove} alt="St Catherine's Group" width={454} class="dove dove--social" loading="eager" />
+                        <ul class="link-list">
+                            {socialLinks.map((s) => (
+                                <li>
+                                    <span class="link-icon brand-icon" aria-hidden="true" set:html={s.logo} />
+                                    <a href={s.href} target="_blank" rel="noopener noreferrer">
+                                        {s.name}<span class="handle"> · {s.handle}</span>
+                                        <span class="sr-only"> (opens in a new tab)</span>
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <div class="flex flex-wrap justify-center gap-4">
+            <button type="button" class="control" data-action="toggle">Open the card</button>
+            <button type="button" class="control control--secondary" data-action="flip">Turn it over</button>
+        </div>
+    </div>
+    <p class="sr-only" aria-live="polite" data-live></p>
+</div>
+
+<script>
+    type State = "closed" | "open" | "back";
+
+    const root = document.querySelector<HTMLElement>("[data-xmas]");
+    if (root) {
+        const toggle = root.querySelector<HTMLButtonElement>('[data-action="toggle"]')!;
+        const flip = root.querySelector<HTMLButtonElement>('[data-action="flip"]')!;
+        const live = root.querySelector<HTMLElement>("[data-live]")!;
+        const faces = root.querySelectorAll<HTMLElement>("[data-face]");
+        const front = root.querySelector<HTMLElement>('[data-face="front"]')!;
+        // Must match the 3D breakpoint in the <style> block below.
+        const fold = window.matchMedia("(min-width: 64rem)");
+
+        const visibleFaces: Record<State, string[]> = {
+            closed: ["front"],
+            open: ["inside-left", "inside-right"],
+            back: ["back"],
+        };
+        const announcements: Record<State, string> = {
+            closed: "Showing the front of the card",
+            open: "Card opened",
+            back: "Showing the back of the card",
+        };
+
+        const state = () => root.dataset.state as State;
+
+        const render = () => {
+            const s = state();
+            // In fold mode, panels facing away can't be tabbed into or read out.
+            faces.forEach((face) => {
+                face.inert = fold.matches && !visibleFaces[s].includes(face.dataset.face!);
+            });
+            toggle.textContent = s === "open" ? "Close the card" : "Open the card";
+            flip.textContent = s === "back" ? "Turn to the front" : "Turn it over";
+        };
+
+        const setState = (s: State) => {
+            root.dataset.state = s;
+            render();
+            live.textContent = announcements[s];
+        };
+
+        toggle.addEventListener("click", () => setState(state() === "open" ? "closed" : "open"));
+        flip.addEventListener("click", () => setState(state() === "back" ? "closed" : "back"));
+        front.addEventListener("click", () => {
+            if (fold.matches && state() === "closed") setState("open");
+        });
+        fold.addEventListener("change", render);
+
+        root.dataset.js = "";
+        render();
+
+        // Stacked layout: fade each panel in as it scrolls into view.
+        if ("IntersectionObserver" in window) {
+            const io = new IntersectionObserver(
+                (entries) => {
+                    for (const entry of entries) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible");
+                            io.unobserve(entry.target);
+                        }
+                    }
+                },
+                { threshold: 0.15 },
+            );
+            faces.forEach((face) => io.observe(face));
+        } else {
+            faces.forEach((face) => face.classList.add("is-visible"));
+        }
+    }
+</script>
+
+<style>
+    @font-face {
+        font-family: "Redressed";
+        src: url("/fonts/Redressed-Regular.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    /* Registered so the panel size can animate between the closed and open card. */
+    @property --panel-w {
+        syntax: "<length>";
+        inherits: true;
+        initial-value: 0px;
+    }
+
+    .xmas {
+        width: 100%;
+        /* The card briefly overhangs the screen mid-flip; never show a scrollbar. */
+        overflow-x: clip;
+        color: white;
+    }
+
+    /* ---------- Shared panel styling (all layouts) ---------- */
+
+    .stage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+        max-width: 40rem;
+    }
+
+    /* Leaves only exist as 3D groups in fold mode; otherwise their faces stack. */
+    .leaf {
+        display: contents;
+    }
+
+    .face {
+        position: relative;
+        aspect-ratio: 1491 / 1055;
+        container-type: inline-size;
+        overflow: hidden;
+        border-radius: 0.75rem;
+        box-shadow:
+            0 1px 2px rgb(0 0 0 / 0.15),
+            0 12px 32px -8px rgb(0 0 0 / 0.45);
+        background: var(--color-green-dark);
+    }
+
+    .face-content {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Panel 1: front */
+    .front-text {
+        position: absolute;
+        top: 14%;
+        bottom: 29%;
+        left: 1.5%;
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-weight: 400;
+        line-height: 1.2;
+        text-shadow: 0 0.15cqw 0.6cqw rgb(0 0 0 / 0.25);
+    }
+    .front-line {
+        display: block;
+    }
+    .front-line--name {
+        font-size: 4.5cqw;
+        letter-spacing: -0.01em;
+    }
+    .front-line--wishes {
+        font-size: 4cqw;
+    }
+    .front-line--christmas {
+        font-family: "Redressed", cursive;
+        font-size: 9cqw;
+        line-height: 1.1;
+        margin: 1.5cqw 0 2cqw;
+        color: #f2393a;
+        text-shadow:
+            0 0.15cqw 0.4cqw rgb(0 0 0 / 0.35),
+            0 0 2cqw rgb(255 255 255 / 0.15);
+    }
+    .front-line--and {
+        font-size: 3.7cqw;
+    }
+    .front-line--new-year {
+        font-size: 3.9cqw;
+    }
+
+    /* Panels 2 & 4: dove + list of links */
+    .face-content--logo {
+        gap: 7cqw;
+        padding-top: 4%;
+    }
+    .dove {
+        height: auto;
+        filter: drop-shadow(0 0 1.5cqw rgb(255 255 255 / 0.25));
+    }
+    .dove--contact {
+        width: 33%;
+    }
+    .dove--social {
+        width: 27%;
+    }
+    .link-list {
+        display: flex;
+        flex-direction: column;
+        gap: 2.2cqw;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: left;
+        font-size: 3.1cqw;
+        letter-spacing: 0.02em;
+    }
+    .link-list li {
+        display: flex;
+        align-items: center;
+        gap: 2cqw;
+    }
+    .link-icon {
+        width: 1.35em;
+        height: 1.35em;
+        flex-shrink: 0;
+    }
+    /* Full-colour social logos, as on the printed card. */
+    .brand-icon {
+        width: 1.6em;
+        height: 1.6em;
+        filter: drop-shadow(0 0.1em 0.25em rgb(0 0 0 / 0.2));
+    }
+    .brand-icon :global(svg) {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .link-list a {
+        color: inherit;
+        text-decoration: none;
+        text-underline-offset: 0.2em;
+    }
+    .link-list a:hover,
+    .link-list a:focus-visible {
+        text-decoration: underline;
+    }
+    .handle {
+        opacity: 0.85;
+    }
+
+    /* Panel 3: message */
+    .message {
+        padding: 6% 4%;
+        gap: 2.6cqw;
+        font-size: 2.6cqw;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+    }
+    .message p {
+        margin: 0;
+        max-width: 94%;
+    }
+    .message-title {
+        margin: 0 0 1cqw;
+        font-size: 4.4cqw;
+        font-weight: 400;
+        line-height: 1.1;
+    }
+
+    .xmas :focus-visible {
+        outline: 2px solid white;
+        outline-offset: 3px;
+        border-radius: 2px;
+    }
+
+    /* ---------- Controls ---------- */
+
+    .controls {
+        display: none;
+    }
+    .control {
+        cursor: pointer;
+        padding: 0.75rem 1.75rem;
+        border-radius: 0.5rem;
+        border: 2px solid white;
+        background: white;
+        color: var(--color-green-dark);
+        font-size: 1.25rem;
+        box-shadow: 0 4px 14px rgb(0 0 0 / 0.2);
+        transition:
+            background-color 0.2s,
+            color 0.2s;
+    }
+    .control:hover {
+        background: rgb(255 255 255 / 0.9);
+    }
+    .control--secondary {
+        background: transparent;
+        color: white;
+    }
+    .control--secondary:hover {
+        background: white;
+        color: var(--color-green-dark);
+    }
+
+    /* ---------- Stacked layout (below lg) ---------- */
+
+    @media (max-width: 63.999rem) {
+        /* Card proportions make small text too small on phones, so set floors
+           and let the message panel grow taller than the artwork. */
+        .link-list {
+            font-size: max(3.1cqw, 0.8rem);
+            gap: max(2.2cqw, 0.5rem);
+        }
+        /* Touch targets of 24px+ for the phone/email/social links, without
+           changing the layout (padding offset by negative margin). */
+        .link-list a {
+            display: inline-block;
+            padding-block: 0.3rem;
+            margin-block: -0.3rem;
+        }
+        .face--message {
+            aspect-ratio: auto;
+        }
+        .face--message .face-content {
+            position: relative;
+            padding: 16cqw 9cqw;
+        }
+        .message {
+            font-size: max(2.6cqw, 0.95rem);
+            gap: max(2.6cqw, 0.9rem);
+        }
+        .message-title {
+            font-size: max(4.4cqw, 1.5rem);
+        }
+
+        /* Narrow phones: the text floor makes the links relatively bigger, so
+           shrink the dove and lift the links into the clear band between the
+           holly corners. */
+        @media (max-width: 40rem) {
+            .face-content--logo {
+                justify-content: flex-start;
+                gap: 2.5cqw;
+                padding-top: 4%;
+            }
+            .dove--contact,
+            .dove--social {
+                width: 20%;
+            }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .xmas[data-js] .face {
+                opacity: 0;
+                transform: translateY(1.5rem);
+                transition:
+                    opacity 0.7s ease-out,
+                    transform 0.7s ease-out;
+            }
+            .xmas[data-js] .face.is-visible {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+
+    /* ---------- 3D folding card (lg and up, JS only) ---------- */
+
+    @media (min-width: 64rem) {
+        .xmas[data-js] {
+            /* One panel's width, as big as the screen allows: the closed card
+               fills the screen, and shrinks as it opens so the two-panel
+               spread fills the width. Room is left for the controls below. */
+            --fit-h: calc((100svh - 9rem) * 1.413);
+            --panel-w: min(94vw, var(--fit-h));
+            --turn: 1.1s cubic-bezier(0.45, 0.05, 0.25, 1);
+            transition: --panel-w var(--turn);
+        }
+        .xmas[data-js][data-state="open"] {
+            --panel-w: min(48vw, var(--fit-h));
+        }
+
+        .xmas[data-js] .stage {
+            display: block;
+            perspective: calc(var(--panel-w) * 4);
+        }
+
+        .xmas[data-js] .card {
+            display: block;
+            position: relative;
+            width: var(--panel-w);
+            max-width: none;
+            aspect-ratio: 1491 / 1055;
+            margin-inline: auto;
+            transform-style: preserve-3d;
+            transition: transform var(--turn);
+        }
+
+        .xmas[data-js] .leaf {
+            display: block;
+            position: absolute;
+            inset: 0;
+            transform-style: preserve-3d;
+            /* The leaf wrappers overlap each other; only the face currently
+               shown may receive clicks (hidden faces are inert, see script). */
+            pointer-events: none;
+        }
+        .xmas[data-js] .face {
+            pointer-events: auto;
+        }
+        .xmas[data-js] .face[inert] {
+            pointer-events: none;
+        }
+
+        /* Cover sits slightly in front of the base so they never z-fight. */
+        .xmas[data-js] .leaf--cover {
+            transform-origin: left center;
+            transform: translateZ(2px);
+            transition: transform var(--turn);
+        }
+
+        .xmas[data-js] .face {
+            position: absolute;
+            inset: 0;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .xmas[data-js] .face--message {
+            transform: translateZ(1px);
+        }
+        .xmas[data-js] .face--reverse {
+            transform: rotateY(180deg);
+        }
+
+        /* Panel edges meet at the fold when open. */
+        .xmas[data-js] .leaf--cover .face--reverse {
+            border-top-left-radius: 0.75rem;
+            border-bottom-left-radius: 0.75rem;
+            border-top-right-radius: 0.15rem;
+            border-bottom-right-radius: 0.15rem;
+        }
+        .xmas[data-js] .face--message {
+            border-top-left-radius: 0.15rem;
+            border-bottom-left-radius: 0.15rem;
+        }
+
+        .xmas[data-js][data-state="closed"] .face--front {
+            cursor: pointer;
+        }
+
+        /* Open: cover swings left; the card slides right to keep the spread centred. */
+        .xmas[data-js][data-state="open"] .card {
+            /* % of the card's own (animating) width, so it stays centred
+               while --panel-w transitions. */
+            transform: translateX(50%);
+        }
+        .xmas[data-js][data-state="open"] .leaf--cover {
+            transform: translateZ(2px) rotateY(-180deg);
+        }
+
+        /* Back: turn the closed card over. */
+        .xmas[data-js][data-state="back"] .card {
+            transform: rotateY(180deg);
+        }
+
+        .xmas[data-js] .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1.25rem;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .xmas,
+        .xmas .card,
+        .xmas .leaf--cover {
+            transition: none !important;
+        }
+    }
+</style>

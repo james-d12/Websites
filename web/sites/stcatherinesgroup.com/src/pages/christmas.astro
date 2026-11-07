@@ -1,0 +1,32 @@
+---
+/**
+ * Link-only Christmas card page: no navbar/footer, kept out of the sitemap
+ * (astro.config.mjs) and marked noindex.
+ */
+import { getImage } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import ChristmasCard from "../components/ChristmasCard.astro";
+import frontImage from "../assets/christmas/front.jpg";
+
+// Social preview (WhatsApp, Facebook, etc.) shows the card's front.
+const shareImage = await getImage({ src: frontImage, width: 1200, format: "jpg" });
+---
+
+<Layout
+    title="Merry Christmas from St Catherine's Group"
+    description="St Catherine's Group wishes you a Merry Christmas and a Happy New Year. Open our Christmas card."
+    image={shareImage.src}
+    noindex
+    frame={false}
+>
+    <main class="min-h-svh flex flex-col items-center justify-center gap-6 px-4 py-8 lg:gap-3 lg:py-3">
+        <ChristmasCard />
+
+        <a
+            href="/"
+            class="text-white/85 text-base hover:text-white underline-offset-4 hover:underline transition-colors"
+        >
+            Visit stcatherinesgroup.com
+        </a>
+    </main>
+</Layout>

@@ -5,19 +5,32 @@ import PageFrame from '../components/PageFrame.astro'
 export interface Props {
   title?: string;
   description?: string;
+  /** Site-relative path to the social share image. Defaults to the favicon. */
+  image?: string;
+  /** Ask search engines not to index this page (e.g. link-only pages). */
+  noindex?: boolean;
+  /** Show the gradient side frame. Off for standalone pages without navbar/footer. */
+  frame?: boolean;
 }
 
-const { title = "St Catherine's Group", description = "St Catherine's Group provides exceptional 1-1 care and professional nursing services, with dedicated carers and registered nurses delivering personalised, compassionate healthcare for you and your loved ones." } = Astro.props;
+const {
+  title = "St Catherine's Group",
+  description = "St Catherine's Group provides exceptional 1-1 care and professional nursing services, with dedicated carers and registered nurses delivering personalised, compassionate healthcare for you and your loved ones.",
+  image,
+  noindex = false,
+  frame = true,
+} = Astro.props;
 
 const pageUrl = new URL(Astro.url.pathname, Astro.site);
-const shareImage = new URL('/favicon.ico', Astro.site);
+const logoUrl = new URL('/favicon.ico', Astro.site);
+const shareImage = image ? new URL(image, Astro.site) : logoUrl;
 
 const organizationSchema = {
 	"@context": "https://schema.org",
 	"@type": "Organization",
 	name: "St Catherine's Group",
 	url: "https://stcatherinesgroup.com",
-	logo: shareImage.toString(),
+	logo: logoUrl.toString(),
 	telephone: "+442036633074",
 	email: "clientservices@stcatherinesgroup.com",
 };
@@ -33,6 +46,7 @@ const organizationSchema = {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={description} />
+		{noindex && <meta name="robots" content="noindex" />}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
@@ -51,6 +65,6 @@ const organizationSchema = {
 	</head>
 	<body class="bg-brand-gradient antialiased">
 		<slot />
-		<PageFrame />
+		{frame && <PageFrame />}
 	</body>
 </html>
