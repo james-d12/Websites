@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css'
+import PageFrame from '../components/PageFrame.astro'
 
 export interface Props {
   title?: string;
@@ -50,5 +51,6 @@ const organizationSchema = {
 	</head>
 	<body class="bg-brand-gradient antialiased">
 		<slot />
+		<PageFrame />
 	</body>
 </html>
