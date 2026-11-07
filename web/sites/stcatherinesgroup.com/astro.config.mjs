@@ -11,7 +11,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  integrations: [sitemap()],
+  integrations: [
+    // /christmas is a link-only card page, so keep it out of the sitemap.
+    sitemap({ filter: (page) => !page.includes("/christmas") }),
+  ],
   image: {
     service: sharpImageService(),
   },
